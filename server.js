@@ -1,13 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-
 const app = express();
 const port = process.env.PORT || 3000;
 
-// IMPORTANT: This token is placed here for demonstration.
-// For production, you should use environment variables.
-Github_API = os.getenv("github")
-const GITHUB_TOKEN = 'github';
+// Access the GitHub Personal Access Token from Render's environment variables.
+// The variable name is set in the Render dashboard.
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'notamitgamer';
 const REPO_NAME = 'bsc';
 const GITHUB_API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
