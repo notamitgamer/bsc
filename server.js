@@ -1,14 +1,16 @@
 const express = require('express');
 const cors = require('cors');
+const fetch = require('node-fetch');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Access the GitHub Personal Access Token from Render's environment variables.
-// The variable name is set in the Render dashboard.
+// Use an environment variable for the GitHub token
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'notamitgamer';
 const REPO_NAME = 'bsc';
 const GITHUB_API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
+const GITHUB_RAW_URL = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main`;
 
 app.use(cors());
 
@@ -58,6 +60,42 @@ app.get('/api/programs', async (req, res) => {
     } catch (error) {
         console.error('Error in API endpoint:', error);
         res.status(500).json({ error: 'Failed to fetch data from GitHub.', details: error.message });
+    }
+});
+
+// New endpoint to fetch raw file content
+app.get('/api/raw', async (req, res) => {
+    const { fileName, type } = req.query;
+    if (!fileName || !type) {
+        return res.status(400).json({ error: 'fileName and type are required query parameters.' });
+    }
+
+    try {
+        let fileUrl;
+        if (type === 'code') {
+            fileUrl = `${GITHUB_RAW_URL}/c/${fileName}`;
+        } else if (type === 'snapshot') {
+            fileUrl = `${GITHUB_RAW_URL}/c/snapshot/${fileName}`;
+        } else {
+            return res.status(400).json({ error: 'Invalid type parameter.' });
+        }
+
+        const response = await fetch(fileUrl);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch raw file: ${response.statusText}`);
+        }
+
+        if (type === 'code') {
+            const code = await response.text();
+            res.set('Content-Type', 'text/plain');
+            res.send(code);
+        } else if (type === 'snapshot') {
+            res.json(fileUrl);
+        }
+
+    } catch (error) {
+        console.error('Error fetching raw content:', error);
+        res.status(500).json({ error: 'Failed to fetch raw content.' });
     }
 });
 
