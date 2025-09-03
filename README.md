@@ -9,7 +9,7 @@ It’s designed to help students easily access, run, and understand each program
 
 * ✅ C Source Codes (`.c`)
 * ⚡ Executables (`.exe`)
-* 🖼️ Snapshots (screenshots of code & output)
+* 🖼️ Snapshots (screenshots of code)
 
 ---
 
