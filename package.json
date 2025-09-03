@@ -1,13 +1,16 @@
 {
-"name": "bsc-portfolio-backend",
+"name": "bsc-portfolio-api",
 "version": "1.0.0",
-"description": "Backend for fetching GitHub data to avoid rate limits.",
+"description": "A backend API to fetch data from GitHub for the bsc-portfolio website.",
 "main": "server.js",
 "scripts": {
 "start": "node server.js"
 },
+"author": "Amit Dutta",
+"license": "MIT",
 "dependencies": {
+"cors": "^2.8.5",
 "express": "^4.19.2",
-"cors": "^2.8.5"
+"node-fetch": "^2.7.0"
 }
 }
