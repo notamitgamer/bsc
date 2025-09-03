@@ -51,4 +51,4 @@ For a better browsing experience, visit the GitHub Pages version of this reposit
 
 * 📧 **amitdutta4255@gmail.com**
 
-* 🌐 [**GitHub Profile**](https://github.com/your-profile)
+* 🌐 [**GitHub Profile**](https://github.com/notamitgamer)
