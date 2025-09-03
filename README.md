@@ -1,4 +1,4 @@
-# 🎓 B.Sc. CS Hons – Practice Programs
+# 🎓 B.Sc. CS Hons – Programs
 
 This repository contains **all C programs, executables, and snapshots** as per the **West Bengal State University B.Sc. Computer Science (Hons) syllabus**.
 It’s designed to help students easily access, run, and understand each program.
