@@ -41,7 +41,7 @@ int main() {
 
 🔗 **Website**
 For a better browsing experience, visit the GitHub Pages version of this repository:
-👉 [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc)
+👉 [notamitgamer.github.io/bsc](https://aranag.site/bsc-c.html)
 
 ---
 
