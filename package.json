@@ -1,0 +1,13 @@
+{
+"name": "bsc-portfolio-backend",
+"version": "1.0.0",
+"description": "Backend for fetching GitHub data to avoid rate limits.",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
+"dependencies": {
+"express": "^4.19.2",
+"cors": "^2.8.5"
+}
+}
