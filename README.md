@@ -40,8 +40,8 @@ int main() {
 ```
 
 🔗 **Website**
-For a better browsing experience, visit the GitHub Pages version of this repository:
-👉 [notamitgamer.github.io/bsc](https://aranag.site/bsc-c.html)
+For a better browsing experience, visit the web version of this repository:
+👉 [https://aranag.site/github.html](https://aranag.site/github.html)
 
 ---
 
