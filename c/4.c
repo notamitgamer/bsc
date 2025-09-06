@@ -1,33 +1,26 @@
-/*Write a function to find whether a given no. is prime or not. 
-Use the same to generate the prime numbers less than 100.*/
+//WAP to compute the sum of the first n terms of the following series,S =1-2+3- 4+5......
 
 #include<stdio.h>
 
-int isPrime(int inp) {
-	int i, is_prime = 1;
-	
-	if (inp < 2) is_prime = 0;
-	
-	for (i = 2; i <= inp / 2; i++) if (inp % i == 0) {
-		is_prime = 0;
-		break;
-	}
-	
-	return is_prime;
-}
-
-
 int main() {
-	int inp, i;
-	printf("Enter the number you want to check : ");
-	scanf("%d",&inp);
+	int n, result = 0, temp, i;
+	printf("Please enter the value for 'n' for this series 's = 1-2+3-4+5-....': ");
+	scanf("%d",&n);
 	printf("\n");
 	
-	if (isPrime(inp)) printf("\nGiven input '%d' is a Prime Number.",inp);
-	else printf("\nGiven input '%d' is not a Prime Number.",inp);
+	if (n <= 0) {
+		printf("\nPlease enter a positive integer.");
+		return 1;
+	}
 	
-	printf ("\nSeris of prime number below : ");
-	for (i = 2; i < 100; i++) if (isPrime(i)) printf(" %d",i);
+	for (i = 1; i<= n; i++) {
+		if (i % 2 == 0) {
+			result = result - i;
+		}
+		else {
+			result = result + i;
+		}
+	}
 	
-	return 0;
+	printf("\nAns : %d", result);
 }

@@ -1,26 +1,23 @@
-//WAP to compute the sum of the first n terms of the following series,S =1-2+3- 4+5......
+// WAP to compute the sum of the first n terms of the following series S =1+1/2+1/3+1/4+...... 
 
 #include<stdio.h>
 
 int main() {
-	int n, result = 0, temp, i;
-	printf("Please enter the value for 'n' for this series 's = 1-2+3-4+5-....': ");
-	scanf("%d",&n);
+	int n, i;
+	float result = 0;
+	printf("Please enter the value for 'n' : ");
+	scanf("%d", &n);
 	printf("\n");
 	
 	if (n <= 0) {
-		printf("\nPlease enter a positive integer.");
-		return 0;
+		printf("\nPlease enter a positve number greater than ZERO.");
+		return 1;
 	}
 	
-	for (i = 1; i<= n; i++) {
-		if (i % 2 == 0) {
-			result = result - i;
-		}
-		else {
-			result = result + i;
-		}
-	}
+	for (i = 1; i <= n; i++) {
+		result = result + (1.0 / i);
+ 	}
 	
-	printf("\nAns : %d", result);
+	printf("\nSum of the first %d terms of the following series S =1+1/2+1/3+1/4+...... is : %f",n,result);
+	return 0;
 }

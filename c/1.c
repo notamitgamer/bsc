@@ -10,7 +10,7 @@ int main() {
 	
 	if (inp < 0) {
 		printf("\nPlease enter a valid non negetive integer.");
-		return 0;
+		return 1;
 	}
 	
 	temp = inp;

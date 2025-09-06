@@ -1,24 +1,30 @@
-// WAP to compute the factors of a given number
+/*Write a function that checks whether a given string is Palindrome or not.
+Use this function to find whether the string entered by the user is Palindrome or not.*/
 
 #include<stdio.h>
-#include<stdlib.h>
+#include<string.h>
+
+int isPalindrome(char inp[]) {
+	int len = strlen(inp);
+	int i = 0; //starting point
+	int j = len - 1; //end point
+	
+	while (i < j) {
+		if (inp[i] != inp[j]) {
+			return 0;
+		}
+		i++;
+		j--;
+	}
+
+	return 1;
+}
 
 int main() {
-	int inp, num, i;
-	printf("Please enter the number to get the factors from it : ");
-	scanf("%d", &inp);
-
-	num = abs(inp);
-	
-	if (num == 0) {
-		printf("\n\n0 has infinitely many factors (all integers).");
-		return 0;
-	}
-	
-	printf("\n\nThe factors of ' %d ' is :- ", inp);
-	printf("\nPositive : ");
-	for (i = 1; i <= num ; i++) if (num % i == 0) printf("  %d", i);
-	printf("\nNegative : ");
-	for (i = 1; i <= num ; i++) if (num % i == 0) printf("  %d", -i);
+	char inp[20];
+	printf("Enter the number : ");
+	scanf("%s",inp);
+	if (isPalindrome(inp)) printf("\n\nInput '%s' is a Palindrome number.", inp);
+	else printf("\n\nInput '%s' is not a Palindrome number.", inp);
 	return 0;
 }
