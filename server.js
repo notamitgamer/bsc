@@ -18,7 +18,7 @@ app.use(cors());
 async function fetchGitHub(url) {
     const response = await fetch(url, {
         headers: {
-            'Authorization': `token ${GITHUB_TOKEN}`,
+            'Authorization': GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : undefined,
             'Accept': 'application/vnd.github.v3+json'
         }
     });
@@ -63,35 +63,46 @@ app.get('/api/programs', async (req, res) => {
     }
 });
 
+// NEW API endpoint to fetch data from the "tution-c" folder
+app.get('/api/tution-c', async (req, res) => {
+    try {
+        const folder = 'tution-c';
+        const result = await fetchGitHub(`${GITHUB_API_URL}/contents/${folder}`);
+
+        if (!result.ok) {
+            return res.status(result.status).json({ error: 'Failed to fetch folder contents.' });
+        }
+
+        const allFiles = await result.json();
+
+        res.json({
+            cFiles: allFiles.filter(f => f.name.endsWith('.c')),
+        });
+
+    } catch (error) {
+        console.error('Error in API endpoint:', error);
+        res.status(500).json({ error: 'Failed to fetch data from GitHub.', details: error.message });
+    }
+});
+
 // New endpoint to fetch raw file content
 app.get('/api/raw', async (req, res) => {
-    const { fileName, type } = req.query;
-    if (!fileName || !type) {
-        return res.status(400).json({ error: 'fileName and type are required query parameters.' });
+    const { fileName, folder } = req.query;
+    if (!fileName || !folder) {
+        return res.status(400).json({ error: 'fileName and folder are required query parameters.' });
     }
 
     try {
-        let fileUrl;
-        if (type === 'code') {
-            fileUrl = `${GITHUB_RAW_URL}/c/${fileName}`;
-        } else if (type === 'snapshot') {
-            fileUrl = `${GITHUB_RAW_URL}/c/snapshot/${fileName}`;
-        } else {
-            return res.status(400).json({ error: 'Invalid type parameter.' });
-        }
-
+        const fileUrl = `${GITHUB_RAW_URL}/${folder}/${fileName}`;
         const response = await fetch(fileUrl);
+        
         if (!response.ok) {
             throw new Error(`Failed to fetch raw file: ${response.statusText}`);
         }
 
-        if (type === 'code') {
-            const code = await response.text();
-            res.set('Content-Type', 'text/plain');
-            res.send(code);
-        } else if (type === 'snapshot') {
-            res.json(fileUrl);
-        }
+        const code = await response.text();
+        res.set('Content-Type', 'text/plain');
+        res.send(code);
 
     } catch (error) {
         console.error('Error fetching raw content:', error);
