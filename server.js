@@ -110,6 +110,11 @@ app.get('/api/raw', async (req, res) => {
     }
 });
 
+// New health check endpoint for monitoring services like UptimeRobot
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
