@@ -1,0 +1,2 @@
+/* WAP to calculate area and perimeter of a rectangle 
+by accepting and breadth as input. */

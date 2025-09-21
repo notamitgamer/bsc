@@ -1,0 +1,1 @@
+/* WAP to multiply and divide a number by 4 without using multiplication and division operator. */

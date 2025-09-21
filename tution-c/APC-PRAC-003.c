@@ -1,0 +1,1 @@
+/* WAP to accept  diagonal of a square and calculate area, parimeter */
