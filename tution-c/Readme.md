@@ -1,46 +1,48 @@
-# `tution-c` Folder
+# C Programming Exercises: Tution Collection 📚
 
-This folder contains C programs written as part of my tuition classes. The file naming convention is designed to help me and anyone else easily identify the source of each program.
+This repository contains a collection of C programs, organized by their source of origin from my tuition and lab classes. The aim is to create a clear and well-documented archive of all my work for easy reference.
+
+## Project Overview
+
+This folder serves as a centralized hub for all my C programming exercises. The files are meticulously named using a specific prefix to easily identify their source, as detailed in the section below.
 
 ## File Naming Convention
 
-Each C program file (`.c`) is prefixed to indicate its origin:
+Each C source file (`.c`) follows a clear prefix system to indicate its origin. A quick glance at the filename tells you which class or lab session the code belongs to.
 
--   **`APC-S`**: Programs from Soumi Madam's class.
+| Prefix | Description | Source |
+| :--- | :--- | :--- |
+| **`APC-S`** | Programs from class sessions with Soumi Madam. | Soumi Madam's Class |
+| **`APC-SPS`** | Programs from class sessions with SPS Sir. | SPS Sir's Class |
+| **`APC-PRAC`** | Programs completed during practical lab sessions. | Lab Practical |
+| **`P`** | Programs from private tuition classes at Eduincs. | Eduincs (Private Tuition) |
 
--   **`APC-SPS`**: Programs from SPS Sir's class.
+## Getting Started
 
--   **`APC-PRAC`**: Programs from the practical lab sessions.
+### Prerequisites
 
--   **`P`**: Programs from my private tuition class (Eduincs).
+You need a C compiler installed on your system to compile and run these programs. **[GCC](https://gcc.gnu.org/)** is highly recommended.
 
-## How to Compile and Run
+### How to Compile and Run
 
-To compile and run any of these programs, you can use a C compiler like GCC.
+To compile and run any C program in this directory, follow these simple steps using your terminal:
 
-1.  **Open your terminal or command prompt.**
-
-2.  **Navigate to the `tution-c` directory:**
-
-    ```
+1.  **Navigate to the `tution-c` folder:**
+    ```bash
     cd tution-c
     ```
 
-3.  **Compile the program:**
-
+2.  **Compile the program:**
+    ```bash
+    gcc your_file_name.c -o your_file_name
     ```
-    gcc filename.c -o filename.exe
+    (Replace `your_file_name.c` with the actual file name, e.g., `APC-S-001.c`)
+
+3.  **Run the executable:**
+    ```bash
+    ./your_file_name
     ```
-
-    (Replace `filename.c` with the actual file name, e.g., `APC-S-001.c`)
-
-4.  **Run the executable:**
-
-    ```
-    ./filename.exe
-    ```
-
-    (Replace `filename.exe` with the name of the executable you just created.)
+    (Replace `your_file_name` with the name of the executable you just created.)
 
 ---
 
