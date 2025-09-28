@@ -5,9 +5,10 @@ of the circle. */
 /* Author - Amit Dutta, Date - 16th SEP, 2025 */
 /* Let Us C; Page - 19; Chap- 1; QNo.: F(b) */
 
-#include<stdio.h>
-#include<math.h>
-int main() {
+#include <stdio.h>
+#include <math.h>
+int main()
+{
 	double len, bre, r, area_r, per, area_c, cir;
 	printf("Enter the length and breadth of the rectangle : ");
 	scanf("%lf %lf", &len, &bre);

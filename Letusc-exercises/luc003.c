@@ -2,8 +2,10 @@
 Each subsequent size A(n) is defined as A(n-1) cut in
 half, parallel to its shorter sides. Thus, paper of
 size A1 would have dimensions 841 mm x 594 mm. Write
-a program to calculate and print paper sizes A0, 
-A1, A2, ... A8. */
+a program to calculate and print paper sizes A0,ï¿½
+A1,ï¿½A2,ï¿½...ï¿½A8. */
+/* Author - Amit Dutta, Date - 16th SEP, 2025 */
+/* Let Us C; Page - 19; Chap- 1; QNo.: F(c) */
 
 #include<stdio.h>
 #include<math.h>
