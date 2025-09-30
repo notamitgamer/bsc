@@ -1,5 +1,6 @@
 /*Write a function that checks whether a given string is Palindrome or not.
 Use this function to find whether the string entered by the user is Palindrome or not.*/
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 #include<string.h>
