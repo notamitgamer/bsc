@@ -1,4 +1,5 @@
 //WAP to compute the sum of the first n terms of the following series,S =1-2+3-4+5......
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 
