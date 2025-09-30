@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This Github Repository is under MIT Licence.
 # 🎓 B.Sc. CS Hons – Programs
 
