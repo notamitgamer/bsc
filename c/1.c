@@ -1,4 +1,5 @@
 // Write a program (WAP) to print the sum and product of digits of an integer.
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 
