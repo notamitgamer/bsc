@@ -1,4 +1,5 @@
 //WAP to reverse a non-negative integer.
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 
