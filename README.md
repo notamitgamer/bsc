@@ -1,5 +1,5 @@
+This project is licensed under the MIT License - see the **[LICENSE.md](LICENSE.md)** file for details.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-This Github Repository is under MIT Licence.
 # 🎓 B.Sc. CS Hons – Programs
 
 This repository contains **all C programs, executables, and snapshots** as per the **West Bengal State University B.Sc. Computer Science (Hons) syllabus**.
