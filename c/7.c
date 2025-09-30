@@ -1,4 +1,5 @@
 // WAP to compute the factors of a given number
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 #include<stdlib.h>
