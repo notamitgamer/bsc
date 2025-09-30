@@ -1,4 +1,5 @@
 // WAP to compute the sum of the first n terms of the following series S =1+1/2+1/3+1/4+...... 
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 
