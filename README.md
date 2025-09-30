@@ -1,3 +1,4 @@
+This Github Repository is under MIT Licence.
 # 🎓 B.Sc. CS Hons – Programs
 
 This repository contains **all C programs, executables, and snapshots** as per the **West Bengal State University B.Sc. Computer Science (Hons) syllabus**.
