@@ -1,5 +1,6 @@
 /*Write a function to find whether a given no. is prime or not. 
 Use the same to generate the prime numbers less than 100.*/
+// Author - Amit Dutta, Date - 13th SEP, 2025
 
 #include<stdio.h>
 
