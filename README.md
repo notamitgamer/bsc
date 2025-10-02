@@ -1,6 +1,8 @@
 ## License
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
+---
+
 ## How to install the Mingw-w64 
 
 #### Download the Mingw-w64 archive:
@@ -12,18 +14,20 @@ Once the download is complete, extract the contents of the mingw64.zip file to a
 #### Add to your system's PATH:
 To use the tools from any command prompt, you need to add the bin directory to your system's PATH environment variable.
 
-Open the Start Menu and search for "Edit the system environment variables".
+Open the Start Menu and search for `Edit the system environment variables`.
 
 Click the `Environment Variables...` button.
 
-In the `System variables` section, find the Path variable and click "Edit...".
+In the `System variables` section, find the Path variable and click `Edit...`.
 
-Click `New` and add the path to the bin directory of your Mingw-w64 installation (e.g., C:\mingw64\bin).
+Click `New` and add the path to the bin directory of your Mingw-w64 installation (e.g., `C:\mingw64\bin`).
 
 Click `OK` on all windows to save the changes.
 
 #### Verify the installation:
 Open a new Command Prompt or PowerShell window and type gcc --version. If the installation was successful, you should see the version information for the GCC compiler.
+
+---
 
 # 🎓 B.Sc. CS Hons – Programs
 
