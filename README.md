@@ -46,17 +46,17 @@ int main() {
 
 ---
 
-# 🛠️ MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
+## 🛠️ MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
 
 This guide will walk you through the process of setting up your GCC/G++ compiler environment using the packaged MinGW-w64 distribution.
 
-## Step 1: Download the Compiler Archive
+### Step 1: Download the Compiler Archive
 
 Download the compressed MinGW-w64 files from the hosted location.
 
 > ➡️ **Download Link:** [**Direct Download MinGW64.zip**](https://aranag.site/download/MinGW64.zip)
 
-## Step 2: Extract the Files
+### Step 2: Extract the Files
 
 Once the download is complete, extract the contents of the `MinGW64.zip` file to a simple, root-level folder.
 
@@ -66,7 +66,7 @@ Once the download is complete, extract the contents of the `MinGW64.zip` file to
 
 3. **Recommended Path:** `C:\MinGW64`
 
-## Step 3: Add the Tools to Your System PATH
+### Step 3: Add the Tools to Your System PATH
 
 Adding the `bin` directory to your PATH variable allows you to run `gcc` or `g++` from any terminal window without navigating to the installation folder every time.
 
@@ -84,7 +84,7 @@ Adding the `bin` directory to your PATH variable allows you to run `gcc` or `g++
 
 5. **Save Changes:** Click **`OK`** on all open windows to finalize the system changes.
 
-## Step 4: Verify the Installation
+### Step 4: Verify the Installation
 
 To ensure the compiler is correctly set up and accessible, open a new command line session and run a simple check.
 
