@@ -43,6 +43,7 @@ int main() {
     return 0;
 }
 ```
+
 ---
 
 # 🛠️ MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
