@@ -5,7 +5,7 @@
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "\"C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe\"",
+      "compilerPath": "\"G:\\bsc\\MinGW64\\bin\\g++.exe\"",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",

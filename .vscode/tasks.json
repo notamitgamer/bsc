@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\g++.exe",
+            "command": "G:\\bsc\\MinGW64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -13,7 +13,7 @@
                 ""
             ],
             "options": {
-                "cwd": "C:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin"
+                "cwd": "G:\\bsc\\MinGW64\\bin"
             },
             "problemMatcher": [
                 "$gcc"
