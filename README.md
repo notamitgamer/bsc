@@ -54,7 +54,7 @@ This guide will walk you through the process of setting up your GCC/G++ compiler
 
 Download the compressed MinGW-w64 files from the hosted location.
 
-> ➡️ **Download Link:** [**Direct Download MinGW64.zip**](https://aranag.site/download/MinGW64.zip)
+> ➡️ **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://aranag.site/download/MinGW64.zip)
 
 ### Step 2: Extract the Files
 
