@@ -12,7 +12,7 @@ the BMI catagory as per the following table.
     Morbidly Obese          >= 40
 */
 /* Author - Amit Dutta, Date - 4rd OCT, 2025 */
-/* Let Us C, Chap- 4, Page - 71, Qn No.: D(d) */
+/* Let Us C, Chap- 4, Page - 72, Qn No.: D(d) */
 
 #include <stdio.h>
 
