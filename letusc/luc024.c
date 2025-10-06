@@ -1,6 +1,6 @@
 /* Write a program using conditional operators to determine whether
 a year entered through the keyboard is a leap year or not. */
-/* Author - Amit Dutta, Date - 4rd OCT, 2025 */
+/* Author - Amit Dutta, Date - 5th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: E(b) */
 
 #include <stdio.h>

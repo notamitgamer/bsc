@@ -9,7 +9,7 @@ Write a program that converts RGB color to CMYK color as per the following formu
     Yellow  = (White-Blue/255) / White
     Black   = 1 - White
 Note that if the RGB values are all 0, then the CMY values are all 0 and the K value is 1. */
-/* Author - Amit Dutta, Date - 4rd OCT, 2025 */
+/* Author - Amit Dutta, Date - 4th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 71, Qn No.: D(b) */
 
 #include <stdio.h>

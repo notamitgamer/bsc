@@ -3,7 +3,7 @@
         lower case alphabet or not.
     (2) Whether a character entered through the keyboard is a special
         symbol or not. */
-/* Author - Amit Dutta, Date - 4rd OCT, 2025 */
+/* Author - Amit Dutta, Date - 5th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: E(a) */
 
 #include <stdio.h>

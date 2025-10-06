@@ -15,7 +15,7 @@ Write a program, which will require the user to give values of hardness,
 carbon content and tensile strength of the steel under consideration and output
 the grade of the steel. */
 
-/* Author - Amit Dutta, Date - 4rd OCT, 2025 */
+/* Author - Amit Dutta, Date - 4th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 71, Qn No.: D(c) */
 
 #include <stdio.h>
