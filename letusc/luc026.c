@@ -11,7 +11,7 @@ int main()
 {
     double angle, result;
     printf("Enter the angle value in degree : ");
-    // checking is the input is other than number.
+    // checking if the input is other than number.
     if(scanf("%lf", &angle) != 1) {
         printf("\nPlease enter a number.");
         return 1;
