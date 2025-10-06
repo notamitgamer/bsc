@@ -106,11 +106,11 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 
 🔗 **Website**
 For a better browsing experience, visit the web version of this repository:
-👉 [https://aranag.site/github](https://aranag.site/github)
+👉 [Click here](https://aranag.site/github)
 
 🔗 **Website**
-For all tution code, visit:
-👉 [https://aranag.site/github-tution](https://aranag.site/github-tution)
+For all tution code:
+👉 [Click here](https://aranag.site/github-tution)
 
 ---
 
