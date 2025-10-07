@@ -110,7 +110,7 @@ For a better browsing experience, visit the web version of this repository:
 
 🔗 **Website**
 For all tution code:
-👉 [Click Here](https://aranag.site/github-tution)
+👉 [Click Here](https://aranag.site/tuition-c)
 
 ---
 
