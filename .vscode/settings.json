@@ -59,6 +59,7 @@
   "editor.inlineSuggest.enabled": false,
   "files.associations": {
     "math.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "ratio": "c"
   }
 }
