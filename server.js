@@ -63,10 +63,10 @@ app.get('/api/programs', async (req, res) => {
     }
 });
 
-// NEW API endpoint to fetch data from the "tution-c" folder
-app.get('/api/tution-c', async (req, res) => {
+// NEW API endpoint to fetch data from the "tuition-c" folder
+app.get('/api/tuition-c', async (req, res) => {
     try {
-        const folder = 'tution-c';
+        const folder = 'tuition-c';
         const result = await fetchGitHub(`${GITHUB_API_URL}/contents/${folder}`);
 
         if (!result.ok) {
@@ -118,3 +118,4 @@ app.get('/health', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
+
