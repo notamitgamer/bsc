@@ -105,7 +105,7 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 ---
 
 🔗 **Website**
-For a better browsing experience, visit the web version of this repository:
+For syllabus questions:
 👉 [Click Here](https://aranag.site/github)
 
 🔗 **Website**
