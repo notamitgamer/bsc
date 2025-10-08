@@ -1,6 +1,7 @@
 /* WAP to accept the diagonal of
 square. Find and display the area and
 perimeter of the square. */
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 #include<math.h>

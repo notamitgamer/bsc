@@ -1,6 +1,7 @@
 /* WAP to swap two integer variable without
 using third  variable */
 // using Approch Mode : simple, slow, time consuming
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

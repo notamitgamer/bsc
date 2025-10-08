@@ -1,4 +1,5 @@
 /* Find maximum between three number. */
+// Author - Amit Dutta, Date - Unknown
 
 #include <stdio.h>
 int main()

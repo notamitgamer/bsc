@@ -1,6 +1,7 @@
 /*WAP to accept number of days and
 display it after converting into
 number of years, months and days */
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

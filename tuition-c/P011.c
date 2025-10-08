@@ -4,6 +4,7 @@ given by the formula :
 WAP to calculate T take length(L) and gravity
 as input
 */
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 #include<math.h>

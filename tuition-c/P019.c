@@ -6,6 +6,7 @@ the amount to be paid by the passanger.
     next 10KM       RS 10/KM
     more than 25KM  RS 9/KM
 */
+// Author - Amit Dutta, Date - Unknown
 
 #include <stdio.h>
 int main()

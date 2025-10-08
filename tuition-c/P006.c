@@ -1,6 +1,7 @@
 /* The normal temperature of human body
 is 98.6 Degree Fahrenheit. WAP to convert the temperature
 to Degree Celcius and display the output. */
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

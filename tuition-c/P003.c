@@ -1,4 +1,5 @@
 //WAP to perform addtion and multiplication of two integer numbers
+// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {
