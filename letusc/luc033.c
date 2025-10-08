@@ -20,7 +20,7 @@ int main()
             break;
         }
         index++;
-        set_of_numbers[index] = num; 
+        set_of_numbers[index] = num;
     }
     int max = set_of_numbers[0], min = set_of_numbers[0];
     while (index >= 0)
