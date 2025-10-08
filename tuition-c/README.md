@@ -21,4 +21,4 @@ Each C source file (`.c`) follows a clear prefix system to indicate its origin. 
 
 ## License
 
-All programs in this repository are licensed under the MIT License. You can find the full license details in the [main `LICENSE` file](https://www.google.com/search?q=../LICENSE).
+All programs in this repository are licensed under the MIT License. You can find the full license details in the [LICENSE](../LICENSE).
