@@ -64,7 +64,7 @@ int main()
         remaining_matchsticks = remaining_matchsticks - (player_pick + computer_pick);
     }
 
-    // match over
+    // game over
     printf("\n----------------------------------\n");
     printf("Only 1 matchstick is left.\n");
     printf("You are forced to pick the last matchstick. You lose!\n");
