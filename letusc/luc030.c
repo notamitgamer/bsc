@@ -9,7 +9,7 @@ always wins. Rules for the game are as follows :
 /* Author - Amit Dutta, Date - 8th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(c) */
 
-/* Strategy: The total number of matchsticks is 21. To guarantee a win,
+/* My Plan: The total number of matchsticks is 21. To guarantee a win,
 the computer ensures that after its turn, the number of remaining
 matchsticks is always a multiple of 5 plus 1 (i.e., 16, 11, 6, 1).
 This is achieved by making the sum of the player's pick and the
