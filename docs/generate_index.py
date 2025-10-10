@@ -59,7 +59,7 @@ def generate_file_list():
                                     <span class="ml-2 text-sm text-gray-500">({file_count} files)</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <a href="{folder_url}" target="_blank" class="text-blue-500 font-semibold text-sm hover:underline" onclick="event.stopPropagation()">View on GitHub</a>
+                                    <a href="{folder_url}" target="_blank" class="text-blue-500 font-semibold text-sm hover:underline" onclick="event.stopPropagation()">GitHub</a>
                                     <div class="chevron" id="chevron-{dirname}">{chevron_down}</div>
                                 </div>
                             </div>
