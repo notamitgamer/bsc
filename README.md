@@ -5,8 +5,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 # 🎓 B.Sc. CS Hons – Programs
 
-This repository contains **all C programs, executables, and snapshots** as per the **West Bengal State University B.Sc. Computer Science (Hons) syllabus**.
-It’s designed to help students easily access, run, and understand each program.
+This repository contains **Files of codes that will be done in this 4-year BSc Hons Computer Science**
 
 ---
 
@@ -14,7 +13,6 @@ It’s designed to help students easily access, run, and understand each program
 
 * ✅ C Source Codes (`.c`)
 * ⚡ Executables (`.exe`)
-* 🖼️ Snapshots (screenshots of code)
 
 ---
 
