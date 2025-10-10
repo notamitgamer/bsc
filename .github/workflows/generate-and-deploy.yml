@@ -1,0 +1,44 @@
+name: Generate Index and Deploy to GitHub Pages
+
+# Run this workflow on pushes to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+# Permissions needed for the workflow to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out a copy of your repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up the Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # Step 3: Run the Python script to generate the index.html file
+      - name: Generate index.html
+        run: python docs/generate_index.py
+
+      # Step 4: Prepare the 'docs' folder for deployment
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Tell GitHub Pages to use the 'docs' folder as the website root
+          path: './docs'
+
+      # Step 5: Deploy the contents of the 'docs' folder to your site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
