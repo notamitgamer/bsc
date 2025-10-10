@@ -4,7 +4,7 @@ import os
 # The root URL of your repository.
 REPO_URL = "https://github.com/notamitgamer/bsc"
 # List of directories to exclude from the list.
-EXCLUDED_DIRS = ['.git', '.github', 'MinGW64', 'print', 'docs']
+EXCLUDED_DIRS = ['.git', '.github', '.vscode', 'MinGW64', 'print', 'docs']
 # List of files to exclude from the list.
 EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 
                   'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html']
@@ -51,27 +51,39 @@ def generate_file_list():
 
 def main():
     """Generates the final index.html from a template."""
-    # --- THIS IS THE FIX ---
-    # Define paths relative to the repository root, where the Action runs
-    template_path = 'docs/template.html'
-    output_path = 'docs/index.html'
-
+    # Get the directory of this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(script_dir)  # Go up one level from docs/
+    
+    # Change to repo root directory for file walking
+    original_cwd = os.getcwd()
+    os.chdir(repo_root)
+    
     try:
-        with open(template_path, 'r') as f:
-            template = f.read()
-    except FileNotFoundError:
-        print(f"Error: The template file was not found at {template_path}")
-        return
+        # Define paths relative to the script location
+        template_path = os.path.join(script_dir, 'template.html')
+        output_path = os.path.join(script_dir, 'index.html')
 
-    file_list_html = generate_file_list()
-    
-    # Replace the placeholder with our generated list
-    final_html = template.replace('<!--FILE_LIST_PLACEHOLDER-->', file_list_html)
+        try:
+            with open(template_path, 'r') as f:
+                template = f.read()
+        except FileNotFoundError:
+            print(f"Error: The template file was not found at {template_path}")
+            return
 
-    with open(output_path, 'w') as f:
-        f.write(final_html)
-    
-    print(f"{output_path} generated successfully.")
+        file_list_html = generate_file_list()
+        
+        # Replace the placeholder with our generated list
+        final_html = template.replace('<!--FILE_LIST_PLACEHOLDER-->', file_list_html)
+
+        with open(output_path, 'w') as f:
+            f.write(final_html)
+        
+        print(f"{output_path} generated successfully.")
+        
+    finally:
+        # Always change back to original directory
+        os.chdir(original_cwd)
 
 if __name__ == "__main__":
     main()
