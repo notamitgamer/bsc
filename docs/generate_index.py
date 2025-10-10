@@ -5,8 +5,9 @@ import os
 REPO_URL = "https://github.com/notamitgamer/bsc"
 # List of directories to exclude from the list.
 EXCLUDED_DIRS = ['.git', '.github', 'MinGW64', 'print', 'docs']
+# List of files to exclude from the list.
 EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 
-                  'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js']
+                  'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html']
 # --- End Configuration ---
 
 def generate_file_list():
@@ -50,9 +51,10 @@ def generate_file_list():
 
 def main():
     """Generates the final index.html from a template."""
-    # The script is in 'docs', so the template is in the same directory
-    template_path = os.path.join('docs', 'template.html')
-    output_path = os.path.join('docs', 'index.html')
+    # --- THIS IS THE FIX ---
+    # Define paths relative to the repository root, where the Action runs
+    template_path = 'docs/template.html'
+    output_path = 'docs/index.html'
 
     try:
         with open(template_path, 'r') as f:
