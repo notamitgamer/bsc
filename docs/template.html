@@ -10,6 +10,9 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .chevron.rotated {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -32,5 +35,20 @@
             </footer>
         </div>
     </div>
+    
+    <script>
+        function toggleFolder(folderName) {
+            const content = document.getElementById(`folder-${folderName}`);
+            const chevron = document.getElementById(`chevron-${folderName}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.classList.add('rotated');
+            } else {
+                content.classList.add('hidden');
+                chevron.classList.remove('rotated');
+            }
+        }
+    </script>
 </body>
 </html>
