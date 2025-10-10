@@ -2,8 +2,8 @@ import os
 
 # --- Configuration ---
 REPO_URL = "https://github.com/notamitgamer/bsc"
-EXCLUDED_DIRS = ['.git', '.github', 'MinGW64', 'print']
-EXCLUDED_FILES = ['generate_index.py', 'template.html', 'index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 
+EXCLUDED_DIRS = ['.git', '.github', 'MinGW64', 'print', 'docs']
+EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 
                   'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js']
 # --- End Configuration ---
 
@@ -45,7 +45,7 @@ def generate_file_list():
 
 def main():
     """Main function to generate the index.html file."""
-    with open('template.html', 'r') as f:
+    with open('index.html', 'r') as f:
         template = f.read()
 
     file_list_html = generate_file_list()
