@@ -43,7 +43,7 @@ def generate_file_list():
                             item_path = os.path.join(dir_path, item)
                             if os.path.isfile(item_path) and not item.startswith('.'):
                                 # Filter out .exe files and other binary files
-                                if not item.endswith(('.exe', '.png', '.jpg', '.jpeg', '.gif')):
+                                if not item.endswith(('.exe', '.png', '.jpg', '.jpeg', '.gif', '.md')):
                                     dir_files.append(item)
                         dir_files.sort()
                     
