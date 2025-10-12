@@ -103,12 +103,8 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 ---
 
 🔗 **Website**
-For syllabus questions:
-👉 [Click Here](https://aranag.site/github)
-
-🔗 **Website**
-For all tution code:
-👉 [Click Here](https://aranag.site/tuition-c)
+For better viewing experience:
+👉 [Click Here](https://aranag.site/bsc)
 
 ---
 
