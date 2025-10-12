@@ -395,6 +395,195 @@ int main() {
     </li>
 
                     <li class="border rounded-lg overflow-hidden">
+                        <div class="folder-header bg-gray-100 p-4 cursor-pointer hover:bg-blue-100 transition-colors duration-200" onclick="toggleFolder('challange')">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                                    <span class="font-medium text-gray-800">challange</span>
+                                    <span class="ml-2 text-sm text-gray-500">(1 files)</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <a href="https://github.com/notamitgamer/bsc/tree/main/challange" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                    </a>
+                                    <div class="chevron" id="chevron-challange"><svg class="w-5 h-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="folder-content hidden bg-white" id="folder-challange">
+                            <ul class="divide-y divide-gray-200">
+
+                                <li>
+                                    <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                        <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                        <span class="text-gray-700">sudipto1.c</span>
+                                        <div class="ml-auto flex items-center space-x-4">
+                                            <a href="https://github.com/notamitgamer/bsc/blob/main/challange/sudipto1.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                            </a>
+                                            <button onclick="showCode('code-challange-sudipto1_c', 'sudipto1.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                        </div>
+                                    </div>
+                                    <div id="code-challange-sudipto1_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/challange/sudipto1.c">
+                                        <pre><code class="language-c">/* A smart home security controller monitors the state of several sensors to decide what action to take.
+ * Each second, the system reads data from sensors that can either be active or inactive. Based on the current
+ * state of all sensors, the controller must perform exactly one action, such as activating a warning, checking
+ * a specific zone, or declaring an intrusion. Write a C program that reads the sensor states as input and
+ * prints the corresponding system action.
+ -- Conditions:
+    * 1. You must determine exactly one action for every possible combination of sensor states.
+    * 2. You are not allowed to use any conditional statements (if, else if, else, or the ternary operator?).
+    * 3. You are not allowed to use logical operators.
+    * 4. You must use a single switch statement to control the program&#x27;s behaviour.
+    * 5. Loops may only be used for reading input, not for making decisions.
+    * 6. The program should handle all possible combinations of the sensors&#x27; active/inactive states and print the appropriate response each time.
+ -- Example (for understanding):
+ * If all sensors are inactive, the system should remain idle.
+ * If some sensors are active, the system should issue warnings or alerts based on the situation.
+ * If all sensors are active, the system should declare a confirmed intrusion.
+ */
+
+/*
+ * This program monitors the state of four sensors (Door, Window, Motion, Glass Break)
+ * and determines the appropriate action without using any conditional (if, else)
+ * or logical (&amp;&amp;, ||) operators.
+ *
+ * It works by combining the state of all sensors into a single integer value
+ * using bitmasking. Each bit in the integer represents the state of one sensor
+ * (1 for active, 0 for inactive). This combined state is then used in a single
+ * switch statement to select the correct action for every possible combination.
+ *
+ * Then, enter the state of the four sensors separated by spaces,
+ * for example: 1 0 1 0
+ */
+
+/* Author - Amit Dutta, Date - 12th October, 2025 */
+
+#include &lt;stdio.h&gt;
+int main()
+{
+
+   // variables to hold the state of a sensor (0 or 1)
+   int doorSensorState, windowSensorState, motionSensorState, glassbreakSensorState;
+
+   // variable to check the combined state of all four sensor
+   int combinedState = 0;
+
+   // a invalid flag to check the input are valid or not
+   unsigned int invalidFlag;
+
+   // printing the way to usage the program
+   printf(&quot;------ Home Security Controller ------\n&quot;);
+   printf(&quot;Enter sensor states (1 for active, 0 for inactive).\n&quot;);
+   printf(&quot;Format: [Door] [Window] [Motion] [Glass Break]\n&quot;);
+   printf(&quot;Example: 0 1 1 0\n&quot;);
+   printf(&quot;Enter states (or press Ctrl+D for MacOS or Linux / Ctrl+Z for Windows to exit): &quot;);
+
+   // doing the main calculation
+   // chacking the combined state and taking a decision
+   while (scanf(&quot;%d %d %d %d&quot;, &amp;doorSensorState, &amp;windowSensorState, &amp;motionSensorState, &amp;glassbreakSensorState) == 4)
+   {
+      // validating input
+      // The expression (variable &amp; ~1) results in 0 only if &#x27;variable&#x27; is 0 or 1.
+      // For any other positive number, it&#x27;s non-zero.
+      // We combine all checks with a bitwise OR. If any sensor state is invalid,
+      // the flag will become non-zero.
+      invalidFlag = (doorSensorState &amp; ~1) | (windowSensorState &amp; ~1) | (motionSensorState &amp; ~1) | (glassbreakSensorState &amp; ~1);
+
+      // Combine the four sensor states into a single integer using bitwise operations.
+      // This creates a unique number from 0 to 15 for each possible combination.
+      // Bit 0: Door Sensor
+      // Bit 1: Window Sensor
+      // Bit 2: Motion Sensor
+      // Bit 3: Glass Break Sensor
+      combinedState = (glassbreakSensorState &lt;&lt; 3) | (motionSensorState &lt;&lt; 2) | (windowSensorState &lt;&lt; 1) | doorSensorState;
+
+      // If the invalid_input_flag is non-zero, we add 16 to the state.
+      // This pushes it outside the 0-15 range and forces the &#x27;default&#x27; case in the switch.
+      // We achieve this by multiplying the flag (which is &gt; 0) by 16.
+      combinedState += invalidFlag * 16;
+
+      // printing the given state
+      printf(&quot;\n\nState : [Door : %d, Window : %d, Motion : %d, Glass Break : %d]\nState Id : %d&quot;,
+             doorSensorState, windowSensorState, motionSensorState, glassbreakSensorState, combinedState);
+      printf(&quot;\nSystem Action : &quot;);
+
+      // taking decision based on combined state
+      // A single switch statement controls the program&#x27;s behavior.
+      // It handles all 2^4 = 16 possible combinations of sensor states,
+      // ensuring exactly one action is taken for every scenario.
+      switch (combinedState)
+      {
+      case 0: // Binary: 0000
+         printf(&quot;System Idle. All sensors inactive.\n&quot;);
+         break;
+      case 1: // Binary: 0001
+         printf(&quot;Check front door camera.\n&quot;);
+         break;
+      case 2: // Binary: 0010
+         printf(&quot;Check window sensors.\n&quot;);
+         break;
+      case 3: // Binary: 0011
+         printf(&quot;Warning: Perimeter breach suspected. Check doors and windows.\n&quot;);
+         break;
+      case 4: // Binary: 0100
+         printf(&quot;Check interior cameras for movement.\n&quot;);
+         break;
+      case 5: // Binary: 0101
+         printf(&quot;Warning: Potential entry and movement detected. Check front door and interior. Ask for patrol.\n&quot;);
+         break;
+      case 6: // Binary: 0110
+         printf(&quot;Warning: Potential entry and movement detected. Check windows and interior. Ask for patrol.\n&quot;);
+         break;
+      case 7: // Binary: 0111
+         printf(&quot;Alert: High probability of unauthorized entry. Ask for patrol.\n&quot;);
+         break;
+      case 8: // Binary: 1000
+         printf(&quot;Alert: Glass break detected. High-priority event. Ask for patrol.\n&quot;);
+         break;
+      case 9: // Binary: 1001
+         printf(&quot;Severe Alert: Forced entry likely (door + glass). Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 10: // Binary: 1010
+         printf(&quot;Severe Alert: Forced entry likely (window + glass). Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 11: // Binary: 1011
+         printf(&quot;Intrusion Alert: Multiple perimeter breaches. Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 12: // Binary: 1100
+         printf(&quot;Intrusion Alert: Confirmed interior presence after breach. Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 13: // Binary: 1101
+         printf(&quot;INTRUSION CONFIRMED! Activate maximum response protocol. Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 14: // Binary: 1110
+         printf(&quot;INTRUSION CONFIRMED! Activate maximum response protocol. Activate Alarm and Contact authorities.\n&quot;);
+         break;
+      case 15: // Binary: 1111
+         printf(&quot;CATASTROPHIC EVENT! ALL SENSORS TRIGGERED. ACTIVATE ALARM AND CONTACT COPS.\n&quot;);
+         break;
+      default:
+         // This case should not be reached with valid 0/1 input but is included for completeness.
+         printf(&quot;Error: Invalid sensor state detected.\n&quot;);
+         break;
+      }
+
+      // discarding extra characters (if any)
+      while (getchar() != &#x27;\n&#x27;)
+         ;
+
+      // asking for next set of input
+      printf(&quot;\nEnter next set of states: &quot;);
+   }
+   printf(&quot;\nSecurity system shutting down.\n&quot;);
+}</code></pre>
+                                    </div>
+                                </li>
+            </ul>
+        </div>
+    </li>
+
+                    <li class="border rounded-lg overflow-hidden">
                         <div class="folder-header bg-gray-100 p-4 cursor-pointer hover:bg-blue-100 transition-colors duration-200" onclick="toggleFolder('letusc')">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
