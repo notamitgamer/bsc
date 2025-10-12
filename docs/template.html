@@ -1,54 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BSc Repository File Index</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .chevron.rotated {
+        transform: rotate(180deg);
+      }
+      #modal-body pre {
+        max-height: 70vh;
+      }
+      /* Animation for success feedback */
+      .btn-success-pulse {
+        background-color: #10b981 !important; /* Tailwind green-500 */
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); /* green-500 with opacity */
+        animation: pulse-success 0.5s ease-out;
+      }
+      @keyframes pulse-success {
+        0% {
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
         }
-        .chevron.rotated {
-            transform: rotate(180deg);
+        50% {
+          box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
         }
+        100% {
+          box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        }
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8 md:py-16">
-        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div class="p-8">
-                <div class="text-center mb-8">
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800">BSc Repository Contents</h1>
-                    <p class="text-gray-500 mt-2">A quick navigation guide to the files in the repository.</p>
-                </div>
-                <div class="space-y-4">
-                    <h2 class="text-lg font-semibold text-gray-700 border-b pb-2">Files and Folders</h2>
-                    <ul class="space-y-3">
-                        <!--FILE_LIST_PLACEHOLDER-->
-                    </ul>
-                </div>
-            </div>
-             <footer class="text-center py-4 bg-gray-100 border-t">
-                <p class="text-sm text-gray-500">This page is an index for the <a href="https://github.com/notamitgamer/bsc" class="text-blue-600 hover:underline">bsc repository</a>.</p>
-            </footer>
+      <div
+        class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden"
+      >
+        <div class="p-8">
+          <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
+              BSc Repository Contents
+            </h1>
+            <p class="text-gray-500 mt-2">
+              A quick navigation guide to the files in the repository.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-lg font-semibold text-gray-700 border-b pb-2">
+              Files and Folders
+            </h2>
+            <ul class="space-y-3">
+              <!--FILE_LIST_PLACEHOLDER-->
+            </ul>
+          </div>
         </div>
+        <footer class="text-center py-4 bg-gray-50 border-t">
+          <p class="text-sm text-gray-500">
+            This page is an index for the
+            <a
+              href="https://github.com/notamitgamer/bsc"
+              class="text-blue-600 hover:underline"
+              >bsc repository</a
+            >.
+          </p>
+        </footer>
+      </div>
     </div>
-    
+
+    <!-- Code Viewer Modal -->
+    <div
+      id="code-modal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center p-4 hidden z-50"
+    >
+      <div
+        class="bg-gray-800 text-gray-100 rounded-lg shadow-2xl w-full max-w-5xl max-h-full flex flex-col"
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg"
+        >
+          <h3 id="modal-filename" class="text-lg font-mono text-gray-300"></h3>
+          <div class="flex items-center space-x-3">
+            <button
+              id="share-btn"
+              class="bg-gray-700 text-gray-200 p-2 rounded-md hover:bg-gray-600 relative transition-colors"
+              title="Share file link (Copies GitHub URL if sharing is unavailable)"
+            >
+              <!-- Default Share Icon -->
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                id="share-icon-default"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-6l-4-4-4 4m4-4v13"
+                ></path>
+              </svg>
+              <!-- Success Checkmark Icon (Hidden by Default) -->
+              <svg
+                class="w-5 h-5 absolute inset-0 m-auto hidden text-green-400"
+                id="share-icon-success"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              id="copy-code-btn"
+              class="bg-gray-700 text-gray-200 p-2 rounded-md hover:bg-gray-600 relative transition-colors"
+              title="Copy code to clipboard"
+            >
+              <!-- Default Copy Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-copy w-5 h-5"
+                viewBox="0 0 16 16"
+                id="copy-icon-default"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                />
+              </svg>
+              <!-- Success Checkmark Icon (Hidden by Default) -->
+              <svg
+                class="w-5 h-5 absolute inset-0 m-auto hidden text-green-400"
+                id="copy-icon-success"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              onclick="hideCode()"
+              class="text-gray-400 hover:text-white text-3xl leading-none"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+        <!-- Modal Body -->
+        <div id="modal-body" class="p-1 overflow-y-auto">
+          <div id="modal-code-container" class="rounded-b-lg">
+            <!-- Code will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
-        function toggleFolder(folderName) {
-            const content = document.getElementById(`folder-${folderName}`);
-            const chevron = document.getElementById(`chevron-${folderName}`);
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                chevron.classList.add('rotated');
-            } else {
-                content.classList.add('hidden');
-                chevron.classList.remove('rotated');
-            }
+      function toggleFolder(folderName) {
+        const content = document.getElementById(`folder-${folderName}`);
+        const chevron = document.getElementById(`chevron-${folderName}`);
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          chevron.classList.add("rotated");
+        } else {
+          content.classList.add("hidden");
+          chevron.classList.remove("rotated");
         }
+      }
+
+      const modal = document.getElementById("code-modal");
+      const modalFilename = document.getElementById("modal-filename");
+      const modalCodeContainer = document.getElementById(
+        "modal-code-container"
+      );
+      
+      const copyBtn = document.getElementById("copy-code-btn");
+      const copyIconDefault = document.getElementById("copy-icon-default");
+      const copyIconSuccess = document.getElementById("copy-icon-success");
+
+      const shareBtn = document.getElementById("share-btn");
+      const shareIconDefault = document.getElementById("share-icon-default");
+      const shareIconSuccess = document.getElementById("share-icon-success");
+
+      let currentFileUrl = "";
+      
+      /**
+       * Shows a successful copy animation on a button.
+       * @param {HTMLElement} button - The button element.
+       * @param {HTMLElement} defaultIcon - The default icon element.
+       * @param {HTMLElement} successIcon - The success icon element.
+       */
+      function animateSuccess(button, defaultIcon, successIcon) {
+          // 1. Swap icons
+          defaultIcon.classList.add("hidden");
+          successIcon.classList.remove("hidden");
+          
+          // 2. Apply success visual cue (green background pulse)
+          button.classList.add("btn-success-pulse");
+          button.classList.remove("bg-gray-700", "hover:bg-gray-600");
+
+          // 3. Revert after 2 seconds
+          setTimeout(() => {
+              successIcon.classList.add("hidden");
+              defaultIcon.classList.remove("hidden");
+              button.classList.remove("btn-success-pulse");
+              button.classList.add("bg-gray-700", "hover:bg-gray-600");
+          }, 2000);
+      }
+
+      function showCode(codeBlockId, filename) {
+        const codeBlock = document.getElementById(codeBlockId);
+        if (codeBlock) {
+          modalFilename.textContent = filename;
+          modalCodeContainer.innerHTML = codeBlock.innerHTML;
+
+          currentFileUrl = codeBlock.dataset.githubUrl || "";
+
+          hljs.highlightElement(modalCodeContainer.querySelector("code"));
+
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      function hideCode() {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      copyBtn.addEventListener("click", () => {
+        const codeToCopy = modalCodeContainer.querySelector("code").innerText;
+        navigator.clipboard.writeText(codeToCopy).then(
+          () => {
+            // Use the reusable animation function for code copy
+            animateSuccess(copyBtn, copyIconDefault, copyIconSuccess);
+          },
+          (err) => {
+            console.error("Failed to copy text: ", err);
+            // Replace old alert with a console error or a custom message box if needed
+          }
+        );
+      });
+
+      shareBtn.addEventListener("click", async () => {
+        // Ensure currentFileUrl is set (it's the GitHub link)
+        if (!currentFileUrl) return;
+
+        const shareData = {
+          title: modalFilename.textContent,
+          text: `Check out the code for ${modalFilename.textContent}`,
+          url: currentFileUrl,
+        };
+        
+        // 1. Try to use Web Share API
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            // If sharing is successful, no need for clipboard animation
+          } catch (err) {
+            // User likely cancelled the share dialog, no action needed
+            if (err.name !== 'AbortError') {
+                console.error("Share failed:", err.message);
+            }
+          }
+        } else {
+          // 2. Fallback: Copy URL to clipboard
+          navigator.clipboard.writeText(currentFileUrl).then(() => {
+            // Trigger animation to show link was copied
+            animateSuccess(shareBtn, shareIconDefault, shareIconSuccess);
+          });
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+          hideCode();
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
