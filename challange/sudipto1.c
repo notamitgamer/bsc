@@ -141,7 +141,7 @@ int main()
          break;
       }
 
-      // discarding extra characters (if any)
+      // discarding extra characters (if any) left
       while (getchar() != '\n')
          ;
 
