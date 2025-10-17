@@ -19,7 +19,7 @@ int main()
         ;
     printf("\nEnter a word to get the length : ");
     scanf("%19s", &a);
-    len += printf("Your input : %s", a);
+    len += printf("Your input : %s", a);  // here the "Your input : ", this 13 characters are extra
     printf("\nLength : %d", len);
     return 0;
 }
