@@ -58,7 +58,7 @@ Download the compressed MinGW-w64 files from the hosted location.
 
 Once the download is complete, extract the contents of the `MinGW64.zip` file to a simple, root-level folder.
 
-1. **Extract the contents** of the zip file.
+1. **Extract the contents** of the Zip file.
 
 2. **Move the resulting folder** to a short, easy-to-reference path.
 
