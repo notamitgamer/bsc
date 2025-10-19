@@ -1,5 +1,7 @@
 # Security Policy
 
+---
+
 ## Reporting a Vulnerability
 
 While this is a personal learning project, if you discover a security vulnerability in any of the code, I would appreciate it if you could bring it to my attention.
