@@ -52,24 +52,24 @@ def generate_file_list():
                     
                     file_count = len(dir_files)
                     folder_header = f'''
-                    <li class="border rounded-lg overflow-hidden">
-                        <div class="folder-header bg-gray-100 p-4 cursor-pointer hover:bg-blue-100 transition-colors duration-200" onclick="toggleFolder('{dirname}')">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center">
-                                    {folder_icon}
-                                    <span class="font-medium text-gray-800">{dirname}</span>
-                                    <span class="ml-2 text-sm text-gray-500">({file_count} files)</span>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <a href="{folder_url}" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
-                                        {github_icon}
-                                    </a>
-                                    <div class="chevron" id="chevron-{dirname}">{chevron_down}</div>
+                        <li class="border rounded-lg overflow-hidden">
+                            <div class="folder-header bg-gray-100 p-4 cursor-pointer hover:bg-blue-100 transition-colors duration-200" onclick="toggleFolder('{dirname}')">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        {folder_icon}
+                                        <span class="font-medium text-gray-800">{dirname}</span>
+                                        <span class="ml-2 text-sm text-gray-500">({file_count} files)</span>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <a href="{folder_url}" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
+                                            {github_icon}
+                                        </a>
+                                        <div class="chevron" id="chevron-{dirname}">{chevron_down}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="folder-content hidden bg-white" id="folder-{dirname}">
-                            <ul class="divide-y divide-gray-200">'''
+                            <div class="folder-content hidden bg-white" id="folder-{dirname}">
+                                <ul class="divide-y divide-gray-200">'''
                     
                     items.append(folder_header)
                     
@@ -90,34 +90,34 @@ def generate_file_list():
                         lang_class = get_language_class(filename)
 
                         file_item = f'''
-                                <li>
-                                    <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
-                                        {file_icon}
-                                        <span class="text-gray-700">{filename}</span>
-                                        <div class="ml-auto flex items-center space-x-4">
-                                            <a href="{file_url}" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
-                                                {github_icon}
-                                            </a>
-                                            <button onclick="showCode('{code_block_id}', '{filename}')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            {file_icon}
+                                            <span class="text-gray-700">{filename}</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="{file_url}" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    {github_icon}
+                                                </a>
+                                                <button onclick="showCode('{code_block_id}', '{filename}')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div id="{code_block_id}" class="hidden" data-github-url="{file_url}">
-                                        <pre><code class="language-{lang_class}">{escaped_content}</code></pre>
-                                    </div>
-                                </li>'''
+                                        <div id="{code_block_id}" class="hidden" data-github-url="{file_url}">
+                                            <pre><code class="language-{lang_class}">{escaped_content}</code></pre>
+                                        </div>
+                                    </li>'''
                         items.append(file_item)
                     
-                    items.append('            </ul>\n        </div>\n    </li>')
+                    items.append('                </ul>\n            </div>\n        </li>')
                     
                 except (OSError, PermissionError):
                     simple_folder = f'''
-                    <li>
-                        <a href="{folder_url}" target="_blank" class="flex items-center p-4 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors duration-200">
-                            {folder_icon}
-                            <span class="font-medium text-gray-800">{dirname}</span>
-                            <span class="ml-auto text-blue-500 font-semibold text-sm">View on GitHub &rarr;</span>
-                        </a>
-                    </li>'''
+                        <li>
+                            <a href="{folder_url}" target="_blank" class="flex items-center p-4 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors duration-200">
+                                {folder_icon}
+                                <span class="font-medium text-gray-800">{dirname}</span>
+                                <span class="ml-auto text-blue-500 font-semibold text-sm">View on GitHub &rarr;</span>
+                            </a>
+                        </li>'''
                     items.append(simple_folder)
 
             top_level_files = [f for f in files if f not in EXCLUDED_FILES]
@@ -184,14 +184,30 @@ def main():
         
         final_html = template.replace('<!--FILE_LIST_PLACEHOLDER-->', file_list_html)
 
+        # Original write operation
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(final_html)
         
         print(f"index.html generated successfully in '{output_path}'.")
+
+        # NEW: Define the second, absolute output path
+        # Using a raw string (r"...") is important to handle backslashes in Windows paths
+        second_output_path = r"C:\Users\PC\Desktop\aranag.site\bsc.html"
         
+        # NEW: Add a try...except block for the second write operation for safety
+        try:
+            # NEW: Write the same final_html content to the second location
+            with open(second_output_path, 'w', encoding='utf-8') as f:
+                f.write(final_html)
+            
+            # NEW: Print a confirmation message for the second file
+            print(f"Also updated bsc.html successfully at '{second_output_path}'.")
+        except (IOError, OSError) as e:
+            # NEW: Print a warning if the second write fails (e.g., path doesn't exist)
+            print(f"Warning: Could not write to second location '{second_output_path}'. Error: {e}")
+            
     finally:
         os.chdir(original_cwd)
 
 if __name__ == "__main__":
     main()
-
