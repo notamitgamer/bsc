@@ -2,7 +2,7 @@
     (x-1)/x + 1/2 ((x-1)/x)^2 + 1/2 ((x-1)/x)^3 + 1/2 ((x-1)/x)^4 + ...
 If x is input through the keyboard, write a program to calculate the
 sum of the first seven terms of this series. */
-/* Author - Amit Dutta, Date - 21th OCT, 2025 */
+/* Author - Amit Dutta, Date - 21st OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(d) */
 
 #include <stdio.h>
