@@ -720,7 +720,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">letusc</span>
-                                        <span class="ml-2 text-sm text-gray-500">(52 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(57 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/letusc" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -3333,6 +3333,273 @@ int main()
         i++;
     }
     printf(&quot;\n%g to the power of %d is : %g&quot;, num, power, result);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">lucproblem008.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem008.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-lucproblem008_c', 'lucproblem008.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-lucproblem008_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem008.c">
+                                            <pre><code class="language-c">/* Write a problem to print all the prime numbers from 1 to 300. */
+/* Author - Amit Dutta, Date - 24th OCT, 2025 */
+/* Let Us C, Chap - 6, Page - 101, Problem 6.1 */
+
+// Method: Trial Division (Optimized to check up to sqrt(N))
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;stdbool.h&gt;
+
+#define LIMIT 300
+
+int main()
+{
+    printf(&quot;Prime numbers from 1 to 300 :  2&quot;); // as 2 is the only even prime number
+    for (int i = 3; i &lt;= LIMIT; i += 2)  // skipping all other even number
+    {
+        int n = (int)sqrt(i);
+        bool prime = true;
+
+        for (int j = 3; j &lt;= n; j += 2)
+        // an odd number is only devisable by another odd number.
+        // so, skipping even number.
+        {
+            if (i % j == 0)
+            {
+                prime = false;
+                break;
+            }
+        }
+        if (prime)
+        {
+            printf(&quot;  %d&quot;, i);
+        }
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">lucproblem009.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem009.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-lucproblem009_c', 'lucproblem009.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-lucproblem009_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem009.c">
+                                            <pre><code class="language-c">/* Write a program to add first seven terms of the following series using a
+for loop.
+    1 / 1! + 2 / 2! + 3 / 3! + ...
+*/
+/* Author - Amit Dutta, Date - 24th OCT, 2025 */
+/* Let Us C, Chap - 6, Page - 102, Problem 6.2 */
+
+#include &lt;stdio.h&gt;
+#define N 7 // update N here
+
+int main()
+{
+    double sum = 0; int fact = 1;
+    for (int i = 1; i &lt;= N; i++)
+    {
+        fact *= i;
+        sum += (double)i / fact;
+    }
+    printf(&quot;Sum of the series : %g&quot;, sum);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">lucproblem010-com.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010-com.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-lucproblem010-com_c', 'lucproblem010-com.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-lucproblem010-com_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010-com.c">
+                                            <pre><code class="language-c">/* Write a program to generate all combination of 1, 2 and 3 using for loop. */
+/* Author - Amit Dutta, Date - 24th OCT, 2025 */
+/* Let Us C, Chap - 6, Page - 103, Problem 6.3 */
+
+#include&lt;stdio.h&gt;
+
+int main() {
+    printf(&quot;Combination of 1, 2, 3 upto thousands :&quot;);
+    for (int i = 0; i &lt;= 3; i++)
+    {
+        for (int j = 0; j &lt;= 3; j++)
+        {
+            for (int k = 0; k &lt;= 3; k++)
+            {
+                for (int l = 0; l &lt;= 3; l++)
+                {
+                    int num = (i * 1000) + (j * 100) + (k * 10) + l;
+                    printf(&quot;  %d&quot;, num);
+                }
+            }
+        }
+    }
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">lucproblem010-complex.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010-complex.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-lucproblem010-complex_c', 'lucproblem010-complex.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-lucproblem010-complex_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010-complex.c">
+                                            <pre><code class="language-c">/* Write a program to generate all combinations (permutations) of 1, 2 and 3
+   from 1-digit numbers up to 4-digit numbers using a main loop to control
+   the number of digits (1 to 3333).
+*/
+/* Author - Amit Dutta, Date - 24th OCT, 2025 */
+/* Let Us C, Chap - 6, Page - 103, Problem 6.3 */
+
+#include &lt;stdio.h&gt;
+
+// --- RECURSIVE FUNCTION TO ACHIEVE DYNAMIC NESTING ---
+// current_digit: The digit being placed in the current position (1, 2, or 3)
+// target_length: The total length of the number we are building (e.g., 3 for 3-digit numbers)
+// current_number: The integer value built so far
+// current_length: How many digits have been placed so far
+void generate_combinations(int target_length, int current_number, int current_length)
+{
+
+    // Base Case 1: The number is complete. Print it and return.
+    if (current_length == target_length)
+    {
+        printf(&quot;  %d&quot;, current_number);
+        return;
+    }
+
+    // Recursive Step: Try placing the next digit (1, 2, or 3)
+    // The for loop now iterates through the *possible values* for the next digit.
+    for (int next_digit = 1; next_digit &lt;= 3; next_digit++)
+    {
+
+        // Build the new number: old_number * 10 + next_digit
+        int new_number = current_number * 10 + next_digit;
+
+        // Recurse: Try to place the next digit
+        generate_combinations(target_length, new_number, current_length + 1);
+    }
+}
+
+int main()
+{
+    printf(&quot;Combination of 1, 2 and 3 (1-digit up to 4-digits):\n&quot;);
+
+    /* This outer loop achieves the structure you were going for:
+       iterating through the required number of digits (1, 2, 3, 4).
+    */
+    for (int noOfDigits = 1; noOfDigits &lt;= 4; noOfDigits++)
+    {
+        printf(&quot;\n\n--- %d-DIGIT NUMBERS (%d total) ---\n&quot;, noOfDigits, (1 &lt;&lt; noOfDigits) * 3 / 4 * 4 / 3 * 3 * 3 / 9 * 3 + (noOfDigits == 1 ? 0 : 9) + (noOfDigits == 2 ? 0 : 9) + (noOfDigits == 3 ? 0 : 81) + (noOfDigits == 4 ? 0 : 0) + (noOfDigits == 1 ? 3 : 0) + (noOfDigits == 2 ? 9 : 0) + (noOfDigits == 3 ? 27 : 0) + (noOfDigits == 4 ? 81 : 0)); // Prints the count 3, 9, 27, or 81
+
+        // Start the recursive generation for the current length
+        generate_combinations(noOfDigits, 0, 0);
+    }
+
+    printf(&quot;\n\nTotal permutations generated: 120\n&quot;);
+
+    return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">lucproblem010.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-lucproblem010_c', 'lucproblem010.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-lucproblem010_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/lucproblem010.c">
+                                            <pre><code class="language-c">/* Write a program to generate all combination of 1, 2 and 3 using for loop. */
+/* Author - Amit Dutta, Date - 24th OCT, 2025 */
+/* Let Us C, Chap - 6, Page - 103, Problem 6.3 */
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf(&quot;Combination of 1, 2 and 3 :&quot;);
+
+    // for 1 digit numbers
+    for (int i = 1; i &lt;= 3; i++)
+    {
+        printf(&quot;  %d&quot;, i);
+    }
+
+    // for 2 digit numbers
+    for (int i = 1; i &lt;= 3; i++)
+    {
+        for (int j = 1; j &lt;= 3; j++)
+        {
+            printf(&quot;  %d%d&quot;, i, j);
+        }
+    }
+
+    // for 3 digit numbers
+    for (int i = 1; i &lt;= 3; i++)
+    {
+        for (int j = 1; j &lt;= 3; j++)
+        {
+            for (int k = 1; k &lt;= 3; k++)
+            {
+                printf(&quot;  %d%d%d&quot;, i, j, k);
+            }
+        }
+    }
+
+    // for 4 digit numbers
+    for (int i = 1; i &lt;= 3; i++)
+    {
+        for (int j = 1; j &lt;= 3; j++)
+        {
+            for (int k = 1; k &lt;= 3; k++)
+            {
+                for (int l = 1; l &lt;= 3; l++)
+                {
+                    printf(&quot;  %d%d%d%d&quot;, i, j, k, l);
+                }
+            }
+        }
+    }
+
     return 0;
 }</code></pre>
                                         </div>
