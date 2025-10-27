@@ -3785,7 +3785,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">tuition-c</span>
-                                        <span class="ml-2 text-sm text-gray-500">(58 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(65 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/tuition-c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -5873,6 +5873,392 @@ int main()
         sum += temp1 / temp2;
     }
     printf(&quot;\nSum = %g&quot;, sum);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P038.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P038.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P038_c', 'P038.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P038_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P038.c">
+                                            <pre><code class="language-c">/* Write a program to check prime number */
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;stdbool.h&gt;
+
+int main()
+{
+    int num, i, endCheckDigit;
+    bool isPrime = true;
+    printf(&quot;Enter the number : &quot;);
+    if (scanf(&quot;%d&quot;, &amp;num) != 1)
+    {
+        printf(&quot;\nOnly a number is allowed, not a character.&quot;);
+        return 1;
+    }
+    if (num &lt;= 0)
+    {
+        printf(&quot;\nOnly postive number is allowed.&quot;);
+        return 1;
+    }
+    if (num == 1)
+    {
+        printf(&quot;\nInput 1 is not a prime number.&quot;
+               &quot;\nHas only one positive divisor (itself), not exactly two.&quot;
+               &quot;\nRule: Prime number should have exactly two distinct positive divisors: 1 and itself&quot;);
+        return 0;
+    }
+    if (num == 2)
+    {
+        printf(&quot;\nInput 2 is a prime number.&quot;
+               &quot;\n(Note: 2 is only Even Prime Number)&quot;);
+        return 0;
+    }
+    if (num % 2 == 0)
+    {
+        printf(&quot;\nInput %d is not a prime number.&quot;, num);
+        return 0;
+    }
+    endCheckDigit = sqrt(num);
+    for (i = 3; i &lt;= endCheckDigit; i += 2)
+    {
+        if (num % i == 0)
+        {
+            isPrime = false;
+            printf(&quot;\nInput %d is not prime number.&quot;, num);
+            return 0;
+        }
+    }
+    if (isPrime)
+    {
+        printf(&quot;\nInput %d is a prime number.&quot;, num);
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P039.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P039.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P039_c', 'P039.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P039_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P039.c">
+                                            <pre><code class="language-c">/* Write a program to print all the factors of a postive integer */
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    int num, i;
+    printf(&quot;Enter a number : &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    printf(&quot;\nFactors of %d : &quot;, num);
+    for (i = 1; i &lt;= num / 2; i++)
+    {
+        if (num % i == 0)
+        {
+            printf(&quot;  %d&quot;, i);
+        }
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P040.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P040.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P040_c', 'P040.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P040_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P040.c">
+                                            <pre><code class="language-c">/* Write a program to calculate HCF of two positive number */
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+int main()
+{
+    int a, b, temp;
+    printf(&quot;Enter two number : &quot;);
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    while (b &gt; 0)
+    {
+        temp = a;
+        a = b;
+        b = temp % b;
+    }
+    printf(&quot;HCF = %d&quot;, a);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P041.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P041.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P041_c', 'P041.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P041_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P041.c">
+                                            <pre><code class="language-c">/* Write a program to enter two numbers and check they are co-prime or not.
+    co-prime when HCF = 1
+*/
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+int main()
+{
+    int a, b, temp, temp_a, temp_b;
+    printf(&quot;Enter two number : &quot;);
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    temp_a = a;
+    temp_b = b;
+    while (b &gt; 0)
+    {
+        temp = a;
+        a = b;
+        b = temp % b;
+    }
+    if (a == 1)
+    {
+        printf(&quot;\n(%d, %d) is co-prime.&quot;, temp_a, temp_b);
+    }
+    else
+    {
+        printf(&quot;\n(%d, %d) is not co-prime.&quot;, temp_a, temp_b);
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P042.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P042.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P042_c', 'P042.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P042_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P042.c">
+                                            <pre><code class="language-c">/* Write a program to accept a number and check whether the number
+is twisted prime or not. */
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main()
+{
+    int n, t, i, r, rev, prime = 1;
+    printf(&quot;Enter the number : &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    for (i = 2; i &lt;= (int)sqrt(n); i++)
+    {
+        if (n % i == 0)
+        {
+            prime = 0;
+            break;
+        }
+    }
+    if (prime)
+    {
+        printf(&quot;%d is a prime number.&quot;, n);
+        t = n;
+        rev = 0;
+        prime = 1;
+        while (t &gt; 0)
+        {
+            r = t % 10;
+            rev = rev * 10 + r;
+            t = t / 10;
+        }
+        for (i = 2; i &lt;= (int)sqrt(rev); i++)
+        {
+            if (rev % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+        if (prime)
+        {
+            printf(&quot;\n%d and %d are prime numbers.. TWISTED PRIME&quot;, n, rev);
+        }
+        else
+        {
+            printf(&quot;\n%d is non prime&quot;, rev);
+        }
+    }
+    else
+    {
+        printf(&quot;\n%d is non prime.&quot;, n);
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P043.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P043.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P043_c', 'P043.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P043_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P043.c">
+                                            <pre><code class="language-c">/* Write a program to check palindrome number. */
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+#include &lt;stdio.h&gt;
+int main()
+{
+    int num, temp, rev;
+    printf(&quot;Enter the number : &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    temp = num;
+    rev = 0;
+    while (temp &gt; 0)
+    {
+        rev = (rev * 10) + (temp % 10);
+        temp /= 10;
+    }
+    if (num == rev)
+    {
+        printf(&quot;%d is a palindrome number.&quot;, num);
+    }
+    else
+    {
+        printf(&quot;%d is not a palindrome number.&quot;, num);
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">P044.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P044.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-P044_c', 'P044.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-P044_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P044.c">
+                                            <pre><code class="language-c">/* Write a program to input a number and check whether the
+number is Pronic number or not.
+    Pronic Number: The number which is the product of two numbers
+                   which is the product of two consecutive integer.
+                   Ex: 20 = 4 * 5
+*/
+/* Author - Amit Dutta, Date - 27th OCT, 2025 */
+
+// using boolean...
+/*
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;stdbool.h&gt;
+
+int main()
+{
+    int num, iterationIndex;
+    bool isPronic = false;
+    printf(&quot;Enter the number : &quot;);
+    if (scanf(&quot;%d&quot;, &amp;num) != 1)
+    {
+        printf(&quot;\nYou have to enter a number, not an character or symbol.&quot;);
+        return 1;
+    }
+    if (num &lt; 1)
+    {
+        printf(&quot;\nOnly postive number is allowed.&quot;);
+        return 1;
+    }
+    for (iterationIndex = 1; iterationIndex &lt;= num / 2; iterationIndex++)
+    {
+        if (iterationIndex * (iterationIndex + 1) == num)
+        {
+            printf(&quot;\nInput %d is a Pronic Number.&quot;, num);
+            isPronic = true;
+            break;
+        }
+    }
+    if(!isPronic)
+    {
+        printf(&quot;\nInput %d is not a Pronic Number.&quot;, num);
+    }
+    return 0;
+}
+*/
+
+// using direct return method (more efficient and generally preferred)...
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main()
+{
+    int num, iterationIndex, iterationLimit;
+    printf(&quot;Enter the number : &quot;);
+    if (scanf(&quot;%d&quot;, &amp;num) != 1)
+    {
+        printf(&quot;\nYou have to enter a number, not an character or symbol.&quot;);
+        return 1;
+    }
+    if (num &lt; 1)
+    {
+        printf(&quot;\nOnly postive number is allowed.&quot;);
+        return 1;
+    }
+    iterationLimit = (int)sqrt(num);
+    for (iterationIndex = 1; iterationIndex &lt;= iterationLimit; iterationIndex++)
+    {
+        if (iterationIndex * (iterationIndex + 1) == num)
+        {
+            printf(&quot;\nInput %d is a Pronic Number.&quot;, num);
+            return 0;
+        }
+    }
+    printf(&quot;\nInput %d is not a Pronic Number.&quot;, num);
     return 0;
 }</code></pre>
                                         </div>
