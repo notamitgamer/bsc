@@ -12,7 +12,7 @@ number of subjects he has failed in. Use the following logic.
     grace of 5 marks.
 */
 /* Author - Amit Dutta, Date - 28th OCT, 2025 */
-/* Let Us C, Chap- 6, Page - 106, Qn No.: B(i) */
+/* Let Us C, Chap- 7, Page - 125, Qn No.: C */
 
 #include <stdio.h>
 
