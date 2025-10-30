@@ -6,7 +6,7 @@ Thank you for your interest in contributing to this repository! As this is a per
 
 1.  **Fork the Repository:** Start by forking this repository to your own GitHub account.
 2.  **Create a New Branch:** Create a new branch for your changes (e.g., `git checkout -b feature-my-awesome-feature`).
-3.  **Make Your Changes:** Write your code, solve a problem, or add a new example.
+3.  **Make Your Changes:** Write your code, solve a problem, or add a new example or a problem.
 4.  **Commit Your Changes:** Commit your changes with a clear and descriptive message.
 5.  **Submit a Pull Request:** Push your branch to your forked repository and open a pull request. In the pull request description, please explain the changes you've made.
 
