@@ -60,6 +60,8 @@
   "files.associations": {
     "math.h": "c",
     "stdio.h": "c",
-    "ratio": "c"
+    "ratio": "c",
+    "system_error": "c",
+    "ctype.h": "c"
   }
 }
