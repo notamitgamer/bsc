@@ -1,0 +1,30 @@
+/* Factorial upto N */
+/* Author - Amit Dutta, Date - 03rd November, 2025 */
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    long long fact = 1;
+    printf("Enter n : ");
+    if (scanf("%d", &n) != 1)
+    {
+        printf("\nOnly non-negative number allowed.");
+        return 1;
+    }
+    if (n < 0)
+    {
+        printf("\nOnly non-negative number allowed.");
+        return 1;
+    }
+    if (n == 0)
+    {
+        printf("\nFactorial of 0 : 1");
+        return 0;
+    }
+    for (i = 1; i <= n; i++)
+        fact *= i;
+    printf("\nFactorial of %d : %lld", n, fact);
+    return 0;
+}
