@@ -13,7 +13,6 @@ For better viewing experience:
 This repository contains **Files of codes that will be done in this 4-year BSc Hons Computer Science**
 
 ---
-
 ## 📂 Contents
 
 * ✅ C Source Codes (`.c`)
