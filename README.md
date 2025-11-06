@@ -4,7 +4,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ---
 🔗 **Website**
 For better viewing experience:
-👉 [https://aranag.site/bsc](https://aranag.site/bsc) or [https://notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Synced)
+👉 [https://notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [https://aranag.site/bsc](https://aranag.site/bsc)
 
 ---
 
