@@ -106,11 +106,6 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 
 ---
 
-🔗 **Website**
-For better viewing experience:
-👉 [https://aranag.site/bsc](https://aranag.site/bsc) or [https://notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc)
-
----
 
 ## 👨‍💻 Author
 
