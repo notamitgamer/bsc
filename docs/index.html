@@ -22,9 +22,34 @@
       .chevron.rotated {
         transform: rotate(180deg);
       }
-      #modal-body pre {
-        max-height: 70vh;
+      
+      /* --- Enhanced Code Viewer Modal Styles --- */
+      #code-modal .modal-content-area {
+        /* Ensure the code viewer takes up maximum available height */
+        height: 90vh;
+        max-height: 90vh; 
       }
+      #modal-code-container {
+        /* Remove default padding from the outer container */
+        padding: 0; 
+        flex-grow: 1; /* Allow the container to fill space */
+        display: flex; /* Flex context for pre element */
+      }
+      #modal-code-container pre {
+        /* Full width and height inside its container */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 1rem; /* Padding inside the code block */
+        overflow: auto;
+        /* Custom background and border to look more like a proper viewer */
+        background-color: #1e1e1e; /* Darker background for code */
+        border-radius: 0 0 0.5rem 0.5rem;
+        line-height: 1.4;
+      }
+      /* --- End Code Viewer Modal Styles --- */
+
+
       /* Animation for success feedback */
       .btn-success-pulse {
         background-color: #10b981 !important; /* Tailwind green-500 */
@@ -42,6 +67,24 @@
           box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
         }
       }
+      /* Ensure code display is readable */
+      .code-match-line {
+        background-color: #f3f4f6;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.75rem; /* text-xs */
+        font-family: monospace;
+        white-space: pre-wrap;
+        word-break: break-all;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      }
+      
+      /* Active state for search results */
+      .search-file-item.active {
+        background-color: #dbeafe; /* Blue-100 */
+        border-color: #60a5fa; /* Blue-400 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
     </style>
   </head>
   <body class="bg-gray-100">
@@ -49,22 +92,79 @@
       <div
         class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden"
       >
-        <div class="p-8">
+        <div class="p-4 md:p-8">
           <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
               BSc Repository Contents
             </h1>
-            <p class="text-gray-500 mt-2">
-              A quick navigation guide to the files in the repository. <br><br>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">
+              A quick navigation guide to the files in the repository. <br />
               <b>For optimal viewing and experience, please use a desktop browser.</b>
             </p>
           </div>
-          <div class="space-y-4">
-            <h2 class="text-lg font-semibold text-gray-700 border-b pb-2">
-              Files and Folders
+
+          <!-- SEARCH BAR (Enhanced with Icon and Clear Button) -->
+          <div class="mb-8 relative">
+             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <!-- Search Icon -->
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+             </div>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search files by name or content keyword..."
+              class="w-full p-3 pl-10 pr-10 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
+              oninput="handleSearch()"
+              autocomplete="off"
+            />
+            <!-- Clear Button -->
+             <button id="clear-search-btn" onclick="clearSearch()" class="absolute inset-y-0 right-0 pr-3 flex items-center focus:outline-none hidden" title="Clear Search">
+                <svg class="w-5 h-5 text-gray-400 hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+             </button>
+          </div>
+          <!-- END SEARCH BAR -->
+
+          <!-- SEARCH RESULTS SECTION (Mobile responsive layout) -->
+          <div id="search-results-container" class="hidden mb-8">
+            <h2 class="text-lg font-semibold text-gray-700 border-b pb-2 mb-4">
+              Search Results (<span id="result-count">0</span> files)
             </h2>
-            <ul class="space-y-3">
-              
+            <div
+              class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+            >
+              <!-- 1. File List (Wider on mobile, 1/3 on desktop) -->
+              <div
+                id="result-file-list"
+                class="w-full md:w-1/3 space-y-2 border rounded-xl p-4 bg-gray-50 max-h-[50vh] md:max-h-[60vh] overflow-y-auto"
+              >
+                <p id="search-placeholder" class="text-sm text-gray-500">
+                  Start typing to see file matches...
+                </p>
+              </div>
+              <!-- 2. Code Match Display (Wider on mobile, 2/3 on desktop) -->
+              <div
+                id="result-code-matches"
+                class="w-full md:w-2/3 border rounded-xl p-4 bg-white shadow-inner max-h-[50vh] md:max-h-[60vh] overflow-y-auto relative"
+              >
+                <p id="code-match-placeholder" class="text-sm text-gray-500">
+                  Select a file from the left to view matching code lines, or
+                  refine your search.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- END SEARCH RESULTS SECTION -->
+
+          <!-- INITIAL FILE LIST (Hidden when searching) -->
+          <div id="initial-file-list">
+            <div class="space-y-4">
+              <h2
+                class="text-lg font-semibold text-gray-700 border-b pb-2"
+              >
+                Files and Folders
+              </h2>
+              <ul class="space-y-3">
+                
                         <li class="border rounded-lg overflow-hidden">
                             <div class="folder-header bg-gray-100 p-4 cursor-pointer hover:bg-blue-100 transition-colors duration-200" onclick="toggleFolder('c')">
                                 <div class="flex items-center justify-between">
@@ -8172,8 +8272,10 @@ int main()
                 </ul>
             </div>
         </li>
-            </ul>
+              </ul>
+            </div>
           </div>
+          <!-- END INITIAL FILE LIST -->
         </div>
         <footer class="text-center py-4 bg-gray-50 border-t">
           <p class="text-sm text-gray-500">
@@ -8188,28 +8290,28 @@ int main()
       </div>
     </div>
 
-    <!-- Code Viewer Modal -->
+    <!-- Code Viewer Modal (Enhanced Design) -->
     <div
       id="code-modal"
-      class="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center p-4 hidden z-50"
+      class="fixed inset-0 bg-gray-900 bg-opacity-95 flex items-center justify-center p-2 md:p-4 hidden z-50"
     >
       <div
-        class="bg-gray-800 text-gray-100 rounded-lg shadow-2xl w-full max-w-5xl max-h-full flex flex-col"
+        class="bg-gray-800 text-gray-100 rounded-lg shadow-2xl w-full max-w-5xl modal-content-area flex flex-col"
       >
         <!-- Modal Header -->
         <div
-          class="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg"
+          class="flex items-center justify-between p-3 md:p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg flex-shrink-0"
         >
-          <h3 id="modal-filename" class="text-lg font-mono text-gray-300"></h3>
-          <div class="flex items-center space-x-3">
+          <h3 id="modal-filename" class="text-sm md:text-lg font-mono text-gray-300 truncate"></h3>
+          <div class="flex items-center space-x-2 md:space-x-3">
+            <!-- Share Button -->
             <button
               id="share-btn"
               class="bg-gray-700 text-gray-200 p-2 rounded-md hover:bg-gray-600 relative transition-colors"
               title="Share file link (Copies GitHub URL if sharing is unavailable)"
             >
-              <!-- Default Share Icon -->
               <svg
-                class="w-5 h-5"
+                class="w-4 h-4 md:w-5 md:h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -8223,9 +8325,8 @@ int main()
                   d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-6l-4-4-4 4m4-4v13"
                 ></path>
               </svg>
-              <!-- Success Checkmark Icon (Hidden by Default) -->
               <svg
-                class="w-5 h-5 absolute inset-0 m-auto hidden text-green-400"
+                class="w-4 h-4 md:w-5 md:h-5 absolute inset-0 m-auto hidden text-green-400"
                 id="share-icon-success"
                 fill="none"
                 stroke="currentColor"
@@ -8240,18 +8341,18 @@ int main()
                 ></path>
               </svg>
             </button>
+            <!-- Copy Button -->
             <button
               id="copy-code-btn"
               class="bg-gray-700 text-gray-200 p-2 rounded-md hover:bg-gray-600 relative transition-colors"
               title="Copy code to clipboard"
             >
-              <!-- Default Copy Icon -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-copy w-5 h-5"
+                class="bi bi-copy w-4 h-4 md:w-5 md:h-5"
                 viewBox="0 0 16 16"
                 id="copy-icon-default"
               >
@@ -8260,9 +8361,8 @@ int main()
                   d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
                 />
               </svg>
-              <!-- Success Checkmark Icon (Hidden by Default) -->
               <svg
-                class="w-5 h-5 absolute inset-0 m-auto hidden text-green-400"
+                class="w-4 h-4 md:w-5 md:h-5 absolute inset-0 m-auto hidden text-green-400"
                 id="copy-icon-success"
                 fill="none"
                 stroke="currentColor"
@@ -8277,16 +8377,17 @@ int main()
                 ></path>
               </svg>
             </button>
+            <!-- Close Button -->
             <button
               onclick="hideCode()"
-              class="text-gray-400 hover:text-white text-3xl leading-none"
+              class="text-gray-400 hover:text-white text-2xl md:text-3xl leading-none"
             >
               &times;
             </button>
           </div>
         </div>
-        <!-- Modal Body -->
-        <div id="modal-body" class="p-1 overflow-y-auto">
+        <!-- Modal Body: Code Content -->
+        <div id="modal-body" class="overflow-y-auto flex-grow">
           <div id="modal-code-container" class="rounded-b-lg">
             <!-- Code will be injected here -->
           </div>
@@ -8313,7 +8414,7 @@ int main()
       const modalCodeContainer = document.getElementById(
         "modal-code-container"
       );
-      
+
       const copyBtn = document.getElementById("copy-code-btn");
       const copyIconDefault = document.getElementById("copy-icon-default");
       const copyIconSuccess = document.getElementById("copy-icon-success");
@@ -8323,23 +8424,242 @@ int main()
       const shareIconSuccess = document.getElementById("share-icon-success");
 
       let currentFileUrl = "";
+
+      // --- SEARCH IMPLEMENTATION ---
+
+      // Global state for the search index
+      let fileSearchIndex = [];
+      let activeSearchTerm = "";
+      let indexBuilt = false; // Flag for lazy indexing
+
+      /**
+       * Builds the search index from all hidden code blocks on the page.
+       * This should be called only once.
+       */
+      function buildSearchIndex() {
+        if (indexBuilt) return;
+        console.log("Building search index...");
+        const codeBlocks = document.querySelectorAll('[id^="code-"]');
+        codeBlocks.forEach((block) => {
+          const id = block.id;
+          let filename = id.split('-').slice(2).join('-').replace(/_/g, '.');
+          // Handle path structure
+          if (block.dataset.githubUrl && block.dataset.githubUrl.includes('/main/')) {
+            filename = block.dataset.githubUrl.split('/').pop().replace(/%20/g, ' '); // Decode URL for filename
+          } else if (filename.includes('.')) {
+              filename = filename.split('/').pop();
+          }
+
+          const preElement = block.querySelector("pre");
+          const codeElement = block.querySelector("code");
+
+          if (preElement && codeElement) {
+            fileSearchIndex.push({
+              id: id,
+              // Use the path after /main/
+              path: block.dataset.githubUrl.split('/main/')[1] || filename, 
+              name: filename,
+              content: codeElement.textContent,
+              lines: codeElement.textContent.split('\n'),
+              language: codeElement.className.split('-').pop()
+            });
+          }
+        });
+        indexBuilt = true;
+        console.log(`Search index built with ${fileSearchIndex.length} files.`);
+        // Re-run search if user was already typing
+        if (activeSearchTerm.length >= 2) {
+          handleSearch();
+        }
+      }
       
       /**
+       * Clears the search input and restores the initial file list.
+       */
+      function clearSearch() {
+        document.getElementById('search-input').value = '';
+        activeSearchTerm = '';
+        document.getElementById('clear-search-btn').classList.add('hidden');
+        document.getElementById('initial-file-list').classList.remove('hidden');
+        document.getElementById('search-results-container').classList.add('hidden');
+        
+        // Reset placeholders
+        document.getElementById('result-file-list').innerHTML = '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
+        document.getElementById('result-code-matches').innerHTML = '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
+        document.getElementById('result-count').textContent = '0';
+      }
+
+
+      /**
+       * Handles the search input event, managing visibility and filtering.
+       */
+      function handleSearch() {
+        const inputElement = document.getElementById('search-input');
+        const query = inputElement.value.trim();
+        activeSearchTerm = query;
+        const initialList = document.getElementById('initial-file-list');
+        const resultsContainer = document.getElementById('search-results-container');
+        const codeMatchesContainer = document.getElementById('result-code-matches');
+        const clearBtn = document.getElementById('clear-search-btn');
+        
+        // Toggle clear button visibility
+        if (query.length > 0) {
+            clearBtn.classList.remove('hidden');
+            // Trigger lazy index build on first meaningful interaction
+            buildSearchIndex(); 
+        } else {
+            clearBtn.classList.add('hidden');
+        }
+
+        // Clear code matches and placeholder when a new search starts
+        codeMatchesContainer.innerHTML = '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
+
+        if (query.length < 2 || !indexBuilt) {
+          initialList.classList.remove('hidden');
+          resultsContainer.classList.add('hidden');
+          document.getElementById('result-file-list').innerHTML = '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
+          document.getElementById('result-count').textContent = '0';
+          return;
+        }
+
+        initialList.classList.add('hidden');
+        resultsContainer.classList.remove('hidden');
+
+        const lowerQuery = query.toLowerCase();
+
+        const results = fileSearchIndex.filter(file => 
+          file.name.toLowerCase().includes(lowerQuery) ||
+          file.path.toLowerCase().includes(lowerQuery) ||
+          file.content.toLowerCase().includes(lowerQuery)
+        );
+
+        displayFileResults(results);
+      }
+
+      /**
+       * Displays the list of files that match the search query (WhatsApp contact list analogy).
+       */
+      function displayFileResults(results) {
+        const fileListContainer = document.getElementById('result-file-list');
+        const resultCount = document.getElementById('result-count');
+        
+        resultCount.textContent = results.length;
+        fileListContainer.innerHTML = '';
+
+        if (results.length === 0) {
+          fileListContainer.innerHTML = '<p class="text-sm text-gray-500">No files matched your search term in name or content.</p>';
+          return;
+        }
+        
+        const lowerQuery = activeSearchTerm.toLowerCase();
+        // Safe regex for highlighting matches
+        const regex = new RegExp(`(${activeSearchTerm.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1")})`, 'gi'); 
+
+        results.forEach(file => {
+          // Decode file name/path for display before highlighting
+          const decodedPath = decodeURIComponent(file.path);
+          const decodedName = decodeURIComponent(file.name);
+          
+          const displayName = decodedName.replace(
+              regex, 
+              '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
+          );
+          const displayPath = decodedPath.replace(
+              regex, 
+              '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
+          );
+
+          const listItem = document.createElement('div');
+          // Add 'active' class capability
+          listItem.className = 'search-file-item p-3 rounded-lg shadow-sm cursor-pointer hover:bg-blue-100 transition-colors duration-150 border border-gray-200';
+          listItem.setAttribute('data-file-id', file.id);
+          listItem.innerHTML = `<p class="font-mono text-xs text-blue-600">${displayPath}</p><p class="text-sm font-medium text-gray-800">${displayName}</p>`;
+          
+          listItem.onclick = () => {
+            // Remove 'active' state from all others, add to current
+            document.querySelectorAll('.search-file-item').forEach(el => el.classList.remove('active'));
+            listItem.classList.add('active');
+            displayCodeMatches(file);
+          };
+          
+          fileListContainer.appendChild(listItem);
+        });
+      }
+
+      /**
+       * Displays the actual code lines that contain the search term for a selected file.
+       */
+      function displayCodeMatches(file) {
+        const codeMatchesContainer = document.getElementById('result-code-matches');
+        codeMatchesContainer.innerHTML = '';
+        const query = activeSearchTerm.toLowerCase();
+        const regex = new RegExp(`(${activeSearchTerm.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1")})`, 'gi');
+
+        // Title/Header for the Code Matches container
+        const header = document.createElement('div');
+        header.className = 'sticky top-0 bg-white p-2 border-b mb-4 -mt-4 -mx-4 z-10 rounded-t-xl';
+        
+        const resultsList = document.createElement('div');
+        resultsList.className = 'space-y-4 pt-2';
+        
+        let matchCount = 0;
+
+        file.lines.forEach((line, index) => {
+          if (line.toLowerCase().includes(query)) {
+            matchCount++;
+            
+            const highlightedLine = line.replace(
+                regex, 
+                '<span class="bg-yellow-300 rounded-sm font-semibold">$1</span>'
+            );
+
+            const matchItem = document.createElement('div');
+            matchItem.className = 'code-match-line';
+            matchItem.innerHTML = `
+                <div class="text-blue-500 mb-1">Line ${index + 1}:</div>
+                <div class="text-gray-700">${highlightedLine}</div>
+            `;
+            resultsList.appendChild(matchItem);
+          }
+        });
+
+        // Update header with file info and match count
+        header.innerHTML = `
+            <h3 class="text-base font-semibold text-gray-800">${decodeURIComponent(file.name)}</h3>
+            <p class="text-xs text-gray-500">${decodeURIComponent(file.path)} &mdash; <span class="text-green-600 font-semibold">${matchCount} matches</span></p>
+        `;
+        codeMatchesContainer.appendChild(header);
+        
+        if (matchCount > 0) {
+            codeMatchesContainer.appendChild(resultsList);
+        } else {
+             // Show message if search term matches filename/path but not content (rare, but possible)
+            codeMatchesContainer.innerHTML += '<p class="text-sm text-gray-500 mt-4">No specific content matches found for this file, but the name/path matched the keyword.</p>';
+        }
+
+        // *** View Full Code Button ***
+        const viewFullCodeButton = document.createElement('button');
+        viewFullCodeButton.className = 'mt-6 w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg';
+        viewFullCodeButton.textContent = `View Full Code for ${decodeURIComponent(file.name)}`;
+        viewFullCodeButton.onclick = () => {
+            showCode(file.id, decodeURIComponent(file.name)); // Reuses the existing showCode modal logic
+        };
+        codeMatchesContainer.appendChild(viewFullCodeButton);
+      }
+      
+      // --- END SEARCH IMPLEMENTATION ---
+
+
+      /**
        * Shows a successful copy animation on a button.
-       * @param {HTMLElement} button - The button element.
-       * @param {HTMLElement} defaultIcon - The default icon element.
-       * @param {HTMLElement} successIcon - The success icon element.
        */
       function animateSuccess(button, defaultIcon, successIcon) {
-          // 1. Swap icons
           defaultIcon.classList.add("hidden");
           successIcon.classList.remove("hidden");
           
-          // 2. Apply success visual cue (green background pulse)
           button.classList.add("btn-success-pulse");
           button.classList.remove("bg-gray-700", "hover:bg-gray-600");
 
-          // 3. Revert after 2 seconds
           setTimeout(() => {
               successIcon.classList.add("hidden");
               defaultIcon.classList.remove("hidden");
@@ -8352,14 +8672,23 @@ int main()
         const codeBlock = document.getElementById(codeBlockId);
         if (codeBlock) {
           modalFilename.textContent = filename;
-          modalCodeContainer.innerHTML = codeBlock.innerHTML;
+          
+          // Clone the content to avoid issues with highlight.js re-running
+          const codeContentClone = codeBlock.querySelector("pre").cloneNode(true);
+          modalCodeContainer.innerHTML = ''; // Clear previous content
+          modalCodeContainer.appendChild(codeContentClone);
+
 
           currentFileUrl = codeBlock.dataset.githubUrl || "";
 
+          // The highlight.js class is already on the code element in the clone
           hljs.highlightElement(modalCodeContainer.querySelector("code"));
 
           modal.classList.remove("hidden");
           document.body.style.overflow = "hidden";
+          
+          // Focus the modal content for better accessibility (optional)
+          modalCodeContainer.querySelector("pre").focus();
         }
       }
 
@@ -8372,18 +8701,15 @@ int main()
         const codeToCopy = modalCodeContainer.querySelector("code").innerText;
         navigator.clipboard.writeText(codeToCopy).then(
           () => {
-            // Use the reusable animation function for code copy
             animateSuccess(copyBtn, copyIconDefault, copyIconSuccess);
           },
           (err) => {
             console.error("Failed to copy text: ", err);
-            // Replace old alert with a console error or a custom message box if needed
           }
         );
       });
 
       shareBtn.addEventListener("click", async () => {
-        // Ensure currentFileUrl is set (it's the GitHub link)
         if (!currentFileUrl) return;
 
         const shareData = {
@@ -8392,21 +8718,16 @@ int main()
           url: currentFileUrl,
         };
         
-        // 1. Try to use Web Share API
         if (navigator.share) {
           try {
             await navigator.share(shareData);
-            // If sharing is successful, no need for clipboard animation
           } catch (err) {
-            // User likely cancelled the share dialog, no action needed
             if (err.name !== 'AbortError') {
                 console.error("Share failed:", err.message);
             }
           }
         } else {
-          // 2. Fallback: Copy URL to clipboard
           navigator.clipboard.writeText(currentFileUrl).then(() => {
-            // Trigger animation to show link was copied
             animateSuccess(shareBtn, shareIconDefault, shareIconSuccess);
           });
         }
@@ -8417,6 +8738,11 @@ int main()
           hideCode();
         }
       });
+      
+      // Initial action: Lazy index building
+      // We don't call buildSearchIndex on load anymore. 
+      // It's called on the first time the user types.
+      // This prioritizes page load speed.
     </script>
   </body>
 </html>
