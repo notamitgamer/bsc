@@ -8023,6 +8023,7 @@ int main()
 {
     int i, j, temp;
 
+    printf(&quot;\n\nPattern 1 : \n\n&quot;);
     /*
     9   9   9   9   9
     7   7   7   7   7
@@ -8030,10 +8031,141 @@ int main()
     3   3   3   3   3
     1   1   1   1   1
     */
-   temp = 9;
-   for(i = 1; i &lt;= 5; i++) {
-    
-   }
+    temp = 9;
+    for (i = 1; i &lt;= 5; i++)
+    {
+        for (j = 1; j &lt;= 5; j++)
+        {
+            printf(&quot;%d  &quot;, temp);
+        }
+        printf(&quot;\n&quot;);
+        temp -= 2;
+    }
+
+    // Another method print above pattern
+    printf(&quot;\n\nPattern 1 : \n\n&quot;);
+    for (i = 9; i &gt;= 1; i -= 2)
+    {
+        for (j = 1; j &lt;= 5; j++)
+        {
+            printf(&quot;%d  &quot;, i);
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 2 : \n\n&quot;);
+    /*
+    1   2   3   4   5
+    1   2   3   4   5
+    1   2   3   4   5
+    */
+    for (i = 1; i &lt;= 3; i++)
+    {
+        for (j = 1; j &lt;= 5; j++)
+        {
+            printf(&quot;%d  &quot;, j);
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 3 : \n\n&quot;);
+    /*
+    5   4   3   2   1
+    5   4   3   2   1
+    */
+    for (i = 1; i &lt;= 2; i++)
+    {
+        for (j = 5; j &gt;= 1; j--)
+        {
+            printf(&quot;%d  &quot;, j);
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 4 : \n\n&quot;);
+    /*
+    1   2   3   4
+    5   6   7   8
+    9   10  11  12
+    */
+    temp = 1;
+    for (i = 1; i &lt;= 3; i++)
+    {
+        for (j = 1; j &lt;= 4; j++)
+        {
+            printf(&quot;%d  &quot;, temp);
+            temp++;
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 5 : \n\n&quot;);
+    /*
+    1   2   3   4
+    4   8   12  16
+    1   2   3   4
+    4   8   12  16
+    1   2   3   4
+    */
+    for (i = 1; i &lt;= 5; i++)
+    {
+        for (j = 1; j &lt;= 4; j++)
+        {
+            if (i % 2 == 0)
+                printf(&quot;%d  &quot;, j * 4);
+            else
+                printf(&quot;%d  &quot;, j);
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 6 : \n\n&quot;);
+    /*
+    1
+    2   4
+    3   5   7
+    6   8   10  12
+    9   11  13  15  17
+    */
+    int odd = 1, even = 2;
+    for (i = 1; i &lt;= 5; i++)
+    {
+        for (j = 1; j &lt;= i; j++)
+        {
+            if (i % 2 == 0)
+            {
+                printf(&quot;%d  &quot;, even);
+                even += 2;
+            }
+            else
+            {
+                printf(&quot;%d  &quot;, odd);
+                odd += 2;
+            }
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    printf(&quot;\n\nPattern 7 : \n\n&quot;);
+    /*
+    1   2   3   4   5
+    6   7   8   9
+    10  11  12
+    13  14
+    15
+    */
+    temp = 1;
+    for (i = 5; i &gt;= 1; i--)
+    {
+        for (j = 1; j &lt;= i; j++)
+        {
+            printf(&quot;%d  &quot;, temp);
+            temp++;
+        }
+        printf(&quot;\n&quot;);
+    }
+
+    return 0;
 }</code></pre>
                                         </div>
                                     </li>
