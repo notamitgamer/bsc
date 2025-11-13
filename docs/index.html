@@ -22,16 +22,16 @@
       .chevron.rotated {
         transform: rotate(180deg);
       }
-      
+
       /* --- Enhanced Code Viewer Modal Styles --- */
       #code-modal .modal-content-area {
         /* Ensure the code viewer takes up maximum available height */
         height: 90vh;
-        max-height: 90vh; 
+        max-height: 90vh;
       }
       #modal-code-container {
         /* Remove default padding from the outer container */
-        padding: 0; 
+        padding: 0;
         flex-grow: 1; /* Allow the container to fill space */
         display: flex; /* Flex context for pre element */
       }
@@ -48,7 +48,6 @@
         line-height: 1.4;
       }
       /* --- End Code Viewer Modal Styles --- */
-
 
       /* Animation for success feedback */
       .btn-success-pulse {
@@ -78,12 +77,13 @@
         word-break: break-all;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
       }
-      
+
       /* Active state for search results */
       .search-file-item.active {
         background-color: #dbeafe; /* Blue-100 */
         border-color: #60a5fa; /* Blue-400 */
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
       }
     </style>
   </head>
@@ -99,17 +99,42 @@
             </h1>
             <p class="text-gray-500 mt-2 text-sm md:text-base">
               A quick navigation guide to the files in the repository. <br />
-              <b>For optimal viewing and experience, please use a desktop browser.</b>
+              <b
+                >For optimal viewing and experience, please use a desktop
+                browser.</b
+              >
             </p>
-            <p class="text-gray-500 mt-2 text-sm md:text-base">GitHub Repository URL: <a href="https://github.com/notamitgamer/bsc" class="text-blue-600 hover:underline">https://github.com/notamitgamer/bsc</a></p>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">
+              GitHub Repository URL:
+              <a
+                href="https://github.com/notamitgamer/bsc"
+                class="text-blue-600 hover:underline"
+                >https://github.com/notamitgamer/bsc</a
+              >
+            </p>
           </div>
 
           <!-- SEARCH BAR (Enhanced with Icon and Clear Button) -->
           <div class="mb-8 relative">
-             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <!-- Search Icon -->
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-             </div>
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <!-- Search Icon -->
+              <svg
+                class="w-5 h-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </div>
             <input
               type="text"
               id="search-input"
@@ -119,9 +144,27 @@
               autocomplete="off"
             />
             <!-- Clear Button -->
-             <button id="clear-search-btn" onclick="clearSearch()" class="absolute inset-y-0 right-0 pr-3 flex items-center focus:outline-none hidden" title="Clear Search">
-                <svg class="w-5 h-5 text-gray-400 hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-             </button>
+            <button
+              id="clear-search-btn"
+              onclick="clearSearch()"
+              class="absolute inset-y-0 right-0 pr-3 flex items-center focus:outline-none hidden"
+              title="Clear Search"
+            >
+              <svg
+                class="w-5 h-5 text-gray-400 hover:text-gray-600 transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
           </div>
           <!-- END SEARCH BAR -->
 
@@ -159,9 +202,7 @@
           <!-- INITIAL FILE LIST (Hidden when searching) -->
           <div id="initial-file-list">
             <div class="space-y-4">
-              <h2
-                class="text-lg font-semibold text-gray-700 border-b pb-2"
-              >
+              <h2 class="text-lg font-semibold text-gray-700 border-b pb-2">
                 Files and Folders
               </h2>
               <ul class="space-y-3">
@@ -4515,7 +4556,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">tuition-c</span>
-                                        <span class="ml-2 text-sm text-gray-500">(92 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(101 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/tuition-c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -5456,6 +5497,290 @@ int main()
     }
     return 0;
 }</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-024.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-024.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-024_c', 'APC-PRAC-024.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-024_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-024.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = i; j &gt;= 1; j--) {
+			printf(&quot;%d    &quot;, j);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-025.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-025.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-025_c', 'APC-PRAC-025.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-025_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-025.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = n; j &gt;= i; j--) {
+			printf(&quot;%d    &quot;, j);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-026.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-026.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-026_c', 'APC-PRAC-026.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-026_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-026.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = n; i &gt;= 1; i--) {
+		for(j = n; j &gt;= i; j--) {
+			printf(&quot;%d    &quot;, j);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-027.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-027.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-027_c', 'APC-PRAC-027.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-027_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-027.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = i; j &lt;= n; j++) {
+			printf(&quot;%d    &quot;, j);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-028.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-028.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-028_c', 'APC-PRAC-028.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-028_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-028.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j, temp = 1;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = 1; j &lt;= i; j++) {
+			printf(&quot;%d\t&quot;, temp);
+			temp++;
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-029.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-029.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-029_c', 'APC-PRAC-029.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-029_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-029.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = 1; j &lt;= i; j++) {
+			if(j % 2 == 0) printf(&quot;0   &quot;);
+			else printf(&quot;1   &quot;);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-030.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-030.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-030_c', 'APC-PRAC-030.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-030_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-030.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = 1; j &lt;= i; j++) {
+			if(i % 2 == 0) printf(&quot;@   &quot;);
+			else printf(&quot;#   &quot;);
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-031.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-031.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-031_c', 'APC-PRAC-031.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-031_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-031.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j, temp = 1;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = n; i &gt;= 1; i--) {
+		for(j = 1; j &lt;= i; j++) {
+			printf(&quot;%d\t&quot;, temp);
+			temp++;
+		}
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-032.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-032.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-032_c', 'APC-PRAC-032.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-032_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-032.c">
+                                            <pre><code class="language-c">/* Author = Amit Dutta, Date - 13th November, 2025 */
+
+#include&lt;stdio.h&gt; 
+int main() {
+	int n, i, j; char temp = &#x27;A&#x27;;
+	printf(&quot;Enter the n : &quot;);
+	scanf(&quot;%d&quot;, &amp;n);
+	for(i = 1; i &lt;= n; i++) {
+		for(j = 1; j &lt;= i; j++) {
+			printf(&quot;%c&quot;, temp);
+		}
+		temp++;
+		printf(&quot;\n&quot;);
+	}
+	return 0;
+}
+</code></pre>
                                         </div>
                                     </li>
 
@@ -8368,7 +8693,10 @@ int main()
         <div
           class="flex items-center justify-between p-3 md:p-4 border-b border-gray-700 bg-gray-900 rounded-t-lg flex-shrink-0"
         >
-          <h3 id="modal-filename" class="text-sm md:text-lg font-mono text-gray-300 truncate"></h3>
+          <h3
+            id="modal-filename"
+            class="text-sm md:text-lg font-mono text-gray-300 truncate"
+          ></h3>
           <div class="flex items-center space-x-2 md:space-x-3">
             <!-- Share Button -->
             <button
@@ -8508,12 +8836,18 @@ int main()
         const codeBlocks = document.querySelectorAll('[id^="code-"]');
         codeBlocks.forEach((block) => {
           const id = block.id;
-          let filename = id.split('-').slice(2).join('-').replace(/_/g, '.');
+          let filename = id.split("-").slice(2).join("-").replace(/_/g, ".");
           // Handle path structure
-          if (block.dataset.githubUrl && block.dataset.githubUrl.includes('/main/')) {
-            filename = block.dataset.githubUrl.split('/').pop().replace(/%20/g, ' '); // Decode URL for filename
-          } else if (filename.includes('.')) {
-              filename = filename.split('/').pop();
+          if (
+            block.dataset.githubUrl &&
+            block.dataset.githubUrl.includes("/main/")
+          ) {
+            filename = block.dataset.githubUrl
+              .split("/")
+              .pop()
+              .replace(/%20/g, " "); // Decode URL for filename
+          } else if (filename.includes(".")) {
+            filename = filename.split("/").pop();
           }
 
           const preElement = block.querySelector("pre");
@@ -8523,11 +8857,11 @@ int main()
             fileSearchIndex.push({
               id: id,
               // Use the path after /main/
-              path: block.dataset.githubUrl.split('/main/')[1] || filename, 
+              path: block.dataset.githubUrl.split("/main/")[1] || filename,
               name: filename,
               content: codeElement.textContent,
-              lines: codeElement.textContent.split('\n'),
-              language: codeElement.className.split('-').pop()
+              lines: codeElement.textContent.split("\n"),
+              language: codeElement.className.split("-").pop(),
             });
           }
         });
@@ -8538,65 +8872,75 @@ int main()
           handleSearch();
         }
       }
-      
+
       /**
        * Clears the search input and restores the initial file list.
        */
       function clearSearch() {
-        document.getElementById('search-input').value = '';
-        activeSearchTerm = '';
-        document.getElementById('clear-search-btn').classList.add('hidden');
-        document.getElementById('initial-file-list').classList.remove('hidden');
-        document.getElementById('search-results-container').classList.add('hidden');
-        
-        // Reset placeholders
-        document.getElementById('result-file-list').innerHTML = '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
-        document.getElementById('result-code-matches').innerHTML = '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
-        document.getElementById('result-count').textContent = '0';
-      }
+        document.getElementById("search-input").value = "";
+        activeSearchTerm = "";
+        document.getElementById("clear-search-btn").classList.add("hidden");
+        document.getElementById("initial-file-list").classList.remove("hidden");
+        document
+          .getElementById("search-results-container")
+          .classList.add("hidden");
 
+        // Reset placeholders
+        document.getElementById("result-file-list").innerHTML =
+          '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
+        document.getElementById("result-code-matches").innerHTML =
+          '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
+        document.getElementById("result-count").textContent = "0";
+      }
 
       /**
        * Handles the search input event, managing visibility and filtering.
        */
       function handleSearch() {
-        const inputElement = document.getElementById('search-input');
+        const inputElement = document.getElementById("search-input");
         const query = inputElement.value.trim();
         activeSearchTerm = query;
-        const initialList = document.getElementById('initial-file-list');
-        const resultsContainer = document.getElementById('search-results-container');
-        const codeMatchesContainer = document.getElementById('result-code-matches');
-        const clearBtn = document.getElementById('clear-search-btn');
-        
+        const initialList = document.getElementById("initial-file-list");
+        const resultsContainer = document.getElementById(
+          "search-results-container"
+        );
+        const codeMatchesContainer = document.getElementById(
+          "result-code-matches"
+        );
+        const clearBtn = document.getElementById("clear-search-btn");
+
         // Toggle clear button visibility
         if (query.length > 0) {
-            clearBtn.classList.remove('hidden');
-            // Trigger lazy index build on first meaningful interaction
-            buildSearchIndex(); 
+          clearBtn.classList.remove("hidden");
+          // Trigger lazy index build on first meaningful interaction
+          buildSearchIndex();
         } else {
-            clearBtn.classList.add('hidden');
+          clearBtn.classList.add("hidden");
         }
 
         // Clear code matches and placeholder when a new search starts
-        codeMatchesContainer.innerHTML = '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
+        codeMatchesContainer.innerHTML =
+          '<p id="code-match-placeholder" class="text-sm text-gray-500">Select a file from the left to view matching code lines, or refine your search.</p>';
 
         if (query.length < 2 || !indexBuilt) {
-          initialList.classList.remove('hidden');
-          resultsContainer.classList.add('hidden');
-          document.getElementById('result-file-list').innerHTML = '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
-          document.getElementById('result-count').textContent = '0';
+          initialList.classList.remove("hidden");
+          resultsContainer.classList.add("hidden");
+          document.getElementById("result-file-list").innerHTML =
+            '<p id="search-placeholder" class="text-sm text-gray-500">Start typing to see file matches...</p>';
+          document.getElementById("result-count").textContent = "0";
           return;
         }
 
-        initialList.classList.add('hidden');
-        resultsContainer.classList.remove('hidden');
+        initialList.classList.add("hidden");
+        resultsContainer.classList.remove("hidden");
 
         const lowerQuery = query.toLowerCase();
 
-        const results = fileSearchIndex.filter(file => 
-          file.name.toLowerCase().includes(lowerQuery) ||
-          file.path.toLowerCase().includes(lowerQuery) ||
-          file.content.toLowerCase().includes(lowerQuery)
+        const results = fileSearchIndex.filter(
+          (file) =>
+            file.name.toLowerCase().includes(lowerQuery) ||
+            file.path.toLowerCase().includes(lowerQuery) ||
+            file.content.toLowerCase().includes(lowerQuery)
         );
 
         displayFileResults(results);
@@ -8606,48 +8950,58 @@ int main()
        * Displays the list of files that match the search query (WhatsApp contact list analogy).
        */
       function displayFileResults(results) {
-        const fileListContainer = document.getElementById('result-file-list');
-        const resultCount = document.getElementById('result-count');
-        
+        const fileListContainer = document.getElementById("result-file-list");
+        const resultCount = document.getElementById("result-count");
+
         resultCount.textContent = results.length;
-        fileListContainer.innerHTML = '';
+        fileListContainer.innerHTML = "";
 
         if (results.length === 0) {
-          fileListContainer.innerHTML = '<p class="text-sm text-gray-500">No files matched your search term in name or content.</p>';
+          fileListContainer.innerHTML =
+            '<p class="text-sm text-gray-500">No files matched your search term in name or content.</p>';
           return;
         }
-        
+
         const lowerQuery = activeSearchTerm.toLowerCase();
         // Safe regex for highlighting matches
-        const regex = new RegExp(`(${activeSearchTerm.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1")})`, 'gi'); 
+        const regex = new RegExp(
+          `(${activeSearchTerm.replace(
+            /([.*+?^=!:${}()|\[\]\/\\])/g,
+            "\\$1"
+          )})`,
+          "gi"
+        );
 
-        results.forEach(file => {
+        results.forEach((file) => {
           // Decode file name/path for display before highlighting
           const decodedPath = decodeURIComponent(file.path);
           const decodedName = decodeURIComponent(file.name);
-          
+
           const displayName = decodedName.replace(
-              regex, 
-              '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
+            regex,
+            '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
           );
           const displayPath = decodedPath.replace(
-              regex, 
-              '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
+            regex,
+            '<span class="bg-yellow-200 font-semibold rounded-sm">$1</span>'
           );
 
-          const listItem = document.createElement('div');
+          const listItem = document.createElement("div");
           // Add 'active' class capability
-          listItem.className = 'search-file-item p-3 rounded-lg shadow-sm cursor-pointer hover:bg-blue-100 transition-colors duration-150 border border-gray-200';
-          listItem.setAttribute('data-file-id', file.id);
+          listItem.className =
+            "search-file-item p-3 rounded-lg shadow-sm cursor-pointer hover:bg-blue-100 transition-colors duration-150 border border-gray-200";
+          listItem.setAttribute("data-file-id", file.id);
           listItem.innerHTML = `<p class="font-mono text-xs text-blue-600">${displayPath}</p><p class="text-sm font-medium text-gray-800">${displayName}</p>`;
-          
+
           listItem.onclick = () => {
             // Remove 'active' state from all others, add to current
-            document.querySelectorAll('.search-file-item').forEach(el => el.classList.remove('active'));
-            listItem.classList.add('active');
+            document
+              .querySelectorAll(".search-file-item")
+              .forEach((el) => el.classList.remove("active"));
+            listItem.classList.add("active");
             displayCodeMatches(file);
           };
-          
+
           fileListContainer.appendChild(listItem);
         });
       }
@@ -8656,31 +9010,40 @@ int main()
        * Displays the actual code lines that contain the search term for a selected file.
        */
       function displayCodeMatches(file) {
-        const codeMatchesContainer = document.getElementById('result-code-matches');
-        codeMatchesContainer.innerHTML = '';
+        const codeMatchesContainer = document.getElementById(
+          "result-code-matches"
+        );
+        codeMatchesContainer.innerHTML = "";
         const query = activeSearchTerm.toLowerCase();
-        const regex = new RegExp(`(${activeSearchTerm.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1")})`, 'gi');
+        const regex = new RegExp(
+          `(${activeSearchTerm.replace(
+            /([.*+?^=!:${}()|\[\]\/\\])/g,
+            "\\$1"
+          )})`,
+          "gi"
+        );
 
         // Title/Header for the Code Matches container
-        const header = document.createElement('div');
-        header.className = 'sticky top-0 bg-white p-2 border-b mb-4 -mt-4 -mx-4 z-10 rounded-t-xl';
-        
-        const resultsList = document.createElement('div');
-        resultsList.className = 'space-y-4 pt-2';
-        
+        const header = document.createElement("div");
+        header.className =
+          "sticky top-0 bg-white p-2 border-b mb-4 -mt-4 -mx-4 z-10 rounded-t-xl";
+
+        const resultsList = document.createElement("div");
+        resultsList.className = "space-y-4 pt-2";
+
         let matchCount = 0;
 
         file.lines.forEach((line, index) => {
           if (line.toLowerCase().includes(query)) {
             matchCount++;
-            
+
             const highlightedLine = line.replace(
-                regex, 
-                '<span class="bg-yellow-300 rounded-sm font-semibold">$1</span>'
+              regex,
+              '<span class="bg-yellow-300 rounded-sm font-semibold">$1</span>'
             );
 
-            const matchItem = document.createElement('div');
-            matchItem.className = 'code-match-line';
+            const matchItem = document.createElement("div");
+            matchItem.className = "code-match-line";
             matchItem.innerHTML = `
                 <div class="text-blue-500 mb-1">Line ${index + 1}:</div>
                 <div class="text-gray-700">${highlightedLine}</div>
@@ -8691,59 +9054,67 @@ int main()
 
         // Update header with file info and match count
         header.innerHTML = `
-            <h3 class="text-base font-semibold text-gray-800">${decodeURIComponent(file.name)}</h3>
-            <p class="text-xs text-gray-500">${decodeURIComponent(file.path)} &mdash; <span class="text-green-600 font-semibold">${matchCount} matches</span></p>
+            <h3 class="text-base font-semibold text-gray-800">${decodeURIComponent(
+              file.name
+            )}</h3>
+            <p class="text-xs text-gray-500">${decodeURIComponent(
+              file.path
+            )} &mdash; <span class="text-green-600 font-semibold">${matchCount} matches</span></p>
         `;
         codeMatchesContainer.appendChild(header);
-        
+
         if (matchCount > 0) {
-            codeMatchesContainer.appendChild(resultsList);
+          codeMatchesContainer.appendChild(resultsList);
         } else {
-             // Show message if search term matches filename/path but not content (rare, but possible)
-            codeMatchesContainer.innerHTML += '<p class="text-sm text-gray-500 mt-4">No specific content matches found for this file, but the name/path matched the keyword.</p>';
+          // Show message if search term matches filename/path but not content (rare, but possible)
+          codeMatchesContainer.innerHTML +=
+            '<p class="text-sm text-gray-500 mt-4">No specific content matches found for this file, but the name/path matched the keyword.</p>';
         }
 
         // *** View Full Code Button ***
-        const viewFullCodeButton = document.createElement('button');
-        viewFullCodeButton.className = 'mt-6 w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg';
-        viewFullCodeButton.textContent = `View Full Code for ${decodeURIComponent(file.name)}`;
+        const viewFullCodeButton = document.createElement("button");
+        viewFullCodeButton.className =
+          "mt-6 w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg";
+        viewFullCodeButton.textContent = `View Full Code for ${decodeURIComponent(
+          file.name
+        )}`;
         viewFullCodeButton.onclick = () => {
-            showCode(file.id, decodeURIComponent(file.name)); // Reuses the existing showCode modal logic
+          showCode(file.id, decodeURIComponent(file.name)); // Reuses the existing showCode modal logic
         };
         codeMatchesContainer.appendChild(viewFullCodeButton);
       }
-      
-      // --- END SEARCH IMPLEMENTATION ---
 
+      // --- END SEARCH IMPLEMENTATION ---
 
       /**
        * Shows a successful copy animation on a button.
        */
       function animateSuccess(button, defaultIcon, successIcon) {
-          defaultIcon.classList.add("hidden");
-          successIcon.classList.remove("hidden");
-          
-          button.classList.add("btn-success-pulse");
-          button.classList.remove("bg-gray-700", "hover:bg-gray-600");
+        defaultIcon.classList.add("hidden");
+        successIcon.classList.remove("hidden");
 
-          setTimeout(() => {
-              successIcon.classList.add("hidden");
-              defaultIcon.classList.remove("hidden");
-              button.classList.remove("btn-success-pulse");
-              button.classList.add("bg-gray-700", "hover:bg-gray-600");
-          }, 2000);
+        button.classList.add("btn-success-pulse");
+        button.classList.remove("bg-gray-700", "hover:bg-gray-600");
+
+        setTimeout(() => {
+          successIcon.classList.add("hidden");
+          defaultIcon.classList.remove("hidden");
+          button.classList.remove("btn-success-pulse");
+          button.classList.add("bg-gray-700", "hover:bg-gray-600");
+        }, 2000);
       }
 
       function showCode(codeBlockId, filename) {
         const codeBlock = document.getElementById(codeBlockId);
         if (codeBlock) {
           modalFilename.textContent = filename;
-          
-          // Clone the content to avoid issues with highlight.js re-running
-          const codeContentClone = codeBlock.querySelector("pre").cloneNode(true);
-          modalCodeContainer.innerHTML = ''; // Clear previous content
-          modalCodeContainer.appendChild(codeContentClone);
 
+          // Clone the content to avoid issues with highlight.js re-running
+          const codeContentClone = codeBlock
+            .querySelector("pre")
+            .cloneNode(true);
+          modalCodeContainer.innerHTML = ""; // Clear previous content
+          modalCodeContainer.appendChild(codeContentClone);
 
           currentFileUrl = codeBlock.dataset.githubUrl || "";
 
@@ -8752,7 +9123,7 @@ int main()
 
           modal.classList.remove("hidden");
           document.body.style.overflow = "hidden";
-          
+
           // Focus the modal content for better accessibility (optional)
           modalCodeContainer.querySelector("pre").focus();
         }
@@ -8783,13 +9154,13 @@ int main()
           text: `Check out the code for ${modalFilename.textContent}`,
           url: currentFileUrl,
         };
-        
+
         if (navigator.share) {
           try {
             await navigator.share(shareData);
           } catch (err) {
-            if (err.name !== 'AbortError') {
-                console.error("Share failed:", err.message);
+            if (err.name !== "AbortError") {
+              console.error("Share failed:", err.message);
             }
           }
         } else {
@@ -8800,8 +9171,8 @@ int main()
       });
 
       document.addEventListener("keydown", (e) => {
-        const searchInput = document.getElementById('search-input');
-        
+        const searchInput = document.getElementById("search-input");
+
         // 1. ESCAPE key closes modal
         if (e.key === "Escape" && !modal.classList.contains("hidden")) {
           hideCode();
@@ -8816,13 +9187,13 @@ int main()
           !/^(INPUT|TEXTAREA|SELECT)$/i.test(document.activeElement.tagName)
         ) {
           // Prevent the '/' character from being typed outside the input field
-          e.preventDefault(); 
+          e.preventDefault();
           searchInput.focus();
         }
       });
-      
+
       // Initial action: Lazy index building
-      // We don't call buildSearchIndex on load anymore. 
+      // We don't call buildSearchIndex on load anymore.
       // It's called on the first time the user types.
       // This prioritizes page load speed.
     </script>
