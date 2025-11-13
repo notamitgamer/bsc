@@ -1,4 +1,17 @@
+/*
+Pattern:
+	1
+	2	1
+	3	2	1
+	4	3	2	1
+	5	4	3	2	1
+*/
 /* Author = Amit Dutta, Date - 13th November, 2025 */
+// File Name - amit1311202501.c (LAB), APC-PRAC-024.c (Local)
+
+// This code has not been compiled.
+// If you find any issues, please create a new issue on GitHub regarding them.
+// Go to this link to create a new issue: https://github.com/notamitgamer/bsc/issues
 
 #include<stdio.h> 
 int main() {
