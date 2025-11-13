@@ -95,12 +95,13 @@
         <div class="p-4 md:p-8">
           <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
-              BSc Repository Contents
+              notamitgamer/bsc Repository Contents
             </h1>
             <p class="text-gray-500 mt-2 text-sm md:text-base">
               A quick navigation guide to the files in the repository. <br />
               <b>For optimal viewing and experience, please use a desktop browser.</b>
             </p>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">GitHub Repository URL: <a href="https://github.com/notamitgamer/bsc" class="text-blue-600 hover:underline">https://github.com/notamitgamer/bsc</a></p>
           </div>
 
           <!-- SEARCH BAR (Enhanced with Icon and Clear Button) -->
@@ -112,7 +113,7 @@
             <input
               type="text"
               id="search-input"
-              placeholder="Search files by name or content keywords..."
+              placeholder="Search files by name or content keywords (Press '/' to focus)"
               class="w-full p-3 pl-10 pr-10 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
               oninput="handleSearch()"
               autocomplete="off"
@@ -8799,8 +8800,24 @@ int main()
       });
 
       document.addEventListener("keydown", (e) => {
+        const searchInput = document.getElementById('search-input');
+        
+        // 1. ESCAPE key closes modal
         if (e.key === "Escape" && !modal.classList.contains("hidden")) {
           hideCode();
+          return;
+        }
+
+        // 2. '/' key focuses search bar
+        // Check if the key is '/', the modal is not open, and the current focus is not an input field
+        if (
+          e.key === "/" &&
+          modal.classList.contains("hidden") &&
+          !/^(INPUT|TEXTAREA|SELECT)$/i.test(document.activeElement.tagName)
+        ) {
+          // Prevent the '/' character from being typed outside the input field
+          e.preventDefault(); 
+          searchInput.focus();
         }
       });
       
