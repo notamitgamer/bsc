@@ -7,7 +7,7 @@ REPO_URL = "https://github.com/notamitgamer/bsc"
 # List of directories to exclude from the list.
 EXCLUDED_DIRS = ['.git', '.github', '.vscode', 'MinGW64', 'print', 'docs']
 # List of files to exclude from the list.
-EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 
+EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'SOCIAL_PREVIEW.md',
                   'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html', 'generate_index.py']
 # --- End Configuration ---
 
