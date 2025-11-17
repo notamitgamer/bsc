@@ -892,7 +892,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">letusc</span>
-                                        <span class="ml-2 text-sm text-gray-500">(60 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(62 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/letusc" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -3258,6 +3258,127 @@ int main()
     }
 
     printf(&quot;\nStudent will get %d grace marks.&quot;, graceMarks);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">luc044.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/luc044.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-luc044_c', 'luc044.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-luc044_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/luc044.c">
+                                            <pre><code class="language-c">/* Any year is entered through the keyboard. Write a function to
+determine whether the year is aleap year or not. */
+/* Author - Amit Dutta, Date - 17th November, 2025 */
+/* Let Us C, Chap- 8, Page - 144, Qn No.: C(1) */
+
+#include &lt;stdio.h&gt;
+
+int leapYear(int);
+
+int leapYear(int year)
+{
+    if ((year % 400 == 0) || ((year % 4 == 0) &amp;&amp; (year % 100 != 0)))
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int year;
+    printf(&quot;Enter the year : &quot;);
+    scanf(&quot;%d&quot;, &amp;year);
+    if (leapYear(year))
+        printf(&quot;\nYear %d is a Leap Year.&quot;, year);
+    else
+        printf(&quot;\nYear %d is not a Leap Year.&quot;, year);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">luc045.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/luc045.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-luc045_c', 'luc045.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-luc045_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/luc045.c">
+                                            <pre><code class="language-c">/* A position integer is entered through the keyboard. Write a Function
+to obtain the prime factors of this number. 
+For example, prime factors of 24 are 2, 2, 2 and 3, whereas prime 
+factors of 35 are 5 and 7
+*/
+/* Author - Amit Dutta, Date - 17th November, 2025 */
+/* Let Us C, Chap- 8, Page - 144, Qn No.: C(2) */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+void findPrimeFactors(int n)
+{
+    int temp_n = n;
+
+    if (temp_n == 1)
+    {
+        printf(&quot;Prime factors of %d are: None.\n&quot;, n);
+        return;
+    }
+
+    printf(&quot;Prime factors of %d are:&quot;, n);
+
+    while (temp_n % 2 == 0)
+    {
+        printf(&quot; %d&quot;, 2);
+        temp_n = temp_n / 2;
+    }
+
+    for (int i = 3; i &lt;= (int)sqrt(temp_n); i = i + 2)
+    {
+        while (temp_n % i == 0)
+        {
+            printf(&quot; %d&quot;, i);
+            temp_n = temp_n / i;
+        }
+    }
+
+    if (temp_n &gt; 2)
+    {
+        printf(&quot; %d&quot;, temp_n);
+    }
+
+    printf(&quot;\n&quot;);
+}
+
+int main()
+{
+    int n;
+    printf(&quot;Enter a positive integer to get the prime factors: &quot;);
+    if (scanf(&quot;%d&quot;, &amp;n) != 1)
+    {
+        printf(&quot;Error: Invalid input. Please enter an integer.\n&quot;);
+        return 1;
+    }
+    if (n &lt;= 0)
+    {
+        printf(&quot;Error: Please enter a POSITIVE integer.\n&quot;);
+        return 1;
+    }
+    findPrimeFactors(n);
     return 0;
 }</code></pre>
                                         </div>
