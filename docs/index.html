@@ -4775,7 +4775,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">tuition-c</span>
-                                        <span class="ml-2 text-sm text-gray-500">(108 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(112 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/tuition-c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -6117,6 +6117,220 @@ int main() {
 	return 0;
 }
 </code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-033.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-033.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-033_c', 'APC-PRAC-033.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-033_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-033.c">
+                                            <pre><code class="language-c">/* Print the factorial of the digits off a number */
+/* Auhtor: Amit Dutta, Date: 20-11-2025 */
+
+// This code has not been compiled.
+// If you find any issues, please create a new issue on GitHub regarding them.
+// Go to this link to create a new issue: https://github.com/notamitgamer/bsc/issues
+
+#include &lt;stdio.h&gt;
+
+int factorial(int);
+
+int factorial(int n)
+{
+    int i, fact = 1;
+    for (i = 1; i &lt;= n; i++)
+        fact *= i;
+    return fact;
+}
+
+int main()
+{
+    int n, temp;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n &lt; 0)
+    {
+        printf(&quot;Only non-negetive number is allowed.&quot;);
+        return 1;
+    }
+    temp = n;
+    while (temp &gt; 0)
+    {
+        printf(&quot;\nFactorial of %d: %d&quot;, temp % 10, factorial(temp % 10));
+        temp /= 10;
+    }
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-034.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-034.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-034_c', 'APC-PRAC-034.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-034_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-034.c">
+                                            <pre><code class="language-c">/* Take a Range as input from user and print the prime number between it. */
+/* Auhtor: Amit Dutta, Date: 20-11-2025 */
+
+// This code has not been compiled.
+// If you find any issues, please create a new issue on GitHub regarding them.
+// Go to this link to create a new issue: https://github.com/notamitgamer/bsc/issues
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int isPrime(int);
+
+int isPrime(int n)
+{
+    if (n &lt;= 1)
+        return 0;
+    if (n == 2)
+        return 1;
+    if (n % 2 == 0)
+        return 0;
+    int temp = (int)sqrt(n), i;
+    for (i = 3; i &lt;= temp; i += 2)
+        if (n % i == 0)
+            return 0;
+    return 1;
+}
+
+int main()
+{
+    int lb, ub, i;
+    printf(&quot;Enter the lower bound and the upper bound: &quot;);
+    scanf(&quot;%d %d&quot;, &amp;lb, &amp;ub);
+    printf(&quot;\nPrime numbers between %d and %d:  &quot;, lb, ub);
+    for (i = lb; i &lt;= ub; i++)
+        if (isPrime(i))
+            printf(&quot;%d  &quot;, i);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-035.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-035.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-035_c', 'APC-PRAC-035.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-035_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-035.c">
+                                            <pre><code class="language-c">/* Print all the 3 and 4 digit palindrome number. */
+/* Auhtor: Amit Dutta, Date: 20-11-2025 */
+
+// This code has not been compiled.
+// If you find any issues, please create a new issue on GitHub regarding them.
+// Go to this link to create a new issue: https://github.com/notamitgamer/bsc/issues
+
+#include &lt;stdio.h&gt;
+
+int palindromeCheck(int);
+
+int palindromeCheck(int n)
+{
+    int temp = n, rev = 0;
+    while (temp &gt; 0)
+    {
+        rev = (rev * 10) + (temp % 10);
+        temp /= 10;
+    }
+    if (rev == n)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int i;
+    printf(&quot;Palindrome number of 3 and 4 digits:  &quot;);
+    for (i = 100; i &lt;= 9999; i++)
+        if (palindromeCheck(i))
+            printf(&quot;%d  &quot;, i);
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-036.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-036.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-036_c', 'APC-PRAC-036.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-036_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-036.c">
+                                            <pre><code class="language-c">/* Check krishnamurty number. */
+/* Auhtor: Amit Dutta, Date: 20-11-2025 */
+
+// This code has not been compiled.
+// If you find any issues, please create a new issue on GitHub regarding them.
+// Go to this link to create a new issue: https://github.com/notamitgamer/bsc/issues
+
+#include &lt;stdio.h&gt;
+
+int factorial(int);
+int checkKrishnamurty(int);
+
+int factorial(int n)
+{
+    int i, fact = 1;
+    for (i = 1; i &lt;= n; i++)
+        fact *= i;
+    return fact;
+}
+
+int checkKrishnamurty(int n)
+{
+    int temp1 = n, temp2 = 0;
+    while (temp1 &gt; 0)
+    {
+        temp2 += factorial(temp1 % 10);
+        temp1 /= 10;
+    }
+    if (temp2 == n)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (checkKrishnamurty(n))
+        printf(&quot;\nInput %d is a Krishnamurty number.&quot;, n);
+    else
+        printf(&quot;\ninput %d is not a Krishnamurty number.&quot;, n);
+    return 0;
+}</code></pre>
                                         </div>
                                     </li>
 
