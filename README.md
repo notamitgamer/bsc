@@ -16,7 +16,6 @@ This repository contains **Files of codes that will be done in this 4-year BSc H
 ## 📂 Contents
 
 * ✅ C Source Codes (`.c`)
-* ⚡ Executables (`.exe`)
 
 ---
 
