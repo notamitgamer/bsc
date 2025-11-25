@@ -62,6 +62,7 @@
     "stdio.h": "c",
     "ratio": "c",
     "system_error": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "stdlib.h": "c"
   }
 }
