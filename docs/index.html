@@ -892,7 +892,7 @@ int main()
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">letusc</span>
-                                        <span class="ml-2 text-sm text-gray-500">(68 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(69 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/letusc" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -3476,6 +3476,198 @@ void convertWeight(double weightKG, double *weightGram, double *weightPound, dou
     *weightPound = weightKG * 2.2046226218;
     *weightTON = weightKG / 1000.0;
 }</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">luc048.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/letusc/luc048.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-letusc-luc048_c', 'luc048.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-letusc-luc048_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/letusc/luc048.c">
+                                            <pre><code class="language-c">/* Define a function to compute the distance between two points and
+use it to develop another function that will compute the area of the
+triangle whose vertices are A(x1, y1), B(x2, y2), and C(x3, y3). Use
+these functions to develop a function which returns a value 1 if the
+point (x, y) lines inside the triangle ABC, otherwise returns a value
+0. Would you get any advantage if you develop these functions to
+work on call by reference principle?
+*/
+/* Author - Amit Dutta, Date - 25th November, 2025 */
+/* Let Us C, Chap- 9 (Pointers), Page - 163, Qn No.: C(c) */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;stdlib.h&gt;
+
+void distance(double, double, double, double, double *);
+void area(double, double, double, double, double, double, double *);
+int is_inside(double, double, double, double, double, double, double, double);
+
+int main()
+{
+
+    // Variables
+    double x, y, x1, x2, y1, y2, x3, y3, result_Distance, result_Area;
+    char choice;
+
+    /* ********** Requirement: 1 ********** */
+
+    // Calculate the length of the line segment between two points, P1(x1, y1) and P2(x2, y2).
+    // Function Used: distance()
+
+    printf(&quot;--- Compute the distance between two points ---\n\n&quot;);
+    printf(&quot;Enter the co-ordinates of Point 1 (Ex.: 5,6): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x1, &amp;y1);
+    printf(&quot;Enter the co-ordinates of Point 2 (Ex.: 3,4): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x2, &amp;y2);
+
+    distance(x1, y1, x2, y2, &amp;result_Distance);
+    printf(&quot;\nDistance between P1(%g, %g) and P2(%g, %g) = %g&quot;,
+           x1, y1, x2, y2, result_Distance);
+
+    /* ********** Requirement: 2 ********** */
+
+    // Calculate the area of a triangle ABC using its three vertices A(x1, y1), B(x2, y2), and C(x3, y3).
+    // Fuction Used: distance(), area()
+
+    printf(&quot;\n\n--- Compute the area of a triangle ABC ---\n\n&quot;);
+    printf(&quot;Enter the co-ordinates of Point A (Ex.: 5,6): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x1, &amp;y1);
+    printf(&quot;Enter the co-ordinates of Point B (Ex.: 3,4): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x2, &amp;y2);
+    printf(&quot;Enter the co-ordinates of Point C (Ex.: 6,7): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x3, &amp;y3);
+
+    area(x1, y1, x2, y2, x3, y3, &amp;result_Area);
+    printf(&quot;\nArea of the A(%g, %g), B(%g, %g), C(%g, %g) = %g&quot;,
+           x1, y1, x2, y2, x3, y3, result_Area);
+
+    /* ********** Requirement: 3 ********** */
+
+    // Check if a test point P(x, y) lies strictly inside the triangle ABC.
+    // Function Used: distance(), area(), is_inside()
+
+    printf(&quot;\n\n--- Check if a test point P(x, y) lies strictly inside the triangle ABC ---\n\n&quot;);
+    printf(&quot;Do you wish to use previous entered triangle?&quot;
+           &quot;\nIf Yes, type &#x27;Y&#x27;; If No, type &#x27;N&#x27;: &quot;);
+    scanf(&quot; %c&quot;, &amp;choice);
+    choice = toupper(choice);
+    switch (choice)
+    {
+    case &#x27;Y&#x27;:
+        break;
+    case &#x27;N&#x27;:
+        printf(&quot;Enter the co-ordinates of Point A (Ex.: 5,6): &quot;);
+        scanf(&quot;%lf,%lf&quot;, &amp;x1, &amp;y1);
+        printf(&quot;Enter the co-ordinates of Point B (Ex.: 3,4): &quot;);
+        scanf(&quot;%lf,%lf&quot;, &amp;x2, &amp;y2);
+        printf(&quot;Enter the co-ordinates of Point C (Ex.: 6,7): &quot;);
+        scanf(&quot;%lf,%lf&quot;, &amp;x3, &amp;y3);
+        break;
+    default:
+        printf(&quot;\nYou entered invalid choice.&quot;);
+        break;
+    }
+    printf(&quot;Enter the co-ordinates of Test Point (Ex.: 3,5): &quot;);
+    scanf(&quot;%lf,%lf&quot;, &amp;x, &amp;y);
+
+    if (is_inside(x, y, x1, y1, x2, y2, x3, y3))
+        printf(&quot;\nTest Point (%g, %g) is inside ABC.&quot;, x, y);
+    else
+        printf(&quot;\nTest Point (%g, %g) is not inside ABC.&quot;, x, y);
+
+    /*  ANSWER TO THE QUESTION:
+    Qn.:
+        Would you get any advantage if you develop these functions to
+        work on call by reference principle?
+
+    Ans:
+        NO, there is no advantage, and moreover, that would be a disadvantage.
+        It introduces unnecessary dereferencing overhead for every operation,
+        Which is less efficient than reading the simple value copy supplied by Call by Value.
+    */
+
+    // End of Program
+    return 0;
+}
+
+void distance(double x1, double y1, double x2, double y2, double *result_Distance)
+{
+    *result_Distance = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+}
+
+void area(double x1, double y1, double x2, double y2, double x3, double y3, double *result_Area)
+{
+    double s, ab, bc, ac;
+
+    distance(x1, y1, x2, y2, &amp;ab);
+    distance(x2, y2, x3, y3, &amp;bc);
+    distance(x1, y1, x3, y3, &amp;ac);
+
+    s = (ab + bc + ac) / 2.0;
+    double area_sq = s * (s - ab) * (s - bc) * (s - ac);
+
+    if (area_sq &lt; 0)
+        // Handle cases where area_sq is slightly negative due to floating-point errors
+        *result_Area = 0.0;
+    else
+        *result_Area = sqrt(area_sq);
+}
+
+int is_inside(double x, double y, double x1, double y1, double x2, double y2, double x3, double y3)
+{
+    double area_ABC, area_PAB, area_PBC, area_PAC;
+
+    const double EPSILON = 0.000001;
+
+    area(x1, y1, x2, y2, x3, y3, &amp;area_ABC);
+    area(x, y, x1, y1, x2, y2, &amp;area_PAB);
+    area(x, y, x2, y2, x3, y3, &amp;area_PBC);
+    area(x, y, x1, y1, x3, y3, &amp;area_PAC);
+
+    double sum_of_sub_areas = area_PAB + area_PBC + area_PAC;
+
+    if (fabs(area_ABC - sum_of_sub_areas) &lt; EPSILON)
+        return 1;
+    else
+        return 0;
+}
+
+/*
+    *************** SAMPLE OUTPUT ***************
+
+PS G:\bsc\letusc&gt; ./*.exe
+--- Compute the distance between two points ---
+
+Enter the co-ordinates of Point 1 (Ex.: 5,6): 1234.56,7890.12
+Enter the co-ordinates of Point 2 (Ex.: 3,4): 1234.56,7891.12
+
+Distance between P1(1234.56, 7890.12) and P2(1234.56, 7891.12) = 1
+
+--- Compute the area of a triangle ABC ---
+
+Enter the co-ordinates of Point A (Ex.: 5,6): 100.10,200.20
+Enter the co-ordinates of Point B (Ex.: 3,4): 105.10,200.20
+Enter the co-ordinates of Point C (Ex.: 6,7): 100.10,205.20
+
+Area of the A(100.1, 200.2), B(105.1, 200.2), C(100.1, 205.2) = 12.5
+
+--- Check if a test point P(x, y) lies strictly inside the triangle ABC ---
+
+Do you wish to use previous entered triangle?
+If Yes, type &#x27;Y&#x27;; If No, type &#x27;N&#x27;: y
+Enter the co-ordinates of Test Point (Ex.: 3,5): 101.10,201.20
+
+Test Point (101.1, 201.2) is inside ABC.
+*/</code></pre>
                                         </div>
                                     </li>
 
