@@ -1,4 +1,6 @@
-/* Author: Amit Dutta, Date: 27-11-2025*/
+/* Write a C program that takes an integer input representing a month (1 to 12) and a year. 
+Use a switch statement to display the number of days in that month, considering leap years. */
+
 #include <stdio.h>
 
 int main()

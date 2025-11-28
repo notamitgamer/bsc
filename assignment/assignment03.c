@@ -1,4 +1,8 @@
-/* Author: Amit Dutta, Date: 27-11-2025*/
+/* Write a C program that includes a user-defined function named isPerfect with the signature 
+int isPerfect(int num);. A perfect number is a positive integer that is equal to the sum of 
+its proper divisors, excluding itself. For example, 28 is a perfect number because the sum 
+of its divisors (1, 2, 4, 7, 14) equals 28. */
+
 #include <stdio.h>
 
 int isPerfect(int);

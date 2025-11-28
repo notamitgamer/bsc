@@ -1,4 +1,7 @@
-/* Author: Amit Dutta, Date: 27-11-2025*/
+/* Write a C program that includes a user-defined function named isPrime with the signature 
+int isPrime(int num); The function should take an integer as a parameter and return 1 if 
+the number is prime and 0 otherwise. */
+
 #include <stdio.h>
 #include <math.h>
 
