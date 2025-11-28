@@ -30,7 +30,7 @@ def generate_file_list():
     """Walks the repo and generates an HTML list of its files and directories with folder contents."""
     items = []
     
-    # SVG Icons
+    # SVG Icons (omitted for brevity)
     folder_icon = '<svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>'
     file_icon = '<svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>'
     chevron_down = '<svg class="w-5 h-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>'
@@ -49,7 +49,15 @@ def generate_file_list():
                 folder_url = f"{REPO_URL}/tree/main/{encoded_dirname}"
                 dir_path = os.path.join('.', dirname)
                 try:
-                    dir_files = sorted([item for item in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, item)) and not item.startswith('.') and not item.endswith(('.exe', '.png', '.jpg', '.jpeg', '.gif', '.md'))])
+                    # ⚠️ THE CRITICAL FIX IS HERE
+                    # Filter files: must be a file, must NOT be in EXCLUDED_FILES, and must NOT be an ignored extension/name
+                    dir_files = sorted([
+                        item for item in os.listdir(dir_path) 
+                        if os.path.isfile(os.path.join(dir_path, item)) 
+                        and item not in EXCLUDED_FILES  # <-- ADDED THIS CHECK
+                        and not item.startswith('.') 
+                        and not item.endswith(('.exe', '.png', '.jpg', '.jpeg', '.gif', '.md'))
+                    ])
                     
                     file_count = len(dir_files)
                     folder_header = f'''
@@ -80,6 +88,7 @@ def generate_file_list():
                         file_url = f"{REPO_URL}/blob/main/{encoded_dirname}/{encoded_filename}"
                         
                         file_content = ""
+                        # ... (rest of file reading and HTML generation)
                         try:
                             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                                 file_content = f.read()
@@ -111,6 +120,7 @@ def generate_file_list():
                     items.append('                </ul>\n            </div>\n        </li>')
                     
                 except (OSError, PermissionError):
+                    # ... (rest of simple folder handling)
                     simple_folder = f'''
                         <li>
                             <a href="{folder_url}" target="_blank" class="flex items-center p-4 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors duration-200">
@@ -122,6 +132,7 @@ def generate_file_list():
                     items.append(simple_folder)
 
             top_level_files = [f for f in files if f not in EXCLUDED_FILES]
+            # ... (rest of top-level file processing which was already correct)
             for filename in top_level_files:
                 encoded_filename = filename.replace(' ', '%20')
                 url = f"{REPO_URL}/blob/main/{encoded_filename}"
