@@ -213,7 +213,7 @@
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">assignment</span>
-                                        <span class="ml-2 text-sm text-gray-500">(5 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(7 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/assignment" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -494,7 +494,233 @@ int main()
                                             </div>
                                         </div>
                                         <div id="code-assignment-assignment05_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment05.c">
-                                            <pre><code class="language-c"></code></pre>
+                                            <pre><code class="language-c">/* Write a C program that defines an array of integers, and includes a user-defined function
+named reverseArray with the signature void reverseArray(int arr[], int size);. The function
+should reverse the elements of the array. */
+
+#include &lt;stdio.h&gt;
+
+void inputArray(int[], int);
+void reverseArray(int[], int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to add: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    inputArray(arr, size);
+    reverseArray(arr, size);
+    return 0;
+}
+
+void inputArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+void reverseArray(int arr[], int size)
+{
+    int i, j, temp;
+    printf(&quot;\nBefore Reverse: \n&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Position: %d, Value: %d\n&quot;, i, arr[i]);
+    }
+    for (i = 0, j = size - 1; i &lt; j; i++, j--)
+    {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    printf(&quot;\nAfter Reverse: \n&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Position: %d, Value: %d\n&quot;, i, arr[i]);
+    }
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment06.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment06.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment06_c', 'assignment06.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment06_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment06.c">
+                                            <pre><code class="language-c">/* Write a C program that includes a user-defined function named findLargest with the
+signature int findLargest(int arr[], int size);. The function should take an array of integers
+and its size, and return the largest element in the array. */
+
+#include &lt;stdio.h&gt;
+
+void inputArray(int[], int);
+int findLargest(int[], int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    inputArray(arr, size);
+    printf(&quot;\nLargest Element is: %d&quot;, findLargest(arr, size));
+    return 0;
+}
+
+void inputArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int findLargest(int arr[], int size)
+{
+    int largest = arr[0], i;
+    for (i = 1; i &lt; size; i++)
+    {
+        if (largest &lt; arr[i])
+        {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment07.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment07.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment07_c', 'assignment07.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment07_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment07.c">
+                                            <pre><code class="language-c">/* Write a C program that includes a user-defined function named binarySearch with the
+signature int binarySearch(int arr[], int size, int target);. The function should perform a
+binary search on a sorted array of integers and return the index of the target element if
+found, and -1 otherwise. */
+
+#include &lt;stdio.h&gt;
+
+int inputArray(int[], int);
+// void sortArray(int[], int);
+int binarySearch(int[], int, int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    int target = inputArray(arr, size);
+    // sortArray(arr, size);
+    int index = binarySearch(arr, size, target);
+    if (index != -1)
+    {
+        printf(&quot;\nElement %d is found at index %d.&quot;, target, index);
+    }
+    else
+    {
+        printf(&quot;\nElement %d is not found.&quot;, target);
+    }
+    return 0;
+}
+
+int inputArray(int arr[], int size)
+{
+    int i, target;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element for position %d: &quot;, i);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+    printf(&quot;\nEnter the target element: &quot;);
+    scanf(&quot;%d&quot;, &amp;target);
+    return target;
+}
+
+/* void sortArray(int arr[], int size)
+{
+    int tempArr[size], i, j, temp;
+    printf(&quot;\nBefore Sorting:\n[&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;%d&quot;, arr[i]);
+        if (i != size - 1)
+        {
+            printf(&quot;, &quot;);
+        }
+    }
+    printf(&quot;]\n&quot;);
+    for (i = 0; i &lt; size - 1; i++)
+    {
+        for (j = 0; j &lt; size - i - 1; j++)
+        {
+            if (arr[j] &gt; arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    printf(&quot;\nAfter Sorting:\n[&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;%d&quot;, arr[i]);
+        if (i != size - 1)
+        {
+            printf(&quot;, &quot;);
+        }
+    }
+    printf(&quot;]\n&quot;);
+}
+*/
+
+int binarySearch(int arr[], int size, int target)
+{
+    int low = 0;
+    int high = size - 1;
+    int mid;
+    while (low &lt;= high)
+    {
+        mid = low + ((high - low) / 2);
+        if (arr[mid] == target)
+        {
+            return mid;
+        }
+        else if (arr[mid] &gt; target)
+        {
+            high = mid - 1;
+        }
+        else if (arr[mid] &lt; target)
+        {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}</code></pre>
                                         </div>
                                     </li>
                 </ul>
