@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//just maintaining the streak
 int main() {
     char name[50];
     printf("Enter your name: ");
