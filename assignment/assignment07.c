@@ -43,7 +43,9 @@ int inputArray(int arr[], int size)
 }
 
 /* void sortArray(int arr[], int size)
-{
+{    
+    // using Bubble Sort...
+
     int tempArr[size], i, j, temp;
     printf("\nBefore Sorting:\n[");
     for (i = 0; i < size; i++)
