@@ -213,7 +213,7 @@
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">assignment</span>
-                                        <span class="ml-2 text-sm text-gray-500">(7 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(9 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/assignment" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -661,7 +661,9 @@ int inputArray(int arr[], int size)
 }
 
 /* void sortArray(int arr[], int size)
-{
+{    
+    // using Bubble Sort...
+
     int tempArr[size], i, j, temp;
     printf(&quot;\nBefore Sorting:\n[&quot;);
     for (i = 0; i &lt; size; i++)
@@ -720,6 +722,109 @@ int binarySearch(int arr[], int size, int target)
         }
     }
     return -1;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment08.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment08.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment08_c', 'assignment08.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment08_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment08.c">
+                                            <pre><code class="language-c">/* Write a C program that includes a user-defined function named countSetBits with the
+signature int countSetBits(int num);. The function should count and return the number of
+set bits (1s) in the binary representation of the given number. */
+
+#include &lt;stdio.h&gt;
+
+int countSetBits(int);
+
+int main()
+{
+    int num, result;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    if (result = countSetBits(num))
+    {
+        printf(&quot;\nNumber of set bits in %d: %d&quot;, num, result);
+    }
+    else
+    {
+        printf(&quot;\nThere is no set bits in %d&quot;, num);
+    }
+    return 0;
+}
+
+int countSetBits(int num)
+{
+    int count = 0;
+    if (num &lt; 0)
+    {
+        printf(&quot;\nOnly positive numbers are allowed to maintain consistency. \nUsing absolute value %d&quot;, -num);
+        num = -num;
+    }
+    while (num &gt; 0)
+    {
+        if (num &amp; 1)
+        {
+            count++;
+        }
+        num &gt;&gt;= 1;
+        /*
+        Another method to do the above bitwise calculation...
+        if(num % 2 == 1) {
+            count++;
+        }
+        num /= 2;
+        */
+    }
+    return count;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment09.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment09.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment09_c', 'assignment09.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment09_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment09.c">
+                                            <pre><code class="language-c">/* Write a C program that includes a user-defined function named setBit with the signature
+int setBit(int num, int position);. The function should set the bit at the specified position
+(0-indexed) to 1 and return the modified number. */
+
+#include &lt;stdio.h&gt;
+
+int setBit(int, int);
+
+int main()
+{
+    int num, position;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    printf(&quot;Enter the postion where you want to set the bit (0-indexed): &quot;);
+    scanf(&quot;%d&quot;, &amp;position);
+    printf(&quot;\nModified number= %d&quot;, setBit(num, position));
+    return 0;
+}
+
+int setBit(int num, int position)
+{
+    int mask = 1 &lt;&lt; position;
+    return num | mask;
 }</code></pre>
                                         </div>
                                     </li>
