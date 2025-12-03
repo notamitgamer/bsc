@@ -9,7 +9,7 @@ EXCLUDED_DIRS = ['.git', '.github', '.vscode', 'MinGW64', 'print', 'docs']
 # List of files to exclude from the list.
 EXCLUDED_FILES = ['index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'SOCIAL_PREVIEW.md',
                   'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html', 'generate_index.py',
-                  'Assignment.pdf', 'Assignment.docx']
+                  'Assignment.pdf', 'Assignment.docx', 'Mondira_Mondal.docx', 'Mondira_Mondal.pdf', 'tester.c']
 # --- End Configuration ---
 
 def get_language_class(filename):
