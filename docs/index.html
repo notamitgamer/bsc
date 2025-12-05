@@ -213,7 +213,7 @@
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">assignment</span>
-                                        <span class="ml-2 text-sm text-gray-500">(9 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(11 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/assignment" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -825,6 +825,124 @@ int setBit(int num, int position)
 {
     int mask = 1 &lt;&lt; position;
     return num | mask;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment10.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment10.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment10_c', 'assignment10.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment10_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment10.c">
+                                            <pre><code class="language-c">/* Write a C program that defines a structure Rectangle with attributes length and width.
+Include a user-defined function named calculateArea with the signature float
+calculateArea(struct Rectangle r);. The function should calculate and return the area of
+the rectangle. */
+
+#include &lt;stdio.h&gt;
+
+struct Rectangle
+{
+    float length;
+    float width;
+};
+
+float calculateArea(struct Rectangle);
+
+int main()
+{
+    struct Rectangle rectangle;
+    printf(&quot;Enter the length of the Rectangle: &quot;);
+    scanf(&quot;%f&quot;, &amp;rectangle.length);
+    printf(&quot;Enter the width of the Rectangle: &quot;);
+    scanf(&quot;%f&quot;, &amp;rectangle.width);
+    printf(&quot;\nArea of the Rectangle = %g&quot;, calculateArea(rectangle));
+}
+
+float calculateArea(struct Rectangle r)
+{
+    return r.length * r.width;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment11.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment11.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment11_c', 'assignment11.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment11_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment11.c">
+                                            <pre><code class="language-c">/* Write a C program that defines a structure Student containing the attributes rollNumber,
+name, and marks. Include a user-defined function named displayStudent with the
+signature void displayStudent(struct Student s);. The function should display the details
+of a student. */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct Student
+{
+    int rollNumber;
+    char name[50];
+    int marks;
+};
+
+void inputStudent(struct Student *, int);
+void displayStudent(struct Student);
+
+int main()
+{
+    struct Student studentDetails[10];
+    int i, inputCount;
+    printf(&quot;How many student details you want to add (Max: 10): &quot;);
+    if (scanf(&quot;%d&quot;, &amp;inputCount) != 1 || inputCount &lt; 1 || inputCount &gt; 10)
+    {
+        printf(&quot;\nInvalid Input.&quot;);
+        return 1;
+    }
+    for (i = 0; i &lt; inputCount; i++)
+    {
+        inputStudent(&amp;studentDetails[i], i + 1);
+    }
+    printf(&quot;\n=== Student Details ===\n&quot;);
+    for (i = 0; i &lt; inputCount; i++)
+    {
+        displayStudent(studentDetails[i]);
+    }
+    return 0;
+}
+
+void inputStudent(struct Student *std, int stdNum)
+{
+    printf(&quot;\n- Enter details of Student %d -&quot;, stdNum);
+    printf(&quot;\nEnter the Roll Number: &quot;);
+    scanf(&quot;%d&quot;, &amp;std-&gt;rollNumber);
+    while (getchar() != &#x27;\n&#x27;)
+        ; 
+    printf(&quot;Enter the Name: &quot;);
+    fgets(std-&gt;name, sizeof(std-&gt;name), stdin);
+    printf(&quot;Enter the Marks: &quot;);
+    scanf(&quot;%d&quot;, &amp;std-&gt;marks);
+}
+
+void displayStudent(struct Student std)
+{
+    printf(&quot;\n\nRoll Number: %d&quot;, std.rollNumber);
+    printf(&quot;\nName       : %s&quot;, std.name);
+    printf(&quot;Marks      : %d&quot;, std.marks);
 }</code></pre>
                                         </div>
                                     </li>
