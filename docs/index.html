@@ -213,7 +213,7 @@
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">assignment</span>
-                                        <span class="ml-2 text-sm text-gray-500">(12 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(13 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/assignment" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -959,44 +959,132 @@ void displayStudent(struct Student std)
                                             </div>
                                         </div>
                                         <div id="code-assignment-assignment12_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment12.c">
-                                            <pre><code class="language-c">/* Write a C program that takes multiple integers as command-line arguments and finds the 
+                                            <pre><code class="language-c">/* Write a C program that takes multiple integers as command-line arguments and finds the
 maximum and minimum value among them. */
 
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
-#include &lt;limits.h&gt;
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     int current_val, max_val, min_val, i;
     char *endptr;
-    if (argc &lt; 2) {
+    long first_arg_val;
+    if (argc &lt; 2)
+    {
         printf(&quot;Usage: %s &lt;integer1&gt; &lt;integer2&gt; ...\n&quot;, argv[0]);
-        return 1; 
+        return 1;
     }
-    long first_arg_val = strtol(argv[1], &amp;endptr, 10);
-    if (*endptr != &#x27;\0&#x27; || argv[1] == endptr) {
+    first_arg_val = strtol(argv[1], &amp;endptr, 10);
+    if (*endptr != &#x27;\0&#x27; || argv[1] == endptr)
+    {
         printf(&quot;Error: Argument &#x27;%s&#x27; is not a valid integer.\n&quot;, argv[1]);
         return 1;
     }
     max_val = (int)first_arg_val;
     min_val = (int)first_arg_val;
-    for (i = 2; i &lt; argc; i++) {
+    for (i = 2; i &lt; argc; i++)
+    {
         long val = strtol(argv[i], &amp;endptr, 10);
-        if (*endptr != &#x27;\0&#x27; || argv[i] == endptr) {
+        if (*endptr != &#x27;\0&#x27; || argv[i] == endptr)
+        {
             printf(&quot;Error: Argument &#x27;%s&#x27; is not a valid integer.\n&quot;, argv[i]);
             return 1;
         }
         current_val = (int)val;
-        if (current_val &gt; max_val) {
+        if (current_val &gt; max_val)
+        {
             max_val = current_val;
         }
-        if (current_val &lt; min_val) {
+        if (current_val &lt; min_val)
+        {
             min_val = current_val;
         }
     }
     printf(&quot;The maximum value is: %d\n&quot;, max_val);
     printf(&quot;The minimum value is: %d\n&quot;, min_val);
-    return 0; 
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment13.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment13.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment13_c', 'assignment13.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment13_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment13.c">
+                                            <pre><code class="language-c">/* Write a C program that accepts a string as a command line argument and includes a user-
+defined function named isPalindrome with the signature int isPalindrome(char str[]);.
+The function should check if the given string is a palindrome and return 1 if it is, and 0
+otherwise. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int isPalindrome(char[]);
+
+int main(int argc, char *argv[])
+{
+    if (argc != 2)
+    {
+        printf(&quot;\nUsage: %s &lt;string&gt;\n&quot;, argv[0]);
+        return 1;
+    }
+    if (isPalindrome(argv[1]))
+    {
+        printf(&quot;\nThe entered string \&quot;%s\&quot; is a Palindrome.\n&quot;, argv[1]);
+    }
+    else
+    {
+        printf(&quot;\nThe entered string \&quot;%s\&quot; is not Palindrome.\n&quot;, argv[1]);
+    }
+    return 0;
+}
+
+int isPalindrome(char str[])
+{
+    char *start = str;
+    char *end = str;
+    if (*end != &#x27;\0&#x27;)
+    {
+        while (*(end + 1) != &#x27;\0&#x27;)
+        {
+            end++;
+        }
+    }
+    else
+    {
+        return 1;
+    }
+    /*
+    Or we can use string.h instead of from line 33 to line 43 like this ...
+    
+    char *end;
+    int len = strlen(str);
+    if (len == 0)
+    {
+        return 1;
+    }
+    end = str + (len - 1);
+    
+    */
+    while (start &lt; end)
+    {
+        if (*start != *end)
+        {
+            return 0;
+        }
+        start++;
+        end--;
+    }
+    return 1;
 }</code></pre>
                                         </div>
                                     </li>
@@ -6234,7 +6322,7 @@ void charCounter(char str[], int *vowelCount, int *consonantCount)
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">tuition-c</span>
-                                        <span class="ml-2 text-sm text-gray-500">(122 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(123 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/tuition-c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -8053,6 +8141,80 @@ int main()
     }
     printf(&quot;\nCount; %d&quot;, count);
     return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">APC-PRAC-042.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-042.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-tuition-c-APC-PRAC-042_c', 'APC-PRAC-042.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-tuition-c-APC-PRAC-042_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/tuition-c/APC-PRAC-042.c">
+                                            <pre><code class="language-c">/* Write a function to check whether a given string is a palindrome. Use this function to
+determine whether an entered string is Palindrome. */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int isPalindrome(char[]);
+
+int main()
+{
+    char input[100];
+    int len;
+
+    printf(&quot;Enter the string (Max: 100 Character): &quot;);
+    fgets(input, sizeof(input), stdin);
+    len = strlen(input);
+
+    if (len &gt; 0 &amp;&amp; input[len - 1] == &#x27;\n&#x27;)
+    {
+        input[len - 1] = &#x27;\0&#x27;;
+    }
+
+    if (isPalindrome(input))
+    {
+        printf(&quot;\nInput string \&quot;%s\&quot; is Palindrome.&quot;, input);
+    }
+    else
+    {
+        printf(&quot;\nInput string \&quot;%s\&quot; is not Palindrome&quot;, input);
+    }
+
+    return 0;
+}
+
+int isPalindrome(char str[])
+{
+    char *start = str;
+    char *end;
+    int len = strlen(str);
+
+    if (len == 0)
+    {
+        return 1;
+    }
+
+    end = str + (len - 1);
+
+    while (start &lt; end)
+    {
+        if (*start != *end)
+        {
+            return 0;
+        }
+        start++;
+        end--;
+    }
+    
+    return 1;
 }</code></pre>
                                         </div>
                                     </li>
