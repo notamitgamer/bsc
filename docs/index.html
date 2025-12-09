@@ -213,7 +213,7 @@
                                     <div class="flex items-center">
                                         <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                                         <span class="font-medium text-gray-800">assignment</span>
-                                        <span class="ml-2 text-sm text-gray-500">(13 files)</span>
+                                        <span class="ml-2 text-sm text-gray-500">(15 files)</span>
                                     </div>
                                     <div class="flex items-center space-x-4">
                                         <a href="https://github.com/notamitgamer/bsc/tree/main/assignment" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" onclick="event.stopPropagation()" title="View folder on GitHub">
@@ -1085,6 +1085,154 @@ int isPalindrome(char str[])
         end--;
     }
     return 1;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment14.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment14.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment14_c', 'assignment14.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment14_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment14.c">
+                                            <pre><code class="language-c">/* Write a C program that opens its own source code file, reads its contents, and then prints
+the contents to the console. */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char *argv[])
+{
+    FILE *code;
+    int character, len_upto_dot;
+    char *FILENAME;
+    char *dot;
+
+    FILENAME = strdup(argv[0]);
+
+    if (FILENAME == NULL)
+    {
+        printf(&quot;\nMemory allocation failed.\n&quot;);
+        return 1;
+    }
+
+    dot = strrchr(FILENAME, &#x27;.&#x27;);
+
+    if (dot != NULL)
+    {
+        len_upto_dot = dot - FILENAME;
+        FILENAME[len_upto_dot] = &#x27;\0&#x27;;
+    }
+
+    strcat(FILENAME, &quot;.c&quot;);
+
+    code = fopen(FILENAME, &quot;r&quot;);
+
+    if (code == NULL)
+    {
+        printf(&quot;\nCould not open the source file: %s&quot;, FILENAME);
+        printf(&quot;\nPlease ensure the source file is in the same directory as the executable.\n&quot;);
+        free(FILENAME);
+        return 1;
+    }
+
+    printf(&quot;\nReading file: %s&quot;, FILENAME);
+    printf(&quot;\n========== %s ==========\n\n&quot;, FILENAME);
+
+    while ((character = fgetc(code)) != EOF)
+    {
+        putchar(character);
+    }
+
+    printf(&quot;\n\n========== End of %s ==========\n&quot;, FILENAME);
+
+    fclose(code);
+    free(FILENAME);
+
+    return 0;
+}</code></pre>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="flex items-center p-3 pl-8 hover:bg-gray-50 transition-colors duration-200">
+                                            <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                                            <span class="text-gray-700">assignment15.c</span>
+                                            <div class="ml-auto flex items-center space-x-4">
+                                                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment15.c" target="_blank" class="p-1 rounded-full text-gray-500 hover:bg-gray-200 hover:text-gray-800 transition-colors" title="View file on GitHub">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                                                </a>
+                                                <button onclick="showCode('code-assignment-assignment15_c', 'assignment15.c')" class="text-green-600 font-semibold text-sm hover:underline">View Code</button>
+                                            </div>
+                                        </div>
+                                        <div id="code-assignment-assignment15_c" class="hidden" data-github-url="https://github.com/notamitgamer/bsc/blob/main/assignment/assignment15.c">
+                                            <pre><code class="language-c">/* Write a C program that reads a sequence of integers from a file named &#x27;input.txt&#x27;. This
+program should segregate the odd numbers from the even numbers and store the odd
+numbers in a new file named &#x27;ODDFile.txt&#x27; while storing the even numbers in another file
+named &#x27;EVENFile.txt&#x27; */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+#define FILENAME &quot;input.txt&quot;
+#define ODDFILE &quot;ODDFile.txt&quot;
+#define EVENFILE &quot;EVENFile.txt&quot;
+
+int main()
+{
+    FILE *numbers = NULL;
+    FILE *oddfile = NULL;
+    FILE *evenfile = NULL;
+    int num;
+    numbers = fopen(FILENAME, &quot;r&quot;);
+    if (numbers == NULL)
+    {
+        printf(&quot;\nCould not open the file: %s&quot;, FILENAME);
+        free(numbers);
+        return 1;
+    }
+    oddfile = fopen(ODDFILE, &quot;w&quot;);
+    if (oddfile == NULL)
+    {
+        printf(&quot;\nCould not open the file: %s&quot;, ODDFILE);
+        free(oddfile);
+        return 1;
+    }
+    evenfile = fopen(EVENFILE, &quot;w&quot;);
+    if (evenfile == NULL)
+    {
+        printf(&quot;\nCould not open the file: %s&quot;, EVENFILE);
+        free(evenfile);
+        return 1;
+    }
+    while (fscanf(numbers, &quot;%d&quot;, &amp;num) == 1)
+    {
+        if (num % 2 == 0)
+        {
+            fprintf(evenfile, &quot;%d &quot;, num);
+        }
+        else
+        {
+            fprintf(oddfile, &quot;%d &quot;, num);
+        }
+    }
+    printf(&quot;\nSuccessfully processed numbers from %s.\n&quot;, FILENAME);
+    printf(&quot;Odd numbers written to %s.\n&quot;, ODDFILE);
+    printf(&quot;Even numbers written to %s.\n&quot;, EVENFILE);
+
+    fclose(numbers);
+    fclose(oddfile);
+    fclose(evenfile);
+    
+    return 0;
 }</code></pre>
                                         </div>
                                     </li>
