@@ -17,16 +17,6 @@ EXCLUDED_FILES = [
 ]
 # --- End Configuration ---
 
-def get_language_class(filename):
-    """Gets the highlight.js language class from the file extension."""
-    if filename.endswith('.c'): return 'c'
-    if filename.endswith('.py'): return 'python'
-    if filename.endswith('.html'): return 'xml'
-    if filename.endswith('.js'): return 'javascript'
-    if filename.endswith('.css'): return 'css'
-    if filename.endswith('.md'): return 'markdown'
-    return 'plaintext'
-
 def process_directory(current_path, relative_base=""):
     """
     Recursively walks the directory and returns HTML string for the file tree.
@@ -53,7 +43,7 @@ def process_directory(current_path, relative_base=""):
             if item not in EXCLUDED_FILES:
                 files.append(item)
 
-    # Sort items (folders first, then files, alphabetically)
+    # Sort items
     dirs.sort()
     files.sort()
 
@@ -62,15 +52,11 @@ def process_directory(current_path, relative_base=""):
         sub_path = os.path.join(current_path, d)
         rel_path = os.path.join(relative_base, d).replace("\\", "/")
         
-        # Recurse to get content
         content_html = process_directory(sub_path, rel_path)
         
-        # Only show folder if it has content (optional, but cleaner)
         if not content_html.strip():
             continue
 
-        # Folder HTML Structure
-        # Note: onclick="toggleFolder(this)" passes the header element itself
         html_output += f"""
         <div class="folder-container mb-2">
             <div class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-slate-100 rounded-lg transition-colors group select-none" onclick="toggleFolder(this)">
@@ -90,18 +76,29 @@ def process_directory(current_path, relative_base=""):
 
     # --- Generate HTML for Files ---
     for f in files:
-        # File URL for raw content fetching
-        raw_url = f"https://raw.githubusercontent.com/notamitgamer/bsc/main/{relative_base}/{f}".replace("//", "/")
-        # GitHub URL for viewing
-        github_url = f"{REPO_URL}/blob/main/{relative_base}/{f}".replace("//", "/")
+        full_file_path = os.path.join(current_path, f)
+        url_path = f"{relative_base}/{f}" if relative_base else f
+        github_url = f"{REPO_URL}/blob/main/{url_path}"
         
-        file_ext = os.path.splitext(f)[1]
+        # 1. READ CONTENT
+        try:
+            with open(full_file_path, 'r', encoding='utf-8', errors='ignore') as code_file:
+                raw_code = code_file.read()
+        except Exception as e:
+            raw_code = f"Error reading file content: {e}"
+
+        # 2. ESCAPE CONTENT (Safe for HTML)
+        escaped_code = html.escape(raw_code)
         
-        # File Item HTML
-        # Using onclick to trigger modal
+        # 3. GENERATE UNIQUE ID
+        # Create a safe ID string from the path (e.g., "code-assignment-primary-file-c")
+        safe_id = "code-" + url_path.replace("/", "-").replace(".", "-").replace(" ", "-")
+
+        # 4. GENERATE HTML
+        # We create a hidden DIV to store the code.
         html_output += f"""
         <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
-            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('{html.escape(f)}', '{html.escape(f)}', '{raw_url}')">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('{safe_id}', '{html.escape(f)}', '{github_url}')">
                 <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -112,6 +109,8 @@ def process_directory(current_path, relative_base=""):
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
+            <!-- Embedded Code Storage -->
+            <div id="{safe_id}" style="display:none;">{escaped_code}</div>
         </div>
         """
         
@@ -119,13 +118,11 @@ def process_directory(current_path, relative_base=""):
 
 def main():
     root_dir = os.getcwd()
-    
-    # Updated paths: Read template from and write index to the 'docs' folder
     docs_dir = os.path.join(root_dir, 'docs')
     template_path = os.path.join(docs_dir, 'template.html')
     output_path = os.path.join(docs_dir, 'index.html')
 
-    print("Generating index.html...")
+    print("Generating index.html with embedded code...")
 
     try:
         with open(template_path, 'r', encoding='utf-8') as f:
@@ -140,9 +137,8 @@ def main():
     # Inject into template
     final_html = template.replace('<!--FILE_LIST_PLACEHOLDER-->', file_list_html)
 
-    # 1. Write to local index.html in docs folder
+    # 1. Write to local index.html
     try:
-        # Ensure docs folder exists (just in case)
         os.makedirs(docs_dir, exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(final_html)
@@ -150,12 +146,10 @@ def main():
     except Exception as e:
         print(f"Error writing index.html: {e}")
 
-    # 2. Write to secondary path (Desktop) if accessible
+    # 2. Write to secondary path (Desktop)
     second_output_path = r"C:\Users\PC\Desktop\aranag.site\bsc.html"
     try:
-        # Create directory if it doesn't exist (safety check)
         os.makedirs(os.path.dirname(second_output_path), exist_ok=True)
-        
         with open(second_output_path, 'w', encoding='utf-8') as f:
             f.write(final_html)
         print(f"Also updated bsc.html successfully at '{second_output_path}'.")

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fix favicon 404 error -->
+    <link rel="icon" href="data:,">
     <title>notamitgamer/bsc Repository File Index</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -125,7 +127,7 @@
             </p>
             </div>
         </div>
-        <!-- Mobile: Github Icon (Visible only on small screens to save space in row 2) -->
+        <!-- Mobile: Github Icon -->
         <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
@@ -172,16 +174,8 @@
           class="hidden sm:flex bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2"
         >
           <span>GitHub</span>
-          <svg
-            class="w-4 h-4"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-              clip-rule="evenodd"
-            ></path>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
           </svg>
         </a>
       </div>
@@ -226,7 +220,7 @@
             </div>
           </div>
           <div class="flex items-center gap-1 sm:gap-2 shrink-0">
-            <!-- Share/Copy Button -->
+            <!-- Share Button -->
             <button
               id="share-btn"
               class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
@@ -263,6 +257,46 @@
                 />
               </svg>
             </button>
+
+            <!-- Copy Code Button -->
+            <button
+              id="copy-code-btn"
+              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              title="Copy Code"
+            >
+              <svg
+                id="copy-icon-default"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
+              </svg>
+              <svg
+                id="copy-icon-success"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-green-400 hidden transform scale-0 transition-transform duration-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </button>
+
+            <!-- View on GitHub Button -->
             <a
               id="modal-raw-link"
               href="#"
@@ -277,10 +311,9 @@
                 viewBox="0 0 24 24"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
                 ></path>
               </svg>
             </a>
@@ -310,7 +343,7 @@
           <!-- Loading State -->
           <div
             id="code-loading"
-            class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117]"
+            class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117] hidden"
           >
             <div
               class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"
@@ -435,70 +468,33 @@
 
     <script>
       function toggleFolder(header) {
-        // We handle two cases:
-        // 1. onclick="toggleFolder(event)" (Modern, if you update python script)
-        // 2. onclick="toggleFolder('folder-name')" (Legacy/Current python script behavior)
-        
-        let headerEl = null;
-
+        // Handle both Event objects (from onclick="toggleFolder(event)") 
+        // and Element objects (from onclick="toggleFolder(this)")
         if (header instanceof Event) {
-            headerEl = header.currentTarget;
-        } else if (header instanceof Element) {
-            headerEl = header;
-        } else if (typeof header === 'string') {
-            // Legacy Case: header is an ID string like "assignment-primary"
-            // The button element usually has an ID or we can find it relative to the structure
-            // Assuming the python script generates: <button ... onclick="toggleFolder('id')">
-            // In that case, 'this' context in inline onclick refers to window, but we need the element.
-            // However, inline onclick="toggleFolder('id')" doesn't pass 'this'.
-            
-            // Fix strategy: Look for the element with the ID passed, OR look for the event target if available.
-            // Since we can't easily get 'this' if it wasn't passed, we'll try to find the button that has this onclick.
-            // A more robust way in legacy code without changing Python is to look for the element by ID if the folder container has that ID.
-            
-            // Let's try to find the element by ID if possible (assuming folder header might have ID)
-            // If that fails, we use the global event object (deprecated but works in most browsers for inline handlers)
-            
-            if (window.event && window.event.currentTarget) {
-                 headerEl = window.event.currentTarget;
-            } else {
-                console.warn("toggleFolder: Could not determine clicked element from string argument. Trying ID lookup.");
-                // Fallback: If your python script assigns IDs to the header divs matching the folder name
-                headerEl = document.getElementById(header);
-            }
+            header = header.currentTarget;
         }
 
         // Sanity Check
-        if (!headerEl || typeof headerEl.querySelector !== 'function') {
-            console.error("toggleFolder Error: Could not resolve header element.", header);
+        if (!header || typeof header.querySelector !== 'function') {
+            console.error("toggleFolder Error: Invalid header argument.", header);
             return;
         }
 
-        const content = headerEl.nextElementSibling;
-        const icon = headerEl.querySelector(".chevron");
-        const folderIcon = headerEl.querySelector(".folder-icon");
-        
-        if (!content) {
-            console.error("toggleFolder Error: Content sibling not found.");
-            return;
-        }
+        const content = header.nextElementSibling;
+        const icon = header.querySelector(".chevron");
+        const folderIcon = header.querySelector(".folder-icon");
 
         // Toggle hidden class
         content.classList.toggle("hidden");
-        
-        if (icon) {
-            icon.classList.toggle("rotated");
-        }
+        icon.classList.toggle("rotated");
 
-        if (folderIcon) {
-            // Optional: Change folder icon (open/closed)
-            if (content.classList.contains("hidden")) {
-            // Closed folder
-            folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>`;
-            } else {
-            // Open folder (visual enhancement)
-            folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
-            }
+        // Optional: Change folder icon (open/closed)
+        if (content.classList.contains("hidden")) {
+          // Closed folder
+          folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>`;
+        } else {
+          // Open folder (visual enhancement)
+          folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
         }
       }
 
@@ -509,13 +505,12 @@
       const modalRawLink = document.getElementById("modal-raw-link");
       const loadingSpinner = document.getElementById("code-loading");
 
-      // We'll store the current file URL for sharing
       let currentFileUrl = "";
 
-      function showCode(fileUrl, filename, rawUrl) {
-        currentFileUrl = window.location.href.split("?")[0] + "?file=" + encodeURIComponent(filename); // Construct shareable URL
+      // MODIFIED: Fetch from hidden ID instead of Network URL
+      function showCode(storageId, filename, rawUrl) {
+        currentFileUrl = window.location.href.split("?")[0] + "?file=" + encodeURIComponent(filename); 
         modal.classList.remove("hidden");
-        // Trigger reflow for animation
         void modal.offsetWidth;
         modal.classList.remove("opacity-0");
         modal.querySelector("div").classList.remove("scale-95");
@@ -528,30 +523,25 @@
         const shareIconSuccess = document.getElementById("share-icon-success");
         shareIconDefault.classList.remove("hidden", "scale-0");
         shareIconSuccess.classList.add("hidden", "scale-0");
+        
+        // Reset Copy Button State
+        const copyIconDefault = document.getElementById("copy-icon-default");
+        const copyIconSuccess = document.getElementById("copy-icon-success");
+        copyIconDefault.classList.remove("hidden", "scale-0");
+        copyIconSuccess.classList.add("hidden", "scale-0");
 
-        // Show loading
-        loadingSpinner.classList.remove("hidden");
-        modalCodeBlock.textContent = ""; // Clear previous content
-
-        // Fetch the code content
-        fetch(rawUrl)
-          .then((response) => {
-            if (!response.ok) throw new Error("Network response was not ok");
-            return response.text();
-          })
-          .then((text) => {
-            modalCodeBlock.textContent = text;
-            // Apply syntax highlighting
-            delete modalCodeBlock.dataset.highlighted; // Clear highlighted state
-            hljs.highlightElement(modalCodeBlock);
-            loadingSpinner.classList.add("hidden");
-          })
-          .catch((err) => {
-            modalCodeBlock.textContent = "Error loading code: " + err.message;
-            loadingSpinner.classList.add("hidden");
-          });
+        // LOAD FROM HIDDEN ELEMENT
+        const storedContent = document.getElementById(storageId);
+        
+        if (storedContent) {
+             modalCodeBlock.innerHTML = storedContent.innerHTML;
+             delete modalCodeBlock.dataset.highlighted; 
+             hljs.highlightElement(modalCodeBlock);
+        } else {
+            modalCodeBlock.textContent = "Error: Code content not found in page.";
+        }
           
-        // Update URL history without reloading
+        // Update URL history
         const newUrl = new URL(window.location);
         newUrl.searchParams.set('file', filename);
         window.history.pushState({ path: newUrl.href }, '', newUrl.href);
@@ -561,13 +551,11 @@
         modal.classList.add("opacity-0");
         modal.querySelector("div").classList.add("scale-95");
 
-        // Wait for animation to finish before hiding display
         setTimeout(() => {
           modal.classList.add("hidden");
           modalCodeBlock.textContent = "";
         }, 200);
         
-        // Clear URL param
         const newUrl = new URL(window.location);
         newUrl.searchParams.delete('file');
         window.history.pushState({ path: newUrl.href }, '', newUrl.href);
@@ -578,7 +566,6 @@
       
       function showLicense() {
         licenseModal.classList.remove("hidden");
-        // Trigger reflow for animation
         void licenseModal.offsetWidth;
         licenseModal.classList.remove("opacity-0");
         licenseModal.querySelector("div").classList.remove("scale-95");
@@ -592,7 +579,6 @@
         }, 200);
       }
       
-      // Close license modal on escape or click outside
       document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && !licenseModal.classList.contains("hidden")) {
               hideLicense();
@@ -606,19 +592,14 @@
       });
 
       /* --- Search Logic --- */
-      // Use a debounced search for better performance if list is huge
-      let searchIndex = []; // Will store { name: "filename", element: DOMElement, parent: FolderDOMElement }
+      let searchIndex = [];
 
       function buildSearchIndex() {
         searchIndex = [];
         const fileElements = document.querySelectorAll(".file-item");
         fileElements.forEach((el) => {
-          const name = el
-            .querySelector("span")
-            .textContent.toLowerCase()
-            .trim();
-          // Find parent folder content div to open it if match found
-          const parentContent = el.closest(".pl-4"); // based on structure
+          const name = el.querySelector("span").textContent.toLowerCase().trim();
+          const parentContent = el.closest(".pl-4"); 
           searchIndex.push({ name, element: el, parent: parentContent });
         });
       }
@@ -626,61 +607,40 @@
       const searchInput = document.getElementById("search-input");
       searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
-        
-        // If index empty (lazy load), build it
         if (searchIndex.length === 0) buildSearchIndex();
 
-        // If query is empty, show everything
         if (!query) {
              document.querySelectorAll('.file-item, .folder-container').forEach(el => el.classList.remove('hidden'));
-             // Re-close folders that were originally closed? 
-             // Simplest: Just collapse all folders or keep current state. 
-             // For now, let's just make sure files are visible.
              return;
         }
 
-        // Hide all first
-        // actually, hiding everything and showing matches is cleaner
         document.querySelectorAll('.file-item').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.folder-container').forEach(el => el.classList.add('hidden'));
 
-        let hasResults = false;
-
         searchIndex.forEach(item => {
             if (item.name.includes(query)) {
-                // Show file
                 item.element.classList.remove('hidden');
                 
-                // Show parent folder container
-                // This logic is a bit tricky with nested folders. 
-                // We need to walk up the DOM to show all parent folders.
                 let parent = item.element.parentElement;
                 while(parent && parent.id !== "file-list-container") {
-                    parent.classList.remove('hidden'); // Show content div
+                    parent.classList.remove('hidden'); 
                     if (parent.previousElementSibling) {
-                        // This is the folder header (button)
-                        // Make sure the folder container wrapping both is visible
                         const folderContainer = parent.parentElement; 
                         if(folderContainer.classList.contains('folder-container')) {
                             folderContainer.classList.remove('hidden');
                         }
                         
-                        // Expand the folder visually
                         if(parent.classList.contains('hidden')) {
-                           // this check is redundant due to line above, but for clarity:
-                           // we removed hidden above. Now rotate chevron.
                            const chevron = parent.previousElementSibling.querySelector('.chevron');
                            if(chevron && !chevron.classList.contains('rotated')) {
                                chevron.classList.add('rotated');
                            }
-                           // Update folder icon to open
                            const fIcon = parent.previousElementSibling.querySelector('.folder-icon');
                            if(fIcon) fIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
                         }
                     }
                     parent = parent.parentElement;
                 }
-                hasResults = true;
             }
         });
       });
@@ -697,23 +657,14 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-         // Check URL params for shared file
          const params = new URLSearchParams(window.location.search);
          const sharedFile = params.get('file');
          if (sharedFile) {
-             // Find the file element to get the raw URL
-             // We need to wait for the injection. 
-             // Since injection happens on server/build time, DOM is ready.
-             // We just need to find the link.
-             // We can search the DOM for a file-item with matching text.
              const fileElements = document.querySelectorAll(".file-item");
              for (let el of fileElements) {
                  const name = el.querySelector("span").textContent.trim();
                  if (name === sharedFile) {
-                     // Simulate click or manually call showCode
                      const onClickAttr = el.getAttribute('onclick');
-                     // Extract args from onclick string: showCode('url', 'name', 'raw')
-                     // Regex or simple parsing
                      const match = onClickAttr.match(/showCode\('([^']*)',\s*'([^']*)',\s*'([^']*)'\)/);
                      if (match) {
                          showCode(match[1], match[2], match[3]);
@@ -750,24 +701,32 @@
             });
           }
         });
+        
+        /* --- Copy Code Functionality --- */
+        const copyCodeBtn = document.getElementById("copy-code-btn");
+        const copyIconDefault = document.getElementById("copy-icon-default");
+        const copyIconSuccess = document.getElementById("copy-icon-success");
+
+        copyCodeBtn.addEventListener("click", () => {
+            const codeText = modalCodeBlock.innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                animateSuccess(copyCodeBtn, copyIconDefault, copyIconSuccess);
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        });
 
         document.addEventListener("keydown", (e) => {
           const searchInput = document.getElementById("search-input");
-
-          // 1. ESCAPE key closes modal
           if (e.key === "Escape" && !modal.classList.contains("hidden")) {
             hideCode();
             return;
           }
-
-          // 2. '/' key focuses search bar
-          // Check if the key is '/', the modal is not open, and the current focus is not an input field
           if (
             e.key === "/" &&
             modal.classList.contains("hidden") &&
             !/^(INPUT|TEXTAREA|SELECT)$/i.test(document.activeElement.tagName)
           ) {
-            // Prevent the '/' character from being typed outside the input field
             e.preventDefault();
             searchInput.focus();
           }
