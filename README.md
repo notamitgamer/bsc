@@ -15,14 +15,14 @@ Any unauthorized use for academic submission is a violation of **Copyright Law**
 * I retain full git history timestamps as proof of ownership.
 * **Violations may be reported to the Department Faculty / Examination Controller.**
 
-### See the [LICENSE](LICENSE) file for details.
+### See the [LICENSE](LICENSE) file or [aranag.site/license](https://aranag.site/license) for details.
 
 > **Do not copy. Learn, understand, and write your own code.**
 
 ---
 🔗 **Website**
 For better viewing experience:
-👉 [https://notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [https://aranag.site/bsc](https://aranag.site/bsc)
+👉 [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [aranag.site/bsc](https://aranag.site/bsc)
 
 ---
 
