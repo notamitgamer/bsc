@@ -1,5 +1,23 @@
-## License
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+## ⚠️ ACADEMIC INTEGRITY WARNING
+
+**THIS REPOSITORY IS PROTECTED BY THE EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0).**
+
+### ⛔ TO STUDENTS & CLASSMATES:
+This repository contains solutions for **WBSU assignments** and practice codes.
+You are free to **read and learn** from this code to understand the logic.
+
+However, you are **STRICTLY PROHIBITED** from:
+1. Copying this code and submitting it as your own assignment.
+2. Removing the copyright headers to hide the source.
+
+**CONSEQUENCES:**
+Any unauthorized use for academic submission is a violation of **Copyright Law** and **Academic Misconduct**.
+* I retain full git history timestamps as proof of ownership.
+* **Violations may be reported to the Department Faculty / Examination Controller.**
+
+### See the [LICENSE](LICENSE) file for details.
+
+> **Do not copy. Learn, understand, and write your own code.**
 
 ---
 🔗 **Website**
