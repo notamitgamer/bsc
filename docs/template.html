@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Default Theme (Dark) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
@@ -27,7 +28,7 @@
 
       /* --- Enhanced Code Viewer Modal Styles --- */
       #code-modal .modal-content-area {
-        height: 85vh; /* Slightly smaller on mobile to accommodate browser bars */
+        height: 85vh;
         max-height: 90vh;
       }
       @media (min-width: 640px) {
@@ -42,36 +43,41 @@
         height: 100%;
         overflow: hidden;
       }
+      
+      /* Code Block */
       #modal-code-block {
         height: 100%;
         overflow: auto;
-        padding: 1rem; /* Reduced padding for mobile */
+        padding: 1rem;
         font-family: "JetBrains Mono", "Fira Code", monospace;
-        font-size: 0.8125rem; /* Slightly smaller font for mobile */
+        font-size: 0.8125rem;
         line-height: 1.6;
+        background-color: transparent !important; /* Allow container bg */
       }
+
       @media (min-width: 640px) {
         #modal-code-block {
-            padding: 1.5rem;
             font-size: 0.875rem;
+            padding: 1.5rem;
         }
       }
 
-      /* Custom Scrollbar for Code Block */
+      /* Scrollbars */
       #modal-code-block::-webkit-scrollbar {
         width: 10px;
         height: 10px;
       }
       #modal-code-block::-webkit-scrollbar-track {
-        background: #0d1117;
+        background: transparent;
       }
       #modal-code-block::-webkit-scrollbar-thumb {
         background: #30363d;
         border-radius: 5px;
-        border: 2px solid #0d1117;
+        border: 2px solid transparent;
+        background-clip: content-box;
       }
       #modal-code-block::-webkit-scrollbar-thumb:hover {
-        background: #58a6ff;
+        background-color: #58a6ff;
       }
 
       .hljs {
@@ -93,104 +99,133 @@
       #license-content::-webkit-scrollbar-thumb:hover {
         background: #64748b;
       }
+
+      /* Initial hidden state for app content */
+      #app-content {
+          display: none;
+      }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden">
-    <!-- Header -->
-    <header
-      class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0"
-    >
-      <!-- Logo Section -->
-      <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
-        <div class="flex items-center gap-3">
-            <div class="p-2 bg-blue-50 rounded-lg shrink-0">
-            <svg
-                class="w-6 h-6 text-blue-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"
-                ></path>
-            </svg>
+    
+    <!-- App Wrapper (Hidden until license accepted) -->
+    <div id="app-content" class="flex flex-col h-full overflow-hidden">
+        <!-- Header -->
+        <header
+        class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0"
+        >
+        <!-- Logo Section -->
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-blue-50 rounded-lg shrink-0">
+                <svg
+                    class="w-6 h-6 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"
+                    ></path>
+                </svg>
+                </div>
+                <div class="min-w-0">
+                <h1 class="text-lg sm:text-xl font-bold text-slate-800 tracking-tight truncate">
+                    notamitgamer/bsc
+                </h1>
+                <p class="text-xs text-slate-500 font-medium mt-0.5 truncate">
+                    Repository File Index
+                </p>
+                </div>
             </div>
-            <div class="min-w-0">
-            <h1 class="text-lg sm:text-xl font-bold text-slate-800 tracking-tight truncate">
-                notamitgamer/bsc
-            </h1>
-            <p class="text-xs text-slate-500 font-medium mt-0.5 truncate">
-                Repository File Index
-            </p>
-            </div>
+            <!-- Mobile: Github Icon -->
+            <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
         </div>
-        <!-- Mobile: Github Icon -->
-        <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+
+        <!-- Actions Section -->
+        <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
+            
+            <!-- License Button -->
+            <button
+            onclick="openLicenseModal(false)"
+            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
+            title="View License"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+            <span class="inline hidden sm:inline">License</span>
+            </button>
+
+            <!-- Search Bar -->
+            <div class="relative group grow sm:grow-0 w-full sm:w-auto">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-4 w-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search code..."
+                    class="pl-10 pr-10 sm:pr-4 py-2 bg-slate-100 border-none rounded-lg text-sm w-full sm:w-64 focus:ring-2 focus:ring-blue-500/20 focus:bg-white transition-all outline-none text-slate-700 placeholder:text-slate-400 font-medium"
+                />
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
+                    <span class="text-xs text-slate-400 font-sans border border-slate-200 rounded px-1.5 py-0.5 bg-white">/</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Github Button -->
+            <a
+            href="https://github.com/notamitgamer/bsc"
+            target="_blank"
+            class="hidden sm:flex bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2"
+            >
+            <span>GitHub</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
             </svg>
-        </a>
-      </div>
+            </a>
+        </div>
+        </header>
 
-      <!-- Actions Section -->
-      <div class="flex items-center gap-3 w-full sm:w-auto">
-        <!-- License Button -->
-        <button
-          onclick="showLicense()"
-          class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
-          title="View License"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-          </svg>
-          <span class="inline">License</span>
-        </button>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex overflow-hidden">
+        <!-- File Explorer (Left Panel) -->
+        <div class="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6">
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <!-- Recent Files Section -->
+                <div id="recent-files-container" class="hidden mb-6">
+                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-1">Recent Files</h2>
+                    <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                        <!-- Recent files injected here -->
+                    </div>
+                    <hr class="mt-4 border-slate-200">
+                </div>
 
-        <!-- Search Bar -->
-        <div class="relative group grow sm:grow-0">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg class="h-4 w-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-            </div>
-            <input
-                type="text"
-                id="search-input"
-                placeholder="Search..."
-                class="pl-10 pr-10 sm:pr-4 py-2 bg-slate-100 border-none rounded-lg text-sm w-full sm:w-64 focus:ring-2 focus:ring-blue-500/20 focus:bg-white transition-all outline-none text-slate-700 placeholder:text-slate-400 font-medium"
-            />
-            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
-                <span class="text-xs text-slate-400 font-sans border border-slate-200 rounded px-1.5 py-0.5 bg-white">/</span>
+                <!-- Global Controls (Sticky) -->
+                <div class="sticky top-0 z-20 bg-slate-50 py-2 flex justify-end gap-2 border-b border-slate-200/50 backdrop-blur-sm bg-opacity-90 mb-2">
+                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-medium px-2 py-1 rounded transition-colors duration-200">Expand All</button>
+                    <span class="text-slate-300">|</span>
+                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-medium px-2 py-1 rounded transition-colors duration-200">Collapse All</button>
+                </div>
+
+                <div id="file-list-container">
+                <!-- Python script will inject the file list here -->
+                <!--FILE_LIST_PLACEHOLDER-->
+                </div>
             </div>
         </div>
-
-        <!-- Desktop Github Button -->
-        <a
-          href="https://github.com/notamitgamer/bsc"
-          target="_blank"
-          class="hidden sm:flex bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2"
-        >
-          <span>GitHub</span>
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-          </svg>
-        </a>
-      </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 flex overflow-hidden">
-      <!-- File Explorer (Left Panel) -->
-      <div class="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6">
-        <div class="max-w-4xl mx-auto space-y-4" id="file-list-container">
-          <!-- Python script will inject the file list here -->
-          <!--FILE_LIST_PLACEHOLDER-->
-        </div>
-      </div>
-    </main>
+        </main>
+    </div>
 
     <!-- Code Viewer Modal -->
     <div
@@ -217,9 +252,23 @@
               >
                 filename.c
               </h3>
+              <!-- File Size Indicator -->
+              <span id="modal-filesize" class="text-[10px] text-slate-500 font-mono"></span>
             </div>
           </div>
           <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+            
+            <!-- Download Button -->
+            <button
+              id="download-btn"
+              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              title="Download File"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </button>
+
             <!-- Share Button -->
             <button
               id="share-btn"
@@ -350,9 +399,10 @@
             ></div>
           </div>
           <!-- Code Container -->
-          <pre id="modal-code-container" class="custom-scrollbar">
-            <code id="modal-code-block" class="language-c h-full block"></code>
-          </pre>
+          <div id="modal-code-container" class="custom-scrollbar">
+            <!-- Code Block -->
+            <pre class="m-0 p-0 flex-grow"><code id="modal-code-block" class="language-c h-full block"></code></pre>
+          </div>
         </div>
       </div>
     </div>
@@ -360,7 +410,7 @@
     <!-- License Modal -->
     <div
       id="license-modal"
-      class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
+      class="fixed inset-0 bg-slate-900/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
     >
       <div
         class="bg-white w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-slate-200 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]"
@@ -373,14 +423,29 @@
             </svg>
             License Information
           </h3>
-          <button
-            onclick="hideLicense()"
-            class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
+          <div class="flex items-center gap-2">
+             <!-- License Download Button -->
+             <a
+             href="https://aranag.site/download/License - Educational Source-Available License (ESAL-1.0).pdf"
+             target="_blank"
+             class="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+             title="Download License PDF"
+           >
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+             </svg>
+           </a>
+           
+            <button
+                id="license-close-btn"
+                onclick="hideLicense()"
+                class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors hidden"
+            >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+          </div>
         </div>
 
         <!-- License Content -->
@@ -455,13 +520,8 @@
         </div>
 
         <!-- Modal Footer -->
-        <div class="px-6 py-4 border-t border-slate-100 bg-slate-50 rounded-b-xl flex justify-end shrink-0">
-          <button
-            onclick="hideLicense()"
-            class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm"
-          >
-            I Understand
-          </button>
+        <div id="license-footer" class="px-6 py-4 border-t border-slate-100 bg-slate-50 rounded-b-xl flex justify-end shrink-0 gap-3">
+          <!-- Buttons Injected via JS -->
         </div>
       </div>
     </div>
@@ -496,12 +556,131 @@
           // Open folder (visual enhancement)
           folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
         }
+        
+        // Update global controls based on new state
+        updateFolderState();
       }
+      
+      /* --- Expand/Collapse All Logic --- */
+      function updateFolderState() {
+          const folders = document.querySelectorAll('.folder-container');
+          const total = folders.length;
+          let openCount = 0;
+
+          folders.forEach(f => {
+              // The content div is the second child of the folder container
+              const content = f.children[1];
+              if (!content.classList.contains('hidden')) {
+                  openCount++;
+              }
+          });
+
+          const btnExpand = document.getElementById('btn-expand');
+          const btnCollapse = document.getElementById('btn-collapse');
+          
+          if (total === 0) {
+             setBtnState(btnExpand, false);
+             setBtnState(btnCollapse, false);
+             return;
+          }
+
+          // Expand All is active if at least one folder is closed
+          setBtnState(btnExpand, openCount < total);
+
+          // Collapse All is active if at least one folder is open
+          setBtnState(btnCollapse, openCount > 0);
+      }
+
+      function setBtnState(btn, isActive) {
+          if (isActive) {
+              btn.disabled = false;
+              // Active Style (Blue)
+              btn.className = "text-xs font-bold text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer border border-blue-100 shadow-sm";
+          } else {
+              btn.disabled = true;
+              // Inactive Style (Grey)
+              btn.className = "text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent";
+          }
+      }
+
+      function expandAll() {
+          document.querySelectorAll('.folder-container > div:nth-child(2)').forEach(content => {
+              content.classList.remove('hidden');
+          });
+          document.querySelectorAll('.folder-container .chevron').forEach(icon => {
+              icon.classList.add('rotated');
+          });
+           document.querySelectorAll('.folder-container .folder-icon').forEach(icon => {
+              icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
+          });
+          updateFolderState();
+      }
+
+      function collapseAll() {
+          document.querySelectorAll('.folder-container > div:nth-child(2)').forEach(content => {
+              content.classList.add('hidden');
+          });
+          document.querySelectorAll('.folder-container .chevron').forEach(icon => {
+              icon.classList.remove('rotated');
+          });
+          document.querySelectorAll('.folder-container .folder-icon').forEach(icon => {
+              icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>`;
+          });
+          updateFolderState();
+      }
+
+      /* --- Recent Files Logic --- */
+      const MAX_RECENT_FILES = 6;
+      let recentFiles = JSON.parse(localStorage.getItem('bsc_recent_files') || '[]');
+
+      function updateRecentFilesUI() {
+          const container = document.getElementById('recent-files-container');
+          const list = document.getElementById('recent-files-list');
+          
+          if (recentFiles.length === 0) {
+              container.classList.add('hidden');
+              return;
+          }
+          
+          container.classList.remove('hidden');
+          list.innerHTML = '';
+          
+          recentFiles.forEach(file => {
+              const item = document.createElement('div');
+              item.className = "flex items-center gap-2 px-3 py-2 bg-white hover:bg-blue-50 border border-slate-200 rounded-lg cursor-pointer transition-all group";
+              item.onclick = () => showCode(file.storageId, file.name, file.url);
+              item.innerHTML = `
+                  <div class="p-1.5 rounded-md bg-blue-100/50 text-blue-600">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <span class="text-xs font-medium text-slate-700 truncate">${file.name}</span>
+              `;
+              list.appendChild(item);
+          });
+      }
+
+      function addToRecent(storageId, name, url) {
+          // Remove if already exists
+          recentFiles = recentFiles.filter(f => f.name !== name);
+          // Add to top
+          recentFiles.unshift({ storageId, name, url });
+          // Limit size
+          if (recentFiles.length > MAX_RECENT_FILES) recentFiles.pop();
+          // Save and Update UI
+          localStorage.setItem('bsc_recent_files', JSON.stringify(recentFiles));
+          updateRecentFilesUI();
+      }
+      
+      // Init Recent Files
+      updateRecentFilesUI();
 
       /* --- Code Modal Logic --- */
       const modal = document.getElementById("code-modal");
       const modalCodeBlock = document.getElementById("modal-code-block");
       const modalFilename = document.getElementById("modal-filename");
+      const modalFileSize = document.getElementById("modal-filesize");
       const modalRawLink = document.getElementById("modal-raw-link");
       const loadingSpinner = document.getElementById("code-loading");
 
@@ -517,6 +696,9 @@
 
         modalFilename.textContent = filename;
         modalRawLink.href = rawUrl;
+        
+        // Add to recent files
+        addToRecent(storageId, filename, rawUrl);
         
         // Reset Share Button State
         const shareIconDefault = document.getElementById("share-icon-default");
@@ -534,11 +716,19 @@
         const storedContent = document.getElementById(storageId);
         
         if (storedContent) {
-             modalCodeBlock.innerHTML = storedContent.innerHTML;
+             const code = storedContent.innerHTML;
+             modalCodeBlock.innerHTML = code;
              delete modalCodeBlock.dataset.highlighted; 
              hljs.highlightElement(modalCodeBlock);
+             
+             // Estimate Size (Characters)
+             const bytes = new Blob([storedContent.textContent]).size;
+             const sizeStr = bytes > 1024 ? (bytes/1024).toFixed(2) + " KB" : bytes + " B";
+             modalFileSize.textContent = sizeStr;
+
         } else {
             modalCodeBlock.textContent = "Error: Code content not found in page.";
+            modalFileSize.textContent = "";
         }
           
         // Update URL history
@@ -561,14 +751,67 @@
         window.history.pushState({ path: newUrl.href }, '', newUrl.href);
       }
       
-      /* --- License Modal Logic --- */
-      const licenseModal = document.getElementById("license-modal");
+      /* --- Download Logic --- */
+      const downloadBtn = document.getElementById("download-btn");
+      downloadBtn.addEventListener("click", () => {
+          const filename = modalFilename.textContent;
+          const content = modalCodeBlock.textContent; // Get plain text
+          
+          const element = document.createElement('a');
+          element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+          element.setAttribute('download', filename);
+
+          element.style.display = 'none';
+          document.body.appendChild(element);
+
+          element.click();
+
+          document.body.removeChild(element);
+      });
       
-      function showLicense() {
-        licenseModal.classList.remove("hidden");
-        void licenseModal.offsetWidth;
-        licenseModal.classList.remove("opacity-0");
-        licenseModal.querySelector("div").classList.remove("scale-95");
+      /* --- License Modal Logic (UPDATED) --- */
+      const licenseModal = document.getElementById("license-modal");
+      const licenseFooter = document.getElementById("license-footer");
+      const licenseCloseBtn = document.getElementById("license-close-btn");
+      const appContent = document.getElementById("app-content");
+      
+      // Function to open license modal in specific mode
+      // forced = true (First Visit), forced = false (View Only)
+      function openLicenseModal(forced) {
+          licenseModal.classList.remove("hidden");
+          void licenseModal.offsetWidth;
+          licenseModal.classList.remove("opacity-0");
+          licenseModal.querySelector("div").classList.remove("scale-95");
+          
+          licenseFooter.innerHTML = ""; // Clear existing buttons
+          
+          if (forced) {
+              // Forced Mode: Accept / Decline, No Close Button
+              licenseCloseBtn.classList.add("hidden");
+              
+              const btnDecline = document.createElement("button");
+              btnDecline.className = "px-4 py-2 bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-600 text-sm font-medium rounded-lg transition-colors border border-slate-200";
+              btnDecline.innerText = "Decline";
+              btnDecline.onclick = declineLicense;
+              
+              const btnAccept = document.createElement("button");
+              btnAccept.className = "px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm";
+              btnAccept.innerText = "Accept";
+              btnAccept.onclick = acceptLicense;
+              
+              licenseFooter.appendChild(btnDecline);
+              licenseFooter.appendChild(btnAccept);
+          } else {
+              // View Mode: I Understand, Close Button visible
+              licenseCloseBtn.classList.remove("hidden");
+              
+              const btnUnderstand = document.createElement("button");
+              btnUnderstand.className = "px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm";
+              btnUnderstand.innerText = "I Understand";
+              btnUnderstand.onclick = hideLicense;
+              
+              licenseFooter.appendChild(btnUnderstand);
+          }
       }
 
       function hideLicense() {
@@ -579,17 +822,53 @@
         }, 200);
       }
       
+      function acceptLicense() {
+          localStorage.setItem("license_accepted", "true");
+          hideLicense();
+          appContent.style.display = "flex"; // Show App
+      }
+      
+      function declineLicense() {
+          // Wipe DOM and Go Back
+          document.documentElement.innerHTML = "";
+          if (window.history.length > 1) {
+              window.history.back();
+          } else {
+              window.close(); // Only works if opened by script
+          }
+      }
+      
+      // Initialize License Check
+      function checkLicense() {
+          const accepted = localStorage.getItem("license_accepted");
+          if (accepted === "true") {
+              appContent.style.display = "flex"; // Show content immediately
+          } else {
+              openLicenseModal(true); // Show forced modal
+          }
+      }
+      
+      // Event Listeners for Modal Closing (Only if NOT forced)
       document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && !licenseModal.classList.contains("hidden")) {
-              hideLicense();
+              // Only close if header close button is visible (implies not forced)
+              if (!licenseCloseBtn.classList.contains("hidden")) {
+                  hideLicense();
+              }
           }
       });
       
       licenseModal.addEventListener("click", (e) => {
           if (e.target === licenseModal) {
-              hideLicense();
+               // Only close if header close button is visible (implies not forced)
+               if (!licenseCloseBtn.classList.contains("hidden")) {
+                  hideLicense();
+              }
           }
       });
+      
+      // Trigger license check on load
+      checkLicense();
 
       /* --- Search Logic --- */
       let searchIndex = [];
@@ -600,27 +879,55 @@
         fileElements.forEach((el) => {
           const name = el.querySelector("span").textContent.toLowerCase().trim();
           const parentContent = el.closest(".pl-4"); 
-          searchIndex.push({ name, element: el, parent: parentContent });
+          
+          // Get the code content from the hidden div
+          const codeDiv = el.querySelector("div[id^='code-']");
+          const code = codeDiv ? codeDiv.textContent.toLowerCase() : "";
+          
+          // Store storageID for click simulation
+          const storageId = codeDiv ? codeDiv.id : "";
+
+          searchIndex.push({ name, code, element: el, parent: parentContent, storageId });
         });
       }
 
       const searchInput = document.getElementById("search-input");
+      
+      // Helper to escape regex special characters
+      function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      }
+
       searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
+        
+        // 1. Cleanup: Remove existing snippets and reset layout classes
+        document.querySelectorAll('.search-snippet').forEach(el => el.remove());
+        document.querySelectorAll('.file-item').forEach(el => {
+            el.classList.remove('flex-wrap', 'pb-2');
+            // Ensure default styling is maintained
+        });
+
         if (searchIndex.length === 0) buildSearchIndex();
 
         if (!query) {
              document.querySelectorAll('.file-item, .folder-container').forEach(el => el.classList.remove('hidden'));
+             updateFolderState(); // Reset folder state check on clear
              return;
         }
 
+        // Hide all initially
         document.querySelectorAll('.file-item').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.folder-container').forEach(el => el.classList.add('hidden'));
 
         searchIndex.forEach(item => {
-            if (item.name.includes(query)) {
+            const nameMatch = item.name.includes(query);
+            const codeMatch = item.code.includes(query);
+
+            if (nameMatch || codeMatch) {
                 item.element.classList.remove('hidden');
                 
+                // Parent Folder Logic
                 let parent = item.element.parentElement;
                 while(parent && parent.id !== "file-list-container") {
                     parent.classList.remove('hidden'); 
@@ -641,8 +948,76 @@
                     }
                     parent = parent.parentElement;
                 }
+
+                // Snippet Logic
+                if (codeMatch) {
+                    const originalCodeDiv = item.element.querySelector("div[id^='code-']");
+                    if (originalCodeDiv) {
+                        const originalCode = originalCodeDiv.textContent;
+                        
+                        // We find the first occurrence index
+                        const matchIndex = item.code.indexOf(query);
+                        
+                        if (matchIndex !== -1) {
+                            // Determine line number
+                            const codePreMatch = item.code.substring(0, matchIndex);
+                            const lineCount = (codePreMatch.match(/\n/g) || []).length;
+                            
+                            // Extract lines
+                            const allLines = originalCode.split('\n');
+                            const startLine = Math.max(0, lineCount - 2);
+                            const endLine = Math.min(allLines.length, lineCount + 3);
+                            
+                            const snippetLines = allLines.slice(startLine, endLine);
+                            
+                            // Create Snippet Element
+                            const snippetDiv = document.createElement('div');
+                            // w-full ensures it breaks to new line in flex-wrap container
+                            snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-2 bg-slate-100 border-l-4 border-blue-400 rounded-r text-xs font-mono text-slate-600 overflow-x-auto shadow-sm cursor-pointer hover:bg-slate-200 transition-colors';
+                            
+                            // Click event to open file from snippet
+                            snippetDiv.onclick = (evt) => {
+                                evt.stopPropagation(); // Prevent double firing if parent has click
+                                // Extract raw URL from the parent's onClick attribute
+                                const rawUrl = item.element.querySelector(".flex-1").getAttribute('onclick').match(/'([^']*)'\)$/)[1];
+                                showCode(item.storageId, item.element.querySelector("span").textContent, rawUrl);
+                            };
+                            
+                            let htmlContent = '';
+                            const safeQuery = escapeRegExp(query);
+                            const highlightRegex = new RegExp(`(${safeQuery})`, 'gi');
+
+                            snippetLines.forEach((line, idx) => {
+                                const currentLineNum = startLine + idx + 1;
+                                
+                                // Escape HTML special chars in the code line
+                                let safeLine = line.replace(/&/g, "&amp;")
+                                                   .replace(/</g, "&lt;")
+                                                   .replace(/>/g, "&gt;")
+                                                   .replace(/"/g, "&quot;")
+                                                   .replace(/'/g, "&#039;");
+
+                                // Highlight matches
+                                safeLine = safeLine.replace(highlightRegex, '<mark class="bg-yellow-200 text-slate-900 font-bold rounded-sm px-0.5">$1</mark>');
+                                
+                                const isMatchLine = (currentLineNum - 1) === lineCount;
+                                const lineClass = isMatchLine ? 'bg-blue-200/30 font-semibold' : '';
+
+                                htmlContent += `<div class="whitespace-pre ${lineClass}"><span class="inline-block w-8 text-right mr-3 text-slate-400 select-none border-r border-slate-300 pr-1">${currentLineNum}</span>${safeLine}</div>`;
+                            });
+                            
+                            snippetDiv.innerHTML = htmlContent;
+
+                            // Adjust parent layout to accommodate full-width snippet
+                            item.element.classList.add('flex-wrap', 'pb-2');
+                            item.element.appendChild(snippetDiv);
+                        }
+                    }
+                }
             }
         });
+        
+        // Update states after search filtering (optional behavior, kept simple)
       });
 
       /* --- Share Functionality --- */
@@ -657,6 +1032,9 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
+         // Initial Folder State Check
+         updateFolderState();
+
          const params = new URLSearchParams(window.location.search);
          const sharedFile = params.get('file');
          if (sharedFile) {
@@ -664,7 +1042,7 @@
              for (let el of fileElements) {
                  const name = el.querySelector("span").textContent.trim();
                  if (name === sharedFile) {
-                     const onClickAttr = el.getAttribute('onclick');
+                     const onClickAttr = el.querySelector(".flex-1").getAttribute('onclick');
                      const match = onClickAttr.match(/showCode\('([^']*)',\s*'([^']*)',\s*'([^']*)'\)/);
                      if (match) {
                          showCode(match[1], match[2], match[3]);
