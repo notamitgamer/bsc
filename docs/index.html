@@ -20154,6 +20154,96 @@ int count_occurrences(int arr[], int n, int target)
 }</div>
         </div>
         
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-tuition-c-P061-c', 'P061.c', 'https://github.com/notamitgamer/bsc/blob/main/tuition-c/P061.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P061.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P061.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-tuition-c-P061-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a C program to find the sum of even elements in an array using a user defined function.
+Define a functions int sumEven(int arr[], int n) that returns the sum of all even elements in the array. */
+
+#include &lt;stdio.h&gt;
+
+void inputarr(int[], int);
+int sumEven(int[], int);
+
+int main()
+{
+    int arr[20], n;
+    printf(&quot;Enter the n (Max: 20): &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    inputarr(arr, n);
+    printf(&quot;\nSum of the even number in the array: %d&quot;, sumEven(arr, n));
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int sumEven(int arr[], int n)
+{
+    int i, sum_even = 0;
+    for (i = 0; i &lt; n; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            sum_even += arr[i];
+        }
+    }
+    return sum_even;
+}</div>
+        </div>
+        
             </div>
         </div>
         
