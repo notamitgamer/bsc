@@ -7,14 +7,16 @@
     <link rel="icon" href="data:,">
     <title>notamitgamer/bsc Repository File Index</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Default Theme (Visual Studio Light for High Contrast) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      id="highlight-theme"
       rel="stylesheet"
-    />
-    <!-- Default Theme (Dark) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
@@ -41,18 +43,20 @@
         padding: 0;
         margin: 0;
         height: 100%;
-        overflow: hidden;
+        overflow: auto;
       }
       
       /* Code Block */
       #modal-code-block {
-        height: 100%;
-        overflow: auto;
+        min-height: 100%;
+        overflow: visible;
         padding: 1rem;
         font-family: "JetBrains Mono", "Fira Code", monospace;
         font-size: 0.8125rem;
         line-height: 1.6;
-        background-color: transparent !important; /* Allow container bg */
+        background-color: transparent !important;
+        display: block;
+        color: #000000; /* Ensure high contrast text */
       }
 
       @media (min-width: 640px) {
@@ -63,27 +67,31 @@
       }
 
       /* Scrollbars */
-      #modal-code-block::-webkit-scrollbar {
+      #modal-code-container::-webkit-scrollbar,
+      .custom-scrollbar::-webkit-scrollbar {
         width: 10px;
         height: 10px;
       }
-      #modal-code-block::-webkit-scrollbar-track {
-        background: transparent;
+      #modal-code-container::-webkit-scrollbar-track,
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f5f9;
       }
-      #modal-code-block::-webkit-scrollbar-thumb {
-        background: #30363d;
+      #modal-code-container::-webkit-scrollbar-thumb,
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
         border-radius: 5px;
-        border: 2px solid transparent;
+        border: 2px solid #f1f5f9;
         background-clip: content-box;
       }
-      #modal-code-block::-webkit-scrollbar-thumb:hover {
-        background-color: #58a6ff;
+      #modal-code-container::-webkit-scrollbar-thumb:hover,
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
       }
 
       .hljs {
         background: transparent !important;
       }
-      
+
       /* License Modal Scrollbar */
       #license-content::-webkit-scrollbar {
         width: 8px;
@@ -104,12 +112,50 @@
       #app-content {
           display: none;
       }
+
+      /* Back to Top Button */
+      #back-to-top {
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+      #back-to-top.hidden {
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(20px);
+      }
+
+      /* Keyboard Navigation Highlight */
+      .file-item.nav-selected {
+          background-color: #eff6ff; /* blue-50 */
+          border-color: #bfdbfe;     /* blue-200 */
+          box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      }
+      .file-item.nav-selected span {
+          color: #2563eb;            /* blue-600 */
+      }
+      
+      /* Ensure modal background is white in light mode */
+      #code-modal .modal-content-area,
+      #code-modal .bg-\[\#0d1117\] {
+          background-color: #ffffff;
+          border-color: #e2e8f0;
+          color: #1e293b;
+      }
+      #code-modal .bg-\[\#161b22\] {
+          background-color: #f8fafc;
+          border-color: #e2e8f0;
+      }
+      #modal-filename {
+          color: #334155;
+      }
+      #code-loading {
+          background-color: #ffffff;
+      }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden">
     
     <!-- App Wrapper (Hidden until license accepted) -->
-    <div id="app-content" class="flex flex-col h-full overflow-hidden">
+    <div id="app-content" class="flex flex-col h-full overflow-hidden relative">
         <!-- Header -->
         <header
         class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0"
@@ -141,6 +187,17 @@
                 </p>
                 </div>
             </div>
+            <!-- License Button -->
+            <button
+            onclick="openLicenseModal(false)"
+            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
+            title="View License"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+            <span class="inline hidden sm:inline">View License</span>
+            </button>
             <!-- Mobile: Github Icon -->
             <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -151,18 +208,6 @@
 
         <!-- Actions Section -->
         <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
-            
-            <!-- License Button -->
-            <button
-            onclick="openLicenseModal(false)"
-            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
-            title="View License"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-            </svg>
-            <span class="inline hidden sm:inline">License</span>
-            </button>
 
             <!-- Search Bar -->
             <div class="relative group grow sm:grow-0 w-full sm:w-auto">
@@ -174,7 +219,7 @@
                 <input
                     type="text"
                     id="search-input"
-                    placeholder="Search code..."
+                    placeholder="Search code... (/)"
                     class="pl-10 pr-10 sm:pr-4 py-2 bg-slate-100 border-none rounded-lg text-sm w-full sm:w-64 focus:ring-2 focus:ring-blue-500/20 focus:bg-white transition-all outline-none text-slate-700 placeholder:text-slate-400 font-medium"
                 />
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
@@ -197,14 +242,17 @@
         </header>
 
         <!-- Main Content Area -->
-        <main class="flex-1 flex overflow-hidden">
+        <main class="flex-1 flex overflow-hidden relative" id="main-scroll-container">
         <!-- File Explorer (Left Panel) -->
-        <div class="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6">
+        <div class="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 h-full" id="file-explorer-scroll">
             <div class="max-w-4xl mx-auto space-y-4">
                 
                 <!-- Recent Files Section -->
                 <div id="recent-files-container" class="hidden mb-6">
-                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-1">Recent Files</h2>
+                    <div class="flex items-center justify-between mb-3 px-1">
+                        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Recent Files</h2>
+                        <button onclick="confirmClearRecent()" class="text-xs text-red-400 hover:text-red-600 font-medium transition-colors hover:underline">Clear</button>
+                    </div>
                     <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                         <!-- Recent files injected here -->
                     </div>
@@ -213,9 +261,9 @@
 
                 <!-- Global Controls (Sticky) -->
                 <div class="sticky top-0 z-20 bg-slate-50 py-2 flex justify-end gap-2 border-b border-slate-200/50 backdrop-blur-sm bg-opacity-90 mb-2">
-                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-medium px-2 py-1 rounded transition-colors duration-200">Expand All</button>
+                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent" disabled>Expand All</button>
                     <span class="text-slate-300">|</span>
-                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-medium px-2 py-1 rounded transition-colors duration-200">Collapse All</button>
+                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent" disabled>Collapse All</button>
                 </div>
 
                 <div id="file-list-container">
@@ -224,6 +272,14 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all z-30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+
         </main>
     </div>
 
@@ -258,6 +314,17 @@
           </div>
           <div class="flex items-center gap-1 sm:gap-2 shrink-0">
             
+            <!-- Open in New Tab Button -->
+            <button
+              id="new-tab-btn"
+              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              title="Open in New Tab"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </button>
+
             <!-- Download Button -->
             <button
               id="download-btn"
@@ -266,6 +333,18 @@
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </button>
+
+            <!-- Print Button -->
+            <button
+              id="print-btn"
+              onclick="printCode()"
+              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              title="Print Code"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
               </svg>
             </button>
 
@@ -388,7 +467,7 @@
         </div>
 
         <!-- Code Content -->
-        <div class="flex-1 min-h-0 bg-[#0d1117] relative">
+        <div class="flex-1 min-h-0 bg-[#0d1117] relative dark-modal-bg">
           <!-- Loading State -->
           <div
             id="code-loading"
@@ -525,6 +604,21 @@
         </div>
       </div>
     </div>
+    
+    <!-- Confirm Dialog Modal -->
+    <div
+      id="confirm-modal"
+      class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
+    >
+      <div class="bg-white w-full max-w-sm rounded-xl shadow-2xl flex flex-col border border-slate-200 transform scale-95 transition-transform duration-200 p-6">
+        <h3 class="text-lg font-bold text-slate-800 mb-2">Clear Recent Files?</h3>
+        <p class="text-sm text-slate-600 mb-6">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
+        <div class="flex justify-end gap-3">
+            <button onclick="closeConfirmModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-lg transition-colors">Cancel</button>
+            <button onclick="confirmClearRecentAction()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">Delete</button>
+        </div>
+      </div>
+    </div>
 
     <script>
       function toggleFolder(header) {
@@ -583,12 +677,20 @@
              setBtnState(btnCollapse, false);
              return;
           }
-
-          // Expand All is active if at least one folder is closed
-          setBtnState(btnExpand, openCount < total);
-
-          // Collapse All is active if at least one folder is open
-          setBtnState(btnCollapse, openCount > 0);
+          
+          if (openCount === 0) {
+              // All folders are collapsed
+              setBtnState(btnExpand, true);
+              setBtnState(btnCollapse, false);
+          } else if (openCount === total) {
+              // All folders are expanded
+              setBtnState(btnExpand, false);
+              setBtnState(btnCollapse, true);
+          } else {
+              // Mixed state
+              setBtnState(btnExpand, true);
+              setBtnState(btnCollapse, true);
+          }
       }
 
       function setBtnState(btn, isActive) {
@@ -628,10 +730,40 @@
           });
           updateFolderState();
       }
-
+      
       /* --- Recent Files Logic --- */
       const MAX_RECENT_FILES = 6;
       let recentFiles = JSON.parse(localStorage.getItem('bsc_recent_files') || '[]');
+      
+      // Auto-reset check
+      function checkStorageExpiry() {
+          const now = Date.now();
+          const setupTime = localStorage.getItem('bsc_setup_time');
+          // 3 days for standard reset, 72 hours for theme reset (logic combined here for simplicity as requested)
+          // The prompt asked for theme to reset at 72 hours. 
+          // Since 3 days == 72 hours, we can use one timer for general preferences or separate if strictly needed.
+          // Let's use one 'setup_time' for all expiration logic to keep it simple.
+          const threeDays = 3 * 24 * 60 * 60 * 1000; 
+
+          if (!setupTime) {
+              // First run or cleared
+              localStorage.setItem('bsc_setup_time', now);
+          } else {
+              if (now - parseInt(setupTime) > threeDays) {
+                  // Expired
+                  console.log("Storage expired. Resetting.");
+                  localStorage.removeItem('license_accepted');
+                  localStorage.removeItem('bsc_recent_files');
+                  localStorage.setItem('bsc_setup_time', now); // Reset timer
+                  
+                  // Reset memory variables if needed
+                  recentFiles = []; 
+              }
+          }
+      }
+      
+      // Call immediately
+      checkStorageExpiry();
 
       function updateRecentFilesUI() {
           const container = document.getElementById('recent-files-container');
@@ -672,9 +804,62 @@
           localStorage.setItem('bsc_recent_files', JSON.stringify(recentFiles));
           updateRecentFilesUI();
       }
+
+      /* --- Custom Confirm Modal Logic --- */
+      const confirmModal = document.getElementById("confirm-modal");
+      
+      function confirmClearRecent() {
+          confirmModal.classList.remove("hidden");
+          void confirmModal.offsetWidth;
+          confirmModal.classList.remove("opacity-0");
+          confirmModal.querySelector("div").classList.remove("scale-95");
+      }
+      
+      function closeConfirmModal() {
+          confirmModal.classList.add("opacity-0");
+          confirmModal.querySelector("div").classList.add("scale-95");
+          setTimeout(() => {
+              confirmModal.classList.add("hidden");
+          }, 200);
+      }
+      
+      function confirmClearRecentAction() {
+          recentFiles = [];
+          localStorage.setItem('bsc_recent_files', JSON.stringify(recentFiles));
+          updateRecentFilesUI();
+          closeConfirmModal();
+      }
       
       // Init Recent Files
       updateRecentFilesUI();
+
+      /* --- Scroll to Top Logic --- */
+      const scrollContainer = document.getElementById('file-explorer-scroll');
+      const backToTopBtn = document.getElementById('back-to-top');
+
+      scrollContainer.addEventListener('scroll', () => {
+          if (scrollContainer.scrollTop > 300) {
+              backToTopBtn.classList.remove('hidden');
+              // Small delay to allow display:block to apply before opacity transition
+              setTimeout(() => {
+                  backToTopBtn.classList.remove('opacity-0', 'translate-y-4');
+              }, 10);
+          } else {
+              backToTopBtn.classList.add('opacity-0', 'translate-y-4');
+              setTimeout(() => {
+                  if(scrollContainer.scrollTop <= 300) { // Check again in case user scrolled back up quickly
+                      backToTopBtn.classList.add('hidden');
+                  }
+              }, 300);
+          }
+      });
+
+      function scrollToTop() {
+          scrollContainer.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
 
       /* --- Code Modal Logic --- */
       const modal = document.getElementById("code-modal");
@@ -683,6 +868,7 @@
       const modalFileSize = document.getElementById("modal-filesize");
       const modalRawLink = document.getElementById("modal-raw-link");
       const loadingSpinner = document.getElementById("code-loading");
+      const newTabBtn = document.getElementById("new-tab-btn");
 
       let currentFileUrl = "";
 
@@ -725,6 +911,15 @@
              const bytes = new Blob([storedContent.textContent]).size;
              const sizeStr = bytes > 1024 ? (bytes/1024).toFixed(2) + " KB" : bytes + " B";
              modalFileSize.textContent = sizeStr;
+             
+             // Setup New Tab Button
+             newTabBtn.onclick = () => {
+                 const newWindow = window.open();
+                 newWindow.document.write('<html><head><title>' + filename + '</title>');
+                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #f0f0f0;} </style>');
+                 newWindow.document.write('</head><body><pre>' + storedContent.textContent.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
+                 newWindow.document.close();
+             };
 
         } else {
             modalCodeBlock.textContent = "Error: Code content not found in page.";
@@ -769,6 +964,24 @@
           document.body.removeChild(element);
       });
       
+      /* --- Print Logic --- */
+      function printCode() {
+            const content = document.getElementById('modal-code-block').innerText;
+            const filename = document.getElementById('modal-filename').textContent;
+            
+            const printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>' + filename + '</title>');
+            printWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px;} </style>');
+            printWindow.document.write('</head><body>');
+            // Basic HTML escaping for print view
+            const safeContent = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            printWindow.document.write('<pre>' + safeContent + '</pre>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+      }
+
       /* --- License Modal Logic (UPDATED) --- */
       const licenseModal = document.getElementById("license-modal");
       const licenseFooter = document.getElementById("license-footer");
@@ -905,8 +1118,12 @@
         document.querySelectorAll('.search-snippet').forEach(el => el.remove());
         document.querySelectorAll('.file-item').forEach(el => {
             el.classList.remove('flex-wrap', 'pb-2');
+            el.classList.remove('nav-selected'); // Remove selection style
             // Ensure default styling is maintained
         });
+        
+        // Reset selection index on search
+        selectedFileIndex = -1;
 
         if (searchIndex.length === 0) buildSearchIndex();
 
@@ -1016,9 +1233,50 @@
                 }
             }
         });
-        
-        // Update states after search filtering (optional behavior, kept simple)
       });
+      
+      /* --- Keyboard Navigation Logic --- */
+      let selectedFileIndex = -1;
+
+      function handleKeyboardNav(e) {
+        // Only if modal is hidden
+        if (!modal.classList.contains("hidden")) return;
+
+        const visibleFiles = Array.from(document.querySelectorAll('.file-item:not(.hidden)'));
+        if (visibleFiles.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            // Move selection down, loop back to start if at end
+            selectedFileIndex = (selectedFileIndex + 1) % visibleFiles.length;
+            updateSelection(visibleFiles);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            // Move selection up, loop back to end if at start
+            selectedFileIndex = (selectedFileIndex - 1 + visibleFiles.length) % visibleFiles.length;
+            updateSelection(visibleFiles);
+        } else if (e.key === 'Enter' && selectedFileIndex !== -1) {
+            e.preventDefault();
+            // Trigger click on the selected file item container (first child usually has the onclick)
+            // The structure is .file-item > .flex-1 (this has onclick)
+            const clickTarget = visibleFiles[selectedFileIndex].querySelector('.flex-1');
+            if (clickTarget) clickTarget.click();
+        }
+      }
+
+      function updateSelection(files) {
+        // Remove 'nav-selected' class from all
+        files.forEach(el => el.classList.remove('nav-selected'));
+        
+        // Add to current
+        if (selectedFileIndex >= 0 && selectedFileIndex < files.length) {
+            const selectedEl = files[selectedFileIndex];
+            selectedEl.classList.add('nav-selected');
+            
+            // Scroll into view logic
+            selectedEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      }
 
       /* --- Share Functionality --- */
       function animateSuccess(btn, defaultIcon, successIcon) {
@@ -1042,7 +1300,7 @@
              for (let el of fileElements) {
                  const name = el.querySelector("span").textContent.trim();
                  if (name === sharedFile) {
-                     const onClickAttr = el.querySelector(".flex-1").getAttribute('onclick');
+                     const onClickAttr = el.getAttribute('onclick');
                      const match = onClickAttr.match(/showCode\('([^']*)',\s*'([^']*)',\s*'([^']*)'\)/);
                      if (match) {
                          showCode(match[1], match[2], match[3]);
