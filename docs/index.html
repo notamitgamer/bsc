@@ -196,7 +196,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
             </svg>
-            <span class="inline hidden sm:inline">License</span>
+            <span class="inline hidden sm:inline">View License</span>
             </button>
             <!-- Mobile: Github Icon -->
             <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
@@ -20322,6 +20322,217 @@ int sumEven(int arr[], int n)
         }
     }
     return sum_even;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-tuition-c-P062-c', 'P062.c', 'https://github.com/notamitgamer/bsc/blob/main/tuition-c/P062.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P062.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P062.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-tuition-c-P062-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a C program to find the smallest and largest in an array using user-defined functions.
+Define two functions int findSmallest(int arr[], int n) and int findLargest(int arr[], int n) that
+return the smallest and largest elements in an array, respectively. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void inputarr(int[], int);
+int findSmallest(int[], int);
+int findLargest(int[], int);
+
+int main()
+{
+    int n, *arr;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    arr = (int *)malloc(n * sizeof(int));
+    inputarr(arr, n);
+    printf(&quot;\nSmallest element = %d&quot;, findSmallest(arr, n));
+    printf(&quot;\nLargest element  = %d&quot;, findLargest(arr, n));
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter Element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int findSmallest(int arr[], int n)
+{
+    int i, smallest = arr[0];
+    for (i = 1; i &lt; n; i++)
+    {
+        if (smallest &gt; arr[i])
+        {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+int findLargest(int arr[], int n)
+{
+    int i, largest = arr[0];
+    for (i = 1; i &lt; n; i++)
+    {
+        if (largest &lt; arr[i])
+        {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-tuition-c-P063-c', 'P063.c', 'https://github.com/notamitgamer/bsc/blob/main/tuition-c/P063.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P063.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P063.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-tuition-c-P063-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a C program to find all Niven in an array. Define a user-defined function int isNiven(int num)
+that returns 1 if the numbers is a Niven number, otherwise returns 0. A Niven number (also known as a
+Harshad Number) is an integer that is divisible by the sum of its digits. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void inputarr(int[], int);
+int isNiven(int);
+
+int main()
+{
+    int n, *arr, i;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    arr = (int *)malloc(n * sizeof(int));
+    inputarr(arr, n);
+    for (i = 0; i &lt; n; i++)
+    {
+        if (isNiven(arr[i]))
+        {
+            printf(&quot;\n%d is a Niven number.&quot;, arr[i]);
+        }
+        else
+        {
+            printf(&quot;\n%d is a NOT Niven number.&quot;, arr[i]);
+        }
+    }
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter Element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int isNiven(int num)
+{
+    int i, sum = 0, temp = num;
+    while (temp &gt; 0)
+    {
+        sum += temp % 10;
+        temp /= 10;
+    }
+    return num % sum == 0;
 }</div>
         </div>
         
