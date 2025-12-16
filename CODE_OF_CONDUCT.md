@@ -1,18 +1,17 @@
-# Contributor Covenant Code of Conduct
----
+# Code of Conduct
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+I am committed to making this repository a welcoming and respectful place for learning and discussion.
 
-## Our Standards
+## Expectations
 
-Examples of behavior that contributes to a positive environment include:
+* **Be Respectful:** Treat others with kindness and respect in Issues and Discussions.
+* **Academic Integrity:** Do not use this platform to facilitate cheating or academic dishonesty.
+* **Constructive Feedback:** Criticism should be helpful and focused on the code, not the person.
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+## Enforcement
 
-This project is a personal learning project, and I ask that all interactions remain respectful and constructive. Thank you for your consideration.
+As the repository owner, I reserve the right to remove any comments, issues, or pull requests that violate these standards or the academic integrity goals of this project.
+
+Thank you for being a responsible part of this learning journey.

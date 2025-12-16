@@ -1,19 +1,26 @@
 # Contributing to bsc
 
-Thank you for your interest in contributing to this repository! As this is a personal learning project, I'm happy to receive feedback and suggestions.
+Thank you for your interest in improving this repository!
+
+While this is a personal academic repository protected by the **Educational Source-Available License (ESAL-1.0)**, I welcome constructive feedback, bug reports, and suggestions for optimization.
+
+## ⚠️ Important Legal Notice for Contributors
+
+By submitting a Pull Request (PR) or code snippet to this repository, you agree to the following terms:
+
+1.  **License Agreement:** You acknowledge that your contribution will be governed by the **[ESAL-1.0 License](LICENSE)**. You are *not* contributing under an open-source license like MIT or GPL.
+2.  **Originality:** You certify that the code you submit is your own original work and does not violate any academic integrity policies of your institution.
+3.  **Rights:** You grant Amit Dutta (the repository owner) the perpetual right to use, modify, and distribute your contribution as part of this project.
 
 ## How to Contribute
 
-1.  **Fork the Repository:** Start by forking this repository to your own GitHub account.
-2.  **Create a New Branch:** Create a new branch for your changes (e.g., `git checkout -b feature-my-awesome-feature`).
-3.  **Make Your Changes:** Write your code, solve a problem, or add a new example or a problem.
-4.  **Commit Your Changes:** Commit your changes with a clear and descriptive message.
-5.  **Submit a Pull Request:** Push your branch to your forked repository and open a pull request. In the pull request description, please explain the changes you've made.
+1.  **Report Bugs:** If you find an error in a solution, please open an **Issue** rather than a PR, unless the fix is trivial.
+2.  **Suggest Improvements:** If you have a more efficient algorithm, feel free to share it in an Issue or a PR.
+3.  **Documentation:** Typos and clarity improvements are always welcome.
 
-## What to Contribute
+## What NOT to Contribute
 
-* **Bug Fixes:** If you find any mistakes in the code or a program that isn't working correctly.
-* **New Code Examples:** If you have a cleaner or more efficient solution to an existing problem.
-* **Documentation Improvements:** If you find a typo or a way to make the README or other files clearer.
+* **Plagiarized Code:** Do not submit code copied from textbooks, other students, or online sources without attribution.
+* **Homework Solutions:** Do not submit solutions to *active* assignments from WBSU or other institutions that differ from the ones already present, as this could facilitate cheating.
 
-Thank you for your help!
+Thank you for helping keep this resource accurate and high-quality!
