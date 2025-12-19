@@ -123,6 +123,15 @@
           transform: translateY(20px);
       }
 
+      /* Toast Notification */
+      #toast {
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      #toast.show {
+          transform: translateY(0);
+          opacity: 1;
+      }
+
       /* Keyboard Navigation Highlight */
       .file-item.nav-selected {
           background-color: #eff6ff; /* blue-50 */
@@ -158,7 +167,7 @@
     <div id="app-content" class="flex flex-col h-full overflow-hidden relative">
         <!-- Header -->
         <header
-        class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0"
+        class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0 sticky top-0"
         >
         <!-- Logo Section -->
         <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
@@ -187,27 +196,42 @@
                 </p>
                 </div>
             </div>
-            <!-- License Button -->
+            
+            <div class="flex items-center gap-2 sm:hidden">
+                 <!-- Mobile: License Button (Icon Only) -->
+                <button
+                onclick="openLicenseModal(false)"
+                class="p-2 text-slate-600 hover:text-blue-600 bg-slate-50 rounded-md transition-colors"
+                title="View License"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                </svg>
+                </button>
+
+                <!-- Mobile: Github Icon -->
+                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-slate-600 hover:text-slate-900">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Actions Section -->
+        <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
+            
+            <!-- Desktop: License Button (Text + Icon) -->
             <button
             onclick="openLicenseModal(false)"
-            class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
+            class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
             title="View License"
             >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
             </svg>
-            <span class="inline hidden sm:inline">View License</span>
+            <span class="inline">View License</span>
             </button>
-            <!-- Mobile: Github Icon -->
-            <a href="https://github.com/notamitgamer/bsc" target="_blank" class="sm:hidden text-slate-600 hover:text-slate-900">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-                </svg>
-            </a>
-        </div>
-
-        <!-- Actions Section -->
-        <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
 
             <!-- Search Bar -->
             <div class="relative group grow sm:grow-0 w-full sm:w-auto">
@@ -619,6 +643,14 @@
         </div>
       </div>
     </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Link copied to clipboard!</span>
+    </div>
 
     <script>
       function toggleFolder(header) {
@@ -859,6 +891,24 @@
               top: 0,
               behavior: 'smooth'
           });
+      }
+      
+      /* --- Toast Notification Logic --- */
+      function showToast() {
+          const toast = document.getElementById("toast");
+          toast.classList.remove("hidden");
+          // Force reflow
+          void toast.offsetWidth; 
+          toast.classList.add("show", "translate-y-0", "opacity-100");
+          toast.classList.remove("translate-y-20", "opacity-0");
+          
+          setTimeout(() => {
+              toast.classList.remove("show", "translate-y-0", "opacity-100");
+              toast.classList.add("translate-y-20", "opacity-0");
+              setTimeout(() => {
+                  toast.classList.add("hidden");
+              }, 300);
+          }, 3000);
       }
 
       /* --- Code Modal Logic --- */
@@ -1298,12 +1348,33 @@
          if (sharedFile) {
              const fileElements = document.querySelectorAll(".file-item");
              for (let el of fileElements) {
-                 const name = el.querySelector("span").textContent.trim();
-                 if (name === sharedFile) {
-                     const onClickAttr = el.getAttribute('onclick');
-                     const match = onClickAttr.match(/showCode\('([^']*)',\s*'([^']*)',\s*'([^']*)'\)/);
-                     if (match) {
-                         showCode(match[1], match[2], match[3]);
+                 const nameSpan = el.querySelector("span");
+                 // Check if the span exists and its content matches the file name
+                 if (nameSpan && nameSpan.textContent.trim() === sharedFile) {
+                     // Find the clickable container (it has the onclick attribute)
+                     // In our structure it's the direct child .flex-1
+                     const clickable = el.querySelector(".flex-1");
+                     
+                     // 1. Expand parents
+                     let parentContent = el.closest('.pl-4');
+                     while (parentContent) {
+                         parentContent.classList.remove('hidden');
+                         // Rotate chevron of the folder header
+                         const folderHeader = parentContent.previousElementSibling;
+                         if (folderHeader) {
+                             const chevron = folderHeader.querySelector('.chevron');
+                             const folderIcon = folderHeader.querySelector('.folder-icon');
+                             if (chevron) chevron.classList.add('rotated');
+                             if (folderIcon) folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
+                         }
+                         parentContent = parentContent.parentElement.closest('.pl-4');
+                     }
+
+                     if (clickable) {
+                         clickable.click();
+                         setTimeout(() => {
+                             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                         }, 300);
                      }
                      break;
                  }
@@ -1318,8 +1389,8 @@
           if (!currentFileUrl) return;
 
           const shareData = {
-            title: "Check out this code",
-            text: `View ${modalFilename.textContent} from the repository`,
+            title: modalFilename.textContent,
+            text: `Check out this code,\nFile: ${modalFilename.textContent}\nLink: `,
             url: currentFileUrl,
           };
 
@@ -1334,6 +1405,7 @@
           } else {
             navigator.clipboard.writeText(currentFileUrl).then(() => {
               animateSuccess(shareBtn, shareIconDefault, shareIconSuccess);
+              showToast();
             });
           }
         });
