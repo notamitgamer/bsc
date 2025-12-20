@@ -1465,6 +1465,8 @@ maximum and minimum value among them. */
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
+// use atoi()
+
 int main(int argc, char *argv[])
 {
     int current_val, max_val, min_val, i;
@@ -3123,6 +3125,332 @@ void reverse(struct Array *array)
         start++;
         end--;
     }
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-14-c', 'assignment-s-14.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-14.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-14.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-14.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-14-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/*
+    Write a menu-driven program to perform the following string operations:
+        a. Show address of each character
+        b. Concatenate two strings without using strcat()
+        c. Concatenate two strings using strcat()
+        d. Compare two strings
+        e. Find string length using pointers
+        f. Convert lowercase to uppercase
+        g. Convert uppercase to lowercase
+        h. Count number of vowels
+        i. Reverse the string
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+void address_char(char *);
+void concat_manual(char[], char[]);
+void concat_strcat(char[], char[]);
+int string_cmp(char *, char *);
+int string_len(char *);
+void ltou(char[]);
+void utol(char[]);
+int vowel_count(char[]);
+void reverse(char[]);
+
+int main()
+{
+    char str1[100], str2[100], choice;
+    int result_cmp;
+
+    printf(&quot;Enter first string (Max: 100 character): &quot;);
+    fgets(str1, sizeof(str1), stdin);
+    str1[strcspn(str1, &quot;\n&quot;)] = &#x27;\0&#x27;;
+    // this will replace the enter (\n) used in the end to null
+
+    printf(&quot;Enter second string (Max: 100 character): &quot;);
+    fgets(str2, sizeof(str2), stdin);
+    str2[strcspn(str2, &quot;\n&quot;)] = &#x27;\0&#x27;;
+
+    while (1)
+    {
+        printf(&quot;\n\n\n    ========== MENU ==========\n&quot;
+               &quot;a. Show address of each character\n&quot;
+               &quot;b. Concatenate two strings without using strcat()\n&quot;
+               &quot;c. Concatenate two strings using strcat()\n&quot;
+               &quot;d. Compare two strings\n&quot;
+               &quot;e. Find string length using pointers\n&quot;
+               &quot;f. Convert lowercase to uppercase\n&quot;
+               &quot;g. Convert uppercase to lowercase\n&quot;
+               &quot;h. Count number of vowels\n&quot;
+               &quot;i. Reverse the string\n&quot;
+               &quot;1. Change input strings\n&quot;
+               &quot;0. Exit\n&quot;);
+        printf(&quot;\nEnter your choice: &quot;);
+        scanf(&quot; %c&quot;, &amp;choice);
+        choice = tolower(choice);
+
+        switch (choice)
+        {
+        case &#x27;1&#x27;:
+            while (getchar() != &#x27;\n&#x27;)
+                ;
+            printf(&quot;Enter first string (Max: 100 character): &quot;);
+            fgets(str1, sizeof(str1), stdin);
+            str1[strcspn(str1, &quot;\n&quot;)] = &#x27;\0&#x27;;
+
+            printf(&quot;Enter second string (Max: 100 character): &quot;);
+            fgets(str2, sizeof(str2), stdin);
+            str2[strcspn(str2, &quot;\n&quot;)] = &#x27;\0&#x27;;
+
+            break;
+        case &#x27;0&#x27;:
+            printf(&quot;\n\n\nExiting program...\n\n&quot;);
+            return 0;
+
+        case &#x27;a&#x27;:
+            printf(&quot;\n --- Show address of each character ---\n&quot;);
+            printf(&quot;\nSrting 1: &quot;);
+            address_char(str1);
+            printf(&quot;\nString 2: &quot;);
+            address_char(str2);
+            break;
+        case &#x27;b&#x27;:
+            printf(&quot;\n --- Concatenate two strings without using strcat() ---\n&quot;);
+            printf(&quot;\nResult: &quot;);
+            concat_manual(str1, str2);
+            break;
+        case &#x27;c&#x27;:
+            printf(&quot;\n --- Concatenate two strings using strcat() ---\n&quot;);
+            printf(&quot;\nResult: &quot;);
+            concat_strcat(str1, str2);
+            break;
+        case &#x27;d&#x27;:
+            printf(&quot;\n --- Compare two strings ---\n&quot;);
+            result_cmp = string_cmp(str1, str2);
+            if (result_cmp == 0)
+            {
+                printf(&quot;\nString 1 = String 2&quot;);
+                break;
+            }
+            else if (result_cmp &gt; 0)
+            {
+                printf(&quot;\nString 1 &gt; String 2&quot;);
+                break;
+            }
+            else
+            {
+                printf(&quot;\nString 1 &lt; String 2&quot;);
+                break;
+            }
+        case &#x27;e&#x27;:
+            printf(&quot;\n --- Find string length using pointers ---\n&quot;);
+            printf(&quot;\nLength of the String_1: %d&quot;, string_len(str1));
+            printf(&quot;\nLength of the String_2: %d&quot;, string_len(str2));
+            break;
+        case &#x27;f&#x27;:
+            printf(&quot;\n --- Convert lowercase to uppercase ---\n&quot;);
+            printf(&quot;\nString 1: &quot;);
+            ltou(str1);
+            printf(&quot;\nString 2: &quot;);
+            ltou(str2);
+            break;
+        case &#x27;g&#x27;:
+            printf(&quot;\n --- Convert uppercase to lowercase ---\n&quot;);
+            printf(&quot;\nString 1: &quot;);
+            utol(str1);
+            printf(&quot;\nString 2: &quot;);
+            utol(str2);
+            break;
+        case &#x27;h&#x27;:
+            printf(&quot;\n --- Count number of vowels ---\n&quot;);
+            printf(&quot;\nString 1: %d&quot;, vowel_count(str1));
+            printf(&quot;\nString 2: %d&quot;, vowel_count(str2));
+            break;
+        case &#x27;i&#x27;:
+            printf(&quot;\n --- Reverse the string ---\n&quot;);
+            printf(&quot;\nString 1: &quot;);
+            reverse(str1);
+            printf(&quot;\nString 2: &quot;);
+            reverse(str2);
+            break;
+        default:
+            printf(&quot;\nWrong choice. Try again...\n&quot;);
+        }
+    }
+}
+
+void address_char(char *str)
+{
+    printf(&quot;\nCharacter | Memory Address&quot;);
+    printf(&quot;\n--------- | --------------&quot;);
+
+    while (*str != &#x27;\0&#x27;)
+    {
+        printf(&quot;\n    %-6c| %p&quot;, *str, (void *)str);
+        str++;
+    }
+}
+
+void concat_manual(char str1[], char str2[])
+{
+    int size1 = strlen(str1);
+    int size2 = strlen(str2);
+    char result[size1 + size2 + 1];
+    int i = 0, j;
+
+    j = 0;
+    while (str1[j] != &#x27;\0&#x27;)
+    {
+        result[i] = str1[j];
+        i++;
+        j++;
+    }
+
+    j = 0;
+    while (str2[j] != &#x27;\0&#x27;)
+    {
+        result[i] = str2[j];
+        i++;
+        j++;
+    }
+
+    result[i] = &#x27;\0&#x27;;
+    printf(&quot;%s\n&quot;, result);
+}
+
+void concat_strcat(char str1[], char str2[])
+{
+    int size1 = strlen(str1);
+    int size2 = strlen(str2);
+    char result[size1 + size2 + 1];
+
+    result[0] = &#x27;\0&#x27;;
+    strcat(result, str1);
+    strcat(result, str2);
+
+    printf(&quot;%s\n&quot;, result);
+}
+
+int string_cmp(char *str1, char *str2)
+{
+    // written based on strcmp()
+    while (*str1 != &#x27;\0&#x27; &amp;&amp; (*str1 == *str2))
+    {
+        str1++;
+        str2++;
+    }
+    return (*str1 - *str2);
+}
+
+int string_len(char *str)
+{
+    char *end = str;
+    while (*end != &#x27;\0&#x27;)
+    {
+        end++;
+    }
+    return end - str;
+}
+
+void ltou(char str[])
+{
+    int i;
+    for (i = 0; str[i] != &#x27;\0&#x27;; i++)
+    {
+        printf(&quot;%c&quot;, toupper(str[i]));
+    }
+}
+
+void utol(char str[])
+{
+    int i;
+    for (i = 0; str[i] != &#x27;\0&#x27;; i++)
+    {
+        printf(&quot;%c&quot;, tolower(str[i]));
+    }
+}
+
+int vowel_count(char str[])
+{
+    int i, vowel = 0;
+    char character;
+    for (i = 0; str[i] != &#x27;\0&#x27;; i++)
+    {
+        character = tolower(str[i]);
+        if (character == &#x27;a&#x27; || character == &#x27;e&#x27; || character == &#x27;i&#x27; || character == &#x27;o&#x27; || character == &#x27;u&#x27;)
+        {
+            vowel++;
+        }
+    }
+    return vowel;
+}
+
+void reverse(char str[])
+{
+    int len = strlen(str);
+    char result[len + 1];
+    char *start = result;
+    char *end = result + len - 1;
+    char temp;
+
+    result[0] = &#x27;\0&#x27;;
+    strcat(result, str);
+
+    while (start &lt; end)
+    {
+        temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+    printf(&quot;%s\n&quot;, result);
 }</div>
         </div>
         
