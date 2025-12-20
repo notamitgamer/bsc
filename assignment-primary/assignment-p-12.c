@@ -39,6 +39,8 @@ maximum and minimum value among them. */
 #include <stdio.h>
 #include <stdlib.h>
 
+// use atoi()
+
 int main(int argc, char *argv[])
 {
     int current_val, max_val, min_val, i;
