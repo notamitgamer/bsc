@@ -3454,6 +3454,360 @@ void reverse(char str[])
 }</div>
         </div>
         
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-15-c', 'assignment-s-15.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-15.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-15.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-15.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-15-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a program to merge two sorted integer arrays to form a single sorted array. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void merge(int[], int, int[], int);
+
+int main()
+{
+    int a[] = {10, 30, 50, 70, 90};
+    int b[] = {20, 40, 60, 80, 100};
+    int n1 = sizeof(a) / sizeof(a[0]);
+    int n2 = sizeof(b) / sizeof(b[0]);
+    merge(a, n1, b, n2);
+    return 0;
+}
+
+void merge(int a[], int n1, int b[], int n2)
+{
+    int n = n1 + n2;
+    int *c = (int *)malloc(n * sizeof(int));
+    int i, j, k;
+    i = j = k = 0;
+    while (i &lt; n1 &amp;&amp; j &lt; n2)
+    {
+        if (a[i] &lt; b[j])
+        {
+            c[k++] = a[i++];
+        }
+        else
+        {
+            c[k++] = b[j++];
+        }
+    }
+    while (i &lt; n1)
+    {
+        c[k++] = a[i++];
+    }
+    while (j &lt; n2)
+    {
+        c[k++] = b[j++];
+    }
+    printf(&quot;Merged Array:&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %d&quot;, c[i]);
+    }
+    free(c);
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-16-c', 'assignment-s-16.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-16.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-16.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-16.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-16-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a program that reads 10 integers into an array (using pointers), and prints the
+array in ascending and descending order. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define true 1
+#define false 0
+
+void input_arr(int *, int);
+void print(int *, int);
+
+int main()
+{
+    int arr[10];
+    input_arr(arr, 10);
+    print(arr, 10);
+    return 0;
+}
+
+void input_arr(int *arr, int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, arr + i);
+    }
+}
+
+void print(int *arr, int n)
+{
+    int i, j, isSwaped = true, backup;
+    int *temp = (int *)malloc(n * sizeof(int));
+    if (temp == NULL)
+    {
+        printf(&quot;\nMemory Allocation Failed.&quot;);
+        return;
+    }
+    for (i = 0; i &lt; n; i++)
+    {
+        *(temp + i) = *(arr + i);
+    }
+    for (i = 0; i &lt; n - 1 &amp;&amp; isSwaped == true; i++)
+    {
+        isSwaped = false;
+        for (j = 0; j &lt; n - i - 1; j++)
+        {
+            if (*(temp + j) &gt; *(temp + j + 1))
+            {
+                backup = *(temp + j);
+                *(temp + j) = *(temp + j + 1);
+                *(temp + j + 1) = backup;
+                isSwaped = true;
+            }
+        }
+    }
+    printf(&quot;\nAscending Order:&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot; %d&quot;, *(temp + i));
+    }
+    printf(&quot;\nDescending Order:&quot;);
+    for (i = n - 1; i &gt;= 0; i--)
+    {
+        printf(&quot; %d&quot;, *(temp + i));
+    }
+    free(temp);
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-17-c', 'assignment-s-17.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-17.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-17.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-17.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-17-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a program to display the Fibonacci series
+    (i) using recursion
+    (ii) using iteration
+*/
+
+#include &lt;stdio.h&gt;
+
+long long int fib_rec(int);
+long long int fib_tail_rec(int, long long int, long long int);
+void fib_rec_print(int);
+void fib_ite_print(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number of terms: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    fib_rec_print(n);
+    fib_ite_print(n);
+    return 0;
+}
+
+long long int fib_rec(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }
+    else
+    {
+        return fib_rec(n - 1) + fib_rec(n - 2);
+    }
+}
+
+long long int fib_tail_rec(int n, long long int t1, long long int t2)
+{
+    if (n == 0)
+    {
+        return t1;
+    }
+    else if (n == 1)
+    {
+        return t2;
+    }
+    else
+    {
+        return fib_tail_rec(n - 1, t2, t1 + t2);
+    }
+}
+
+void fib_rec_print(int n)
+{
+    int i;
+    printf(&quot;\nFibonacci Series (Recursion):&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, fib_rec(i));
+    }
+    printf(&quot;\nFibonacci Series (Tail-Recursion):&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, fib_tail_rec(i, 0, 1));
+    }
+}
+
+void fib_ite_print(int n)
+{
+    int i;
+    long long int t1 = 0, t2 = 1, temp;
+    printf(&quot;\nFibonacci Series (Iteration):&quot;);
+    if (n &gt; 0)
+    {
+        printf(&quot;  0&quot;);
+    }
+    if (n &gt; 1)
+    {
+        printf(&quot;  1&quot;);
+    }
+    for (i = 2; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, t1 + t2);
+        temp = t1;
+        t1 = t2;
+        t2 = temp + t2;
+    }
+}</div>
+        </div>
+        
             </div>
         </div>
         
@@ -21427,6 +21781,105 @@ int isNiven(int num)
         temp /= 10;
     }
     return num % sum == 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-tuition-c-P064-c', 'P064.c', 'https://github.com/notamitgamer/bsc/blob/main/tuition-c/P064.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P064.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/tuition-c/P064.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-tuition-c-P064-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a program to merge two sorted integer arrays to form a single sorted array. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void merge(int[], int, int[], int);
+
+int main()
+{
+    int a[] = {10, 30, 50, 70, 90};
+    int b[] = {20, 40, 60, 80, 100};
+    int n1 = sizeof(a) / sizeof(a[0]);
+    int n2 = sizeof(b) / sizeof(b[0]);
+    merge(a, n1, b, n2);
+    return 0;
+}
+
+void merge(int a[], int n1, int b[], int n2)
+{
+    int n = n1 + n2;
+    int *c = (int *)malloc(n * sizeof(int));
+    int i, j, k;
+    i = j = k = 0;
+    while (i &lt; n1 &amp;&amp; j &lt; n2)
+    {
+        if (a[i] &lt; b[j])
+        {
+            c[k++] = a[i++];
+        }
+        else
+        {
+            c[k++] = b[j++];
+        }
+    }
+    while (i &lt; n1)
+    {
+        c[k++] = a[i++];
+    }
+    while (j &lt; n2)
+    {
+        c[k++] = b[j++];
+    }
+    printf(&quot;Merged Array:&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %d&quot;, c[i]);
+    }
+    free(c);
 }</div>
         </div>
         
