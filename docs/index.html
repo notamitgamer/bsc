@@ -3808,6 +3808,579 @@ void fib_ite_print(int n)
 }</div>
         </div>
         
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-18-c', 'assignment-s-18.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-18.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-18.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-18.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-18-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/*  Write a program to calculate the factorial of a number
+    (i) using recursion
+    (ii) using iteration
+*/
+
+#include &lt;stdio.h&gt;
+
+long long int fact_tail_rec(int, long long int);
+long long int fact_rec(int);
+long long int fact_ite(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n &lt; 0)
+    {
+        printf(&quot;\nFactorial of negetive number is not possible.&quot;);
+        return 1;
+    }
+    printf(&quot;\nFactorial of %d (Tail-Recursion) =  %lld&quot;, n, fact_tail_rec(n, 1));
+    printf(&quot;\nFactorial of %d (Recursion)      =  %lld&quot;, n, fact_rec(n));
+    printf(&quot;\nFactorial of %d (Iteration)      =  %lld&quot;, n, fact_ite(n));
+    return 0;
+}
+
+long long int fact_tail_rec(int n, long long int result)
+{
+    if (n == 0 || n == 1)
+    {
+        return result;
+    }
+    else
+    {
+        return fact_tail_rec(n - 1, n * result);
+    }
+}
+
+long long int fact_rec(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * fact_rec(n - 1);
+    }
+}
+
+long long int fact_ite(int n)
+{
+    int i;
+    long long int result = 1;
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    for (i = 2; i &lt;= n; i++)
+    {
+        result *= i;
+    }
+    return result;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-19-c', 'assignment-s-19.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-19.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-19.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-19.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-19-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * ======================================================================================
+ * Repository: https://github.com/notamitgamer
+ * Author    : Amit Dutta
+ * License   : EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)
+ * ======================================================================================
+ *
+ * [ IMPORTANT LEGAL NOTICE ]
+ *
+ * 1. PROPRIETARY STATUS:
+ * This software (&quot;The Software&quot;) is the intellectual property of Amit Dutta.
+ * It is NOT &quot;Open Source&quot; in the traditional sense. It is &quot;Source-Available&quot;
+ * for educational observation only.
+ *
+ * 2. ACADEMIC INTEGRITY &amp; RESTRICTION:
+ * The use of this code, in whole or in part, for the purpose of submitting
+ * academic assignments, projects, lab reports, or examinations at
+ * WEST BENGAL STATE UNIVERSITY (WBSU) or any other educational institution
+ * is STRICTLY PROHIBITED.
+ *
+ * &gt;&gt;&gt; VIOLATION OF THIS CLAUSE WILL BE REPORTED AS ACADEMIC MISCONDUCT. &lt;&lt;&lt;
+ *
+ * 3. PERMISSIONS:
+ * You are granted a revocable license to:
+ * - Read and study the code to understand algorithms.
+ * - Compile and run the code locally for personal testing.
+ *
+ * 4. NO WARRANTY:
+ * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND.
+ *
+ * ======================================================================================
+ */
+
+/* Write a program to calculate the GCD of two numbers
+    (i) using recursion
+    (ii) without recursion
+*/
+
+#include &lt;stdio.h&gt;
+
+int gcd_tail_rec(int, int);
+int gcd_rec(int, int);
+int gcd_ite(int, int);
+
+int main()
+{
+    int a, b;
+    printf(&quot;Enter two number: &quot;);
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    if (a &lt; 0)
+        a = -a;
+    if (b &lt; 0)
+        b = -b;
+    printf(&quot;\nGCD (Tail-Recursion) of %d and %d is = %d&quot;, a, b, gcd_tail_rec(a, b));
+    printf(&quot;\nGCD (Recursion) of %d and %d is      = %d&quot;, a, b, gcd_rec(a, b));
+    printf(&quot;\nGCD (Iteration) of %d and %d is      = %d&quot;, a, b, gcd_ite(a, b));
+    return 0;
+}
+
+int gcd_tail_rec(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return gcd_tail_rec(b, a % b);
+    }
+}
+
+int gcd_rec(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return gcd_rec(b, a % b);
+    }
+}
+
+int gcd_ite(int a, int b)
+{
+    int temp;
+    while (b &gt; 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-assignment-secondary-assignment-s-20-c', 'assignment-s-20.c', 'https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-20.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">assignment-s-20.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/assignment-secondary/assignment-s-20.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-assignment-secondary-assignment-s-20-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/*  Write a menu-driven program to perform the following matrix operations using 2-D
+    arrays and functions:
+        a. Sum
+        b. Difference
+        c. Product
+        d. Transpose
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define COL_MAX 10
+#define COL_MIN 0
+#define ROW_MAX 10
+#define ROW_MIN 0
+#define TRUE 1
+#define FALSE 0
+
+void input(int ***, int *, int *);
+void display(int **, int, int);
+void clear(int **, int);
+void sum(int **, int **, int, int);
+void difference(int **, int **, int, int);
+void product(int **, int **, int, int, int);
+void transpose(int **, int, int);
+
+int main()
+{
+    int **a = NULL, **b = NULL;
+    int rows_a, rows_b, cols_a, cols_b;
+    int choice;
+
+    while (TRUE)
+    {
+        printf(&quot;\n === MENU ===\n&quot;
+               &quot;1. Sum\n&quot;
+               &quot;2. Difference\n&quot;
+               &quot;3. Product\n&quot;
+               &quot;4. Transpose\n&quot;
+               &quot;0. Exit\n&quot;);
+        printf(&quot;\nEnter your choice: &quot;);
+        scanf(&quot;%d&quot;, &amp;choice);
+
+        switch (choice)
+        {
+        case 1:
+            input(&amp;a, &amp;rows_a, &amp;cols_a);
+            if (a == NULL)
+                break;
+
+            input(&amp;b, &amp;rows_b, &amp;cols_b);
+            if (b == NULL)
+            {
+                clear(a, rows_a);
+                a = NULL;
+                break;
+            }
+
+            printf(&quot;\nMatrix A = \n&quot;);
+            display(a, rows_a, cols_a);
+            printf(&quot;\nMatrix B = \n&quot;);
+            display(b, rows_b, cols_b);
+
+            if (rows_a != rows_b || cols_a != cols_b)
+            {
+                printf(&quot;\nOrder of both matrix should be same to calculate sum.&quot;);
+                printf(&quot;\nInput : Matrix A = [%d x %d]&quot;
+                       &quot;          Matrix B = [%d x %d]&quot;,
+                       rows_a, cols_a, rows_b, cols_b);
+
+                clear(a, rows_a);
+                clear(b, rows_b);
+                a = NULL;
+                b = NULL;
+                break;
+            }
+            printf(&quot;\nResult = \n&quot;);
+            sum(a, b, rows_a, cols_a);
+
+            clear(a, rows_a);
+            clear(b, rows_b);
+            a = NULL;
+            b = NULL;
+
+            break;
+
+        case 2:
+            input(&amp;a, &amp;rows_a, &amp;cols_a);
+            if (a == NULL)
+                break;
+
+            input(&amp;b, &amp;rows_b, &amp;cols_b);
+            if (b == NULL)
+            {
+                clear(a, rows_a);
+                a = NULL;
+                break;
+            }
+
+            printf(&quot;\nMatrix A = \n&quot;);
+            display(a, rows_a, cols_a);
+            printf(&quot;\nMatrix B = \n&quot;);
+            display(b, rows_b, cols_b);
+
+            if (rows_a != rows_b || cols_a != cols_b)
+            {
+                printf(&quot;\nOrder of both matrix should be same to calculate difference.&quot;);
+                printf(&quot;\nInput : Matrix A = [%d x %d]&quot;
+                       &quot;          Matrix B = [%d x %d]&quot;,
+                       rows_a, cols_a, rows_b, cols_b);
+
+                clear(a, rows_a);
+                clear(b, rows_b);
+                a = NULL;
+                b = NULL;
+                break;
+            }
+            printf(&quot;\nResult = \n&quot;);
+            difference(a, b, rows_a, cols_a);
+
+            clear(a, rows_a);
+            clear(b, rows_b);
+            a = NULL;
+            b = NULL;
+
+            break;
+
+        case 3:
+            input(&amp;a, &amp;rows_a, &amp;cols_a);
+            if (a == NULL)
+                break;
+
+            input(&amp;b, &amp;rows_b, &amp;cols_b);
+            if (b == NULL)
+            {
+                clear(a, rows_a);
+                a = NULL;
+                break;
+            }
+
+            printf(&quot;\nMatrix A = \n&quot;);
+            display(a, rows_a, cols_a);
+            printf(&quot;\nMatrix B = \n&quot;);
+            display(b, rows_b, cols_b);
+
+            if (cols_a != rows_b)
+            {
+                printf(&quot;\nColumn count of matrix A should be same as Row count of matrix B.&quot;);
+                printf(&quot;\nInput : Matrix A = [%d x %d]&quot;
+                       &quot;          Matrix B = [%d x %d]&quot;,
+                       rows_a, cols_a, rows_b, cols_b);
+
+                clear(a, rows_a);
+                clear(b, rows_b);
+                a = NULL;
+                b = NULL;
+                break;
+            }
+            printf(&quot;\nResult = \n&quot;);
+            product(a, b, rows_a, cols_b, cols_a);
+
+            clear(a, rows_a);
+            clear(b, rows_b);
+            a = NULL;
+            b = NULL;
+
+            break;
+
+        case 4:
+            input(&amp;a, &amp;rows_a, &amp;cols_a);
+            if (a == NULL)
+                break;
+
+            printf(&quot;\nMatrix = \n&quot;);
+            display(a, rows_a, cols_a);
+
+            printf(&quot;\nResult = \n&quot;);
+            transpose(a, rows_a, cols_a);
+
+            clear(a, rows_a);
+            a = NULL;
+
+            break;
+
+        case 0:
+            printf(&quot;\n\nExiting program...\n&quot;);
+            return 0;
+
+        default:
+            printf(&quot;\nInvalid choice. Please pick a choice from the menu.\n&quot;);
+        }
+    }
+}
+
+void input(int ***matrix, int *rows, int *cols)
+{
+    int i, j;
+    printf(&quot;\nEnter row and column count (Max : 10 x 10): &quot;);
+    scanf(&quot;%d %d&quot;, rows, cols);
+
+    if (*rows &gt; ROW_MAX || *cols &gt; COL_MAX || *rows &lt;= ROW_MIN || *cols &lt;= COL_MIN)
+    {
+        printf(&quot;\nInvalid dimensions. Limit is 1 to 10.\n&quot;);
+        *matrix = NULL;
+        return;
+    }
+
+    *matrix = (int **)malloc(*rows * sizeof(int *));
+
+    for (i = 0; i &lt; *rows; i++)
+    {
+        (*matrix)[i] = (int *)malloc(*cols * sizeof(int));
+        for (j = 0; j &lt; *cols; j++)
+        {
+            printf(&quot;Enter element [%d][%d]: &quot;, i + 1, j + 1);
+            scanf(&quot;%d&quot;, &amp;((*matrix)[i][j]));
+        }
+    }
+}
+
+void display(int **matrix, int rows, int cols)
+{
+    int i, j;
+    for (i = 0; i &lt; rows; i++)
+    {
+        for (j = 0; j &lt; cols; j++)
+        {
+            printf(&quot;%d &quot;, matrix[i][j]);
+        }
+        printf(&quot;\n&quot;);
+    }
+}
+
+void clear(int **matrix, int rows)
+{
+    int i;
+    for (i = 0; i &lt; rows; i++)
+    {
+        free(matrix[i]);
+    }
+    free(matrix);
+}
+
+void sum(int **a, int **b, int rows, int cols)
+{
+    int i, j;
+
+    int **r = (int **)malloc(rows * sizeof(int *));
+    for (i = 0; i &lt; rows; i++)
+    {
+        r[i] = (int *)malloc(cols * sizeof(int));
+        for (j = 0; j &lt; cols; j++)
+        {
+            r[i][j] = a[i][j] + b[i][j];
+        }
+    }
+    display(r, rows, cols);
+    clear(r, rows);
+}
+
+void difference(int **a, int **b, int rows, int cols)
+{
+    int i, j;
+
+    int **r = (int **)malloc(rows * sizeof(int *));
+    for (i = 0; i &lt; rows; i++)
+    {
+        r[i] = (int *)malloc(cols * sizeof(int));
+        for (j = 0; j &lt; cols; j++)
+        {
+            r[i][j] = a[i][j] - b[i][j];
+        }
+    }
+    display(r, rows, cols);
+    clear(r, rows);
+}
+
+void product(int **a, int **b, int rows_a, int cols_b, int common)
+{
+    int i, x, y, z, temp;
+
+    int **r = (int **)malloc(rows_a * sizeof(int *));
+    for (i = 0; i &lt; rows_a; i++)
+    {
+        r[i] = (int *)malloc(cols_b * sizeof(int));
+    }
+
+    for (x = 0; x &lt; rows_a; x++)
+    {
+        for (y = 0; y &lt; cols_b; y++)
+        {
+            temp = 0;
+            for (z = 0; z &lt; common; z++)
+            {
+                temp += a[x][z] * b[z][y];
+            }
+            r[x][y] = temp;
+        }
+    }
+    display(r, rows_a, cols_b);
+    clear(r, rows_a);
+}
+
+void transpose(int **matrix, int rows, int cols)
+{
+    int i, j;
+
+    int **r = (int **)malloc(cols * sizeof(int *));
+    for (i = 0; i &lt; cols; i++)
+    {
+        r[i] = (int *)malloc(rows * sizeof(int));
+        for (j = 0; j &lt; rows; j++)
+        {
+            r[i][j] = matrix[j][i];
+        }
+    }
+    display(r, cols, rows);
+    clear(r, cols);
+}</div>
+        </div>
+        
             </div>
         </div>
         
