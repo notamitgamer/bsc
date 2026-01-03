@@ -3948,6 +3948,1631 @@ int main() {
                 <svg class="folder-icon w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                 </svg>
+                <span class="font-medium text-slate-700 group-hover:text-blue-600 transition-colors">internal-practice</span>
+            </div>
+            <div class="hidden pl-4 mt-1 border-l-2 border-slate-100 ml-3.5">
+                
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-01-c', 'IP-01.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-01.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-01.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-01.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-01-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to compute the sum and product of digits of an integer using user
+defined functions. */
+
+#include &lt;stdio.h&gt;
+
+int sum_of_digits(int);
+int product_of_digits(int);
+
+int main()
+{
+    int num;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    printf(&quot;\nSum of digits of %d = %d&quot;, num, sum_of_digits(num));
+    printf(&quot;\nProduct of digits of %d = %d&quot;, num, product_of_digits(num));
+    return 0;
+}
+
+int sum_of_digits(int num)
+{
+    int sum = 0;
+    while (num &gt; 0)
+    {
+        sum += num % 10;
+        num /= 10;
+    }
+    return sum;
+}
+
+int product_of_digits(int num)
+{
+    int product = 1;
+    while (num &gt; 0)
+    {
+        product *= num % 10;
+        num /= 10;
+    }
+    return product;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-02-c', 'IP-02.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-02.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-02.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-02.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-02-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to reverse a non-negative integer using a function. */
+
+#include &lt;stdio.h&gt;
+
+int reverse(int);
+
+int main()
+{
+    int num;
+    printf(&quot;Enter a non-negetive integer: &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    if (num &lt; 0)
+    {
+        printf(&quot;\nOnly non-negetive integers are allowed.&quot;);
+        return 1;
+    }
+    printf(&quot;\nReverse of the integer %d = %d&quot;, num, reverse(num));
+    return 0;
+}
+
+int reverse(int num)
+{
+    int rev = 0;
+    while (num &gt; 0)
+    {
+        rev = (rev * 10) + (num % 10);
+        num /= 10;
+    }
+    return rev;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-03-c', 'IP-03.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-03.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-03.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-03.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-03-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to compute the sum of the first n terms of the series using a function:
+S=1−2+3−4+5−6+…  */
+
+#include &lt;stdio.h&gt;
+
+int sum_of_series(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the n: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    printf(&quot;\nSum of the first %d terms of the series = %d&quot;, n, sum_of_series(n));
+    return 0;
+}
+
+int sum_of_series(int n)
+{
+    int sum = 0;
+    int i;
+    for (i = 1; i &lt;= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            sum -= i;
+        }
+        else
+        {
+            sum += i;
+        }
+    }
+    return sum;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-04-c', 'IP-04.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-04.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-04.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-04.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-04-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a function to check whether a number is prime or not. Use the same function to
+generate all prime numbers less than 100. */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int isPrime(int);
+
+int main()
+{
+    int n, i;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (isPrime(n))
+    {
+        printf(&quot;\nInput %d is a Prime Number.&quot;, n);
+    }
+    else
+    {
+        printf(&quot;\nInput %d is not a Prime Number.&quot;, n);
+    }
+    printf(&quot;\nPrime Numbers less than 100:&quot;);
+    for (i = 1; i &lt; 100; i++)
+    {
+        if (isPrime(i))
+        {
+            printf(&quot;  %d&quot;, i);
+        }
+    }
+    return 0;
+}
+
+int isPrime(int n)
+{
+    if (n &lt;= 1)
+        return 0;
+    if (n == 2)
+        return 1;
+    if (n % 2 == 0)
+        return 0;
+
+    int temp = (int)sqrt(n);
+    int i;
+    for (i = 3; i &lt;= temp; i += 2)
+    {
+        if (n % i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-05-c', 'IP-05.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-05.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-05.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-05.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-05-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a function to check whether a given string is a palindrome. Use this function to
+determine whether an entered string is Palindrome. */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int isPalindrome(char[]);
+
+int main()
+{
+    char input[100];
+    int len;
+
+    printf(&quot;Enter the string (Max: 100 Character): &quot;);
+    fgets(input, sizeof(input), stdin);
+    len = strlen(input);
+
+    if (len &gt; 0 &amp;&amp; input[len - 1] == &#x27;\n&#x27;)
+    {
+        input[len - 1] = &#x27;\0&#x27;;
+    }
+
+    if (isPalindrome(input))
+    {
+        printf(&quot;\nInput string \&quot;%s\&quot; is Palindrome.&quot;, input);
+    }
+    else
+    {
+        printf(&quot;\nInput string \&quot;%s\&quot; is not Palindrome&quot;, input);
+    }
+
+    return 0;
+}
+
+int isPalindrome(char str[])
+{
+    char *start = str;
+    char *end;
+    int len = strlen(str);
+
+    if (len == 0)
+    {
+        return 1;
+    }
+
+    end = str + (len - 1);
+
+    while (start &lt; end)
+    {
+        if (*start != *end)
+        {
+            return 0;
+        }
+        start++;
+        end--;
+    }
+    
+    return 1;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-06-c', 'IP-06.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-06.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-06.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-06.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-06-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program using a function to compute and display all factors of a given number. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void display_factors(int);
+
+int main()
+{
+    int num, i;
+    printf(&quot;Please enter the number to get the factors from it : &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    display_factors(num);
+    return 0;
+}
+
+void display_factors(int num) {
+    int temp = abs(num);
+    int i;
+
+    if (temp == 0)
+    {
+        printf(&quot;\n0 has infinitely many factors (all integers).&quot;);
+        exit(1);
+    }
+
+    printf(&quot;\nThe factors of &#x27; %d &#x27; is :- &quot;, num);
+    printf(&quot;\nPositive : &quot;);
+    for (i = 1; i &lt;= temp; i++)
+        if (temp % i == 0)
+            printf(&quot;  %d&quot;, i);
+    printf(&quot;\nNegative : &quot;);
+    for (i = 1; i &lt;= temp; i++)
+        if (temp % i == 0)
+            printf(&quot;  %d&quot;, -i);
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-07-c', 'IP-07.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-07.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-07.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-07.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-07-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to swap two numbers using pointers (user-defined function). */
+
+#include &lt;stdio.h&gt;
+
+void swap(int *, int *);
+
+int main()
+{
+    int a, b;
+    printf(&quot;Enter value for a and b: &quot;);
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    printf(&quot;\nBefore Swap: &quot;);
+    printf(&quot;\na = %d,\tAddress: %u&quot;, a, &amp;a);
+    printf(&quot;\nb = %d,\tAddress: %u&quot;, b, &amp;b);
+    swap(&amp;a, &amp;b);
+    printf(&quot;\nAfter Swap: &quot;);
+    printf(&quot;\na = %d,\tAddress: %u&quot;, a, &amp;a);
+    printf(&quot;\nb = %d,\tAddress: %u&quot;, b, &amp;b);
+    return 0;
+}
+
+void swap(int *a, int *b)
+{
+    *a = *a ^ *b;
+    *b = *a ^ *b;
+    *a = *a ^ *b;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-08-c', 'IP-08.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-08.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-08.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-08.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-08-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program that takes the radius of a circle as input, passes it to a function that
+computes area and circumference, and displays results in main(). */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+void area_circumference(double, double *, double *);
+
+int main()
+{
+    double r, area, circumference;
+    printf(&quot;Enter the radius of the circle: &quot;);
+    scanf(&quot;%lf&quot;, &amp;r);
+    area_circumference(r, &amp;area, &amp;circumference);
+    printf(&quot;\nArea of the circle = %g&quot;, area);
+    printf(&quot;\nCircumference of the circle = %g&quot;, circumference);
+    return 0;
+}
+
+void area_circumference(double r, double *area, double *circumference)
+{
+    *area = M_PI * r * r;
+    *circumference = 2 * M_PI * r;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-09-c', 'IP-09.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-09.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-09.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-09.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-09-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to find the sum of n elements entered by the user. Use dynamic
+memory allocation (malloc() or calloc()). */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void inputarr(int[], int);
+int sum_elem(int[], int);
+
+int main()
+{
+    int n, *arr;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    arr = (int *)malloc(n * sizeof(int));
+    inputarr(arr, n);
+    printf(&quot;\nSum of the %d element(s) = %d&quot;, n, sum_elem(arr, n));
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int sum_elem(int arr[], int n)
+{
+    int i, sum = 0;
+    for (i = 0; i &lt; n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-10-c', 'IP-10.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-10.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-10.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-10.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-10-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a function that reverses the elements of an array in place, using only a single
+pointer argument, and return void. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void inputarr(int[], int);
+void display(int[], int);
+void reverse(int *);
+
+int main()
+{
+    int size, *arr;
+    printf(&quot;How many element do you want to add: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    arr = (int *)malloc((size + 1) * sizeof(int));
+    inputarr(arr, size);
+    printf(&quot;\n=== Before Reverse ===\n&quot;);
+    display(arr, size);
+    reverse(arr);
+    printf(&quot;\n\n=== After Reverse ===\n&quot;);
+    display(arr, size);
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    arr[0] = n;
+    for (i = 1; i &lt;= n; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+void display(int arr[], int n)
+{
+    int i;
+    for (i = 1; i &lt;= n; i++)
+    {
+        printf(&quot;\nIndex: %-2d | Value: %-5d | Address: %p&quot;, i, arr[i], (void *)&amp;arr[i]);
+    }
+}
+
+void reverse(int *arr)
+{
+    int *start = arr + 1;
+    int size = *arr;
+    int *end = arr + size;
+    while (start &lt; end)
+    {
+        *start = *start ^ *end;
+        *end = *start ^ *end;
+        *start = *start ^ *end;
+        start++;
+        end--;
+    }
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-11-c', 'IP-11.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-11.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-11.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-11.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-11-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to merge two sorted integer arrays to form a single sorted array. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void merge(int[], int, int[], int);
+
+int main()
+{
+    int a[] = {10, 30, 50, 70, 90};
+    int b[] = {20, 40, 60, 80, 100};
+    int n1 = sizeof(a) / sizeof(a[0]);
+    int n2 = sizeof(b) / sizeof(b[0]);
+    merge(a, n1, b, n2);
+    return 0;
+}
+
+void merge(int a[], int n1, int b[], int n2)
+{
+    int n = n1 + n2;
+    int *c = (int *)malloc(n * sizeof(int));
+    int i, j, k;
+    i = j = k = 0;
+    while (i &lt; n1 &amp;&amp; j &lt; n2)
+    {
+        if (a[i] &lt; b[j])
+        {
+            c[k++] = a[i++];
+        }
+        else
+        {
+            c[k++] = b[j++];
+        }
+    }
+    while (i &lt; n1)
+    {
+        c[k++] = a[i++];
+    }
+    while (j &lt; n2)
+    {
+        c[k++] = b[j++];
+    }
+    printf(&quot;Merged Array:&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %d&quot;, c[i]);
+    }
+    free(c);
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-12-c', 'IP-12.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-12.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-12.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-12.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-12-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program that reads 10 integers into an array (using pointers), and prints the
+array in ascending and descending order. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define true 1
+#define false 0
+
+void input_arr(int *, int);
+void print(int *, int);
+
+int main()
+{
+    int arr[10];
+    input_arr(arr, 10);
+    print(arr, 10);
+    return 0;
+}
+
+void input_arr(int *arr, int n)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, arr + i);
+    }
+}
+
+void print(int *arr, int n)
+{
+    int i, j, isSwaped = true, backup;
+    int *temp = (int *)malloc(n * sizeof(int));
+    if (temp == NULL)
+    {
+        printf(&quot;\nMemory Allocation Failed.&quot;);
+        return;
+    }
+    for (i = 0; i &lt; n; i++)
+    {
+        *(temp + i) = *(arr + i);
+    }
+    for (i = 0; i &lt; n - 1 &amp;&amp; isSwaped == true; i++)
+    {
+        isSwaped = false;
+        for (j = 0; j &lt; n - i - 1; j++)
+        {
+            if (*(temp + j) &gt; *(temp + j + 1))
+            {
+                backup = *(temp + j);
+                *(temp + j) = *(temp + j + 1);
+                *(temp + j + 1) = backup;
+                isSwaped = true;
+            }
+        }
+    }
+    printf(&quot;\nAscending Order:&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot; %d&quot;, *(temp + i));
+    }
+    printf(&quot;\nDescending Order:&quot;);
+    for (i = n - 1; i &gt;= 0; i--)
+    {
+        printf(&quot; %d&quot;, *(temp + i));
+    }
+    free(temp);
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-13-c', 'IP-13.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-13.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-13.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-13.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-13-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to display the Fibonacci series
+    (i) using recursion
+    (ii) using iteration
+*/
+
+#include &lt;stdio.h&gt;
+
+long long int fib_rec(int);
+long long int fib_tail_rec(int, long long int, long long int);
+void fib_rec_print(int);
+void fib_ite_print(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number of terms: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    fib_rec_print(n);
+    fib_ite_print(n);
+    return 0;
+}
+
+long long int fib_rec(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }
+    else
+    {
+        return fib_rec(n - 1) + fib_rec(n - 2);
+    }
+}
+
+long long int fib_tail_rec(int n, long long int t1, long long int t2)
+{
+    if (n == 0)
+    {
+        return t1;
+    }
+    else if (n == 1)
+    {
+        return t2;
+    }
+    else
+    {
+        return fib_tail_rec(n - 1, t2, t1 + t2);
+    }
+}
+
+void fib_rec_print(int n)
+{
+    int i;
+    printf(&quot;\nFibonacci Series (Recursion):&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, fib_rec(i));
+    }
+    printf(&quot;\nFibonacci Series (Tail-Recursion):&quot;);
+    for (i = 0; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, fib_tail_rec(i, 0, 1));
+    }
+}
+
+void fib_ite_print(int n)
+{
+    int i;
+    long long int t1 = 0, t2 = 1, temp;
+    printf(&quot;\nFibonacci Series (Iteration):&quot;);
+    if (n &gt; 0)
+    {
+        printf(&quot;  0&quot;);
+    }
+    if (n &gt; 1)
+    {
+        printf(&quot;  1&quot;);
+    }
+    for (i = 2; i &lt; n; i++)
+    {
+        printf(&quot;  %lld&quot;, t1 + t2);
+        temp = t1;
+        t1 = t2;
+        t2 = temp + t2;
+    }
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-14-c', 'IP-14.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-14.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-14.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-14.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-14-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/*  Write a program to calculate the factorial of a number
+    (i) using recursion
+    (ii) using iteration
+*/
+
+#include &lt;stdio.h&gt;
+
+long long int fact_tail_rec(int, long long int);
+long long int fact_rec(int);
+long long int fact_ite(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n &lt; 0)
+    {
+        printf(&quot;\nFactorial of negetive number is not possible.&quot;);
+        return 1;
+    }
+    printf(&quot;\nFactorial of %d (Tail-Recursion) =  %lld&quot;, n, fact_tail_rec(n, 1));
+    printf(&quot;\nFactorial of %d (Recursion)      =  %lld&quot;, n, fact_rec(n));
+    printf(&quot;\nFactorial of %d (Iteration)      =  %lld&quot;, n, fact_ite(n));
+    return 0;
+}
+
+long long int fact_tail_rec(int n, long long int result)
+{
+    if (n == 0 || n == 1)
+    {
+        return result;
+    }
+    else
+    {
+        return fact_tail_rec(n - 1, n * result);
+    }
+}
+
+long long int fact_rec(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * fact_rec(n - 1);
+    }
+}
+
+long long int fact_ite(int n)
+{
+    int i;
+    long long int result = 1;
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    for (i = 2; i &lt;= n; i++)
+    {
+        result *= i;
+    }
+    return result;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-15-c', 'IP-15.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-15.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-15.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-15.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-15-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-secondary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to calculate the GCD of two numbers
+    (i) using recursion
+    (ii) without recursion
+*/
+
+#include &lt;stdio.h&gt;
+
+int gcd_tail_rec(int, int);
+int gcd_rec(int, int);
+int gcd_ite(int, int);
+
+int main()
+{
+    int a, b;
+    printf(&quot;Enter two number: &quot;);
+    scanf(&quot;%d %d&quot;, &amp;a, &amp;b);
+    if (a &lt; 0)
+        a = -a;
+    if (b &lt; 0)
+        b = -b;
+    printf(&quot;\nGCD (Tail-Recursion) of %d and %d is = %d&quot;, a, b, gcd_tail_rec(a, b));
+    printf(&quot;\nGCD (Recursion) of %d and %d is      = %d&quot;, a, b, gcd_rec(a, b));
+    printf(&quot;\nGCD (Iteration) of %d and %d is      = %d&quot;, a, b, gcd_ite(a, b));
+    return 0;
+}
+
+int gcd_tail_rec(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return gcd_tail_rec(b, a % b);
+    }
+}
+
+int gcd_rec(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return gcd_rec(b, a % b);
+    }
+}
+
+int gcd_ite(int a, int b)
+{
+    int temp;
+    while (b &gt; 0)
+    {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-16-c', 'IP-16.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-16.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-16.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-16.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-16-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-primary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a C program that includes a user-defined function named isArmstrong with the 
+signature int isArmstrong(int num);. An Armstrong number is a number that is equal to 
+the sum of its own digits each raised to the power of the number of digits. For example, 
+153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153 */
+
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int isArmstrong(int);
+int count(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+
+    if (isArmstrong(n))
+    {
+        printf(&quot;\nInput %d is a Armstrong Number.&quot;, n);
+    }
+    else
+    {
+        printf(&quot;\nInput %d is Not a Armstrong Number.&quot;, n);
+    }
+
+    return 0;
+}
+
+int count(int n)
+{
+    int count = 0;
+    while (n &gt; 0)
+    {
+        count++;
+        n = n / 10;
+    }
+    return count;
+}
+
+int isArmstrong(int n)
+{
+    if (n &lt; 0)
+        return 0; 
+    if (n == 0)
+        return 1;
+
+    int power = count(n);
+    int temp = n;
+    int checker = 0;
+
+    while (temp &gt; 0)
+    {
+        int digit = temp % 10;
+        checker = checker + (int)round(pow(digit, power));
+        temp = temp / 10;
+    }
+    return n == checker;
+}
+</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-17-c', 'IP-17.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-17.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-17.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-17.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-17-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-primary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a C program that includes a user-defined function named isPerfect with the signature 
+int isPerfect(int num);. A perfect number is a positive integer that is equal to the sum of 
+its proper divisors, excluding itself. For example, 28 is a perfect number because the sum 
+of its divisors (1, 2, 4, 7, 14) equals 28. */
+
+#include &lt;stdio.h&gt;
+
+int isPerfect(int);
+
+int main()
+{
+    int n;
+    printf(&quot;Enter the number: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    if (isPerfect(n))
+    {
+        printf(&quot;\nInput %d is a Perfect Number.&quot;, n);
+    }
+    else
+    {
+        printf(&quot;\nInput %d is not a Perfect Number.&quot;, n);
+    }
+    return 0;
+}
+
+int isPerfect(int n)
+{
+    if (n &lt;= 1)
+        return 0;
+    int temp = 1;
+    int i;
+    for (i = 2; i &lt;= n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            temp += i;
+        }
+    }
+    return temp == n;
+}
+</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-18-c', 'IP-18.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-18.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-18.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-18.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-18-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-primary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a C program that includes a user-defined function named findLargest with the
+signature int findLargest(int arr[], int size);. The function should take an array of integers
+and its size, and return the largest element in the array. */
+
+#include &lt;stdio.h&gt;
+
+void inputArray(int[], int);
+int findLargest(int[], int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    inputArray(arr, size);
+    printf(&quot;\nLargest Element is: %d&quot;, findLargest(arr, size));
+    return 0;
+}
+
+void inputArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+int findLargest(int arr[], int size)
+{
+    int largest = arr[0], i;
+    for (i = 1; i &lt; size; i++)
+    {
+        if (largest &lt; arr[i])
+        {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-19-c', 'IP-19.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-19.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-19.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-19.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-19-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-primary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a C program that includes a user-defined function named binarySearch with the
+signature int binarySearch(int arr[], int size, int target);. The function should perform a
+binary search on a sorted array of integers and return the index of the target element if
+found, and -1 otherwise. */
+
+#include &lt;stdio.h&gt;
+
+int inputArray(int[], int);
+// void sortArray(int[], int);
+int binarySearch(int[], int, int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to enter: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    int target = inputArray(arr, size);
+    // sortArray(arr, size); // If needed
+    int index = binarySearch(arr, size, target);
+    if (index != -1)
+    {
+        printf(&quot;\nElement %d is found at index %d.&quot;, target, index);
+    }
+    else
+    {
+        printf(&quot;\nElement %d is not found.&quot;, target);
+    }
+    return 0;
+}
+
+int inputArray(int arr[], int size)
+{
+    int i, target;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element for position %d: &quot;, i);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+    printf(&quot;\nEnter the target element: &quot;);
+    scanf(&quot;%d&quot;, &amp;target);
+    return target;
+}
+
+/* void sortArray(int arr[], int size)
+{    
+    // using Bubble Sort...
+
+    int tempArr[size], i, j, temp;
+    printf(&quot;\nBefore Sorting:\n[&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;%d&quot;, arr[i]);
+        if (i != size - 1)
+        {
+            printf(&quot;, &quot;);
+        }
+    }
+    printf(&quot;]\n&quot;);
+    for (i = 0; i &lt; size - 1; i++)
+    {
+        for (j = 0; j &lt; size - i - 1; j++)
+        {
+            if (arr[j] &gt; arr[j + 1])
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    printf(&quot;\nAfter Sorting:\n[&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;%d&quot;, arr[i]);
+        if (i != size - 1)
+        {
+            printf(&quot;, &quot;);
+        }
+    }
+    printf(&quot;]\n&quot;);
+}
+*/
+
+int binarySearch(int arr[], int size, int target)
+{
+    int low = 0;
+    int high = size - 1;
+    int mid;
+    while (low &lt;= high)
+    {
+        mid = low + ((high - low) / 2);
+        if (arr[mid] == target)
+        {
+            return mid;
+        }
+        else if (arr[mid] &gt; target)
+        {
+            high = mid - 1;
+        }
+        else if (arr[mid] &lt; target)
+        {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-internal-practice-IP-20-c', 'IP-20.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-20.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">IP-20.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/internal-practice/IP-20.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-internal-practice-IP-20-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc/tree/main/assignment-primary
+ * License    : ESAL-1.0 ( https://aranag.site/license )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a C program that defines an array of integers, and includes a user-defined function
+named reverseArray with the signature void reverseArray(int arr[], int size);. The function
+should reverse the elements of the array. */
+
+#include &lt;stdio.h&gt;
+
+void inputArray(int[], int);
+void reverseArray(int[], int);
+
+int main()
+{
+    int size;
+    printf(&quot;How many element do you want to add: &quot;);
+    scanf(&quot;%d&quot;, &amp;size);
+    int arr[size];
+    inputArray(arr, size);
+    reverseArray(arr, size);
+    return 0;
+}
+
+void inputArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Enter element %d: &quot;, i + 1);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    }
+}
+
+void reverseArray(int arr[], int size)
+{
+    int i, j, temp;
+    printf(&quot;\nBefore Reverse: \n&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Position: %d, Value: %d\n&quot;, i, arr[i]);
+    }
+    for (i = 0, j = size - 1; i &lt; j; i++, j--)
+    {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    printf(&quot;\nAfter Reverse: \n&quot;);
+    for (i = 0; i &lt; size; i++)
+    {
+        printf(&quot;Position: %d, Value: %d\n&quot;, i, arr[i]);
+    }
+}</div>
+        </div>
+        
+            </div>
+        </div>
+        
+        <div class="folder-container mb-2">
+            <div class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-slate-100 rounded-lg transition-colors group select-none" onclick="toggleFolder(this)">
+                <svg class="chevron w-4 h-4 text-slate-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+                <svg class="folder-icon w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                </svg>
                 <span class="font-medium text-slate-700 group-hover:text-blue-600 transition-colors">khurapati-idea</span>
             </div>
             <div class="hidden pl-4 mt-1 border-l-2 border-slate-100 ml-3.5">
