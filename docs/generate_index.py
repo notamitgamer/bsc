@@ -13,7 +13,7 @@ EXCLUDED_FILES = [
     'index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'SOCIAL_PREVIEW.md',
     'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html', 
     'generate_index.py', 'header.py', 'add_header.py',
-    'Assignment.pdf', 'Assignment.docx', 'Mondira_Mondal.docx', 'Mondira_Mondal.pdf', 'tester.c'
+    'Assignment.pdf', 'Assignment.docx', 'git_automation.py', 'tester.c'
 ]
 # --- End Configuration ---
 

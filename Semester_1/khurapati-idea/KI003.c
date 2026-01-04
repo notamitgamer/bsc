@@ -2,7 +2,7 @@
  * ======================================================================================
  * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
  * Repository : https://github.com/notamitgamer/bsc
- * License    : ESAL-1.0 ( https://aranag.site/license )
+ * License    : ESAL-1.0 ( https://amit.is-a.dev/license )
  * ======================================================================================
  * [ ACADEMIC INTEGRITY WARNING ]
  * The use of this code for academic assignments at ANY educational institution,
