@@ -1,6 +1,7 @@
 import os
 import subprocess
 import shutil
+import stat
 from datetime import datetime
 
 # --- CONFIGURATION PATHS ---
@@ -17,20 +18,62 @@ ARANAG_PRESERVE = [
     "README.md",
     "sitemap.xml",
     ".firebase",
-    ".git" # Always preserve .git in a repo!
+    ".git" # CRITICAL: Always preserve .git!
 ]
+
+def remove_readonly(func, path, exc_info):
+    """
+    Error handler for shutil.rmtree.
+    Unlocks read-only files (like .git objects) so they can be deleted.
+    """
+    try:
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+    except Exception as e:
+        print(f"Failed to force delete {path}: {e}")
 
 def run_generate_index():
     print("\n--- Step 1: Generating Index HTML ---")
+    
+    index_path = os.path.join(BSC_REPO_ROOT, "docs", "index.html")
+    old_content = ""
+    
+    # 1. Read existing content if file exists
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, 'r', encoding='utf-8') as f:
+                old_content = f.read()
+        except Exception:
+            pass # Treat as empty if read fails
+
+    # 2. Run the generation script
     if os.path.exists(GENERATE_INDEX_SCRIPT):
         try:
-            # Running the script as a separate process
             subprocess.run(["python", GENERATE_INDEX_SCRIPT], check=True)
             print("[Success] Index generation script executed.")
         except subprocess.CalledProcessError:
             print("[Error] Failed to run generate_index.py")
+            return False
     else:
         print(f"[Error] Script not found at: {GENERATE_INDEX_SCRIPT}")
+        return False
+
+    # 3. Read new content
+    new_content = ""
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, 'r', encoding='utf-8') as f:
+                new_content = f.read()
+        except Exception:
+            pass
+
+    # 4. Compare
+    if old_content != new_content:
+        print("[Info] Changes detected in index.html.")
+        return True
+    else:
+        print("[Info] No changes detected in index.html.")
+        return False
 
 def git_workflow_bsc():
     print("\n--- Step 2: Git Push (Primary Repo: bsc) ---")
@@ -102,7 +145,6 @@ def deploy_firebase():
     os.chdir(ARANAG_SITE_DESKTOP)
     print(f"Deploying from: {ARANAG_SITE_DESKTOP}")
     try:
-        # shell=True is often needed for firebase commands on Windows to find the executable
         subprocess.run("firebase deploy --only hosting", shell=True, check=True)
         print("[Success] Firebase deployment complete.")
     except subprocess.CalledProcessError:
@@ -111,15 +153,14 @@ def deploy_firebase():
 def sync_bsc_local():
     print("\n--- Step 4: Syncing to G:\\bsc_local ---")
     try:
-        # Delete existing content
+        # Force Delete using the remove_readonly handler
         if os.path.exists(BSC_LOCAL_BACKUP):
             print(f"Cleaning {BSC_LOCAL_BACKUP}...")
-            # rmtree can sometimes fail on Windows due to read-only files, loop to retry if needed
-            shutil.rmtree(BSC_LOCAL_BACKUP, ignore_errors=True)
+            shutil.rmtree(BSC_LOCAL_BACKUP, onerror=remove_readonly)
         
         # Copy fresh content
         print(f"Copying from {BSC_REPO_ROOT} to {BSC_LOCAL_BACKUP}...")
-        shutil.copytree(BSC_REPO_ROOT, BSC_LOCAL_BACKUP, dirs_exist_ok=True)
+        shutil.copytree(BSC_REPO_ROOT, BSC_LOCAL_BACKUP)
         print("[Success] bsc_local synced.")
     except Exception as e:
         print(f"[Error] Sync failed: {e}")
@@ -140,7 +181,7 @@ def update_and_push_aranag():
         item_path = os.path.join(ARANAG_REPO_ROOT, item)
         try:
             if os.path.isdir(item_path):
-                shutil.rmtree(item_path)
+                shutil.rmtree(item_path, onerror=remove_readonly)
             else:
                 os.remove(item_path)
         except Exception as e:
@@ -149,7 +190,6 @@ def update_and_push_aranag():
     # 2. Copy from Desktop site to G:\aranag
     print(f"Copying from {ARANAG_SITE_DESKTOP} to {ARANAG_REPO_ROOT}...")
     try:
-        # dirs_exist_ok=True allows copying into existing folder structure
         shutil.copytree(ARANAG_SITE_DESKTOP, ARANAG_REPO_ROOT, dirs_exist_ok=True)
     except Exception as e:
         print(f"[Error] Copy failed: {e}")
@@ -162,7 +202,6 @@ def update_and_push_aranag():
     try:
         subprocess.run(["git", "add", "."], check=True)
         
-        # Check if there are changes
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if status.stdout.strip():
             commit_msg = f"Automated Update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
@@ -178,11 +217,26 @@ def update_and_push_aranag():
 def main():
     print("=== STARTING AUTOMATION PIPELINE ===")
     
-    run_generate_index()
+    # 1. Generate Index & Check for changes
+    index_changed = run_generate_index()
+
+    # 2. Always run the main repo Git workflow
     git_workflow_bsc()
-    deploy_firebase()
+
+    if index_changed:
+        # 3. Deploy to Firebase only if index changed
+        deploy_firebase()
+    else:
+        print("\n[Skip] Index unchanged. Skipping Firebase deploy.")
+
+    # 4. Always sync the local backup
     sync_bsc_local()
-    update_and_push_aranag()
+
+    if index_changed:
+        # 5. Update Aranag repo only if index changed
+        update_and_push_aranag()
+    else:
+        print("\n[Skip] Index unchanged. Skipping G:\\aranag update.")
     
     print("\n=== PIPELINE FINISHED ===")
 
