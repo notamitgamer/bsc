@@ -158,7 +158,23 @@ def git_workflow_bsc():
         print("[Info] No changes detected in 'bsc'. Skipping commit/push.")
         return
 
-    changed_dirs = [os.path.dirname(f.replace('/', os.sep)) for f in changed_files]
+    # 1. Filter out docs/index.html (it's auto-generated)
+    relevant_files = [f for f in changed_files if "docs/index.html" not in f.replace('\\', '/')]
+
+    # 2. Separate "docs" files from "source code" files
+    # We check if a file starts with "docs/"
+    non_docs_files = [f for f in relevant_files if not f.replace('\\', '/').startswith('docs/')]
+
+    # 3. Decision Logic:
+    # If we have non-docs changes (like Semester_1/code.c), we prioritize those paths.
+    # We ignore 'docs/' changes in the path calculation so it doesn't default to Root.
+    if non_docs_files:
+        files_to_check = non_docs_files
+    else:
+        # If ONLY docs changed (or only index.html changed), use whatever we have
+        files_to_check = relevant_files if relevant_files else changed_files
+
+    changed_dirs = [os.path.dirname(f.replace('/', os.sep)) for f in files_to_check]
     
     if not changed_dirs:
         common_path = ""
