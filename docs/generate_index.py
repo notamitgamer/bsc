@@ -6,7 +6,7 @@ import html
 REPO_URL = "https://github.com/notamitgamer/bsc"
 
 # List of directories to exclude from the list.
-EXCLUDED_DIRS = ['.git', '.github', '.vscode', 'MinGW64', 'print', 'docs', '__pycache__']
+EXCLUDED_DIRS = ['.git', '.github', '.vscode', 'MinGW64', 'print', 'docs', '__pycache__', 'practice-c']
 
 # List of files to exclude from the list.
 EXCLUDED_FILES = [
