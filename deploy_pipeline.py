@@ -2,35 +2,93 @@ import os
 import subprocess
 import shutil
 import stat
+import socket
+import sys
 from datetime import datetime
 
-# --- CONFIGURATION PATHS ---
 BSC_REPO_ROOT = r"G:\bsc"
 GENERATE_INDEX_SCRIPT = r"G:\bsc\docs\generate_index.py"
 ARANAG_SITE_DESKTOP = r"C:\Users\PC\Desktop\aranag.site"
 BSC_LOCAL_BACKUP = r"G:\bsc_local"
 ARANAG_REPO_ROOT = r"G:\aranag"
 
-# Folders/Files to PRESERVE in G:\aranag when deleting
+MIN_DISK_SPACE_MB = 500
+
 ARANAG_PRESERVE = [
     "ada-web",
     "compiler",
     "README.md",
     "sitemap.xml",
     ".firebase",
-    ".git" # CRITICAL: Always preserve .git!
+    ".git"
 ]
 
 def remove_readonly(func, path, exc_info):
-    """
-    Error handler for shutil.rmtree.
-    Unlocks read-only files (like .git objects) so they can be deleted.
-    """
     try:
         os.chmod(path, stat.S_IWRITE)
         func(path)
     except Exception as e:
         print(f"Failed to force delete {path}: {e}")
+
+def check_internet(host="8.8.8.8", port=53, timeout=3):
+    try:
+        socket.setdefaulttimeout(timeout)
+        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
+        return True
+    except socket.error:
+        return False
+
+def get_free_space_mb(folder):
+    total, used, free = shutil.disk_usage(folder)
+    return free // (2**20)
+
+def is_tool_installed(name):
+    return shutil.which(name) is not None
+
+def pre_check():
+    print("\n--- Step 0: System Pre-Checks ---")
+    
+    print("Checking internet connection...", end=" ")
+    if check_internet():
+        print("[OK]")
+    else:
+        print("[FAILED]")
+        print("Error: No internet connection detected. Cannot push to Git or Firebase.")
+        return False
+
+    print("Checking required tools...", end=" ")
+    missing_tools = []
+    if not is_tool_installed("git"):
+        missing_tools.append("git")
+    
+    if not is_tool_installed("firebase"):
+        if not is_tool_installed("firebase.cmd"):
+             missing_tools.append("firebase")
+
+    if missing_tools:
+        print("[FAILED]")
+        print(f"Error: The following tools are missing from PATH: {', '.join(missing_tools)}")
+        return False
+    print("[OK]")
+
+    backup_drive = os.path.splitdrive(BSC_LOCAL_BACKUP)[0]
+    if not backup_drive: 
+        backup_drive = "." 
+    else:
+        backup_drive += "\\"
+        
+    print(f"Checking disk space on {backup_drive}...", end=" ")
+    try:
+        free_space = get_free_space_mb(backup_drive)
+        if free_space < MIN_DISK_SPACE_MB:
+            print("[FAILED]")
+            print(f"Error: Not enough disk space. Free: {free_space}MB, Required: {MIN_DISK_SPACE_MB}MB")
+            return False
+        print(f"[OK] ({free_space} MB free)")
+    except Exception as e:
+        print(f"[WARNING] Could not check disk space: {e}")
+
+    return True
 
 def run_generate_index():
     print("\n--- Step 1: Generating Index HTML ---")
@@ -38,15 +96,13 @@ def run_generate_index():
     index_path = os.path.join(BSC_REPO_ROOT, "docs", "index.html")
     old_content = ""
     
-    # 1. Read existing content if file exists
     if os.path.exists(index_path):
         try:
             with open(index_path, 'r', encoding='utf-8') as f:
                 old_content = f.read()
         except Exception:
-            pass # Treat as empty if read fails
+            pass
 
-    # 2. Run the generation script
     if os.path.exists(GENERATE_INDEX_SCRIPT):
         try:
             subprocess.run(["python", GENERATE_INDEX_SCRIPT], check=True)
@@ -58,7 +114,6 @@ def run_generate_index():
         print(f"[Error] Script not found at: {GENERATE_INDEX_SCRIPT}")
         return False
 
-    # 3. Read new content
     new_content = ""
     if os.path.exists(index_path):
         try:
@@ -67,7 +122,6 @@ def run_generate_index():
         except Exception:
             pass
 
-    # 4. Compare
     if old_content != new_content:
         print("[Info] Changes detected in index.html.")
         return True
@@ -91,7 +145,6 @@ def git_workflow_bsc():
         print("[Error] 'git add' failed.")
         return
 
-    # Detect changes
     try:
         result = subprocess.run(
             ["git", "diff", "--name-only", "--cached"],
@@ -105,7 +158,6 @@ def git_workflow_bsc():
         print("[Info] No changes detected in 'bsc'. Skipping commit/push.")
         return
 
-    # Calculate path for commit message
     changed_dirs = [os.path.dirname(f.replace('/', os.sep)) for f in changed_files]
     
     if not changed_dirs:
@@ -153,12 +205,10 @@ def deploy_firebase():
 def sync_bsc_local():
     print("\n--- Step 4: Syncing to G:\\bsc_local ---")
     try:
-        # Force Delete using the remove_readonly handler
         if os.path.exists(BSC_LOCAL_BACKUP):
             print(f"Cleaning {BSC_LOCAL_BACKUP}...")
             shutil.rmtree(BSC_LOCAL_BACKUP, onerror=remove_readonly)
         
-        # Copy fresh content
         print(f"Copying from {BSC_REPO_ROOT} to {BSC_LOCAL_BACKUP}...")
         shutil.copytree(BSC_REPO_ROOT, BSC_LOCAL_BACKUP)
         print("[Success] bsc_local synced.")
@@ -172,7 +222,6 @@ def update_and_push_aranag():
         print(f"[Error] Path not found: {ARANAG_REPO_ROOT}")
         return
 
-    # 1. Delete contents except preserved
     print("Cleaning G:\\aranag (preserving specific files)...")
     for item in os.listdir(ARANAG_REPO_ROOT):
         if item in ARANAG_PRESERVE:
@@ -187,7 +236,6 @@ def update_and_push_aranag():
         except Exception as e:
             print(f"Warning: Could not delete {item}: {e}")
 
-    # 2. Copy from Desktop site to G:\aranag
     print(f"Copying from {ARANAG_SITE_DESKTOP} to {ARANAG_REPO_ROOT}...")
     try:
         shutil.copytree(ARANAG_SITE_DESKTOP, ARANAG_REPO_ROOT, dirs_exist_ok=True)
@@ -195,7 +243,6 @@ def update_and_push_aranag():
         print(f"[Error] Copy failed: {e}")
         return
 
-    # 3. Git Push G:\aranag
     os.chdir(ARANAG_REPO_ROOT)
     print("Git pushing G:\\aranag...")
     
@@ -217,23 +264,22 @@ def update_and_push_aranag():
 def main():
     print("=== STARTING AUTOMATION PIPELINE ===")
     
-    # 1. Generate Index & Check for changes
+    if not pre_check():
+        print("\n[Aborted] Pre-checks failed. Please resolve the errors above.")
+        return
+
     index_changed = run_generate_index()
 
-    # 2. Always run the main repo Git workflow
     git_workflow_bsc()
 
     if index_changed:
-        # 3. Deploy to Firebase only if index changed
         deploy_firebase()
     else:
         print("\n[Skip] Index unchanged. Skipping Firebase deploy.")
 
-    # 4. Always sync the local backup
     sync_bsc_local()
 
     if index_changed:
-        # 5. Update Aranag repo only if index changed
         update_and_push_aranag()
     else:
         print("\n[Skip] Index unchanged. Skipping G:\\aranag update.")
