@@ -12,44 +12,33 @@
  * ======================================================================================
  */
 
-/* ps16 */
+/*
+ * Question 6:
+ * Write a program using a function to compute and display all factors of a given number.
+ */
 
 #include <stdio.h>
-#include <math.h>
 
-int isArmstrong(int);
+void printFactors(int);
 
 int main()
 {
-    int num;
+    int n;
     printf("Enter the number: ");
-    scanf("%d", &num);
-    if (isArmstrong(num))
-    {
-        printf("\nInput %d is a Armstrong number.", num);
-    }
-    else
-    {
-        printf("\nInput %d is not a Armstrong number.", num);
-    }
+    scanf("%d", &n);
+    printFactors(n);
     return 0;
 }
 
-int isArmstrong(int num)
+void printFactors(int n)
 {
-    int temp = num;
-    int power = 0;
-    int result = 0;
-    while (temp > 0)
+    int i;
+    printf("\nFactors of %d:", n);
+    for (i = 1; i <= n; i++)
     {
-        power++;
-        temp /= 10;
+        if (n % i == 0)
+        {
+            printf("  %d", i);
+        }
     }
-    temp = num;
-    while (temp > 0)
-    {
-        result += (int)pow((temp % 10), power);
-        temp /= 10;
-    }
-    return result == num;
 }

@@ -1,8 +1,8 @@
 /*
  * ======================================================================================
- * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
  * Repository : https://github.com/notamitgamer/bsc
- * License    : ESAL-1.0 ( https://amit.is-a.dev/license )
+ * License    : ESAL-1.0 ( https://aranag.site/license )
  * ======================================================================================
  * [ ACADEMIC INTEGRITY WARNING ]
  * The use of this code for academic assignments at ANY educational institution,
@@ -12,73 +12,66 @@
  * ======================================================================================
  */
 
-/* Write a function that reverses the elements of an array in place, using only a single
-pointer argument, and return void. */
+/*
+ * Question 20:
+ * Write a C program that defines an array of integers, and includes a user-defined function named reverseArray with the signature void reverseArray(int arr[], int size);.
+ */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-void inputArray(int[], int);
-void printArray(int[], int);
-void reverse(int *);
+void inputArray(int [], int);
+void reverseArray(int [], int);
+void printArray(int [], int);
 
-int main()
-{
-    int n, i, *arr = NULL;
-    printf("Enter the number of element: ");
+int main() {
+    int n, *arr = NULL;
+    printf("How many element do you want enter: ");
     scanf("%d", &n);
     arr = (int *)malloc(n * sizeof(int));
-    if (arr == NULL)
-    {
+    if(arr == NULL) {
         printf("\nMemory allocation failed.");
         return 1;
     }
     inputArray(arr, n);
-    printf("\nGiven Array: ");
+    printf("\nBefore Reverse: ");
     printArray(arr, n);
-    for (i = 0; i < n; i++)
-    {
-        reverse(&arr[i]);
-    }
-    printf("\nUpdated Array: ");
+    reverseArray(arr, n);
+    printf("\nAfter reverse: ");
     printArray(arr, n);
     free(arr);
     return 0;
 }
 
-void inputArray(int arr[], int n)
-{
+void inputArray(int arr[], int n) {
     int i;
-    for (i = 0; i < n; i++)
-    {
+    for(i = 0; i < n; i++) {
         printf("Enter element %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
 }
 
-void printArray(int arr[], int n)
-{
+void printArray(int arr[], int n) {
     int i;
     printf("[");
-    for (i = 0; i < n; i++)
-    {
+    for(i = 0; i < n; i++) {
         printf("%d", arr[i]);
-        if (i < n - 1)
-        {
+        if(i < n - 1) {
             printf(", ");
         }
     }
     printf("]");
 }
 
-void reverse(int *n)
-{
-    int temp = *n;
-    int rev = 0;
-    while (temp > 0)
-    {
-        rev = (rev * 10) + (temp % 10);
-        temp /= 10;
+void reverseArray(int arr[], int size) {
+    int i = 0;
+    int j = size - 1;
+    int temp;
+    while(i < j) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        j--;
     }
-    *n = rev;
 }

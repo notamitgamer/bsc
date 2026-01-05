@@ -12,63 +12,75 @@
  * ======================================================================================
  */
 
-/* ps20 */
+/*
+ * Question 10:
+ * Write a function that reverses each elements of an array in place, using only a single pointer argument, and return void.
+ */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void inputArray(int [], int);
-void reverseArray(int [], int);
-void printArray(int [], int);
+void inputArray(int[], int);
+void printArray(int[], int);
+void reverse(int *);
 
-int main() {
-    int n, *arr;
-    printf("How many element do you want enter: ");
+int main()
+{
+    int n, i, *arr = NULL;
+    printf("Enter the number of element: ");
     scanf("%d", &n);
     arr = (int *)malloc(n * sizeof(int));
-    if(arr == NULL) {
+    if (arr == NULL)
+    {
         printf("\nMemory allocation failed.");
         return 1;
     }
     inputArray(arr, n);
-    printf("\nBefore Reverse: ");
+    printf("\nGiven Array: ");
     printArray(arr, n);
-    reverseArray(arr, n);
-    printf("\nAfter reverse: ");
+    for (i = 0; i < n; i++)
+    {
+        reverse(&arr[i]);
+    }
+    printf("\nUpdated Array: ");
     printArray(arr, n);
     free(arr);
     return 0;
 }
 
-void inputArray(int arr[], int n) {
+void inputArray(int arr[], int n)
+{
     int i;
-    for(i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         printf("Enter element %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
 }
 
-void printArray(int arr[], int n) {
+void printArray(int arr[], int n)
+{
     int i;
     printf("[");
-    for(i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         printf("%d", arr[i]);
-        if(i < n - 1) {
+        if (i < n - 1)
+        {
             printf(", ");
         }
     }
     printf("]");
 }
 
-void reverseArray(int arr[], int size) {
-    int i = 0;
-    int j = size - 1;
-    int temp;
-    while(i < j) {
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        i++;
-        j--;
+void reverse(int *n)
+{
+    int temp = *n;
+    int rev = 0;
+    while (temp > 0)
+    {
+        rev = (rev * 10) + (temp % 10);
+        temp /= 10;
     }
+    *n = rev;
 }

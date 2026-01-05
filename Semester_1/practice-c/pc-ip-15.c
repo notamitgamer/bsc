@@ -12,45 +12,46 @@
  * ======================================================================================
  */
 
-/* ps1 */
+/*
+ * Question 15:
+ * Write a program to calculate the GCD of two numbers using recursive and iterative function.
+ */
 
 #include <stdio.h>
 
-int sum(int);
-int product(int);
+int gcd_rec(int, int);
+int gcd_ite(int, int);
 
 int main()
 {
-    int num;
-    printf("Enter the number: ");
-    scanf("%d", &num);
-    printf("\nSum of digit: %d", sum(num));
-    printf("\nProduct of digit: %d", product(num));
+    int a, b;
+    printf("Enter two number: ");
+    scanf("%d %d", &a, &b);
+    printf("\nGCD(%d, %d) (Recursion) = %d", a, b, gcd_rec(a, b));
+    printf("\nGCD(%d, %d) (Iteration) = %d", a, b, gcd_ite(a, b));
     return 0;
 }
 
-int sum(int num)
+int gcd_ite(int a, int b)
 {
-    int result = 0;
-    while (num > 0)
+    int temp;
+    while (a != 0)
     {
-        result += num % 10;
-        num /= 10;
+        temp = a;
+        a = b % a;
+        b = temp;
     }
-    return result;
+    return b;
 }
 
-int product(int num)
+int gcd_rec(int a, int b)
 {
-    int result = 1;
-    if (num == 0)
+    if (a == 0)
     {
-        return 0;
+        return b;
     }
-    while (num > 0)
+    else
     {
-        result *= num % 10;
-        num /= 10;
+        return gcd_rec(b % a, a);
     }
-    return result;
 }

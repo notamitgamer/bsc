@@ -1,8 +1,8 @@
 /*
  * ======================================================================================
- * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
  * Repository : https://github.com/notamitgamer/bsc
- * License    : ESAL-1.0 ( https://amit.is-a.dev/license )
+ * License    : ESAL-1.0 ( https://aranag.site/license )
  * ======================================================================================
  * [ ACADEMIC INTEGRITY WARNING ]
  * The use of this code for academic assignments at ANY educational institution,
@@ -12,22 +12,25 @@
  * ======================================================================================
  */
 
-/* Write a function that reverses the elements of an array in place, using only a single
-pointer argument, and return void. */
+/*
+ * Question 9:
+ * Write a program to find the sum of n elements entered by the user. Use dynamic memory allocation (malloc() or calloc()).
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void inputArray(int[], int);
-void printArray(int[], int);
-void reverse(int *);
+void inputArray(double[], int);
+void printArray(double[], int);
+double sum(double[], int);
 
 int main()
 {
-    int n, i, *arr = NULL;
+    int n;
+    double *arr = NULL;
     printf("Enter the number of element: ");
     scanf("%d", &n);
-    arr = (int *)malloc(n * sizeof(int));
+    arr = (double *)malloc(n * sizeof(double));
     if (arr == NULL)
     {
         printf("\nMemory allocation failed.");
@@ -36,33 +39,28 @@ int main()
     inputArray(arr, n);
     printf("\nGiven Array: ");
     printArray(arr, n);
-    for (i = 0; i < n; i++)
-    {
-        reverse(&arr[i]);
-    }
-    printf("\nUpdated Array: ");
-    printArray(arr, n);
+    printf("\nSum of the elements of the array: %g", sum(arr, n));
     free(arr);
     return 0;
 }
 
-void inputArray(int arr[], int n)
+void inputArray(double arr[], int n)
 {
     int i;
     for (i = 0; i < n; i++)
     {
         printf("Enter element %d: ", i + 1);
-        scanf("%d", &arr[i]);
+        scanf("%lf", &arr[i]);
     }
 }
 
-void printArray(int arr[], int n)
+void printArray(double arr[], int n)
 {
     int i;
     printf("[");
     for (i = 0; i < n; i++)
     {
-        printf("%d", arr[i]);
+        printf("%g", arr[i]);
         if (i < n - 1)
         {
             printf(", ");
@@ -71,14 +69,13 @@ void printArray(int arr[], int n)
     printf("]");
 }
 
-void reverse(int *n)
+double sum(double arr[], int n)
 {
-    int temp = *n;
-    int rev = 0;
-    while (temp > 0)
+    int i;
+    double sum = 0;
+    for (i = 0; i < n; i++)
     {
-        rev = (rev * 10) + (temp % 10);
-        temp /= 10;
+        sum += arr[i];
     }
-    *n = rev;
+    return sum;
 }

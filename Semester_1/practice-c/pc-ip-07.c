@@ -12,34 +12,33 @@
  * ======================================================================================
  */
 
-/* ps3 */
+/*
+ * Question 7:
+ * Write a program to swap two numbers using pointers using user-defined function.
+ */
 
 #include <stdio.h>
 
-int series(int);
+void swap(int *, int *);
 
 int main()
 {
-    int n;
-    printf("Enter the n: ");
-    scanf("%d", &n);
-    printf("\nSum of the series: %d", series(n));
+    int a, b;
+    printf("Enter two number: ");
+    scanf("%d %d", &a, &b);
+    printf("\nBefore Swap: ");
+    printf("\nA = %d, Loc: %p", a, &a);
+    printf("\nB = %d, Loc: %p", b, &b);
+    swap(&a, &b);
+    printf("\nAfter Swap: ");
+    printf("\nA = %d, Loc: %p", a, &a);
+    printf("\nB = %d, Loc: %p", b, &b);
     return 0;
 }
 
-int series(int n)
+void swap(int *a, int *b)
 {
-    int i, result = 0;
-    for (i = 1; i <= n; i++)
-    {
-        if (i % 2 == 0)
-        {
-            result -= i;
-        }
-        else
-        {
-            result += i;
-        }
-    }
-    return result;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }

@@ -12,33 +12,40 @@
  * ======================================================================================
  */
 
-/* ps2 */
+/*
+ * Question 17:
+ * Write a C program that includes a user-defined function named isPerfect with the signature int isPerfect(int num);.
+ */
 
 #include <stdio.h>
 
-int reverse(int);
+int isPerfect(int);
 
 int main()
 {
     int num;
-    printf("Enter the number: ");
+    printf("Enter the number : ");
     scanf("%d", &num);
-    if (num < 0)
+    if (isPerfect(num))
     {
-        printf("\nOnly poitive integers are allowed.");
-        return 1;
+        printf("\nInput '%d' is a perfect number.", num);
     }
-    printf("\nReverse of input %d is : %d", num, reverse(num));
+    else
+    {
+        printf("\nInput '%d' is not a perfect number.", num);
+    }
     return 0;
 }
 
-int reverse(int num)
+int isPerfect(int n)
 {
-    int result = 0;
-    while (num > 0)
+    int i, sum = 0;
+    for (i = 1; i <= n / 2; i++)
     {
-        result = (result * 10) + (num % 10);
-        num /= 10;
+        if (n % i == 0)
+        {
+            sum += i;
+        }
     }
-    return result;
+    return sum == n;
 }

@@ -12,51 +12,48 @@
  * ======================================================================================
  */
 
-/* ps4 */
+/*
+ * Question 1:
+ * Write a program to compute the sum and product of digits of an integer using user-defined functions.
+ */
 
 #include <stdio.h>
-#include <math.h>
 
-int isPrime(int);
+int sum(int);
+int product(int);
 
 int main()
 {
-    int n, i;
+    int num;
     printf("Enter the number: ");
-    scanf("%d", &n);
-    if (isPrime(n))
-    {
-        printf("\nInput %d is a prime number.", n);
-    }
-    else
-    {
-        printf("\nInput %d is not a prime number.", n);
-    }
-    printf("\nPrime numbers from 1 to 100:");
-    for (i = 1; i <= 100; i++)
-    {
-        if (isPrime(i))
-        {
-            printf("  %d", i);
-        }
-    }
+    scanf("%d", &num);
+    printf("\nSum of digit: %d", sum(num));
+    printf("\nProduct of digit: %d", product(num));
     return 0;
 }
 
-int isPrime(int n)
+int sum(int num)
 {
-    int i;
-    int end = (int)sqrt(n);
-    if (n == 0 || n == 1)
+    int result = 0;
+    while (num > 0)
+    {
+        result += num % 10;
+        num /= 10;
+    }
+    return result;
+}
+
+int product(int num)
+{
+    int result = 1;
+    if (num == 0)
     {
         return 0;
     }
-    for (i = 2; i <= end; i++)
+    while (num > 0)
     {
-        if (n % i == 0)
-        {
-            return 0;
-        }
+        result *= num % 10;
+        num /= 10;
     }
-    return 1;
+    return result;
 }

@@ -12,7 +12,10 @@
  * ======================================================================================
  */
 
-/* ps19 */
+/*
+ * Question 19:
+ * Write a C program that includes a user-defined function named binarySearch with the signature int binarySearch(int arr[], int size, int target);.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,7 +26,7 @@ void printArray(int[], int);
 
 int main()
 {
-    int n, *arr, target, foundIndex;
+    int n, *arr = NULL, target, foundIndex;
     printf("Enter the number of element: ");
     scanf("%d", &n);
     arr = (int *)malloc(n * sizeof(int));

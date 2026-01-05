@@ -12,7 +12,10 @@
  * ======================================================================================
  */
 
-/* ps18 */
+/*
+ * Question 18:
+ * Write a C program that includes a user-defined function named findLargest with the signature int findLargest(int arr[], int size);.
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,7 +26,7 @@ void printArray(int[], int);
 
 int main()
 {
-    int n, *arr;
+    int n, *arr = NULL;
     printf("Enter the number of element: ");
     scanf("%d", &n);
     if (n < 2)

@@ -12,37 +12,37 @@
  * ======================================================================================
  */
 
-/* ps17 */
+/*
+ * Question 3:
+ * Write a program to compute the sum of the first n terms of the series using a function: S=1-2+3-4+5-6+...
+ */
 
 #include <stdio.h>
 
-int isPerfect(int);
+int series(int);
 
 int main()
 {
-    int num;
-    printf("Enter the number : ");
-    scanf("%d", &num);
-    if (isPerfect(num))
-    {
-        printf("\nInput '%d' is a perfect number.", num);
-    }
-    else
-    {
-        printf("\nInput '%d' is not a perfect number.", num);
-    }
+    int n;
+    printf("Enter the n: ");
+    scanf("%d", &n);
+    printf("\nSum of the series: %d", series(n));
     return 0;
 }
 
-int isPerfect(int n)
+int series(int n)
 {
-    int i, sum = 0;
-    for (i = 1; i <= n / 2; i++)
+    int i, result = 0;
+    for (i = 1; i <= n; i++)
     {
-        if (n % i == 0)
+        if (i % 2 == 0)
         {
-            sum += i;
+            result -= i;
+        }
+        else
+        {
+            result += i;
         }
     }
-    return sum == n;
+    return result;
 }

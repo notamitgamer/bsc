@@ -6,32 +6,126 @@
     <!-- Fix favicon 404 error -->
     <link rel="icon" href="data:,">
     <title>notamitgamer/bsc Repository File Index</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Default Theme (Visual Studio Light for High Contrast) -->
+    <!-- Tailwind CSS with Kinetic Terminal Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              heading: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              // Re-mapping 'Blue' (used in generator) to 'Lime' (Portfolio Theme)
+              blue: {
+                50: 'rgba(190, 242, 100, 0.05)', 
+                100: 'rgba(190, 242, 100, 0.1)',
+                200: '#d9f99d',
+                300: '#bef264',
+                400: '#a3d656',
+                500: '#bef264', // The Main Lime Accent
+                600: '#bef264', // Force standard blue to Lime
+                700: '#84cc16',
+                800: '#3f6212',
+                900: '#365314',
+              },
+              // Re-mapping 'Slate' (used in generator) to 'Dark/Zinc'
+              slate: {
+                50: '#050505',  // Main Background
+                100: '#111111', // Secondary Background
+                200: '#27272a', // Borders
+                300: '#404040',
+                400: '#525252',
+                500: '#737373', // Muted Text
+                600: '#a1a1aa', // Primary Text in this context
+                700: '#d4d4d8', // Light Text
+                800: '#e4e4e7',
+                900: '#f5f5f5', // White Text
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Theme: GitHub Dark -->
     <link
       id="highlight-theme"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
     <style>
+      :root {
+        --bg-main: #050505;
+        --accent: #bef264;
+        --border-color: #27272a;
+        --text-main: #f5f5f5;
+        --text-muted: #737373;
+      }
+
       body {
         font-family: "Inter", sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-main);
       }
+      
+      h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+
+      /* --- Visual Effects (From Portfolio) --- */
+      
+      /* Noise Texture */
+      .bg-noise {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none; z-index: 0; opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* CRT Scanline */
+      .crt-scanline {
+        position: fixed; top: 0; left: 0; width: 100%; height: 2px;
+        background: rgba(190, 242, 100, 0.1); opacity: 0.5;
+        pointer-events: none; z-index: 50;
+        animation: scanline 8s linear infinite;
+      }
+      @keyframes scanline { 0% { top: -10vh; } 100% { top: 110vh; } }
+
       .chevron.rotated {
         transform: rotate(180deg);
       }
 
-      /* --- Enhanced Code Viewer Modal Styles --- */
+      /* --- UI Overrides for Generated Content --- */
+      
+      /* Force generated file items to look correct in dark mode 
+         Since generated HTML uses 'hover:bg-white', we override it here. */
+      .file-item:hover {
+        background-color: rgba(190, 242, 100, 0.05) !important;
+        border-color: rgba(190, 242, 100, 0.2) !important;
+      }
+      .folder-container > div:first-child:hover {
+        background-color: #111111 !important;
+      }
+      
+      /* Update Text Colors for Generated Content */
+      .text-slate-700 { color: #d4d4d8 !important; }
+      .text-slate-600 { color: #a1a1aa !important; }
+      .text-slate-500 { color: #737373 !important; }
+      
+      /* --- Modal Styles --- */
       #code-modal .modal-content-area {
         height: 85vh;
         max-height: 90vh;
+        background-color: #0d1117 !important; /* GitHub Dark BG */
+        border: 1px solid #30363d;
       }
       @media (min-width: 640px) {
         #code-modal .modal-content-area {
@@ -56,7 +150,7 @@
         line-height: 1.6;
         background-color: transparent !important;
         display: block;
-        color: #000000; /* Ensure high contrast text */
+        color: #e6edf3;
       }
 
       @media (min-width: 640px) {
@@ -66,46 +160,25 @@
         }
       }
 
-      /* Scrollbars */
-      #modal-code-container::-webkit-scrollbar,
-      .custom-scrollbar::-webkit-scrollbar {
+      /* Dark Scrollbars */
+      ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
       }
-      #modal-code-container::-webkit-scrollbar-track,
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f1f5f9;
+      ::-webkit-scrollbar-track {
+        background: #050505;
       }
-      #modal-code-container::-webkit-scrollbar-thumb,
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
+      ::-webkit-scrollbar-thumb {
+        background: #27272a;
         border-radius: 5px;
-        border: 2px solid #f1f5f9;
-        background-clip: content-box;
+        border: 2px solid #050505;
       }
-      #modal-code-container::-webkit-scrollbar-thumb:hover,
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
+      ::-webkit-scrollbar-thumb:hover {
+        background: #bef264; /* Lime Hover */
       }
 
       .hljs {
         background: transparent !important;
-      }
-
-      /* License Modal Scrollbar */
-      #license-content::-webkit-scrollbar {
-        width: 8px;
-      }
-      #license-content::-webkit-scrollbar-track {
-        background: #f1f5f9;
-        border-radius: 4px;
-      }
-      #license-content::-webkit-scrollbar-thumb {
-        background: #94a3b8;
-        border-radius: 4px;
-      }
-      #license-content::-webkit-scrollbar-thumb:hover {
-        background: #64748b;
       }
 
       /* Initial hidden state for app content */
@@ -134,47 +207,39 @@
 
       /* Keyboard Navigation Highlight */
       .file-item.nav-selected {
-          background-color: #eff6ff; /* blue-50 */
-          border-color: #bfdbfe;     /* blue-200 */
-          box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+          background-color: rgba(190, 242, 100, 0.1) !important;
+          border-color: #bef264 !important;
       }
       .file-item.nav-selected span {
-          color: #2563eb;            /* blue-600 */
+          color: #bef264 !important;
       }
       
-      /* Ensure modal background is white in light mode */
-      #code-modal .modal-content-area,
-      #code-modal .bg-\[\#0d1117\] {
-          background-color: #ffffff;
-          border-color: #e2e8f0;
-          color: #1e293b;
-      }
-      #code-modal .bg-\[\#161b22\] {
-          background-color: #f8fafc;
-          border-color: #e2e8f0;
-      }
       #modal-filename {
-          color: #334155;
+          color: #e6edf3;
       }
       #code-loading {
-          background-color: #ffffff;
+          background-color: #0d1117;
       }
     </style>
   </head>
-  <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden">
+  <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden relative selection:bg-lime-300 selection:text-black">
     
+    <!-- Effects -->
+    <div class="bg-noise"></div>
+    <div class="crt-scanline"></div>
+
     <!-- App Wrapper (Hidden until license accepted) -->
-    <div id="app-content" class="flex flex-col h-full overflow-hidden relative">
+    <div id="app-content" class="flex flex-col h-full overflow-hidden relative z-10">
         <!-- Header -->
         <header
-        class="bg-white border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0 sticky top-0"
+        class="bg-[#050505]/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0 sticky top-0"
         >
         <!-- Logo Section -->
         <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
             <div class="flex items-center gap-3">
-                <div class="p-2 bg-blue-50 rounded-lg shrink-0">
+                <div class="p-2 bg-lime-300/10 rounded-lg shrink-0 border border-lime-300/20">
                 <svg
-                    class="w-6 h-6 text-blue-600"
+                    class="w-6 h-6 text-lime-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -188,10 +253,10 @@
                 </svg>
                 </div>
                 <div class="min-w-0">
-                <h1 class="text-lg sm:text-xl font-bold text-slate-800 tracking-tight truncate">
+                <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight truncate font-heading">
                     notamitgamer/bsc
                 </h1>
-                <p class="text-xs text-slate-500 font-medium mt-0.5 truncate">
+                <p class="text-xs text-neutral-500 font-medium mt-0.5 truncate font-mono">
                     Repository File Index
                 </p>
                 </div>
@@ -201,7 +266,7 @@
                  <!-- Mobile: License Button (Icon Only) -->
                 <button
                 onclick="openLicenseModal(false)"
-                class="p-2 text-slate-600 hover:text-blue-600 bg-slate-50 rounded-md transition-colors"
+                class="p-2 text-neutral-400 hover:text-lime-300 bg-neutral-900 rounded-md transition-colors border border-neutral-800"
                 title="View License"
                 >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -210,7 +275,7 @@
                 </button>
 
                 <!-- Mobile: Github Icon -->
-                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-slate-600 hover:text-slate-900">
+                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-neutral-400 hover:text-white">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
                     </svg>
@@ -224,19 +289,19 @@
             <!-- Desktop: License Button (Text + Icon) -->
             <button
             onclick="openLicenseModal(false)"
-            class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors shrink-0"
+            class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-md transition-colors shrink-0 font-mono border border-transparent hover:border-lime-300/20"
             title="View License"
             >
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
             </svg>
-            <span class="inline">View License</span>
+            <span class="inline">License</span>
             </button>
 
             <!-- Search Bar -->
             <div class="relative group grow sm:grow-0 w-full sm:w-auto">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-4 w-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="h-4 w-4 text-neutral-500 group-focus-within:text-lime-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
@@ -244,10 +309,10 @@
                     type="text"
                     id="search-input"
                     placeholder="Search code... (/)"
-                    class="pl-10 pr-10 sm:pr-4 py-2 bg-slate-100 border-none rounded-lg text-sm w-full sm:w-64 focus:ring-2 focus:ring-blue-500/20 focus:bg-white transition-all outline-none text-slate-700 placeholder:text-slate-400 font-medium"
+                    class="pl-10 pr-10 sm:pr-4 py-2 bg-[#111] border border-neutral-800 rounded-lg text-sm w-full sm:w-64 focus:ring-1 focus:ring-lime-300/50 focus:border-lime-300/50 focus:bg-[#050505] transition-all outline-none text-neutral-200 placeholder:text-neutral-600 font-mono"
                 />
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
-                    <span class="text-xs text-slate-400 font-sans border border-slate-200 rounded px-1.5 py-0.5 bg-white">/</span>
+                    <span class="text-[10px] text-neutral-600 font-mono border border-neutral-800 rounded px-1.5 py-0.5 bg-[#111]">/</span>
                 </div>
             </div>
             
@@ -255,7 +320,7 @@
             <a
             href="https://github.com/notamitgamer/bsc"
             target="_blank"
-            class="hidden sm:flex bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2"
+            class="hidden sm:flex bg-neutral-100 hover:bg-lime-300 text-black px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2 font-mono"
             >
             <span>GitHub</span>
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -268,26 +333,26 @@
         <!-- Main Content Area -->
         <main class="flex-1 flex overflow-hidden relative" id="main-scroll-container">
         <!-- File Explorer (Left Panel) -->
-        <div class="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-6 h-full" id="file-explorer-scroll">
+        <div class="flex-1 overflow-y-auto p-4 sm:p-6 h-full" id="file-explorer-scroll">
             <div class="max-w-4xl mx-auto space-y-4">
                 
                 <!-- Recent Files Section -->
                 <div id="recent-files-container" class="hidden mb-6">
                     <div class="flex items-center justify-between mb-3 px-1">
-                        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Recent Files</h2>
-                        <button onclick="confirmClearRecent()" class="text-xs text-red-400 hover:text-red-600 font-medium transition-colors hover:underline">Clear</button>
+                        <h2 class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-mono">Recent Files</h2>
+                        <button onclick="confirmClearRecent()" class="text-xs text-red-400 hover:text-red-500 font-medium transition-colors hover:underline font-mono">Clear</button>
                     </div>
                     <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                         <!-- Recent files injected here -->
                     </div>
-                    <hr class="mt-4 border-slate-200">
+                    <hr class="mt-4 border-white/10">
                 </div>
 
                 <!-- Global Controls (Sticky) -->
-                <div class="sticky top-0 z-20 bg-slate-50 py-2 flex justify-end gap-2 border-b border-slate-200/50 backdrop-blur-sm bg-opacity-90 mb-2">
-                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent" disabled>Expand All</button>
-                    <span class="text-slate-300">|</span>
-                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent" disabled>Collapse All</button>
+                <div class="sticky top-0 z-20 bg-[#050505] py-2 flex justify-end gap-2 border-b border-white/10 backdrop-blur-sm bg-opacity-90 mb-2">
+                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-bold text-neutral-500 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono" disabled>Expand All</button>
+                    <span class="text-neutral-700">|</span>
+                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-bold text-neutral-500 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono" disabled>Collapse All</button>
                 </div>
 
                 <div id="file-list-container">
@@ -4586,59 +4651,69 @@ pointer argument, and return void. */
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-void inputarr(int[], int);
-void display(int[], int);
+void inputArray(int[], int);
+void printArray(int[], int);
 void reverse(int *);
 
 int main()
 {
-    int size, *arr;
-    printf(&quot;How many element do you want to add: &quot;);
-    scanf(&quot;%d&quot;, &amp;size);
-    arr = (int *)malloc((size + 1) * sizeof(int));
-    inputarr(arr, size);
-    printf(&quot;\n=== Before Reverse ===\n&quot;);
-    display(arr, size);
-    reverse(arr);
-    printf(&quot;\n\n=== After Reverse ===\n&quot;);
-    display(arr, size);
+    int n, i, *arr = NULL;
+    printf(&quot;Enter the number of element: &quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    arr = (int *)malloc(n * sizeof(int));
+    if (arr == NULL)
+    {
+        printf(&quot;\nMemory allocation failed.&quot;);
+        return 1;
+    }
+    inputArray(arr, n);
+    printf(&quot;\nGiven Array: &quot;);
+    printArray(arr, n);
+    for (i = 0; i &lt; n; i++)
+    {
+        reverse(&amp;arr[i]);
+    }
+    printf(&quot;\nUpdated Array: &quot;);
+    printArray(arr, n);
     free(arr);
     return 0;
 }
 
-void inputarr(int arr[], int n)
+void inputArray(int arr[], int n)
 {
     int i;
-    arr[0] = n;
-    for (i = 1; i &lt;= n; i++)
+    for (i = 0; i &lt; n; i++)
     {
-        printf(&quot;Enter element %d: &quot;, i);
+        printf(&quot;Enter element %d: &quot;, i + 1);
         scanf(&quot;%d&quot;, &amp;arr[i]);
     }
 }
 
-void display(int arr[], int n)
+void printArray(int arr[], int n)
 {
     int i;
-    for (i = 1; i &lt;= n; i++)
+    printf(&quot;[&quot;);
+    for (i = 0; i &lt; n; i++)
     {
-        printf(&quot;\nIndex: %-2d | Value: %-5d | Address: %p&quot;, i, arr[i], (void *)&amp;arr[i]);
+        printf(&quot;%d&quot;, arr[i]);
+        if (i &lt; n - 1)
+        {
+            printf(&quot;, &quot;);
+        }
     }
+    printf(&quot;]&quot;);
 }
 
-void reverse(int *arr)
+void reverse(int *n)
 {
-    int *start = arr + 1;
-    int size = *arr;
-    int *end = arr + size;
-    while (start &lt; end)
+    int temp = *n;
+    int rev = 0;
+    while (temp &gt; 0)
     {
-        *start = *start ^ *end;
-        *end = *start ^ *end;
-        *start = *start ^ *end;
-        start++;
-        end--;
+        rev = (rev * 10) + (temp % 10);
+        temp /= 10;
     }
+    *n = rev;
 }</div>
         </div>
         
@@ -18385,7 +18460,7 @@ void merge(int a[], int n1, int b[], int n2)
         </div>
         
         <!-- Back to Top Button -->
-        <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all z-30">
+        <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 p-3 bg-neutral-900 border border-neutral-700 text-lime-300 rounded-full shadow-lg hover:bg-lime-300 hover:text-black transition-all z-30">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
             </svg>
@@ -18397,30 +18472,30 @@ void merge(int a[], int n1, int b[], int n2)
     <!-- Code Viewer Modal -->
     <div
       id="code-modal"
-      class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-50 p-2 sm:p-6 opacity-0 transition-opacity duration-200"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-50 p-2 sm:p-6 opacity-0 transition-opacity duration-200"
     >
       <div
-        class="bg-[#0d1117] w-full max-w-6xl rounded-xl shadow-2xl flex flex-col border border-slate-700/50 transform scale-95 transition-transform duration-200 modal-content-area"
+        class="bg-[#0d1117] w-full max-w-6xl rounded-xl shadow-2xl flex flex-col border border-white/10 transform scale-95 transition-transform duration-200 modal-content-area"
       >
         <!-- Modal Header -->
         <div
-          class="flex items-center justify-between px-3 sm:px-4 py-3 border-b border-slate-700/50 bg-[#161b22] rounded-t-xl shrink-0 gap-2"
+          class="flex items-center justify-between px-3 sm:px-4 py-3 border-b border-white/10 bg-[#161b22] rounded-t-xl shrink-0 gap-2"
         >
           <div class="flex items-center gap-3 overflow-hidden">
-            <div class="flex gap-1.5 shrink-0">
-              <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            <div class="flex gap-1.5 shrink-0 opacity-50">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
             <div class="flex flex-col min-w-0">
               <h3
                 id="modal-filename"
-                class="text-xs sm:text-sm font-mono text-slate-200 truncate font-medium"
+                class="text-xs sm:text-sm font-mono text-lime-300 truncate font-medium"
               >
                 filename.c
               </h3>
               <!-- File Size Indicator -->
-              <span id="modal-filesize" class="text-[10px] text-slate-500 font-mono"></span>
+              <span id="modal-filesize" class="text-[10px] text-neutral-500 font-mono"></span>
             </div>
           </div>
           <div class="flex items-center gap-1 sm:gap-2 shrink-0">
@@ -18428,7 +18503,7 @@ void merge(int a[], int n1, int b[], int n2)
             <!-- Open in New Tab Button -->
             <button
               id="new-tab-btn"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
               title="Open in New Tab"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18439,7 +18514,7 @@ void merge(int a[], int n1, int b[], int n2)
             <!-- Download Button -->
             <button
               id="download-btn"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
               title="Download File"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18451,7 +18526,7 @@ void merge(int a[], int n1, int b[], int n2)
             <button
               id="print-btn"
               onclick="printCode()"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
               title="Print Code"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18462,7 +18537,7 @@ void merge(int a[], int n1, int b[], int n2)
             <!-- Share Button -->
             <button
               id="share-btn"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
               title="Copy Link"
             >
               <svg
@@ -18483,7 +18558,7 @@ void merge(int a[], int n1, int b[], int n2)
               <svg
                 id="share-icon-success"
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-green-400 hidden transform scale-0 transition-transform duration-200"
+                class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -18500,7 +18575,7 @@ void merge(int a[], int n1, int b[], int n2)
             <!-- Copy Code Button -->
             <button
               id="copy-code-btn"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all group relative"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
               title="Copy Code"
             >
               <svg
@@ -18521,7 +18596,7 @@ void merge(int a[], int n1, int b[], int n2)
               <svg
                 id="copy-icon-success"
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-green-400 hidden transform scale-0 transition-transform duration-200"
+                class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -18540,7 +18615,7 @@ void merge(int a[], int n1, int b[], int n2)
               id="modal-raw-link"
               href="#"
               target="_blank"
-              class="p-2 text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-lg transition-colors"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
               title="View Raw on GitHub"
             >
               <svg
@@ -18558,7 +18633,7 @@ void merge(int a[], int n1, int b[], int n2)
             </a>
             <button
               onclick="hideCode()"
-              class="p-2 text-slate-400 hover:text-white hover:bg-red-500/20 hover:text-red-400 rounded-lg transition-colors ml-1"
+              class="p-2 text-neutral-400 hover:text-white hover:bg-red-900/30 hover:text-red-400 rounded-lg transition-colors ml-1"
             >
               <svg
                 class="w-5 h-5"
@@ -18585,7 +18660,7 @@ void merge(int a[], int n1, int b[], int n2)
             class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117] hidden"
           >
             <div
-              class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"
+              class="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-300"
             ></div>
           </div>
           <!-- Code Container -->
@@ -18600,15 +18675,15 @@ void merge(int a[], int n1, int b[], int n2)
     <!-- License Modal -->
     <div
       id="license-modal"
-      class="fixed inset-0 bg-slate-900/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
+      class="fixed inset-0 bg-black/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
     >
       <div
-        class="bg-white w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-slate-200 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]"
+        class="bg-[#111] w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]"
       >
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 shrink-0">
-          <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-800 shrink-0">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2 font-heading">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             License Information
@@ -18618,7 +18693,7 @@ void merge(int a[], int n1, int b[], int n2)
              <a
              href="https://aranag.site/license"
              target="_blank"
-             class="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+             class="p-2 text-neutral-500 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-colors"
              title="Download License PDF"
            >
              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -18629,7 +18704,7 @@ void merge(int a[], int n1, int b[], int n2)
             <button
                 id="license-close-btn"
                 onclick="hideLicense()"
-                class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors hidden"
+                class="p-2 text-neutral-500 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors hidden"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -18639,16 +18714,16 @@ void merge(int a[], int n1, int b[], int n2)
         </div>
 
         <!-- License Content -->
-        <div id="license-content" class="p-6 overflow-y-auto font-mono text-sm leading-relaxed text-slate-700 bg-slate-50">
-            <div class="border-l-4 border-blue-500 pl-4 mb-6">
-                <h4 class="font-bold text-slate-900 text-lg">EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)</h4>
-                <p class="text-slate-500 font-medium">Strict Non-Submission & Anti-Plagiarism Clause</p>
-                <p class="text-slate-500 text-xs mt-1">Copyright (c) 2025, AMIT DUTTA. All Rights Reserved.</p>
+        <div id="license-content" class="p-6 overflow-y-auto font-mono text-sm leading-relaxed text-neutral-400 bg-[#050505]">
+            <div class="border-l-4 border-lime-300 pl-4 mb-6">
+                <h4 class="font-bold text-white text-lg">EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0)</h4>
+                <p class="text-lime-300/80 font-medium">Strict Non-Submission & Anti-Plagiarism Clause</p>
+                <p class="text-neutral-600 text-xs mt-1">Copyright (c) 2025, AMIT DUTTA. All Rights Reserved.</p>
             </div>
 
             <div class="space-y-6">
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">1. DEFINITIONS</h5>
+                    <h5 class="font-bold text-white mb-2">1. DEFINITIONS</h5>
                     <ul class="list-disc pl-5 space-y-1">
                         <li><strong>"The Software":</strong> Refers to all code, documentation, logic, and assets contained within this repository.</li>
                         <li><strong>"The Author":</strong> Refers to Amit Dutta.</li>
@@ -18657,12 +18732,12 @@ void merge(int a[], int n1, int b[], int n2)
                 </div>
 
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">2. TERMS OF ACCESS (BINDING AGREEMENT)</h5>
+                    <h5 class="font-bold text-white mb-2">2. TERMS OF ACCESS (BINDING AGREEMENT)</h5>
                     <p>By accessing, downloading, cloning, or forking this repository, you agree to be bound by the terms of this License. If you do not agree to these terms, you are not permitted to use or view the Software and must delete all copies immediately.</p>
                 </div>
 
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">3. LIMITED GRANT OF RIGHTS (REFERENCE ONLY)</h5>
+                    <h5 class="font-bold text-white mb-2">3. LIMITED GRANT OF RIGHTS (REFERENCE ONLY)</h5>
                     <p>The Author grants you a revocable, non-exclusive license to:</p>
                     <ul class="list-disc pl-5 mt-1 space-y-1">
                         <li>Read and study the code for personal learning and skill development.</li>
@@ -18671,24 +18746,24 @@ void merge(int a[], int n1, int b[], int n2)
                     </ul>
                 </div>
 
-                <div class="bg-red-50 border border-red-200 rounded p-4">
-                    <h5 class="font-bold text-red-700 mb-2 flex items-center gap-2">
+                <div class="bg-red-900/10 border border-red-900/30 rounded p-4">
+                    <h5 class="font-bold text-red-500 mb-2 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
                         </svg>
                         4. STRICT PROHIBITIONS (THE "ANTI-PLAGIARISM" CLAUSE)
                     </h5>
-                    <p class="text-red-800 mb-2">The rights granted in Section 3 are strictly conditional. You are EXPRESSLY PROHIBITED from:</p>
-                    <ul class="list-disc pl-5 space-y-1 text-red-800">
+                    <p class="text-red-400 mb-2">The rights granted in Section 3 are strictly conditional. You are EXPRESSLY PROHIBITED from:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-red-400">
                         <li>Copying, pasting, or modifying this Software (in whole or in part) for submission as your own academic work (assignments, labs, projects).</li>
                         <li>Removing this license or the copyright headers from any file to conceal the code's origin.</li>
                         <li>Redistributing this code on other platforms without the Author's written consent.</li>
                     </ul>
-                    <p class="font-bold text-red-700 mt-3 text-sm uppercase">ANY VIOLATION OF SECTION 4 CONSTITUTES A BREACH OF COPYRIGHT AND ACADEMIC MISCONDUCT.</p>
+                    <p class="font-bold text-red-500 mt-3 text-sm uppercase">ANY VIOLATION OF SECTION 4 CONSTITUTES A BREACH OF COPYRIGHT AND ACADEMIC MISCONDUCT.</p>
                 </div>
 
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">5. ENFORCEMENT & REPORTING</h5>
+                    <h5 class="font-bold text-white mb-2">5. ENFORCEMENT & REPORTING</h5>
                     <p>The Author reserves the right to employ software forensics (including Git history and commit timestamps) to establish original ownership. The Author reserves the right to forward evidence of unauthorized use and license violation to:</p>
                     <ul class="list-disc pl-5 mt-1 space-y-1">
                         <li>The Department Head / Faculty of the relevant institution.</li>
@@ -18698,19 +18773,19 @@ void merge(int a[], int n1, int b[], int n2)
                 </div>
 
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">6. NO WARRANTY</h5>
+                    <h5 class="font-bold text-white mb-2">6. NO WARRANTY</h5>
                     <p class="text-xs uppercase">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE AUTHOR BEARS NO LIABILITY FOR ACADEMIC PENALTIES INCURRED BY USERS WHO VIOLATE THEIR INSTITUTION'S ACADEMIC INTEGRITY POLICIES BY USING THIS CODE.</p>
                 </div>
 
                 <div>
-                    <h5 class="font-bold text-slate-900 mb-2">7. GOVERNING LAW</h5>
+                    <h5 class="font-bold text-white mb-2">7. GOVERNING LAW</h5>
                     <p>Any legal disputes regarding the ownership or misuse of this code shall be subject to the laws of India and the jurisdiction of West Bengal.</p>
                 </div>
             </div>
         </div>
 
         <!-- Modal Footer -->
-        <div id="license-footer" class="px-6 py-4 border-t border-slate-100 bg-slate-50 rounded-b-xl flex justify-end shrink-0 gap-3">
+        <div id="license-footer" class="px-6 py-4 border-t border-neutral-800 bg-[#111] rounded-b-xl flex justify-end shrink-0 gap-3">
           <!-- Buttons Injected via JS -->
         </div>
       </div>
@@ -18719,24 +18794,24 @@ void merge(int a[], int n1, int b[], int n2)
     <!-- Confirm Dialog Modal -->
     <div
       id="confirm-modal"
-      class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
     >
-      <div class="bg-white w-full max-w-sm rounded-xl shadow-2xl flex flex-col border border-slate-200 transform scale-95 transition-transform duration-200 p-6">
-        <h3 class="text-lg font-bold text-slate-800 mb-2">Clear Recent Files?</h3>
-        <p class="text-sm text-slate-600 mb-6">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
+      <div class="bg-[#111] w-full max-w-sm rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 p-6">
+        <h3 class="text-lg font-bold text-white mb-2 font-heading">Clear Recent Files?</h3>
+        <p class="text-sm text-neutral-400 mb-6 font-mono">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
         <div class="flex justify-end gap-3">
-            <button onclick="closeConfirmModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-lg transition-colors">Cancel</button>
-            <button onclick="confirmClearRecentAction()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm">Delete</button>
+            <button onclick="closeConfirmModal()" class="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 text-sm font-medium rounded-lg transition-colors border border-neutral-700 font-mono">Cancel</button>
+            <button onclick="confirmClearRecentAction()" class="px-4 py-2 bg-red-900/50 hover:bg-red-900 text-red-200 hover:text-white text-sm font-medium rounded-lg transition-colors shadow-sm border border-red-900 font-mono">Delete</button>
         </div>
       </div>
     </div>
     
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-4 right-4 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <div id="toast" class="fixed bottom-4 right-4 bg-neutral-900 text-lime-300 px-4 py-2 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2 border border-lime-300/30">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
-        <span>Link copied to clipboard!</span>
+        <span class="font-mono text-xs uppercase">Link copied to clipboard!</span>
     </div>
 
     <script>
@@ -18815,12 +18890,12 @@ void merge(int a[], int n1, int b[], int n2)
       function setBtnState(btn, isActive) {
           if (isActive) {
               btn.disabled = false;
-              // Active Style (Blue)
-              btn.className = "text-xs font-bold text-blue-600 hover:bg-blue-50 px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer border border-blue-100 shadow-sm";
+              // Active Style (Lime)
+              btn.className = "text-xs font-bold text-lime-300 hover:bg-lime-300/10 px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer border border-lime-300/30 shadow-sm font-mono";
           } else {
               btn.disabled = true;
               // Inactive Style (Grey)
-              btn.className = "text-xs font-bold text-slate-400 px-3 py-1.5 rounded-md cursor-not-allowed bg-slate-50 border border-transparent";
+              btn.className = "text-xs font-bold text-neutral-600 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono";
           }
       }
 
@@ -18858,10 +18933,7 @@ void merge(int a[], int n1, int b[], int n2)
       function checkStorageExpiry() {
           const now = Date.now();
           const setupTime = localStorage.getItem('bsc_setup_time');
-          // 3 days for standard reset, 72 hours for theme reset (logic combined here for simplicity as requested)
-          // The prompt asked for theme to reset at 72 hours. 
-          // Since 3 days == 72 hours, we can use one timer for general preferences or separate if strictly needed.
-          // Let's use one 'setup_time' for all expiration logic to keep it simple.
+          // 3 days for standard reset
           const threeDays = 3 * 24 * 60 * 60 * 1000; 
 
           if (!setupTime) {
@@ -18898,15 +18970,15 @@ void merge(int a[], int n1, int b[], int n2)
           
           recentFiles.forEach(file => {
               const item = document.createElement('div');
-              item.className = "flex items-center gap-2 px-3 py-2 bg-white hover:bg-blue-50 border border-slate-200 rounded-lg cursor-pointer transition-all group";
+              item.className = "flex items-center gap-2 px-3 py-2 bg-[#111] hover:bg-lime-300/10 hover:border-lime-300/30 border border-neutral-800 rounded-lg cursor-pointer transition-all group";
               item.onclick = () => showCode(file.storageId, file.name, file.url);
               item.innerHTML = `
-                  <div class="p-1.5 rounded-md bg-blue-100/50 text-blue-600">
+                  <div class="p-1.5 rounded-md bg-lime-300/10 text-lime-300">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <span class="text-xs font-medium text-slate-700 truncate">${file.name}</span>
+                  <span class="text-xs font-medium text-neutral-400 group-hover:text-white truncate font-mono">${file.name}</span>
               `;
               list.appendChild(item);
           });
@@ -19053,7 +19125,7 @@ void merge(int a[], int n1, int b[], int n2)
              newTabBtn.onclick = () => {
                  const newWindow = window.open();
                  newWindow.document.write('<html><head><title>' + filename + '</title>');
-                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #f0f0f0;} </style>');
+                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #0d1117; color: #e6edf3;} </style>');
                  newWindow.document.write('</head><body><pre>' + storedContent.textContent.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
                  newWindow.document.close();
              };
@@ -19140,12 +19212,12 @@ void merge(int a[], int n1, int b[], int n2)
               licenseCloseBtn.classList.add("hidden");
               
               const btnDecline = document.createElement("button");
-              btnDecline.className = "px-4 py-2 bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-600 text-sm font-medium rounded-lg transition-colors border border-slate-200";
+              btnDecline.className = "px-4 py-2 bg-neutral-900 hover:bg-red-900/20 text-neutral-400 hover:text-red-400 text-sm font-medium rounded-lg transition-colors border border-neutral-700 font-mono";
               btnDecline.innerText = "Decline";
               btnDecline.onclick = declineLicense;
               
               const btnAccept = document.createElement("button");
-              btnAccept.className = "px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm";
+              btnAccept.className = "px-4 py-2 bg-lime-300 hover:bg-lime-400 text-black text-sm font-bold rounded-lg transition-colors shadow-sm font-mono";
               btnAccept.innerText = "Accept";
               btnAccept.onclick = acceptLicense;
               
@@ -19156,7 +19228,7 @@ void merge(int a[], int n1, int b[], int n2)
               licenseCloseBtn.classList.remove("hidden");
               
               const btnUnderstand = document.createElement("button");
-              btnUnderstand.className = "px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-colors shadow-sm";
+              btnUnderstand.className = "px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-medium rounded-lg transition-colors shadow-sm border border-neutral-700 font-mono";
               btnUnderstand.innerText = "I Understand";
               btnUnderstand.onclick = hideLicense;
               
@@ -19327,7 +19399,7 @@ void merge(int a[], int n1, int b[], int n2)
                             // Create Snippet Element
                             const snippetDiv = document.createElement('div');
                             // w-full ensures it breaks to new line in flex-wrap container
-                            snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-2 bg-slate-100 border-l-4 border-blue-400 rounded-r text-xs font-mono text-slate-600 overflow-x-auto shadow-sm cursor-pointer hover:bg-slate-200 transition-colors';
+                            snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-2 bg-[#111] border-l-4 border-lime-300 rounded-r text-xs font-mono text-neutral-400 overflow-x-auto shadow-sm cursor-pointer hover:bg-neutral-900 transition-colors';
                             
                             // Click event to open file from snippet
                             snippetDiv.onclick = (evt) => {
@@ -19352,12 +19424,12 @@ void merge(int a[], int n1, int b[], int n2)
                                                    .replace(/'/g, "&#039;");
 
                                 // Highlight matches
-                                safeLine = safeLine.replace(highlightRegex, '<mark class="bg-yellow-200 text-slate-900 font-bold rounded-sm px-0.5">$1</mark>');
+                                safeLine = safeLine.replace(highlightRegex, '<mark class="bg-lime-300 text-black font-bold rounded-sm px-0.5">$1</mark>');
                                 
                                 const isMatchLine = (currentLineNum - 1) === lineCount;
-                                const lineClass = isMatchLine ? 'bg-blue-200/30 font-semibold' : '';
+                                const lineClass = isMatchLine ? 'bg-lime-300/10 font-semibold' : '';
 
-                                htmlContent += `<div class="whitespace-pre ${lineClass}"><span class="inline-block w-8 text-right mr-3 text-slate-400 select-none border-r border-slate-300 pr-1">${currentLineNum}</span>${safeLine}</div>`;
+                                htmlContent += `<div class="whitespace-pre ${lineClass}"><span class="inline-block w-8 text-right mr-3 text-neutral-600 select-none border-r border-neutral-700 pr-1">${currentLineNum}</span>${safeLine}</div>`;
                             });
                             
                             snippetDiv.innerHTML = htmlContent;
