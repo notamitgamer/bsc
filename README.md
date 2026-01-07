@@ -15,14 +15,14 @@ Any unauthorized use for academic submission is a violation of **Copyright Law**
 * I retain full git history timestamps as proof of ownership.
 * **Violations may be reported to the Department Faculty / Examination Controller.**
 
-### See the [LICENSE](LICENSE) file or [aranag.site/license](https://aranag.site/license) for details.
+### See the [LICENSE](LICENSE) file or [esal.amit.is-a.dev](https://esal.amit.is-a.dev) for details.
 
 > **Do not copy. Learn, understand, and write your own code.**
 
 ---
 🔗 **Website**
 For better viewing experience:
-👉 [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [aranag.site/bsc](https://aranag.site/bsc)
+👉 [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [aranag.site/bsc](https://amit.is-a.dev/bsc)
 
 ---
 
@@ -73,7 +73,7 @@ This guide will walk you through the process of setting up your GCC/G++ compiler
 
 Download the compressed MinGW-w64 files from the hosted location.
 
-> ➡️ **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://aranag.site/download/MinGW64.zip)
+> ➡️ **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://amit.is-a.dev/download/MinGW64.zip)
 
 ### Step 2: Extract the Files
 
