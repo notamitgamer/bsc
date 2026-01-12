@@ -36,7 +36,7 @@ void str_rev(char str[])
     int i, j;
     char temp;
     i = 0;
-    j = strlen(str) - 1;
+    j = strlen(str) - 1; // not taking the null
     while (i < j)
     {
         temp = str[i];

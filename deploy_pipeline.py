@@ -20,7 +20,8 @@ ARANAG_PRESERVE = [
     "README.md",
     "sitemap.xml",
     ".firebase",
-    ".git"
+    ".git",
+    "esal"
 ]
 
 def remove_readonly(func, path, exc_info):
