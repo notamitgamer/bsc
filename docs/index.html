@@ -24,31 +24,29 @@
               heading: ['Space Grotesk', 'sans-serif'],
             },
             colors: {
-              // Re-mapping 'Blue' (used in generator) to 'Lime' (Portfolio Theme)
               blue: {
                 50: 'rgba(190, 242, 100, 0.05)', 
                 100: 'rgba(190, 242, 100, 0.1)',
                 200: '#d9f99d',
                 300: '#bef264',
                 400: '#a3d656',
-                500: '#bef264', // The Main Lime Accent
-                600: '#bef264', // Force standard blue to Lime
+                500: '#bef264',
+                600: '#bef264',
                 700: '#84cc16',
                 800: '#3f6212',
                 900: '#365314',
               },
-              // Re-mapping 'Slate' (used in generator) to 'Dark/Zinc'
               slate: {
-                50: '#050505',  // Main Background
-                100: '#111111', // Secondary Background
-                200: '#27272a', // Borders
+                50: '#050505',
+                100: '#111111',
+                200: '#27272a',
                 300: '#404040',
                 400: '#525252',
-                500: '#737373', // Muted Text
-                600: '#a1a1aa', // Primary Text in this context
-                700: '#d4d4d8', // Light Text
+                500: '#737373',
+                600: '#a1a1aa',
+                700: '#d4d4d8',
                 800: '#e4e4e7',
-                900: '#f5f5f5', // White Text
+                900: '#f5f5f5',
               }
             }
           }
@@ -56,13 +54,18 @@
       }
     </script>
     
-    <!-- Theme: GitHub Dark -->
-    <link
-      id="highlight-theme"
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- CodeMirror 5 (Professional Editor) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <!-- LZ-String Compression -->
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
 
     <style>
       :root {
@@ -81,8 +84,6 @@
       
       h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
 
-      /* --- Visual Effects (From Portfolio) --- */
-      
       /* Noise Texture */
       .bg-noise {
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -103,10 +104,6 @@
         transform: rotate(180deg);
       }
 
-      /* --- UI Overrides for Generated Content --- */
-      
-      /* Force generated file items to look correct in dark mode 
-         Since generated HTML uses 'hover:bg-white', we override it here. */
       .file-item:hover {
         background-color: rgba(190, 242, 100, 0.05) !important;
         border-color: rgba(190, 242, 100, 0.2) !important;
@@ -115,16 +112,14 @@
         background-color: #111111 !important;
       }
       
-      /* Update Text Colors for Generated Content */
       .text-slate-700 { color: #d4d4d8 !important; }
       .text-slate-600 { color: #a1a1aa !important; }
       .text-slate-500 { color: #737373 !important; }
       
-      /* --- Modal Styles --- */
       #code-modal .modal-content-area {
         height: 85vh;
         max-height: 90vh;
-        background-color: #0d1117 !important; /* GitHub Dark BG */
+        background-color: #0d1117 !important; 
         border: 1px solid #30363d;
       }
       @media (min-width: 640px) {
@@ -137,98 +132,63 @@
         padding: 0;
         margin: 0;
         height: 100%;
-        overflow: auto;
+        overflow: hidden; /* CodeMirror handles scroll */
+        position: relative;
       }
       
-      /* Code Block */
-      #modal-code-block {
-        min-height: 100%;
-        overflow: visible;
-        padding: 1rem;
-        font-family: "JetBrains Mono", "Fira Code", monospace;
-        font-size: 0.8125rem;
-        line-height: 1.6;
-        background-color: transparent !important;
-        display: block;
-        color: #e6edf3;
+      /* CodeMirror Overrides */
+      .CodeMirror {
+        height: 100% !important;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 13px;
+        background-color: #0d1117 !important;
+        color: #f8f8f2;
       }
-
-      @media (min-width: 640px) {
-        #modal-code-block {
-            font-size: 0.875rem;
-            padding: 1.5rem;
-        }
+      .CodeMirror-gutters {
+        background-color: #0d1117 !important;
+        border-right: 1px solid rgba(255,255,255,0.1) !important;
       }
-
-      /* Dark Scrollbars */
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
+      .CodeMirror-linenumber {
+        color: #6e7681 !important;
       }
-      ::-webkit-scrollbar-track {
-        background: #050505;
+      .CodeMirror-cursor {
+        border-left: 2px solid var(--accent) !important;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #27272a;
-        border-radius: 5px;
-        border: 2px solid #050505;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #bef264; /* Lime Hover */
-      }
-
-      .hljs {
-        background: transparent !important;
-      }
-
-      /* Initial hidden state for app content */
-      #app-content {
-          display: none;
-      }
-
-      /* Back to Top Button */
-      #back-to-top {
-          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-      }
-      #back-to-top.hidden {
-          opacity: 0;
-          pointer-events: none;
-          transform: translateY(20px);
-      }
-
-      /* Toast Notification */
-      #toast {
-          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      }
-      #toast.show {
-          transform: translateY(0);
-          opacity: 1;
-      }
-
-      /* Keyboard Navigation Highlight */
-      .file-item.nav-selected {
-          background-color: rgba(190, 242, 100, 0.1) !important;
-          border-color: #bef264 !important;
-      }
-      .file-item.nav-selected span {
-          color: #bef264 !important;
+      .CodeMirror-selected {
+        background: rgba(190, 242, 100, 0.2) !important;
       }
       
-      #modal-filename {
-          color: #e6edf3;
-      }
-      #code-loading {
-          background-color: #0d1117;
-      }
+      /* Scrollbar styling */
+      .CodeMirror-scroll::-webkit-scrollbar,
+      ::-webkit-scrollbar { width: 10px; height: 10px; }
+      .CodeMirror-scroll::-webkit-scrollbar-track,
+      ::-webkit-scrollbar-track { background: #050505; }
+      .CodeMirror-scroll::-webkit-scrollbar-thumb,
+      ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 5px; border: 2px solid #050505; }
+      .CodeMirror-scroll::-webkit-scrollbar-thumb:hover,
+      ::-webkit-scrollbar-thumb:hover { background: #bef264; }
+
+      #app-content { display: none; }
+      
+      #back-to-top { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
+      #back-to-top.hidden { opacity: 0; pointer-events: none; transform: translateY(20px); }
+
+      #toast { transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+      #toast.show { transform: translateY(0); opacity: 1; }
+
+      .file-item.nav-selected { background-color: rgba(190, 242, 100, 0.1) !important; border-color: #bef264 !important; }
+      .file-item.nav-selected span { color: #bef264 !important; }
+      
+      #modal-filename { color: #e6edf3; }
+      #code-loading { background-color: #0d1117; }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden relative selection:bg-lime-300 selection:text-black">
     
-    <!-- Effects -->
     <div class="bg-noise"></div>
     <div class="crt-scanline"></div>
 
-    <!-- App Wrapper (Hidden until license accepted) -->
+    <!-- App Wrapper -->
     <div id="app-content" class="flex flex-col h-full overflow-hidden relative z-10">
         <!-- Header -->
         <header
@@ -238,117 +198,66 @@
         <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
             <div class="flex items-center gap-3">
                 <div class="p-2 bg-lime-300/10 rounded-lg shrink-0 border border-lime-300/20">
-                <svg
-                    class="w-6 h-6 text-lime-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"
-                    ></path>
+                <svg class="w-6 h-6 text-lime-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
                 </svg>
                 </div>
                 <div class="min-w-0">
-                <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight truncate font-heading">
-                    notamitgamer/bsc
-                </h1>
-                <p class="text-xs text-neutral-500 font-medium mt-0.5 truncate font-mono">
-                    Repository File Index
-                </p>
+                <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight truncate font-heading">notamitgamer/bsc</h1>
+                <p class="text-xs text-neutral-500 font-medium mt-0.5 truncate font-mono">Repository File Index</p>
                 </div>
             </div>
             
             <div class="flex items-center gap-2 sm:hidden">
-                 <!-- Mobile: License Button (Icon Only) -->
-                <button
-                onclick="openLicenseModal(false)"
-                class="p-2 text-neutral-400 hover:text-lime-300 bg-neutral-900 rounded-md transition-colors border border-neutral-800"
-                title="View License"
-                >
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
-                </button>
-
-                <!-- Mobile: Github Icon -->
-                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-neutral-400 hover:text-white">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                <button onclick="openLicenseModal(false)" class="p-2 text-neutral-400 hover:text-lime-300 bg-neutral-900 rounded-md transition-colors border border-neutral-800" title="View License">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                     </svg>
+                </button>
+                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-neutral-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
         </div>
 
         <!-- Actions Section -->
         <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
-            
-            <!-- Desktop: License Button (Text + Icon) -->
-            <button
-            onclick="openLicenseModal(false)"
-            class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-md transition-colors shrink-0 font-mono border border-transparent hover:border-lime-300/20"
-            title="View License"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-            </svg>
-            <span class="inline">License</span>
+            <button onclick="openLicenseModal(false)" class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-md transition-colors shrink-0 font-mono border border-transparent hover:border-lime-300/20" title="View License">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                <span class="inline">License</span>
             </button>
 
-            <!-- Search Bar -->
             <div class="relative group grow sm:grow-0 w-full sm:w-auto">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-4 w-4 text-neutral-500 group-focus-within:text-lime-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
+                    <svg class="h-4 w-4 text-neutral-500 group-focus-within:text-lime-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
-                <input
-                    type="text"
-                    id="search-input"
-                    placeholder="Search code... (/)"
-                    class="pl-10 pr-10 sm:pr-4 py-2 bg-[#111] border border-neutral-800 rounded-lg text-sm w-full sm:w-64 focus:ring-1 focus:ring-lime-300/50 focus:border-lime-300/50 focus:bg-[#050505] transition-all outline-none text-neutral-200 placeholder:text-neutral-600 font-mono"
-                />
+                <input type="text" id="search-input" placeholder="Search code... (/)" class="pl-10 pr-10 sm:pr-4 py-2 bg-[#111] border border-neutral-800 rounded-lg text-sm w-full sm:w-64 focus:ring-1 focus:ring-lime-300/50 focus:border-lime-300/50 focus:bg-[#050505] transition-all outline-none text-neutral-200 placeholder:text-neutral-600 font-mono"/>
                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
                     <span class="text-[10px] text-neutral-600 font-mono border border-neutral-800 rounded px-1.5 py-0.5 bg-[#111]">/</span>
                 </div>
             </div>
             
-            <!-- Desktop Github Button -->
-            <a
-            href="https://github.com/notamitgamer/bsc"
-            target="_blank"
-            class="hidden sm:flex bg-neutral-100 hover:bg-lime-300 text-black px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2 font-mono"
-            >
-            <span>GitHub</span>
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-            </svg>
+            <a href="https://github.com/notamitgamer/bsc" target="_blank" class="hidden sm:flex bg-neutral-100 hover:bg-lime-300 text-black px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2 font-mono">
+                <span>GitHub</span>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
             </a>
         </div>
         </header>
 
         <!-- Main Content Area -->
         <main class="flex-1 flex overflow-hidden relative" id="main-scroll-container">
-        <!-- File Explorer (Left Panel) -->
+        <!-- File Explorer -->
         <div class="flex-1 overflow-y-auto p-4 sm:p-6 h-full" id="file-explorer-scroll">
             <div class="max-w-4xl mx-auto space-y-4">
-                
-                <!-- Recent Files Section -->
                 <div id="recent-files-container" class="hidden mb-6">
                     <div class="flex items-center justify-between mb-3 px-1">
                         <h2 class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-mono">Recent Files</h2>
                         <button onclick="confirmClearRecent()" class="text-xs text-red-400 hover:text-red-500 font-medium transition-colors hover:underline font-mono">Clear</button>
                     </div>
-                    <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-                        <!-- Recent files injected here -->
-                    </div>
+                    <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"></div>
                     <hr class="mt-4 border-white/10">
                 </div>
 
-                <!-- Global Controls (Sticky) -->
                 <div class="sticky top-0 z-20 bg-[#050505] py-2 flex justify-end gap-2 border-b border-white/10 backdrop-blur-sm bg-opacity-90 mb-2">
                     <button id="btn-expand" onclick="expandAll()" class="text-xs font-bold text-neutral-500 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono" disabled>Expand All</button>
                     <span class="text-neutral-700">|</span>
@@ -356,7 +265,6 @@
                 </div>
 
                 <div id="file-list-container">
-                <!-- Python script will inject the file list here -->
                 
         <div class="folder-container mb-2">
             <div class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-slate-100 rounded-lg transition-colors group select-none" onclick="toggleFolder(this)">
@@ -18522,28 +18430,17 @@ void str_rev(char str[])
             </div>
         </div>
         
-        <!-- Back to Top Button -->
         <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 p-3 bg-neutral-900 border border-neutral-700 text-lime-300 rounded-full shadow-lg hover:bg-lime-300 hover:text-black transition-all z-30">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-            </svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
         </button>
-
         </main>
     </div>
 
     <!-- Code Viewer Modal -->
-    <div
-      id="code-modal"
-      class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-50 p-2 sm:p-6 opacity-0 transition-opacity duration-200"
-    >
-      <div
-        class="bg-[#0d1117] w-full max-w-6xl rounded-xl shadow-2xl flex flex-col border border-white/10 transform scale-95 transition-transform duration-200 modal-content-area"
-      >
+    <div id="code-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-50 p-2 sm:p-6 opacity-0 transition-opacity duration-200">
+      <div class="bg-[#0d1117] w-full max-w-6xl rounded-xl shadow-2xl flex flex-col border border-white/10 transform scale-95 transition-transform duration-200 modal-content-area">
         <!-- Modal Header -->
-        <div
-          class="flex items-center justify-between px-3 sm:px-4 py-3 border-b border-white/10 bg-[#161b22] rounded-t-xl shrink-0 gap-2"
-        >
+        <div class="flex items-center justify-between px-3 sm:px-4 py-3 border-b border-white/10 bg-[#161b22] rounded-t-xl shrink-0 gap-2">
           <div class="flex items-center gap-3 overflow-hidden">
             <div class="flex gap-1.5 shrink-0 opacity-50">
               <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -18551,166 +18448,92 @@ void str_rev(char str[])
               <div class="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
             <div class="flex flex-col min-w-0">
-              <h3
-                id="modal-filename"
-                class="text-xs sm:text-sm font-mono text-lime-300 truncate font-medium"
-              >
-                filename.c
-              </h3>
-              <!-- File Size Indicator -->
+              <h3 id="modal-filename" class="text-xs sm:text-sm font-mono text-lime-300 truncate font-medium">filename.c</h3>
               <span id="modal-filesize" class="text-[10px] text-neutral-500 font-mono"></span>
             </div>
           </div>
-          <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+          
+          <div class="flex items-center gap-1 sm:gap-2 shrink-0 relative">
             
-            <!-- Open in New Tab Button -->
-            <button
-              id="new-tab-btn"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
-              title="Open in New Tab"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
+            <!-- Desktop Buttons Group -->
+            <div class="hidden sm:flex items-center gap-1 sm:gap-2">
+                <button id="new-tab-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Open in New Tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                </button>
+
+                <!-- Compiler Button -->
+                <button onclick="openInCompiler()" class="p-2 text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-all group relative" title="Open in C Compiler">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+
+                <button id="download-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Download File">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                </button>
+
+                <button id="print-btn" onclick="printCode()" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Print Code">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                </button>
+
+                <button id="share-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Copy Link">
+                    <svg id="share-icon-default" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                    <svg id="share-icon-success" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </button>
+
+                <button id="copy-code-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Copy Code">
+                    <svg id="copy-icon-default" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    <svg id="copy-icon-success" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                </button>
+
+                <a id="modal-raw-link" href="#" target="_blank" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" title="View Raw on GitHub">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="sm:hidden p-2 text-neutral-400 hover:text-white rounded-lg" onclick="toggleMobileMenu(event)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
             </button>
 
-            <!-- Download Button -->
-            <button
-              id="download-btn"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
-              title="Download File"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </button>
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu-dropdown" class="hidden absolute top-full right-0 mt-2 w-48 bg-[#161b22] border border-white/10 rounded-xl shadow-xl z-50 overflow-hidden font-mono text-sm">
+                <button onclick="openInCompiler()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-lime-300 flex items-center gap-3 transition-colors border-b border-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Compile / Run
+                </button>
+                <button onclick="document.getElementById('new-tab-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    New Tab
+                </button>
+                <button onclick="document.getElementById('download-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    Download
+                </button>
+                <button onclick="printCode()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                    Print
+                </button>
+                <button onclick="document.getElementById('share-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                    Share Link
+                </button>
+                <button onclick="document.getElementById('copy-code-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    Copy Code
+                </button>
+                <a id="mobile-github-link" href="#" target="_blank" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors border-t border-white/5">
+                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    View on GitHub
+                </a>
+            </div>
 
-            <!-- Print Button -->
-            <button
-              id="print-btn"
-              onclick="printCode()"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
-              title="Print Code"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-              </svg>
-            </button>
-
-            <!-- Share Button -->
-            <button
-              id="share-btn"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
-              title="Copy Link"
-            >
-              <svg
-                id="share-icon-default"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                />
-              </svg>
-              <svg
-                id="share-icon-success"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </button>
-
-            <!-- Copy Code Button -->
-            <button
-              id="copy-code-btn"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative"
-              title="Copy Code"
-            >
-              <svg
-                id="copy-icon-default"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                />
-              </svg>
-              <svg
-                id="copy-icon-success"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </button>
-
-            <!-- View on GitHub Button -->
-            <a
-              id="modal-raw-link"
-              href="#"
-              target="_blank"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-              title="View Raw on GitHub"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
-            <button
-              onclick="hideCode()"
-              class="p-2 text-neutral-400 hover:text-white hover:bg-red-900/30 hover:text-red-400 rounded-lg transition-colors ml-1"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
+            <!-- Close Button (Always Visible) -->
+            <button onclick="hideCode()" class="p-2 text-neutral-400 hover:text-white hover:bg-red-900/30 hover:text-red-400 rounded-lg transition-colors ml-1" title="Close">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>
         </div>
@@ -18718,31 +18541,20 @@ void str_rev(char str[])
         <!-- Code Content -->
         <div class="flex-1 min-h-0 bg-[#0d1117] relative dark-modal-bg">
           <!-- Loading State -->
-          <div
-            id="code-loading"
-            class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117] hidden"
-          >
-            <div
-              class="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-300"
-            ></div>
+          <div id="code-loading" class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117] hidden">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-300"></div>
           </div>
           <!-- Code Container -->
-          <div id="modal-code-container" class="custom-scrollbar">
-            <!-- Code Block -->
-            <pre class="m-0 p-0 flex-grow"><code id="modal-code-block" class="language-c h-full block"></code></pre>
+          <div id="modal-code-container" class="w-full h-full">
+             <!-- CodeMirror is injected here -->
           </div>
         </div>
       </div>
     </div>
     
     <!-- License Modal -->
-    <div
-      id="license-modal"
-      class="fixed inset-0 bg-black/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
-    >
-      <div
-        class="bg-[#111] w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]"
-      >
+    <div id="license-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200">
+      <div class="bg-[#111] w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]">
         <!-- Modal Header -->
         <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-800 shrink-0">
           <h3 class="text-lg font-bold text-white flex items-center gap-2 font-heading">
@@ -18752,26 +18564,11 @@ void str_rev(char str[])
             License Information
           </h3>
           <div class="flex items-center gap-2">
-             <!-- License Download Button -->
-             <a
-             href="https://esal.amit.is-a.dev"
-             target="_blank"
-             class="p-2 text-neutral-500 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-colors"
-             title="Download License PDF"
-           >
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-             </svg>
-           </a>
-           
-            <button
-                id="license-close-btn"
-                onclick="hideLicense()"
-                class="p-2 text-neutral-500 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors hidden"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+             <a href="https://esal.amit.is-a.dev" target="_blank" class="p-2 text-neutral-500 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-colors" title="Download License PDF">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+             </a>
+            <button id="license-close-btn" onclick="hideLicense()" class="p-2 text-neutral-500 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
           </div>
         </div>
@@ -18811,9 +18608,7 @@ void str_rev(char str[])
 
                 <div class="bg-red-900/10 border border-red-900/30 rounded p-4">
                     <h5 class="font-bold text-red-500 mb-2 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
                         4. STRICT PROHIBITIONS (THE "ANTI-PLAGIARISM" CLAUSE)
                     </h5>
                     <p class="text-red-400 mb-2">The rights granted in Section 3 are strictly conditional. You are EXPRESSLY PROHIBITED from:</p>
@@ -18848,17 +18643,12 @@ void str_rev(char str[])
         </div>
 
         <!-- Modal Footer -->
-        <div id="license-footer" class="px-6 py-4 border-t border-neutral-800 bg-[#111] rounded-b-xl flex justify-end shrink-0 gap-3">
-          <!-- Buttons Injected via JS -->
-        </div>
+        <div id="license-footer" class="px-6 py-4 border-t border-neutral-800 bg-[#111] rounded-b-xl flex justify-end shrink-0 gap-3"></div>
       </div>
     </div>
     
     <!-- Confirm Dialog Modal -->
-    <div
-      id="confirm-modal"
-      class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200"
-    >
+    <div id="confirm-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200">
       <div class="bg-[#111] w-full max-w-sm rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 p-6">
         <h3 class="text-lg font-bold text-white mb-2 font-heading">Clear Recent Files?</h3>
         <p class="text-sm text-neutral-400 mb-6 font-mono">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
@@ -18871,59 +18661,38 @@ void str_rev(char str[])
     
     <!-- Toast Notification -->
     <div id="toast" class="fixed bottom-4 right-4 bg-neutral-900 text-lime-300 px-4 py-2 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2 border border-lime-300/30">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
         <span class="font-mono text-xs uppercase">Link copied to clipboard!</span>
     </div>
 
     <script>
       function toggleFolder(header) {
-        // Handle both Event objects (from onclick="toggleFolder(event)") 
-        // and Element objects (from onclick="toggleFolder(this)")
-        if (header instanceof Event) {
-            header = header.currentTarget;
-        }
-
-        // Sanity Check
-        if (!header || typeof header.querySelector !== 'function') {
-            console.error("toggleFolder Error: Invalid header argument.", header);
-            return;
-        }
+        if (header instanceof Event) header = header.currentTarget;
+        if (!header || typeof header.querySelector !== 'function') return;
 
         const content = header.nextElementSibling;
         const icon = header.querySelector(".chevron");
         const folderIcon = header.querySelector(".folder-icon");
 
-        // Toggle hidden class
         content.classList.toggle("hidden");
         icon.classList.toggle("rotated");
 
-        // Optional: Change folder icon (open/closed)
         if (content.classList.contains("hidden")) {
-          // Closed folder
           folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>`;
         } else {
-          // Open folder (visual enhancement)
           folderIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>`;
         }
-        
-        // Update global controls based on new state
         updateFolderState();
       }
       
-      /* --- Expand/Collapse All Logic --- */
       function updateFolderState() {
           const folders = document.querySelectorAll('.folder-container');
           const total = folders.length;
           let openCount = 0;
 
           folders.forEach(f => {
-              // The content div is the second child of the folder container
               const content = f.children[1];
-              if (!content.classList.contains('hidden')) {
-                  openCount++;
-              }
+              if (!content.classList.contains('hidden')) openCount++;
           });
 
           const btnExpand = document.getElementById('btn-expand');
@@ -18936,15 +18705,12 @@ void str_rev(char str[])
           }
           
           if (openCount === 0) {
-              // All folders are collapsed
               setBtnState(btnExpand, true);
               setBtnState(btnCollapse, false);
           } else if (openCount === total) {
-              // All folders are expanded
               setBtnState(btnExpand, false);
               setBtnState(btnCollapse, true);
           } else {
-              // Mixed state
               setBtnState(btnExpand, true);
               setBtnState(btnCollapse, true);
           }
@@ -18953,11 +18719,9 @@ void str_rev(char str[])
       function setBtnState(btn, isActive) {
           if (isActive) {
               btn.disabled = false;
-              // Active Style (Lime)
               btn.className = "text-xs font-bold text-lime-300 hover:bg-lime-300/10 px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer border border-lime-300/30 shadow-sm font-mono";
           } else {
               btn.disabled = true;
-              // Inactive Style (Grey)
               btn.className = "text-xs font-bold text-neutral-600 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono";
           }
       }
@@ -18988,35 +18752,25 @@ void str_rev(char str[])
           updateFolderState();
       }
       
-      /* --- Recent Files Logic --- */
       const MAX_RECENT_FILES = 6;
       let recentFiles = JSON.parse(localStorage.getItem('bsc_recent_files') || '[]');
       
-      // Auto-reset check
       function checkStorageExpiry() {
           const now = Date.now();
           const setupTime = localStorage.getItem('bsc_setup_time');
-          // 3 days for standard reset
           const threeDays = 3 * 24 * 60 * 60 * 1000; 
 
           if (!setupTime) {
-              // First run or cleared
               localStorage.setItem('bsc_setup_time', now);
           } else {
               if (now - parseInt(setupTime) > threeDays) {
-                  // Expired
-                  console.log("Storage expired. Resetting.");
                   localStorage.removeItem('license_accepted');
                   localStorage.removeItem('bsc_recent_files');
-                  localStorage.setItem('bsc_setup_time', now); // Reset timer
-                  
-                  // Reset memory variables if needed
+                  localStorage.setItem('bsc_setup_time', now);
                   recentFiles = []; 
               }
           }
       }
-      
-      // Call immediately
       checkStorageExpiry();
 
       function updateRecentFilesUI() {
@@ -19048,18 +18802,13 @@ void str_rev(char str[])
       }
 
       function addToRecent(storageId, name, url) {
-          // Remove if already exists
           recentFiles = recentFiles.filter(f => f.name !== name);
-          // Add to top
           recentFiles.unshift({ storageId, name, url });
-          // Limit size
           if (recentFiles.length > MAX_RECENT_FILES) recentFiles.pop();
-          // Save and Update UI
           localStorage.setItem('bsc_recent_files', JSON.stringify(recentFiles));
           updateRecentFilesUI();
       }
 
-      /* --- Custom Confirm Modal Logic --- */
       const confirmModal = document.getElementById("confirm-modal");
       
       function confirmClearRecent() {
@@ -19084,24 +18833,21 @@ void str_rev(char str[])
           closeConfirmModal();
       }
       
-      // Init Recent Files
       updateRecentFilesUI();
 
-      /* --- Scroll to Top Logic --- */
       const scrollContainer = document.getElementById('file-explorer-scroll');
       const backToTopBtn = document.getElementById('back-to-top');
 
       scrollContainer.addEventListener('scroll', () => {
           if (scrollContainer.scrollTop > 300) {
               backToTopBtn.classList.remove('hidden');
-              // Small delay to allow display:block to apply before opacity transition
               setTimeout(() => {
                   backToTopBtn.classList.remove('opacity-0', 'translate-y-4');
               }, 10);
           } else {
               backToTopBtn.classList.add('opacity-0', 'translate-y-4');
               setTimeout(() => {
-                  if(scrollContainer.scrollTop <= 300) { // Check again in case user scrolled back up quickly
+                  if(scrollContainer.scrollTop <= 300) { 
                       backToTopBtn.classList.add('hidden');
                   }
               }, 300);
@@ -19115,11 +18861,9 @@ void str_rev(char str[])
           });
       }
       
-      /* --- Toast Notification Logic --- */
       function showToast() {
           const toast = document.getElementById("toast");
           toast.classList.remove("hidden");
-          // Force reflow
           void toast.offsetWidth; 
           toast.classList.add("show", "translate-y-0", "opacity-100");
           toast.classList.remove("translate-y-20", "opacity-0");
@@ -19133,18 +18877,27 @@ void str_rev(char str[])
           }, 3000);
       }
 
-      /* --- Code Modal Logic --- */
+      /* --- Code Modal Logic with CodeMirror --- */
       const modal = document.getElementById("code-modal");
-      const modalCodeBlock = document.getElementById("modal-code-block");
       const modalFilename = document.getElementById("modal-filename");
       const modalFileSize = document.getElementById("modal-filesize");
       const modalRawLink = document.getElementById("modal-raw-link");
       const loadingSpinner = document.getElementById("code-loading");
       const newTabBtn = document.getElementById("new-tab-btn");
+      const mobileGithubLink = document.getElementById("mobile-github-link");
 
       let currentFileUrl = "";
+      let editor = null;
 
-      // MODIFIED: Fetch from hidden ID instead of Network URL
+      function detectMode(filename) {
+          if (filename.endsWith('.c')) return 'text/x-csrc';
+          if (filename.endsWith('.cpp') || filename.endsWith('.h')) return 'text/x-c++src';
+          if (filename.endsWith('.py')) return 'text/x-python';
+          if (filename.endsWith('.js')) return 'text/javascript';
+          if (filename.endsWith('.html') || filename.endsWith('.xml')) return 'text/html';
+          return 'text/plain';
+      }
+
       function showCode(storageId, filename, rawUrl) {
         currentFileUrl = window.location.href.split("?")[0] + "?file=" + encodeURIComponent(filename); 
         modal.classList.remove("hidden");
@@ -19154,63 +18907,69 @@ void str_rev(char str[])
 
         modalFilename.textContent = filename;
         modalRawLink.href = rawUrl;
+        if(mobileGithubLink) mobileGithubLink.href = rawUrl;
         
-        // Add to recent files
         addToRecent(storageId, filename, rawUrl);
         
-        // Reset Share Button State
-        const shareIconDefault = document.getElementById("share-icon-default");
-        const shareIconSuccess = document.getElementById("share-icon-success");
-        shareIconDefault.classList.remove("hidden", "scale-0");
-        shareIconSuccess.classList.add("hidden", "scale-0");
-        
-        // Reset Copy Button State
-        const copyIconDefault = document.getElementById("copy-icon-default");
-        const copyIconSuccess = document.getElementById("copy-icon-success");
-        copyIconDefault.classList.remove("hidden", "scale-0");
-        copyIconSuccess.classList.add("hidden", "scale-0");
-
-        // LOAD FROM HIDDEN ELEMENT
         const storedContent = document.getElementById(storageId);
+        let code = "";
         
         if (storedContent) {
-             const code = storedContent.innerHTML;
-             modalCodeBlock.innerHTML = code;
-             delete modalCodeBlock.dataset.highlighted; 
-             hljs.highlightElement(modalCodeBlock);
+             code = storedContent.textContent;
              
-             // Estimate Size (Characters)
-             const bytes = new Blob([storedContent.textContent]).size;
+             const bytes = new Blob([code]).size;
              const sizeStr = bytes > 1024 ? (bytes/1024).toFixed(2) + " KB" : bytes + " B";
              modalFileSize.textContent = sizeStr;
              
-             // Setup New Tab Button
              newTabBtn.onclick = () => {
                  const newWindow = window.open();
                  newWindow.document.write('<html><head><title>' + filename + '</title>');
                  newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #0d1117; color: #e6edf3;} </style>');
-                 newWindow.document.write('</head><body><pre>' + storedContent.textContent.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
+                 newWindow.document.write('</head><body><pre>' + code.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
                  newWindow.document.close();
              };
 
         } else {
-            modalCodeBlock.textContent = "Error: Code content not found in page.";
+            code = "// Error: Content not found";
             modalFileSize.textContent = "";
         }
+
+        const mode = detectMode(filename);
+
+        if (!editor) {
+            editor = CodeMirror(document.getElementById("modal-code-container"), {
+                value: code,
+                mode: mode,
+                theme: "dracula",
+                lineNumbers: true,
+                readOnly: true,
+                styleActiveLine: true
+            });
+        } else {
+            editor.setValue(code);
+            editor.setOption("mode", mode);
+        }
+        
+        setTimeout(() => editor.refresh(), 10);
           
-        // Update URL history
         const newUrl = new URL(window.location);
         newUrl.searchParams.set('file', filename);
         window.history.pushState({ path: newUrl.href }, '', newUrl.href);
       }
 
       function hideCode() {
+        // Close mobile menu if open
+        const dropdown = document.getElementById('mobile-menu-dropdown');
+        if (!dropdown.classList.contains('hidden')) {
+            dropdown.classList.add('hidden');
+        }
+
         modal.classList.add("opacity-0");
         modal.querySelector("div").classList.add("scale-95");
 
         setTimeout(() => {
           modal.classList.add("hidden");
-          modalCodeBlock.textContent = "";
+          if(editor) editor.setValue("");
         }, 200);
         
         const newUrl = new URL(window.location);
@@ -19218,11 +18977,10 @@ void str_rev(char str[])
         window.history.pushState({ path: newUrl.href }, '', newUrl.href);
       }
       
-      /* --- Download Logic --- */
       const downloadBtn = document.getElementById("download-btn");
       downloadBtn.addEventListener("click", () => {
           const filename = modalFilename.textContent;
-          const content = modalCodeBlock.textContent; // Get plain text
+          const content = editor ? editor.getValue() : ""; 
           
           const element = document.createElement('a');
           element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
@@ -19236,16 +18994,14 @@ void str_rev(char str[])
           document.body.removeChild(element);
       });
       
-      /* --- Print Logic --- */
       function printCode() {
-            const content = document.getElementById('modal-code-block').innerText;
+            const content = editor ? editor.getValue() : "";
             const filename = document.getElementById('modal-filename').textContent;
             
             const printWindow = window.open('', '', 'height=600,width=800');
             printWindow.document.write('<html><head><title>' + filename + '</title>');
             printWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px;} </style>');
             printWindow.document.write('</head><body>');
-            // Basic HTML escaping for print view
             const safeContent = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             printWindow.document.write('<pre>' + safeContent + '</pre>');
             printWindow.document.write('</body></html>');
@@ -19254,24 +19010,50 @@ void str_rev(char str[])
             printWindow.print();
       }
 
-      /* --- License Modal Logic (UPDATED) --- */
+      /* --- NEW COMPILER FEATURE --- */
+      function openInCompiler() {
+          const codeText = editor ? editor.getValue() : "";
+          if (!codeText) return;
+          
+          // Compress using LZ-String
+          const compressed = LZString.compressToEncodedURIComponent(codeText);
+          const url = `https://compiler.amit.is-a.dev/c?code=${compressed}`;
+          
+          window.open(url, '_blank');
+      }
+
+      /* --- NEW MOBILE MENU --- */
+      function toggleMobileMenu(e) {
+          e.stopPropagation();
+          const dropdown = document.getElementById('mobile-menu-dropdown');
+          dropdown.classList.toggle('hidden');
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(e) {
+          const dropdown = document.getElementById('mobile-menu-dropdown');
+          const btn = document.getElementById('mobile-menu-btn');
+          
+          if (!dropdown.classList.contains('hidden') && !btn.contains(e.target) && !dropdown.contains(e.target)) {
+              dropdown.classList.add('hidden');
+          }
+      });
+
+      /* --- License Modal Logic --- */
       const licenseModal = document.getElementById("license-modal");
       const licenseFooter = document.getElementById("license-footer");
       const licenseCloseBtn = document.getElementById("license-close-btn");
       const appContent = document.getElementById("app-content");
       
-      // Function to open license modal in specific mode
-      // forced = true (First Visit), forced = false (View Only)
       function openLicenseModal(forced) {
           licenseModal.classList.remove("hidden");
           void licenseModal.offsetWidth;
           licenseModal.classList.remove("opacity-0");
           licenseModal.querySelector("div").classList.remove("scale-95");
           
-          licenseFooter.innerHTML = ""; // Clear existing buttons
+          licenseFooter.innerHTML = ""; 
           
           if (forced) {
-              // Forced Mode: Accept / Decline, No Close Button
               licenseCloseBtn.classList.add("hidden");
               
               const btnDecline = document.createElement("button");
@@ -19287,7 +19069,6 @@ void str_rev(char str[])
               licenseFooter.appendChild(btnDecline);
               licenseFooter.appendChild(btnAccept);
           } else {
-              // View Mode: I Understand, Close Button visible
               licenseCloseBtn.classList.remove("hidden");
               
               const btnUnderstand = document.createElement("button");
@@ -19310,33 +19091,29 @@ void str_rev(char str[])
       function acceptLicense() {
           localStorage.setItem("license_accepted", "true");
           hideLicense();
-          appContent.style.display = "flex"; // Show App
+          appContent.style.display = "flex"; 
       }
       
       function declineLicense() {
-          // Wipe DOM and Go Back
           document.documentElement.innerHTML = "";
           if (window.history.length > 1) {
               window.history.back();
           } else {
-              window.close(); // Only works if opened by script
+              window.close(); 
           }
       }
       
-      // Initialize License Check
       function checkLicense() {
           const accepted = localStorage.getItem("license_accepted");
           if (accepted === "true") {
-              appContent.style.display = "flex"; // Show content immediately
+              appContent.style.display = "flex"; 
           } else {
-              openLicenseModal(true); // Show forced modal
+              openLicenseModal(true); 
           }
       }
       
-      // Event Listeners for Modal Closing (Only if NOT forced)
       document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && !licenseModal.classList.contains("hidden")) {
-              // Only close if header close button is visible (implies not forced)
               if (!licenseCloseBtn.classList.contains("hidden")) {
                   hideLicense();
               }
@@ -19345,14 +19122,12 @@ void str_rev(char str[])
       
       licenseModal.addEventListener("click", (e) => {
           if (e.target === licenseModal) {
-               // Only close if header close button is visible (implies not forced)
                if (!licenseCloseBtn.classList.contains("hidden")) {
                   hideLicense();
               }
           }
       });
       
-      // Trigger license check on load
       checkLicense();
 
       /* --- Search Logic --- */
@@ -19365,11 +19140,9 @@ void str_rev(char str[])
           const name = el.querySelector("span").textContent.toLowerCase().trim();
           const parentContent = el.closest(".pl-4"); 
           
-          // Get the code content from the hidden div
           const codeDiv = el.querySelector("div[id^='code-']");
           const code = codeDiv ? codeDiv.textContent.toLowerCase() : "";
           
-          // Store storageID for click simulation
           const storageId = codeDiv ? codeDiv.id : "";
 
           searchIndex.push({ name, code, element: el, parent: parentContent, storageId });
@@ -19378,7 +19151,6 @@ void str_rev(char str[])
 
       const searchInput = document.getElementById("search-input");
       
-      // Helper to escape regex special characters
       function escapeRegExp(string) {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       }
@@ -19386,26 +19158,22 @@ void str_rev(char str[])
       searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
         
-        // 1. Cleanup: Remove existing snippets and reset layout classes
         document.querySelectorAll('.search-snippet').forEach(el => el.remove());
         document.querySelectorAll('.file-item').forEach(el => {
             el.classList.remove('flex-wrap', 'pb-2');
-            el.classList.remove('nav-selected'); // Remove selection style
-            // Ensure default styling is maintained
+            el.classList.remove('nav-selected'); 
         });
         
-        // Reset selection index on search
         selectedFileIndex = -1;
 
         if (searchIndex.length === 0) buildSearchIndex();
 
         if (!query) {
              document.querySelectorAll('.file-item, .folder-container').forEach(el => el.classList.remove('hidden'));
-             updateFolderState(); // Reset folder state check on clear
+             updateFolderState(); 
              return;
         }
 
-        // Hide all initially
         document.querySelectorAll('.file-item').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.folder-container').forEach(el => el.classList.add('hidden'));
 
@@ -19416,7 +19184,6 @@ void str_rev(char str[])
             if (nameMatch || codeMatch) {
                 item.element.classList.remove('hidden');
                 
-                // Parent Folder Logic
                 let parent = item.element.parentElement;
                 while(parent && parent.id !== "file-list-container") {
                     parent.classList.remove('hidden'); 
@@ -19438,36 +19205,27 @@ void str_rev(char str[])
                     parent = parent.parentElement;
                 }
 
-                // Snippet Logic
                 if (codeMatch) {
                     const originalCodeDiv = item.element.querySelector("div[id^='code-']");
                     if (originalCodeDiv) {
                         const originalCode = originalCodeDiv.textContent;
-                        
-                        // We find the first occurrence index
                         const matchIndex = item.code.indexOf(query);
                         
                         if (matchIndex !== -1) {
-                            // Determine line number
                             const codePreMatch = item.code.substring(0, matchIndex);
                             const lineCount = (codePreMatch.match(/\n/g) || []).length;
                             
-                            // Extract lines
                             const allLines = originalCode.split('\n');
                             const startLine = Math.max(0, lineCount - 2);
                             const endLine = Math.min(allLines.length, lineCount + 3);
                             
                             const snippetLines = allLines.slice(startLine, endLine);
                             
-                            // Create Snippet Element
                             const snippetDiv = document.createElement('div');
-                            // w-full ensures it breaks to new line in flex-wrap container
                             snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-2 bg-[#111] border-l-4 border-lime-300 rounded-r text-xs font-mono text-neutral-400 overflow-x-auto shadow-sm cursor-pointer hover:bg-neutral-900 transition-colors';
                             
-                            // Click event to open file from snippet
                             snippetDiv.onclick = (evt) => {
-                                evt.stopPropagation(); // Prevent double firing if parent has click
-                                // Extract raw URL from the parent's onClick attribute
+                                evt.stopPropagation(); 
                                 const rawUrl = item.element.querySelector(".flex-1").getAttribute('onclick').match(/'([^']*)'\)$/)[1];
                                 showCode(item.storageId, item.element.querySelector("span").textContent, rawUrl);
                             };
@@ -19478,15 +19236,7 @@ void str_rev(char str[])
 
                             snippetLines.forEach((line, idx) => {
                                 const currentLineNum = startLine + idx + 1;
-                                
-                                // Escape HTML special chars in the code line
-                                let safeLine = line.replace(/&/g, "&amp;")
-                                                   .replace(/</g, "&lt;")
-                                                   .replace(/>/g, "&gt;")
-                                                   .replace(/"/g, "&quot;")
-                                                   .replace(/'/g, "&#039;");
-
-                                // Highlight matches
+                                let safeLine = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
                                 safeLine = safeLine.replace(highlightRegex, '<mark class="bg-lime-300 text-black font-bold rounded-sm px-0.5">$1</mark>');
                                 
                                 const isMatchLine = (currentLineNum - 1) === lineCount;
@@ -19496,8 +19246,6 @@ void str_rev(char str[])
                             });
                             
                             snippetDiv.innerHTML = htmlContent;
-
-                            // Adjust parent layout to accommodate full-width snippet
                             item.element.classList.add('flex-wrap', 'pb-2');
                             item.element.appendChild(snippetDiv);
                         }
@@ -19507,11 +19255,9 @@ void str_rev(char str[])
         });
       });
       
-      /* --- Keyboard Navigation Logic --- */
       let selectedFileIndex = -1;
 
       function handleKeyboardNav(e) {
-        // Only if modal is hidden
         if (!modal.classList.contains("hidden")) return;
 
         const visibleFiles = Array.from(document.querySelectorAll('.file-item:not(.hidden)'));
@@ -19519,38 +19265,28 @@ void str_rev(char str[])
 
         if (e.key === 'ArrowDown') {
             e.preventDefault();
-            // Move selection down, loop back to start if at end
             selectedFileIndex = (selectedFileIndex + 1) % visibleFiles.length;
             updateSelection(visibleFiles);
         } else if (e.key === 'ArrowUp') {
             e.preventDefault();
-            // Move selection up, loop back to end if at start
             selectedFileIndex = (selectedFileIndex - 1 + visibleFiles.length) % visibleFiles.length;
             updateSelection(visibleFiles);
         } else if (e.key === 'Enter' && selectedFileIndex !== -1) {
             e.preventDefault();
-            // Trigger click on the selected file item container (first child usually has the onclick)
-            // The structure is .file-item > .flex-1 (this has onclick)
             const clickTarget = visibleFiles[selectedFileIndex].querySelector('.flex-1');
             if (clickTarget) clickTarget.click();
         }
       }
 
       function updateSelection(files) {
-        // Remove 'nav-selected' class from all
         files.forEach(el => el.classList.remove('nav-selected'));
-        
-        // Add to current
         if (selectedFileIndex >= 0 && selectedFileIndex < files.length) {
             const selectedEl = files[selectedFileIndex];
             selectedEl.classList.add('nav-selected');
-            
-            // Scroll into view logic
             selectedEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
       }
 
-      /* --- Share Functionality --- */
       function animateSuccess(btn, defaultIcon, successIcon) {
         defaultIcon.classList.add("hidden", "scale-0");
         successIcon.classList.remove("hidden", "scale-0");
@@ -19562,7 +19298,6 @@ void str_rev(char str[])
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-         // Initial Folder State Check
          updateFolderState();
 
          const params = new URLSearchParams(window.location.search);
@@ -19571,17 +19306,12 @@ void str_rev(char str[])
              const fileElements = document.querySelectorAll(".file-item");
              for (let el of fileElements) {
                  const nameSpan = el.querySelector("span");
-                 // Check if the span exists and its content matches the file name
                  if (nameSpan && nameSpan.textContent.trim() === sharedFile) {
-                     // Find the clickable container (it has the onclick attribute)
-                     // In our structure it's the direct child .flex-1
                      const clickable = el.querySelector(".flex-1");
                      
-                     // 1. Expand parents
                      let parentContent = el.closest('.pl-4');
                      while (parentContent) {
                          parentContent.classList.remove('hidden');
-                         // Rotate chevron of the folder header
                          const folderHeader = parentContent.previousElementSibling;
                          if (folderHeader) {
                              const chevron = folderHeader.querySelector('.chevron');
@@ -19632,13 +19362,12 @@ void str_rev(char str[])
           }
         });
         
-        /* --- Copy Code Functionality --- */
         const copyCodeBtn = document.getElementById("copy-code-btn");
         const copyIconDefault = document.getElementById("copy-icon-default");
         const copyIconSuccess = document.getElementById("copy-icon-success");
 
         copyCodeBtn.addEventListener("click", () => {
-            const codeText = modalCodeBlock.innerText;
+            const codeText = editor ? editor.getValue() : "";
             navigator.clipboard.writeText(codeText).then(() => {
                 animateSuccess(copyCodeBtn, copyIconDefault, copyIconSuccess);
             }).catch(err => {
