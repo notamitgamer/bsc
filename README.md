@@ -22,7 +22,7 @@ Any unauthorized use for academic submission is a violation of **Copyright Law**
 ---
 🔗 **Website**
 For better viewing experience:
-👉 [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc) (Preferred)  ***or***  [aranag.site/bsc](https://amit.is-a.dev/bsc)
+👉 [amit.is-a.dev/bsc](https://amit.is-a.dev/bsc) (Preferred)  ***or***  [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc)
 
 ---
 

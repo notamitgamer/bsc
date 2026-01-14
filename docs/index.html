@@ -14081,6 +14081,69 @@ double average(int marks[10])
         </div>
         
         <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-APC-S-014-c', 'APC-S-014.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/APC-S-014.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">APC-S-014.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/APC-S-014.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-tuition-c-APC-S-014-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to store roll no, name and marks of 5 students then print it. use structure */
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+struct student
+{
+    int roll_no;
+    char name[30];
+    float marks;
+};
+
+int main()
+{
+    int i, stu_count = 3;
+    struct student s[stu_count];
+    for (i = 0; i &lt; stu_count; i++)
+    {
+        printf(&quot;\nEnter the Roll Number: &quot;);
+        scanf(&quot;%d&quot;, &amp;s[i].roll_no);
+        getchar();
+        printf(&quot;Enter the name: &quot;);
+        gets(s[i].name);
+        printf(&quot;Enter the Marks: &quot;);
+        scanf(&quot;%f&quot;, &amp;s[i].marks);
+    }
+    printf(&quot;\n%-10s %-20s %-10s\n&quot;, &quot;ROLL&quot;, &quot;NAME&quot;, &quot;MARKS&quot;);
+    printf(&quot;%-10s %-20s %-10s\n&quot;, &quot;====&quot;, &quot;====&quot;, &quot;=====&quot;);
+    for (i = 0; i &lt; stu_count; i++)
+    {
+        printf(&quot;%-10d %-20s %-10.2f\n&quot;, s[i].roll_no, s[i].name, s[i].marks);
+    }
+    return 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
             <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-APC-SPS-001-c', 'APC-SPS-001.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/APC-SPS-001.c')">
                 <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -18417,6 +18480,282 @@ void str_rev(char str[])
         i++;
         j--;
     }
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-P066-c', 'P066.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P066.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P066.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P066.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-tuition-c-P066-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* WAP to find the length of a string using
+    i) Library Method
+    ii) User defined method
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int sLength(char str[])
+{
+    int i = 0;
+    while (str[i] != &#x27;\0&#x27;)
+    {
+        i++;
+    }
+    return i;
+}
+
+int main()
+{
+    char str[30];
+    int len;
+    printf(&quot;Enter the string: &quot;);
+    gets(str);
+    len = strlen(str);
+    printf(&quot;Length of the string: %d&quot;, len);
+    printf(&quot;\nLength of the string (U-D): %d&quot;, len);
+    return 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-P067-c', 'P067.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P067.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P067.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P067.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-tuition-c-P067-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program using function which concatenates two string s1 and s2 in to a third string */
+
+#include &lt;stdio.h&gt;
+
+void string_concat(char *s3, char s1[], char s2[])
+{
+    int l1, l2, i, j, k;
+    i = j = k = 0;
+    l1 = strlen(s1);
+    l2 = strlen(s2);
+    s3 = (char *)malloc((l1 + l2 + 1) * sizeof(char));
+    while (s1[i] != &#x27;\0&#x27;)
+    {
+        s3[k++] = s1[i++];
+    }
+    while (s2[j] != &#x27;\0&#x27;)
+    {
+        s3[k++] = s2[j++];
+    }
+    s3[k] = &#x27;\0&#x27;;
+    puts(s3);
+}
+
+int main()
+{
+    char s1[] = &quot;JAVA&quot;;
+    char s2[] = &quot;PYTHON&quot;;
+    char *s3 = NULL;
+    string_concat(s3, s1, s2);
+    return 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-P068-c', 'P068.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P068.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P068.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P068.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-tuition-c-P068-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a c program that perform the operation of strcmp() */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int string_compare1(char s1[], char s2[])
+{
+    int i, c, cmp = 0, p = 0;
+    i = 0;
+    while (s1[i] != &#x27;\0&#x27; &amp;&amp; s2[i] != &#x27;\0&#x27;)
+    {
+        if (s1[i] != s2[i])
+        {
+            cmp = s1[i] - s2[i];
+            p = 1;
+            break;
+        }
+        i++;
+    }
+    c = s1[i] != &#x27;\0&#x27; ? s1[i] : (-1) * s2[i];
+    return p == 1 ? cmp : c;
+}
+int string_compare2(char *s1, char *s2)
+{
+    while (*s1 != &#x27;\0&#x27; &amp;&amp; (*s1 == *s2))
+    {
+        s1++;
+        s2++;
+    }
+    return *s1 - *s2;
+}
+
+int main()
+{
+    char str1[] = &quot;AMIT&quot;;
+    char str2[] = &quot;Amit&quot;;
+    printf(&quot;Result 1 = %d&quot;, string_compare1(str1, str2));
+    printf(&quot;\nResult 2 = %d&quot;, string_compare2(str1, str2));
+    return 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-tuition-c-P069-c', 'P069.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P069.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">P069.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/tuition-c/P069.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-tuition-c-P069-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program using user defined method to implement the following
+    JAVA PROG Mastery -&gt; JPM
+    java prog mastery -&gt; JPM
+    Acharya Prafulla Chandra -&gt; JPM
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+void _short_1(char str[])
+{
+    int i = 0, j = 0;
+    char s[10];
+    if (str[0] != &#x27;\0&#x27; &amp;&amp; str[0] != &#x27; &#x27;)
+    {
+        s[j] = toupper(str[j]);
+        i++;
+        j++;
+    }
+    while (str[i] != &#x27;\0&#x27;)
+    {
+        if (str[i] == &#x27; &#x27;)
+        {
+            s[j] = toupper(str[i + 1]);
+            i++;
+            j++;
+        }
+        i++;
+    }
+    s[j] = &#x27;\0&#x27;;
+    printf(&quot;\nResult 1: %s&quot;, s);
+}
+
+void _short_2(char str[])
+{
+    int i, j;
+    char strnew[10];
+    strnew[0] = toupper(str[0]);
+    i = j = 1;
+    while (str[i] != &#x27;\0&#x27;)
+    {
+        if (str[i] == &#x27; &#x27;)
+        {
+            strnew[j++] = toupper(str[i + 1]);
+        }
+        i++;
+    }
+    strnew[j] = &#x27;\0&#x27;;
+    printf(&quot;\nResult 2: %s&quot;, strnew);
+}
+
+int main()
+{
+    char str[30];
+    printf(&quot;Enter the string: &quot;);
+    gets(str);
+    _short_1(str);
+    _short_2(str);
+    return 0;
 }</div>
         </div>
         
