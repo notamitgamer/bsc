@@ -942,28 +942,20 @@ int main()
 int countSetBits(int num)
 {
     int count = 0;
-    if (num &lt; 0)
+    int mask= 1;
+	int i = 1;
+    while (i &lt;= 16)
     {
-        printf(&quot;\nOnly positive numbers are allowed to maintain consistency. \nUsing absolute value %d&quot;, -num);
-        num = -num;
-    }
-    while (num &gt; 0)
-    {
-        if (num &amp; 1)
+        if (num &amp; mask)
         {
             count++;
         }
-        num &gt;&gt;= 1;
-        /*
-        Another method to do the above bitwise calculation...
-        if(num % 2 == 1) {
-            count++;
-        }
-        num /= 2;
-        */
+        mask &lt;&lt;= 1;
+        i++;
     }
     return count;
-}</div>
+}
+</div>
         </div>
         
         <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">

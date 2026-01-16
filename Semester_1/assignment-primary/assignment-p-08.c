@@ -39,25 +39,16 @@ int main()
 int countSetBits(int num)
 {
     int count = 0;
-    if (num < 0)
+    int mask= 1;
+	int i = 1;
+    while (i <= 16)
     {
-        printf("\nOnly positive numbers are allowed to maintain consistency. \nUsing absolute value %d", -num);
-        num = -num;
-    }
-    while (num > 0)
-    {
-        if (num & 1)
+        if (num & mask)
         {
             count++;
         }
-        num >>= 1;
-        /*
-        Another method to do the above bitwise calculation...
-        if(num % 2 == 1) {
-            count++;
-        }
-        num /= 2;
-        */
+        mask <<= 1;
+        i++;
     }
     return count;
 }
