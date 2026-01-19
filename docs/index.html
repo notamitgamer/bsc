@@ -3749,7 +3749,53 @@ int main()
                 </a>
             </div>
             <!-- Embedded Code Storage -->
-            <div id="code-Semester_1-assignment-secondary-assignment-s-24-c" style="display:none;"></div>
+            <div id="code-Semester_1-assignment-secondary-assignment-s-24-c" style="display:none;">/*
+ * ======================================================================================
+ * COPYRIGHT (C) 2026 AMIT DUTTA. ALL RIGHTS RESERVED.
+ * Repository : https://github.com/notamitgamer/bsc
+ * License    : ESAL-1.0 ( https://esal.amit.is-a.dev )
+ * ======================================================================================
+ * [ ACADEMIC INTEGRITY WARNING ]
+ * The use of this code for academic assignments at ANY educational institution,
+ * college, or university is STRICTLY PROHIBITED.
+ * Any other use requires prior written permission from the author.
+ * Violations will be reported as academic misconduct.
+ * ======================================================================================
+ */
+
+/* Write a program to calculate the difference between two time periods using structures. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct time_dif
+{
+    int hour;
+    int min;
+    int sec;
+};
+
+int main()
+{
+    struct time_dif tpA, tpB;
+    long int tfA, tfB, tdif;
+    printf(&quot;Enter the start time in this 24 hours clock format (HH MM SS): &quot;);
+    scanf(&quot;%d %d %d&quot;, &amp;tpA.hour, &amp;tpA.min, &amp;tpA.sec);
+    printf(&quot;Enter the end time in this 24 hours clock format (HH MM SS): &quot;);
+    scanf(&quot;%d %d %d&quot;, &amp;tpB.hour, &amp;tpB.min, &amp;tpB.sec);
+
+    tfA = tpA.hour * 3600 + tpA.min * 60 + tpA.sec;
+    tfB = tpB.hour * 3600 + tpB.min * 60 + tpB.sec;
+    tdif = tfB - tfA;
+    if (tdif &lt; 0)
+    {
+        printf(&quot;\nWrong information, End time should be later than Start time.&quot;);
+        return 1;
+    }
+    printf(&quot;\nTime difference: %ld Hour(s) %ld Minutes(s) %ld Second(s).&quot;, tdif / 3600, (tdif % 3600) / 60, (tdif % 3600) % 60);
+
+    return 0;
+}</div>
         </div>
         
             </div>
