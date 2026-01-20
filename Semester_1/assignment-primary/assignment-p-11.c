@@ -19,55 +19,76 @@ of a student. */
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 struct Student
 {
     int rollNumber;
     char name[50];
-    int marks;
+    float marks;
 };
 
-void inputStudent(struct Student *, int);
+void inputStudent(struct Student *);
 void displayStudent(struct Student);
 
 int main()
 {
-    struct Student studentDetails[10];
-    int i, inputCount;
-    printf("How many student details you want to add (Max: 10): ");
-    if (scanf("%d", &inputCount) != 1 || inputCount < 1 || inputCount > 10)
+    struct Student *std = NULL;
+    int i, n;
+
+    printf("How many student details you want to add : ");
+    if (scanf("%d", &n) != 1 || n < 1)
     {
         printf("\nInvalid Input.");
         return 1;
     }
-    for (i = 0; i < inputCount; i++)
+
+    std = (struct Student *)malloc(n * sizeof(struct Student));
+    if (std == NULL)
     {
-        inputStudent(&studentDetails[i], i + 1);
+        printf("\nUnable to allocate memory.");
+        return 1;
     }
+
+    for (i = 0; i < n; i++)
+    {
+        printf("\n- Enter details of Student %d -", i + 1);
+        inputStudent(&std[i]);
+    }
+
     printf("\n=== Student Details ===\n");
-    for (i = 0; i < inputCount; i++)
+    for (i = 0; i < n; i++)
     {
-        displayStudent(studentDetails[i]);
+        displayStudent(std[i]);
     }
+
+    free(std);
     return 0;
 }
 
-void inputStudent(struct Student *std, int stdNum)
+void inputStudent(struct Student *std)
 {
-    printf("\n- Enter details of Student %d -", stdNum);
+    int len;
+
     printf("\nEnter the Roll Number: ");
     scanf("%d", &std->rollNumber);
-    while (getchar() != '\n')
-        ; 
+    getchar();
+    
     printf("Enter the Name: ");
     fgets(std->name, sizeof(std->name), stdin);
+    len = strlen(std->name);
+    if (len > 0 && std->name[len - 1] == '\n')
+    {
+        std->name[len - 1] = '\0';
+    }
+
     printf("Enter the Marks: ");
-    scanf("%d", &std->marks);
+    scanf("%f", &std->marks);
 }
 
 void displayStudent(struct Student std)
 {
-    printf("\n\nRoll Number: %d", std.rollNumber);
-    printf("\nName       : %s", std.name);
-    printf("Marks      : %d", std.marks);
+    printf("\n%-12s : %d", "Roll Number", std.rollNumber);
+    printf("\n%-12s : %s", "Name", std.name);
+    printf("\n%-12s : %g\n", "Marks", std.marks);
 }

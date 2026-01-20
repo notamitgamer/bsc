@@ -29,12 +29,12 @@ float calculateArea(struct Rectangle);
 
 int main()
 {
-    struct Rectangle rectangle;
+    struct Rectangle rec;
     printf("Enter the length of the Rectangle: ");
-    scanf("%f", &rectangle.length);
+    scanf("%f", &rec.length);
     printf("Enter the width of the Rectangle: ");
-    scanf("%f", &rectangle.width);
-    printf("\nArea of the Rectangle = %g", calculateArea(rectangle));
+    scanf("%f", &rec.width);
+    printf("\nArea of the Rectangle = %g", calculateArea(rec));
 }
 
 float calculateArea(struct Rectangle r)
