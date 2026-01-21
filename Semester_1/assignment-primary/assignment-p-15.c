@@ -35,21 +35,18 @@ int main()
     if (numbers == NULL)
     {
         printf("\nCould not open the file: %s", FILENAME);
-        free(numbers);
         return 1;
     }
     oddfile = fopen(ODDFILE, "w");
     if (oddfile == NULL)
     {
         printf("\nCould not open the file: %s", ODDFILE);
-        free(oddfile);
         return 1;
     }
     evenfile = fopen(EVENFILE, "w");
     if (evenfile == NULL)
     {
         printf("\nCould not open the file: %s", EVENFILE);
-        free(evenfile);
         return 1;
     }
     while (fscanf(numbers, "%d", &num) == 1)

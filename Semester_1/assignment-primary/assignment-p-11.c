@@ -74,7 +74,7 @@ void inputStudent(struct Student *std)
     scanf("%d", &std->rollNumber);
     getchar();
     
-    printf("Enter the Name: ");
+    printf("Enter the Name (Max: 50 character): ");
     fgets(std->name, sizeof(std->name), stdin);
     len = strlen(std->name);
     if (len > 0 && std->name[len - 1] == '\n')
