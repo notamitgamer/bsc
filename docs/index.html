@@ -4766,6 +4766,206 @@ int main()
             <div class="hidden pl-4 mt-1 border-l-2 border-slate-100 ml-3.5">
                 
         <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-challenge-maheswar01-c', 'maheswar01.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/challenge/maheswar01.c')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">maheswar01.c</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/Semester_1/challenge/maheswar01.c" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-Semester_1-challenge-maheswar01-c" style="display:none;">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+#define MAX 1000
+
+/* ================= STACK FOR OPERATORS ================= */
+
+typedef struct {
+    char data[MAX];
+    int top;
+} CharStack;
+
+void initCharStack(CharStack *s) {
+    s-&gt;top = -1;
+}
+
+void pushChar(CharStack *s, char c) {
+    s-&gt;data[++s-&gt;top] = c;
+}
+
+char popChar(CharStack *s) {
+    return s-&gt;data[s-&gt;top--];
+}
+
+char peekChar(CharStack *s) {
+    return s-&gt;data[s-&gt;top];
+}
+
+int isEmptyChar(CharStack *s) {
+    return s-&gt;top == -1;
+}
+
+/* ================= STACK FOR NUMBERS ================= */
+
+typedef struct {
+    double data[MAX];
+    int top;
+} DoubleStack;
+
+void initDoubleStack(DoubleStack *s) {
+    s-&gt;top = -1;
+}
+
+void pushDouble(DoubleStack *s, double x) {
+    s-&gt;data[++s-&gt;top] = x;
+}
+
+double popDouble(DoubleStack *s) {
+    return s-&gt;data[s-&gt;top--];
+}
+
+/* ================= HELPER FUNCTIONS ================= */
+
+int precedence(char op) {
+    if (op == &#x27;+&#x27; || op == &#x27;-&#x27;) return 1;
+    if (op == &#x27;*&#x27; || op == &#x27;/&#x27;) return 2;
+    return 0;
+}
+
+int isOperator(char c) {
+    return c == &#x27;+&#x27; || c == &#x27;-&#x27; || c == &#x27;*&#x27; || c == &#x27;/&#x27;;
+}
+
+/* ================= INFIX TO POSTFIX ================= */
+
+void infixToPostfix(const char *infix, char *postfix) {
+    CharStack stack;
+    initCharStack(&amp;stack);
+
+    int i = 0, k = 0;
+
+    while (infix[i]) {
+        if (isspace(infix[i])) {
+            i++;
+            continue;
+        }
+
+        if (isdigit(infix[i]) || infix[i] == &#x27;.&#x27;) {
+            while (isdigit(infix[i]) || infix[i] == &#x27;.&#x27;) {
+                postfix[k++] = infix[i++];
+            }
+            postfix[k++] = &#x27; &#x27;;
+        }
+        else if (infix[i] == &#x27;(&#x27;) {
+            pushChar(&amp;stack, infix[i]);
+            i++;
+        }
+        else if (infix[i] == &#x27;)&#x27;) {
+            while (!isEmptyChar(&amp;stack) &amp;&amp; peekChar(&amp;stack) != &#x27;(&#x27;) {
+                postfix[k++] = popChar(&amp;stack);
+                postfix[k++] = &#x27; &#x27;;
+            }
+            popChar(&amp;stack); // remove &#x27;(&#x27;
+            i++;
+        }
+        else if (isOperator(infix[i])) {
+            while (!isEmptyChar(&amp;stack) &amp;&amp;
+                   precedence(peekChar(&amp;stack)) &gt;= precedence(infix[i])) {
+                postfix[k++] = popChar(&amp;stack);
+                postfix[k++] = &#x27; &#x27;;
+            }
+            pushChar(&amp;stack, infix[i]);
+            i++;
+        }
+        else {
+            printf(&quot;Invalid character: %c\n&quot;, infix[i]);
+            exit(1);
+        }
+    }
+
+    while (!isEmptyChar(&amp;stack)) {
+        postfix[k++] = popChar(&amp;stack);
+        postfix[k++] = &#x27; &#x27;;
+    }
+
+    postfix[k] = &#x27;\0&#x27;;
+}
+
+/* ================= POSTFIX EVALUATION ================= */
+
+double evaluatePostfix(const char *postfix) {
+    DoubleStack stack;
+    initDoubleStack(&amp;stack);
+
+    int i = 0;
+
+    while (postfix[i]) {
+        if (isspace(postfix[i])) {
+            i++;
+            continue;
+        }
+
+        if (isdigit(postfix[i]) || postfix[i] == &#x27;.&#x27;) {
+            char number[50];
+            int k = 0;
+
+            while (isdigit(postfix[i]) || postfix[i] == &#x27;.&#x27;) {
+                number[k++] = postfix[i++];
+            }
+            number[k] = &#x27;\0&#x27;;
+
+            pushDouble(&amp;stack, atof(number));
+        }
+        else if (isOperator(postfix[i])) {
+            double b = popDouble(&amp;stack);
+            double a = popDouble(&amp;stack);
+
+            switch (postfix[i]) {
+                case &#x27;+&#x27;: pushDouble(&amp;stack, a + b); break;
+                case &#x27;-&#x27;: pushDouble(&amp;stack, a - b); break;
+                case &#x27;*&#x27;: pushDouble(&amp;stack, a * b); break;
+                case &#x27;/&#x27;:
+                    if (b == 0) {
+                        printf(&quot;Error: Division by zero\n&quot;);
+                        exit(1);
+                    }
+                    pushDouble(&amp;stack, a / b);
+                    break;
+            }
+            i++;
+        }
+    }
+
+    return popDouble(&amp;stack);
+}
+
+/* ================= MAIN ================= */
+
+int main() {
+    char infix[MAX];
+    char postfix[MAX];
+
+    printf(&quot;Enter expression: &quot;);
+    fgets(infix, MAX, stdin);
+
+    infixToPostfix(infix, postfix);
+
+    double result = evaluatePostfix(postfix);
+
+    printf(&quot;Result = %.10g\n&quot;, result);
+
+    return 0;
+}</div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
             <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-Semester_1-challenge-sudipto1-c', 'sudipto1.c', 'https://github.com/notamitgamer/bsc/blob/main/Semester_1/challenge/sudipto1.c')">
                 <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -4960,20 +5160,6 @@ int main()
             </div>
             <!-- Embedded Code Storage -->
             <div id="code-Semester_1-challenge-sudiptoown01-c" style="display:none;">/*
- * ======================================================================================
- * COPYRIGHT (C) 2025 AMIT DUTTA. ALL RIGHTS RESERVED.
- * Repository : https://github.com/notamitgamer/bsc
- * License    : ESAL-1.0 ( https://esal.amit.is-a.dev/ )
- * ======================================================================================
- * [ ACADEMIC INTEGRITY WARNING ]
- * The use of this code for academic assignments at ANY educational institution,
- * college, or university is STRICTLY PROHIBITED.
- * Any other use requires prior written permission from the author.
- * Violations will be reported as academic misconduct.
- * ======================================================================================
- */
-
-/*
  * A smart home security controller monitors the state of several sensors to decide what action to take.
  * Each second, the system reads data from sensors that are either an active or inactive. Based on the current
  * state of all sensors, the controller must perform exactly one action, such as activating a warning, checking
