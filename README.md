@@ -1,23 +1,20 @@
-## ⚠️ ACADEMIC INTEGRITY WARNING
+# <a href="https://github.com/notamitgamer/bsc">notamitgamer/bsc</a>
 
-**THIS REPOSITORY IS PROTECTED BY THE EDUCATIONAL SOURCE-AVAILABLE LICENSE (ESAL-1.0).**
+This repository contains practice code and solutions for **WBSU assignments**. 
 
-### ⛔ TO STUDENTS & CLASSMATES:
-This repository contains solutions for **WBSU assignments** and practice codes.
-You are free to **read and learn** from this code to understand the logic.
+## ⚖️ License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file or [opensource.org](https://opensource.org/license/mit) for full details.
 
-However, you are **STRICTLY PROHIBITED** from:
-1. Copying this code and submitting it as your own assignment.
-2. Removing the copyright headers to hide the source.
+---
 
-**CONSEQUENCES:**
-Any unauthorized use for academic submission is a violation of **Copyright Law** and **Academic Misconduct**.
-* I retain full git history timestamps as proof of ownership.
-* **Violations may be reported to the Department Faculty / Examination Controller.**
+### ⛔ Important Note for Students & Classmates
+While this code is public, academic integrity matters! 
 
-### See the [LICENSE](LICENSE) file or [esal.amit.is-a.dev](https://esal.amit.is-a.dev) for details.
+* **Read & Learn:** You are encouraged to study the logic and understand the implementation.
+* **Don't Copy-Paste:** Using this code directly for your submissions may lead to plagiarism issues. 
+* **Write Your Own:** The best way to learn is to understand the logic and then write it yourself from scratch.
 
-> **Do not copy. Learn, understand, and write your own code.**
+> **Challenge yourself: Learn the logic, then close this tab and write your own version.**
 
 ---
 🔗 **Website**
