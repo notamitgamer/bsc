@@ -19,7 +19,6 @@ number of subjects he has failed in. Use the following logic.
     subject, then he does not get any grace. Otherwise, he gets a
     grace of 5 marks.
 */
-/* Author - Amit Dutta, Date - 28th OCT, 2025 */
 /* Let Us C, Chap- 7, Page - 125, Qn No.: C */
 
 #include <stdio.h>

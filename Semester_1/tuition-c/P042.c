@@ -8,7 +8,6 @@
 
 /* Write a program to accept a number and check whether the number
 is twisted prime or not. */
-/* Author - Amit Dutta, Date - 27th OCT, 2025 */
 
 #include <stdio.h>
 #include <math.h>

@@ -5,7 +5,6 @@
  */
 
 /* WAP that accept seconds as input and represent it an hours, minutes and seconds. */
-/* Author - Amit Dutta, Date - 19th SEP, 2025 */
 
 #include <stdio.h>
 int main()

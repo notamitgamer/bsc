@@ -5,7 +5,6 @@
  */
 
 /* Write a program to find hcf of two numbers */
-/* Author - Amit Dutta, Date - 07th November, 2025 */
 // File Name - amit0711202501.c (LAB), APC-PRAC-019.c (Local)
 
 // This code has not been compiled.

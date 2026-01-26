@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check perfect number. */
-/* Author - Amit Dutta, Date - 06th November, 2025 */
 // File Name - amit0611202503.c (LAB), APC-PRAC-017.c (Local)
 
 // This code has not been compiled.

@@ -7,7 +7,6 @@
  */
 
 /* Prime number check */
-/* Author - Amit Dutta, Date - 03rd NOVEMBER, 2025 */
 
 #include <stdio.h>
 #include <math.h>

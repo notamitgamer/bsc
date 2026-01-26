@@ -5,7 +5,6 @@
  */
 
 /* Write a program the sum of first 10 natural numbers. */
-/* Author - Amit Dutta, Date - 29th October, 2025 */
 
 /*
  * Compiler Note: This source code is specifically designed for compilation

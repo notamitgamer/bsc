@@ -6,7 +6,6 @@
 
 /* Two numbers are entered through the keyboard. Write a program to
 find the value of one number raised to the power of another */
-/* Author - Amit Dutta, Date - 07th OCT, 2025 */
 /* Let Us C, Chap - 5, Page - 84, Problem 5.3 */
 
 #include <stdio.h>

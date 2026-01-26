@@ -9,7 +9,6 @@ values to right. In other words, if x = 5, y = 8, z = 10, after circular
 shift y = 5, z = 8, x = 10. cal the function with variables a, b, c to
 circularly shift values.
 */
-/* Author - Amit Dutta, Date - 24th November, 2025 */
 /* Let Us C, Chap- 9, Page - 163, Qn No.: C(a) */
 
 #include <stdio.h>

@@ -10,7 +10,6 @@ the interest earned
     si = (p * r * t) / 100
     compoundInterest = p * ((1 + r / 100)^t - 1)
 */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 
 #include <stdio.h>
 #include <math.h>

@@ -9,7 +9,6 @@
 /* Write a function that receives integers and returns the sum, average
 and standard deviation of these numbers. Call this function from main()
 and print the result in main() */
-/* Author - Amit Dutta, Date - 23th November, 2025 */
 /* Let Us C, Chap - 9, Page 159, Problem 9.1 */
 
 #include <stdio.h>

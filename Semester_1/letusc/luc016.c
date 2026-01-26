@@ -9,7 +9,6 @@
 /* Given the coordiantes (x, y) of center of a circle and its radius,
 write a program that will determine whether a point lies inside the circle,
 on the circle or outside the circle. (Hint : Use sqrt() and pow() functions.) */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(g) */
 
 #include <stdio.h>

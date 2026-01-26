@@ -8,7 +8,6 @@
 whether the area of the rectangle is greater than it's perimeter.
 For example, the area of the rectangle with length = 5 and breadth = 4
 is greater than its perimeter. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(e) */
 
 #include <stdio.h>

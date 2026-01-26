@@ -12,7 +12,6 @@
     @   @   @   @
     #   #   #   #   #
     */
-/* Author - Amit Dutta, Date - 01st NOVEMBER, 2025 */
 
 #include <stdio.h>
 

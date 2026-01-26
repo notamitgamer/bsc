@@ -5,7 +5,6 @@
  */
 
 /* Write a problem to print all the prime numbers from 1 to 300. */
-/* Author - Amit Dutta, Date - 24th OCT, 2025 */
 /* Let Us C, Chap - 6, Page - 101, Problem 6.1 */
 
 // Method: Trial Division (Optimized to check up to sqrt(N))

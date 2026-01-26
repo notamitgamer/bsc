@@ -5,7 +5,6 @@
  */
 
 /* WAP to perform addition of first n natural numbers. sum = 1 + 2 + 3 + ... */
-/* Author - Amit Dutta, Date - 11th OCT, 2025 */
 
 #include <stdio.h>
 int main()

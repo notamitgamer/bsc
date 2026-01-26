@@ -12,7 +12,6 @@ taking the sum and number of days as input.
     exact 365 days      9.0 %
     more than 365 days  8.5 %
 */
-// Author - Amit Dutta, Date - Unknown
 
 #include <stdio.h>
 int main()

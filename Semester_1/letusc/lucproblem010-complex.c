@@ -10,7 +10,6 @@
    from 1-digit numbers up to 4-digit numbers using a main loop to control
    the number of digits (1 to 3333).
 */
-/* Author - Amit Dutta, Date - 24th OCT, 2025 */
 /* Let Us C, Chap - 6, Page - 103, Problem 6.3 */
 
 #include <stdio.h>

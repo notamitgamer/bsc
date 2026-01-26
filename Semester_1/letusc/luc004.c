@@ -7,7 +7,6 @@
 /* If a five digit number is input through the keyboard,
 write a program to calculate the sum of it's digit.
 (Hint : Use the modulus operator %) */
-/* Author - Amit Dutta, Date - 28th SEP, 2025 */
 /* Let Us C; Page - 37; Chap- 2; QNo.: G(a) */
 
 #include <stdio.h>

@@ -8,7 +8,6 @@
  (1/a^3) + (1/(b+2)^3) + (1/(c^4 + root(2)))
  take a, b, c as input.
 */
-/* Author - Amit Dutta, Date - 19th SEP, 2025 */
 
 #include <stdio.h>
 #include <math.h>

@@ -5,7 +5,6 @@
  */
 
 /* WAP to accept  diagonal of a square and calculate area, parimeter */
-/* Author - Amit Dutta, Date - 18th SEP, 2025 */
 
 #include <stdio.h>
 #include <math.h>

@@ -12,7 +12,6 @@ number is Pronic number or not.
                    which is the product of two consecutive integer.
                    Ex: 20 = 4 * 5
 */
-/* Author - Amit Dutta, Date - 27th OCT, 2025 */
 
 // using boolean...
 /*

@@ -7,7 +7,6 @@
 /* WAP to display the series using user defined method.
     0, 7, 26, 63, ... upto n terms using void series(int n)
 */
-/* Author - Amit Dutta, Date - 22th November, 2025 */
 
 // This code has not been compiled.
 // If you find any issues, please create a new issue on GitHub regarding them.

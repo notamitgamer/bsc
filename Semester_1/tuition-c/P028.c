@@ -5,7 +5,6 @@
  */
 
 /* WAP to calculate factorial of a number */
-/* Author - Amit Dutta, Date - 11th OCT, 2025 */
 
 #include <stdio.h>
 int main()

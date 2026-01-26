@@ -8,7 +8,6 @@
 co-ordinates (x, y) of a point and convert
 them into Polar co-ordinates (r, phi)
     Hint : r = sqrt (x^2 + y^2) and phi = tan^-1 (y/x) */
-/* Author - Amit Dutta, Date - 28th SEP, 2025 */
 /* Let Us C; Page - 37; Chap- 2; QNo.: G(b) */
 
 #include <stdio.h>

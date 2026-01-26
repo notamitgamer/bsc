@@ -7,7 +7,6 @@
 /* Write a program to input a number and check whether it is Disarium Number or not.
     Note : A number is said to Disarium if sum of its digit powered by with their
     respective position is equal to the original number. */
-/* Author - Amit Dutta, Date - 08th November, 2025 */
 
 // This code has not been compiled.
 // If you find any issues, please create a new issue on GitHub regarding them.

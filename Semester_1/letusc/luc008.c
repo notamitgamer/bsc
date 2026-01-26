@@ -6,7 +6,6 @@
 
 /* If value of an angle is input through the keyboard,
 write a program to print all its trigonometric ratios. */
-/* Author - Amit Dutta, Date - 30th SEP, 2025 */
 /* Let Us C, Chap - 2, Page - 37, Qn No.: G(e) */
 
 #include <stdio.h>

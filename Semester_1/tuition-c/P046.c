@@ -12,7 +12,6 @@
     4   3   2   1
     5   4   3   2   1
 */
-/* Author - Amit Dutta, Date - 01st NOVEMBER, 2025 */
 
 #include <stdio.h>
 

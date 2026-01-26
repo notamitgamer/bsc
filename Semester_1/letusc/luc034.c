@@ -10,7 +10,6 @@ form :
     29 * 1 = 29
     29 * 2 = 58
 */
-/* Author - Amit Dutta, Date - 20th OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 105, Qn No.: B(a) */
 
 #include <stdio.h>

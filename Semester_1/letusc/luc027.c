@@ -21,7 +21,6 @@
         return 0;
     }
 */
-/* Author - Amit Dutta, Date - 6th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 73, Qn No.: E(e) */
 
 #include <stdio.h>

@@ -11,7 +11,6 @@
 7       8       9       10
 */
 
-/* Author - Amit Dutta, Date - 23rd OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(i) */
 
 #include <stdio.h>

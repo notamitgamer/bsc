@@ -6,7 +6,6 @@
 
 /* WAP to calculate and display radius of a
 circle by taking the area as input */
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 #include<math.h>

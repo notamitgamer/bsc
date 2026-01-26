@@ -13,7 +13,6 @@ the sum and number of days as input.
     365 - 500       9.25 %
     > 500           9.15 %
 */
-/* Author - Amit Dutta, Date - 31st October, 2025 */
 
 // This code has not been compiled.
 // If you find any issues, please create a new issue on GitHub regarding them.

@@ -6,7 +6,6 @@
 
 /* Write a program to recieve value of an angle in degreesand check
 whether sum of squares of sine and cosine of this angle is equal to 1. */
-/* Author - Amit Dutta, Date - 6th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 73, Qn No.: E(d) */
 
 #include <stdio.h>

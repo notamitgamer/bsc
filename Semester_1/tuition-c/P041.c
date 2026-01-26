@@ -7,7 +7,6 @@
 /* Write a program to enter two numbers and check they are co-prime or not.
     co-prime when HCF = 1
 */
-/* Author - Amit Dutta, Date - 27th OCT, 2025 */
 
 #include <stdio.h>
 int main()

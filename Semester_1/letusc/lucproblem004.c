@@ -8,7 +8,6 @@
 keyboard, write a program to check whether the triangle is valid or not.
 The triangle is valid if the sum of two sides is greater that the largest
 of the three sides. */
-/* Author - Amit Dutta, Date - 02th OCT, 2025 */
 /* Let Us C, Chap - 4, Page - 66, Problem 4.3 */
 
 #include <stdio.h>

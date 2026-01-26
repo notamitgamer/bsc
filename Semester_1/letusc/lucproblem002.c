@@ -7,7 +7,6 @@
 /* A year is entered through the keyboard, write a program to
 determine whether the year is leap or not. Use the logical operators
 && and || . */
-/* Author - Amit Dutta, Date - 02th OCT, 2025 */
 /* Let Us C, Chap - 4, Page - 64, Problem 4.1 */
 
 #include <stdio.h>

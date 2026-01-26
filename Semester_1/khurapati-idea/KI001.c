@@ -6,7 +6,6 @@
 
 // khurapati idea no. : 1
 // Idea : we can use the side effect of printf function to get length of any string or number
-// Author - Amit Dutta, Date - 16-10-2025
 
 #include <stdio.h>
 int main()

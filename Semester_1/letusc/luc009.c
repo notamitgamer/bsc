@@ -6,7 +6,6 @@
 
 /* Two numbers are input through the keyboard into two locations
 C and D. Write a program to interchange the contents of C and D. */
-/* Author - Amit Dutta, Date - 30th SEP, 2025 */
 /* Let Us C, Chap - 2, Page - 37, Qn No.: G(d) */
 
 #include <stdio.h>

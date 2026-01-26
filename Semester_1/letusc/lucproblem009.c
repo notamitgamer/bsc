@@ -8,7 +8,6 @@
 for loop.
     1 / 1! + 2 / 2! + 3 / 3! + ...
 */
-/* Author - Amit Dutta, Date - 24th OCT, 2025 */
 /* Let Us C, Chap - 6, Page - 102, Problem 6.2 */
 
 #include <stdio.h>

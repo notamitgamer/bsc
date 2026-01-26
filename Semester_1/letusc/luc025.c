@@ -6,7 +6,6 @@
 
 /* Write a program to find the greates of the three numbers entered
 through the keyboard. Use conditional operators. */
-/* Author - Amit Dutta, Date - 6th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: E(c) */
 
 #include <stdio.h>

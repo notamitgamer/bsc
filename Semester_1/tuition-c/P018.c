@@ -7,7 +7,6 @@
 /* WAP to input the cost price and selling price and
 calculate profit, profit percentage, loss percentage or
 display the manage nither profit nor loss. */
-// Author - Amit Dutta, Date - Unknown
 
 #include <stdio.h>
 int main()

@@ -9,7 +9,6 @@ item whereas the other shopkeeper offers 2 successive
 discount of 20% and 10% for purchasing the same item.
 WAP to caompute and display the discounted price of the
 item by taking the price as input. */
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

@@ -7,7 +7,6 @@
 /* A five-digit number is entered through the keyboard. Write a program
 to obtain the reversed number and to etermine whether the original and reversed
 numbers are equal or not. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap - 3, Page - 53, Qn No.: f(a) */
 
 #include <stdio.h>

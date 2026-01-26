@@ -10,7 +10,6 @@
 and U (Upper Bound), as input from the user. The program must find and print
 the count of all numbers between L and U (inclusive) that
 are also a Palindrome Number. */
-/* Author - Amit Dutta, Date - 11th November, 2025 */
 
 #include <stdio.h>
 #define true 1

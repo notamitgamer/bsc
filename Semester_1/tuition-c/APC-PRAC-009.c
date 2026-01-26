@@ -5,7 +5,6 @@
  */
 
 /* WAP to swap two integer variable without using Third variable. */
-/* Author - Amit Dutta, Date - 19th SEP, 2025 */
 
 #include <stdio.h>
 int main()

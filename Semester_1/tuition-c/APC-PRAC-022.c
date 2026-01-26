@@ -7,7 +7,6 @@
  */
 
 /* Write a program to accept a number and check whether the number is twisted prime or not */
-/* Author - Amit Dutta, Date - 07th November, 2025 */
 // File Name - amit0711202504.c (LAB), APC-PRAC-022.c (Local)
 
 // This code has not been compiled.

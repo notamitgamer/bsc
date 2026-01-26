@@ -6,7 +6,6 @@
 
 /* Write a program to print 24 hours of day with suitable suffixes like
 AM, PM, Noon and Midnight. */
-/* Author - Amit Dutta, Date - 23rd OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(h) */
 
 #include <stdio.h>

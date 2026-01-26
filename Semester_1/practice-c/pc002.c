@@ -13,7 +13,6 @@
 for n = 5
 */
 
-/* Author - Amit Dutta, Date - 02nd NOVEMBER, 2025 */
 
 #include <stdio.h>
 int main()

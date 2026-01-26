@@ -11,7 +11,6 @@ Hint :	si = (p * r * t) / 100
 		a = p * ((1 + (r / 100)) ^ t)
 		ci = a - p
 */
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 #include<math.h>

@@ -10,7 +10,6 @@ half, parallel to its shorter sides. Thus, paper of
 size A1 would have dimensions 841 mm x 594 mm. Write
 a program to calculate and print paper sizes A0,�
 A1,�A2,�...�A8. */
-/* Author - Amit Dutta, Date - 16th SEP, 2025 */
 /* Let Us C; Page - 19; Chap- 1; QNo.: F(c) */
 
 #include<stdio.h>

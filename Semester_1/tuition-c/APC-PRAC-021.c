@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check special number (sum of digit + product of digit = original number) */
-/* Author - Amit Dutta, Date - 07th November, 2025 */
 // File Name - amit0711202503.c (LAB), APC-PRAC-021.c (Local)
 
 // This code has not been compiled.

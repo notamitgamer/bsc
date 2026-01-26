@@ -6,7 +6,6 @@
 
 /* Write a program to find the factorial value of any number entered
 through the keyboard. */
-/* Author - Amit Dutta, Date - 07th OCT, 2025 */
 /* Let Us C, Chap - 5, Page - 84, Problem 5.2 */
 
 #include <stdio.h>

@@ -6,7 +6,6 @@
 
 /* Given three points (x1, y1), (x2, y2), and (x3, y3),
 write a program to check if the three poins fall on one straight line. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(f) */
 
 #include <stdio.h>

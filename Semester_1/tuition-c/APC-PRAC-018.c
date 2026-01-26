@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check Automorphic Number. */
-/* Author - Amit Dutta, Date - 06th November, 2025 */
 // File Name - amit0611202504.c (LAB), APC-PRAC-018.c (Local)
 
 // This code has not been compiled.

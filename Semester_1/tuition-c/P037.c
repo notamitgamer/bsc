@@ -5,7 +5,6 @@
  */
 
 /* sum = 1 + 1+2/1*2 + 1+2+3/1*2*3 + ... + 1+2+3+...+n/1*2*3*...*n */
-/* Author - Amit Dutta, Date - 18th OCT, 2025 */
 
 #include <stdio.h>
 

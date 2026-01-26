@@ -8,7 +8,6 @@
 (Hint : To obtain octal equivalent of an integer, Divide it continuously
 by 8 till dividend does not become zero, then write the remainders
 obtained in reverse derection.) */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(e) */
 
 // using array

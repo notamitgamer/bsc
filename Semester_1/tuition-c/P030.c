@@ -7,7 +7,6 @@
  */
 
 /* Display the first 15 terms of the series. */
-/* Author - Amit Dutta, Date - 11th OCT, 2025 */
 
 #include <stdio.h>
 #include <math.h>

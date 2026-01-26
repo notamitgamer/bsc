@@ -6,7 +6,6 @@
 
 /* Write a program to input sum(p), rate of interest(r), time(t) and type of interest
 ('s' for simple interes, 'c' for compound interest), then calculate and display the earned interest */
-/* Author - Amit Dutta, Date - 31st October, 2025 */
 
 #include <stdio.h>
 #include <math.h>

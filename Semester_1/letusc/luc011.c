@@ -6,7 +6,6 @@
 
 /* If ages of Ram, Shyam and Ajay are input through the keyboard,
 write a program to determine the youngest of the three. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(b) */
 
 #include <stdio.h>

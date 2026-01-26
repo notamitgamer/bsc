@@ -10,7 +10,6 @@
     (a) 1, -3, 5, -7, 9, -11, ... upto n times
     (b) 0, 3, 8, 15, ... upto n times
 */
-/* Author - Amit Dutta, Date - 07th November, 2025 */
 // File Name - amit0711202505.c (LAB), APC-PRAC-023.c (Local)
 
 // This code has not been compiled.

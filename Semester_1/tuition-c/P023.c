@@ -6,7 +6,6 @@
 
 /* WAP to input the total cost and compute the amount to be paid
 by the customer.  */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 // This code has not been compiled. 
 // If you find any issues, please create a new issue on GitHub regarding them.
 

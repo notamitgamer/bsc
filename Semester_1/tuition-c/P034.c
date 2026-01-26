@@ -6,7 +6,6 @@
 
 /* Get sum of even position digit and odd position digit */
 /* Counting starts from the rightmost digit as position 1 (Odd). */
-/* Author - Amit Dutta, Date - 18th OCT, 2025 */
 
 #include <stdio.h>
 int main()

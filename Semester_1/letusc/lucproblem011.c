@@ -15,7 +15,6 @@ Once a menu item is selected the appropriate action should be taken
 and once this action is finished, the menu should reappear. Unless
 the user selects the 'Exit' option the program should continue work.
 */
-/* Author - Amit Dutta, Date - 26th OCT, 2025 */
 /* Let Us C, Chap - 7, Page - 118, Problem 7.1 */
 
 #include <stdio.h>

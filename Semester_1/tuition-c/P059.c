@@ -9,9 +9,8 @@
 /* Write a program to find the sum of array elements using following fuctions
     int array_sum(int a[], int n);
     void get_data(int a[], int n);
-    voidd dispaly(int a[], int n);
+    void dispaly(int a[], int n);
 */
-/* Author - Amit Dutta, Date - 29th November, 2025 */
 
 // This code has not been compiled.
 // If you find any issues, please create a new issue on GitHub regarding them.

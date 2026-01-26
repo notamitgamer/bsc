@@ -5,7 +5,6 @@
  */
 
 /* Factorial upto N */
-/* Author - Amit Dutta, Date - 03rd November, 2025 */
 
 #include <stdio.h>
 

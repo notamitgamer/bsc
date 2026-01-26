@@ -7,7 +7,6 @@
 /* Write a program to check whether a triangle is valid or not,
 if three angles of the triangle are entered through the keyboard.
 A triangle is valid if the sum of all the three angles is equal to 180 degrees. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(c) */
 
 #include <stdio.h>

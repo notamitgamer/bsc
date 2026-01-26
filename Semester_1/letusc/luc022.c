@@ -19,7 +19,6 @@ the BMI catagory as per the following table.
     Obese                   30 to 39.9
     Morbidly Obese          >= 40
 */
-/* Author - Amit Dutta, Date - 4th OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: D(d) */
 
 #include <stdio.h>

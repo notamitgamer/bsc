@@ -8,7 +8,6 @@
 paid at the rate of Rs. 120.00 per hour for every hour worked above 40
 hours. Assume that employees do not work for fractional part of an hour. */
 /* ONLY WHILE LOOP ALLOWED */
-/* Author - Amit Dutta, Date - 07th OCT, 2025 */
 /* Let Us C, Chap - 5, Page - 83, Problem 5.1 */
 
 #include <stdio.h>

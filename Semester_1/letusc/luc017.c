@@ -5,7 +5,6 @@
  */
 
 /* Given a point (x, y), write a program to find out if it lies on X-axis, Y-axis or origin. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(h) */
 
 #include <stdio.h>

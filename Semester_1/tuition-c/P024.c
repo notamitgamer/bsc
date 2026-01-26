@@ -5,7 +5,6 @@
  */
 
 /* WAP to check whether a year is leapyear or not. */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 // This code has not been compiled. 
 // If you find any issues, please create a new issue on GitHub regarding them.
 

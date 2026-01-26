@@ -9,7 +9,6 @@ price of a digital camera. However a customer has
 to pay 6% GST on the remaining amount. WAP to
 calculate and display the amount to paid by the
 customer, taking the printed price as input. */
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

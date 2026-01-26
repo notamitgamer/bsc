@@ -8,7 +8,6 @@
 namely, Rs. 1, Rs. 2, rs. 5, Rs. 10, Rs. 50, Rs. 100. If a sum
 of Rs. N is entered through the keyboard, Write a program to compute
 the smallest number of notes that will combine to give Rs. N. */
-/* Author - Amit Dutta, Date - 29th SEP, 2025 */
 /* Let Us C, Chap - 2, Page - 22, Problem 2.3 */
 
 #include <stdio.h>

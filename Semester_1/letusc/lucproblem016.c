@@ -14,7 +14,6 @@ Figure 9.4:
     value: 7fff9489c7a0, memory_address: 7fff4fd134b8
     value: 7fff9489c79c,  memory_address: 7fff9489c7a0
 */
-/* Author - Amit Dutta, Date - 24th November, 2025 */
 /* Let Us C, Chap - 9, Page 160, Problem 9.3 */
 
 #include <stdio.h>

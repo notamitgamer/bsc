@@ -7,7 +7,6 @@
  */
 
 /* Write a program to generate all combination of 1, 2 and 3 using for loop. */
-/* Author - Amit Dutta, Date - 24th OCT, 2025 */
 /* Let Us C, Chap - 6, Page - 103, Problem 6.3 */
 
 #include <stdio.h>

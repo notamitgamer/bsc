@@ -7,7 +7,6 @@
 /* Define a function to convert any given year into its Roman equivalent.
 Use these roman equivalent for decimal numbers : 1 - I, 5 - V, 10 - X,
 50 - L, 100 - C, 500 - D, 1000 - M */
-/* Author - Amit Dutta, Date - 17th November, 2025 */
 /* Let Us C, Chap - 8, Page - 141, Problem 8.3 */
 
 #include <stdio.h>

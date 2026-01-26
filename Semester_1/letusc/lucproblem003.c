@@ -14,7 +14,6 @@ The following table shows the range of ASCII values for various characters :
     0 - 9                   48 - 57
     special symbols         0 - 47, 58 - 64, 91 - 96, 123 - 127
 */
-/* Author - Amit Dutta, Date - 02th OCT, 2025 */
 /* Let Us C, Chap - 4, Page - 65, Problem 4.2 */
 
 #include <stdio.h>

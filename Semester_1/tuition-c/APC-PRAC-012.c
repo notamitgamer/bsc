@@ -5,7 +5,6 @@
  */
 
 /* Write a program to input three integer and find out second largest */
-/* Author - Amit Dutta, Date - 31st October, 2025 */
 
 #include <stdio.h>
 

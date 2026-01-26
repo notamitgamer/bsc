@@ -8,7 +8,6 @@
 and returns the equivalent weight in Grams, Tons and pounds. Call
 this fuction from main() and print the results in main()
 */
-/* Author - Amit Dutta, Date - 24th November, 2025 */
 /* Let Us C, Chap- 9, Page - 163, Qn No.: C(b) */
 
 #include <stdio.h>

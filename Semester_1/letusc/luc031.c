@@ -6,7 +6,6 @@
 
 /* Write a program to enter numbers till the user wants. At the end it
 should display the count of positive, negative and zeros entered. */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(d) */
 
 #include <stdio.h>

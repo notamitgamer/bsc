@@ -10,7 +10,6 @@ the following formula
     a = p (1 + r / q) ^ nq
 Write a program to read 10 sets of p, r, n & q and calculate the
 corresponding as' */
-/* Author - Amit Dutta, Date - 20th OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(c) */
 
 // DEVELOPMENT STATUS: This implementation is currently untested. 

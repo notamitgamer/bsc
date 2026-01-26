@@ -5,7 +5,6 @@
  */
 
 /* sum = a + (a^2)/2 + (a^3)/3 + ... + (a^n)/n */
-/* Author - Amit Dutta, Date - 18th OCT, 2025 */
 
 #include <stdio.h>
 #include <math.h>

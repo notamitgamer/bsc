@@ -4,7 +4,6 @@
  * License: MIT | Copyright (c) 2025 Amit Dutta
  */
 
-/* Author - Amit Dutta, Date - 05th November, 2025 */
 
 /* Plan - checking for edge case */
 

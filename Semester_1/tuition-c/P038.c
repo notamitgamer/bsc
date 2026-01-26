@@ -7,7 +7,6 @@
  */
 
 /* Write a program to check prime number */
-/* Author - Amit Dutta, Date - 27th OCT, 2025 */
 
 #include <stdio.h>
 #include <math.h>

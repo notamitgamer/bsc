@@ -5,7 +5,6 @@
  */
 
 /* Armstrong number check only for three digit */
-/* Author - Amit Dutta, Date - 03rd NOVEMBER, 2025 */
 
 #include <stdio.h>
 

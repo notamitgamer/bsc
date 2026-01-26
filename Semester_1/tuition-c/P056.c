@@ -5,7 +5,6 @@
  */
 
 /* WAP to swap the value of a and b using user defined method. */
-/* Author - Amit Dutta, Date - 22th November, 2025 */
 
 // This code has not been compiled.
 // If you find any issues, please create a new issue on GitHub regarding them.

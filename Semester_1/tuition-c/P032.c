@@ -6,7 +6,6 @@
 
 /* WAP to input a number and check whether it is a Niven number
 or not. (When a number is divisible by its sum of digit) e.g. : n = 126*/
-/* Author - Amit Dutta, Date - 11th OCT, 2025 */
 
 #include <stdio.h>
 int main()

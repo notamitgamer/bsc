@@ -6,7 +6,6 @@
 
 /* WAP to input an int number and display the product of the successors
 of even digits of the number entered by user. */
-/* Author - Amit Dutta, Date - 18th OCT, 2025 */
 
 #include <stdio.h>
 #include <stdbool.h>

@@ -14,7 +14,6 @@ always wins. Rules for the game are as follows :
     - After the person picks, the computer does its picking.
     - Whoever is forced to pick up the last matchstick loses the game.
 */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(c) */
 
 /* My Plan: The total number of matchsticks is 21. To guarantee a win,

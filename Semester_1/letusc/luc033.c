@@ -7,7 +7,6 @@
 /* Write a program to find the range of a set of numbers entered
 through the keyboard. Range is the difference between the smallest
 and biggest number in the list. */
-/* Author - Amit Dutta, Date - 8th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(f) */
 
 #include <stdio.h>

@@ -10,7 +10,6 @@
 miles is :
     D = 3963 cos^-1(sin L1 sin L2 + cos L1 cos L2 * cos(G2 - G1))
 */
-/* Author - Amit Dutta, Date - 29th SEP, 2025 */
 /* Let Us C, Chap - 2, Page - 37, Qn no.: G(c) */
 
 #include <stdio.h>

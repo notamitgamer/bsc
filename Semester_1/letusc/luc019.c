@@ -9,7 +9,6 @@
 /* If the length of three sides of a triangle are entered through the
 keyboard, write a program to check whether the triangle is an isosceles,
 an equilateral, a scalene or a right-angled triangle. */
-/* Author - Amit Dutta, Date - 3rd OCT, 2025 */
 /* Let Us C, Chap- 4, Page - 71, Qn No.: D(a) */
 
 #include <stdio.h>

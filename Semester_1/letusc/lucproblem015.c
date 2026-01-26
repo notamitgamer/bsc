@@ -8,7 +8,6 @@
 
 /* Write a program that defines a function that calculates power of one
 number reaised to another and factorial value of a number in one cell. */
-/* Author - Amit Dutta, Date - 24th November, 2025 */
 /* Let Us C, Chap - 9, Page 159, Problem 9.2 */
 
 #include <stdio.h>

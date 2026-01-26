@@ -12,7 +12,6 @@ IMP :	DA = 30% of Basic Pay
  Gross Salary = Basic Pay + DA + HRA
  Net Salary = Gross Salary - PF
 */
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 int main() {

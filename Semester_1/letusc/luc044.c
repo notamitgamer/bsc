@@ -6,7 +6,6 @@
 
 /* Any year is entered through the keyboard. Write a function to
 determine whether the year is aleap year or not. */
-/* Author - Amit Dutta, Date - 17th November, 2025 */
 /* Let Us C, Chap- 8, Page - 144, Qn No.: C(1) */
 
 #include <stdio.h>

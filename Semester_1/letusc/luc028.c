@@ -6,7 +6,6 @@
 
 /* Write a program to print all the ASCII values and their equivalent
 characters using a while loop. The ASCII may vary from 0 to 255. */
-/* Author - Amit Dutta, Date - 7th OCT, 2025 */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(a) */
 
 #include <stdio.h>

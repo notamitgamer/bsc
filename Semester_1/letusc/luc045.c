@@ -11,7 +11,6 @@ to obtain the prime factors of this number.
 For example, prime factors of 24 are 2, 2, 2 and 3, whereas prime 
 factors of 35 are 5 and 7
 */
-/* Author - Amit Dutta, Date - 17th November, 2025 */
 /* Let Us C, Chap- 8, Page - 144, Qn No.: C(2) */
 
 #include <stdio.h>

@@ -7,7 +7,6 @@
 /* WAP to swap two integer variable without
 using third  variable */
 // using Approch Mode : complex, fast, less time consumimg
-// Author - Amit Dutta, Date - Unknown
 
 #include<stdio.h>
 #include<math.h>

@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check palindrome number. */
-/* Author - Amit Dutta, Date - 27th OCT, 2025 */
 
 #include <stdio.h>
 int main()

@@ -5,7 +5,6 @@
  */
 
 /* Write a Function power(a, b), to calculate the value of a raised to b */
-/* Author - Amit Dutta, Date - 17th November, 2025 */
 /* Let Us C, Chap - 8, Page - 141, Problem 8.2 */
 
 #include <stdio.h>

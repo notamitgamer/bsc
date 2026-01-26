@@ -5,7 +5,6 @@
  */
 
 /* Write a program to print first 10 multiple of 5 */
-/* Author - Amit Dutta, Date - 29th October, 2025 */
 
 /*
  * Compiler Note: This source code is specifically designed for compilation

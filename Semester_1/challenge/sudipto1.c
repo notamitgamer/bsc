@@ -38,7 +38,6 @@
  * for example: 1 0 1 0
  */
 
-/* Author - Amit Dutta, Date - 12th October, 2025 */
 
 #include <stdio.h>
 int main()

@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check palindrome number. */
-/* Author - Amit Dutta, Date - 06th November, 2025 */
 // File Name - amit0611202502.c (LAB), APC-PRAC-016.c (Local)
 
 // This code has not been compiled.

@@ -6,7 +6,6 @@
 
 /* Write a program to input positive number and check whether the number is
 perfect square or not. If the number is negetive then display appropriate message */
-/* Author - Amit Dutta, Date - 31st October, 2025 */
 
 #include <stdio.h>
 #include <math.h>

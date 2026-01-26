@@ -7,7 +7,6 @@
 /* According to Gregorian calender, it was Monday on the date 01/01/01.
 if any year is input through the keyboard write a program to find out
 what is the day on 1st January of this year. */
-/* Author - Amit Dutta, Date - 1st OCT, 2025 */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(i) */
 
 #include <stdio.h>

@@ -5,7 +5,6 @@
  */
 
 /* WAP to calculate the sum of even digits and odd digits. Number will be provided by user. */
-/* Author - Amit Dutta, Date - 18th OCT, 2025 */
 
 #include <stdio.h>
 int main()

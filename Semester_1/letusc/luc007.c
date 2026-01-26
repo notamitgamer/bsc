@@ -10,7 +10,6 @@ calculated as per the following formula.
     wcf = 35.74 + 0.6215t + (0.4275t - 35.75) * v^0.16
 Where t is temperature and v is wind velocity. Write a program to receive
 values of t and v and calcualate wind-chill factor (wcf). */
-/* Author - Amit Dutta, Date - 30th SEP, 2025 */
 /* Let Us C, Chap - 2, Page - 37, Qn No.: G(d) */
 
 #include <stdio.h>

@@ -8,7 +8,6 @@
 are input through the keyboard. Write a program to calculate the
 area and perimeter of the rectangle, and the area and circumference
 of the circle. */
-/* Author - Amit Dutta, Date - 16th SEP, 2025 */
 /* Let Us C; Page - 19; Chap- 1; QNo.: F(b) */
 
 #include <stdio.h>

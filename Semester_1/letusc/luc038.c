@@ -6,7 +6,6 @@
 
 /* Write a program to generate all Pythagorean Triplets with slide
 length less than or equal to 30. */
-/* Author - Amit Dutta, Date - 21st OCT, 2025 */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(e) */
 
 #include <stdio.h>

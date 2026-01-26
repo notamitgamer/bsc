@@ -5,7 +5,6 @@
  */
 
 /* Write a program to check if two number is co-prime or not */
-/* Author - Amit Dutta, Date - 07th November, 2025 */
 // File Name - amit0711202502.c (LAB), APC-PRAC-020.c (Local)
 
 // This code has not been compiled.

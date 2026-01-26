@@ -5,7 +5,6 @@
  */
 
 /* Reverse a number */
-/* Author - Amit Dutta, Date - 04th November, 2025 */
 
 #include <stdio.h>
 int main()

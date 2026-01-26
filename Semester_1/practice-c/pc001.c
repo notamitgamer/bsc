@@ -12,7 +12,6 @@
     1   2   3   4   5
 for n = 5
 */
-/* Author - Amit Dutta, Date - 02nd October, 2025 */
 
 #include <stdio.h>
 int main()

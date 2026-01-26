@@ -14,7 +14,6 @@ point (x, y) lines inside the triangle ABC, otherwise returns a value
 0. Would you get any advantage if you develop these functions to
 work on call by reference principle?
 */
-/* Author - Amit Dutta, Date - 25th November, 2025 */
 /* Let Us C, Chap- 9 (Pointers), Page - 163, Qn No.: C(c) */
 
 #include <stdio.h>
