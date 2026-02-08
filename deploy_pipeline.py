@@ -1,3 +1,9 @@
+# Author  : Amit Dutta <amitdutta4255@gmail.com>
+# Date    : 06 Feb 2026
+# Repo    : https://github.com/notamitgamer/bsc
+# License : MIT License (See the LICENSE file for details)
+# Copyright (c) 2026 Amit Dutta
+
 import os
 import subprocess
 import shutil
