@@ -147,7 +147,7 @@ def main():
         print(f"Error writing index.html: {e}")
 
     # 2. Write to secondary path (Desktop)
-    second_output_path = r"C:\Users\PC\Desktop\aranag.site\bsc.html"
+    second_output_path = r"C:\Users\PC\Desktop\amit.is-a.dev\bsc.html"
     try:
         os.makedirs(os.path.dirname(second_output_path), exist_ok=True)
         with open(second_output_path, 'w', encoding='utf-8') as f:
