@@ -126,6 +126,7 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 ### Amit Dutta
 
 * 📧 **amitdutta4255@gmail.com**
+* 📧 **mail@amit.is-a.dev**
 
 * 🌐 [**GitHub Profile**](https://github.com/notamitgamer)
 
