@@ -14,7 +14,7 @@ from datetime import datetime
 
 BSC_REPO_ROOT = r"G:\bsc"
 GENERATE_INDEX_SCRIPT = r"G:\bsc\docs\generate_index.py"
-ARANAG_SITE_DESKTOP = r"C:\Users\PC\Desktop\aranag.site"
+ARANAG_SITE_DESKTOP = r"C:\Users\PC\Desktop\amit.is-a.dev"
 BSC_LOCAL_BACKUP = r"G:\bsc_local"
 ARANAG_REPO_ROOT = r"G:\aranag"
 
@@ -27,7 +27,8 @@ ARANAG_PRESERVE = [
     "sitemap.xml",
     ".firebase",
     ".git",
-    "esal"
+    "esal",
+    "amit.is-a.dev"
 ]
 
 def remove_readonly(func, path, exc_info):
