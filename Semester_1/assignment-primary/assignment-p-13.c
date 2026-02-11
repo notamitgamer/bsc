@@ -13,6 +13,7 @@ otherwise. */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int isPalindrome(char[]);
 
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
     }
     if (isPalindrome(argv[1]))
     {
-        printf("\nThe entered string \"%s\" is a Palindrome.\n", argv[1]);
+        printf("\nThe entered string \"%s\" is Palindrome.\n", argv[1]);
     }
     else
     {
@@ -37,21 +38,6 @@ int main(int argc, char *argv[])
 int isPalindrome(char str[])
 {
     char *start = str;
-    char *end = str;
-    if (*end != '\0')
-    {
-        while (*(end + 1) != '\0')
-        {
-            end++;
-        }
-    }
-    else
-    {
-        return 1;
-    }
-    /*
-    Or we can use string.h instead of from line 33 to line 43 like this ...
-    
     char *end;
     int len = strlen(str);
     if (len == 0)
@@ -59,8 +45,6 @@ int isPalindrome(char str[])
         return 1;
     }
     end = str + (len - 1);
-    
-    */
     while (start < end)
     {
         if (*start != *end)

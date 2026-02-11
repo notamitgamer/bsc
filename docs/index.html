@@ -1199,7 +1199,38 @@ int main(int argc, char *argv[])
  */
 
 /* Write a C program that takes multiple integers as command-line arguments and finds the
-maximum and minimum value among them. */</div>
+maximum and minimum value among them. */
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char *argv[])
+{
+    int current_val, max_val, min_val, i;
+    if (argc &lt; 2)
+    {
+        printf(&quot;Usage: %s &lt;integer1&gt; &lt;integer2&gt; ...\n&quot;, argv[0]);
+        return 1;
+    }
+    max_val = atoi(argv[1]);
+    min_val = atoi(argv[1]);
+    for (i = 2; i &lt; argc; i++)
+    {
+        current_val = atoi(argv[i]);
+
+        if (current_val &gt; max_val)
+        {
+            max_val = current_val;
+        }
+        if (current_val &lt; min_val)
+        {
+            min_val = current_val;
+        }
+    }
+    printf(&quot;The maximum value is: %d\n&quot;, max_val);
+    printf(&quot;The minimum value is: %d\n&quot;, min_val);
+    return 0;
+}</div>
         </div>
         
         <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
@@ -1230,6 +1261,7 @@ otherwise. */
 
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
 
 int isPalindrome(char[]);
 
@@ -1242,7 +1274,7 @@ int main(int argc, char *argv[])
     }
     if (isPalindrome(argv[1]))
     {
-        printf(&quot;\nThe entered string \&quot;%s\&quot; is a Palindrome.\n&quot;, argv[1]);
+        printf(&quot;\nThe entered string \&quot;%s\&quot; is Palindrome.\n&quot;, argv[1]);
     }
     else
     {
@@ -1254,21 +1286,6 @@ int main(int argc, char *argv[])
 int isPalindrome(char str[])
 {
     char *start = str;
-    char *end = str;
-    if (*end != &#x27;\0&#x27;)
-    {
-        while (*(end + 1) != &#x27;\0&#x27;)
-        {
-            end++;
-        }
-    }
-    else
-    {
-        return 1;
-    }
-    /*
-    Or we can use string.h instead of from line 33 to line 43 like this ...
-    
     char *end;
     int len = strlen(str);
     if (len == 0)
@@ -1276,8 +1293,6 @@ int isPalindrome(char str[])
         return 1;
     }
     end = str + (len - 1);
-    
-    */
     while (start &lt; end)
     {
         if (*start != *end)
@@ -23219,6 +23234,64 @@ int main()
         </div>
         
             </div>
+        </div>
+        
+        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
+            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-knowledge_graph-py', 'knowledge_graph.py', 'https://github.com/notamitgamer/bsc/blob/main/knowledge_graph.py')">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">knowledge_graph.py</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="https://github.com/notamitgamer/bsc/blob/main/knowledge_graph.py" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <!-- Embedded Code Storage -->
+            <div id="code-knowledge_graph-py" style="display:none;">import json
+import urllib.request
+import urllib.parse
+
+# Replace with your actual API Key from Google Cloud Console
+API_KEY = &#x27;YOUR_API_KEY&#x27;
+query = &#x27;Amit Dutta notamitgamer&#x27; 
+service_url = &#x27;https://kgsearch.googleapis.com/v1/entities:search&#x27;
+
+params = {
+    &#x27;query&#x27;: query,
+    &#x27;limit&#x27;: 5, # Increased limit to see if there are multiple Amit Duttas
+    &#x27;indent&#x27;: True,
+    &#x27;key&#x27;: API_KEY,
+}
+
+url = service_url + &#x27;?&#x27; + urllib.parse.urlencode(params)
+
+try:
+    response = json.loads(urllib.request.urlopen(url).read())
+
+    print(f&quot;{&#x27;Name&#x27;:&lt;20} | {&#x27;Score&#x27;:&lt;10} | {&#x27;ID&#x27;:&lt;20}&quot;)
+    print(&quot;-&quot; * 55)
+
+    if response.get(&#x27;itemListElement&#x27;):
+        for element in response[&#x27;itemListElement&#x27;]:
+            result = element[&#x27;result&#x27;]
+            score = element.get(&#x27;resultScore&#x27;)
+            name = result.get(&#x27;name&#x27;)
+            kg_id = result.get(&#x27;@id&#x27;)
+            
+            # This prints the same data structure as the Taylor Swift example
+            print(f&quot;{name:&lt;20} | {score:&lt;10.2f} | {kg_id:&lt;20}&quot;)
+            
+            # Check for description or detailed data
+            description = result.get(&#x27;description&#x27;, &#x27;No description yet&#x27;)
+            print(f&quot;   -&gt; Info: {description}&quot;)
+            print(f&quot;   -&gt; Types: {&#x27;, &#x27;.join(result.get(&#x27;@type&#x27;, []))}\n&quot;)
+    else:
+        print(&quot;No entity found in the Knowledge Graph yet.&quot;)
+
+except Exception as e:
+    print(f&quot;An error occurred: {e}&quot;)</div>
         </div>
         
                 </div>
