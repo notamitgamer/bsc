@@ -4,50 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Fix favicon 404 error -->
-    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-bsc.svg">
     <title>notamitgamer/bsc Repository File Index</title>
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Material Symbols Rounded -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
     
-    <!-- Tailwind CSS with Kinetic Terminal Configuration -->
+    <!-- Tailwind CSS Configured for Material Design 3 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-              heading: ['Space Grotesk', 'sans-serif'],
+              sans: ['"Google Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
             },
             colors: {
-              blue: {
-                50: 'rgba(190, 242, 100, 0.05)', 
-                100: 'rgba(190, 242, 100, 0.1)',
-                200: '#d9f99d',
-                300: '#bef264',
-                400: '#a3d656',
-                500: '#bef264',
-                600: '#bef264',
-                700: '#84cc16',
-                800: '#3f6212',
-                900: '#365314',
-              },
-              slate: {
-                50: '#050505',
-                100: '#111111',
-                200: '#27272a',
-                300: '#404040',
-                400: '#525252',
-                500: '#737373',
-                600: '#a1a1aa',
-                700: '#d4d4d8',
-                800: '#e4e4e7',
-                900: '#f5f5f5',
-              }
+              primary: 'var(--md-sys-color-primary)',
+              'on-primary': 'var(--md-sys-color-on-primary)',
+              'primary-container': 'var(--md-sys-color-primary-container)',
+              'on-primary-container': 'var(--md-sys-color-on-primary-container)',
+              secondary: 'var(--md-sys-color-secondary)',
+              'on-secondary': 'var(--md-sys-color-on-secondary)',
+              'secondary-container': 'var(--md-sys-color-secondary-container)',
+              'on-secondary-container': 'var(--md-sys-color-on-secondary-container)',
+              surface: 'var(--md-sys-color-surface)',
+              'on-surface': 'var(--md-sys-color-on-surface)',
+              'surface-variant': 'var(--md-sys-color-surface-variant)',
+              'on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
+              outline: 'var(--md-sys-color-outline)',
+              'outline-variant': 'var(--md-sys-color-outline-variant)',
+              'surface-container-highest': 'var(--md-sys-color-surface-container-highest)',
+              'surface-container-high': 'var(--md-sys-color-surface-container-high)',
+              'surface-container': 'var(--md-sys-color-surface-container)',
+              'surface-container-low': 'var(--md-sys-color-surface-container-low)',
+              'surface-container-lowest': 'var(--md-sys-color-surface-container-lowest)',
+              error: 'var(--md-sys-color-error)',
+              'on-error': 'var(--md-sys-color-on-error)',
+              'inverse-surface': 'var(--md-sys-color-inverse-surface)',
+              'inverse-on-surface': 'var(--md-sys-color-inverse-on-surface)'
+            },
+            boxShadow: {
+              'elevation-1': '0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)',
+              'elevation-2': '0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)',
+              'elevation-3': '0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15)',
             }
           }
         }
@@ -68,203 +70,271 @@
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
 
     <style>
+      /* Google Sans Font Setup */
+      @font-face {
+        font-family: 'Google Sans';
+        src: url('https://fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Google Sans';
+        src: url('https://fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwA.woff2') format('woff2');
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: 'Google Sans';
+        src: url('https://fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLV154tzCwA.woff2') format('woff2');
+        font-weight: 700;
+      }
+
       :root {
-        --bg-main: #050505;
-        --accent: #bef264;
-        --border-color: #27272a;
-        --text-main: #f5f5f5;
-        --text-muted: #737373;
+        /* M3 Light Theme Tokens */
+        --md-sys-color-primary: #0b57d0;
+        --md-sys-color-on-primary: #ffffff;
+        --md-sys-color-primary-container: #d3e3fd;
+        --md-sys-color-on-primary-container: #041e49;
+        --md-sys-color-secondary: #5e5e5e;
+        --md-sys-color-on-secondary: #ffffff;
+        --md-sys-color-secondary-container: #e3e3e3;
+        --md-sys-color-on-secondary-container: #1e1e1e;
+        --md-sys-color-surface: #f8f9fa;
+        --md-sys-color-on-surface: #1f1f1f;
+        --md-sys-color-surface-variant: #e1e3e1;
+        --md-sys-color-on-surface-variant: #444746;
+        --md-sys-color-outline: #747775;
+        --md-sys-color-outline-variant: #c4c7c5;
+        --md-sys-color-surface-container-highest: #e3e3e3;
+        --md-sys-color-surface-container-high: #e8eaed;
+        --md-sys-color-surface-container: #f1f3f4;
+        --md-sys-color-surface-container-low: #f8f9fa;
+        --md-sys-color-surface-container-lowest: #ffffff;
+        --md-sys-color-error: #b3261e;
+        --md-sys-color-on-error: #ffffff;
+        --md-sys-color-inverse-surface: #303030;
+        --md-sys-color-inverse-on-surface: #f2f2f2;
+      }
+
+      .dark {
+        /* M3 Dark Theme Tokens */
+        --md-sys-color-primary: #a8c7fa;
+        --md-sys-color-on-primary: #062e6f;
+        --md-sys-color-primary-container: #0842a0;
+        --md-sys-color-on-primary-container: #d3e3fd;
+        --md-sys-color-secondary: #c7c7c7;
+        --md-sys-color-on-secondary: #303030;
+        --md-sys-color-secondary-container: #474747;
+        --md-sys-color-on-secondary-container: #e3e3e3;
+        --md-sys-color-surface: #131314;
+        --md-sys-color-on-surface: #e3e3e3;
+        --md-sys-color-surface-variant: #444746;
+        --md-sys-color-on-surface-variant: #c4c7c5;
+        --md-sys-color-outline: #8e918f;
+        --md-sys-color-outline-variant: #444746;
+        --md-sys-color-surface-container-highest: #333537;
+        --md-sys-color-surface-container-high: #282a2c;
+        --md-sys-color-surface-container: #1e1f20;
+        --md-sys-color-surface-container-low: #171717;
+        --md-sys-color-surface-container-lowest: #0f0f0f;
+        --md-sys-color-error: #f2b8b5;
+        --md-sys-color-on-error: #601410;
+        --md-sys-color-inverse-surface: #e3e3e3;
+        --md-sys-color-inverse-on-surface: #303030;
       }
 
       body {
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-main);
-        color: var(--text-main);
-      }
-      
-      h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; }
-
-      /* Noise Texture */
-      .bg-noise {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none; z-index: 0; opacity: 0.03;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: var(--md-sys-color-surface);
+        color: var(--md-sys-color-on-surface);
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
 
-      /* CRT Scanline */
-      .crt-scanline {
-        position: fixed; top: 0; left: 0; width: 100%; height: 2px;
-        background: rgba(190, 242, 100, 0.1); opacity: 0.5;
-        pointer-events: none; z-index: 50;
-        animation: scanline 8s linear infinite;
-      }
-      @keyframes scanline { 0% { top: -10vh; } 100% { top: 110vh; } }
+      /* M3 Scrollbars */
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--md-sys-color-outline-variant); border-radius: 4px; border: 2px solid transparent; background-clip: padding-box; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--md-sys-color-outline); border: 2px solid transparent; background-clip: padding-box; }
 
+      /* Visual Overrides for Injected File Items */
+      .file-item {
+        border-radius: 9999px !important;
+        border: none !important;
+        padding: 0.5rem 1rem !important;
+        margin-bottom: 2px !important;
+        transition: background-color 0.2s, color 0.2s !important;
+        background-color: transparent !important;
+        color: var(--md-sys-color-on-surface) !important;
+      }
+      .file-item:hover {
+        background-color: var(--md-sys-color-surface-variant) !important;
+      }
+      .file-item span {
+        color: var(--md-sys-color-on-surface) !important;
+        font-weight: 500 !important;
+      }
+      .folder-container > div:first-child {
+        border-radius: 9999px !important;
+        padding: 0.5rem 1rem !important;
+        transition: background-color 0.2s !important;
+        color: var(--md-sys-color-on-surface) !important;
+        font-weight: 500 !important;
+      }
+      .folder-container > div:first-child:hover {
+        background-color: var(--md-sys-color-surface-variant) !important;
+      }
+      .file-item.nav-selected { 
+        background-color: var(--md-sys-color-secondary-container) !important; 
+      }
+      .file-item.nav-selected span { 
+        color: var(--md-sys-color-on-secondary-container) !important; 
+      }
+      /* Ensure dynamically injected folder icons and chevrons follow M3 color scheme */
+      .folder-container .chevron,
+      .folder-container .folder-icon {
+        color: var(--md-sys-color-primary) !important;
+      }
+      .file-item svg {
+        color: var(--md-sys-color-on-surface-variant) !important;
+      }
+      .file-item:hover svg, .file-item.nav-selected svg {
+        color: var(--md-sys-color-primary) !important;
+      }
+      .text-slate-700, .text-slate-600, .text-slate-500 { 
+        color: var(--md-sys-color-on-surface-variant) !important; 
+      }
       .chevron.rotated {
         transform: rotate(180deg);
       }
 
-      .file-item:hover {
-        background-color: rgba(190, 242, 100, 0.05) !important;
-        border-color: rgba(190, 242, 100, 0.2) !important;
-      }
-      .folder-container > div:first-child:hover {
-        background-color: #111111 !important;
-      }
-      
-      .text-slate-700 { color: #d4d4d8 !important; }
-      .text-slate-600 { color: #a1a1aa !important; }
-      .text-slate-500 { color: #737373 !important; }
-      
+      /* CodeMirror M3 Adaptation */
       #code-modal .modal-content-area {
-        height: 85vh;
-        max-height: 90vh;
-        background-color: #0d1117 !important; 
-        border: 1px solid #30363d;
+        height: 90vh;
       }
-      @media (min-width: 640px) {
-        #code-modal .modal-content-area {
-            height: 90vh;
-        }
-      }
-
       #modal-code-container {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        overflow: hidden; /* CodeMirror handles scroll */
-        position: relative;
+        padding: 0; margin: 0; height: 100%; overflow: hidden; position: relative;
       }
-      
-      /* CodeMirror Overrides */
       .CodeMirror {
         height: 100% !important;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 13px;
-        background-color: #0d1117 !important;
-        color: #f8f8f2;
+        font-size: 14px;
+        background-color: #1e1f22 !important; /* Force a dark container for code readability */
+        color: #e3e3e3 !important;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
       }
       .CodeMirror-gutters {
-        background-color: #0d1117 !important;
-        border-right: 1px solid rgba(255,255,255,0.1) !important;
+        background-color: #1e1f22 !important;
+        border-right: 1px solid #333537 !important;
       }
       .CodeMirror-linenumber {
-        color: #6e7681 !important;
+        color: #8e918f !important;
       }
       .CodeMirror-cursor {
-        border-left: 2px solid var(--accent) !important;
+        border-left: 2px solid var(--md-sys-color-primary) !important;
       }
       .CodeMirror-selected {
-        background: rgba(190, 242, 100, 0.2) !important;
+        background: #474747 !important;
       }
-      
-      /* Scrollbar styling */
-      .CodeMirror-scroll::-webkit-scrollbar,
-      ::-webkit-scrollbar { width: 10px; height: 10px; }
-      .CodeMirror-scroll::-webkit-scrollbar-track,
-      ::-webkit-scrollbar-track { background: #050505; }
-      .CodeMirror-scroll::-webkit-scrollbar-thumb,
-      ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 5px; border: 2px solid #050505; }
-      .CodeMirror-scroll::-webkit-scrollbar-thumb:hover,
-      ::-webkit-scrollbar-thumb:hover { background: #bef264; }
 
       #app-content { display: none; }
-      
       #back-to-top { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
       #back-to-top.hidden { opacity: 0; pointer-events: none; transform: translateY(20px); }
-
       #toast { transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
       #toast.show { transform: translateY(0); opacity: 1; }
-
-      .file-item.nav-selected { background-color: rgba(190, 242, 100, 0.1) !important; border-color: #bef264 !important; }
-      .file-item.nav-selected span { color: #bef264 !important; }
-      
-      #modal-filename { color: #e6edf3; }
-      #code-loading { background-color: #0d1117; }
     </style>
   </head>
-  <body class="bg-slate-50 text-slate-900 h-screen flex flex-col overflow-hidden relative selection:bg-lime-300 selection:text-black">
+  <body class="bg-surface text-on-surface h-screen flex flex-col overflow-hidden relative selection:bg-primary-container selection:text-on-primary-container">
     
-    <div class="bg-noise"></div>
-    <div class="crt-scanline"></div>
+    <!-- Theme System Initialization (avoids flicker) -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('bsc_theme_preference') || 'system';
+        const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) document.documentElement.classList.add('dark');
+      })();
+    </script>
 
     <!-- App Wrapper -->
     <div id="app-content" class="flex flex-col h-full overflow-hidden relative z-10">
-        <!-- Header -->
-        <header
-        class="bg-[#050505]/90 backdrop-blur-md border-b border-white/10 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 shadow-sm z-10 gap-4 sm:gap-0 sticky top-0"
-        >
+        <!-- Top App Bar -->
+        <header class="bg-surface text-on-surface px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between shrink-0 z-10 gap-4 sm:gap-0 sticky top-0 border-b border-surface-variant transition-colors">
         <!-- Logo Section -->
         <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
-            <div class="flex items-center gap-3">
-                <div class="p-2 bg-lime-300/10 rounded-lg shrink-0 border border-lime-300/20">
-                <svg class="w-6 h-6 text-lime-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 flex items-center justify-center rounded-2xl shrink-0 text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0b57d0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+                    <path d="M8 10l-2 2 2 2M16 10l2 2-2 2M12 9v6"></path>
                 </svg>
                 </div>
                 <div class="min-w-0">
-                <h1 class="text-lg sm:text-xl font-bold text-white tracking-tight truncate font-heading">notamitgamer/bsc</h1>
-                <p class="text-xs text-neutral-500 font-medium mt-0.5 truncate font-mono">Repository File Index</p>
+                  <h1 class="text-xl font-medium tracking-tight truncate text-on-surface">notamitgamer/bsc</h1>
+                  <p class="text-sm text-on-surface-variant truncate font-medium">Repository File Index</p>
                 </div>
             </div>
             
             <div class="flex items-center gap-2 sm:hidden">
-                <button onclick="openLicenseModal(false)" class="p-2 text-neutral-400 hover:text-lime-300 bg-neutral-900 rounded-md transition-colors border border-neutral-800" title="View License">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                    </svg>
+                <!-- Mobile Theme Toggle -->
+                <button onclick="cycleTheme()" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Toggle Theme">
+                    <span id="theme-toggle-icon-mobile" class="material-symbols-rounded">contrast</span>
                 </button>
-                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="text-neutral-400 hover:text-white">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                <button onclick="openLicenseModal(false)" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="View License">
+                    <span class="material-symbols-rounded">gavel</span>
+                </button>
+                <a href="https://github.com/notamitgamer/bsc" target="_blank" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors">
+                    <svg class="w-[22px] h-[22px]" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
         </div>
 
         <!-- Actions Section -->
-        <div class="flex items-center gap-3 w-full sm:w-auto flex-wrap sm:flex-nowrap">
-            <button onclick="openLicenseModal(false)" class="hidden sm:flex items-center gap-2 px-3 py-2 text-sm font-medium text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-md transition-colors shrink-0 font-mono border border-transparent hover:border-lime-300/20" title="View License">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-                <span class="inline">License</span>
+        <div class="flex items-center gap-2 w-full sm:w-auto flex-wrap sm:flex-nowrap">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle-btn" onclick="cycleTheme()" class="hidden sm:flex w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant items-center justify-center transition-colors" title="Toggle Theme">
+                <span id="theme-toggle-icon" class="material-symbols-rounded">contrast</span>
             </button>
 
-            <div class="relative group grow sm:grow-0 w-full sm:w-auto">
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-4 w-4 text-neutral-500 group-focus-within:text-lime-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <button onclick="openLicenseModal(false)" class="hidden sm:flex items-center gap-2 px-4 h-10 text-sm font-medium text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-full transition-colors shrink-0" title="View License">
+                <span class="material-symbols-rounded text-[20px]">gavel</span>
+                <span>License</span>
+            </button>
+
+            <!-- Search Bar -->
+            <div class="relative group grow sm:grow-0 w-full sm:w-auto ml-0 sm:ml-2">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-on-surface-variant">
+                    <span class="material-symbols-rounded text-[20px]">search</span>
                 </div>
-                <input type="text" id="search-input" placeholder="Search code... (/)" class="pl-10 pr-10 sm:pr-4 py-2 bg-[#111] border border-neutral-800 rounded-lg text-sm w-full sm:w-64 focus:ring-1 focus:ring-lime-300/50 focus:border-lime-300/50 focus:bg-[#050505] transition-all outline-none text-neutral-200 placeholder:text-neutral-600 font-mono"/>
-                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none hidden sm:flex">
-                    <span class="text-[10px] text-neutral-600 font-mono border border-neutral-800 rounded px-1.5 py-0.5 bg-[#111]">/</span>
-                </div>
+                <input type="text" id="search-input" placeholder="Search code..." class="pl-12 pr-4 h-12 bg-surface-container-high hover:bg-surface-container-highest rounded-full text-sm w-full sm:w-72 focus:bg-surface-container-highest transition-colors text-on-surface placeholder:text-on-surface-variant outline-none"/>
             </div>
             
-            <a href="https://github.com/notamitgamer/bsc" target="_blank" class="hidden sm:flex bg-neutral-100 hover:bg-lime-300 text-black px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm items-center gap-2 font-mono">
+            <a href="https://github.com/notamitgamer/bsc" target="_blank" class="hidden sm:flex bg-secondary-container text-on-secondary-container hover:bg-secondary-container/80 px-5 h-10 rounded-full text-sm font-medium transition-colors items-center gap-2 ml-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                 <span>GitHub</span>
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
             </a>
         </div>
         </header>
 
         <!-- Main Content Area -->
-        <main class="flex-1 flex overflow-hidden relative" id="main-scroll-container">
+        <main class="flex-1 flex overflow-hidden relative bg-surface-container-low" id="main-scroll-container">
         <!-- File Explorer -->
         <div class="flex-1 overflow-y-auto p-4 sm:p-6 h-full" id="file-explorer-scroll">
-            <div class="max-w-4xl mx-auto space-y-4">
-                <div id="recent-files-container" class="hidden mb-6">
-                    <div class="flex items-center justify-between mb-3 px-1">
-                        <h2 class="text-xs font-bold text-neutral-500 uppercase tracking-wider font-mono">Recent Files</h2>
-                        <button onclick="confirmClearRecent()" class="text-xs text-red-400 hover:text-red-500 font-medium transition-colors hover:underline font-mono">Clear</button>
+            <div class="max-w-4xl mx-auto space-y-2">
+                
+                <!-- Recent Files -->
+                <div id="recent-files-container" class="hidden mb-6 bg-surface-container rounded-3xl p-4 sm:p-6 transition-colors">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <h2 class="text-sm font-medium text-on-surface-variant">Recent Files</h2>
+                        <button onclick="confirmClearRecent()" class="text-sm text-primary hover:bg-primary/10 px-4 py-2 rounded-full font-medium transition-colors">Clear</button>
                     </div>
                     <div id="recent-files-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"></div>
-                    <hr class="mt-4 border-white/10">
                 </div>
 
-                <div class="sticky top-0 z-20 bg-[#050505] py-2 flex justify-end gap-2 border-b border-white/10 backdrop-blur-sm bg-opacity-90 mb-2">
-                    <button id="btn-expand" onclick="expandAll()" class="text-xs font-bold text-neutral-500 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono" disabled>Expand All</button>
-                    <span class="text-neutral-700">|</span>
-                    <button id="btn-collapse" onclick="collapseAll()" class="text-xs font-bold text-neutral-500 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono" disabled>Collapse All</button>
+                <!-- Action Bar -->
+                <div class="sticky top-0 z-20 bg-surface-container-low/90 py-3 flex justify-end gap-2 border-b border-surface-variant backdrop-blur-md mb-4 transition-colors">
+                    <button id="btn-expand" onclick="expandAll()" class="text-sm font-medium text-on-surface/30 px-4 h-10 rounded-full cursor-not-allowed bg-transparent flex items-center justify-center" disabled>Expand All</button>
+                    <button id="btn-collapse" onclick="collapseAll()" class="text-sm font-medium text-on-surface/30 px-4 h-10 rounded-full cursor-not-allowed bg-transparent flex items-center justify-center" disabled>Collapse All</button>
                 </div>
 
-                <div id="file-list-container">
+                <div id="file-list-container" class="bg-surface rounded-3xl p-4 shadow-elevation-1 transition-colors">
                 
         <div class="folder-container mb-2">
             <div class="flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-slate-100 rounded-lg transition-colors group select-none" onclick="toggleFolder(this)">
@@ -23236,181 +23306,109 @@ int main()
             </div>
         </div>
         
-        <div class="file-item flex items-center justify-between px-3 py-2 hover:bg-white hover:shadow-sm rounded-lg transition-all group border border-transparent hover:border-slate-100 mb-1">
-            <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-1" onclick="showCode('code-knowledge_graph-py', 'knowledge_graph.py', 'https://github.com/notamitgamer/bsc/blob/main/knowledge_graph.py')">
-                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <span class="text-sm text-slate-600 font-medium group-hover:text-blue-600 truncate">knowledge_graph.py</span>
-            </div>
-            <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <a href="https://github.com/notamitgamer/bsc/blob/main/knowledge_graph.py" target="_blank" class="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-md" title="View on GitHub">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-            <!-- Embedded Code Storage -->
-            <div id="code-knowledge_graph-py" style="display:none;">import json
-import urllib.request
-import urllib.parse
-
-# Replace with your actual API Key from Google Cloud Console
-API_KEY = &#x27;YOUR_API_KEY&#x27;
-query = &#x27;Amit Dutta notamitgamer&#x27; 
-service_url = &#x27;https://kgsearch.googleapis.com/v1/entities:search&#x27;
-
-params = {
-    &#x27;query&#x27;: query,
-    &#x27;limit&#x27;: 5, # Increased limit to see if there are multiple Amit Duttas
-    &#x27;indent&#x27;: True,
-    &#x27;key&#x27;: API_KEY,
-}
-
-url = service_url + &#x27;?&#x27; + urllib.parse.urlencode(params)
-
-try:
-    response = json.loads(urllib.request.urlopen(url).read())
-
-    print(f&quot;{&#x27;Name&#x27;:&lt;20} | {&#x27;Score&#x27;:&lt;10} | {&#x27;ID&#x27;:&lt;20}&quot;)
-    print(&quot;-&quot; * 55)
-
-    if response.get(&#x27;itemListElement&#x27;):
-        for element in response[&#x27;itemListElement&#x27;]:
-            result = element[&#x27;result&#x27;]
-            score = element.get(&#x27;resultScore&#x27;)
-            name = result.get(&#x27;name&#x27;)
-            kg_id = result.get(&#x27;@id&#x27;)
-            
-            # This prints the same data structure as the Taylor Swift example
-            print(f&quot;{name:&lt;20} | {score:&lt;10.2f} | {kg_id:&lt;20}&quot;)
-            
-            # Check for description or detailed data
-            description = result.get(&#x27;description&#x27;, &#x27;No description yet&#x27;)
-            print(f&quot;   -&gt; Info: {description}&quot;)
-            print(f&quot;   -&gt; Types: {&#x27;, &#x27;.join(result.get(&#x27;@type&#x27;, []))}\n&quot;)
-    else:
-        print(&quot;No entity found in the Knowledge Graph yet.&quot;)
-
-except Exception as e:
-    print(f&quot;An error occurred: {e}&quot;)</div>
-        </div>
-        
                 </div>
             </div>
         </div>
         
-        <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 p-3 bg-neutral-900 border border-neutral-700 text-lime-300 rounded-full shadow-lg hover:bg-lime-300 hover:text-black transition-all z-30">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        <!-- Back to top FAB -->
+        <button id="back-to-top" onclick="scrollToTop()" class="hidden absolute bottom-6 right-6 w-14 h-14 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary rounded-2xl shadow-elevation-3 flex items-center justify-center transition-colors z-30">
+            <span class="material-symbols-rounded text-2xl">arrow_upward</span>
         </button>
         </main>
     </div>
 
-    <!-- Code Viewer Modal -->
-    <div id="code-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-50 p-2 sm:p-6 opacity-0 transition-opacity duration-200">
-      <div class="bg-[#0d1117] w-full max-w-6xl rounded-xl shadow-2xl flex flex-col border border-white/10 transform scale-95 transition-transform duration-200 modal-content-area">
-        <!-- Modal Header -->
-        <div class="flex items-center justify-between px-3 sm:px-4 py-3 border-b border-white/10 bg-[#161b22] rounded-t-xl shrink-0 gap-2">
-          <div class="flex items-center gap-3 overflow-hidden">
-            <div class="flex gap-1.5 shrink-0 opacity-50">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+    <!-- Code Viewer Dialog -->
+    <div id="code-modal" class="fixed inset-0 bg-scrim/30 dark:bg-scrim/50 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4 sm:p-6 opacity-0 transition-opacity duration-200">
+      <div class="bg-surface-container-high w-full max-w-6xl rounded-[28px] shadow-elevation-3 flex flex-col transform scale-95 transition-transform duration-200 modal-content-area overflow-hidden">
+        <!-- Dialog Header -->
+        <div class="flex items-center justify-between px-6 py-4 bg-surface-container border-b border-outline-variant shrink-0 gap-4">
+          <div class="flex items-center gap-4 overflow-hidden">
+            <div class="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center shrink-0">
+               <span class="material-symbols-rounded">description</span>
             </div>
             <div class="flex flex-col min-w-0">
-              <h3 id="modal-filename" class="text-xs sm:text-sm font-mono text-lime-300 truncate font-medium">filename.c</h3>
-              <span id="modal-filesize" class="text-[10px] text-neutral-500 font-mono"></span>
+              <h3 id="modal-filename" class="text-title-medium font-medium text-on-surface truncate">filename.c</h3>
+              <span id="modal-filesize" class="text-body-small text-on-surface-variant"></span>
             </div>
           </div>
           
           <div class="flex items-center gap-1 sm:gap-2 shrink-0 relative">
             
             <!-- Desktop Buttons Group -->
-            <div class="hidden sm:flex items-center gap-1 sm:gap-2">
-                <button id="new-tab-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Open in New Tab">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            <div class="hidden sm:flex items-center gap-1">
+                <button id="new-tab-btn" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Open in New Tab">
+                    <span class="material-symbols-rounded">open_in_new</span>
                 </button>
 
-                <!-- Compiler Button -->
-                <button onclick="openInCompiler()" class="p-2 text-neutral-400 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-all group relative" title="Open in C Compiler">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <button onclick="openInCompiler()" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Open in C Compiler">
+                    <span class="material-symbols-rounded">terminal</span>
                 </button>
 
-                <button id="download-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Download File">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                <button id="download-btn" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Download File">
+                    <span class="material-symbols-rounded">download</span>
                 </button>
 
-                <button id="print-btn" onclick="printCode()" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Print Code">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+                <button id="print-btn" onclick="printCode()" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Print Code">
+                    <span class="material-symbols-rounded">print</span>
                 </button>
 
-                <button id="share-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Copy Link">
-                    <svg id="share-icon-default" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
-                    <svg id="share-icon-success" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                <button id="share-btn" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Copy Link">
+                    <span id="share-icon-default" class="material-symbols-rounded">share</span>
+                    <span id="share-icon-success" class="material-symbols-rounded text-primary hidden transform scale-0 transition-transform duration-200">check</span>
                 </button>
 
-                <button id="copy-code-btn" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-all group relative" title="Copy Code">
-                    <svg id="copy-icon-default" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                    <svg id="copy-icon-success" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300 hidden transform scale-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                <button id="copy-code-btn" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Copy Code">
+                    <span id="copy-icon-default" class="material-symbols-rounded">content_copy</span>
+                    <span id="copy-icon-success" class="material-symbols-rounded text-primary hidden transform scale-0 transition-transform duration-200">check</span>
                 </button>
 
-                <a id="modal-raw-link" href="#" target="_blank" class="p-2 text-neutral-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" title="View Raw on GitHub">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                <a id="modal-raw-link" href="#" target="_blank" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="View Raw on GitHub">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="sm:hidden p-2 text-neutral-400 hover:text-white rounded-lg" onclick="toggleMobileMenu(event)">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                </svg>
+            <button id="mobile-menu-btn" class="sm:hidden w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" onclick="toggleMobileMenu(event)">
+                <span class="material-symbols-rounded">more_vert</span>
             </button>
 
             <!-- Mobile Dropdown Menu -->
-            <div id="mobile-menu-dropdown" class="hidden absolute top-full right-0 mt-2 w-48 bg-[#161b22] border border-white/10 rounded-xl shadow-xl z-50 overflow-hidden font-mono text-sm">
-                <button onclick="openInCompiler()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-lime-300 flex items-center gap-3 transition-colors border-b border-white/5">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    Compile / Run
+            <div id="mobile-menu-dropdown" class="hidden absolute top-full right-0 mt-2 w-56 bg-surface-container-high border border-outline-variant rounded-xl shadow-elevation-2 z-50 overflow-hidden py-2">
+                <button onclick="openInCompiler()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">terminal</span> Compile / Run
                 </button>
-                <button onclick="document.getElementById('new-tab-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    New Tab
+                <button onclick="document.getElementById('new-tab-btn').click()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">open_in_new</span> New Tab
                 </button>
-                <button onclick="document.getElementById('download-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                    Download
+                <button onclick="document.getElementById('download-btn').click()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">download</span> Download
                 </button>
-                <button onclick="printCode()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
-                    Print
+                <button onclick="printCode()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">print</span> Print
                 </button>
-                <button onclick="document.getElementById('share-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
-                    Share Link
+                <button onclick="document.getElementById('share-btn').click()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">share</span> Share Link
                 </button>
-                <button onclick="document.getElementById('copy-code-btn').click()" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                    Copy Code
+                <button onclick="document.getElementById('copy-code-btn').click()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">content_copy</span> Copy Code
                 </button>
-                <a id="mobile-github-link" href="#" target="_blank" class="w-full text-left px-4 py-3 text-neutral-300 hover:bg-white/10 hover:text-white flex items-center gap-3 transition-colors border-t border-white/5">
-                    <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                    View on GitHub
+                <a id="mobile-github-link" href="#" target="_blank" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors border-t border-outline-variant mt-2 pt-3">
+                    <svg class="w-5 h-5 text-on-surface-variant" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg> View on GitHub
                 </a>
             </div>
 
-            <!-- Close Button (Always Visible) -->
-            <button onclick="hideCode()" class="p-2 text-neutral-400 hover:text-white hover:bg-red-900/30 hover:text-red-400 rounded-lg transition-colors ml-1" title="Close">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <!-- Close Button -->
+            <button onclick="hideCode()" class="w-10 h-10 rounded-full hover:bg-error/10 text-on-surface-variant hover:text-error flex items-center justify-center transition-colors ml-2 bg-surface-variant/50" title="Close">
+              <span class="material-symbols-rounded">close</span>
             </button>
           </div>
         </div>
 
         <!-- Code Content -->
-        <div class="flex-1 min-h-0 bg-[#0d1117] relative dark-modal-bg">
+        <div class="flex-1 min-h-0 bg-[#1e1f22] relative">
           <!-- Loading State -->
-          <div id="code-loading" class="absolute inset-0 flex items-center justify-center z-10 bg-[#0d1117] hidden">
-            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-lime-300"></div>
+          <div id="code-loading" class="absolute inset-0 flex items-center justify-center z-10 bg-surface-container-high hidden">
+            <div class="animate-spin rounded-full h-10 w-10 border-4 border-surface-variant border-t-primary"></div>
           </div>
           <!-- Code Container -->
           <div id="modal-code-container" class="w-full h-full">
@@ -23420,70 +23418,92 @@ except Exception as e:
       </div>
     </div>
     
-    <!-- License Modal -->
-    <div id="license-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md hidden flex items-center justify-center z-[60] p-4 sm:p-6 opacity-0 transition-opacity duration-200">
-      <div class="bg-[#111] w-full max-w-3xl rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 max-h-[85vh] sm:max-h-[85vh] max-h-[90vh]">
-        <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-800 shrink-0">
-          <h3 class="text-lg font-bold text-white flex items-center gap-2 font-heading">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-lime-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+    <!-- License Dialog -->
+    <div id="license-modal" class="fixed inset-0 bg-scrim/30 dark:bg-scrim/60 backdrop-blur-sm hidden flex items-center justify-center z-[60] p-4 opacity-0 transition-opacity duration-200">
+      <div class="bg-surface-container-high w-full max-w-2xl rounded-[28px] shadow-elevation-3 flex flex-col transform scale-95 transition-transform duration-200 max-h-[90vh]">
+        <!-- Dialog Header -->
+        <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant shrink-0">
+          <h3 class="text-xl font-normal text-on-surface flex items-center gap-3">
+            <span class="material-symbols-rounded text-primary text-2xl">gavel</span>
             License Information
           </h3>
           <div class="flex items-center gap-2">
-             <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank" class="p-2 text-neutral-500 hover:text-lime-300 hover:bg-lime-300/10 rounded-lg transition-colors" title="View License on GitHub">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-               </svg>
+             <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="View License on GitHub">
+               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-2.126 1.029-2.935-.103-.253-.446-1.372.097-2.897 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.525.202 2.644.1 2.897.64.809 1.026 1.841 1.026 2.935 0 3.847-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
              </a>
-            <button id="license-close-btn" onclick="hideLicense()" class="p-2 text-neutral-500 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors hidden">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button id="license-close-btn" onclick="hideLicense()" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors hidden">
+                <span class="material-symbols-rounded">close</span>
             </button>
           </div>
         </div>
 
         <!-- License Content -->
-        <div id="license-content" class="p-6 overflow-y-auto font-mono text-sm leading-relaxed text-neutral-400 bg-[#050505]">
-            <div class="border-l-4 border-lime-300 pl-4 mb-6">
-                <h4 class="font-bold text-white text-lg">MIT LICENSE</h4>
-                <p class="text-lime-300/80 font-medium">Open Source Initiative Approved License</p>
-                <p class="text-neutral-600 text-xs mt-1">Copyright (c) 2025-2026 AMIT DUTTA</p>
+        <div id="license-content" class="p-6 overflow-y-auto text-sm leading-relaxed text-on-surface-variant bg-surface">
+            <div class="bg-surface-container p-4 rounded-xl mb-6 border-l-4 border-primary">
+                <h4 class="font-medium text-on-surface text-lg">MIT LICENSE</h4>
+                <p class="text-primary font-medium mt-1">Open Source Initiative Approved License</p>
+                <p class="text-on-surface-variant text-xs mt-2">Copyright (c) 2025-2026 AMIT DUTTA</p>
             </div>
 
-            <div class="space-y-4 text-neutral-300">
+            <div class="space-y-4">
                 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
                 
                 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
                 
-                <p class="uppercase text-neutral-400 text-xs leading-relaxed border border-neutral-800 p-4 rounded bg-[#111]">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                <p class="uppercase text-xs leading-relaxed border border-outline-variant p-4 rounded-xl bg-surface-container-low font-medium">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
             </div>
         </div>
 
-        <!-- Modal Footer -->
-        <div id="license-footer" class="px-6 py-4 border-t border-neutral-800 bg-[#111] rounded-b-xl flex justify-end shrink-0 gap-3"></div>
+        <!-- Dialog Footer -->
+        <div id="license-footer" class="px-6 py-4 border-t border-outline-variant bg-surface-container-high rounded-b-[28px] flex justify-end shrink-0 gap-2"></div>
       </div>
     </div>
     
-    <!-- Confirm Dialog Modal -->
-    <div id="confirm-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 sm:p-6 opacity-0 transition-opacity duration-200">
-      <div class="bg-[#111] w-full max-w-sm rounded-xl shadow-2xl flex flex-col border border-neutral-800 transform scale-95 transition-transform duration-200 p-6">
-        <h3 class="text-lg font-bold text-white mb-2 font-heading">Clear Recent Files?</h3>
-        <p class="text-sm text-neutral-400 mb-6 font-mono">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
-        <div class="flex justify-end gap-3">
-            <button onclick="closeConfirmModal()" class="px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 text-sm font-medium rounded-lg transition-colors border border-neutral-700 font-mono">Cancel</button>
-            <button onclick="confirmClearRecentAction()" class="px-4 py-2 bg-red-900/50 hover:bg-red-900 text-red-200 hover:text-white text-sm font-medium rounded-lg transition-colors shadow-sm border border-red-900 font-mono">Delete</button>
+    <!-- Confirm Dialog -->
+    <div id="confirm-modal" class="fixed inset-0 bg-scrim/30 dark:bg-scrim/60 backdrop-blur-sm hidden flex items-center justify-center z-[70] p-4 opacity-0 transition-opacity duration-200">
+      <div class="bg-surface-container-high w-full max-w-sm rounded-[28px] shadow-elevation-3 flex flex-col transform scale-95 transition-transform duration-200 p-6">
+        <div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mb-4">
+            <span class="material-symbols-rounded text-2xl">delete</span>
+        </div>
+        <h3 class="text-xl font-normal text-on-surface mb-4">Clear Recent Files?</h3>
+        <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Are you sure you want to delete your recent file history? This action cannot be undone.</p>
+        <div class="flex justify-end gap-2">
+            <button onclick="closeConfirmModal()" class="px-5 h-10 text-primary hover:bg-primary/10 rounded-full font-medium transition-colors">Cancel</button>
+            <button onclick="confirmClearRecentAction()" class="px-5 h-10 bg-error text-on-error hover:bg-error/90 rounded-full font-medium transition-colors shadow-sm">Delete</button>
         </div>
       </div>
     </div>
     
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-4 right-4 bg-neutral-900 text-lime-300 px-4 py-2 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-2 border border-lime-300/30">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-        <span class="font-mono text-xs uppercase">Link copied to clipboard!</span>
+    <!-- Snackbar (Toast) -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-elevation-3 transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-3">
+        <span class="material-symbols-rounded text-primary">check_circle</span>
+        <span class="text-sm font-medium">Link copied to clipboard</span>
     </div>
 
     <script>
+      /* --- M3 Theme Toggle Logic --- */
+      const THEME_KEY = 'bsc_theme_preference';
+      function applyTheme(theme) {
+          const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('dark', isDark);
+          const icon = document.getElementById('theme-toggle-icon');
+          const mobileIcon = document.getElementById('theme-toggle-icon-mobile');
+          const iconName = theme === 'light' ? 'light_mode' : (theme === 'dark' ? 'dark_mode' : 'contrast');
+          if (icon) icon.textContent = iconName;
+          if (mobileIcon) mobileIcon.textContent = iconName;
+      }
+      function cycleTheme() {
+          const current = localStorage.getItem(THEME_KEY) || 'system';
+          const next = current === 'system' ? 'light' : (current === 'light' ? 'dark' : 'system');
+          localStorage.setItem(THEME_KEY, next);
+          applyTheme(next);
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+          if ((localStorage.getItem(THEME_KEY) || 'system') === 'system') applyTheme('system');
+      });
+      document.addEventListener("DOMContentLoaded", () => applyTheme(localStorage.getItem(THEME_KEY) || 'system'));
+
+      /* --- App Logic --- */
       function toggleFolder(header) {
         if (header instanceof Event) header = header.currentTarget;
         if (!header || typeof header.querySelector !== 'function') return;
@@ -23537,10 +23557,10 @@ except Exception as e:
       function setBtnState(btn, isActive) {
           if (isActive) {
               btn.disabled = false;
-              btn.className = "text-xs font-bold text-lime-300 hover:bg-lime-300/10 px-3 py-1.5 rounded-md transition-all duration-200 cursor-pointer border border-lime-300/30 shadow-sm font-mono";
+              btn.className = "text-sm font-medium text-primary hover:bg-primary/10 px-5 h-10 rounded-full transition-colors cursor-pointer flex items-center justify-center";
           } else {
               btn.disabled = true;
-              btn.className = "text-xs font-bold text-neutral-600 px-3 py-1.5 rounded-md cursor-not-allowed bg-neutral-900 border border-transparent font-mono";
+              btn.className = "text-sm font-medium text-on-surface/30 px-5 h-10 rounded-full cursor-not-allowed bg-transparent flex items-center justify-center";
           }
       }
 
@@ -23605,15 +23625,13 @@ except Exception as e:
           
           recentFiles.forEach(file => {
               const item = document.createElement('div');
-              item.className = "flex items-center gap-2 px-3 py-2 bg-[#111] hover:bg-lime-300/10 hover:border-lime-300/30 border border-neutral-800 rounded-lg cursor-pointer transition-all group";
+              item.className = "flex items-center gap-3 px-4 py-3 bg-surface hover:bg-surface-variant rounded-xl cursor-pointer transition-colors group shadow-elevation-1 border border-outline-variant/30";
               item.onclick = () => showCode(file.storageId, file.name, file.url);
               item.innerHTML = `
-                  <div class="p-1.5 rounded-md bg-lime-300/10 text-lime-300">
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+                  <div class="p-2 rounded-full bg-primary-container text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors flex items-center justify-center">
+                    <span class="material-symbols-rounded text-[20px]">description</span>
                   </div>
-                  <span class="text-xs font-medium text-neutral-400 group-hover:text-white truncate font-mono">${file.name}</span>
+                  <span class="text-sm font-medium text-on-surface group-hover:text-primary truncate transition-colors">${file.name}</span>
               `;
               list.appendChild(item);
           });
@@ -23742,7 +23760,7 @@ except Exception as e:
              newTabBtn.onclick = () => {
                  const newWindow = window.open();
                  newWindow.document.write('<html><head><title>' + filename + '</title>');
-                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #0d1117; color: #e6edf3;} </style>');
+                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #1e1f22; color: #e3e3e3;} </style>');
                  newWindow.document.write('</head><body><pre>' + code.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
                  newWindow.document.close();
              };
@@ -23776,7 +23794,6 @@ except Exception as e:
       }
 
       function hideCode() {
-        // Close mobile menu if open
         const dropdown = document.getElementById('mobile-menu-dropdown');
         if (!dropdown.classList.contains('hidden')) {
             dropdown.classList.add('hidden');
@@ -23875,12 +23892,12 @@ except Exception as e:
               licenseCloseBtn.classList.add("hidden");
               
               const btnDecline = document.createElement("button");
-              btnDecline.className = "px-4 py-2 bg-neutral-900 hover:bg-red-900/20 text-neutral-400 hover:text-red-400 text-sm font-medium rounded-lg transition-colors border border-neutral-700 font-mono";
+              btnDecline.className = "px-5 h-10 flex items-center justify-center text-error hover:bg-error/10 text-sm font-medium rounded-full transition-colors";
               btnDecline.innerText = "Decline";
               btnDecline.onclick = declineLicense;
               
               const btnAccept = document.createElement("button");
-              btnAccept.className = "px-4 py-2 bg-lime-300 hover:bg-lime-400 text-black text-sm font-bold rounded-lg transition-colors shadow-sm font-mono";
+              btnAccept.className = "px-5 h-10 flex items-center justify-center bg-primary text-on-primary hover:bg-primary/90 text-sm font-medium rounded-full transition-colors";
               btnAccept.innerText = "Accept";
               btnAccept.onclick = acceptLicense;
               
@@ -23890,7 +23907,7 @@ except Exception as e:
               licenseCloseBtn.classList.remove("hidden");
               
               const btnUnderstand = document.createElement("button");
-              btnUnderstand.className = "px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-medium rounded-lg transition-colors shadow-sm border border-neutral-700 font-mono";
+              btnUnderstand.className = "px-5 h-10 flex items-center justify-center bg-primary text-on-primary hover:bg-primary/90 text-sm font-medium rounded-full transition-colors";
               btnUnderstand.innerText = "I Understand";
               btnUnderstand.onclick = hideLicense;
               
@@ -24040,7 +24057,7 @@ except Exception as e:
                             const snippetLines = allLines.slice(startLine, endLine);
                             
                             const snippetDiv = document.createElement('div');
-                            snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-2 bg-[#111] border-l-4 border-lime-300 rounded-r text-xs font-mono text-neutral-400 overflow-x-auto shadow-sm cursor-pointer hover:bg-neutral-900 transition-colors';
+                            snippetDiv.className = 'search-snippet w-full mt-2 ml-4 sm:ml-7 p-3 bg-surface-container rounded-xl text-xs font-mono text-on-surface overflow-x-auto cursor-pointer hover:bg-surface-container-high transition-colors shadow-elevation-1';
                             
                             snippetDiv.onclick = (evt) => {
                                 evt.stopPropagation(); 
@@ -24055,12 +24072,12 @@ except Exception as e:
                             snippetLines.forEach((line, idx) => {
                                 const currentLineNum = startLine + idx + 1;
                                 let safeLine = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-                                safeLine = safeLine.replace(highlightRegex, '<mark class="bg-lime-300 text-black font-bold rounded-sm px-0.5">$1</mark>');
+                                safeLine = safeLine.replace(highlightRegex, '<mark class="bg-primary-container text-on-primary-container font-medium rounded-sm px-0.5">$1</mark>');
                                 
                                 const isMatchLine = (currentLineNum - 1) === lineCount;
-                                const lineClass = isMatchLine ? 'bg-lime-300/10 font-semibold' : '';
+                                const lineClass = isMatchLine ? 'bg-primary/10 font-medium' : '';
 
-                                htmlContent += `<div class="whitespace-pre ${lineClass}"><span class="inline-block w-8 text-right mr-3 text-neutral-600 select-none border-r border-neutral-700 pr-1">${currentLineNum}</span>${safeLine}</div>`;
+                                htmlContent += `<div class="whitespace-pre ${lineClass}"><span class="inline-block w-8 text-right mr-3 text-on-surface-variant select-none border-r border-outline-variant pr-2">${currentLineNum}</span>${safeLine}</div>`;
                             });
                             
                             snippetDiv.innerHTML = htmlContent;
