@@ -10,6 +10,12 @@
     <!-- Material Symbols Rounded -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
     
+    <!-- Preconnect to Google Fonts for robust loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Official Roboto fallback to ensure identical rendering across all OS/Devices -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS Configured for Material Design 3 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,8 +24,9 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"Google Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-              mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+              // Removed system-specific fonts so devices can't override the Google look
+              sans: ['"Google Sans"', '"Roboto"', 'Arial', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
             },
             colors: {
               primary: 'var(--md-sys-color-primary)',
@@ -75,16 +82,19 @@
         font-family: 'Google Sans';
         src: url('https://fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2') format('woff2');
         font-weight: 400;
+        font-display: swap;
       }
       @font-face {
         font-family: 'Google Sans';
         src: url('https://fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94YtzCwA.woff2') format('woff2');
         font-weight: 500;
+        font-display: swap;
       }
       @font-face {
         font-family: 'Google Sans';
         src: url('https://fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLV154tzCwA.woff2') format('woff2');
         font-weight: 700;
+        font-display: swap;
       }
 
       :root {
@@ -141,11 +151,17 @@
         --md-sys-color-inverse-on-surface: #303030;
       }
 
+      /* Base layout: Enforce strict font stacking globally */
       body {
-        font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Google Sans', 'Roboto', Arial, sans-serif !important;
         background-color: var(--md-sys-color-surface);
         color: var(--md-sys-color-on-surface);
         transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      /* Explicitly protect Material icons from the font override */
+      .material-symbols-rounded {
+        font-family: 'Material Symbols Rounded' !important;
       }
 
       /* M3 Scrollbars */
@@ -214,7 +230,7 @@
       }
       .CodeMirror {
         height: 100% !important;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: 'JetBrains Mono', monospace !important;
         font-size: 14px;
         background-color: #1e1f22 !important; /* Force a dark container for code readability */
         color: #e3e3e3 !important;
@@ -366,6 +382,10 @@
             
             <!-- Desktop Buttons Group -->
             <div class="hidden sm:flex items-center gap-1">
+                <button id="notes-btn" onclick="toggleNotes()" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Study Notes">
+                    <span class="material-symbols-rounded">edit_note</span>
+                </button>
+
                 <button id="new-tab-btn" class="w-10 h-10 rounded-full hover:bg-surface-variant text-on-surface-variant flex items-center justify-center transition-colors" title="Open in New Tab">
                     <span class="material-symbols-rounded">open_in_new</span>
                 </button>
@@ -404,6 +424,9 @@
 
             <!-- Mobile Dropdown Menu -->
             <div id="mobile-menu-dropdown" class="hidden absolute top-full right-0 mt-2 w-56 bg-surface-container-high border border-outline-variant rounded-xl shadow-elevation-2 z-50 overflow-hidden py-2">
+                <button onclick="toggleNotes(); document.getElementById('mobile-menu-dropdown').classList.add('hidden');" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
+                    <span class="material-symbols-rounded text-[20px] text-on-surface-variant">edit_note</span> Study Notes
+                </button>
                 <button onclick="openInCompiler()" class="w-full text-left px-4 py-3 text-on-surface hover:bg-surface-variant flex items-center gap-3 transition-colors">
                     <span class="material-symbols-rounded text-[20px] text-on-surface-variant">terminal</span> Compile / Run
                 </button>
@@ -435,7 +458,7 @@
         </div>
 
         <!-- Code Content -->
-        <div class="flex-1 min-h-0 bg-[#1e1f22] relative">
+        <div class="flex-1 min-h-0 bg-[#1e1f22] relative overflow-hidden">
           <!-- Loading State -->
           <div id="code-loading" class="absolute inset-0 flex items-center justify-center z-10 bg-surface-container-high hidden">
             <div class="animate-spin rounded-full h-10 w-10 border-4 border-surface-variant border-t-primary"></div>
@@ -443,6 +466,23 @@
           <!-- Code Container -->
           <div id="modal-code-container" class="w-full h-full">
              <!-- CodeMirror is injected here -->
+          </div>
+          <!-- Notes Slide-over Panel -->
+          <div id="notes-panel" class="absolute right-0 top-0 bottom-0 w-[90vw] sm:w-80 bg-surface-container-low border-l border-outline-variant flex flex-col transition-transform duration-300 transform translate-x-full z-20 shadow-elevation-2 rounded-br-[28px]">
+            <div class="p-4 border-b border-outline-variant flex items-center justify-between shrink-0 bg-surface-container">
+               <h4 class="font-medium text-on-surface flex items-center gap-2">
+                 <span class="material-symbols-rounded text-primary text-[20px]">edit_note</span>
+                 Study Notes
+               </h4>
+               <button onclick="toggleNotes()" class="w-8 h-8 rounded-full hover:bg-surface-variant flex items-center justify-center text-on-surface-variant transition-colors">
+                 <span class="material-symbols-rounded text-[20px]">close</span>
+               </button>
+            </div>
+            <textarea id="notes-textarea" class="flex-1 w-full p-4 bg-transparent resize-none outline-none text-on-surface text-sm placeholder:text-on-surface-variant/50" placeholder="Jot down reminders, formulas, or explanations for this file..."></textarea>
+            <div class="px-4 py-3 text-[11px] font-medium text-on-surface-variant uppercase tracking-wider text-right border-t border-outline-variant bg-surface-container-lowest shrink-0 flex justify-between items-center">
+               <span id="notes-save-status" class="flex items-center gap-1 opacity-0 transition-opacity duration-300"><span class="material-symbols-rounded text-[14px] text-primary">check</span> Saved</span>
+               <span>Local Storage</span>
+            </div>
           </div>
         </div>
       </div>
@@ -508,6 +548,14 @@
     <div id="toast" class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-lg shadow-elevation-3 transform translate-y-20 opacity-0 transition-all duration-300 z-[80] flex items-center gap-3">
         <span class="material-symbols-rounded text-primary">check_circle</span>
         <span class="text-sm font-medium">Link copied to clipboard</span>
+    </div>
+
+    <!-- Quick Peek Tooltip -->
+    <div id="peek-tooltip" class="fixed z-[100] hidden bg-surface-container-high border border-outline-variant shadow-elevation-2 rounded-xl p-3 max-w-sm pointer-events-none opacity-0 transition-opacity duration-200 backdrop-blur-md bg-surface-container-high/95">
+        <div class="text-[11px] font-bold tracking-wider uppercase text-primary mb-2 flex items-center gap-1">
+            <span class="material-symbols-rounded text-[14px]">visibility</span> Quick Peek
+        </div>
+        <pre id="peek-content" class="text-xs font-mono text-on-surface-variant overflow-hidden whitespace-pre-wrap leading-relaxed"></pre>
     </div>
 
     <script>
@@ -655,7 +703,8 @@
           
           recentFiles.forEach(file => {
               const item = document.createElement('div');
-              item.className = "flex items-center gap-3 px-4 py-3 bg-surface hover:bg-surface-variant rounded-xl cursor-pointer transition-colors group shadow-elevation-1 border border-outline-variant/30";
+              item.className = "recent-file-item flex items-center gap-3 px-4 py-3 bg-surface hover:bg-surface-variant rounded-xl cursor-pointer transition-colors group shadow-elevation-1 border border-outline-variant/30";
+              item.dataset.storageId = file.storageId;
               item.onclick = () => showCode(file.storageId, file.name, file.url);
               item.innerHTML = `
                   <div class="p-2 rounded-full bg-primary-container text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors flex items-center justify-center">
@@ -754,6 +803,20 @@
 
       let currentFileUrl = "";
       let editor = null;
+      let currentStorageId = null;
+      let isNotesOpen = false;
+
+      function toggleNotes() {
+          isNotesOpen = !isNotesOpen;
+          const panel = document.getElementById('notes-panel');
+          if (isNotesOpen) {
+              panel.classList.remove('translate-x-full');
+              panel.classList.add('translate-x-0');
+          } else {
+              panel.classList.remove('translate-x-0');
+              panel.classList.add('translate-x-full');
+          }
+      }
 
       function detectMode(filename) {
           if (filename.endsWith('.c')) return 'text/x-csrc';
@@ -766,6 +829,11 @@
 
       function showCode(storageId, filename, rawUrl) {
         currentFileUrl = window.location.href.split("?")[0] + "?file=" + encodeURIComponent(filename); 
+        
+        currentStorageId = storageId;
+        const savedNotes = JSON.parse(localStorage.getItem('bsc_study_notes') || '{}');
+        document.getElementById('notes-textarea').value = savedNotes[storageId] || '';
+
         modal.classList.remove("hidden");
         void modal.offsetWidth;
         modal.classList.remove("opacity-0");
@@ -790,7 +858,7 @@
              newTabBtn.onclick = () => {
                  const newWindow = window.open();
                  newWindow.document.write('<html><head><title>' + filename + '</title>');
-                 newWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px; background: #1e1f22; color: #e3e3e3;} </style>');
+                 newWindow.document.write('<style>body{font-family: \'JetBrains Mono\', monospace; white-space: pre-wrap; padding: 20px; background: #1e1f22; color: #e3e3e3;} </style>');
                  newWindow.document.write('</head><body><pre>' + code.replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</pre></body></html>');
                  newWindow.document.close();
              };
@@ -808,12 +876,13 @@
                 mode: mode,
                 theme: "dracula",
                 lineNumbers: true,
-                readOnly: true,
+                readOnly: "nocursor", // Disables cursor completely and prevents mobile keyboard
                 styleActiveLine: true
             });
         } else {
             editor.setValue(code);
             editor.setOption("mode", mode);
+            editor.setOption("readOnly", "nocursor");
         }
         
         setTimeout(() => editor.refresh(), 10);
@@ -828,6 +897,8 @@
         if (!dropdown.classList.contains('hidden')) {
             dropdown.classList.add('hidden');
         }
+
+        if (isNotesOpen) toggleNotes();
 
         modal.classList.add("opacity-0");
         modal.querySelector("div").classList.add("scale-95");
@@ -865,7 +936,7 @@
             
             const printWindow = window.open('', '', 'height=600,width=800');
             printWindow.document.write('<html><head><title>' + filename + '</title>');
-            printWindow.document.write('<style>body{font-family: monospace; white-space: pre-wrap; padding: 20px;} </style>');
+            printWindow.document.write('<style>body{font-family: \'JetBrains Mono\', monospace; white-space: pre-wrap; padding: 20px;} </style>');
             printWindow.document.write('</head><body>');
             const safeContent = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             printWindow.document.write('<pre>' + safeContent + '</pre>');
@@ -1164,6 +1235,115 @@
 
       document.addEventListener("DOMContentLoaded", () => {
          updateFolderState();
+
+         // --- Local Annotations Auto-Save Logic ---
+         const notesTextarea = document.getElementById('notes-textarea');
+         const notesSaveStatus = document.getElementById('notes-save-status');
+         let notesSaveTimeout;
+         
+         notesTextarea.addEventListener('input', () => {
+             if (!currentStorageId) return;
+             const savedNotes = JSON.parse(localStorage.getItem('bsc_study_notes') || '{}');
+             savedNotes[currentStorageId] = notesTextarea.value;
+             localStorage.setItem('bsc_study_notes', JSON.stringify(savedNotes));
+             
+             notesSaveStatus.classList.remove('opacity-0');
+             clearTimeout(notesSaveTimeout);
+             notesSaveTimeout = setTimeout(() => {
+                 notesSaveStatus.classList.add('opacity-0');
+             }, 1500);
+         });
+
+         // --- Quick Peek Preview Logic ---
+         const peekTooltip = document.getElementById('peek-tooltip');
+         const peekContent = document.getElementById('peek-content');
+         let peekTimeout;
+         let currentHoverItem = null;
+
+         document.addEventListener('mouseover', (e) => {
+             // Only enable Quick Peek on devices with hover capabilities (PC), disabled on touch devices
+             if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+             const fileItem = e.target.closest('.file-item, .recent-file-item');
+             
+             if (fileItem !== currentHoverItem) {
+                 clearTimeout(peekTimeout);
+                 
+                 // Left the item entirely
+                 if (!fileItem) {
+                     currentHoverItem = null;
+                     peekTooltip.classList.remove('opacity-100');
+                     peekTooltip.classList.add('opacity-0');
+                     setTimeout(() => {
+                         if (peekTooltip.classList.contains('opacity-0')) peekTooltip.classList.add('hidden');
+                     }, 200);
+                     return;
+                 }
+                 
+                 // Hovering on a new item
+                 currentHoverItem = fileItem;
+                 peekTimeout = setTimeout(() => {
+                     let codeText = "";
+                     
+                     if (fileItem.classList.contains('recent-file-item')) {
+                         const origDiv = document.getElementById(fileItem.dataset.storageId);
+                         if (origDiv) codeText = origDiv.textContent;
+                     } else {
+                         const hiddenDiv = fileItem.querySelector('div[id^="code-"]');
+                         if (hiddenDiv) codeText = hiddenDiv.textContent;
+                     }
+                     
+                     if (codeText && !codeText.startsWith('// Error')) {
+                         const allLines = codeText.split('\n');
+                         let validLines = [];
+                         let inBlockComment = false;
+                         
+                         // Parse lines: Skip block comments and push actual code
+                         for (let i=0; i<allLines.length; i++) {
+                             let lineTrimmed = allLines[i].trim();
+                             
+                             // Detect start of a block comment
+                             if (!inBlockComment && lineTrimmed.startsWith('/*')) {
+                                 inBlockComment = true;
+                             }
+                             
+                             // If currently inside a block comment, skip it
+                             if (inBlockComment) {
+                                 if (lineTrimmed.includes('*/')) {
+                                     inBlockComment = false;
+                                 }
+                                 continue; // Skip the line
+                             }
+                             
+                             // Add valid line if it's not totally empty
+                             if (lineTrimmed.length > 0) {
+                                 validLines.push(allLines[i]);
+                             }
+                             
+                             if (validLines.length >= 7) break; 
+                         }
+                         
+                         if (validLines.length > 0) {
+                             peekContent.textContent = validLines.join('\n') + (allLines.length > 7 ? '\n...' : '');
+                             
+                             const rect = fileItem.getBoundingClientRect();
+                             let top = rect.bottom + 8;
+                             let left = Math.max(10, rect.left + 20);
+                             
+                             if (top + 150 > window.innerHeight) top = rect.top - 150 - 8;
+                             if (left + 350 > window.innerWidth) left = window.innerWidth - 360;
+                             
+                             peekTooltip.style.top = top + 'px';
+                             peekTooltip.style.left = left + 'px';
+                             peekTooltip.classList.remove('hidden');
+                             void peekTooltip.offsetWidth;
+                             peekTooltip.classList.remove('opacity-0');
+                             peekTooltip.classList.add('opacity-100');
+                         }
+                     }
+                 }, 100); // Trigger hover peek fast (100ms)
+             }
+         });
 
          const params = new URLSearchParams(window.location.search);
          const sharedFile = params.get('file');
