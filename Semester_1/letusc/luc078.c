@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Create a structure 'student' (Roll, Name, Dept, Course, Year). Write functions to print names by join year and print data by roll number.

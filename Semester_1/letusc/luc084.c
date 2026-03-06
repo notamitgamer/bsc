@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Define a function that compares two given dates. Return 0 if equal, otherwise return 1.

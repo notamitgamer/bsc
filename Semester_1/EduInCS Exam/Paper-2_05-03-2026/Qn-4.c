@@ -3,7 +3,6 @@
  * Date    : 06 Mar 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Write a program to check a string is palindrome or not using 

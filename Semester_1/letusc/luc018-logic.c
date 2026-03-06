@@ -3,7 +3,6 @@
  * Date    : 12 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /* According to Gregorian calender, it was Monday on the date 01/01/01.

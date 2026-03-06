@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Write a program that merges lines alternately from two files and writes the results to a new file. Handle remaining lines if file sizes differ.

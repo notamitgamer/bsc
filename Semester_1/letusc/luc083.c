@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Library menu-driven program (Add, Display, List by Author, List by Title, Count, List sorted).

@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Write a calculator utility using command line arguments.\nUsage: calc <switch> <n> <m>\nwhere switch is arithmetic operator or comparison operator.

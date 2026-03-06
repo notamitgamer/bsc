@@ -3,7 +3,6 @@
  * Date    : 24 Jan 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Write a program to perform addition of two complex number having fields 'real' and 'img'

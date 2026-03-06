@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Given an array p[5], write a function to shift it circularly left by two positions. Call this function for a 4 x 5 matrix and get its rows left shifted.

@@ -3,7 +3,6 @@
  * Date    : 16 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /* Write a C program to find the smallest and largest in an array using user-defined functions.

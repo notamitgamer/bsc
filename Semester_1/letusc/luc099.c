@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Read an integer 'game' representing sports won by a college. Determine if it won the 'Champion of Champions' trophy (>5 games) and list games won.

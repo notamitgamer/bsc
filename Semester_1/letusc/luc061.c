@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* The area of a triangle can be computed by the sine law. Given 6 triangular pieces of land (a, b, angle), find their area and determine which is largest.

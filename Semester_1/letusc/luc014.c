@@ -1,7 +1,7 @@
 /*
  * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
  * Repo: https://github.com/notamitgamer/bsc
- * License: MIT | Copyright (c) 2025 Amit Dutta
+ * License: MIT
  */
 
 /* Given the length and breadth of a rectangle, write a program to find

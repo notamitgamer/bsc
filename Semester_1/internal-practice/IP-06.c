@@ -1,7 +1,7 @@
 /*
  * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 03 Jan 2026
  * Repo: https://github.com/notamitgamer/bsc
- * License: MIT | Copyright (c) 2026 Amit Dutta
+ * License: MIT
  */
 
 /* Write a program using a function to compute and display all factors of a given number. */

@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Store date in a structure using bit fields (day: 5 bits, month: 4 bits, year: 12 bits). Read joining dates of 10 employees and display them sorted by year.

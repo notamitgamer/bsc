@@ -3,7 +3,6 @@
  * Date    : 13 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /* write a C program to count the occurrences of a given element in an array using a user-defined

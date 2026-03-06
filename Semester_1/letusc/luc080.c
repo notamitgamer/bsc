@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Automobile engine parts (Serial AA0-FF9, Year, Material, Qty). Retrieve parts between serial numbers BB1 and CC6.

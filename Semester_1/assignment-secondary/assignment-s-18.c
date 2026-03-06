@@ -3,7 +3,6 @@
  * Date    : 22 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /*  Write a program to calculate the factorial of a number

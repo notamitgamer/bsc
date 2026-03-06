@@ -3,7 +3,6 @@
  * Date    : 21 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /* Write a program that reads 10 integers into an array (using pointers), and prints the

@@ -1,7 +1,7 @@
 /*
  * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 18 Jan 2026
  * Repo: https://github.com/notamitgamer/bsc
- * License: MIT | Copyright (c) 2026 Amit Dutta
+ * License: MIT
  */
 
 /* Write a program to add two complex numbers using structures. */

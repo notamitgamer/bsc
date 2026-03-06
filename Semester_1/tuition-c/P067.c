@@ -1,7 +1,7 @@
 /*
  * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 14 Jan 2026
  * Repo: https://github.com/notamitgamer/bsc
- * License: MIT | Copyright (c) 2026 Amit Dutta
+ * License: MIT
  */
 
 /* Write a program using function which concatenates two string s1 and s2 in to a third string */

@@ -3,7 +3,6 @@
  * Date    : 08 Feb 2026
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2026 Amit Dutta
  */
 
 /* Update 'CUSTOMER.DAT' balance using 'TRANSACTIONS.DAT' (Deposit/Withdrawal). Ensure balance doesn't fall below Rs. 100 on withdrawal.

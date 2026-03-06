@@ -3,7 +3,6 @@
  * Date    : 12 Dec 2025
  * Repo    : https://github.com/notamitgamer/bsc
  * License : MIT License (See the LICENSE file for details)
- * Copyright (c) 2025 Amit Dutta
  */
 
 /* Write a function to check whether a given string is a palindrome. Use this function to
