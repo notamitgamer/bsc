@@ -8,10 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "g:/bsc/tution-c",
-      "program": "g:/bsc/tution-c/build/Debug/outDebug",
+      "cwd": "${fileDirname}", 
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "gdb", 
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

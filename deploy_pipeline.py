@@ -303,10 +303,7 @@ def main():
 
     sync_bsc_local()
 
-    if index_changed:
-        update_and_push_aranag()
-    else:
-        print("\n[Skip] Index unchanged. Skipping G:\\aranag update.")
+    # removed the auto git upload for the main website folder.
     
     print("\n=== PIPELINE FINISHED ===")
 
