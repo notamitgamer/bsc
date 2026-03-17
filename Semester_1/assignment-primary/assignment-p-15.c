@@ -11,8 +11,6 @@ numbers in a new file named 'ODDFile.txt' while storing the even numbers in anot
 named 'EVENFile.txt' */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define FILENAME "input.txt"
 #define ODDFILE "ODDFile.txt"
@@ -24,24 +22,28 @@ int main()
     FILE *oddfile = NULL;
     FILE *evenfile = NULL;
     int num;
+
     input = fopen(FILENAME, "r");
     if (input == NULL)
     {
         printf("\nCould not open the file: %s", FILENAME);
         return 1;
     }
+
     oddfile = fopen(ODDFILE, "w");
     if (oddfile == NULL)
     {
         printf("\nCould not open the file: %s", ODDFILE);
         return 1;
     }
+
     evenfile = fopen(EVENFILE, "w");
     if (evenfile == NULL)
     {
         printf("\nCould not open the file: %s", EVENFILE);
         return 1;
     }
+
     while (fscanf(input, "%d", &num) == 1)
     {
         if (num % 2 == 0)
@@ -53,7 +55,8 @@ int main()
             fprintf(oddfile, "%d ", num);
         }
     }
-    printf("\nSuccessfully processed numbers from %s.\n", FILENAME);
+    
+    printf("Successfully processed numbers from %s.\n", FILENAME);
     printf("Odd numbers written to %s.\n", ODDFILE);
     printf("Even numbers written to %s.\n", EVENFILE);
 
