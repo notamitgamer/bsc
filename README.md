@@ -71,6 +71,7 @@ This guide will walk you through the process of setting up your GCC/G++ compiler
 Download the compressed MinGW-w64 files from the hosted location.
 
 > **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://amit.is-a.dev/download/MinGW64.zip)
+
 > **Download Link:** [**Download the Original MinGW-w64 Executable (84.3 KB)**](https://github.com/notamitgamer/bsc/releases/tag/MinGW-2021-09-05)
 
 ### Step 2: Extract the Files
