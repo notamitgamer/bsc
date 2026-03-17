@@ -2,12 +2,12 @@
 
 This repository contains practice code and solutions for **WBSU assignments**. 
 
-## ⚖️ License
+## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file or [opensource.org](https://opensource.org/license/mit) for full details.
 
 ---
 
-### ⛔ Important Note for Students & Classmates
+### Important Note for Students & Classmates
 While this code is public, academic integrity matters! 
 
 * **Read & Learn:** You are encouraged to study the logic and understand the implementation.
@@ -19,22 +19,22 @@ While this code is public, academic integrity matters!
 ---
 🔗 **Website**
 For better viewing experience:
-👉 [amit.is-a.dev/bsc](https://amit.is-a.dev/bsc) (Preferred)  ***or***  [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc)
+[amit.is-a.dev/bsc](https://amit.is-a.dev/bsc) (Preferred)  ***or***  [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc)
 
 ---
 
-# 🎓 B.Sc. CS Hons – Programs
+# B.Sc. CS Hons – Programs
 
 This repository contains **Files of codes that will be done in this 4-year BSc Hons Computer Science**
 
 ---
-## 📂 Contents
+## Contents
 
-* ✅ C Source Codes (`.c`)
+* C Source Codes (`.c`)
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 # Compile using GCC
@@ -44,7 +44,7 @@ gcc program.c -o program.exe
 ./program.exe
 ```
 
-### 📌 Example Program (Factorial)
+### Example Program (Factorial)
 
 ```c
 #include <stdio.h>
@@ -62,7 +62,7 @@ int main() {
 
 ---
 
-## 🛠️ MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
+## MinGW-w64 Installation Guide: Your C/C++ Compiler Setup
 
 This guide will walk you through the process of setting up your GCC/G++ compiler environment using the packaged MinGW-w64 distribution.
 
@@ -70,7 +70,8 @@ This guide will walk you through the process of setting up your GCC/G++ compiler
 
 Download the compressed MinGW-w64 files from the hosted location.
 
-> ➡️ **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://amit.is-a.dev/download/MinGW64.zip)
+> **Download Link:** [**Direct Download MinGW64.zip (85 MB)**](https://amit.is-a.dev/download/MinGW64.zip)
+> **Download Link:** [**Download the Original MinGW-w64 Executable (84.3 KB)**](https://github.com/notamitgamer/bsc/releases/tag/MinGW-2021-09-05)
 
 ### Step 2: Extract the Files
 
