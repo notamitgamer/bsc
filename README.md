@@ -115,20 +115,21 @@ To ensure the compiler is correctly set up and accessible, open a new command li
 
 3. **Expected Result:** If successful, you should see the version information for the GCC compiler (e.g., `gcc (MinGW.org GCC-6.3.0-1) 6.3.0`).
 
-> 🎉 **Congratulations!** Your C/C++ development environment is now ready.
+> **Congratulations!** Your C/C++ development environment is now ready.
 
 > If you do not want to work that much, just go to this [website](https://www.programiz.com/c-programming/online-compiler) and run your programs.
 
 ---
 
 
-## 👨‍💻 Author
+## Author
 
 ### Amit Dutta
 
-* 📧 **amitdutta4255@gmail.com**
-* 📧 **mail@amit.is-a.dev**
+* **amitdutta4255@gmail.com**
+* **mail@amit.is-a.dev**
 
-* 🌐 [**GitHub Profile**](https://github.com/notamitgamer)
+* [**GitHub Profile**](https://github.com/notamitgamer)
+* [**Portfolio**](https://amit.is-a.dev)
 
 ---
