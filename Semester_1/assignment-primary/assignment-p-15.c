@@ -20,12 +20,12 @@ named 'EVENFile.txt' */
 
 int main()
 {
-    FILE *numbers = NULL;
+    FILE *input = NULL;
     FILE *oddfile = NULL;
     FILE *evenfile = NULL;
     int num;
-    numbers = fopen(FILENAME, "r");
-    if (numbers == NULL)
+    input = fopen(FILENAME, "r");
+    if (input == NULL)
     {
         printf("\nCould not open the file: %s", FILENAME);
         return 1;
@@ -42,7 +42,7 @@ int main()
         printf("\nCould not open the file: %s", EVENFILE);
         return 1;
     }
-    while (fscanf(numbers, "%d", &num) == 1)
+    while (fscanf(input, "%d", &num) == 1)
     {
         if (num % 2 == 0)
         {
@@ -57,7 +57,7 @@ int main()
     printf("Odd numbers written to %s.\n", ODDFILE);
     printf("Even numbers written to %s.\n", EVENFILE);
 
-    fclose(numbers);
+    fclose(input);
     fclose(oddfile);
     fclose(evenfile);
     

@@ -207,8 +207,6 @@ def git_workflow_bsc():
     try:
         subprocess.run(["git", "commit", "-m", full_commit_msg], check=True)
         print("> git push")
-        subprocess.run(["git", "push"], check=True)
-        print("[Success] Pushed 'bsc' to remote.")
     except subprocess.CalledProcessError as e:
         print(f"[Error] Git command failed: {e}")
 
