@@ -6,9 +6,10 @@
 # a and b. Give a a default value of 2. The function should print the result 
 # of a raised to the power of b (a^b). 
 
-power <- function (a, b) {
+power <- function (a = 2, b) {
     return (a^b)
 }
 a <- 2
 b <- 3
 print(power(a, b))
+print(power("b" = b))
