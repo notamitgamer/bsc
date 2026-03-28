@@ -13,7 +13,8 @@ EXCLUDED_FILES = [
     'index.html', 'README.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'SOCIAL_PREVIEW.md',
     'LICENSE', 'main.js', 'package.json', 'SECURITY.md', 'server.js', 'template.html', 
     'generate_index.py', 'header.py', 'add_header.py',
-    'Assignment.pdf', 'Assignment.docx', 'deploy_pipeline.py', 'tester.c', 'knowledge_graph.py'
+    'Assignment.pdf', 'Assignment.docx', 'deploy_pipeline.py', 'tester.c', 'knowledge_graph.py', 'front_page.docx',
+    'front_page.pdf', 'index.docx', 'index.pdf'
 ]
 # --- End Configuration ---
 
