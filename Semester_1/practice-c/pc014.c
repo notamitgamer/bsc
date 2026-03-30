@@ -41,14 +41,15 @@ int main() {
     while(i < 3 && (fscanf(input, "%d %s %f", &stu[i].roll, &stu[i].name, &stu[i].marks) == 3)) i++;
     printDetails(stu, 3);
     printf("\n\nTotal Marks: %g", calculateTotal(stu, 3));
+    fclose(input);
+    return 0;
 }
 
 float calculateTotal(struct Student stu[], int n) {
-    if(n == 0) {
-        return stu[n].marks;
+    if(n <= 0) {
+        return 0;
     }
-    float total = stu[n].marks;
-    return total + calculateTotal(stu, n-1);
+    return stu[n - 1].marks + calculateTotal(stu, n-1);
 }
 
 void printDetails(Stu *stu, int n) {
