@@ -107,7 +107,8 @@ bool writeLog(Book *book, int n)
     }
     for (i = 0; i < n; i++)
     {
-        fprintf(output, "%d \'%s\' \'%s\'\n", book[i].id, book[i].title, book[i].author);
+        fprintf(output, "%d \'%s\' \'%s\'\n", book[i].id, book[i].title, book[i].author
     }
+    fclose(output);
     return true;
 }
