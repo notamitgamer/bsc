@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Assignment Primary
 
 List of elements in **Assignment Primary**

@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Assignment Secondary
 
 List of elements in **Assignment Secondary**

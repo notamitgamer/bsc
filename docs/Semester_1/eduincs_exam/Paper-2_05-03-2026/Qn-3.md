@@ -1,8 +1,3 @@
----
-label: Qn-3.c
-description: "C program source code for Qn-3.c"
----
-
 # `Qn-3.c`
 
 ## Problem Statement

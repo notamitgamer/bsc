@@ -1,8 +1,3 @@
----
-label: pc-ip-13.c
-description: "C program source code for pc-ip-13.c"
----
-
 # `pc-ip-13.c`
 
 ## Problem Statement

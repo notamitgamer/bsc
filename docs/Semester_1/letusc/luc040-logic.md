@@ -1,8 +1,3 @@
----
-label: luc040-logic.c
-description: "C program source code for luc040-logic.c"
----
-
 # `luc040-logic.c`
 
 ## Problem Statement

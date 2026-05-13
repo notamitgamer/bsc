@@ -1,8 +1,3 @@
----
-label: lucproblem015.c
-description: "C program source code for lucproblem015.c"
----
-
 # `lucproblem015.c`
 
 ## Problem Statement

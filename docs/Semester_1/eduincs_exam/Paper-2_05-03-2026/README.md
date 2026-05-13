@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Paper 2 05 03 2026
 
 List of elements in **Paper 2 05 03 2026**

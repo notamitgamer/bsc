@@ -1,8 +1,3 @@
----
-label: sudiptoown01.c
-description: "C program source code for sudiptoown01.c"
----
-
 # `sudiptoown01.c`
 
 ## Metadata

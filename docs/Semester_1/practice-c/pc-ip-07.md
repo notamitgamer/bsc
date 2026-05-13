@@ -1,8 +1,3 @@
----
-label: pc-ip-07.c
-description: "C program source code for pc-ip-07.c"
----
-
 # `pc-ip-07.c`
 
 ## Problem Statement

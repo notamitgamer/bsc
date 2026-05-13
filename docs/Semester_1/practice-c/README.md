@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Practice C
 
 List of elements in **Practice C**

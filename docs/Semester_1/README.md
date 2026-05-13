@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Semester 1
 
 List of elements in **Semester 1**

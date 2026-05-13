@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Temp
 
 List of elements in **Temp**

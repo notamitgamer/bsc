@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Letusc
 
 List of elements in **Letusc**

@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Eduincs Exam
 
 List of elements in **Eduincs Exam**

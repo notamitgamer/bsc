@@ -1,8 +1,3 @@
----
-label: assignment-s-18.c
-description: "C program source code for assignment-s-18.c"
----
-
 # `assignment-s-18.c`
 
 ## Problem Statement

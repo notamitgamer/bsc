@@ -1,8 +1,3 @@
----
-label: APC-S-001.c
-description: "C program source code for APC-S-001.c"
----
-
 # `APC-S-001.c`
 
 ## Metadata

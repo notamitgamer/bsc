@@ -18,10 +18,10 @@ links:
 
 # Retype reads MD files from this folder (relative to this yml file)
 # Place retype.yml in G:\bsc\ so input: docs → G:\bsc\docs\
-input: docs
+input: docs-retype
 
 # Output folder for generated site
-output: .retype
+output: docs
 
 # Enable search (default: true — explicit for clarity)
 search:

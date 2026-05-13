@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Khurapati Idea
 
 List of elements in **Khurapati Idea**

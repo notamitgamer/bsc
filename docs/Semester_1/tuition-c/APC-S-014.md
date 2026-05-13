@@ -1,8 +1,3 @@
----
-label: APC-S-014.c
-description: "C program source code for APC-S-014.c"
----
-
 # `APC-S-014.c`
 
 ## Problem Statement

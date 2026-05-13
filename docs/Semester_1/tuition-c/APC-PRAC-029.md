@@ -1,8 +1,3 @@
----
-label: APC-PRAC-029.c
-description: "C program source code for APC-PRAC-029.c"
----
-
 # `APC-PRAC-029.c`
 
 ## Problem Statement

@@ -1,8 +1,3 @@
----
-label: maheswar02.c
-description: "C program source code for maheswar02.c"
----
-
 # `maheswar02.c`
 
 ## Metadata

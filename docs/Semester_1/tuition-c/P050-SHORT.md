@@ -1,8 +1,3 @@
----
-label: P050-SHORT.c
-description: "C program source code for P050-SHORT.c"
----
-
 # `P050-SHORT.c`
 
 ## Problem Statement

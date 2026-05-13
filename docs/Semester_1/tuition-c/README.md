@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Tuition C
 
 List of elements in **Tuition C**

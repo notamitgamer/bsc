@@ -1,8 +1,3 @@
----
-label: pc-ip-18.c
-description: "C program source code for pc-ip-18.c"
----
-
 # `pc-ip-18.c`
 
 ## Problem Statement

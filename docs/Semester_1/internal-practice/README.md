@@ -1,7 +1,3 @@
----
-icon: file-directory
----
-
 # Internal Practice
 
 List of elements in **Internal Practice**

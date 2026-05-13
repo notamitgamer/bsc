@@ -4,7 +4,7 @@ import re
 # --- Configuration ---
 FILES_LIST   = "c_files_list.txt"   # path to your list file (same dir as this script)
 BSC_ROOT     = r"G:\bsc"            # root of your repo
-DOCS_OUTPUT  = r"G:\bsc\docs"       # where MD files will be written (Retype input dir)
+DOCS_OUTPUT  = r"G:\bsc\docs-retype"       # where MD files will be written (Retype input dir)
 RAW_BASE_URL = "https://raw.usercontent.amit.is-a.dev"
 # --- End Configuration ---
 

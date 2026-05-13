@@ -1,8 +1,3 @@
----
-label: sudipto1.c
-description: "C program source code for sudipto1.c"
----
-
 # `sudipto1.c`
 
 ## Problem Statement
