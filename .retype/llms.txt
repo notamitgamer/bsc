@@ -1,0 +1,452 @@
+﻿# BSc Code Index
+
+> This repository serves as a comprehensive, live archive of my 4-year academic journey in Computer Science at Acharya Prafulla Chandra College (APC). It contains practical implementations, assignments, and study materials following the WBSU curriculum.
+
+- [BSc Code Index](https://notamitgamer.github.io/bsc/index.md): BSc Code Index
+- [Semester 1](https://notamitgamer.github.io/bsc/semester_1/readme.md): List of elements in Semester 1
+- [Code of Conduct](https://notamitgamer.github.io/bsc/code_of_conduct.md): I am committed to making this repository a welcoming and respectful place for learning and discussion.
+- [Contributing to bsc](https://notamitgamer.github.io/bsc/contributing.md): Thank you for your interest in improving this repository! Now that this project is licensed under the MIT License, I welcome community contributions, bug reports, and optimizations.
+- [LICENSE](https://notamitgamer.github.io/bsc/license.md): MIT License
+- [Security Policy](https://notamitgamer.github.io/bsc/security.md): While this is a personal learning project, if you discover a security vulnerability in any of the code, I would appreciate it if you could bring it to my attention.
+- [Semester 2](https://notamitgamer.github.io/bsc/semester_2/readme.md): List of elements in Semester 2
+- [Semester 3](https://notamitgamer.github.io/bsc/semester_3/readme.md): List of elements in Semester 3
+- [Semester 4](https://notamitgamer.github.io/bsc/semester_4/readme.md): List of elements in Semester 4
+- [Semester 5](https://notamitgamer.github.io/bsc/semester_5/readme.md): List of elements in Semester 5
+- [Semester 6](https://notamitgamer.github.io/bsc/semester_6/readme.md): List of elements in Semester 6
+- [Semester 7](https://notamitgamer.github.io/bsc/semester_7/readme.md): List of elements in Semester 7
+- [Semester 8](https://notamitgamer.github.io/bsc/semester_8/readme.md): List of elements in Semester 8
+
+## Semester 1
+
+
+### Assignment Primary
+
+- [Assignment Primary](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/readme.md): List of elements in Assignment Primary
+- [assignment-p-01.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-01.md): C program source code for assignment-p-01.c
+- [assignment-p-02.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-02.md): C program source code for assignment-p-02.c
+- [assignment-p-03.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-03.md): C program source code for assignment-p-03.c
+- [assignment-p-04.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-04.md): C program source code for assignment-p-04.c
+- [assignment-p-05.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-05.md): C program source code for assignment-p-05.c
+- [assignment-p-06.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-06.md): C program source code for assignment-p-06.c
+- [assignment-p-07.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-07.md): C program source code for assignment-p-07.c
+- [assignment-p-08.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-08.md): C program source code for assignment-p-08.c
+- [assignment-p-09.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-09.md): C program source code for assignment-p-09.c
+- [assignment-p-10.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-10.md): C program source code for assignment-p-10.c
+- [assignment-p-11.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-11.md): C program source code for assignment-p-11.c
+- [assignment-p-12_v1.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-12_v1.md): C program source code for assignment-p-12_v1.c
+- [assignment-p-12_v2.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-12_v2.md): C program source code for assignment-p-12_v2.c
+- [assignment-p-13.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-13.md): C program source code for assignment-p-13.c
+- [assignment-p-14_v1.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-14_v1.md): C program source code for assignment-p-14_v1.c
+- [assignment-p-14_v2.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-14_v2.md): C program source code for assignment-p-14_v2.c
+- [assignment-p-15.c](https://notamitgamer.github.io/bsc/semester_1/assignment-primary/assignment-p-15.md): C program source code for assignment-p-15.c
+
+### Assignment Secondary
+
+- [Assignment Secondary](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/readme.md): List of elements in Assignment Secondary
+- [assignment-s-01.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-01.md): C program source code for assignment-s-01.c
+- [assignment-s-02.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-02.md): C program source code for assignment-s-02.c
+- [assignment-s-03.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-03.md): C program source code for assignment-s-03.c
+- [assignment-s-04.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-04.md): C program source code for assignment-s-04.c
+- [assignment-s-05.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-05.md): C program source code for assignment-s-05.c
+- [assignment-s-06.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-06.md): C program source code for assignment-s-06.c
+- [assignment-s-07.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-07.md): C program source code for assignment-s-07.c
+- [assignment-s-08.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-08.md): C program source code for assignment-s-08.c
+- [assignment-s-09.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-09.md): C program source code for assignment-s-09.c
+- [assignment-s-10.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-10.md): C program source code for assignment-s-10.c
+- [assignment-s-11.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-11.md): C program source code for assignment-s-11.c
+- [assignment-s-12.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-12.md): C program source code for assignment-s-12.c
+- [assignment-s-13-1.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-13-1.md): C program source code for assignment-s-13-1.c
+- [assignment-s-13-2.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-13-2.md): C program source code for assignment-s-13-2.c
+- [assignment-s-14.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-14.md): C program source code for assignment-s-14.c
+- [assignment-s-15.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-15.md): C program source code for assignment-s-15.c
+- [assignment-s-16.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-16.md): C program source code for assignment-s-16.c
+- [assignment-s-17.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-17.md): C program source code for assignment-s-17.c
+- [assignment-s-18.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-18.md): C program source code for assignment-s-18.c
+- [assignment-s-19.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-19.md): C program source code for assignment-s-19.c
+- [assignment-s-20.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-20.md): C program source code for assignment-s-20.c
+- [assignment-s-21.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-21.md): C program source code for assignment-s-21.c
+- [assignment-s-22.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-22.md): C program source code for assignment-s-22.c
+- [assignment-s-23.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-23.md): C program source code for assignment-s-23.c
+- [assignment-s-24.c](https://notamitgamer.github.io/bsc/semester_1/assignment-secondary/assignment-s-24.md): C program source code for assignment-s-24.c
+
+### Eduincs Exam
+
+- [Eduincs Exam](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/readme.md): List of elements in Eduincs Exam
+
+#### Paper 1 05 03 2026
+
+- [Paper 1 05 03 2026](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-1_05-03-2026/readme.md): List of elements in Paper 1 05 03 2026
+- [Qn-8.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-1_05-03-2026/qn-8.md): C program source code for Qn-8.c
+- [Qn-9.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-1_05-03-2026/qn-9.md): C program source code for Qn-9.c
+- [Qn-10.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-1_05-03-2026/qn-10.md): C program source code for Qn-10.c
+
+#### Paper 2 05 03 2026
+
+- [Paper 2 05 03 2026](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-2_05-03-2026/readme.md): List of elements in Paper 2 05 03 2026
+- [Qn-3.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-2_05-03-2026/qn-3.md): C program source code for Qn-3.c
+- [Qn-4.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-2_05-03-2026/qn-4.md): C program source code for Qn-4.c
+- [Qn-11.c](https://notamitgamer.github.io/bsc/semester_1/eduincs_exam/paper-2_05-03-2026/qn-11.md): C program source code for Qn-11.c
+
+### Internal Practice
+
+- [Internal Practice](https://notamitgamer.github.io/bsc/semester_1/internal-practice/readme.md): List of elements in Internal Practice
+- [IP-01.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-01.md): C program source code for IP-01.c
+- [IP-02.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-02.md): C program source code for IP-02.c
+- [IP-03.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-03.md): C program source code for IP-03.c
+- [IP-04.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-04.md): C program source code for IP-04.c
+- [IP-05.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-05.md): C program source code for IP-05.c
+- [IP-06.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-06.md): C program source code for IP-06.c
+- [IP-07.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-07.md): C program source code for IP-07.c
+- [IP-08.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-08.md): C program source code for IP-08.c
+- [IP-09.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-09.md): C program source code for IP-09.c
+- [IP-10.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-10.md): C program source code for IP-10.c
+- [IP-11.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-11.md): C program source code for IP-11.c
+- [IP-12.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-12.md): C program source code for IP-12.c
+- [IP-13.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-13.md): C program source code for IP-13.c
+- [IP-14.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-14.md): C program source code for IP-14.c
+- [IP-15.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-15.md): C program source code for IP-15.c
+- [IP-16.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-16.md): C program source code for IP-16.c
+- [IP-17.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-17.md): C program source code for IP-17.c
+- [IP-18.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-18.md): C program source code for IP-18.c
+- [IP-19.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-19.md): C program source code for IP-19.c
+- [IP-20.c](https://notamitgamer.github.io/bsc/semester_1/internal-practice/ip-20.md): C program source code for IP-20.c
+
+### Khurapati Idea
+
+- [Khurapati Idea](https://notamitgamer.github.io/bsc/semester_1/khurapati-idea/readme.md): List of elements in Khurapati Idea
+- [KI001.c](https://notamitgamer.github.io/bsc/semester_1/khurapati-idea/ki001.md): C program source code for KI001.c
+- [KI002.c](https://notamitgamer.github.io/bsc/semester_1/khurapati-idea/ki002.md): C program source code for KI002.c
+- [KI003.c](https://notamitgamer.github.io/bsc/semester_1/khurapati-idea/ki003.md): C program source code for KI003.c
+- [KI004.c](https://notamitgamer.github.io/bsc/semester_1/khurapati-idea/ki004.md): C program source code for KI004.c
+
+### Letusc
+
+- [Letusc](https://notamitgamer.github.io/bsc/semester_1/letusc/readme.md): List of elements in Letusc
+- [luc001.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc001.md): C program source code for luc001.c
+- [luc002.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc002.md): C program source code for luc002.c
+- [luc003.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc003.md): C program source code for luc003.c
+- [luc004.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc004.md): C program source code for luc004.c
+- [luc005.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc005.md): C program source code for luc005.c
+- [luc006.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc006.md): C program source code for luc006.c
+- [luc007.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc007.md): C program source code for luc007.c
+- [luc008.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc008.md): C program source code for luc008.c
+- [luc009.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc009.md): C program source code for luc009.c
+- [luc010.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc010.md): C program source code for luc010.c
+- [luc011.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc011.md): C program source code for luc011.c
+- [luc012.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc012.md): C program source code for luc012.c
+- [luc013.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc013.md): C program source code for luc013.c
+- [luc014.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc014.md): C program source code for luc014.c
+- [luc015.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc015.md): C program source code for luc015.c
+- [luc016.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc016.md): C program source code for luc016.c
+- [luc017.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc017.md): C program source code for luc017.c
+- [luc018-logic.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc018-logic.md): C program source code for luc018-logic.c
+- [luc018.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc018.md): C program source code for luc018.c
+- [luc019.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc019.md): C program source code for luc019.c
+- [luc020.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc020.md): C program source code for luc020.c
+- [luc021.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc021.md): C program source code for luc021.c
+- [luc022.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc022.md): C program source code for luc022.c
+- [luc023.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc023.md): C program source code for luc023.c
+- [luc024.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc024.md): C program source code for luc024.c
+- [luc025.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc025.md): C program source code for luc025.c
+- [luc026.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc026.md): C program source code for luc026.c
+- [luc027.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc027.md): C program source code for luc027.c
+- [luc028.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc028.md): C program source code for luc028.c
+- [luc029.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc029.md): C program source code for luc029.c
+- [luc030.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc030.md): C program source code for luc030.c
+- [luc031-logic.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc031-logic.md): C program source code for luc031-logic.c
+- [luc031.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc031.md): C program source code for luc031.c
+- [luc032.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc032.md): C program source code for luc032.c
+- [luc033.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc033.md): C program source code for luc033.c
+- [luc034.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc034.md): C program source code for luc034.c
+- [luc035.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc035.md): C program source code for luc035.c
+- [luc036.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc036.md): C program source code for luc036.c
+- [luc037.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc037.md): C program source code for luc037.c
+- [luc038.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc038.md): C program source code for luc038.c
+- [luc039.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc039.md): C program source code for luc039.c
+- [luc040-logic.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc040-logic.md): C program source code for luc040-logic.c
+- [luc040.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc040.md): C program source code for luc040.c
+- [luc041.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc041.md): C program source code for luc041.c
+- [luc042.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc042.md): C program source code for luc042.c
+- [luc043.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc043.md): C program source code for luc043.c
+- [luc044.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc044.md): C program source code for luc044.c
+- [luc045.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc045.md): C program source code for luc045.c
+- [luc046.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc046.md): C program source code for luc046.c
+- [luc047.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc047.md): C program source code for luc047.c
+- [luc048.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc048.md): C program source code for luc048.c
+- [luc049.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc049.md): C program source code for luc049.c
+- [luc050.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc050.md): C program source code for luc050.c
+- [luc051.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc051.md): C program source code for luc051.c
+- [luc052.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc052.md): C program source code for luc052.c
+- [luc053.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc053.md): C program source code for luc053.c
+- [luc054.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc054.md): C program source code for luc054.c
+- [luc055.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc055.md): C program source code for luc055.c
+- [luc056.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc056.md): C program source code for luc056.c
+- [luc057.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc057.md): C program source code for luc057.c
+- [luc058.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc058.md): C program source code for luc058.c
+- [luc059.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc059.md): C program source code for luc059.c
+- [luc060.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc060.md): C program source code for luc060.c
+- [luc061.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc061.md): C program source code for luc061.c
+- [luc062.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc062.md): C program source code for luc062.c
+- [luc063.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc063.md): C program source code for luc063.c
+- [luc064.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc064.md): C program source code for luc064.c
+- [luc065.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc065.md): C program source code for luc065.c
+- [luc066.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc066.md): C program source code for luc066.c
+- [luc067.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc067.md): C program source code for luc067.c
+- [luc068.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc068.md): C program source code for luc068.c
+- [luc069.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc069.md): C program source code for luc069.c
+- [luc070.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc070.md): C program source code for luc070.c
+- [luc071.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc071.md): C program source code for luc071.c
+- [luc072.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc072.md): C program source code for luc072.c
+- [luc073.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc073.md): C program source code for luc073.c
+- [luc074.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc074.md): C program source code for luc074.c
+- [luc075.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc075.md): C program source code for luc075.c
+- [luc076.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc076.md): C program source code for luc076.c
+- [luc077.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc077.md): C program source code for luc077.c
+- [luc078.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc078.md): C program source code for luc078.c
+- [luc079.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc079.md): C program source code for luc079.c
+- [luc080.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc080.md): C program source code for luc080.c
+- [luc081.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc081.md): C program source code for luc081.c
+- [luc082.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc082.md): C program source code for luc082.c
+- [luc083.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc083.md): C program source code for luc083.c
+- [luc084.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc084.md): C program source code for luc084.c
+- [luc085.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc085.md): C program source code for luc085.c
+- [luc086.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc086.md): C program source code for luc086.c
+- [luc087.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc087.md): C program source code for luc087.c
+- [luc088.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc088.md): C program source code for luc088.c
+- [luc089.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc089.md): C program source code for luc089.c
+- [luc090.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc090.md): C program source code for luc090.c
+- [luc091.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc091.md): C program source code for luc091.c
+- [luc092.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc092.md): C program source code for luc092.c
+- [luc093.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc093.md): C program source code for luc093.c
+- [luc094.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc094.md): C program source code for luc094.c
+- [luc095.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc095.md): C program source code for luc095.c
+- [luc096.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc096.md): C program source code for luc096.c
+- [luc097.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc097.md): C program source code for luc097.c
+- [luc098.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc098.md): C program source code for luc098.c
+- [luc099.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc099.md): C program source code for luc099.c
+- [luc100.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc100.md): C program source code for luc100.c
+- [luc101.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc101.md): C program source code for luc101.c
+- [luc102.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc102.md): C program source code for luc102.c
+- [luc103.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc103.md): C program source code for luc103.c
+- [luc104.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc104.md): C program source code for luc104.c
+- [luc105.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc105.md): C program source code for luc105.c
+- [luc106.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc106.md): C program source code for luc106.c
+- [luc107.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc107.md): C program source code for luc107.c
+- [luc108.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc108.md): C program source code for luc108.c
+- [luc109.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc109.md): C program source code for luc109.c
+- [luc110.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc110.md): C program source code for luc110.c
+- [luc111.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc111.md): C program source code for luc111.c
+- [luc112.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc112.md): C program source code for luc112.c
+- [luc113.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc113.md): C program source code for luc113.c
+- [luc114.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc114.md): C program source code for luc114.c
+- [luc115.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc115.md): C program source code for luc115.c
+- [luc116.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc116.md): C program source code for luc116.c
+- [luc117.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc117.md): C program source code for luc117.c
+- [luc118.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc118.md): C program source code for luc118.c
+- [luc119.c](https://notamitgamer.github.io/bsc/semester_1/letusc/luc119.md): C program source code for luc119.c
+- [lucproblem001.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem001.md): C program source code for lucproblem001.c
+- [lucproblem002.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem002.md): C program source code for lucproblem002.c
+- [lucproblem003.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem003.md): C program source code for lucproblem003.c
+- [lucproblem004.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem004.md): C program source code for lucproblem004.c
+- [lucproblem005.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem005.md): C program source code for lucproblem005.c
+- [lucproblem006.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem006.md): C program source code for lucproblem006.c
+- [lucproblem007.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem007.md): C program source code for lucproblem007.c
+- [lucproblem008.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem008.md): C program source code for lucproblem008.c
+- [lucproblem009.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem009.md): C program source code for lucproblem009.c
+- [lucproblem010-complex.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem010-complex.md): C program source code for lucproblem010-complex.c
+- [lucproblem010.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem010.md): C program source code for lucproblem010.c
+- [lucproblem011.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem011.md): C program source code for lucproblem011.c
+- [lucproblem012.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem012.md): C program source code for lucproblem012.c
+- [lucproblem013.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem013.md): C program source code for lucproblem013.c
+- [lucproblem014-short.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem014-short.md): C program source code for lucproblem014-short.c
+- [lucproblem014.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem014.md): C program source code for lucproblem014.c
+- [lucproblem015.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem015.md): C program source code for lucproblem015.c
+- [lucproblem016.c](https://notamitgamer.github.io/bsc/semester_1/letusc/lucproblem016.md): C program source code for lucproblem016.c
+
+### Practice C
+
+- [Practice C](https://notamitgamer.github.io/bsc/semester_1/practice-c/readme.md): List of elements in Practice C
+- [pc001.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc001.md): C program source code for pc001.c
+- [pc002.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc002.md): C program source code for pc002.c
+- [pc003.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc003.md): C program source code for pc003.c
+- [pc004.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc004.md): C program source code for pc004.c
+- [pc005.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc005.md): C program source code for pc005.c
+- [pc006.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc006.md): C program source code for pc006.c
+- [pc007.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc007.md): C program source code for pc007.c
+- [pc008.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc008.md): C program source code for pc008.c
+- [pc009.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc009.md): C program source code for pc009.c
+- [pc010.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc010.md): C program source code for pc010.c
+- [pc011.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc011.md): C program source code for pc011.c
+- [pc012.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc012.md): C program source code for pc012.c
+- [pc013.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc013.md): C program source code for pc013.c
+- [pc014.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc014.md): C program source code for pc014.c
+- [pc015.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc015.md): C program source code for pc015.c
+- [pc016.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc016.md): C program source code for pc016.c
+- [pc017.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc017.md): C program source code for pc017.c
+- [pc-ip-01.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-01.md): C program source code for pc-ip-01.c
+- [pc-ip-02.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-02.md): C program source code for pc-ip-02.c
+- [pc-ip-03.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-03.md): C program source code for pc-ip-03.c
+- [pc-ip-04.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-04.md): C program source code for pc-ip-04.c
+- [pc-ip-05.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-05.md): C program source code for pc-ip-05.c
+- [pc-ip-06.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-06.md): C program source code for pc-ip-06.c
+- [pc-ip-07.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-07.md): C program source code for pc-ip-07.c
+- [pc-ip-08.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-08.md): C program source code for pc-ip-08.c
+- [pc-ip-09.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-09.md): C program source code for pc-ip-09.c
+- [pc-ip-10.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-10.md): C program source code for pc-ip-10.c
+- [pc-ip-11.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-11.md): C program source code for pc-ip-11.c
+- [pc-ip-12.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-12.md): C program source code for pc-ip-12.c
+- [pc-ip-13.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-13.md): C program source code for pc-ip-13.c
+- [pc-ip-14.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-14.md): C program source code for pc-ip-14.c
+- [pc-ip-15.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-15.md): C program source code for pc-ip-15.c
+- [pc-ip-16.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-16.md): C program source code for pc-ip-16.c
+- [pc-ip-17.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-17.md): C program source code for pc-ip-17.c
+- [pc-ip-18.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-18.md): C program source code for pc-ip-18.c
+- [pc-ip-19.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-19.md): C program source code for pc-ip-19.c
+- [pc-ip-20.c](https://notamitgamer.github.io/bsc/semester_1/practice-c/pc-ip-20.md): C program source code for pc-ip-20.c
+
+### Temp
+
+- [Temp](https://notamitgamer.github.io/bsc/semester_1/temp/readme.md): List of elements in Temp
+- [maheswar01.c](https://notamitgamer.github.io/bsc/semester_1/temp/maheswar01.md): C program source code for maheswar01.c
+- [maheswar02.c](https://notamitgamer.github.io/bsc/semester_1/temp/maheswar02.md): C program source code for maheswar02.c
+- [sudipto1.c](https://notamitgamer.github.io/bsc/semester_1/temp/sudipto1.md): C program source code for sudipto1.c
+- [sudiptoown01.c](https://notamitgamer.github.io/bsc/semester_1/temp/sudiptoown01.md): C program source code for sudiptoown01.c
+
+### Tuition C
+
+- [Tuition C](https://notamitgamer.github.io/bsc/semester_1/tuition-c/readme.md): List of elements in Tuition C
+- [APC-PRAC-001.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-001.md): C program source code for APC-PRAC-001.c
+- [APC-PRAC-002.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-002.md): C program source code for APC-PRAC-002.c
+- [APC-PRAC-003.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-003.md): C program source code for APC-PRAC-003.c
+- [APC-PRAC-004.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-004.md): C program source code for APC-PRAC-004.c
+- [APC-PRAC-005.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-005.md): C program source code for APC-PRAC-005.c
+- [APC-PRAC-006.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-006.md): C program source code for APC-PRAC-006.c
+- [APC-PRAC-007.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-007.md): C program source code for APC-PRAC-007.c
+- [APC-PRAC-008.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-008.md): C program source code for APC-PRAC-008.c
+- [APC-PRAC-009.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-009.md): C program source code for APC-PRAC-009.c
+- [APC-PRAC-010.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-010.md): C program source code for APC-PRAC-010.c
+- [APC-PRAC-011.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-011.md): C program source code for APC-PRAC-011.c
+- [APC-PRAC-012.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-012.md): C program source code for APC-PRAC-012.c
+- [APC-PRAC-013.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-013.md): C program source code for APC-PRAC-013.c
+- [APC-PRAC-014.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-014.md): C program source code for APC-PRAC-014.c
+- [APC-PRAC-015.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-015.md): C program source code for APC-PRAC-015.c
+- [APC-PRAC-016.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-016.md): C program source code for APC-PRAC-016.c
+- [APC-PRAC-017.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-017.md): C program source code for APC-PRAC-017.c
+- [APC-PRAC-018.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-018.md): C program source code for APC-PRAC-018.c
+- [APC-PRAC-019.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-019.md): C program source code for APC-PRAC-019.c
+- [APC-PRAC-020.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-020.md): C program source code for APC-PRAC-020.c
+- [APC-PRAC-021.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-021.md): C program source code for APC-PRAC-021.c
+- [APC-PRAC-022.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-022.md): C program source code for APC-PRAC-022.c
+- [APC-PRAC-023.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-023.md): C program source code for APC-PRAC-023.c
+- [APC-PRAC-024.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-024.md): C program source code for APC-PRAC-024.c
+- [APC-PRAC-025.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-025.md): C program source code for APC-PRAC-025.c
+- [APC-PRAC-026.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-026.md): C program source code for APC-PRAC-026.c
+- [APC-PRAC-027.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-027.md): C program source code for APC-PRAC-027.c
+- [APC-PRAC-028.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-028.md): C program source code for APC-PRAC-028.c
+- [APC-PRAC-029.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-029.md): C program source code for APC-PRAC-029.c
+- [APC-PRAC-030.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-030.md): C program source code for APC-PRAC-030.c
+- [APC-PRAC-031.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-031.md): C program source code for APC-PRAC-031.c
+- [APC-PRAC-032.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-032.md): C program source code for APC-PRAC-032.c
+- [APC-PRAC-033.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-033.md): C program source code for APC-PRAC-033.c
+- [APC-PRAC-034.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-034.md): C program source code for APC-PRAC-034.c
+- [APC-PRAC-035.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-035.md): C program source code for APC-PRAC-035.c
+- [APC-PRAC-036.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-036.md): C program source code for APC-PRAC-036.c
+- [APC-PRAC-037.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-037.md): C program source code for APC-PRAC-037.c
+- [APC-PRAC-038.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-038.md): C program source code for APC-PRAC-038.c
+- [APC-PRAC-039.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-039.md): C program source code for APC-PRAC-039.c
+- [APC-PRAC-040.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-040.md): C program source code for APC-PRAC-040.c
+- [APC-PRAC-041.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-041.md): C program source code for APC-PRAC-041.c
+- [APC-PRAC-042.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-prac-042.md): C program source code for APC-PRAC-042.c
+- [APC-S-001.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-001.md): C program source code for APC-S-001.c
+- [APC-S-002.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-002.md): C program source code for APC-S-002.c
+- [APC-S-003.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-003.md): C program source code for APC-S-003.c
+- [APC-S-004.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-004.md): C program source code for APC-S-004.c
+- [APC-S-005.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-005.md): C program source code for APC-S-005.c
+- [APC-S-006.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-006.md): C program source code for APC-S-006.c
+- [APC-S-007.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-007.md): C program source code for APC-S-007.c
+- [APC-S-008.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-008.md): C program source code for APC-S-008.c
+- [APC-S-009.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-009.md): C program source code for APC-S-009.c
+- [APC-S-010.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-010.md): C program source code for APC-S-010.c
+- [APC-S-011.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-011.md): C program source code for APC-S-011.c
+- [APC-S-012.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-012.md): C program source code for APC-S-012.c
+- [APC-S-013.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-013.md): C program source code for APC-S-013.c
+- [APC-S-014.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-s-014.md): C program source code for APC-S-014.c
+- [APC-SPS-001.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-001.md): C program source code for APC-SPS-001.c
+- [APC-SPS-002.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-002.md): C program source code for APC-SPS-002.c
+- [APC-SPS-003.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-003.md): C program source code for APC-SPS-003.c
+- [APC-SPS-004.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-004.md): C program source code for APC-SPS-004.c
+- [APC-SPS-005.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-005.md): C program source code for APC-SPS-005.c
+- [APC-SPS-006.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-006.md): C program source code for APC-SPS-006.c
+- [APC-SPS-007.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-007.md): C program source code for APC-SPS-007.c
+- [APC-SPS-008.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/apc-sps-008.md): C program source code for APC-SPS-008.c
+- [P001.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p001.md): C program source code for P001.c
+- [P002.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p002.md): C program source code for P002.c
+- [P003.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p003.md): C program source code for P003.c
+- [P004.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p004.md): C program source code for P004.c
+- [P005.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p005.md): C program source code for P005.c
+- [P006.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p006.md): C program source code for P006.c
+- [P007.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p007.md): C program source code for P007.c
+- [P008.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p008.md): C program source code for P008.c
+- [P009.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p009.md): C program source code for P009.c
+- [P010.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p010.md): C program source code for P010.c
+- [P011.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p011.md): C program source code for P011.c
+- [P012.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p012.md): C program source code for P012.c
+- [P013.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p013.md): C program source code for P013.c
+- [P014.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p014.md): C program source code for P014.c
+- [P015.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p015.md): C program source code for P015.c
+- [P016.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p016.md): C program source code for P016.c
+- [P017.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p017.md): C program source code for P017.c
+- [P018.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p018.md): C program source code for P018.c
+- [P019.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p019.md): C program source code for P019.c
+- [P020.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p020.md): C program source code for P020.c
+- [P021.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p021.md): C program source code for P021.c
+- [P022.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p022.md): C program source code for P022.c
+- [P023.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p023.md): C program source code for P023.c
+- [P024.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p024.md): C program source code for P024.c
+- [P025.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p025.md): C program source code for P025.c
+- [P026.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p026.md): C program source code for P026.c
+- [P027.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p027.md): C program source code for P027.c
+- [P028.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p028.md): C program source code for P028.c
+- [P029.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p029.md): C program source code for P029.c
+- [P030.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p030.md): C program source code for P030.c
+- [P031.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p031.md): C program source code for P031.c
+- [P032.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p032.md): C program source code for P032.c
+- [P033.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p033.md): C program source code for P033.c
+- [P034.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p034.md): C program source code for P034.c
+- [P035.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p035.md): C program source code for P035.c
+- [P036.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p036.md): C program source code for P036.c
+- [P037.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p037.md): C program source code for P037.c
+- [P038.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p038.md): C program source code for P038.c
+- [P039.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p039.md): C program source code for P039.c
+- [P040.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p040.md): C program source code for P040.c
+- [P041.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p041.md): C program source code for P041.c
+- [P042.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p042.md): C program source code for P042.c
+- [P043.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p043.md): C program source code for P043.c
+- [P044.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p044.md): C program source code for P044.c
+- [P045.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p045.md): C program source code for P045.c
+- [P046.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p046.md): C program source code for P046.c
+- [P047.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p047.md): C program source code for P047.c
+- [P048.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p048.md): C program source code for P048.c
+- [P049.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p049.md): C program source code for P049.c
+- [P050-SHORT.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p050-short.md): C program source code for P050-SHORT.c
+- [P050.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p050.md): C program source code for P050.c
+- [P051.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p051.md): C program source code for P051.c
+- [P052.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p052.md): C program source code for P052.c
+- [P053.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p053.md): C program source code for P053.c
+- [P054.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p054.md): C program source code for P054.c
+- [P055.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p055.md): C program source code for P055.c
+- [P056.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p056.md): C program source code for P056.c
+- [P057.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p057.md): C program source code for P057.c
+- [P058.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p058.md): C program source code for P058.c
+- [P059.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p059.md): C program source code for P059.c
+- [P060.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p060.md): C program source code for P060.c
+- [P061.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p061.md): C program source code for P061.c
+- [P062.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p062.md): C program source code for P062.c
+- [P063.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p063.md): C program source code for P063.c
+- [P064.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p064.md): C program source code for P064.c
+- [P065.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p065.md): C program source code for P065.c
+- [P066.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p066.md): C program source code for P066.c
+- [P067.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p067.md): C program source code for P067.c
+- [P068.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p068.md): C program source code for P068.c
+- [P069.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p069.md): C program source code for P069.c
+- [P070.c](https://notamitgamer.github.io/bsc/semester_1/tuition-c/p070.md): C program source code for P070.c

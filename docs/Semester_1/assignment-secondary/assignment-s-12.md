@@ -1,0 +1,63 @@
+---
+label: assignment-s-12.c
+description: "C program source code for assignment-s-12.c"
+---
+
+# `assignment-s-12.c`
+
+## Problem Statement
+!!!
+Write a program to find the sum of n elements entered by the user. Use dynamic memory allocation (malloc() or calloc()).
+!!!
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author** | Amit Dutta (amitdutta4255@gmail.com) | Date: 17 Dec 2025 |
+| **License** | MIT |
+
+## Actions
+[!button variant="primary" icon="code" target="blank" text="Raw"](https://raw.usercontent.amit.is-a.dev/Semester_1/assignment-secondary/assignment-s-12.c) [!button variant="secondary" target="blank" text="View on GitHub"](https://github.com/notamitgamer/bsc/blob/main/Semester_1/assignment-secondary/assignment-s-12.c)
+
+💡 *Note: You can print or download this file by going to the **Raw** file.*
+
+## Source Code
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void inputarr(int[], int);
+int sum_elem(int[], int);
+
+int main()
+{
+    int n, *arr;
+    printf("How many element do you want to enter: ");
+    scanf("%d", &n);
+    arr = (int *)malloc(n * sizeof(int));
+    inputarr(arr, n);
+    printf("\nSum of the %d element(s) = %d", n, sum_elem(arr, n));
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+}
+
+int sum_elem(int arr[], int n)
+{
+    int i, sum = 0;
+    for (i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+```
