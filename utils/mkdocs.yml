@@ -1,11 +1,13 @@
-site_name: BSc Code Index · v3.2.5
+site_name: BSc Code Index · v3.2.6
 site_description: C programming assignments, indexed and documented.
 
 repo_url: https://github.com/notamitgamer/bsc
 repo_name: notamitgamer/bsc
+edit_uri: edit/main/docs-temp/
 
 theme:
   name: material
+  custom_dir: docs-temp\overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -23,8 +25,8 @@ theme:
         name: Switch to light mode
 
   font:
-    text: Inter
-    code: JetBrains Mono
+    text: Readex Pro
+    code: Fira Code
 
   features:
     - navigation.indexes
@@ -39,6 +41,11 @@ theme:
     - navigation.path
     - search.share
     - content.tooltips
+    - content.action.edit
+    - content.action.view
+    - header.autohide
+    - navigation.instant
+    - announce.dismiss
 
 extra_css:
   - stylesheets/extra.css
@@ -65,7 +72,11 @@ copyright: >
   Copyright &copy; 2025–2026
   <a href="https://amit.is-a.dev" target="_blank">amit.is-a.dev</a> /
   <a href="https://github.com/notamitgamer" target="_blank">notamitgamer</a>
-  &nbsp;&mdash;&nbsp;
+  <br>
   <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank">MIT License</a>
 
 docs_dir: docs-temp
+
+extra:
+  generator: false
+  announce: "Welcome to the new code.amit.is-a.dev! The BSc Code Index has been completely rebuilt from the ground up for a cleaner UI, faster navigation, and a rock-solid, bug-free experience."
