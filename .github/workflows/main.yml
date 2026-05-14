@@ -1,0 +1,39 @@
+name: Lowercase Semester Folders
+
+on:
+  workflow_dispatch: # Run this manually from the Actions tab
+
+jobs:
+  rename-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rename Semester folders to lowercase
+        run: |
+          # Loop through numbers 1 to 8
+          for i in {1..8}
+          do
+            old_name="Semester_$i"
+            new_name="semester_$i"
+            
+            if [ -d "$old_name" ]; then
+              echo "Processing $old_name..."
+              # Use a temporary name to force Git to recognize the case change
+              mv "$old_name" "${new_name}_tmp"
+              mv "${new_name}_tmp" "$new_name"
+            else
+              echo "Directory $old_name not found, skipping."
+            fi
+          done
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "refactor: rename Semester folders to lowercase" || echo "No changes to commit"
+          git push
