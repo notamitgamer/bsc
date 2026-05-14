@@ -6,8 +6,10 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 ---
 
 ### Quick Links
+* **GitHub Repo:** [@notamitgamer/bsc](https://github.com/notamitgamer/bsc)
+* **Web View** [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc/)
+* **Web View:** [code.amit.is-a.dev](https://code.amit.is-a.dev)
 * **Live Portfolio:** [amit.is-a.dev](https://amit.is-a.dev)
-* **Web View:** [amit.is-a.dev/bsc](https://amit.is-a.dev/bsc)
 * **GitHub Profile:** [@notamitgamer](https://github.com/notamitgamer)
 
 ---
