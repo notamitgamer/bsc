@@ -1,0 +1,67 @@
+---
+title: lucproblem015.c
+description: "C program source code for lucproblem015.c"
+---
+
+# `lucproblem015.c`
+
+
+!!! abstract "Problem Statement"
+    Write a program that defines a function that calculates power of one number reaised to another and factorial value of a number in one cell.
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**  | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date**    | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/letusc/lucproblem015.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/letusc/lucproblem015.c){.md-button}
+
+> 💡 You can print or save this file by opening **Raw** and using your browser.
+
+## Source Code
+```c
+#include <stdio.h>
+
+void bothPowerFactorial(double, int, int, double *, long long *);
+
+int main()
+{
+    double a, resultPower;
+    int b, factN;
+    long long resultFactorial;
+    printf("Enter a and b for calculating a raised to b: ");
+    scanf("%lf %d", &a, &b);
+    printf("Enter number to calculate the factorial: ");
+    scanf("%d", &factN);
+    if (b < 0 || factN < 0)
+    {
+        printf("\nOnly non-negative integer is allowed as input of b and factorial.");
+        return 1;
+    }
+    bothPowerFactorial(a, b, factN, &resultPower, &resultFactorial);
+    printf("\n%g Raised to %d: %g"
+           "\nFactorial of %d: %lld",
+           a, b, resultPower, factN, resultFactorial);
+    return 0;
+}
+
+void bothPowerFactorial(double a, int b, int n, double *resultPower, long long *resultFactorial)
+{
+    double tempResultPower = 1;
+    long long tempResultFactorial = 1;
+    int i;
+
+    for (i = 1; i <= b; i++)
+        tempResultPower *= a;
+
+    for (i = 1; i <= n; i++)
+        tempResultFactorial *= i;
+
+    *resultPower = tempResultPower;
+    *resultFactorial = tempResultFactorial;
+}
+```

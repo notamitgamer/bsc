@@ -2,7 +2,7 @@
 
 Thank you for your interest in improving this repository! Now that this project is licensed under the **MIT License**, I welcome community contributions, bug reports, and optimizations.
 
-## 📜 Licensing
+## Licensing
 
 By submitting a Pull Request (PR) or code snippet to this repository, you agree that your contribution will be governed by the **[MIT License](LICENSE)**. 
 

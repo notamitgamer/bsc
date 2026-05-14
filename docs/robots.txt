@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://notamitgamer.github.io/bsc/sitemap.xml

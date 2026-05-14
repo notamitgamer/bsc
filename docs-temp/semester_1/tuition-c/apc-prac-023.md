@@ -1,0 +1,59 @@
+---
+title: apc-prac-023.c
+description: "C program source code for apc-prac-023.c"
+---
+
+# `apc-prac-023.c`
+
+
+!!! abstract "Problem Statement"
+    Pattern : (a) 1, -3, 5, -7, 9, -11, ... upto n times (b) 0, 3, 8, 15, ... upto n times
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**  | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date**    | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/tuition-c/apc-prac-023.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/tuition-c/apc-prac-023.c){.md-button}
+
+> 💡 You can print or save this file by opening **Raw** and using your browser.
+
+## Source Code
+```c
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+    int n, i, temp = 1;
+    bool isNegative = true;
+    printf("Enter the n : ");
+    scanf("%d", &n);
+    printf("\nPattern A :");
+    for (i = 1; i <= n; i++)
+    {
+        if (!isNegative)
+        {
+            printf("  %d", temp * -1);
+            isNegative = true;
+        }
+        else
+        {
+            printf("  %d", temp);
+            isNegative = false;
+        }
+        temp += 2;
+    }
+    printf("\nPattern B :");
+    for (i = 1; i <= n; i++)
+    {
+        temp = (i * i) - 1;
+        printf("  %d", temp);
+    }
+    return 0;
+}
+```
