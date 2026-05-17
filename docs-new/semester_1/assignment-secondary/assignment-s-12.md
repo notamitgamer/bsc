@@ -1,0 +1,167 @@
+---
+title: assignment-s-12.c
+description: "C program source code for assignment-s-12.c"
+tags:
+  - Beginner
+---
+
+# `assignment-s-12.c`
+
+
+!!! abstract "Problem Statement"
+    Write a program to find the sum of n elements entered by the user. Use dynamic memory allocation (malloc() or calloc()).
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 17 Dec 2025 |
+| **License**    | MIT |
+| **Difficulty** | Beginner (index: 3 / 10) |
+
+## Concepts
+
+!!! warning "Beta Feature"
+    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
+
+- Array
+- Pointers
+- Iteration
+- Sorting (possible)
+- Recursion
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/assignment-secondary/assignment-s-12.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/assignment-secondary/assignment-s-12.c){.md-button}
+
+> You can print or save this file by opening Raw and using your browser.
+
+## Source Code
+<div data-search-exclude="true">
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void inputarr(int[], int);
+int sum_elem(int[], int);
+
+int main()
+{
+    int n, *arr;
+    printf("How many element do you want to enter: ");
+    scanf("%d", &n);
+    arr = (int *)malloc(n * sizeof(int));
+    inputarr(arr, n);
+    printf("\nSum of the %d element(s) = %d", n, sum_elem(arr, n));
+    free(arr);
+    return 0;
+}
+
+void inputarr(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+}
+
+int sum_elem(int arr[], int n)
+{
+    int i, sum = 0;
+    for (i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+```
+</div>
+
+## Explanation
+
+??? info "Explain with AI"
+
+    Copy the prompt below and paste it into any AI assistant.
+
+    <div data-search-exclude="true">
+
+    ```text
+        You are explaining a C programming code to a beginner.
+        
+        STRICT RULES:
+        
+        - Only use the given code. Do NOT assume anything not present.
+        
+        - Do NOT add extra examples.
+        
+        - Keep explanation clear and short.
+        
+        - If something is unclear, say "Not clear from code".
+        
+        - Follow the exact format below. Do NOT change headings.
+        
+        FORMAT:
+        
+        [START]
+        
+        ## What it does
+        
+        (Explain the overall purpose in 1-2 sentences)
+        
+        ## Step-by-step
+        
+        (Explain how the code works in steps, simple language)
+        
+        ## Key Concepts
+        
+        (List concepts like loop, condition, function, etc.)
+        
+        ## Notes
+        
+        (Mention any limitations, errors, or assumptions)
+        
+        [END]
+        
+        CODE (assignment-s-12.c):
+        
+        #include <stdio.h>
+        #include <stdlib.h>
+        
+        void inputarr(int[], int);
+        int sum_elem(int[], int);
+        
+        int main()
+        {
+            int n, *arr;
+            printf("How many element do you want to enter: ");
+            scanf("%d", &n);
+            arr = (int *)malloc(n * sizeof(int));
+            inputarr(arr, n);
+            printf("\nSum of the %d element(s) = %d", n, sum_elem(arr, n));
+            free(arr);
+            return 0;
+        }
+        
+        void inputarr(int arr[], int n)
+        {
+            int i;
+            for (i = 0; i < n; i++)
+            {
+                printf("Enter element %d: ", i + 1);
+                scanf("%d", &arr[i]);
+            }
+        }
+        
+        int sum_elem(int arr[], int n)
+        {
+            int i, sum = 0;
+            for (i = 0; i < n; i++)
+            {
+                sum += arr[i];
+            }
+            return sum;
+        }
+    ```
+
+    </div>

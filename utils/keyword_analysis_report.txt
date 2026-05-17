@@ -1,0 +1,53 @@
+================================================================================
+Starting Precise Global Keyword Analysis (Excludes Strings & Comments)
+================================================================================
+
+Successfully analyzed 410/410 files across the codebase.
+--------------------------------------------------------------------------------
+
+>>> GLOBAL KEYWORD SUMMARY FOR C (388 file(s) processed) <<<
+    Keyword         | Total Occurrences 
+    --------------------------------------
+    int             : 2092 time(s)
+    return          : 716 time(s)
+    include         : 685 time(s)
+    if              : 665 time(s)
+    for             : 420 time(s)
+    void            : 333 time(s)
+    char            : 241 time(s)
+    else            : 231 time(s)
+    double          : 216 time(s)
+    while           : 185 time(s)
+    struct          : 177 time(s)
+    long            : 140 time(s)
+    break           : 115 time(s)
+    sizeof          : 108 time(s)
+    case            : 89 time(s)
+    define          : 68 time(s)
+    const           : 38 time(s)
+    float           : 31 time(s)
+    unsigned        : 26 time(s)
+    switch          : 15 time(s)
+    default         : 14 time(s)
+    continue        : 13 time(s)
+    typedef         : 8 time(s)
+    do              : 6 time(s)
+    static          : 3 time(s)
+    short           : 1 time(s)
+
+>>> GLOBAL KEYWORD SUMMARY FOR R (22 file(s) processed) <<<
+    Keyword         | Total Occurrences 
+    --------------------------------------
+    if              : 9 time(s)
+    else            : 4 time(s)
+    for             : 4 time(s)
+    in              : 4 time(s)
+    TRUE            : 3 time(s)
+    while           : 3 time(s)
+    break           : 2 time(s)
+    function        : 2 time(s)
+    NULL            : 1 time(s)
+
+================================================================================
+Global Aggregation Analysis Complete!
+================================================================================

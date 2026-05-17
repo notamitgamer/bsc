@@ -1,13 +1,13 @@
-site_name: BSc Code Index · v3.2.6
+site_name: BSc Code Index · v3.3.1
 site_description: C programming assignments, indexed and documented.
 
 repo_url: https://github.com/notamitgamer/bsc
 repo_name: notamitgamer/bsc
-edit_uri: edit/main/docs-temp/
+edit_uri: edit/main/docs-new/
 
 theme:
   name: material
-  custom_dir: docs-temp\overrides
+  custom_dir: docs-new\overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -51,8 +51,10 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-\.]+'
   - awesome-pages
+  - tags
 
 markdown_extensions:
   - attr_list
@@ -64,6 +66,8 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
+  - pymdownx.tabbed:      # <-- add this block right after superfences
+      alternate_style: true
   - tables
   - toc:
       permalink: true
@@ -75,8 +79,8 @@ copyright: >
   <br>
   <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank">MIT License</a>
 
-docs_dir: docs-temp
+docs_dir: docs-new
 
 extra:
   generator: false
-  announce: "Welcome to the new code.amit.is-a.dev! The BSc Code Index has been completely rebuilt from the ground up for a cleaner UI, faster navigation, and a rock-solid, bug-free experience."
+  announce: ""

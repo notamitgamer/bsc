@@ -1,0 +1,123 @@
+---
+title: lucproblem003.c
+description: "C program source code for lucproblem003.c"
+tags:
+  - Beginner
+---
+
+# `lucproblem003.c`
+
+
+!!! abstract "Problem Statement"
+    If a character is entered through the keyboard, Write a program to determine whether the character is a capital letter, a small case letter, a digit or a speacial symbol. The following table shows the range of ASCII values for various characters : Characters              ASCII Values A - Z                   65 - 90 a - z                   97 - 122 0 - 9                   48 - 57 special symbols         0 - 47, 58 - 64, 91 - 96, 123 - 127
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
+| **License**    | MIT |
+| **Difficulty** | Beginner (index: 1 / 10) |
+
+## Concepts
+
+!!! warning "Beta Feature"
+    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
+
+- Recursion
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/letusc/lucproblem003.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/letusc/lucproblem003.c){.md-button}
+
+> You can print or save this file by opening Raw and using your browser.
+
+## Source Code
+<div data-search-exclude="true">
+```c
+#include <stdio.h>
+int main()
+{
+    char inp;
+    printf("Enter one character : ");
+    scanf(" %c", &inp);
+    if (inp >= 64 && inp <= 90)
+        printf("\nInput '%c' is a CAPITAL LETTER.", inp);
+    if (inp >= 97 && inp <= 122)
+        printf("\nInput '%c' is a SMALL CASE LETTER.", inp);
+    if (inp >= 48 && inp <= 57)
+        printf("\nInput '%c' is a DIGIT.", inp);
+    if (inp >= 0 && inp <= 47 || inp >= 58 && inp <= 64 
+        || inp >= 91 && inp <= 96 || inp >= 123 && inp <= 127)
+        printf("\nInput '%c' is a SPECIAL SYMBOL.", inp);
+    return 0;
+}
+```
+</div>
+
+## Explanation
+
+??? info "Explain with AI"
+
+    Copy the prompt below and paste it into any AI assistant.
+
+    <div data-search-exclude="true">
+
+    ```text
+        You are explaining a C programming code to a beginner.
+        
+        STRICT RULES:
+        
+        - Only use the given code. Do NOT assume anything not present.
+        
+        - Do NOT add extra examples.
+        
+        - Keep explanation clear and short.
+        
+        - If something is unclear, say "Not clear from code".
+        
+        - Follow the exact format below. Do NOT change headings.
+        
+        FORMAT:
+        
+        [START]
+        
+        ## What it does
+        
+        (Explain the overall purpose in 1-2 sentences)
+        
+        ## Step-by-step
+        
+        (Explain how the code works in steps, simple language)
+        
+        ## Key Concepts
+        
+        (List concepts like loop, condition, function, etc.)
+        
+        ## Notes
+        
+        (Mention any limitations, errors, or assumptions)
+        
+        [END]
+        
+        CODE (lucproblem003.c):
+        
+        #include <stdio.h>
+        int main()
+        {
+            char inp;
+            printf("Enter one character : ");
+            scanf(" %c", &inp);
+            if (inp >= 64 && inp <= 90)
+                printf("\nInput '%c' is a CAPITAL LETTER.", inp);
+            if (inp >= 97 && inp <= 122)
+                printf("\nInput '%c' is a SMALL CASE LETTER.", inp);
+            if (inp >= 48 && inp <= 57)
+                printf("\nInput '%c' is a DIGIT.", inp);
+            if (inp >= 0 && inp <= 47 || inp >= 58 && inp <= 64 
+                || inp >= 91 && inp <= 96 || inp >= 123 && inp <= 127)
+                printf("\nInput '%c' is a SPECIAL SYMBOL.", inp);
+            return 0;
+        }
+    ```
+
+    </div>

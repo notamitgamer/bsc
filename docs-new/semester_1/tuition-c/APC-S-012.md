@@ -1,0 +1,161 @@
+---
+title: APC-S-012.c
+description: "C program source code for APC-S-012.c"
+tags:
+  - Beginner
+---
+
+# `APC-S-012.c`
+
+
+!!! abstract "Problem Statement"
+    Write a program to check if a matrix is a sparx matrix.
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
+| **License**    | MIT |
+| **Difficulty** | Beginner (index: 1 / 10) |
+
+## Concepts
+
+!!! warning "Beta Feature"
+    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
+
+- Pointers
+- Sorting (likely)
+- Iteration
+- Sorting (possible)
+- Recursion
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/tuition-c/APC-S-012.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/tuition-c/APC-S-012.c){.md-button}
+
+> You can print or save this file by opening Raw and using your browser.
+
+## Source Code
+<div data-search-exclude="true">
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, row, col, count = 0;
+
+    printf("Enter the number of rows and columns in the matrix: ");
+    scanf("%d %d", &row, &col);
+
+    int matrix[row][col];
+
+    for (i = 0; i < row; i++)
+        for (j = 0; j < col; j++)
+        {
+            printf("Postion %d%d: ", i, j);
+            scanf("%d", &matrix[i][j]);
+            if (matrix[i][j] == 0)
+                count++;
+        }
+
+    printf("\nEntered Matrix: \n");
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+            printf("%d  ", matrix[i][j]);
+        printf("\n");
+    }
+
+    if (count > (row * col) / 2)
+        printf("\nEntered matrix is a Sparx Matrix.");
+    else
+        printf("\nEntered matrix is not a Sparx Matrix");
+    return 0;
+}
+```
+</div>
+
+## Explanation
+
+??? info "Explain with AI"
+
+    Copy the prompt below and paste it into any AI assistant.
+
+    <div data-search-exclude="true">
+
+    ```text
+        You are explaining a C programming code to a beginner.
+        
+        STRICT RULES:
+        
+        - Only use the given code. Do NOT assume anything not present.
+        
+        - Do NOT add extra examples.
+        
+        - Keep explanation clear and short.
+        
+        - If something is unclear, say "Not clear from code".
+        
+        - Follow the exact format below. Do NOT change headings.
+        
+        FORMAT:
+        
+        [START]
+        
+        ## What it does
+        
+        (Explain the overall purpose in 1-2 sentences)
+        
+        ## Step-by-step
+        
+        (Explain how the code works in steps, simple language)
+        
+        ## Key Concepts
+        
+        (List concepts like loop, condition, function, etc.)
+        
+        ## Notes
+        
+        (Mention any limitations, errors, or assumptions)
+        
+        [END]
+        
+        CODE (APC-S-012.c):
+        
+        #include <stdio.h>
+        
+        int main()
+        {
+            int i, j, row, col, count = 0;
+        
+            printf("Enter the number of rows and columns in the matrix: ");
+            scanf("%d %d", &row, &col);
+        
+            int matrix[row][col];
+        
+            for (i = 0; i < row; i++)
+                for (j = 0; j < col; j++)
+                {
+                    printf("Postion %d%d: ", i, j);
+                    scanf("%d", &matrix[i][j]);
+                    if (matrix[i][j] == 0)
+                        count++;
+                }
+        
+            printf("\nEntered Matrix: \n");
+            for (i = 0; i < row; i++)
+            {
+                for (j = 0; j < col; j++)
+                    printf("%d  ", matrix[i][j]);
+                printf("\n");
+            }
+        
+            if (count > (row * col) / 2)
+                printf("\nEntered matrix is a Sparx Matrix.");
+            else
+                printf("\nEntered matrix is not a Sparx Matrix");
+            return 0;
+        }
+    ```
+
+    </div>

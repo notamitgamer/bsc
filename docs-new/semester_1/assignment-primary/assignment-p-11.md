@@ -1,0 +1,244 @@
+---
+title: assignment-p-11.c
+description: "C program source code for assignment-p-11.c"
+tags:
+  - Advanced
+---
+
+# `assignment-p-11.c`
+
+
+!!! abstract "Problem Statement"
+    Write a C program that defines a structure Student containing the attributes rollNumber, name, and marks. Include a user-defined function named displayStudent with the signature void displayStudent(struct Student s);. The function should display the details of a student.
+
+## Metadata
+| Property | Detail |
+|---|---|
+| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date**       | 12 Dec 2025 |
+| **License**    | MIT License (See the LICENSE file for details) |
+| **Difficulty** | Advanced (index: 6 / 10) |
+
+## Concepts
+
+!!! warning "Beta Feature"
+    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
+
+- Array
+- Pointers
+- Iteration
+- Sorting (possible)
+- Recursion
+
+## Actions
+
+[Raw](https://raw.usercontent.amit.is-a.dev/semester_1/assignment-primary/assignment-p-11.c){.md-button}  [View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/assignment-primary/assignment-p-11.c){.md-button}
+
+> You can print or save this file by opening Raw and using your browser.
+
+## Source Code
+<div data-search-exclude="true">
+```c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct Student
+{
+    int rollNumber;
+    char name[50];
+    float marks;
+};
+
+void inputStudent(struct Student *);
+void displayStudent(struct Student);
+
+int main()
+{
+    struct Student *std = NULL;
+    int i, n;
+
+    printf("How many student details you want to add : ");
+    if (scanf("%d", &n) != 1 || n < 1)
+    {
+        printf("\nInvalid Input.");
+        return 1;
+    }
+
+    std = (struct Student *)malloc(n * sizeof(struct Student));
+    if (std == NULL)
+    {
+        printf("\nUnable to allocate memory.");
+        return 1;
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        printf("\n- Enter details of Student %d -", i + 1);
+        inputStudent(&std[i]);
+    }
+
+    printf("\n=== Student Details ===\n");
+    for (i = 0; i < n; i++)
+    {
+        displayStudent(std[i]);
+    }
+
+    free(std);
+    return 0;
+}
+
+void inputStudent(struct Student *std)
+{
+    int len;
+
+    printf("\nEnter the Roll Number: ");
+    scanf("%d", &std->rollNumber);
+    getchar();
+    
+    printf("Enter the Name (Max: 50 character): ");
+    fgets(std->name, sizeof(std->name), stdin);
+    len = strlen(std->name);
+    if (len > 0 && std->name[len - 1] == '\n')
+    {
+        std->name[len - 1] = '\0';
+    }
+
+    printf("Enter the Marks: ");
+    scanf("%f", &std->marks);
+}
+
+void displayStudent(struct Student std)
+{
+    printf("\n%-12s : %d", "Roll Number", std.rollNumber);
+    printf("\n%-12s : %s", "Name", std.name);
+    printf("\n%-12s : %g\n", "Marks", std.marks);
+}
+```
+</div>
+
+## Explanation
+
+??? info "Explain with AI"
+
+    Copy the prompt below and paste it into any AI assistant.
+
+    <div data-search-exclude="true">
+
+    ```text
+        You are explaining a C programming code to a beginner.
+        
+        STRICT RULES:
+        
+        - Only use the given code. Do NOT assume anything not present.
+        
+        - Do NOT add extra examples.
+        
+        - Keep explanation clear and short.
+        
+        - If something is unclear, say "Not clear from code".
+        
+        - Follow the exact format below. Do NOT change headings.
+        
+        FORMAT:
+        
+        [START]
+        
+        ## What it does
+        
+        (Explain the overall purpose in 1-2 sentences)
+        
+        ## Step-by-step
+        
+        (Explain how the code works in steps, simple language)
+        
+        ## Key Concepts
+        
+        (List concepts like loop, condition, function, etc.)
+        
+        ## Notes
+        
+        (Mention any limitations, errors, or assumptions)
+        
+        [END]
+        
+        CODE (assignment-p-11.c):
+        
+        #include <stdio.h>
+        #include <string.h>
+        #include <stdlib.h>
+        
+        struct Student
+        {
+            int rollNumber;
+            char name[50];
+            float marks;
+        };
+        
+        void inputStudent(struct Student *);
+        void displayStudent(struct Student);
+        
+        int main()
+        {
+            struct Student *std = NULL;
+            int i, n;
+        
+            printf("How many student details you want to add : ");
+            if (scanf("%d", &n) != 1 || n < 1)
+            {
+                printf("\nInvalid Input.");
+                return 1;
+            }
+        
+            std = (struct Student *)malloc(n * sizeof(struct Student));
+            if (std == NULL)
+            {
+                printf("\nUnable to allocate memory.");
+                return 1;
+            }
+        
+            for (i = 0; i < n; i++)
+            {
+                printf("\n- Enter details of Student %d -", i + 1);
+                inputStudent(&std[i]);
+            }
+        
+            printf("\n=== Student Details ===\n");
+            for (i = 0; i < n; i++)
+            {
+                displayStudent(std[i]);
+            }
+        
+            free(std);
+            return 0;
+        }
+        
+        void inputStudent(struct Student *std)
+        {
+            int len;
+        
+            printf("\nEnter the Roll Number: ");
+            scanf("%d", &std->rollNumber);
+            getchar();
+            
+            printf("Enter the Name (Max: 50 character): ");
+            fgets(std->name, sizeof(std->name), stdin);
+            len = strlen(std->name);
+            if (len > 0 && std->name[len - 1] == '\n')
+            {
+                std->name[len - 1] = '\0';
+            }
+        
+            printf("Enter the Marks: ");
+            scanf("%f", &std->marks);
+        }
+        
+        void displayStudent(struct Student std)
+        {
+            printf("\n%-12s : %d", "Roll Number", std.rollNumber);
+            printf("\n%-12s : %s", "Name", std.name);
+            printf("\n%-12s : %g\n", "Marks", std.marks);
+        }
+    ```
+
+    </div>
