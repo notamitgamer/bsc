@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  By using this site, you agree to the <a href="/terms/">Terms of Use</a>.
+{% endblock %}
+
+{% block content %}
+  <!-- Custom UI Dropdown Container -->
+  <div class="custom-dropdown" id="quickActionsDropdown">
+    <button class="custom-dropdown-btn" onclick="toggleDropdown(event)">Quick Actions</button>
+    <div class="custom-dropdown-content">
+      <a href="/">Home</a>
+      <a href="https://github.com/notamitgamer/bsc/issues/new" target="_blank">Report a Bug</a>
+      <a href="https://github.com/notamitgamer/bsc/pulls" target="_blank">Submit a PR / Fix Code</a>
+      <a href="https://github.com/notamitgamer/bsc" target="_blank">View Repository</a>
+      
+      <div class="dropdown-divider"></div> <!-- Clean visual line -->
+      
+      <a href="https://amit.is-a.dev" target="_blank">Developer Portfolio</a>
+      <a href="https://github.com/notamitgamer" target="_blank">GitHub Profile</a>
+    </div>
+  </div>
+
+  <script>
+    // Toggle the dropdown when clicking the button
+    function toggleDropdown(event) {
+      event.stopPropagation(); // Prevent the document click listener from firing instantly
+      document.getElementById('quickActionsDropdown').classList.toggle('open');
+    }
+
+    // Close the dropdown if the user clicks anywhere outside of it
+    // The "if" statement ensures we don't break MkDocs navigation.instant by piling up listeners
+    if (!window.dropdownListenerAdded) {
+      document.addEventListener('click', function(event) {
+        var dropdowns = document.querySelectorAll('.custom-dropdown');
+        dropdowns.forEach(function(dropdown) {
+          if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('open');
+          }
+        });
+      });
+      window.dropdownListenerAdded = true;
+    }
+  </script>
+
+  {{ super() }}
+{% endblock %}
