@@ -9,13 +9,13 @@ repo_name: notamitgamer/bsc
 edit_uri: edit/main/docs-new/
 
 # Directory configuration
-docs_dir: docs-new
+docs_dir: ./docs-new
 
 # Configuration
 theme:
   name: material
-  custom_dir: docs-new/overrides
-  logo: stylesheets/logo.svg
+  custom_dir: ./docs-new/overrides
+  logo: ./stylesheets/logo.svg
   font:
     text: Lexend
     code: Fira Code
@@ -52,10 +52,10 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  favicon: stylesheets/bsc.png
-  logo: stylesheets/logo.svg
+  favicon: ./stylesheets/bsc.png
+  logo: ./stylesheets/logo.svg
 extra_css:
-  - stylesheets/extra.css
+  - ./stylesheets/extra.css
 
 # Plugins
 plugins:
