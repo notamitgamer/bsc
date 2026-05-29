@@ -1,39 +1,56 @@
-name: Lowercase Semester Folders
+name: Build and Deploy Docs
 
 on:
-  workflow_dispatch: # Run this manually from the Actions tab
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**' 
+  workflow_dispatch: 
+
+permissions:
+  contents: write
 
 jobs:
-  rename-folders:
+  build-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
+          python-version: 3.x
 
-      - name: Rename Semester folders to lowercase
+      - name: Install MkDocs and Plugins
         run: |
-          # Loop through numbers 1 to 8
-          for i in {1..8}
-          do
-            old_name="Semester_$i"
-            new_name="semester_$i"
-            
-            if [ -d "$old_name" ]; then
-              echo "Processing $old_name..."
-              # Use a temporary name to force Git to recognize the case change
-              mv "$old_name" "${new_name}_tmp"
-              mv "${new_name}_tmp" "$new_name"
-            else
-              echo "Directory $old_name not found, skipping."
-            fi
-          done
+          pip install mkdocs-material
+          pip install mkdocs-awesome-pages-plugin
 
-      - name: Commit and Push
+      - name: Delete old docs folder
+        run: rm -rf docs
+
+      - name: Build MkDocs site
+        run: mkdocs build -f utils/mkdocs.yml
+
+      - name: Rename 'site' to 'docs'
+        run: mv site docs
+
+      - name: Commit and Push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "refactor: rename Semester folders to lowercase" || echo "No changes to commit"
-          git push
+          # Set up the bot's git identity
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Stage the new docs folder
+          git add docs/
+          
+          # Only commit and push if there are actual changes
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore: auto-generate GitHub Pages docs"
+            git push
+            echo "Successfully built and pushed new docs folder."
+          else
+            echo "No changes to docs detected, skipping commit."
+          fi
