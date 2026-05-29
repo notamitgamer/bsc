@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    # Crucial: This prevents an infinite loop when the bot pushes the new docs folder
     paths-ignore:
       - 'docs/**' 
-  workflow_dispatch: 
+  workflow_dispatch: # Allows you to run this manually from the Actions tab
 
+# Grants the action permission to push commits back to the repo
 permissions:
   contents: write
 
@@ -23,16 +25,20 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install MkDocs and Plugins
+      - name: Install Zensical and Plugins
         run: |
-          pip install mkdocs-material
+          pip install zensical
           pip install mkdocs-awesome-pages-plugin
+
+      # Uncomment the next two lines if your Python script needs to run BEFORE Zensical builds
+      # - name: Run Python Generator Script
+      #   run: python md.py 
 
       - name: Delete old docs folder
         run: rm -rf docs
 
-      - name: Build MkDocs site
-        run: mkdocs build -f utils/mkdocs.yml
+      - name: Build Zensical site
+        run: zensical build
 
       - name: Rename 'site' to 'docs'
         run: mv site docs
