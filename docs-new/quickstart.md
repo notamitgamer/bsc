@@ -1,3 +1,7 @@
+---
+icon: lucide/rocket
+---
+
 # Quick Start Guide
 
 Get started with the BSc Code Index in minutes.
@@ -16,23 +20,11 @@ Get started with the BSc Code Index in minutes.
 Each page includes:
 
 - Problem Statement
-- Metadata
-- Concepts (beta)
 - Source Code
-- AI Explanation Prompt
 
 ---
 
-## 3. Use the AI Explanation
-
-1. Open a code page  
-2. Scroll to **Explanation**  
-3. Copy the prompt  
-4. Paste into any AI tool  
-
----
-
-## 4. Run the Code
+## 3. Run the Code
 
 ### For C
 
@@ -51,14 +43,14 @@ Rscript file.r
 
 ---
 
-## 5. Print or Save
+## 4. Print or Save
 
 - Click **Raw**
 - Use browser → Print → Save as PDF
 
 ---
 
-## 6. Learn Properly
+## 5. Learn Properly
 
 !!! warning "Important"
     Do NOT copy-paste blindly.
@@ -70,14 +62,7 @@ Best method:
 
 ---
 
-## 7. Explore Difficulty
-
-- Check metadata table
-- Use difficulty labels to pick problems
-
----
-
-## 8. Use GitHub
+## 6. Use GitHub
 
 - View full repository
 - Track updates
@@ -85,7 +70,7 @@ Best method:
 
 ---
 
-## 9. Folder Navigation
+## 7. Folder Navigation
 
 Each folder contains:
 - Subfolders (topics/semesters)
@@ -94,7 +79,7 @@ Each folder contains:
 
 ---
 
-## 10. You're Ready
+## 8. You're Ready
 
 Start exploring and learning step-by-step.
 

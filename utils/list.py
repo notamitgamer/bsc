@@ -1,5 +1,5 @@
 import os
-def list_all_c_files(start_path='.', output_file='c_files_list.txt'):
+def list_all_c_files(start_path='.', output_file='list.txt'):
     try:
         count = 0
         with open(output_file, 'w', encoding='utf-8') as f:

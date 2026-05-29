@@ -1,36 +1,27 @@
-site_name: BSc Code Index · v3.3.1
+# Project information
+site_name: BSc Code Index · v3.3.2
 site_description: C programming assignments, indexed and documented.
+site_url: https://amit.is-a.dev
 
+# Repository
 repo_url: https://github.com/notamitgamer/bsc
 repo_name: notamitgamer/bsc
 edit_uri: edit/main/docs-new/
 
+# Directory configuration
+docs_dir: docs-new
+
+# Configuration
 theme:
   name: material
-  custom_dir: docs-new\overrides
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: deep purple
-      accent: purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-
+  custom_dir: docs-new/overrides
+  logo: stylesheets/logo.svg
   font:
-    text: Readex Pro
+    text: Lexend
     code: Fira Code
-
   features:
-    - navigation.indexes
     - navigation.sections
+    - navigation.indexes
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -46,16 +37,34 @@ theme:
     - header.autohide
     - navigation.instant
     - announce.dismiss
-
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  favicon: stylesheets/bsc.png
+  logo: stylesheets/logo.svg
 extra_css:
   - stylesheets/extra.css
 
+# Plugins
 plugins:
   - search:
       separator: '[\s\-\.]+'
   - awesome-pages
   - tags
 
+# Extensions
 markdown_extensions:
   - attr_list
   - admonition
@@ -79,8 +88,16 @@ copyright: >
   <br>
   <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank">MIT License</a>
 
-docs_dir: docs-new
-
+# Additional configuration
 extra:
   generator: false
   announce: ""
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/notamitgamer
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/1274721760088166495
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/amit.is-a.dev
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/notamitgamer

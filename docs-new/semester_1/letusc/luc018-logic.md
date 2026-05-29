@@ -1,8 +1,7 @@
 ---
 title: luc018-logic.c
 description: "C program source code for luc018-logic.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `luc018-logic.c`
@@ -14,20 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 12 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Beginner (index: 2 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Pointers
-- Array
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -122,104 +110,3 @@ int main() {
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (luc018-logic.c):
-        
-        #include <stdio.h>
-        
-        /**
-         * @brief Determines if a given year is a leap year.
-         * * The rule: A year is a leap year if it is divisible by 4, UNLESS it is 
-         * divisible by 100 but NOT by 400.
-         * * @param year The year to check.
-         * @return 1 if it is a leap year, 0 otherwise.
-         */
-        int is_leap(int year) {
-            // Check if divisible by 400 OR (divisible by 4 AND not divisible by 100)
-            if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-                return 1;
-            }
-            return 0;
-        }
-        
-        /**
-         * @brief Calculates the day of the week for January 1st of the given year.
-         * * The base date is 01/01/01, which was a Monday (index 1).
-         * * Day Mapping: 0:Sunday, 1:Monday, 2:Tuesday, 3:Wednesday, 4:Thursday, 5:Friday, 6:Saturday
-         */
-        int main() {
-            long long year; // Use long long for year input if years far in the future/past are tested
-            int i;
-            long long total_days = 0;
-            int day_index;
-            
-            // Day names array for output
-            const char *day_names[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        
-            printf("Enter the year (e.g., 2025): ");
-            if (scanf("%lld", &year) != 1 || year < 1) {
-                printf("Invalid year input. Please enter a positive integer year (>= 1).\n");
-                return 1;
-            }
-        
-            // --- Core Logic: Calculate Total Days ---
-            
-            // We only need to consider the years that have *passed* before the target year.
-            // So, we count days from the end of year 0 up to the end of year (year - 1).
-            int years_passed = year - 1;
-            
-            // 1. Calculate the number of leap days up to the end of year (year - 1)
-            // Formula based on Gregorian calendar rules for years Y-1:
-            // (Y-1)/4 - (Y-1)/100 + (Y-1)/400
-            long long leap_years = years_passed / 4 - years_passed / 100 + years_passed / 400;
-        
-            // 2. Total days = 
-        ... (truncated for brevity)
-    ```
-
-    </div>

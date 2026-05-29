@@ -1,3 +1,7 @@
+---
+icon: lucide/shield-check
+---
+
 # Security Policy
 
 ---

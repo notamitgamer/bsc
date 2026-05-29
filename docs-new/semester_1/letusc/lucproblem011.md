@@ -1,8 +1,7 @@
 ---
 title: lucproblem011.c
 description: "C program source code for lucproblem011.c"
-tags:
-  - Intermediate
+icon: lucide/file-code
 ---
 
 # `lucproblem011.c`
@@ -14,19 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 12 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Intermediate (index: 4 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Recursion
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -221,123 +210,3 @@ int main()
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (lucproblem011.c):
-        
-        #include <stdio.h>
-        #include <math.h>
-        #include <stdlib.h>
-        #include <stdbool.h>
-        
-        // Function to clear the input buffer after scanf to prevent issues in the next input.
-        void clearInputBuffer()
-        {
-            int c;
-            while ((c = getchar()) != '\n' && c != EOF)
-                ;
-        }
-        
-        // Calculates the factorial of the input number.
-        void factorial(int num)
-        {
-            // Factorial is not defined for negative numbers.
-            if (num < 0)
-            {
-                printf("\nFactorial is not defined for negative numbers.");
-                return;
-            }
-            // Checks for input over 20 to prevent long long integer overflow (20! is max safe).
-            if (num > 20)
-            {
-                printf("\nFactorial of %d is too large to calculate (max safe integer factorial is 20!).", num);
-                return;
-            }
-            long long fact = 1;
-            // Calculate factorial iteratively.
-            for (int i = 1; i <= num; i++)
-            {
-                fact *= i;
-            }
-            printf("\nFactorial of %d = %lld", num, fact);
-            return;
-        }
-        
-        // Checks if the input number is a prime number.
-        void prime(int num)
-        {
-            // Handle special cases: 1 and 2.
-            if (num == 1)
-            {
-                printf("\nInput 1 is NOT a PRIME NUMBER.");
-                return;
-            }
-            else if (num == 2)
-            {
-                printf("\nInput 2 is a PRIME NUMBER. (Fact : 2 is only even prime number)");
-                return;
-            }
-            // Exclude all other even numbers.
-            if (num % 2 == 0)
-            {
-                printf("\nInput %d is NOT a PRIME NUMBER.", num);
-                return;
-            }
-            // Optimization: Only check divisors up to the square root of num.
-            int endCheckDigit = sqrt(num);
-            bool isPrime = true;
-            // Check only odd divisors (i += 2) starting from 3.
-            for (int i = 3; i <= endCheckDigit; i += 2)
-            {
-                if (num % i == 0)
-                {
-                    printf("\nInput %d is NOT a PRIME NUMBER.", num);
-                    isPrime = false;
-        ... (truncated for brevity)
-    ```
-
-    </div>

@@ -1,3 +1,7 @@
+---
+icon: lucide/component
+---
+
 !!! warning "Semester Pending"
     ## This folder is currently empty
 

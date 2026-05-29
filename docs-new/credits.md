@@ -1,6 +1,7 @@
 ---
 title: Acknowledgments
 description: "A special thanks to the platforms and tools that power the BSc Code Index."
+icon: lucide/hand-helping
 ---
 
 # Acknowledgments

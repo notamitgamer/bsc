@@ -1,8 +1,7 @@
 ---
 title: assignment-p-09.c
 description: "C program source code for assignment-p-09.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `assignment-p-09.c`
@@ -14,16 +13,8 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
-| **License**    | MIT |
-| **Difficulty** | Beginner (index: 2 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Recursion
+| **Author** | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
+| **License** | MIT |
 
 ## Actions
 
@@ -56,74 +47,3 @@ int setBit(int num, int position)
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (assignment-p-09.c):
-        
-        #include <stdio.h>
-        
-        int setBit(int, int);
-        
-        int main()
-        {
-            int num, position;
-            printf("Enter the number: ");
-            scanf("%d", &num);
-            printf("Enter the postion where you want to set the bit (0-indexed): ");
-            scanf("%d", &position);
-            printf("\nModified number= %d", setBit(num, position));
-            return 0;
-        }
-        
-        int setBit(int num, int position)
-        {
-            int mask = 1 << position;
-            return num | mask;
-        }
-    ```
-
-    </div>

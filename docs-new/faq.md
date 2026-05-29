@@ -1,3 +1,7 @@
+---
+icon: lucide/table-of-contents
+---
+
 # Frequently Asked Questions (FAQ)
 
 ---

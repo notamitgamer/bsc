@@ -1,3 +1,7 @@
+---
+icon: lucide/component
+---
+
 !!! tip "Active"
     ## SEMESTER 1: ACTIVE CONTENT
 

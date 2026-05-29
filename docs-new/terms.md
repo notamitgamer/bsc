@@ -1,3 +1,7 @@
+---
+icon: lucide/file-text
+---
+
 # Terms of Use
 These Terms govern your use of this website and all associated content, including source code, documentation, and generated materials.
 
@@ -91,8 +95,8 @@ No guarantee is made regarding accuracy or completeness.
 You agree to indemnify and hold harmless:
 
 - Amit Dutta  
-- GitHub: https://github.com/notamitgamer  
-- Portfolio: https://amit.is-a.dev  
+- GitHub: <a href="https://github.com/notamitgamer">https://github.com/notamitgamer</a>
+- Portfolio: <a href="https://amit.is-a.dev">https://amit.is-a.dev</a>
 
 from any claims, losses, liabilities, damages, or expenses (including legal fees) arising from:
 
@@ -148,7 +152,7 @@ This project exists to support learning and exploration. Use it responsibly.
 
 For any questions regarding these Terms, you may contact:
 
-- Email: amitdutta4255@gmail.com 
+- Email: <a href="mailto:amitdutta4255@gmail.com">amitdutta4255@gmail.com</a>
 - Email: <a href="mailto:mail@amit.is-a.dev">mail@amit.is-a.dev</a>
-- GitHub: https://github.com/notamitgamer  
-- Website: https://amit.is-a.dev
+- GitHub: <a href="https://github.com/notamitgamer">https://github.com/notamitgamer</a>
+- Website: <a href="https://amit.is-a.dev">https://amit.is-a.dev</a>

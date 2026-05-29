@@ -1,8 +1,7 @@
 ---
 title: assignment-s-20.c
 description: "C program source code for assignment-s-20.c"
-tags:
-  - Advanced
+icon: lucide/file-code
 ---
 
 # `assignment-s-20.c`
@@ -14,20 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 22 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Advanced (index: 7 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Pointers
-- Recursion
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 22 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -351,125 +339,3 @@ void transpose(int **matrix, int rows, int cols)
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (assignment-s-20.c):
-        
-        #include <stdio.h>
-        #include <stdlib.h>
-        
-        #define COL_MAX 10
-        #define COL_MIN 0
-        #define ROW_MAX 10
-        #define ROW_MIN 0
-        #define TRUE 1
-        #define FALSE 0
-        
-        void input(int ***, int *, int *);
-        void display(int **, int, int);
-        void clear(int **, int);
-        void sum(int **, int **, int, int);
-        void difference(int **, int **, int, int);
-        void product(int **, int **, int, int, int);
-        void transpose(int **, int, int);
-        
-        int main()
-        {
-            int **a = NULL, **b = NULL;
-            int rows_a, rows_b, cols_a, cols_b;
-            int choice;
-        
-            while (TRUE)
-            {
-                printf("\n === MENU ===\n"
-                       "1. Sum\n"
-                       "2. Difference\n"
-                       "3. Product\n"
-                       "4. Transpose\n"
-                       "0. Exit\n");
-                printf("\nEnter your choice: ");
-                scanf("%d", &choice);
-        
-                switch (choice)
-                {
-                case 1:
-                    input(&a, &rows_a, &cols_a);
-                    if (a == NULL)
-                        break;
-        
-                    input(&b, &rows_b, &cols_b);
-                    if (b == NULL)
-                    {
-                        clear(a, rows_a);
-                        a = NULL;
-                        break;
-                    }
-        
-                    printf("\nMatrix A = \n");
-                    display(a, rows_a, cols_a);
-                    printf("\nMatrix B = \n");
-                    display(b, rows_b, cols_b);
-        
-                    if (rows_a != rows_b || cols_a != cols_b)
-                    {
-                        printf("\nOrder of both matrix should be same to calculate sum.");
-                        printf("\nInput : Matrix A = [%d x %d]"
-                               "          Matrix B = [%d x %d]",
-                               rows_a, cols_a, rows_b, cols_b);
-        
-                        clear(a, rows_a);
-                        clear(b, rows_b);
-                        a = NULL;
-                        b = NULL;
-                        break;
-                    }
-                    printf("\nResult = \n");
-                    sum(a, b, row
-        ... (truncated for brevity)
-    ```
-
-    </div>

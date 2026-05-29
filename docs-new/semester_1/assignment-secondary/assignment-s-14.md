@@ -1,8 +1,7 @@
 ---
 title: assignment-s-14.c
 description: "C program source code for assignment-s-14.c"
-tags:
-  - Advanced
+icon: lucide/file-code
 ---
 
 # `assignment-s-14.c`
@@ -14,21 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 20 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Advanced (index: 6 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Array
-- Pointers
-- Iteration
-- Sorting (possible)
-- Recursion
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 20 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -304,112 +291,3 @@ void reverse(char str[])
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (assignment-s-14.c):
-        
-        #include <stdio.h>
-        #include <ctype.h>
-        #include <string.h>
-        
-        void address_char(char *);
-        void concat_manual(char[], char[]);
-        void concat_strcat(char[], char[]);
-        int string_cmp(char *, char *);
-        int string_len(char *);
-        void ltou(char[]);
-        void utol(char[]);
-        int vowel_count(char[]);
-        void reverse(char[]);
-        
-        int main()
-        {
-            char str1[100], str2[100], choice;
-            int result_cmp;
-        
-            printf("Enter first string (Max: 100 character): ");
-            fgets(str1, sizeof(str1), stdin);
-            str1[strcspn(str1, "\n")] = '\0';
-            // this will replace the enter (\n) used in the end to null
-        
-            printf("Enter second string (Max: 100 character): ");
-            fgets(str2, sizeof(str2), stdin);
-            str2[strcspn(str2, "\n")] = '\0';
-        
-            while (1)
-            {
-                printf("\n\n\n    ========== MENU ==========\n"
-                       "a. Show address of each character\n"
-                       "b. Concatenate two strings without using strcat()\n"
-                       "c. Concatenate two strings using strcat()\n"
-                       "d. Compare two strings\n"
-                       "e. Find string length using pointers\n"
-                       "f. Convert lowercase to uppercase\n"
-                       "g. Convert uppercase to lowercase\n"
-                       "h. Count number of vowels\n"
-                       "i. Reverse the string\n"
-                       "1. Change input strings\n"
-                       "0. Exit\n");
-                printf("\nEnter your choice: ");
-                scanf(" %c", &choice);
-                choice = tolower(choice);
-        
-                switch (choice)
-                {
-                case '1':
-                    while (getchar() != '\n')
-                        ;
-                    printf("Enter first string (Max: 100 character): ");
-                    fgets(str1, sizeof(str1), stdin);
-                    str1[strcspn(str1, "\n")] = '\0';
-        
-                    printf("Enter second string (Max: 100 character): ");
-                    fgets(str2, sizeof(str
-        ... (truncated for brevity)
-    ```
-
-    </div>

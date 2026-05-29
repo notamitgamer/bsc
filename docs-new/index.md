@@ -1,3 +1,7 @@
+---
+icon: lucide/house
+---
+
 # <a href="https://github.com/notamitgamer/bsc">BSc Code Index</a>
 ## BSc Computer Science Honours (WBSU)
 
@@ -7,8 +11,8 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 
 ### Quick Links
 * **GitHub Repo:** [@notamitgamer/bsc](https://github.com/notamitgamer/bsc)
-* **Web View** [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc/)
-* **Web View:** [code.amit.is-a.dev](https://code.amit.is-a.dev)
+* **Web View** [notamitgamer.github.io/bsc/](https://notamitgamer.github.io/bsc/)
+* **Web View:** [amit.is-a.dev/bsc](https://amit.is-a.dev/bsc)
 * **Live Portfolio:** [amit.is-a.dev](https://amit.is-a.dev)
 * **GitHub Profile:** [@notamitgamer](https://github.com/notamitgamer)
 
@@ -21,14 +25,14 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 
 | Semester | Status | Primary Focus |
 | :--- | :--- | :--- |
-| [**Semester 1**](./semester_1/index.md) | Active | **C Programming**, **R** |
-| [**Semester 2**](./semester_2/index.md) | Pending | Upcoming |
-| [**Semester 3**](./semester_3/index.md) | Pending | Upcoming |
-| [**Semester 4**](./semester_4/index.md) | Pending | Upcoming |
-| [**Semester 5**](./semester_5/index.md) | Pending | Upcoming |
-| [**Semester 6**](./semester_6/index.md) | Pending | Upcoming |
-| [**Semester 7**](./semester_7/index.md) | Pending | Upcoming |
-| [**Semester 8**](./semester_8/index.md) | Pending | Upcoming |
+| [**Semester 1**](./semester_1/) | Active | **C Programming**, **R** |
+| [**Semester 2**](./semester_2/) | Pending | Upcoming |
+| [**Semester 3**](./semester_3/) | Pending | Upcoming |
+| [**Semester 4**](./semester_4/) | Pending | Upcoming |
+| [**Semester 5**](./semester_5/) | Pending | Upcoming |
+| [**Semester 6**](./semester_6/) | Pending | Upcoming |
+| [**Semester 7**](./semester_7/) | Pending | Upcoming |
+| [**Semester 8**](./semester_8/) | Pending | Upcoming |
 
 ---
 

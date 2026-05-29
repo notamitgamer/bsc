@@ -1,8 +1,7 @@
 ---
 title: luc040-logic.c
 description: "C program source code for luc040-logic.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `luc040-logic.c`
@@ -14,20 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 12 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Beginner (index: 2 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Searching
-- Pointers
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -159,99 +147,3 @@ int main()
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (luc040-logic.c):
-        
-        #include <stdio.h> // Includes the standard input/output library, necessary for printf()
-        
-        // 2. CONSTANT DEFINITIONS (MACROS)
-        // These define fixed values we can easily use and change later.
-        #define LIMIT 100000 // The maximum number we want to search up to.
-        // The maximum base value (a, b, c, or d) we need to check.
-        // Since 47^3 is greater than 100,000, checking bases up to 47 covers the LIMIT.
-        #define MAX_BASE_VAL 47
-        
-        // 3. MAIN FUNCTION
-        int main()
-        {
-            // 4. VARIABLE DECLARATION
-        
-            // sum1 and sum2 store the results of a^3 + b^3 and c^3 + d^3.
-            // We use 'long long' because cubes (like 47^3) are large and can exceed
-            // the capacity of a standard 'int', preventing errors.
-            long long sum1, sum2;
-        
-            int count = 0; // Counter to keep track of how many Ramanujan numbers we find.
-        
-            // This flag is used to optimize the search. If we find the second way (c^3 + d^3)
-            // to make sum1, we set this to 1 and immediately stop the inner loops.
-            int found_match;
-        
-            // Print introductory message to the user.
-            printf("Ramanujan Number Finder (a^3 + b^3 = c^3 + d^3)\n");
-            printf("Searching up to %d (Max base value is %d)\n", LIMIT, MAX_BASE_VAL);
-            printf("---------------------------------------------------\n");
-        
-            // 5. OUTER LOOPS: Establishing the FIRST SUM (a^3 + b^3 = sum1)
-        
-            // Loop for 'a' (the smaller base of the first pair)
-            for (int a = 1; a <= MAX_BASE_VAL; a++)
-            {
-        
-                // Loop for 'b' (the larger base of the first pair)
-                // We start 'b' at 'a + 1' to enforce the rule a < b.
-                // This prevents us from checking redundant pairs like (1, 12) and (12, 1).
-                for (int b = a + 1; b <= MAX_BASE_VAL; b++)
-                {
-        
-                    // Calculate the first sum: sum1 = a^3 + b^3
-                    // (long long) is a cast to ensu
-        ... (truncated for brevity)
-    ```
-
-    </div>

@@ -1,8 +1,7 @@
 ---
 title: P050-SHORT.c
 description: "C program source code for P050-SHORT.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `P050-SHORT.c`
@@ -14,17 +13,8 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
-| **License**    | MIT |
-| **Difficulty** | Beginner (index: 1 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Recursion
-- Iteration
+| **Author** | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
+| **License** | MIT |
 
 ## Actions
 
@@ -60,77 +50,3 @@ int main()
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (P050-SHORT.c):
-        
-        #include <stdio.h>
-        #include <math.h>
-        
-        int main()
-        {
-            int num;
-            printf("Enter the number : ");
-            scanf("%d", &num);
-            int position = printf("%d", num);
-            int temp = num;
-            int res = 0;
-            while (temp > 0)
-            {
-                res += (int)pow(temp % 10, position);
-                position--;
-                temp /= 10;
-            }
-            if (res == num)
-                printf(" is a Disarium Number.");
-            else
-                printf(" is Not a Disarium Number.");
-            return 0;
-        }
-    ```
-
-    </div>

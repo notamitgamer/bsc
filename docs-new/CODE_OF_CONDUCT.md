@@ -1,3 +1,7 @@
+---
+icon: lucide/handshake
+---
+
 # Code of Conduct
 
 ## Our Pledge

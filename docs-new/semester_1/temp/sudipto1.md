@@ -1,8 +1,7 @@
 ---
 title: sudipto1.c
 description: "C program source code for sudipto1.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `sudipto1.c`
@@ -14,19 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 12 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Beginner (index: 3 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Pointers
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 12 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -157,95 +146,3 @@ int main()
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (sudipto1.c):
-        
-        #include <stdio.h>
-        int main()
-        {
-        
-           // variables to hold the state of a sensor (0 or 1)
-           int doorSensorState, windowSensorState, motionSensorState, glassbreakSensorState;
-        
-           // variable to check the combined state of all four sensor
-           int combinedState = 0;
-        
-           // a invalid flag to check the input are valid or not
-           unsigned int invalidFlag;
-        
-           // printing the way to usage the program
-           printf("------ Home Security Controller ------\n");
-           printf("Enter sensor states (1 for active, 0 for inactive).\n");
-           printf("Format: [Door] [Window] [Motion] [Glass Break]\n");
-           printf("Example: 0 1 1 0\n");
-           printf("Enter states (or press Ctrl+D for MacOS or Linux / Ctrl+Z for Windows to exit): ");
-        
-           // doing the main calculation
-           // chacking the combined state and taking a decision
-           while (scanf("%d %d %d %d", &doorSensorState, &windowSensorState, &motionSensorState, &glassbreakSensorState) == 4)
-           {
-              // validating input
-              // The expression (variable & ~1) results in 0 only if 'variable' is 0 or 1.
-              // For any other positive number, it's non-zero.
-              // We combine all checks with a bitwise OR. If any sensor state is invalid,
-              // the flag will become non-zero.
-              invalidFlag = (doorSensorState & ~1) | (windowSensorState & ~1) | (motionSensorState & ~1) | (glassbreakSensorState & ~1);
-        
-              // Combine the four sensor states into a single integer using bitwise operations.
-              // This creates a unique number from 0 to 15 for each possible combination.
-              // Bit 0: Door Sensor
-              // Bit 1: Window Sensor
-              // Bit 2: Motion Sensor
-              // Bit 3: Glass Break Sensor
-              combinedState = (glassbreakSensorState << 3) | (motionSensorState << 2) | (windowSensorState << 1) | doorSensorState;
-        
-              // If the invalid_input_flag is non-ze
-        ... (truncated for brevity)
-    ```
-
-    </div>

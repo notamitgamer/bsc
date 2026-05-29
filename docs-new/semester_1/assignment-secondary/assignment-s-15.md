@@ -1,8 +1,7 @@
 ---
 title: assignment-s-15.c
 description: "C program source code for assignment-s-15.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `assignment-s-15.c`
@@ -14,20 +13,9 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta <amitdutta4255@gmail.com> |
-| **Date**       | 21 Dec 2025 |
-| **License**    | MIT License (See the LICENSE file for details) |
-| **Difficulty** | Beginner (index: 3 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Pointers
-- Recursion
-- Array
-- Iteration
+| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| **Date** | 21 Dec 2025 |
+| **License** | MIT License (See the LICENSE file for details) |
 
 ## Actions
 
@@ -87,101 +75,3 @@ void merge(int a[], int n1, int b[], int n2)
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (assignment-s-15.c):
-        
-        #include <stdio.h>
-        #include <stdlib.h>
-        
-        void merge(int[], int, int[], int);
-        
-        int main()
-        {
-            int a[] = {10, 30, 50, 70, 90};
-            int b[] = {20, 40, 60, 80, 100};
-            int n1 = sizeof(a) / sizeof(a[0]);
-            int n2 = sizeof(b) / sizeof(b[0]);
-            merge(a, n1, b, n2);
-            return 0;
-        }
-        
-        void merge(int a[], int n1, int b[], int n2)
-        {
-            int n = n1 + n2;
-            int *c = (int *)malloc(n * sizeof(int));
-            int i, j, k;
-            i = j = k = 0;
-            while (i < n1 && j < n2)
-            {
-                if (a[i] < b[j])
-                {
-                    c[k++] = a[i++];
-                }
-                else
-                {
-                    c[k++] = b[j++];
-                }
-            }
-            while (i < n1)
-            {
-                c[k++] = a[i++];
-            }
-            while (j < n2)
-            {
-                c[k++] = b[j++];
-            }
-            printf("Merged Array:");
-            for (i = 0; i < n; i++)
-            {
-                printf("  %d", c[i]);
-            }
-            free(c);
-        }
-    ```
-
-    </div>

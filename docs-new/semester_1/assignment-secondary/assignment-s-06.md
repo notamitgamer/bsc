@@ -1,8 +1,7 @@
 ---
 title: assignment-s-06.c
 description: "C program source code for assignment-s-06.c"
-tags:
-  - Beginner
+icon: lucide/file-code
 ---
 
 # `assignment-s-06.c`
@@ -14,18 +13,8 @@ tags:
 ## Metadata
 | Property | Detail |
 |---|---|
-| **Author**     | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
-| **License**    | MIT |
-| **Difficulty** | Beginner (index: 2 / 10) |
-
-## Concepts
-
-!!! warning "Beta Feature"
-    This concept detection system is still in beta and may occasionally show incorrect or incomplete results.
-
-- Recursion
-- Sorting (possible)
-- Iteration
+| **Author** | Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025 |
+| **License** | MIT |
 
 ## Actions
 
@@ -72,88 +61,3 @@ void display_factors(int num) {
 }
 ```
 </div>
-
-## Explanation
-
-??? info "Explain with AI"
-
-    Copy the prompt below and paste it into any AI assistant.
-
-    <div data-search-exclude="true">
-
-    ```text
-        You are explaining a C programming code to a beginner.
-        
-        STRICT RULES:
-        
-        - Only use the given code. Do NOT assume anything not present.
-        
-        - Do NOT add extra examples.
-        
-        - Keep explanation clear and short.
-        
-        - If something is unclear, say "Not clear from code".
-        
-        - Follow the exact format below. Do NOT change headings.
-        
-        FORMAT:
-        
-        [START]
-        
-        ## What it does
-        
-        (Explain the overall purpose in 1-2 sentences)
-        
-        ## Step-by-step
-        
-        (Explain how the code works in steps, simple language)
-        
-        ## Key Concepts
-        
-        (List concepts like loop, condition, function, etc.)
-        
-        ## Notes
-        
-        (Mention any limitations, errors, or assumptions)
-        
-        [END]
-        
-        CODE (assignment-s-06.c):
-        
-        #include <stdio.h>
-        #include <stdlib.h>
-        
-        void display_factors(int);
-        
-        int main()
-        {
-            int num, i;
-            printf("Please enter the number to get the factors from it : ");
-            scanf("%d", &num);
-            display_factors(num);
-            return 0;
-        }
-        
-        void display_factors(int num) {
-            int temp = abs(num);
-            int i;
-        
-            if (temp == 0)
-            {
-                printf("\n0 has infinitely many factors (all integers).");
-                exit(1);
-            }
-        
-            printf("\nThe factors of ' %d ' is :- ", num);
-            printf("\nPositive : ");
-            for (i = 1; i <= temp; i++)
-                if (temp % i == 0)
-                    printf("  %d", i);
-            printf("\nNegative : ");
-            for (i = 1; i <= temp; i++)
-                if (temp % i == 0)
-                    printf("  %d", -i);
-        }
-    ```
-
-    </div>

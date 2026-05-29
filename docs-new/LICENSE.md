@@ -1,3 +1,7 @@
+---
+icon: lucide/scale
+---
+
 MIT License
 
 Copyright (c) 2025-2026 AMIT DUTTA

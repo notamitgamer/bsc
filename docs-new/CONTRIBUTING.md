@@ -1,3 +1,7 @@
+---
+icon: lucide/users
+---
+
 # Contributing to bsc
 
 Thank you for your interest in improving this repository! Now that this project is licensed under the **MIT License**, I welcome community contributions, bug reports, and optimizations.
