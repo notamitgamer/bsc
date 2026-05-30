@@ -1,7 +1,0 @@
-nav:
-  - Home: index.md
-  - ...
-
-ignore:
-  - overrides
-  - stylesheets 

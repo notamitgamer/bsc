@@ -5,40 +5,167 @@
 {% endblock %}
 
 {% block content %}
-  <!-- Custom UI Dropdown Container -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <!-- ── Desktop dropdown ── -->
   <div class="custom-dropdown" id="quickActionsDropdown">
-    <button class="custom-dropdown-btn" onclick="toggleDropdown(event)">Quick Actions</button>
-    <div class="custom-dropdown-content">
-      <a href="/">Home</a>
-      <a href="https://github.com/notamitgamer/bsc/issues/new" target="_blank">Report a Bug</a>
-      <a href="https://github.com/notamitgamer/bsc/pulls" target="_blank">Submit a PR / Fix Code</a>
-      <a href="https://github.com/notamitgamer/bsc" target="_blank">View Repository</a>
-      
-      <div class="dropdown-divider"></div> <!-- Clean visual line -->
-      
-      <a href="https://amit.is-a.dev" target="_blank">Developer Portfolio</a>
-      <a href="https://github.com/notamitgamer" target="_blank">GitHub Profile</a>
+    <button class="custom-dropdown-btn" id="ddBtn" aria-haspopup="true" aria-expanded="false" onclick="toggleDropdown(event)">
+      <span class="ti ti-bolt" aria-hidden="true"></span>
+      Quick actions
+      <span class="ti ti-chevron-right chevron" aria-hidden="true"></span>
+    </button>
+    <div class="custom-dropdown-content" role="menu">
+      <a href="/" role="menuitem">
+        <span class="ti ti-home item-icon" aria-hidden="true"></span>
+        <span class="item-label">Home</span>
+      </a>
+      <a href="/tags/" role="menuitem" onclick="focusSearch(event)">
+        <span class="ti ti-search item-icon" aria-hidden="true"></span>
+        <span class="item-label">Search</span>
+      </a>
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-section-label">Repository</div>
+      <a href="https://github.com/notamitgamer/bsc" target="_blank" rel="noopener" role="menuitem">
+        <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
+        <span class="item-label">View repository</span>
+      </a>
+      <a href="https://github.com/notamitgamer/bsc/pulls" target="_blank" rel="noopener" role="menuitem">
+        <span class="ti ti-git-pull-request item-icon" aria-hidden="true"></span>
+        <span class="item-label">Submit a PR</span>
+      </a>
+      <a href="https://github.com/notamitgamer/bsc/issues/new" target="_blank" rel="noopener" role="menuitem">
+        <span class="ti ti-bug item-icon" aria-hidden="true"></span>
+        <span class="item-label">Report a bug</span>
+        <span class="item-badge">Issues</span>
+      </a>
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-section-label">Developer</div>
+      <a href="https://amit.is-a.dev" target="_blank" rel="noopener" role="menuitem">
+        <span class="ti ti-briefcase item-icon" aria-hidden="true"></span>
+        <span class="item-label">Portfolio</span>
+      </a>
+      <a href="https://github.com/notamitgamer" target="_blank" rel="noopener" role="menuitem">
+        <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
+        <span class="item-label">GitHub profile</span>
+      </a>
     </div>
   </div>
 
+  <!-- ── Mobile bottom sheet ── -->
+  <div class="dd-backdrop" id="ddBackdrop" onclick="closeSheet()"></div>
+  <div class="dd-sheet" id="ddSheet" role="dialog" aria-modal="true" aria-label="Quick actions">
+    <div class="dd-sheet-handle"></div>
+    <div class="dd-sheet-title">
+      <span class="ti ti-bolt" aria-hidden="true"></span>
+      Quick actions
+    </div>
+    <a href="/" onclick="closeSheet()">
+      <span class="ti ti-home item-icon" aria-hidden="true"></span>
+      <span class="item-label">Home</span>
+    </a>
+    <a href="/terms" onclick="closeSheet()">
+      <span class="ti ti-file-text item-icon" aria-hidden="true"></span>
+      <span class="item-label">terms</span>
+    </a>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-section-label">Repository</div>
+    <a href="https://github.com/notamitgamer/bsc" target="_blank" rel="noopener" onclick="closeSheet()">
+      <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
+      <span class="item-label">View repository</span>
+    </a>
+    <a href="https://github.com/notamitgamer/bsc/pulls" target="_blank" rel="noopener" onclick="closeSheet()">
+      <span class="ti ti-git-pull-request item-icon" aria-hidden="true"></span>
+      <span class="item-label">Submit a PR</span>
+    </a>
+    <a href="https://github.com/notamitgamer/bsc/issues/new" target="_blank" rel="noopener" onclick="closeSheet()">
+      <span class="ti ti-bug item-icon" aria-hidden="true"></span>
+      <span class="item-label">Report a bug</span>
+      <span class="item-badge">Issues</span>
+    </a>
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-section-label">Developer</div>
+    <a href="https://amit.is-a.dev" target="_blank" rel="noopener" onclick="closeSheet()">
+      <span class="ti ti-briefcase item-icon" aria-hidden="true"></span>
+      <span class="item-label">Portfolio</span>
+    </a>
+    <a href="https://github.com/notamitgamer" target="_blank" rel="noopener" onclick="closeSheet()">
+      <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
+      <span class="item-label">GitHub profile</span>
+    </a>
+  </div>
+
   <script>
-    // Toggle the dropdown when clicking the button
     function toggleDropdown(event) {
-      event.stopPropagation(); // Prevent the document click listener from firing instantly
-      document.getElementById('quickActionsDropdown').classList.toggle('open');
+      event.stopPropagation();
+      var dd = document.getElementById('quickActionsDropdown');
+      var isOpen = dd.classList.toggle('open');
+      document.getElementById('ddBtn').setAttribute('aria-expanded', isOpen);
+      if (window.innerWidth < 768) {
+        if (isOpen) { openSheet(); } else { closeSheet(); }
+      }
     }
 
-    // Close the dropdown if the user clicks anywhere outside of it
-    // The "if" statement ensures we don't break MkDocs navigation.instant by piling up listeners
+    function openSheet() {
+      var backdrop = document.getElementById('ddBackdrop');
+      var sheet    = document.getElementById('ddSheet');
+      backdrop.style.display = 'block';
+      sheet.style.display    = 'block';
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(function() {
+        backdrop.classList.add('visible');
+        sheet.classList.add('visible');
+      });
+    }
+
+    function closeSheet() {
+      var backdrop = document.getElementById('ddBackdrop');
+      var sheet    = document.getElementById('ddSheet');
+      var dd       = document.getElementById('quickActionsDropdown');
+      var btn      = document.getElementById('ddBtn');
+      backdrop.classList.remove('visible');
+      sheet.classList.remove('visible');
+      dd.classList.remove('open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      setTimeout(function() {
+        backdrop.style.display = 'none';
+        sheet.style.display    = 'none';
+      }, 300);
+    }
+
+    function focusSearch(event) {
+      event.preventDefault();
+      var input = document.querySelector('.md-search__input');
+      if (input) {
+        input.focus();
+        // Close dropdown too
+        document.getElementById('quickActionsDropdown').classList.remove('open');
+        document.getElementById('ddBtn').setAttribute('aria-expanded', 'false');
+      }
+    }
+
     if (!window.dropdownListenerAdded) {
       document.addEventListener('click', function(event) {
-        var dropdowns = document.querySelectorAll('.custom-dropdown');
-        dropdowns.forEach(function(dropdown) {
-          if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('open');
-          }
-        });
+        var dd  = document.getElementById('quickActionsDropdown');
+        var btn = document.getElementById('ddBtn');
+        if (dd && !dd.contains(event.target)) {
+          dd.classList.remove('open');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
       });
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          var dd  = document.getElementById('quickActionsDropdown');
+          var btn = document.getElementById('ddBtn');
+          if (dd && dd.classList.contains('open')) {
+            dd.classList.remove('open');
+            if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+          }
+          closeSheet();
+        }
+      });
+
       window.dropdownListenerAdded = true;
     }
   </script>

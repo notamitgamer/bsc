@@ -9,7 +9,7 @@ icon: lucide/component
 
     **Current Activity:**
 
-    - See active work in [**Semester 1**](https://github.com/notamitgamer/bsc/tree/main/Semester_1)
+    - See active work in [**Semester 1**](https://github.com/notamitgamer/bsc/tree/main/semester_1)
     - Real-time updates as the academic session progresses.
 
     **Explore More:**

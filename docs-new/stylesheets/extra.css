@@ -1,98 +1,258 @@
 /* =========================================
-   CUSTOM DROPDOWN UI
+   QUICK ACTIONS DROPDOWN
 ========================================= */
 
-/* The outer container */
 .custom-dropdown {
     position: relative;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1.5rem;
-    outline: none; /* Removes the blue outline when clicked */
 }
 
-/* The visible button */
 .custom-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background-color: var(--md-default-bg-color);
     color: var(--md-default-fg-color);
     border: 1px solid var(--md-default-fg-color--light);
-    padding: 0.4rem 0.8rem; /* Reduced padding here for a smaller button */
+    padding: 0.45rem 1rem;
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.85rem;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-/* Add the dropdown arrow automatically via CSS */
-.custom-dropdown-btn::after {
-    content: "▼";
-    font-size: 0.9em;
-    margin-left: 8px;
-    opacity: 0.7; 
-    transition: transform 0.2s ease; /* Smooth rotation */
-    display: inline-block; /* Required for the rotation transform to work */
+.custom-dropdown-btn .chevron {
+    font-size: 14px;
+    opacity: 0.6;
+    transition: transform 0.25s ease;
+    display: inline-block;
 }
 
-/* Button Hover State */
 .custom-dropdown-btn:hover {
     border-color: var(--md-primary-fg-color);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: var(--md-default-bg-color--light);
 }
 
-/* The hidden menu box */
+.custom-dropdown.open .custom-dropdown-btn {
+    border-color: var(--md-primary-fg-color);
+}
+
+.custom-dropdown.open .custom-dropdown-btn .chevron {
+    transform: rotate(90deg);
+}
+
+/* ---- Animated menu box (desktop) ---- */
 .custom-dropdown-content {
-    display: none; /* Hidden by default */
     position: absolute;
-    top: 100%;
+    top: calc(100% + 6px);
     right: 0;
-    margin-top: 0.4rem;
+    min-width: 220px;
     background-color: var(--md-default-bg-color);
-    min-width: 190px; /* Reduced from 240px to make the box narrower */
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
     border: 1px solid var(--md-default-fg-color--light);
-    z-index: 100;
-    overflow: hidden;
-}
-
-/* Show the menu ONLY when clicked (managed by JS class) */
-.custom-dropdown.open .custom-dropdown-content {
-    display: flex;
+    border-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+    z-index: 200;
     flex-direction: column;
+
+    /* Animation: hidden state */
+    display: flex;
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+    transform-origin: top right;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Rotate the arrow upwards when the menu is open */
-.custom-dropdown.open .custom-dropdown-btn::after {
-    transform: rotate(180deg); /* Point up when open */
+.custom-dropdown.open .custom-dropdown-content {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
 }
 
-/* Style the individual links */
+/* Section labels */
+.dropdown-section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--md-default-fg-color--light);
+    padding: 6px 10px 2px;
+}
+
+/* Individual items */
 .custom-dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
     color: var(--md-default-fg-color);
-    padding: 0.5rem 0.8rem; /* Reduced padding to make the menu items vertically tighter */
     text-decoration: none;
-    font-size: 0.8rem; /* Slightly smaller text size */
-    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 0.82rem;
+    transition: background-color 0.12s ease;
 }
 
-/* Hover effect for the links inside the menu */
-.custom-dropdown-content a:hover,
-.custom-dropdown-content a:focus {
-    background-color: var(--md-primary-fg-color);
-    color: var(--md-primary-bg-color);
-    outline: none;
+.custom-dropdown-content a .item-icon {
+    font-size: 16px;
+    opacity: 0.5;
+    flex-shrink: 0;
+    transition: opacity 0.12s ease;
 }
 
-/* The visual separator line */
+.custom-dropdown-content a .item-label {
+    flex: 1;
+}
+
+.custom-dropdown-content a .item-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: var(--md-primary-fg-color--light);
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+}
+
+.custom-dropdown-content a:hover {
+    background-color: var(--md-default-fg-color--lightest, rgba(0,0,0,0.06));
+    color: var(--md-default-fg-color);
+}
+
+.custom-dropdown-content a:hover .item-icon {
+    opacity: 1;
+}
+
+/* Divider */
 .dropdown-divider {
     height: 1px;
     background-color: var(--md-default-fg-color--light);
-    margin: 0.2rem 0;
+    margin: 4px 0;
+    opacity: 0.25;
+}
+
+/* =========================================
+   BOTTOM SHEET (mobile only)
+========================================= */
+
+/* Backdrop */
+.dd-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 300;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.dd-backdrop.visible {
+    opacity: 1;
+}
+
+/* Sheet panel */
+.dd-sheet {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--md-default-bg-color);
+    border-radius: 16px 16px 0 0;
+    padding: 0 0 env(safe-area-inset-bottom, 12px);
+    z-index: 301;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.dd-sheet.visible {
+    transform: translateY(0);
+}
+
+/* Sheet drag handle */
+.dd-sheet-handle {
+    width: 36px;
+    height: 4px;
+    background-color: var(--md-default-fg-color--light);
+    border-radius: 2px;
+    margin: 10px auto 4px;
     opacity: 0.4;
+}
+
+/* Sheet title row */
+.dd-sheet-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--md-default-fg-color);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest, rgba(0,0,0,0.08));
+    margin-bottom: 4px;
+}
+
+/* Sheet section labels */
+.dd-sheet .dropdown-section-label {
+    padding: 8px 16px 2px;
+    font-size: 10px;
+}
+
+/* Sheet items */
+.dd-sheet a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--md-default-fg-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.12s ease;
+}
+
+.dd-sheet a .item-icon {
+    font-size: 18px;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+.dd-sheet a .item-label {
+    flex: 1;
+}
+
+.dd-sheet a .item-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background-color: var(--md-primary-fg-color--light);
+    color: var(--md-primary-fg-color);
+    font-weight: 600;
+}
+
+.dd-sheet a:hover,
+.dd-sheet a:active {
+    background-color: var(--md-default-fg-color--lightest, rgba(0,0,0,0.06));
+}
+
+.dd-sheet .dropdown-divider {
+    margin: 4px 16px;
+}
+
+/* Show/hide based on screen width */
+@media (max-width: 767px) {
+    .custom-dropdown-content { display: none !important; }
+    .dd-backdrop,
+    .dd-sheet { display: block; }
+}
+
+@media (min-width: 768px) {
+    .dd-backdrop,
+    .dd-sheet { display: none !important; }
 }
 
 /* =========================================
@@ -111,4 +271,12 @@
 
 * {
     -webkit-tap-highlight-color: transparent;
+}
+
+
+.action-buttons-mobile { display: none; }
+
+@media (max-width: 767px) {
+    .action-buttons-desktop { display: none; }
+    .action-buttons-mobile  { display: block; }
 }
