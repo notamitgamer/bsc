@@ -5,9 +5,9 @@ import re
 # Configuration
 # ---------------------------------------------------------------------------
 
-FILES_LIST   = r"G:\bsc\list.txt"
-BSC_ROOT     = r"G:\bsc"
-DOCS_OUTPUT  = r"G:\bsc\docs-new"
+FILES_LIST   = "list.txt"
+BSC_ROOT     = "."
+DOCS_OUTPUT  = "docs-new"
 RAW_BASE_URL = "https://raw.usercontent.amit.is-a.dev"
 
 # Exact paths to the index.md files that should never be updated/overwritten.
