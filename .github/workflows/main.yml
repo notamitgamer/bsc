@@ -40,7 +40,9 @@ jobs:
         run: zensical build
 
       - name: Rename 'site' to 'docs'
-        run: mv site docs
+        run: |
+          mv site docs
+          echo "code.amit.is-a.dev" > docs/CNAME
 
       - name: Commit and Push changes
         run: |
