@@ -46,12 +46,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add docs/
           
-          if ! git diff-index --quiet HEAD; then
+          git add docs/ docs-new/
+          
+          if ! git diff --cached --quiet; then
             git commit -m "chore: auto-generate GitHub Pages docs"
-            
+
             git pull --rebase origin main
             
             git push
