@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-    # Crucial: This prevents an infinite loop when the bot pushes the new docs folder
     paths-ignore:
       - 'docs/**' 
-  workflow_dispatch: # Allows you to run this manually from the Actions tab
+  workflow_dispatch: 
 
-# Grants the action permission to push commits back to the repo
 permissions:
   contents: write
 
@@ -30,9 +28,10 @@ jobs:
           pip install zensical
           pip install mkdocs-awesome-pages-plugin
 
-      # Uncomment the next two lines if your Python script needs to run BEFORE Zensical builds
-      # - name: Run Python Generator Script
-      #   run: python md.py 
+      - name: Run Python Generator Scripts
+        run: |
+          python list.py
+          python md.py
 
       - name: Delete old docs folder
         run: rm -rf docs
@@ -45,14 +44,11 @@ jobs:
 
       - name: Commit and Push changes
         run: |
-          # Set up the bot's git identity
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # Stage the new docs folder
           git add docs/
-          
-          # Only commit and push if there are actual changes
+
           if ! git diff-index --quiet HEAD; then
             git commit -m "chore: auto-generate GitHub Pages docs"
             git push

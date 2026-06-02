@@ -1,0 +1,41 @@
+1. Write a program to print the sum and product of digits of an integer.
+2. Write a program to reverse a non-negative integer.
+3. Write a program to compute the sum of the first n terms of: S = 1 - 2 + 3 - 4 + 5…
+4. Write a function to find whether a given number is prime or not. Use it to generate prime numbers less than 100.
+5. Write a function that checks whether a given string is a Palindrome or not.
+6. Write a program to compute the factors of a given number.
+7. Write a program to swap two numbers using a macro.
+8. Write a program to print a triangle of stars (take number of lines from user).
+9. Write a program to perform the following actions on a user-entered array:
+   - Print even-valued elements
+   - Print odd-valued elements
+   - Calculate sum and average
+   - Print maximum and minimum element
+   - Remove duplicates
+   - Print array in reverse order
+10. Write a program that prints a table of occurrences of each alphabet in text entered as command line arguments.
+11. Write a program that swaps two numbers using pointers.
+12. Write a program where a function passes the address of two variables and alters their contents.
+13. Write a program that takes the radius of a circle as input, passes it to a function that computes area and circumference, and displays the values from main().
+14. Write a program to find the sum of n elements entered by the user using dynamic memory allocation (malloc/calloc or new).
+15. Write a menu-driven program to perform the following string operations:
+    - Show address of each character
+    - Concatenate two strings without strcat
+    - Concatenate two strings using strcat
+    - Compare two strings
+    - Calculate length using pointers
+    - Convert to uppercase
+    - Convert to lowercase
+    - Count vowels
+    - Reverse the string
+16. Given two ordered arrays of integers, write a program to merge them into an ordered array.
+17. Write a program to display Fibonacci series (i) using recursion, (ii) using iteration.
+18. Write a program to calculate Factorial (i) using recursion, (ii) using iteration.
+19. Write a program to calculate GCD of two numbers (i) with recursion, (ii) without recursion.
+20. Write a menu-driven program for Matrix operations: a) Sum b) Difference c) Product d) Transpose.
+21. Copy contents of one text file to another after removing all whitespaces.
+22. Write a function that reverses elements of an array in place, accepting only one pointer value and returning void.
+23. Write a program that reads 10 integers into an array (implemented using pointers) and prints elements in ascending and descending order.
+24. Add two distances in a meter-kilometer system using structures.
+25. Add two complex numbers using structures.
+26. Calculate the difference between two time periods using structures.
