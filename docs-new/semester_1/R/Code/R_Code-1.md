@@ -20,8 +20,8 @@ icon: lucide/file-code
 ## Actions
 
 <div class="action-buttons-desktop">
-<a href="https://raw.usercontent.amit.is-a.dev/semester_1/r/code/R_Code-1.r" class="md-button" target="_blank" rel="noopener">Raw</a>
-<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/r/code/R_Code-1.r" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
+<a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Code-1.r" class="md-button" target="_blank" rel="noopener">Raw</a>
+<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Code-1.r" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
 <button class="md-button" type="button" onclick="copyPageUrl()">Copy URL</button>
 </div>
 
@@ -35,11 +35,11 @@ icon: lucide/file-code
 <div class="dd-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-label="Actions">
   <div class="dd-sheet-handle"></div>
   <div class="dd-sheet-title"><span class="ti ti-bolt" aria-hidden="true"></span> Actions</div>
-  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/r/code/R_Code-1.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
+  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Code-1.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
     <span class="ti ti-file-code item-icon" aria-hidden="true"></span>
     <span class="item-label">Raw</span>
   </a>
-  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/r/code/R_Code-1.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
+  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Code-1.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
     <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
     <span class="item-label">View on GitHub</span>
   </a>

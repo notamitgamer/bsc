@@ -1,27 +1,16 @@
 ---
-title: R_Prac-5.r
-description: "R program source code for R_Prac-5.r"
+title: external_1.c
+description: "C program source code for external_1.c"
 icon: lucide/file-code
 ---
 
-# `R_Prac-5.r`
-
-
-!!! abstract "Problem Statement"
-    Program to count the number of even numbers stored inside a vector of numbers.
-
-## Metadata
-| Property | Detail |
-|---|---|
-| **Author** | Amit Dutta (amitdutta4255@gmail.com) |
-| **Date** | 25 Mar 2026 |
-| **License** | MIT |
+# `external_1.c`
 
 ## Actions
 
 <div class="action-buttons-desktop">
-<a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Prac-5.r" class="md-button" target="_blank" rel="noopener">Raw</a>
-<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Prac-5.r" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
+<a href="https://raw.usercontent.amit.is-a.dev/semester_1/practice-c/external_1.c" class="md-button" target="_blank" rel="noopener">Raw</a>
+<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/practice-c/external_1.c" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
 <button class="md-button" type="button" onclick="copyPageUrl()">Copy URL</button>
 </div>
 
@@ -35,11 +24,11 @@ icon: lucide/file-code
 <div class="dd-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-label="Actions">
   <div class="dd-sheet-handle"></div>
   <div class="dd-sheet-title"><span class="ti ti-bolt" aria-hidden="true"></span> Actions</div>
-  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Prac-5.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
+  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/practice-c/external_1.c" target="_blank" rel="noopener" onclick="closeActionSheet()">
     <span class="ti ti-file-code item-icon" aria-hidden="true"></span>
     <span class="item-label">Raw</span>
   </a>
-  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Prac-5.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
+  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/practice-c/external_1.c" target="_blank" rel="noopener" onclick="closeActionSheet()">
     <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
     <span class="item-label">View on GitHub</span>
   </a>
@@ -59,21 +48,37 @@ function copyAndClose(){closeActionSheet();setTimeout(function(){copyPageUrl();}
 
 ## Source Code
 <div data-search-exclude="true">
-```r
-# Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 25 Mar 2026
-# Repo: https://github.com/notamitgamer/bsc
-# License: MIT
+```c
+#include<stdio.h>
 
-# Program to count the number of even numbers stored inside a vector of numbers.
+int sum(int);
+int product(int);
 
-print("Enter your numbers: ")
-nums <- as.integer(scan())
-count = 0
-for(i in nums)  {
-    if(i %% 2 == 0) {
-        count = count + 1
-    }
+int main() {
+	int num;
+	printf("Enter a positive integer: ");
+	scanf("%d", &num);
+	printf("\nSum of the integer is %d", sum(num));
+	printf("\nProduct of the integer is %d", product(num));
+	return 0;
 }
-print(paste("Even Count=", count))
+
+int sum(int num) {
+	int s = 0;
+	while (num != 0) {
+		s += num % 10;
+		num = num / 10;
+	}
+	return s;
+}
+
+int product(int num) {
+	int pro = 1;
+	while(num != 0) {
+		pro *= num % 10;
+		num /= 10;
+	}
+	return pro;
+}
 ```
 </div>
