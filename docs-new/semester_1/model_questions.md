@@ -7,11 +7,11 @@ icon: lucide/file-badge
 
 ---
 
-!!! info "How to use this file"
-    Questions are grouped **unit-wise** matching the WBSU NEP syllabus.
-    If you can answer each descriptive question fully, all short/MCQ variants on that topic are automatically covered.
-    Attempt at least **2 questions from each unit** before your exam.
-
+::: info How to use this file
+Questions are grouped **unit-wise** matching the WBSU NEP syllabus.
+If you can answer each descriptive question fully, all short/MCQ variants on that topic are automatically covered.
+Attempt at least **2 questions from each unit** before your exam.
+:::
 ---
 
 ## Unit 1 — Overview of C
@@ -311,11 +311,12 @@ Explain each section of your program.
 
 ---
 
-!!! tip "Exam Strategy"
-    - **5-mark questions**: Answer Q1–Q80 type (pick any sub-part)
-    - **10-mark questions**: Answer Q91–Q100 type (write full essay with programs)
-    - **Lab Viva**: Know programs from Q41, Q43, Q44, Q51, Q63, Q69 thoroughly
-    - Always write programs with proper `#include`, `main()`, and sample output
-
-!!! note "Key Programs to Memorise"
-    Fibonacci (iterative + recursive) · Factorial · GCD · Prime check · Palindrome · Matrix multiplication · Bubble sort · Dynamic array · File copy · Linked list node (struct + malloc)
+::: tip Exam Strategy
+- **5-mark questions**: Answer Q1–Q80 type (pick any sub-part)
+- **10-mark questions**: Answer Q91–Q100 type (write full essay with programs)
+- **Lab Viva**: Know programs from Q41, Q43, Q44, Q51, Q63, Q69 thoroughly
+- Always write programs with proper `#include`, `main()`, and sample output
+:::
+::: info Key Programs to Memorise
+Fibonacci (iterative + recursive) · Factorial · GCD · Prime check · Palindrome · Matrix multiplication · Bubble sort · Dynamic array · File copy · Linked list node (struct + malloc)
+:::

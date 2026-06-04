@@ -1,44 +1,34 @@
 import os
 import re
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
-
 FILES_LIST   = "list.txt"
 BSC_ROOT     = "."
 DOCS_OUTPUT  = "docs-new"
 RAW_BASE_URL = "https://raw.usercontent.amit.is-a.dev"
 
-# Exact paths to the index.md files that should never be updated/overwritten.
-# os.path.normpath ensures the paths perfectly match standard Windows path formatting.
+# Protected paths that should never be overwritten
 PROTECTED_INDEX_FILES = {
-    os.path.normpath(os.path.join(DOCS_OUTPUT, f"semester_{i}", "index.md")) 
+    os.path.normpath(os.path.join(DOCS_OUTPUT, f"semester_{i}", "index.md"))
     for i in range(1, 9)
 }
-# Also protect the main root index.md
 PROTECTED_INDEX_FILES.add(os.path.normpath(os.path.join(DOCS_OUTPUT, "index.md")))
 
-# Folders to completely ignore during index generation
-IGNORED_FOLDERS = {"stylesheets", "overrides", "assets"}
+# Directories excluded from index generation
+IGNORED_FOLDERS = {"stylesheets", "overrides", "assets", ".vitepress", "node_modules"}
 
-
-# ---------------------------------------------------------------------------
-# Code stripping — remove strings and comments before keyword scanning
-# ---------------------------------------------------------------------------
-
-def strip_c(code: str) -> str:
-    """Remove block comments, line comments, and string/char literals from C code."""
-    code = re.sub(r'/\*.*?\*/', ' ', code, flags=re.DOTALL)
-    code = re.sub(r'//[^\n]*', ' ', code)
-    code = re.sub(r'"(?:[^"\\]|\\.)*"', '""', code)
-    code = re.sub(r"'(?:[^'\\]|\\.)*'", "''", code)
-    return code
-
-
-# ---------------------------------------------------------------------------
-# Block comment reader (C)
-# ---------------------------------------------------------------------------
+# Language config mapped by file extension
+SUPPORTED_LANGS = {
+    '.c':    {'label': 'C',          'fence': 'c',          'style': 'c'},
+    '.cpp':  {'label': 'C++',        'fence': 'cpp',        'style': 'c'},
+    '.h':    {'label': 'C Header',   'fence': 'c',          'style': 'c'},
+    '.hpp':  {'label': 'C++ Header', 'fence': 'cpp',        'style': 'c'},
+    '.r':    {'label': 'R',          'fence': 'r',          'style': 'hash'},
+    '.py':   {'label': 'Python',     'fence': 'python',     'style': 'hash'},
+    '.java': {'label': 'Java',       'fence': 'java',       'style': 'c'},
+    '.js':   {'label': 'JavaScript', 'fence': 'javascript', 'style': 'c'},
+    '.ts':   {'label': 'TypeScript', 'fence': 'typescript', 'style': 'c'},
+    '.sh':   {'label': 'Bash',       'fence': 'bash',       'style': 'hash'},
+}
 
 def read_block_comment(lines, start):
     result = []
@@ -71,12 +61,7 @@ def read_block_comment(lines, start):
 
     return result, i
 
-
-# ---------------------------------------------------------------------------
-# C file parser
-# ---------------------------------------------------------------------------
-
-def parse_c_file(content):
+def parse_c_style(content):
     lines = content.splitlines()
     n = len(lines)
     i = 0
@@ -85,46 +70,45 @@ def parse_c_file(content):
     while i < n and not lines[i].strip():
         i += 1
 
-    # First block comment: metadata
+    # Extract metadata block
     if i < n and lines[i].strip().startswith('/*'):
         block, i = read_block_comment(lines, i)
         for line in block:
-            if ':' in line:
-                key, _, val = line.partition(':')
-                key = key.strip().lower()
-                val = val.strip()
-                if 'author'    in key: author       = val
-                elif 'date'    in key: date          = val
-                elif 'repo'    in key: repo          = val
-                elif 'license' in key: license_str   = val
+            # Handles both newline-per-field and pipe-separated formats
+            parts = [p.strip() for p in line.split('|')]
+            for part in parts:
+                if ':' in part:
+                    key, _, val = part.partition(':')
+                    key = key.strip().lower()
+                    val = val.strip()
+                    if 'author'    in key: author       = val
+                    elif 'date'    in key: date         = val
+                    elif 'repo'    in key: repo         = val
+                    elif 'license' in key: license_str  = val
 
     while i < n and not lines[i].strip():
         i += 1
 
-    # Second block comment: problem statement (if no #include inside)
+    # Extract problem statement block (ensures it's not the actual code starting)
     if i < n and lines[i].strip().startswith('/*'):
         peek_block, peek_i = read_block_comment(lines, i)
         block_text = ' '.join(peek_block)
-        if '#include' not in block_text:
+        if '#include' not in block_text and 'import ' not in block_text:
             problem_statement = ' '.join(p for p in peek_block if p).strip()
             i = peek_i
 
-    # Code starts at first #include
+    # Locate the beginning of actual source code
     code_start = None
     for j in list(range(i, n)) + list(range(0, i)):
-        if lines[j].strip().startswith('#include'):
+        line_strip = lines[j].strip()
+        if line_strip.startswith('#include') or line_strip.startswith('import '):
             code_start = j
             break
 
     code = '\n'.join(lines[code_start:]).strip() if code_start is not None else content.strip()
     return author, date, repo, license_str, problem_statement, code
 
-
-# ---------------------------------------------------------------------------
-# R file parser
-# ---------------------------------------------------------------------------
-
-def parse_r_file(content):
+def parse_hash_style(content):
     lines = content.splitlines()
     n = len(lines)
     i = 0
@@ -133,7 +117,7 @@ def parse_r_file(content):
     while i < n and not lines[i].strip():
         i += 1
 
-    # First # comment block: metadata
+    # Extract metadata block
     meta_lines = []
     while i < n and lines[i].strip().startswith('#'):
         meta_lines.append(lines[i].strip()[1:].strip())
@@ -146,14 +130,14 @@ def parse_r_file(content):
                 key = key.strip().lower()
                 val = val.strip()
                 if 'author'    in key: author       = val
-                elif 'date'    in key: date          = val
-                elif 'repo'    in key: repo          = val
-                elif 'license' in key: license_str   = val
+                elif 'date'    in key: date         = val
+                elif 'repo'    in key: repo         = val
+                elif 'license' in key: license_str  = val
 
     while i < n and not lines[i].strip():
         i += 1
 
-    # Second # comment block: problem statement
+    # Extract problem statement block
     ps_lines = []
     while i < n and lines[i].strip().startswith('#'):
         text = lines[i].strip()[1:].strip()
@@ -167,140 +151,109 @@ def parse_r_file(content):
     code = content.strip()
     return author, date, repo, license_str, problem_statement, code
 
-
-# ---------------------------------------------------------------------------
-# Markdown builder
-# ---------------------------------------------------------------------------
-
-def build_md(filename, lang, author, date, repo, license_str,
+def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
              problem_statement, code, raw_url, github_url):
 
-    out = [
+    def esc_yaml(s):
+        return s.replace("'", "''")
+    
+    def esc_html(s):
+        """Escape angle brackets to prevent Vue compilation errors in VitePress."""
+        s = s.replace('&', '&amp;')
+        s = s.replace('<', '&lt;')
+        s = s.replace('>', '&gt;')
+        return s
+
+    desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
+    icon_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>'
+
+    fm_lines = [
         "---",
-        f"title: {filename}",
-        f'description: "{lang.upper()} program source code for {filename}"',
-        "icon: lucide/file-code",
+        f"title: '{icon_svg} {esc_yaml(filename)}'",
+        f"description: '{esc_yaml(desc)}'",
         "---",
+    ]
+
+    body = [
         "",
-        f"# `{filename}`",
+        f"# {filename}",
         "",
     ]
+
+    has_meta = any([author, date, license_str])
+    if has_meta:
+        body.extend([
+            "| Property | Details |",
+            "| :--- | :--- |"
+        ])
+        
+        if author:
+            # Parse 'Name <email>' format into a markdown mailto link
+            email_match = re.search(r'(.*?)\s*<(.*?)>', author)
+            if email_match:
+                name = email_match.group(1).strip()
+                email = email_match.group(2).strip()
+                author_formatted = f"[{esc_html(name)}](mailto:{esc_html(email)})"
+            else:
+                author_formatted = esc_html(author)
+            body.append(f"| **Author** | {author_formatted} |")
+            
+        if date:        
+            body.append(f"| **Date** | {esc_html(date)} |")
+            
+        if license_str: 
+            body.append(f"| **License** | [{esc_html(license_str)}](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |")
+        
+        body.append("")
 
     if problem_statement:
-        indented = "\n".join(f"    {l}" for l in problem_statement.splitlines())
-        out += [
+        body += [
+            "## Problem Statement",
             "",
-            '!!! abstract "Problem Statement"',
-            indented,
-            "",
-        ]
-
-    # Metadata table
-    meta_rows = []
-    if author:      meta_rows.append(f"| **Author** | {author} |")
-    if date:        meta_rows.append(f"| **Date** | {date} |")
-    if license_str: meta_rows.append(f"| **License** | {license_str} |")
-
-    if meta_rows:
-        out += [
-            "## Metadata",
-            "| Property | Detail |",
-            "|---|---|",
-            *meta_rows,
+            "::: info Problem Statement",
+            "<b><i>",
+            esc_html(problem_statement),
+            "</i></b>",
+            ":::",
             "",
         ]
 
-    # Action buttons
-    # Action buttons
-    out += [
-        "## Actions",
-        "",
-        '<div class="action-buttons-desktop">',
-        f'<a href="{raw_url}" class="md-button" target="_blank" rel="noopener">Raw</a>',
-        f'<a href="{github_url}" class="md-button" target="_blank" rel="noopener">View on GitHub</a>',
-        '<button class="md-button" type="button" onclick="copyPageUrl()">Copy URL</button>',
-        '</div>',
-        "",
-        "> You can print or save this file by opening Raw and using your browser.",
-        "",
-        '<div class="action-buttons-mobile">',
-        '<button class="md-button" onclick="openActionSheet()">Actions</button>',
-        '</div>',
-        "",
-        '<div class="dd-backdrop" id="actionBackdrop" onclick="closeActionSheet()"></div>',
-        '<div class="dd-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-label="Actions">',
-        '  <div class="dd-sheet-handle"></div>',
-        '  <div class="dd-sheet-title"><span class="ti ti-bolt" aria-hidden="true"></span> Actions</div>',
-        f'  <a href="{raw_url}" target="_blank" rel="noopener" onclick="closeActionSheet()">',
-        '    <span class="ti ti-file-code item-icon" aria-hidden="true"></span>',
-        '    <span class="item-label">Raw</span>',
-        '  </a>',
-        f'  <a href="{github_url}" target="_blank" rel="noopener" onclick="closeActionSheet()">',
-        '    <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>',
-        '    <span class="item-label">View on GitHub</span>',
-        '  </a>',
-        '  <a href="javascript:void(0)" onclick="copyAndClose()">',
-        '    <span class="ti ti-copy item-icon" aria-hidden="true"></span>',
-        '    <span class="item-label">Copy URL</span>',
-        '  </a>',
-        '</div>',
-        "",
-        '<script>',
-        'function openActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.style.display="block";s.style.display="block";document.body.style.overflow="hidden";requestAnimationFrame(function(){b.classList.add("visible");s.classList.add("visible");});}',
-        'function closeActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.classList.remove("visible");s.classList.remove("visible");document.body.style.overflow="";setTimeout(function(){b.style.display="none";s.style.display="none";},300);}',
-        'function copyPageUrl(){var btn=document.querySelector(".action-buttons-desktop .md-button:last-child");try{navigator.clipboard.writeText(window.location.href).then(function(){if(btn){var o=btn.textContent;btn.textContent="Copied!";setTimeout(function(){btn.textContent=o;},1800);}}).catch(function(){fallbackCopy();});}catch(e){fallbackCopy();}}',
-        'function fallbackCopy(){var ta=document.createElement("textarea");ta.value=window.location.href;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);}',
-        'function copyAndClose(){closeActionSheet();setTimeout(function(){copyPageUrl();},320);}',
-        '</script>',
-        "",
-    ]
-
-    # Source code
-    fence_lang = "c" if lang == "c" else "r"
-    out += [
+    body += [
         "## Source Code",
-        '<div data-search-exclude="true">',
-        f"```{fence_lang}",
+        "",
+        f"[View on GitHub]({github_url}) &nbsp; | &nbsp; [Download Raw]({raw_url})",
+        "",
+        f"```{fence_lang} [{filename}]",
         code,
         "```",
-        "</div>",
-        "",
+        ""
     ]
 
-    return '\n'.join(out)
-
-
-# ---------------------------------------------------------------------------
-# Folder index generator
-# ---------------------------------------------------------------------------
+    return '\n'.join(fm_lines + body)
 
 def _get_md_title(md_path: str) -> str:
-    """Read the title from a generated markdown file's front matter."""
     try:
         with open(md_path, encoding='utf-8') as f:
             content = f.read()
-        m = re.search(r'^title:\s*(.+)$', content, re.MULTILINE)
+        # Extracts actual title text, ignoring prepended SVGs or icons
+        m = re.search(r'^title:\s*\'(?:.*?</svg>\s*)?(.+)\'$', content, re.MULTILINE)
         if m:
             return m.group(1).strip()
     except OSError:
         pass
     return os.path.splitext(os.path.basename(md_path))[0]
 
-
 def create_folder_indexes(docs_root):
     for root, dirs, files in os.walk(docs_root):
-        # Do not traverse into ignored folders, and don't list them in parent indexes
         dirs[:] = [d for d in dirs if d not in IGNORED_FOLDERS]
 
         folder_name = os.path.basename(root)
-        
-        # Skip generating index for these folders if they are somehow reached
+
         if folder_name in IGNORED_FOLDERS:
             continue
 
         index_path = os.path.normpath(os.path.join(root, 'index.md'))
 
-        # Only skip if this exact index.md file is in our protected list AND already exists
         if index_path in PROTECTED_INDEX_FILES and os.path.exists(index_path):
             continue
 
@@ -338,11 +291,6 @@ def create_folder_indexes(docs_root):
                     f.write(f"| {idx} | `{src_name}` | [View Code]({md_file}) |\n")
                 f.write("\n")
 
-
-# ---------------------------------------------------------------------------
-# Main
-# ---------------------------------------------------------------------------
-
 def main():
     with open(FILES_LIST, 'r', encoding='utf-8') as f:
         file_paths = [line.strip() for line in f if line.strip()]
@@ -353,10 +301,12 @@ def main():
         full_path = os.path.normpath(full_path)
         ext = os.path.splitext(full_path)[1].lower()
 
-        if ext not in {'.c', '.r'}:
+        if ext not in SUPPORTED_LANGS:
             print(f"SKIP (unsupported extension): {full_path}")
             skipped += 1
             continue
+
+        lang_info = SUPPORTED_LANGS[ext]
 
         try:
             rel_path = os.path.relpath(full_path, BSC_ROOT)
@@ -378,23 +328,20 @@ def main():
             continue
 
         filename = os.path.basename(full_path)
-        lang = "r" if ext == ".r" else "c"
 
-        if lang == "c":
-            author, date, repo, license_str, problem_statement, code = parse_c_file(content)
+        if lang_info['style'] == 'c':
+            author, date, repo, license_str, problem_statement, code = parse_c_style(content)
         else:
-            author, date, repo, license_str, problem_statement, code = parse_r_file(content)
+            author, date, repo, license_str, problem_statement, code = parse_hash_style(content)
 
         md_content = build_md(
-            filename, lang, author, date, repo, license_str,
+            filename, lang_info['label'], lang_info['fence'], author, date, repo, license_str,
             problem_statement, code, raw_url, github_url,
         )
 
         md_rel = os.path.splitext(rel_path)[0] + '.md'
         md_out = os.path.normpath(os.path.join(DOCS_OUTPUT, md_rel))
 
-        # Prevent source files (e.g., an index.c file) from inadvertently generating 
-        # an output that overwrites your protected semester index.md files.
         if md_out in PROTECTED_INDEX_FILES and os.path.exists(md_out):
             print(f"SKIP (Protected Index File): {md_out}")
             skipped += 1
@@ -411,7 +358,6 @@ def main():
     print("Generating folder index pages...")
     create_folder_indexes(DOCS_OUTPUT)
     print("Folder indexes created.")
-
 
 if __name__ == "__main__":
     main()

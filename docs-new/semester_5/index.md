@@ -1,18 +1,17 @@
----
-icon: lucide/component
----
+# Semester 5
 
-!!! warning "Semester Pending"
-    ## This folder is currently empty
+::: warning Semester Pending
+#### <b><u>This folder is currently empty</u></b>
 
-    I am still completing **Semester 1**. This repository is a live documentation of my progress through the BSc Computer Science program at [**Acharya Prafulla Chandra College (APC)**](https://apccollege.ac.in/).
+I am still completing **Semester 1**. This repository is a live documentation of my progress through the BSc Computer Science program at [**Acharya Prafulla Chandra College (APC)**](https://apccollege.ac.in/).
 
-    **Current Activity:**
+**Current Activity:**
 
-    - See active work in [**Semester 1**](https://github.com/notamitgamer/bsc/tree/main/semester_1)
-    - Real-time updates as the academic session progresses.
+- See active work in [**Semester 1**](https://github.com/notamitgamer/bsc/tree/main/semester_1)
+- Real-time updates as the academic session progresses.
 
-    **Explore More:**
+**Explore More:**
 
-    - Check out my full project gallery on my [**Portfolio**](https://amit.is-a.dev/)
-    - View my other repositories on [**GitHub**](https://github.com/notamitgamer)
+- Check out my full project gallery on my [**Portfolio**](https://amit.is-a.dev/)
+- View my other repositories on [**GitHub**](https://github.com/notamitgamer)
+:::

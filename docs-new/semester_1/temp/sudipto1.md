@@ -1,65 +1,29 @@
 ---
-title: sudipto1.c
-description: "C program source code for sudipto1.c"
-icon: lucide/file-code
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg> sudipto1.c'
+description: 'A smart home security controller monitors the state of several sensors to decide what action to take. Each second, the system reads data from sensors that can either be active or inactive. Based on the current state of all sensors, the controller must perform exactly one action, such as activating a warning, checking a specific zone, or declaring an intrusion. Write a C program that reads the sensor states as input and prints the corresponding system action. -- Conditions: 1. You must determine exactly one action for every possible combination of sensor states. 2. You are not allowed to use any conditional statements (if, else if, else, or the ternary operator?). 3. You are not allowed to use logical operators. 4. You must use a single switch statement to control the program''s behaviour. 5. Loops may only be used for reading input, not for making decisions. 6. The program should handle all possible combinations of the sensors'' active/inactive states and print the appropriate response each time. -- Example (for understanding): If all sensors are inactive, the system should remain idle. If some sensors are active, the system should issue warnings or alerts based on the situation. If all sensors are active, the system should declare a confirmed intrusion.'
 ---
 
-# `sudipto1.c`
+# sudipto1.c
 
-
-!!! abstract "Problem Statement"
-    A smart home security controller monitors the state of several sensors to decide what action to take. Each second, the system reads data from sensors that can either be active or inactive. Based on the current state of all sensors, the controller must perform exactly one action, such as activating a warning, checking a specific zone, or declaring an intrusion. Write a C program that reads the sensor states as input and prints the corresponding system action. -- Conditions: 1. You must determine exactly one action for every possible combination of sensor states. 2. You are not allowed to use any conditional statements (if, else if, else, or the ternary operator?). 3. You are not allowed to use logical operators. 4. You must use a single switch statement to control the program's behaviour. 5. Loops may only be used for reading input, not for making decisions. 6. The program should handle all possible combinations of the sensors' active/inactive states and print the appropriate response each time. -- Example (for understanding): If all sensors are inactive, the system should remain idle. If some sensors are active, the system should issue warnings or alerts based on the situation. If all sensors are active, the system should declare a confirmed intrusion.
-
-## Metadata
-| Property | Detail |
-|---|---|
-| **Author** | Amit Dutta <amitdutta4255@gmail.com> |
+| Property | Details |
+| :--- | :--- |
+| **Author** | [Amit Dutta](mailto:amitdutta4255@gmail.com) |
 | **Date** | 12 Dec 2025 |
-| **License** | MIT License (See the LICENSE file for details) |
+| **License** | [MIT License (See the LICENSE file for details)](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |
 
-## Actions
+## Problem Statement
 
-<div class="action-buttons-desktop">
-<a href="https://raw.usercontent.amit.is-a.dev/semester_1/temp/sudipto1.c" class="md-button" target="_blank" rel="noopener">Raw</a>
-<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/temp/sudipto1.c" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
-<button class="md-button" type="button" onclick="copyPageUrl()">Copy URL</button>
-</div>
-
-> You can print or save this file by opening Raw and using your browser.
-
-<div class="action-buttons-mobile">
-<button class="md-button" onclick="openActionSheet()">Actions</button>
-</div>
-
-<div class="dd-backdrop" id="actionBackdrop" onclick="closeActionSheet()"></div>
-<div class="dd-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-label="Actions">
-  <div class="dd-sheet-handle"></div>
-  <div class="dd-sheet-title"><span class="ti ti-bolt" aria-hidden="true"></span> Actions</div>
-  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/temp/sudipto1.c" target="_blank" rel="noopener" onclick="closeActionSheet()">
-    <span class="ti ti-file-code item-icon" aria-hidden="true"></span>
-    <span class="item-label">Raw</span>
-  </a>
-  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/temp/sudipto1.c" target="_blank" rel="noopener" onclick="closeActionSheet()">
-    <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
-    <span class="item-label">View on GitHub</span>
-  </a>
-  <a href="javascript:void(0)" onclick="copyAndClose()">
-    <span class="ti ti-copy item-icon" aria-hidden="true"></span>
-    <span class="item-label">Copy URL</span>
-  </a>
-</div>
-
-<script>
-function openActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.style.display="block";s.style.display="block";document.body.style.overflow="hidden";requestAnimationFrame(function(){b.classList.add("visible");s.classList.add("visible");});}
-function closeActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.classList.remove("visible");s.classList.remove("visible");document.body.style.overflow="";setTimeout(function(){b.style.display="none";s.style.display="none";},300);}
-function copyPageUrl(){var btn=document.querySelector(".action-buttons-desktop .md-button:last-child");try{navigator.clipboard.writeText(window.location.href).then(function(){if(btn){var o=btn.textContent;btn.textContent="Copied!";setTimeout(function(){btn.textContent=o;},1800);}}).catch(function(){fallbackCopy();});}catch(e){fallbackCopy();}}
-function fallbackCopy(){var ta=document.createElement("textarea");ta.value=window.location.href;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);}
-function copyAndClose(){closeActionSheet();setTimeout(function(){copyPageUrl();},320);}
-</script>
+::: info Problem Statement
+<b><i>
+A smart home security controller monitors the state of several sensors to decide what action to take. Each second, the system reads data from sensors that can either be active or inactive. Based on the current state of all sensors, the controller must perform exactly one action, such as activating a warning, checking a specific zone, or declaring an intrusion. Write a C program that reads the sensor states as input and prints the corresponding system action. -- Conditions: 1. You must determine exactly one action for every possible combination of sensor states. 2. You are not allowed to use any conditional statements (if, else if, else, or the ternary operator?). 3. You are not allowed to use logical operators. 4. You must use a single switch statement to control the program's behaviour. 5. Loops may only be used for reading input, not for making decisions. 6. The program should handle all possible combinations of the sensors' active/inactive states and print the appropriate response each time. -- Example (for understanding): If all sensors are inactive, the system should remain idle. If some sensors are active, the system should issue warnings or alerts based on the situation. If all sensors are active, the system should declare a confirmed intrusion.
+</i></b>
+:::
 
 ## Source Code
-<div data-search-exclude="true">
-```c
+
+[View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/temp/sudipto1.c) &nbsp; | &nbsp; [Download Raw](https://raw.usercontent.amit.is-a.dev/semester_1/temp/sudipto1.c)
+
+```c [sudipto1.c]
 #include <stdio.h>
 int main()
 {
@@ -179,4 +143,3 @@ int main()
    printf("\nSecurity system shutting down.\n");
 }
 ```
-</div>

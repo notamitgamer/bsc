@@ -1,23 +1,18 @@
----
-icon: lucide/component
----
+# Semester 1
 
-!!! tip "Active"
-    ## SEMESTER 1: ACTIVE CONTENT
+::: tip Active
+#### <b><u>SEMESTER 1: ACTIVE CONTENT</u></b>
 
-    This folder contains all my current academic work, including practicals, assignments, and study materials for the BSc Computer Science program **(SEM-I)** at [**Acharya Prafulla Chandra College (APC)**](https://apccollege.ac.in/).
+This folder contains all my current academic work, including practicals, assignments, and study materials for the BSc Computer Science program **(SEM-I)** at [**Acharya Prafulla Chandra College (APC)**](https://apccollege.ac.in/).
 
-    **Current Status:**
-    * **Actively Updated:** New code and materials are added following the college schedule.
-    * **Technologies:** Primarily focusing on **C Programming** and **R Programming**.
+**Current Status:**
+* **Actively Updated:** New code and materials are added following the college schedule.
+* **Technologies:** Primarily focusing on **C Programming** and **R Programming**.
 
-    **Explore More:**
-    * See my other projects on my [**Portfolio**](https://amit.is-a.dev/)
-    * Follow my development journey on [**GitHub**](https://github.com/notamitgamer)
-
----
-
-Files and sub-folders in **Eduincs Exam**.
+**Explore More:**
+* See my other projects on my [**Portfolio**](https://amit.is-a.dev/)
+* Follow my development journey on [**GitHub**](https://github.com/notamitgamer)
+:::
 
 ## Folders
 
@@ -53,15 +48,11 @@ To keep the repository organized, the C and R programs are divided into specific
   * `/Code/`: R script files (`.r`) for practicals.
   * `/Material_PDF/`: Study materials and reference documents for R.
 
----
-
 ## How to Find a Specific Code
 
 1. **Identify the Category:** Determine if the code was an assignment, a textbook problem, or a tuition exercise, and navigate to the corresponding folder above.
 2. **Naming Convention:** Most files are sequentially numbered for easy tracking (e.g., `assignment-p-01.c`, `luc018.c`, `APC-PRAC-005.c`).
 3. **Internal Comments:** Open the file. Most source codes include a commented section at the top detailing the exact problem statement or logic being solved.
-
----
 
 ## How to Run the Programs
 

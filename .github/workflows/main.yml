@@ -1,63 +1,63 @@
-name: Build and Deploy Docs
+name: Build and Deploy BSc Code Index
 
 on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'docs/**' 
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-docs:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for lastUpdated via git history
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: '3.12'
 
-      - name: Install Zensical and Plugins
+      - name: Generate markdown files
         run: |
-          pip install zensical
-          pip install mkdocs-awesome-pages-plugin
+           python list.py
+           python md.py
 
-      - name: Run Python Generator Scripts
-        run: |
-          python list.py
-          python md.py
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
-      - name: Delete old docs folder
-        run: rm -rf docs
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build Zensical site
-        run: zensical build
+      - name: Build VitePress
+        run: npm run docs:build
 
-      - name: Rename 'site' to 'docs'
-        run: |
-          mv site docs
-          echo "code.amit.is-a.dev" > docs/CNAME
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs-new/.vitepress/dist
 
-      - name: Commit and Push changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          git add docs/ docs-new/
-          
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: auto-generate GitHub Pages docs"
-
-            git pull --rebase origin main
-            
-            git push
-            echo "Successfully built and pushed new docs folder."
-          else
-            echo "No changes to docs detected, skipping commit."
-          fi
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

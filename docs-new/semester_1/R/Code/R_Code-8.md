@@ -1,65 +1,29 @@
 ---
-title: R_Code-8.r
-description: "R program source code for R_Code-8.r"
-icon: lucide/file-code
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg> R_Code-8.r'
+description: 'Create a list named list1 containing the number 24, the string "Sabby", the float 5.4, and the string "Nepal". Then, write the code using the append() function to add the number 3.14 to the very end of this list.'
 ---
 
-# `R_Code-8.r`
+# R_Code-8.r
 
-
-!!! abstract "Problem Statement"
-    Create a list named list1 containing the number 24, the string "Sabby", the float 5.4, and the string "Nepal". Then, write the code using the append() function to add the number 3.14 to the very end of this list.
-
-## Metadata
-| Property | Detail |
-|---|---|
+| Property | Details |
+| :--- | :--- |
 | **Author** | Amit Dutta (amitdutta4255@gmail.com) |
 | **Date** | 19 Mar 2026 |
-| **License** | MIT |
+| **License** | [MIT](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |
 
-## Actions
+## Problem Statement
 
-<div class="action-buttons-desktop">
-<a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Code-8.r" class="md-button" target="_blank" rel="noopener">Raw</a>
-<a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Code-8.r" class="md-button" target="_blank" rel="noopener">View on GitHub</a>
-<button class="md-button" type="button" onclick="copyPageUrl()">Copy URL</button>
-</div>
-
-> You can print or save this file by opening Raw and using your browser.
-
-<div class="action-buttons-mobile">
-<button class="md-button" onclick="openActionSheet()">Actions</button>
-</div>
-
-<div class="dd-backdrop" id="actionBackdrop" onclick="closeActionSheet()"></div>
-<div class="dd-sheet" id="actionSheet" role="dialog" aria-modal="true" aria-label="Actions">
-  <div class="dd-sheet-handle"></div>
-  <div class="dd-sheet-title"><span class="ti ti-bolt" aria-hidden="true"></span> Actions</div>
-  <a href="https://raw.usercontent.amit.is-a.dev/semester_1/R/Code/R_Code-8.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
-    <span class="ti ti-file-code item-icon" aria-hidden="true"></span>
-    <span class="item-label">Raw</span>
-  </a>
-  <a href="https://github.com/notamitgamer/bsc/blob/main/semester_1/R/Code/R_Code-8.r" target="_blank" rel="noopener" onclick="closeActionSheet()">
-    <span class="ti ti-brand-github item-icon" aria-hidden="true"></span>
-    <span class="item-label">View on GitHub</span>
-  </a>
-  <a href="javascript:void(0)" onclick="copyAndClose()">
-    <span class="ti ti-copy item-icon" aria-hidden="true"></span>
-    <span class="item-label">Copy URL</span>
-  </a>
-</div>
-
-<script>
-function openActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.style.display="block";s.style.display="block";document.body.style.overflow="hidden";requestAnimationFrame(function(){b.classList.add("visible");s.classList.add("visible");});}
-function closeActionSheet(){var b=document.getElementById("actionBackdrop"),s=document.getElementById("actionSheet");b.classList.remove("visible");s.classList.remove("visible");document.body.style.overflow="";setTimeout(function(){b.style.display="none";s.style.display="none";},300);}
-function copyPageUrl(){var btn=document.querySelector(".action-buttons-desktop .md-button:last-child");try{navigator.clipboard.writeText(window.location.href).then(function(){if(btn){var o=btn.textContent;btn.textContent="Copied!";setTimeout(function(){btn.textContent=o;},1800);}}).catch(function(){fallbackCopy();});}catch(e){fallbackCopy();}}
-function fallbackCopy(){var ta=document.createElement("textarea");ta.value=window.location.href;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);}
-function copyAndClose(){closeActionSheet();setTimeout(function(){copyPageUrl();},320);}
-</script>
+::: info Problem Statement
+<b><i>
+Create a list named list1 containing the number 24, the string "Sabby", the float 5.4, and the string "Nepal". Then, write the code using the append() function to add the number 3.14 to the very end of this list.
+</i></b>
+:::
 
 ## Source Code
-<div data-search-exclude="true">
-```r
+
+[View on GitHub](https://github.com/notamitgamer/bsc/blob/main/semester_1/r/code/R_Code-8.r) &nbsp; | &nbsp; [Download Raw](https://raw.usercontent.amit.is-a.dev/semester_1/r/code/R_Code-8.r)
+
+```r [R_Code-8.r]
 # Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 19 Mar 2026
 # Repo: https://github.com/notamitgamer/bsc
 # License: MIT
@@ -75,4 +39,3 @@ print("After Update")
 list1 <- append(list1, 3.14)
 print(list1)
 ```
-</div>
