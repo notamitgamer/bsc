@@ -14,7 +14,7 @@ PROTECTED_INDEX_FILES = {
 PROTECTED_INDEX_FILES.add(os.path.normpath(os.path.join(DOCS_OUTPUT, "index.md")))
 
 # Directories excluded from index generation
-IGNORED_FOLDERS = {"stylesheets", "overrides", "assets", ".vitepress", "node_modules"}
+IGNORED_FOLDERS = {"stylesheets", "overrides", "assets", ".vitepress", "node_modules", "public"}
 
 # Language config mapped by file extension
 SUPPORTED_LANGS = {
