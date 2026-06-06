@@ -61,6 +61,23 @@ def read_block_comment(lines, start):
 
     return result, i
 
+def esc_yaml(s: str) -> str:
+    return s.replace("'", "''")
+ 
+ 
+def esc_html(s: str) -> str:
+    """Escape characters that break Vue template compilation in VitePress."""
+    return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+def format_author(author: str) -> str:
+    """Return a mailto markdown link if the author string contains an email."""
+    m = re.search(r'(.*?)\s*<(.*?)>', author)
+    if m:
+        name  = esc_html(m.group(1).strip())
+        email = esc_html(m.group(2).strip())
+        return f"[{name}](mailto:{email})"
+    return esc_html(author)
+
 def parse_c_style(content):
     lines = content.splitlines()
     n = len(lines)
@@ -154,16 +171,6 @@ def parse_hash_style(content):
 def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
              problem_statement, code, raw_url, github_url):
 
-    def esc_yaml(s):
-        return s.replace("'", "''")
-    
-    def esc_html(s):
-        """Escape angle brackets to prevent Vue compilation errors in VitePress."""
-        s = s.replace('&', '&amp;')
-        s = s.replace('<', '&lt;')
-        s = s.replace('>', '&gt;')
-        return s
-
     desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
     icon_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>'
 
@@ -177,56 +184,80 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
     body = [
         "",
         f"# {filename}",
-        "",
+        ""
     ]
 
     has_meta = any([author, date, license_str])
     if has_meta:
         body.extend([
-            "| Property | Details |",
-            "| :--- | :--- |"
+            "### Metadata",
+            ""
         ])
         
-        if author:
-            # Parse 'Name <email>' format into a markdown mailto link
-            email_match = re.search(r'(.*?)\s*<(.*?)>', author)
-            if email_match:
-                name = email_match.group(1).strip()
-                email = email_match.group(2).strip()
-                author_formatted = f"[{esc_html(name)}](mailto:{esc_html(email)})"
-            else:
-                author_formatted = esc_html(author)
-            body.append(f"| **Author** | {author_formatted} |")
-            
-        if date:        
-            body.append(f"| **Date** | {esc_html(date)} |")
-            
-        if license_str: 
-            body.append(f"| **License** | [{esc_html(license_str)}](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |")
+    if author:
+        body.append(f"- **Author** — {format_author(author)}")
+    if date:
+        body.append(f"- **Last updated** — {esc_html(date)}")
+    if license_str:
+        body.append(
+            f"- **License** — [{esc_html(license_str)}]"
+            f"(https://github.com/notamitgamer/bsc/blob/main/LICENSE)"
+        )
         
         body.append("")
 
     if problem_statement:
-        body += [
-            "## Problem Statement",
+        body += [ 
             "",
-            "::: info Problem Statement",
-            "<b><i>",
+            "### Problem Statement",
+            "",
+            "::: tip Problem Statement",
             esc_html(problem_statement),
-            "</i></b>",
             ":::",
             "",
         ]
 
     body += [
-        "## Source Code",
+    "## Source Code",
         "",
-        f"[View on GitHub]({github_url}) &nbsp; | &nbsp; [Download Raw]({raw_url})",
+        # Action links — minimal, right-aligned feel via HTML
+        '<div style="display:flex;gap:12px;margin-bottom:12px;">',
+        f'  <a href="{github_url}" target="_blank" rel="noopener noreferrer"'
+        '   style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;'
+        '          text-decoration:none;color:var(--vp-c-brand);">',
+        '    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"'
+        '         fill="currentColor" style="vertical-align:middle;">',
+        '      <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258'
+        '             .82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757'
+        '             -1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236'
+        '             1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3'
+        '             -5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523'
+        '             .105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006'
+        '             2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873'
+        '             .12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92'
+        '             .42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795'
+        '             24 17.298 24 12c0-6.627-5.373-12-12-12z"/>',
+        '    </svg>',
+        '    View on GitHub',
+        '  </a>',
+        f'  <a href="{raw_url}" target="_blank" rel="noopener noreferrer"'
+        '   style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;'
+        '          text-decoration:none;color:var(--vp-c-text-2);">',
+        '    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"'
+        '         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"'
+        '         stroke-linejoin="round" style="vertical-align:middle;">',
+        '      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>',
+        '      <polyline points="7 10 12 15 17 10"/>',
+        '      <line x1="12" y1="15" x2="12" y2="3"/>',
+        '    </svg>',
+        '    Download Raw',
+        '  </a>',
+        '</div>',
         "",
         f"```{fence_lang} [{filename}]",
         code,
         "```",
-        ""
+        "",
     ]
 
     return '\n'.join(fm_lines + body)
