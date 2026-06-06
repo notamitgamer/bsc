@@ -45,6 +45,7 @@ const vitePressConfig = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Terms', link: '/terms'},
+      { text: 'Quick Start', link: '/quickstart'},
       { 
         text: 'Semesters', 
         items: [
@@ -58,7 +59,6 @@ const vitePressConfig = {
           { text: 'Semester 8', link: '/semester_8/' },
         ]
       },
-      { text: 'Quick Start', link: '/quickstart'},
       { text: 'Repository', link: 'https://github.com/notamitgamer/bsc' },
       { text: 'License', link: 'https://github.com/notamitgamer/bsc/blob/main/LICENSE'},
     ],
