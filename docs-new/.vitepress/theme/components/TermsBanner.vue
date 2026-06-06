@@ -134,12 +134,13 @@ body.terms-locked {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4); /* Dim out the background website */
-  backdrop-filter: blur(8px);           /* Makes the website content unreadable previews */
-  z-index: 99999;                       /* Stays above absolutely everything */
+  height: 100%; /* Fallback for older browsers */
+  height: 100dvh; /* Dynamic height fixes mobile browser URL bar hiding the bottom */
+  background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(8px);           
+  z-index: 99999;                       
   display: flex;
-  align-items: flex-end;                /* Keeps banner fixed at bottom */
+  align-items: flex-end;                
 }
 
 /* Main banner box */
@@ -147,9 +148,13 @@ body.terms-locked {
   width: 100%;
   background-color: #3E63DD !important;
   color: #ffffff !important;  
-  padding: 16px;
+  /* Add safe area insets to prevent buttons hiding under iOS/Android home bars */
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
+  box-sizing: border-box;
   box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
   font-family: var(--vp-font-family-base);
+  max-height: 100dvh; /* Prevent banner itself from exceeding screen */
+  overflow-y: auto; /* Allow scrolling within the banner if text is massive */
 }
 
 /* Layout spacing */
@@ -183,6 +188,7 @@ body.terms-locked {
 .banner-actions {
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Prevents buttons from squishing too much */
 }
 
 .banner-btn {
@@ -222,22 +228,25 @@ body.terms-locked {
   .banner-content {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 16px;
   }
 
   .banner-actions {
     width: 100%;             
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* Allows buttons to wrap on super tiny screens */
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
   }
 
   .banner-btn {
     flex: initial;
-    font-size: 11px;
-    padding: 6px 12px;
+    font-size: 12px;
+    padding: 8px 14px;
   }
 
+  /* Reset margin because we use 'gap' for flex wrap safety */
   .banner-actions .banner-btn + .banner-btn {
     margin-left: 0 !important;
   }
