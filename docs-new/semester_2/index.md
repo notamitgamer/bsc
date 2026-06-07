@@ -1,3 +1,5 @@
+# Semester 2
+
 ::: tip SEMESTER 2: ACTIVE CONTENT
 This folder contains all my current academic work, including practicals, assignments, and study materials for the BSc Computer Science program **(SEM-2)** at [**Acharya Prafulla Chandra College (APC)**](https://apccollege.ac.in/).
 
