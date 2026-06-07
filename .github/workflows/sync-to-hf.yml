@@ -1,0 +1,23 @@
+name: Manual and Auto Sync to Hugging Face
+
+on:
+  workflow_dispatch: 
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-dataset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Force Sync to Hugging Face Dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          # Configures git and force-pushes the exact current repository state over to Hugging Face
+          git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent main:main
