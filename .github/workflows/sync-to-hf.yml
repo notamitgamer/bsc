@@ -1,10 +1,10 @@
 name: Manual and Auto Sync to Hugging Face
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   sync-dataset:
@@ -13,11 +13,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
 
-      - name: Force Sync to Hugging Face Dataset
+      - name: Filter Large Files and Sync to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          # Configures git and force-pushes the exact current repository state over to Hugging Face
-          git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent main:main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git rm -rf --cached MinGW64 || true
+          
+          find . -name "*.exe" -exec git rm --cached {} + || true
+
+          git commit -m "Filter out large compiler binaries for HF sync" || true
+          
+          git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent HEAD:main
