@@ -21,8 +21,8 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 
 | Semester | Status | Primary Focus |
 | :--- | :--- | :--- |
-| [**Semester 1**](./Semester_1/) | Active | **C Programming**, **R** |
-| [**Semester 2**](./Semester_2/) | Pending | Upcoming |
+| [**Semester 1**](./Semester_1/) | Archived | **C Programming**, **R** |
+| [**Semester 2**](./Semester_2/) | Active | Upcoming |
 | [**Semester 3**](./Semester_3/) | Pending | Upcoming |
 | [**Semester 4**](./Semester_4/) | Pending | Upcoming |
 | [**Semester 5**](./Semester_5/) | Pending | Upcoming |

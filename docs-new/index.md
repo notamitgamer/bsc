@@ -39,8 +39,8 @@ Currently navigating **Semester 1**. Folders for future semesters are placeholde
 
 | Semester | Status | Primary Focus |
 |:---|:---|:---|
-| [Semester 1](/semester_1/) | Active | C Programming, R |
-| [Semester 2](/semester_2/) | Pending | Upcoming |
+| [Semester 1](/semester_1/) | Archived | C Programming, R |
+| [Semester 2](/semester_2/) | Active | Upcoming |
 | [Semester 3](/semester_3/) | Pending | Upcoming |
 | [Semester 4](/semester_4/) | Pending | Upcoming |
 | [Semester 5](/semester_5/) | Pending | Upcoming |

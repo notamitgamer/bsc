@@ -16,13 +16,56 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # ==========================================
+  # JOB 1: SYNC RAW FILES TO HUGGING FACE
+  # ==========================================
+  sync-hf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1 # Full history is not needed for the HF sync
+
+      - name: Force Sync Clean History to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          # 1. Delete git history to bypass the 10MB limit on old commits
+          rm -rf .git
+          
+          # 2. Sweep for and delete any compiler binaries
+          find . -name "*.exe" -type f -delete || true
+          
+          # 3. Initialize fresh git tracking
+          git init
+          git checkout -b main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 4. Setup Git LFS for PDFs and DOCX files
+          git lfs install
+          git lfs track "*.pdf"
+          git lfs track "*.docx"
+          git add .gitattributes
+          
+          # 5. Add all files (semester_1 to semester_8 folder paths remain perfectly intact)
+          git add .
+          git commit -m "Auto-sync latest raw files to Hugging Face"
+          
+          # 6. Push to Hugging Face Datasets
+          git push --force https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent main:main
+
+  # ==========================================
+  # JOB 2: BUILD VITEPRESS SITE
+  # ==========================================
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # needed for lastUpdated via git history
+          fetch-depth: 0  # CRITICAL: Needed for VitePress lastUpdated timestamps
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -53,12 +96,15 @@ jobs:
         with:
           path: docs-new/.vitepress/dist
 
+  # ==========================================
+  # JOB 3: DEPLOY TO GITHUB PAGES
+  # ==========================================
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
