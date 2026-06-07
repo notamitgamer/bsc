@@ -7,8 +7,8 @@ hero:
   tagline: Comprehensive codebase and practical archives following the 4-year NEP-CCF structure under WBSU at Acharya Prafulla Chandra College.
   actions:
     - theme: brand
-      text: Browse Semester 1 (Ongoing)
-      link: /semester_1/
+      text: Browse Semester 2 (Ongoing)
+      link: /semester_2/
     - theme: alt
       text: View on GitHub
       link: https://github.com/notamitgamer/bsc
@@ -35,7 +35,7 @@ features:
 
 ## Roadmap & Progress
 
-Currently navigating **Semester 1**. Folders for future semesters are placeholders that will automatically unlock and update in real-time as my 4-year academic session progresses.
+Currently navigating **Semester 2**. Folders for future semesters are placeholders that will automatically unlock and update in real-time as my 4-year academic session progresses.
 
 | Semester | Status | Primary Focus |
 |:---|:---|:---|

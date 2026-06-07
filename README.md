@@ -17,7 +17,7 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 ## Roadmap and Progress
 
 > [!NOTE]
-> I am currently in **Semester 1**. Folders for future semesters are placeholders and will be updated in real-time as the academic session progresses.
+> I am currently in **Semester 2**. Folders for future semesters are placeholders and will be updated in real-time as the academic session progresses.
 
 | Semester | Status | Primary Focus |
 | :--- | :--- | :--- |
