@@ -49,8 +49,8 @@ const vitePressConfig = {
       { 
         text: 'Semesters', 
         items: [
-          { text: 'Semester 1 (Active)', link: '/semester_1/' },
-          { text: 'Semester 2', link: '/semester_2/' },
+          { text: 'Semester 1 (Archived)', link: '/semester_1/' },
+          { text: 'Semester 2 (Active)', link: '/semester_2/' },
           { text: 'Semester 3', link: '/semester_3/' },
           { text: 'Semester 4', link: '/semester_4/' },
           { text: 'Semester 5', link: '/semester_5/' },
