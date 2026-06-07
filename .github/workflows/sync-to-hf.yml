@@ -13,7 +13,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          # We don't need fetch-depth: 0 anymore because we are dropping history!
           fetch-depth: 1 
 
       - name: Push Clean History to Hugging Face
@@ -34,9 +33,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 5. Add only the CURRENT files and make a single fresh commit
+          # 5. Initialize Git LFS and track binary files so Hugging Face accepts them
+          git lfs install
+          git lfs track "*.pdf"
+          git lfs track "*.docx"
+          git add .gitattributes
+          
+          # 6. Add only the CURRENT files and make a single fresh commit
           git add .
           git commit -m "Auto-sync latest raw files to Hugging Face"
           
-          # 6. Force push this single commit to Hugging Face, overwriting everything
+          # 7. Force push this single commit to Hugging Face, overwriting everything
           git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent main:main
