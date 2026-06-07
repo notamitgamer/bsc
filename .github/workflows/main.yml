@@ -16,56 +16,50 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # ==========================================
-  # JOB 1: SYNC RAW FILES TO HUGGING FACE
-  # ==========================================
   sync-hf:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout GitHub Repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1 # Full history is not needed for the HF sync
+          fetch-depth: 1 
 
-      - name: Force Sync Clean History to Hugging Face
+      - name: Safe Sync to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          # 1. Delete git history to bypass the 10MB limit on old commits
-          rm -rf .git
+          git clone https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent /tmp/hf_repo
           
-          # 2. Sweep for and delete any compiler binaries
-          find . -name "*.exe" -type f -delete || true
+          rsync -av --delete \
+            --exclude='.git' \
+            --exclude='MinGW64' \
+            --exclude='*.exe' \
+            --exclude='site_files' \
+            $GITHUB_WORKSPACE/ /tmp/hf_repo/
+
+          cd /tmp/hf_repo
           
-          # 3. Initialize fresh git tracking
-          git init
-          git checkout -b main
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 4. Setup Git LFS for PDFs and DOCX files
           git lfs install
           git lfs track "*.pdf"
           git lfs track "*.docx"
           git add .gitattributes
           
-          # 5. Add all files (semester_1 to semester_8 folder paths remain perfectly intact)
-          git add .
-          git commit -m "Auto-sync latest raw files to Hugging Face"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 6. Push to Hugging Face Datasets
-          git push --force https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent main:main
+          git add .
+          
+          git commit -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" || echo "No changes to commit"
+          
+          git push origin main
 
-  # ==========================================
-  # JOB 2: BUILD VITEPRESS SITE
-  # ==========================================
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # CRITICAL: Needed for VitePress lastUpdated timestamps
+          fetch-depth: 0  
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -96,9 +90,6 @@ jobs:
         with:
           path: docs-new/.vitepress/dist
 
-  # ==========================================
-  # JOB 3: DEPLOY TO GITHUB PAGES
-  # ==========================================
   deploy:
     environment:
       name: github-pages
