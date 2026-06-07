@@ -1,105 +1,45 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useRouter } from 'vitepress'
+import { ref, onMounted } from 'vue'
 
 const isVisible = ref(false)
-const bannerRef = ref(null)
-const router = useRouter()
 
 const STORAGE_KEY = 'terms_acknowledged_deploy_id'
+// Update this ID when you change your terms to force users to re-accept
 const currentDeployId = import.meta.env.VITE_DEPLOY_ID || 'deploy_v1'
-
-let observer = null
-
-// Function to enforce scroll locking and click blocking on the page
-const lockPage = () => {
-  if (typeof document !== 'undefined') {
-    document.documentElement.classList.add('terms-locked')
-    document.body.classList.add('terms-locked')
-  }
-}
-
-// Function to unlock page restrictions
-const unlockPage = () => {
-  if (typeof document !== 'undefined') {
-    document.documentElement.classList.remove('terms-locked')
-    document.body.classList.remove('terms-locked')
-  }
-}
 
 onMounted(() => {
   const lastAcknowledgedId = localStorage.getItem(STORAGE_KEY)
   
   if (lastAcknowledgedId !== currentDeployId) {
     isVisible.value = true
-    lockPage()
-    setupAntiF12Protection()
   }
-})
-
-onBeforeUnmount(() => {
-  unlockPage()
-  if (observer) observer.disconnect()
-})
-
-// Automatically re-lock the page if visibility is forced back on
-watch(isVisible, (newVal) => {
-  if (newVal) lockPage()
-  else unlockPage()
 })
 
 const acceptTerms = () => {
   localStorage.setItem(STORAGE_KEY, currentDeployId)
   isVisible.value = false
-  if (observer) observer.disconnect()
-}
-
-const acceptAndNavigateToTerms = (event) => {
-  event.preventDefault()
-  acceptTerms()
-  router.go('/terms')
-}
-
-// ANTI-F12 INSPECT ELEMENT PROTECTION
-const setupAntiF12Protection = () => {
-  if (typeof document === 'undefined') return
-
-  // Watch the HTML body to see if someone deletes the banner element using F12
-  observer = new MutationObserver((mutations) => {
-    const bannerStillExists = document.querySelector('.terms-backdrop') || document.querySelector('.terms-banner')
-    
-    if (isVisible.value && !bannerStillExists) {
-      // The user tried to delete the banner element via dev tools!
-      // Crash or completely blank out the screen as punishment
-      document.body.innerHTML = `
-        <div style="font-family:sans-serif; text-align:center; padding:100px 20px; color:#ff3b30;">
-          <h2>Security Violation</h2>
-          <p>You must accept the Terms of Use to view this website.</p>
-          <button onclick="window.location.reload()" style="padding:10px 20px; background:#3E63DD; color:white; border:none; border-radius:5px; cursor:pointer;">Reload Page</button>
-        </div>
-      `
-      lockPage()
-    }
-  })
-
-  observer.observe(document.body, { childList: true, subtree: true })
 }
 </script>
 
 <template>
-  <Transition name="fade-in">
-    <!-- Full screen dark background layer that blocks clicks to the site -->
-    <div v-if="isVisible" ref="bannerRef" class="terms-backdrop">
-      <div class="terms-banner" role="alert">
+  <Transition name="slide-up">
+    <div v-if="isVisible" class="terms-banner-wrapper" role="alert">
+      <div class="terms-banner">
         <div class="banner-content">
-          <p class="banner-text">
-            Please review our 
-            <a href="/terms" class="banner-link" @click="acceptAndNavigateToTerms">Terms of Use</a> 
-            before accessing the website.
-          </p>
+          <h3 class="banner-title">Welcome to the BSC Code Index Project</h3>
+          
+          <div class="banner-text-group">
+            <p class="banner-text">
+              This codebase is open-source and hosted on GitHub under the <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE"><u><strong>MIT License</strong></u></a>. 
+              While you are completely free to use it, we encourage you to use these materials as an educational study reference rather than copying solutions verbatim.
+            </p>
+            <p class="banner-text">
+              By continuing to browse this site, you acknowledge that you have read and agree to 
+              <a href="/terms" class="banner-link">Terms of Use</a>.
+            </p>
+          </div>
           
           <div class="banner-actions">
-            <button class="banner-btn secondary-btn" @click="acceptAndNavigateToTerms">Terms of Use</button>
             <button class="banner-btn" @click="acceptTerms">I Understand</button>
           </div>
         </div>
@@ -108,70 +48,61 @@ const setupAntiF12Protection = () => {
   </Transition>
 </template>
 
-<style>
-/* 
-  NOTE: Removed 'scoped' from this class so it can inject 
-  scroll locks into the root <html> and <body> elements.
-*/
-html.terms-locked, 
-body.terms-locked {
-  overflow: hidden !important;       /* Disables mouse scrolling completely */
-  height: 100% !important;           /* Fixes viewport height */
-  touch-action: none !important;     /* Disables mobile swipe scrolling */
-  pointer-events: none !important;   /* Deactivates ALL clicks across the entire site */
-}
-
-/* Restores click actions ONLY inside the active banner system */
-.terms-backdrop {
-  pointer-events: auto !important; 
-}
-</style>
-
 <style scoped>
-/* Full screen backdrop blur overlay */
-.terms-backdrop {
+/* Wrapper to stick the banner to the bottom of the screen */
+.terms-banner-wrapper {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100vw;
-  height: 100%; /* Fallback for older browsers */
-  height: 100dvh; /* Dynamic height fixes mobile browser URL bar hiding the bottom */
-  background-color: rgba(0, 0, 0, 0.4); 
-  backdrop-filter: blur(8px);           
-  z-index: 99999;                       
-  display: flex;
-  align-items: flex-end;                
+  z-index: 99999; 
+  pointer-events: none; 
 }
 
-/* Main banner box */
+/* Main banner box - 1/3 of the screen */
 .terms-banner {
+  pointer-events: auto; 
   width: 100%;
-  background-color: #3E63DD !important;
-  color: #ffffff !important;  
-  /* Add safe area insets to prevent buttons hiding under iOS/Android home bars */
-  padding: 16px 16px calc(16px + env(safe-area-inset-bottom)) 16px;
-  box-sizing: border-box;
-  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.3);
+  min-height: 33.33dvh; 
+  background-color: #3e63ddf6;
+  color: #ffffff;  
+  padding: 32px 24px calc(24px + env(safe-area-inset-bottom)) 24px; 
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
   font-family: var(--vp-font-family-base);
-  max-height: 100dvh; /* Prevent banner itself from exceeding screen */
-  overflow-y: auto; /* Allow scrolling within the banner if text is massive */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
 }
 
 /* Layout spacing */
 .banner-content {
   max-width: var(--vp-layout-max-width);
   margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.banner-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.banner-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Space between the two paragraphs */
 }
 
 .banner-text {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
+  opacity: 0.95;
 }
 
 .banner-link {
@@ -179,25 +110,26 @@ body.terms-locked {
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
+  transition: opacity 0.2s;
 }
 
 .banner-link:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .banner-actions {
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Prevents buttons from squishing too much */
+  margin-top: 4px;
 }
 
 .banner-btn {
-  background-color: #ffffff !important;
-  color: #3E63DD !important;
-  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #3E63DD;
+  padding: 12px 28px;
   border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   border: none;
   cursor: pointer;
   white-space: nowrap;
@@ -205,71 +137,39 @@ body.terms-locked {
 }
 
 .banner-btn:hover {
-  transform: scale(1.03);
-}
-
-.banner-actions .banner-btn + .banner-btn {
-  margin-left: 12px !important;
-}
-
-.secondary-btn {
-  background-color: transparent !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-
-.secondary-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: #ffffff !important;
+  transform: scale(1.02);
 }
 
 /* Mobile responsive fixes */
 @media (max-width: 767px) {
-  .banner-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
+  .terms-banner {
+    padding: 24px 16px calc(20px + env(safe-area-inset-bottom)) 16px;
   }
 
-  .banner-actions {
-    width: 100%;             
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allows buttons to wrap on super tiny screens */
-    justify-content: center;
-    gap: 10px;
+  .banner-title {
+    font-size: 18px;
+  }
+  
+  .banner-text {
+    font-size: 14px;
   }
 
   .banner-btn {
-    flex: initial;
-    font-size: 12px;
-    padding: 8px 14px;
-  }
-
-  /* Reset margin because we use 'gap' for flex wrap safety */
-  .banner-actions .banner-btn + .banner-btn {
-    margin-left: 0 !important;
+    width: 100%; 
+    font-size: 15px;
+    padding: 14px 16px;
   }
 }
 
-/* Overlay Fade In Transitions */
-.fade-in-enter-active,
-.fade-in-leave-active {
-  transition: opacity 0.35s ease;
+/* Slide Up Animation */
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
-.fade-in-enter-active .terms-banner,
-.fade-in-leave-active .terms-banner {
-  transition: transform 0.35s ease;
-}
-
-.fade-in-enter-from,
-.fade-in-leave-to {
-  opacity: 0;
-}
-
-.fade-in-enter-from .terms-banner,
-.fade-in-leave-to .terms-banner {
+.slide-up-enter-from,
+.slide-up-leave-to {
   transform: translateY(100%);
+  opacity: 0;
 }
 </style>
