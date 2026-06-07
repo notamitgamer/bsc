@@ -13,19 +13,30 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          # We don't need fetch-depth: 0 anymore because we are dropping history!
+          fetch-depth: 1 
 
-      - name: Filter Large Files and Sync to Hugging Face
+      - name: Push Clean History to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          # 1. Delete the Git history so old large files are completely forgotten
+          rm -rf .git
+          
+          # 2. Clean up any random .exe files just in case they were generated during a build
+          find . -name "*.exe" -type f -delete || true
+          
+          # 3. Initialize a brand new, empty Git repository
+          git init
+          git checkout -b main
+          
+          # 4. Set up bot credentials
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          git rm -rf --cached MinGW64 || true
+          # 5. Add only the CURRENT files and make a single fresh commit
+          git add .
+          git commit -m "Auto-sync latest raw files to Hugging Face"
           
-          find . -name "*.exe" -exec git rm --cached {} + || true
-
-          git commit -m "Filter out large compiler binaries for HF sync" || true
-          
-          git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent HEAD:main
+          # 6. Force push this single commit to Hugging Face, overwriting everything
+          git push --force https://notamitgamer:$HF_TOKEN@huggingface.co/datasets/notamitgamer/usercontent main:main
