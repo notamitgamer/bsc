@@ -10,4 +10,5 @@ Files and sub-folders in **Khurapati Idea**.
 | 2 | `KI002.c` | [View Code](KI002.md) |
 | 3 | `KI003.c` | [View Code](KI003.md) |
 | 4 | `KI004.c` | [View Code](KI004.md) |
+| 5 | `interpeter.py` | [View Code](interpeter.md) |
 

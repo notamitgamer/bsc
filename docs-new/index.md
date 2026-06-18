@@ -39,8 +39,8 @@ Currently navigating **Semester 2**. Folders for future semesters are placeholde
 
 | Semester | Status | Primary Focus |
 |:---|:---|:---|
-| [Semester 1](/semester_1/) | Archived | C Programming, R |
-| [Semester 2](/semester_2/) | Active | Upcoming |
+| [Semester 1](/semester_1/) | Archived | **C Programming**, **R** |
+| [Semester 2](/semester_2/) | Active | **DSA**, **CPP**, **Python** |
 | [Semester 3](/semester_3/) | Pending | Upcoming |
 | [Semester 4](/semester_4/) | Pending | Upcoming |
 | [Semester 5](/semester_5/) | Pending | Upcoming |
@@ -55,6 +55,12 @@ Currently navigating **Semester 2**. Folders for future semesters are placeholde
 1. Download compiler: [MinGW64.zip (85 MB)](https://amit.is-a.dev/download/MinGW64.zip) or the [original MinGW-w64 release](https://github.com/notamitgamer/bsc/releases/tag/MinGW-2021-09-05)
 2. Extract to `C:\\MinGW64` and add `C:\\MinGW64\\bin` to System Environment Variables
 3. Verify with `gcc --version` in your terminal
+
+### Python Development
+
+1. Download Python `>= v3.x.x`: [Python v3.14.5 original (45 MB)](https://www.python.org/ftp/python/pymanager/python-manager-26.2.msix)
+2. Run the installer, ensure you check "Add python.exe to PATH", and complete the setup
+3. Verify with python `--version` in your terminal
 
 ### R Programming
 

@@ -22,7 +22,7 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 | Semester | Status | Primary Focus |
 | :--- | :--- | :--- |
 | [**Semester 1**](./Semester_1/) | Archived | **C Programming**, **R** |
-| [**Semester 2**](./Semester_2/) | Active | Upcoming |
+| [**Semester 2**](./Semester_2/) | Active | **DSA**, **CPP**, **Python** |
 | [**Semester 3**](./Semester_3/) | Pending | Upcoming |
 | [**Semester 4**](./Semester_4/) | Pending | Upcoming |
 | [**Semester 5**](./Semester_5/) | Pending | Upcoming |
@@ -38,6 +38,12 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 1. **Download Compiler:** [MinGW64.zip (85 MB)](https://amit.is-a.dev/download/MinGW64.zip) or [**Original MinGW-w64 Executable**](https://github.com/notamitgamer/bsc/releases/tag/MinGW-2021-09-05)
 2. **Configuration:** Extract to `C:\MinGW64` and add `C:\MinGW64\bin` to your System Environment Variables.
 3. **Verification:** Run `gcc --version` in your terminal.
+
+### Python Development
+
+1. Download Python `>= v3.x.x`: [Python v3.14.5 original (45 MB)](https://www.python.org/ftp/python/pymanager/python-manager-26.2.msix)
+2. Run the installer, ensure you check "Add python.exe to PATH", and complete the setup
+3. Verify with python `--version` in your terminal
 
 ### R Programming
 > [!TIP]
