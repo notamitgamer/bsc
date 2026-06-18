@@ -1,6 +1,6 @@
-# Tutition
+# Tuition
 
-Files and sub-folders in **Tutition**.
+Files and sub-folders in **Tuition**.
 
 ## Files
 
