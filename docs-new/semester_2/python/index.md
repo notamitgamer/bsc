@@ -2,9 +2,9 @@
 
 Files and sub-folders in **Python**.
 
-## Folders
+## Files
 
-| # | Folder | Link |
+| # | File | Link |
 |---|---|---|
-| 1 | Code | [Open](code/index.md) |
+| 1 | `code_01.py` | [View Code](code_01.md) |
 
