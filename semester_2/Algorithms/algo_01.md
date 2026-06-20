@@ -2,21 +2,23 @@
 
 ### Problem Statement
 
-> [!TIP]
-> Write an algorithm to traverse a singly linked list.
+> Write an algorithm to insert a node at the beginning.
 
 ## Algorithm
 ```
-procedure traverce(head)
+procedure insert_begin(head)
 begin
-    if(head = NULL)
-        write("List is empty");
+    ptr ← get_node();
+    print("Enter the value");
+    read(val);
+    info(ptr) ← val;
+    next(ptr) ← NULL;
+    if(head = NULL) 
+        head ← ptr;
     else
-        ptr <- head;
-        while(ptr != NULL)
-            write(info(ptr));
-            ptr <- next(ptr);
-        end while
-    end if
+        next(ptr) ← head;
+        head ← ptr;
+    endif
+    return(head);
 end procedure
 ```

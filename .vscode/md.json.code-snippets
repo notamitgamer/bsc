@@ -1,0 +1,44 @@
+{
+  "Algorithm Page": {
+    "prefix": "algo",
+    "body": [
+      "# ${TM_FILENAME_BASE}",
+      "",
+      "### Problem Statement",
+      "",
+      "> Write an algorithm to $0",
+      "",
+      "## Algorithm",
+      "```",
+      "",
+      "```"
+    ],
+    "description": "Algorithm documentation page for BSc Code Index"
+  },
+
+  "Not Equal": {
+    "prefix": "neq",
+    "body": ["≠ "],
+    "description": "≠"
+  },
+  "Less Equal": {
+    "prefix": "leq",
+    "body": ["≤ "],
+    "description": "≤"
+  },
+  "Greater Equal": {
+    "prefix": "geq",
+    "body": ["≥ "],
+    "description": "≥"
+  },
+  "Left Arrow": {
+    "prefix": "la",
+    "body": ["← "],
+    "description": "←"
+  },
+  "Right Arrow": {
+    "prefix": "ra",
+    "body": ["→ "],
+    "description": "→"
+  }
+}

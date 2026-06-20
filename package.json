@@ -5,8 +5,8 @@
     "vitepress-sidebar": "^1.36.1"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs-new",
-    "docs:build": "vitepress build docs-new",
-    "docs:preview": "vitepress preview docs-new"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   }
 }

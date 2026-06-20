@@ -3,7 +3,7 @@ import re
 
 FILES_LIST   = "list.txt"
 BSC_ROOT     = "."
-DOCS_OUTPUT  = "docs-new"
+DOCS_OUTPUT  = "docs"
 RAW_BASE_URL = "https://raw.usercontent.amit.is-a.dev"
 
 # Protected paths that should never be overwritten
@@ -12,6 +12,8 @@ PROTECTED_INDEX_FILES = {
     for i in range(1, 9)
 }
 PROTECTED_INDEX_FILES.add(os.path.normpath(os.path.join(DOCS_OUTPUT, "index.md")))
+
+ALGO_FOLDER_NAME = "algorithms"  # folder name that contains algorithm .md files
 
 # Directories excluded from index generation
 IGNORED_FOLDERS = {"stylesheets", "overrides", "assets", ".vitepress", "node_modules", "public"}
@@ -168,8 +170,121 @@ def parse_hash_style(content):
     code = content.strip()
     return author, date, repo, license_str, problem_statement, code
 
+
+ALGO_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;" class="lucide lucide-binary"><rect x="14" y="14" width="4" height="6" rx="2"/><rect x="6" y="4" width="4" height="6" rx="2"/><path d="M6 20h4"/><path d="M14 10h4"/><path d="M6 14h2v6"/><path d="M14 4h2v6"/></svg>'
+
+def parse_algo_md(content):
+    """Parse a GitHub-style algorithm .md file and convert to VitePress format."""
+    lines = content.splitlines()
+    title = ""
+    problem_statement = ""
+    body_lines = []
+    i = 0
+    n = len(lines)
+
+    # Extract title from first # heading
+    while i < n:
+        line = lines[i]
+        if line.startswith("# "):
+            title = line[2:].strip()
+            i += 1
+            break
+        i += 1
+
+    # Parse rest: find problem statement in > blockquote under ### Problem Statement
+    in_problem_section = False
+    ps_lines = []
+
+    while i < n:
+        line = lines[i]
+        stripped = line.strip()
+
+        if stripped.lower().startswith("### problem statement"):
+            in_problem_section = True
+            i += 1
+            continue
+
+        if in_problem_section:
+            # Allow blank lines between heading and blockquote
+            if stripped == "":
+                i += 1
+                continue
+            if stripped.startswith("> "):
+                ps_lines.append(stripped[2:].strip())
+                i += 1
+                continue
+            elif stripped == ">":
+                i += 1
+                continue
+            else:
+                # Non-blockquote, non-blank line ends problem section
+                in_problem_section = False
+                problem_statement = " ".join(ps_lines).strip()
+                body_lines.append(line)
+        else:
+            body_lines.append(line)
+
+        i += 1
+
+    if in_problem_section and ps_lines:
+        problem_statement = " ".join(ps_lines).strip()
+
+    return title, problem_statement, body_lines
+
+def build_algo_md(filename_base, title, problem_statement, body_lines, source_path=""):
+    """Build VitePress .md from parsed algo content."""
+    desc = problem_statement if problem_statement else f"Algorithm — {title}"
+
+    fm = [
+        "---",
+        f"title: '{ALGO_ICON_SVG} {esc_yaml(title)}'",
+        f"description: '{esc_yaml(desc)}'",
+        f"source: '{source_path}'",
+        "---",
+        "",
+    ]
+
+    body = [f"# {title}", ""]
+
+    if problem_statement:
+        body += [
+            "### Problem Statement",
+            "",
+            "::: tip Problem Statement",
+            esc_html(problem_statement),
+            ":::",
+            "",
+        ]
+
+    # Replace > blockquote problem section in body with nothing (already handled above)
+    # Just append the remaining body lines (Algorithm, Pseudocode, Complexity etc.)
+    skip_next_blockquote = False
+    cleaned = []
+    blines = body_lines[:]
+    j = 0
+    while j < len(blines):
+        l = blines[j]
+        s = l.strip()
+        if s.lower().startswith("### problem statement"):
+            # skip until blockquote ends
+            j += 1
+            while j < len(blines) and (blines[j].strip().startswith(">") or blines[j].strip() == ""):
+                j += 1
+            continue
+        cleaned.append(l)
+        j += 1
+
+    # Remove leading blank lines from cleaned
+    while cleaned and not cleaned[0].strip():
+        cleaned.pop(0)
+
+    body += cleaned
+
+    return "\n".join(fm + body)
+
+
 def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
-             problem_statement, code, raw_url, github_url):
+             problem_statement, code, raw_url, github_url, rel_url):
 
     desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
     icon_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>'
@@ -178,6 +293,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         "---",
         f"title: '{icon_svg} {esc_yaml(filename)}'",
         f"description: '{esc_yaml(desc)}'",
+        f"source: '{rel_url}'",
         "---",
     ]
 
@@ -335,6 +451,47 @@ def main():
         full_path = os.path.normpath(full_path)
         ext = os.path.splitext(full_path)[1].lower()
 
+        # Handle algorithm .md files
+        if ext == '.md':
+            parent_folder = os.path.basename(os.path.dirname(full_path))
+            if parent_folder.lower() != ALGO_FOLDER_NAME:
+                print(f"SKIP (non-algo .md): {full_path}")
+                skipped += 1
+                continue
+
+            try:
+                with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content_md = f.read()
+            except FileNotFoundError:
+                print(f"NOT FOUND: {full_path}")
+                skipped += 1
+                continue
+
+            filename_base = os.path.splitext(os.path.basename(full_path))[0]
+            rel_path = os.path.relpath(full_path, BSC_ROOT)
+            title, problem_statement, body_lines = parse_algo_md(content_md)
+            if not title:
+                title = filename_base
+            rel_url_algo = rel_path.replace('\\', '/')
+            md_content = build_algo_md(filename_base, title, problem_statement, body_lines, rel_url_algo)
+
+            rel_path = os.path.relpath(full_path, BSC_ROOT)
+            md_rel = os.path.splitext(rel_path)[0] + '.md'
+            md_out = os.path.normpath(os.path.join(DOCS_OUTPUT, md_rel))
+
+            if md_out in PROTECTED_INDEX_FILES and os.path.exists(md_out):
+                print(f"SKIP (Protected Index File): {md_out}")
+                skipped += 1
+                continue
+
+            os.makedirs(os.path.dirname(md_out), exist_ok=True)
+            with open(md_out, 'w', encoding='utf-8') as f:
+                f.write(md_content)
+
+            print(f"OK  {md_rel}")
+            generated += 1
+            continue
+
         if ext not in SUPPORTED_LANGS:
             print(f"SKIP (unsupported extension): {full_path}")
             skipped += 1
@@ -370,7 +527,7 @@ def main():
 
         md_content = build_md(
             filename, lang_info['label'], lang_info['fence'], author, date, repo, license_str,
-            problem_statement, code, raw_url, github_url,
+            problem_statement, code, raw_url, github_url, rel_url,
         )
 
         md_rel = os.path.splitext(rel_path)[0] + '.md'

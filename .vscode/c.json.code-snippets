@@ -1,0 +1,29 @@
+{
+    "MIT Compact Header": {
+        "prefix": "c_c",
+        "body": [
+            "/*",
+            " * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: $CURRENT_DATE $CURRENT_MONTH_NAME_SHORT $CURRENT_YEAR",
+            " * Repo: https://github.com/notamitgamer/bsc",
+            " * License: MIT",
+            " */",
+            "",
+            "/* $0 */"
+        ],
+        "description": "Insert MIT Compact Header"
+    },
+    "MIT Standard Header": {
+        "prefix": "c_s",
+        "body": [
+            "/*",
+            " * Author  : Amit Dutta <amitdutta4255@gmail.com>",
+            " * Date    : $CURRENT_DATE $CURRENT_MONTH_NAME_SHORT $CURRENT_YEAR",
+            " * Repo    : https://github.com/notamitgamer/bsc",
+            " * License : MIT License (See the LICENSE file for details)",
+            " */",
+            "",
+            "/* $0 */"
+        ],
+        "description": "Insert MIT Standard Header"
+    }
+}
