@@ -2,7 +2,7 @@ import os
 
 EXTENSIONS = ('.c', '.r', '.cpp', '.py')
 
-EXCLUDE = ('list.py', 'md.py', 'utils') 
+EXCLUDE = ('list.py', 'md.py', 'utils', 'docs') 
 
 ALGO_FOLDER_NAME = 'algorithms'  
 
