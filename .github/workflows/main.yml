@@ -81,12 +81,10 @@ jobs:
 
           # Build Info
 
-          | | |
-          |---|---|
-          | **Build ID** | \`${{ github.sha }}\` |
-          | **Triggered by** | ${{ github.actor }} |
-          | **Branch** | ${{ github.ref_name }} |
-          | **Build time** | ${{ github.event.head_commit.timestamp }} |
+          - **Build ID** — \`${{ github.sha }}\`
+          - **Triggered by** — ${{ github.actor }}
+          - **Branch** — ${{ github.ref_name }}
+          - **Build time** — ${{ github.event.head_commit.timestamp }}
           EOF
 
       - name: Setup Node.js
