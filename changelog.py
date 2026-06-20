@@ -25,5 +25,5 @@ description: 'Current build information.'
 - **Build time** — {build_time}
 """
 
-with open('docs/version.md', 'w') as f:
+with open('docs/changelog.md', 'w') as f:
     f.write(content)

@@ -60,7 +60,7 @@ const vitePressConfig = {
         ]
       },
       { text: 'License', link: 'https://github.com/notamitgamer/bsc/blob/main/LICENSE'},
-      { text: 'Version', link: '/version' },
+      { text: 'Changelog', link: '/changelog' },
     ],
 
     socialLinks: [

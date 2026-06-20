@@ -77,7 +77,7 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           BUILD_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
-        run: python version.py
+        run: python changelog.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
