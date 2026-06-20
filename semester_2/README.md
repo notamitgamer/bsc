@@ -17,6 +17,7 @@ To keep the repository organized, the C++ and Python programs are divided into s
 ### C++ Programming (Data Structures)
 * **`/practice/`**: General, day-to-day CPP programming practice files.
 * **`/tuition/`**: Programs and problem-solving exercises completed during tuition classes.
+* **`/algorithms/`**: Some algorithms.
 ### Python Programming (SEC)
 * **`/python/`**: Contains all SEC coursework, split into:
   * `/code/`: Python script files (`.py`) for practicals.
