@@ -64,7 +64,7 @@ const acceptTerms = () => {
   pointer-events: auto; 
   width: 100%;
   min-height: 33.33dvh; 
-  background-color: #3e63ddf6;
+  background-color: #5c6bc8f6;
   color: #ffffff;  
   padding: 32px 24px calc(24px + env(safe-area-inset-bottom)) 24px; 
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
@@ -125,7 +125,7 @@ const acceptTerms = () => {
 
 .banner-btn {
   background-color: #ffffff;
-  color: #3E63DD;
+  color: #5c6bc8;
   padding: 12px 28px;
   border-radius: 6px;
   font-size: 14px;

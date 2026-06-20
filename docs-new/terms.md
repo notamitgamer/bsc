@@ -6,6 +6,8 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 
 These Terms govern your use of this website and all associated content, including source code, documentation, and generated materials.
 
+***Last updated date is shown at the bottom of this page, reflecting the most recent revision.***
+
 ## About This Project
 
 **BSc Code Index** is an open-source, publicly available collection of reference code and assignment solutions from a BSc (Honours) Computer Science degree at the **West Bengal State University (WBSU)**. It is maintained and published by **Amit Dutta** ([@notamitgamer](https://github.com/notamitgamer)) as a personal academic reference for students.
@@ -36,11 +38,12 @@ No guarantee is made regarding long-term availability or maintenance.
 
 ## Academic Integrity
 
-This repository is intended strictly for **learning and reference**.
+This repository exists to help you **learn**, not to help you cheat. Every resource here — programs, algorithms, notes, PDFs, and more — represents real coursework from an active BSc Honors CS degree. Use it as a reference to understand how problems are approached and solved, not as a shortcut to copy from.
 
-- You are solely responsible for how you use this code
-- Copying code directly for academic submissions is strongly discouraged
-- Any plagiarism, cheating, or misuse is entirely your own responsibility
+- **Study, don't copy** — read the code, understand the logic, then write your own implementation from scratch
+- **Understand the why** — if you can't explain what the code does line by line, you haven't learned anything
+- **Submissions are your responsibility** — direct copy-pasting for college assignments is academic misconduct under most university policies, including WBSU
+- **You will be caught** — plagiarism detection tools are widely used; copied code is easily flagged
 
 The author holds **no liability** for academic misconduct resulting from misuse of this content.
 
@@ -87,7 +90,7 @@ This website may rely on third-party platforms such as GitHub and hosting provid
 
 ## Updates to Terms
 
-These Terms may be updated at any time. Changes take effect immediately upon posting. Your continued use of the website constitutes acceptance of the updated Terms.
+Changes take effect upon the next deployment. The last updated date at the bottom of this page reflects the most recent revision. Returning users will be notified via the consent banner.
 
 ## Governing Law
 

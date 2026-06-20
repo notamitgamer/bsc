@@ -13,7 +13,7 @@ A live archive of BSc Computer Science practical codes following the WBSU curric
 **Amit Dutta**
 
 ### 3. Where is the source code hosted?
-On GitHub: <a href="https://github.com/notamitgamer/bsc">https://github.com/notamitgamer/bsc</a>
+On GitHub: https://github.com/notamitgamer/bsc
 
 ### 4. Can I use this code?
 Yes, under the MIT License.
@@ -65,5 +65,4 @@ The project is continuously updated.
 As the academic journey progresses.
 
 ### 17. Where can I report issues?
-On GitHub Issues:
-<a href="https://github.com/notamitgamer/bsc/issues">https://github.com/notamitgamer/bsc/issues</a>
+On GitHub Issues: https://github.com/notamitgamer/bsc/issues

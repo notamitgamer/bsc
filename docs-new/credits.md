@@ -7,7 +7,7 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 Building and maintaining a fast, open-source code index requires reliable and accessible infrastructure. I would like to extend my sincere gratitude to the following platforms, communities, and open-source projects that make `code.amit.is-a.dev` possible:
 
 * **[is-a.dev](https://is-a.dev)**: For providing the sleek, developer-centric domain name completely free of charge, giving this project a professional home.
-* **[Hugging Face](https://huggingface.co)**: For securely and reliably storing the extensive collection of raw C programming files.
+* **[Hugging Face](https://huggingface.co)**: For securely and reliably storing the extensive collection of raw programming files.
 * **[Cloudflare](https://www.cloudflare.com/)**: For handling the backend routing, DNS, and caching, seamlessly bridging the domain to ensure Hugging Face serves the code files swiftly and securely.
 * **[GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/)**: For securely storing the entire open-source repository (including all code and markdown files) and providing lightning-fast, dependable web hosting for the compiled site.
 * **[VitePress](https://vitepress.dev/)**: The phenomenal foundational frameworks that effortlessly transform raw Markdown files and code snippets into the beautiful, searchable, and highly responsive user interface you see today.

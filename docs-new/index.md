@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "BSc Code Index"
   text: "Coursework from WBSU"
-  tagline: Comprehensive codebase and practical archives following the 4-year NEP-CCF structure under WBSU at Acharya Prafulla Chandra College.
+  tagline: Comprehensive codebase and practical archives following the 4-year NEP-CCF structure under WBSU at Acharya Prafulla Chandra College.<br><br>&bull; MIT licensed
   actions:
     - theme: brand
       text: Browse Semester 2 (Ongoing)
@@ -28,9 +28,14 @@ features:
     title: Searchable by Problem
     details: Every page is indexed by its problem statement. Search what you need to solve, find the reference instantly.
 
-  - icon: '<svg viewBox="0 -0.5 24 24" id="meteor-icon-kit__solid-github" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 20.6331 8.56941 22.4118C9.14823 22.5177 9.35294 22.1577 9.35294 21.8541C9.35294 21.5506 9.35294 20.8588 9.35294 19.8988C6.14117 20.5977 5.46353 18.3529 5.46353 18.3529C5.25046 17.6572 4.79779 17.0595 4.18588 16.6659C3.14823 15.96 4.27059 15.96 4.27059 15.96C5.00761 16.0641 5.65578 16.5014 6.02823 17.1459C6.34368 17.7179 6.87393 18.1406 7.50179 18.3208C8.12965 18.5009 8.8034 18.4236 9.37411 18.1059C9.41842 17.5252 9.66876 16.9794 10.08 16.5671C7.5247 16.2777 4.84235 15.2894 4.84235 10.92C4.82481 9.7786 5.24688 8.67412 6.02117 7.8353C5.67632 6.84285 5.71662 5.7571 6.13412 4.79295C6.13412 4.79295 7.10117 4.48236 9.29647 5.97177C11.1816 5.45419 13.1713 5.45419 15.0565 5.97177C17.2518 4.48236 18.2118 4.79295 18.2118 4.79295C18.6351 5.74689 18.6854 6.82486 18.3529 7.81412C19.1272 8.65294 19.5493 9.7574 19.5318 10.8988C19.5318 15.3177 16.8424 16.2847 14.28 16.5459C14.8359 17.1047 15.1218 17.8774 15.0635 18.6635C15.0635 20.2024 15.0635 21.4447 15.0635 21.8188C15.0635 22.1929 15.2682 22.4824 15.8541 22.3694C21.1473 20.5447 24.3569 15.1728 23.4554 9.6469C22.5539 4.1211 17.8034 0.04779 12.2047 0.00001z" fill="#758CA3"></path></g></svg>'
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network-icon lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>'
+    title: Algorithms Included
+    details: Semester 2 onwards includes written algorithm documentation alongside source code — step-by-step logic, pseudocode, and complexity analysis.
+
+  - icon: '<svg viewBox="0 -0.5 24 24" id="meteor-icon-kit__solid-github" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 20.6331 8.56941 22.4118C9.14823 22.5177 9.35294 22.1577 9.35294 21.8541C9.35294 21.5506 9.35294 20.8588 9.35294 19.8988C6.14117 20.5977 5.46353 18.3529 5.46353 18.3529C5.25046 17.6572 4.79779 17.0595 4.18588 16.6659C3.14823 15.96 4.27059 15.96 4.27059 15.96C5.00761 16.0641 5.65578 16.5014 6.02823 17.1459C6.34368 17.7179 6.87393 18.1406 7.50179 18.3208C8.12965 18.5009 8.8034 18.4236 9.37411 18.1059C9.41842 17.5252 9.66876 16.9794 10.08 16.5671C7.5247 16.2777 4.84235 15.2894 4.84235 10.92C4.82481 9.7786 5.24688 8.67412 6.02117 7.8353C5.67632 6.84285 5.71662 5.7571 6.13412 4.79295C6.13412 4.79295 7.10117 4.48236 9.29647 5.97177C11.1816 5.45419 13.1713 5.45419 15.0565 5.97177C17.2518 4.48236 18.2118 4.79295 18.2118 4.79295C18.6351 5.74689 18.6854 6.82486 18.3529 7.81412C19.1272 8.65294 19.5493 9.7574 19.5318 10.8988C19.5318 15.3177 16.8424 16.2847 14.28 16.5459C14.8359 17.1047 15.1218 17.8774 15.0635 18.6635C15.0635 20.2024 15.0635 21.4447 15.0635 21.8188C15.0635 22.1929 15.2682 22.4824 15.8541 22.3694C21.1473 20.5447 24.3569 15.1728 23.4554 9.6469C22.5539 4.1211 17.8034 0.04779 12.2047 0.00001z" fill="currentColor"></path></g></svg>'
     title: Open Source
     details: MIT licensed. Free to read, reference, and contribute to. All source available on GitHub.
+    link: https://github.com/notamitgamer/bsc/blob/main/LICENSE
 ---
 
 ## Roadmap & Progress
@@ -68,18 +73,25 @@ Download R from [CRAN](https://cran.r-project.org/) and use [RStudio](https://po
 
 ## Academic Integrity
 
-This repository is intended strictly for learning and reference.
+This repository exists to help you **learn**, not to help you cheat. Every resource here — programs, algorithms, notes, PDFs, and more — represents real coursework from an active BSc Honors CS degree. Use it as a reference to understand how problems are approached and solved, not as a shortcut to copy from.
 
-- Study the implementations to understand the underlying concepts
-- Direct copy-pasting for college submissions is strongly discouraged
-- The best approach is to understand the logic, then rewrite it yourself
+::: warning Please read before using
+- **Study, don't copy** — read the code, understand the logic, then write your own implementation from scratch
+- **Understand the why** — if you can't explain what the code does line by line, you haven't learned anything
+- **Submissions are your responsibility** — direct copy-pasting for college assignments is academic misconduct under most university policies, including WBSU
+- **You will be caught** — plagiarism detection tools are widely used; copied code is easily flagged
+:::
 
-The author holds no liability for academic misconduct resulting from misuse of this content. See the [Terms of Use](/terms).
+The author bears no liability for academic misconduct arising from misuse of this content. By using this site you agree to the [Terms of Use](/terms).
 
 ## About
 
-**Amit Dutta** — [@notamitgamer](https://github.com/notamitgamer) — [amit.is-a.dev](https://amit.is-a.dev)
+This project is maintained by **Amit Dutta**, a BSc Computer Science student at Acharya Prafulla Chandra College under the West Bengal State University (WBSU), documenting coursework across all 8 semesters of the NEP-CCF curriculum.
 
-* Personal Email: [amitdutta4255@gmail.com](mailto:amitdutta4255@gmail.com) 
-* Work Email: [mail@amit.is-a.dev](mailto:mail@amit.is-a.dev)
-* License: [MIT](https://github.com/notamitgamer/bsc/blob/main/LICENSE)
+| Contact | Details |
+|---|---|
+| **GitHub** | [@notamitgamer](https://github.com/notamitgamer) |
+| **Website** | [amit.is-a.dev](https://amit.is-a.dev) |
+| **Personal Email** | [amitdutta4255@gmail.com](mailto:amitdutta4255@gmail.com) |
+| **Work Email** | [mail@amit.is-a.dev](mailto:mail@amit.is-a.dev) |
+| **License** | [MIT](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |
