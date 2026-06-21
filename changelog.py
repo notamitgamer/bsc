@@ -53,6 +53,10 @@ description: 'Current build information and recent commit history.'
 
 # Build Info
 
+::: tip Important
+Compare the Build ID (listed below) against the one in the [GitHub Changelog](https://github.com/notamitgamer/bsc/blob/main/CHANGELOG.md#latest-build) to verify that your browser is displaying the latest version.
+::: 
+
 - **Build ID** — <span style="word-break: break-all;">`{sha}`</span>
 - **Triggered by** — [@{actor}](https://github.com/{actor})
 - **Branch** — `{ref}`
