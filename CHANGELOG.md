@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: June 21, 2026 at 11:57 UTC
+> Last build: June 21, 2026 at 12:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `44792f173aaa768df1387c962c0cd84ac9c50773`
+- **Build ID** — `a920c6d17ad714ca1634801cdb5e3587487875b2`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — June 21, 2026 at 11:57 UTC
+- **Build time** — June 21, 2026 at 12:12 UTC
 
 ## Recent Commits
 
+- [`a920c6d`](https://github.com/notamitgamer/bsc/commit/a920c6d17ad714ca1634801cdb5e3587487875b2) updated changelog format — Amit Dutta, Jun 21, 2026 12:12 UTC
+- [`480b151`](https://github.com/notamitgamer/bsc/commit/480b151561ec51db42410a26d7a0674f763bea6c) chore: update CHANGELOG.md [skip ci] — github-actions[bot], Jun 21, 2026 11:58 UTC
 - [`44792f1`](https://github.com/notamitgamer/bsc/commit/44792f173aaa768df1387c962c0cd84ac9c50773) given full permission to ci — Amit Dutta, Jun 21, 2026 11:57 UTC
 - [`add7482`](https://github.com/notamitgamer/bsc/commit/add748214b8e325692066515e2f0e86c4519c15a) changelog — Amit Dutta, Jun 20, 2026 16:26 UTC
 - [`4026f09`](https://github.com/notamitgamer/bsc/commit/4026f09203f51db5f5b408fd8191c3f1b67861f1) changelog — Amit Dutta, Jun 20, 2026 16:21 UTC
@@ -29,8 +31,6 @@
 - [`c750c18`](https://github.com/notamitgamer/bsc/commit/c750c1869b2d3e8d8c6dfd816c2b491055d0bc18) start of 2nd sem — Amit Dutta, Jun 18, 2026 14:27 UTC
 - [`147c51f`](https://github.com/notamitgamer/bsc/commit/147c51f60da61933f4a15a17edf6f7305472a58a) update file path in hf — Amit Dutta, Jun 07, 2026 11:50 UTC
 - [`8d8eaa9`](https://github.com/notamitgamer/bsc/commit/8d8eaa93e3b29569723ec6bc684b9c64f67434c6) Refactor GitHub Actions workflow for file sync — Amit Dutta, Jun 07, 2026 11:32 UTC
-- [`0a382eb`](https://github.com/notamitgamer/bsc/commit/0a382ebb90452cbf177cca4b0ebe57bc308712fc) sem index update — Amit Dutta, Jun 07, 2026 11:25 UTC
-- [`2241f22`](https://github.com/notamitgamer/bsc/commit/2241f22173049e62f983a4e11db8aceeda49f6ba) mts update — Amit Dutta, Jun 07, 2026 11:23 UTC
 
 ---
 
