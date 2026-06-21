@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -66,18 +66,35 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
       - name: Generate markdown files
         run: |
            python list.py
            python md.py
       
-      - name: Generate version file
+      - name: Generate changelog
         env:
-          GITHUB_SHA: ${{ github.sha }}
-          GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_REF_NAME: ${{ github.ref_name }}
+          BUILD_SHA: ${{ github.sha }}
+          BUILD_ACTOR: ${{ github.actor }}
+          BUILD_REF: ${{ github.ref_name }}
           BUILD_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
-        run: python changelog.py
+        run: |
+          git log --pretty=format:"%H|%s|%an|%aI" -20 > git_log.txt
+          python changelog.py
+
+      - name: Commit CHANGELOG.md to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md
+          git commit -m "chore: update CHANGELOG.md [skip ci]" || echo "No changes"
+          git push
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
