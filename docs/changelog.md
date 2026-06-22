@@ -1,10 +1,15 @@
-# Changelog
+---
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;" class="lucide lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg> Changelog'
+description: 'Current build information and recent commit history.'
+---
 
-> Last build: June 22, 2026 at 14:42 UTC
+# Build Info
 
-## Latest Build
+::: tip Important
+Compare the Build ID (listed below) against the one in the [GitHub Changelog](https://github.com/notamitgamer/bsc/blob/main/CHANGELOG.md#latest-build) to verify that your browser is displaying the latest version.
+::: 
 
-- **Build ID** — `cac55f2eeaaedefe0316130c3bb1bad24b231694`
+- **Build ID** — <span style="word-break: break-all;">`cac55f2eeaaedefe0316130c3bb1bad24b231694`</span>
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
 - **Build time** — June 22, 2026 at 14:42 UTC
@@ -31,8 +36,3 @@
 - [`add7482`](https://github.com/notamitgamer/bsc/commit/add748214b8e325692066515e2f0e86c4519c15a) changelog — Amit Dutta, Jun 20, 2026 16:26 UTC
 - [`4026f09`](https://github.com/notamitgamer/bsc/commit/4026f09203f51db5f5b408fd8191c3f1b67861f1) changelog — Amit Dutta, Jun 20, 2026 16:21 UTC
 - [`93687f7`](https://github.com/notamitgamer/bsc/commit/93687f7194d6a015fa8f1feb361a0fa9a927b318) changelog — Amit Dutta, Jun 20, 2026 16:14 UTC
-
----
-
-*This file is auto-generated on every deployment. For the live site, visit [code.amit.is-a.dev](https://code.amit.is-a.dev).*
-*Check [/changelog](https://code.amit.is-a.dev/changelog) on the site to verify your browser is showing the latest build.*
