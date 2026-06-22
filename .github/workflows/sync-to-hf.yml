@@ -2,9 +2,6 @@ name: Manual and Auto Sync to Hugging Face
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main 
 
 jobs:
   sync-dataset:
