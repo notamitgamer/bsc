@@ -6,7 +6,6 @@ on:
       - main
     paths-ignore:
       - 'CHANGELOG.md'
-      - 'docs/**'
   workflow_dispatch:
 
 permissions:
@@ -21,6 +20,7 @@ concurrency:
 jobs:
   sync-hf:
     runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout GitHub Repo
         uses: actions/checkout@v4
@@ -89,9 +89,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs CHANGELOG.md
-          git commit -m "chore: update generated docs and changelog [skip ci]" || echo "No changes"
-          git push
+          if [ -d docs ]; then
+            git add docs
+          fi
+          git add CHANGELOG.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update generated docs and changelog [skip ci]"
+            git push
+          else
+            echo "No changes"
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
