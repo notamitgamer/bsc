@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: June 22, 2026 at 12:28 UTC
+> Last build: June 22, 2026 at 13:52 UTC
 
 ## Latest Build
 
-- **Build ID** — `aac4f460c4cfb60cf7ecd8bec946636767d055a9`
+- **Build ID** — `370d1a5c28d44b0997b8e5f73208e89efbaedefd`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — June 22, 2026 at 12:28 UTC
+- **Build time** — June 22, 2026 at 13:52 UTC
 
 ## Recent Commits
 
+- [`370d1a5`](https://github.com/notamitgamer/bsc/commit/370d1a5c28d44b0997b8e5f73208e89efbaedefd) added sponser button — Amit Dutta, Jun 22, 2026 13:52 UTC
+- [`ebd15a1`](https://github.com/notamitgamer/bsc/commit/ebd15a137f3f9fdcaac6e93f45b0275540d39e76) chore: update CHANGELOG.md [skip ci] — github-actions[bot], Jun 22, 2026 12:28 UTC
 - [`aac4f46`](https://github.com/notamitgamer/bsc/commit/aac4f460c4cfb60cf7ecd8bec946636767d055a9) forced pushed to the end — Amit Dutta, Jun 22, 2026 12:28 UTC
 - [`f585e2c`](https://github.com/notamitgamer/bsc/commit/f585e2cbf649f2361f21ba743d0d5d41d571bb17) chore: update CHANGELOG.md [skip ci] — github-actions[bot], Jun 22, 2026 12:20 UTC
 - [`55f9700`](https://github.com/notamitgamer/bsc/commit/55f97004b6e58fdc8d3efdf83a237f5481cfe085) updated placement — Amit Dutta, Jun 22, 2026 12:19 UTC
@@ -29,8 +31,6 @@
 - [`782cfd5`](https://github.com/notamitgamer/bsc/commit/782cfd52cec16b89c2961ea4f0d6c7b604f546d9) version file — Amit Dutta, Jun 20, 2026 16:05 UTC
 - [`730894b`](https://github.com/notamitgamer/bsc/commit/730894b7b995c4c829c7fcb87af17c49f28a938d) Add 'docs' to excluded files in list.py — Amit Dutta, Jun 20, 2026 15:56 UTC
 - [`cef119d`](https://github.com/notamitgamer/bsc/commit/cef119dfac88fcaa131c0da45347be9d62c7aee4) added sitemap — Amit Dutta, Jun 20, 2026 15:52 UTC
-- [`59c6496`](https://github.com/notamitgamer/bsc/commit/59c64963e312cc7981b3e7886dd5d0823f6c475a) fixed `Algorithms` → `algorithms` — Amit Dutta, Jun 20, 2026 15:31 UTC
-- [`e75c750`](https://github.com/notamitgamer/bsc/commit/e75c75096a018b55167fc92cd5a90776ba746b2e) Delete semester_2/Algorithms directory — Amit Dutta, Jun 20, 2026 15:28 UTC
 
 ---
 
