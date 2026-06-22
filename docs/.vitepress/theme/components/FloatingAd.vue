@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// Controls visibility for the close button
 const isVisible = ref(true)
 
 const closeAd = () => {
@@ -12,14 +11,18 @@ const closeAd = () => {
 <template>
   <Transition name="slide-up" appear>
     <div v-if="isVisible" class="floating-ad-container">
-      <button class="close-btn" @click="closeAd" aria-label="Close Ad">×</button>
-      <span class="ad-label">AD</span>
+      <!-- Header zone for the button and label so they never touch the iframe -->
+      <div class="ad-header">
+        <span class="ad-label">ADVERTISEMENT</span>
+        <button class="close-btn" @click="closeAd" aria-label="Close Ad">×</button>
+      </div>
       
+      <!-- Isolated content zone purely for the 125x125 ad -->
       <div class="ad-content">
         <iframe 
           data-aa='2445210' 
           src='//ad.a-ads.com/2445210/?size=125x125'
-          style='border:0; padding:0; width:125px; height:125px; overflow:hidden; display:block;' 
+          style='border:0; padding:0; width:125px; height:125px; overflow:hidden; display:block; margin:0;' 
           allowtransparency='true'>
         </iframe>
       </div>
@@ -32,63 +35,73 @@ const closeAd = () => {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 140px; 
-  height: 140px; 
+  /* Expanded size to ensure zero overlap with the 125x125 ad */
+  width: 145px; 
+  height: 165px; 
   
-  /* Matches VitePress dark/light mode automatically */
   background: var(--vp-c-bg-elv);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  /* Maximum z-index to ensure it sits on top of all VitePress UI elements */
+  z-index: 99999; 
   
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.ad-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 4px;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+
+.ad-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.5px;
 }
 
 .close-btn {
-  position: absolute;
-  top: -6px;
-  right: 6px;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--vp-c-text-2);
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 10;
   line-height: 1;
+  padding: 0;
 }
 
 .close-btn:hover {
   color: var(--vp-c-text-1);
 }
 
-.ad-label {
-  position: absolute;
-  top: 4px;
-  left: 8px;
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--vp-c-text-3);
-  letter-spacing: 0.5px;
-}
-
 .ad-content {
-  /* Nudges the 125x125 iframe down slightly to avoid the close button */
-  margin-top: 10px; 
+  width: 125px;
+  height: 125px;
+  display: block;
+  clear: both;
 }
 
-/* Cinematic Slide-In Animation */
+/* Slide-In Animation */
 .slide-up-enter-active,
 .slide-up-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .slide-up-enter-from,
 .slide-up-leave-to {
   opacity: 0;
-  /* Starts 50px below its final position and scales up slightly */
-  transform: translateY(50px) scale(0.95); 
+  transform: translateY(40px) scale(0.95); 
 }
 </style>
