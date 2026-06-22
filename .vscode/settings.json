@@ -6,5 +6,6 @@
       "strings": false
     },
     "editor.snippetSuggestions": "top"
-  }
+  },
+  "r.lsp.promptToInstall": false
 }
