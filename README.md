@@ -5,6 +5,8 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 
 ---
 
+[![Build and Deploy BSc Code Index](https://github.com/notamitgamer/bsc/actions/workflows/main.yml/badge.svg)](https://github.com/notamitgamer/bsc/actions/workflows/main.yml)
+
 ### Quick Links
 * **GitHub Repo:** [@notamitgamer/bsc](https://github.com/notamitgamer/bsc)
 * **Web View** [notamitgamer.github.io/bsc](https://notamitgamer.github.io/bsc/)
