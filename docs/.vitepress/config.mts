@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
+import { withPwa } from '@vite-pwa/vitepress'
 
 const vitePressConfig = {
   title: 'BSc Code Index',
@@ -38,6 +39,12 @@ const vitePressConfig = {
         .trim();
     }
   },
+
+  vite: {
+  server: {
+    allowedHosts: true as true
+  }
+} as any,
 
   themeConfig: {
     logo: '/logo.svg',
@@ -169,6 +176,33 @@ const vitePressConfig = {
       dark: 'github-dark' // Code blocks now seamlessly match the site's theme!
     } as any
   },
+
+  pwa: {
+    outDir: '.vitepress/dist',
+    registerType: 'prompt' as 'prompt',
+    includeAssets: ['logo.svg', 'logo_192.png', 'logo_512.png'],
+    manifest: {
+      name: 'BSc Code Index',
+      short_name: 'BSc Code',
+      description: 'C programming assignments, indexed and documented.',
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: '/logo_192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/logo_512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    },
+    workbox: {
+      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+    }
+  }
 }
 
 const sidebarConfig = {
@@ -187,4 +221,4 @@ const sidebarConfig = {
   capitalizeFirst: true,
 }
 
-export default defineConfig(withSidebar(vitePressConfig, sidebarConfig))
+export default withPwa(defineConfig(withSidebar(vitePressConfig, sidebarConfig)))
