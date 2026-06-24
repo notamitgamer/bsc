@@ -2,15 +2,21 @@
 import { ref, onMounted } from 'vue'
 
 const isVisible = ref(false)
+const isFirstVisit = ref(true)
 
 const STORAGE_KEY = 'terms_acknowledged_deploy_id'
-// Update this ID when you change your terms to force users to re-accept
 const currentDeployId = import.meta.env.VITE_DEPLOY_ID || 'deploy_v1'
 
 onMounted(() => {
   const lastAcknowledgedId = localStorage.getItem(STORAGE_KEY)
   
-  if (lastAcknowledgedId !== currentDeployId) {
+  if (!lastAcknowledgedId) {
+    // Brand new user: Show the terms
+    isFirstVisit.value = true
+    isVisible.value = true
+  } else if (lastAcknowledgedId !== currentDeployId) {
+    // Returning user: Show the update notification
+    isFirstVisit.value = false
     isVisible.value = true
   }
 })
@@ -26,22 +32,37 @@ const acceptTerms = () => {
     <div v-if="isVisible" class="terms-banner-wrapper" role="alert">
       <div class="terms-banner">
         <div class="banner-content">
-          <h3 class="banner-title">Welcome to the BSC Code Index Project</h3>
           
-          <div class="banner-text-group">
-            <p class="banner-text">
-              This codebase is open-source and hosted on GitHub under the <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE"><u><strong>MIT License</strong></u></a>. 
-              While you are completely free to use it, we encourage you to use these materials as an educational study reference rather than copying solutions verbatim.
-            </p>
-            <p class="banner-text">
-              By continuing to browse this site, you acknowledge that you have read and agree to 
-              <a href="/terms" class="banner-link">Terms of Use</a>.
-            </p>
-          </div>
-          
-          <div class="banner-actions">
-            <button class="banner-btn" @click="acceptTerms">I Understand</button>
-          </div>
+          <template v-if="isFirstVisit">
+            <h3 class="banner-title">Welcome to the BSC Code Index</h3>
+            <div class="banner-text-group">
+              <p class="banner-text">
+                This codebase is open-source and hosted on GitHub under the <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE"><u><strong>MIT License</strong></u></a>. 
+                While you are completely free to use it, we encourage you to use these materials as an educational study reference rather than copying solutions verbatim.
+              </p>
+              <p class="banner-text">
+                By continuing to browse this site, you acknowledge that you have read and agree to our 
+                <a href="/terms" class="banner-link">Terms of Use</a>.
+              </p>
+            </div>
+            <div class="banner-actions">
+              <button class="banner-btn" @click="acceptTerms">I Understand</button>
+            </div>
+          </template>
+
+          <template v-else>
+            <h3 class="banner-title">New Updates Available</h3>
+            <div class="banner-text-group">
+              <p class="banner-text">
+                The code index has been updated with new materials or improvements. 
+                Check out the <a href="/changelog" class="banner-link">Changelog</a> to see what changed recently.
+              </p>
+            </div>
+            <div class="banner-actions">
+              <button class="banner-btn" @click="acceptTerms">Got it</button>
+            </div>
+          </template>
+
         </div>
       </div>
     </div>
@@ -59,13 +80,13 @@ const acceptTerms = () => {
   pointer-events: none; 
 }
 
-/* Main banner box - 1/3 of the screen */
+/* Main banner box */
 .terms-banner {
   pointer-events: auto; 
   width: 100%;
-  min-height: 33.33dvh; 
   background-color: #5c6bc8f6;
   color: #ffffff;  
+  /* Adjusted padding to wrap content naturally instead of forcing 33vh */
   padding: 32px 24px calc(24px + env(safe-area-inset-bottom)) 24px; 
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
   font-family: var(--vp-font-family-base);
@@ -81,7 +102,7 @@ const acceptTerms = () => {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 16px; 
 }
 
 .banner-title {
@@ -94,7 +115,7 @@ const acceptTerms = () => {
 .banner-text-group {
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Space between the two paragraphs */
+  gap: 10px; 
 }
 
 .banner-text {
