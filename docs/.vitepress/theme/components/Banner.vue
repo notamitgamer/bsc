@@ -182,6 +182,53 @@ const acceptTerms = () => {
   }
 }
 
+/* Desktop: floating card (bottom-right) */
+@media (min-width: 768px) {
+  .terms-banner-wrapper {
+    width: auto;
+    left: unset;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .terms-banner {
+    width: 420px;
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
+  }
+
+  .banner-content {
+    gap: 12px;
+  }
+
+  .banner-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .banner-text {
+    font-size: 13px;
+    line-height: 1.55;
+    opacity: 0.92;
+  }
+
+  .banner-text-group {
+    gap: 7px;
+  }
+
+  .banner-actions {
+    margin-top: 2px;
+    justify-content: flex-end;
+  }
+
+  .banner-btn {
+    padding: 9px 20px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+}
+
 /* Slide Up Animation */
 .slide-up-enter-active,
 .slide-up-leave-active {
