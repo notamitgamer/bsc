@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: June 30, 2026 at 07:35 UTC
+> Last build: June 30, 2026 at 11:11 UTC
 
 ## Latest Build
 
-- **Build ID** — `59ba504c1e4973795e382493524a74ec4947157e`
+- **Build ID** — `94885fb485684d8d31bfee7d77327a65f201d98d`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — June 30, 2026 at 07:35 UTC
+- **Build time** — June 30, 2026 at 11:11 UTC
 
 ## Recent Commits
 
+- [`94885fb`](https://github.com/notamitgamer/bsc/commit/94885fb485684d8d31bfee7d77327a65f201d98d) fixed: bug - auto update was not possible in some mobile browsers. — Amit Dutta, Jun 30, 2026 11:11 UTC
+- [`7b75385`](https://github.com/notamitgamer/bsc/commit/7b753854c4e1ad0c2fe3d1cd76302ee25c988b7f) chore: update changelog [skip ci] — github-actions[bot], Jun 30, 2026 07:36 UTC
 - [`59ba504`](https://github.com/notamitgamer/bsc/commit/59ba504c1e4973795e382493524a74ec4947157e) fixed: bug - search index — Amit Dutta, Jun 30, 2026 07:35 UTC
 - [`e61ce9d`](https://github.com/notamitgamer/bsc/commit/e61ce9d468012ecf7b6540d6b2d157fdbbd6361d) chore: update changelog [skip ci] — github-actions[bot], Jun 30, 2026 07:21 UTC
 - [`f44ed1c`](https://github.com/notamitgamer/bsc/commit/f44ed1cb105a82562d8074eedb3d1592c36ccb38) more practical code viewer — Amit Dutta, Jun 30, 2026 07:20 UTC
@@ -29,8 +31,6 @@
 - [`9864ca2`](https://github.com/notamitgamer/bsc/commit/9864ca23e2327651b1b4cadebdce2e39d3b27eb1) [skip ci] — Amit Dutta, Jun 23, 2026 13:47 UTC
 - [`79d9b35`](https://github.com/notamitgamer/bsc/commit/79d9b3526945234b6472074cc8f66be8477e9d2b) chore: update changelog [skip ci] — github-actions[bot], Jun 23, 2026 13:41 UTC
 - [`8e3cb58`](https://github.com/notamitgamer/bsc/commit/8e3cb5824ca7032cc39558953e343c7a6bdcf5df) updated docs — Amit Dutta, Jun 23, 2026 13:40 UTC
-- [`0a27d1d`](https://github.com/notamitgamer/bsc/commit/0a27d1dd38d84f7eb781228a446b8bb97cd91cf2) chore: update generated docs and changelog [skip ci] — github-actions[bot], Jun 23, 2026 08:38 UTC
-- [`1afec47`](https://github.com/notamitgamer/bsc/commit/1afec47128e3fcfaec9f70f84c0f02804669852a) added pwa support — Amit Dutta, Jun 23, 2026 08:36 UTC
 
 ---
 
