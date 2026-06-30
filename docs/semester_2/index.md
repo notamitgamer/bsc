@@ -16,9 +16,10 @@ This folder contains all my current academic work, including practicals, assignm
 | No. | Folder Name | Link |
 |---|---|---|
 | 1 | Practice | [Open Folder](practice/index.md) |
-| 2 | Tuition | [Open Folder](tuition/index.md) |
-| 3 | Python | [Open Folder](python/index.md) |
-| 4 | Algorithm | [Open Folder](algorithms/index.md) |
+| 2 | EduInCS | [Open Folder](eduincs/index.md) |
+| 3 | Tuition | [Open Folder](tuition/index.md) |
+| 4 | Python | [Open Folder](python/index.md) |
+| 5 | Algorithm | [Open Folder](algorithms/index.md) |
 
 ## Directory Structure
  

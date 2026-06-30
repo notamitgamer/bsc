@@ -114,8 +114,7 @@ const vitePressConfig = {
           },
         },
         _render(src: string, env: any, md: any) {
-          // Regex to capture from "### Problem Statement" to the closing ":::"
-          const match = src.match(/(### Problem Statement[\s\S]*?:::\s*tip Statement[\s\S]*?:::)/);
+          const match = src.match(/(### Problem Statement[\s\S]*?:::\s*tip [\s\S]*?:::)/);
           
           if (match) {
             // Render and index ONLY the extracted problem statement block
