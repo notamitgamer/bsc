@@ -327,7 +327,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
             "",
             "### Problem Statement",
             "",
-            "::: tip Problem Statement",
+            f"::: tip {filename}",
             esc_html(problem_statement),
             ":::",
             "",
@@ -336,6 +336,9 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
     body += [
     "## Source Code",
         "",
+        f"```{fence_lang} [{filename}]",
+        code,
+        "```",
         # Action links — minimal, right-aligned feel via HTML
         '<div style="display:flex;gap:12px;margin-bottom:12px;">',
         f'  <a href="{github_url}" target="_blank" rel="noopener noreferrer"'
@@ -373,9 +376,6 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         "::: info Printing the code",
         "To print this file, open it on GitHub and click **Raw** before printing, or use the **Download Raw** button above and print directly from that page.",
         ":::",
-        f"```{fence_lang} [{filename}]",
-        code,
-        "```",
         "",
     ]
 

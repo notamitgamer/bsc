@@ -25,6 +25,7 @@ const vitePressConfig = {
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'BSc Code Index' }],
     ['meta', { name: 'twitter:description', content: 'C programming assignments, indexed and documented.' }],
+    ['script', {}, `if (typeof window !== 'undefined') localStorage.setItem('vitepress:local-search-detailed-list', 'true');`]
   ] as [string, any][],
 
   sitemap: {
@@ -82,6 +83,7 @@ const vitePressConfig = {
     search: {
       provider: 'local',
       options: {
+        detailedView: true,
         locales: {
           root: {
             translations: {
@@ -111,13 +113,17 @@ const vitePressConfig = {
             },
           },
         },
-        // Search through description (problem statement) and title
         _render(src: string, env: any, md: any) {
-          const html = md.render(src, env)
-          if (env.frontmatter?.description) {
-            return env.frontmatter.description + ' ' + html
+          // Regex to capture from "### Problem Statement" to the closing ":::"
+          const match = src.match(/(### Problem Statement[\s\S]*?:::\s*tip Statement[\s\S]*?:::)/);
+          
+          if (match) {
+            // Render and index ONLY the extracted problem statement block
+            return md.render(match[1], env);
           }
-          return html
+          
+          // If no problem statement is found, return nothing so the code isn't indexed
+          return '';
         }
       }
     },
