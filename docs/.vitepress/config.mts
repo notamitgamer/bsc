@@ -184,7 +184,7 @@ const vitePressConfig = {
 
   pwa: {
     outDir: '.vitepress/dist',
-    registerType: 'prompt' as 'prompt',
+    registerType: 'autoUpdate' as 'autoUpdate',
     includeAssets: ['logo.svg', 'logo_192.png', 'logo_512.png'],
     manifest: {
       name: 'BSc Code Index',
