@@ -339,6 +339,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         f"```{fence_lang} [{filename}]",
         code,
         "```",
+        "---",
         # Action links — minimal, right-aligned feel via HTML
         '<div style="display:flex;gap:12px;margin-bottom:12px;">',
         f'  <a href="{github_url}" target="_blank" rel="noopener noreferrer"'
