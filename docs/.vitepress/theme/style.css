@@ -228,3 +228,24 @@
   border-color: var(--vp-c-brand-1) !important;
   transition: border-color 0.2s;
 }
+
+@media (max-width: 767px) {
+  .sponsor-button span {
+    display: none;
+  }
+
+  .sponsor-button {
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 71, 114, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sponsor-button .heart-icon {
+    margin: 0;
+  }
+}

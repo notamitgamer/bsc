@@ -17,6 +17,7 @@ const vitePressConfig = {
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap' }],
     
     // SEO & Social Meta Tags
+    ['meta', { name: 'algolia-site-verification', content: 'D732FF69A9237B42' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'BSc Code Index' }],
     ['meta', { property: 'og:title', content: 'BSc Code Index' }],
@@ -51,7 +52,6 @@ const vitePressConfig = {
     logo: '/logo.svg',
 
     nav: [
-      { text: 'Home', link: '/' },
       { text: 'Terms', link: '/terms'},
       { text: 'Quick Start', link: '/quickstart'},
       { 
@@ -77,53 +77,15 @@ const vitePressConfig = {
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025 – Present <a href="https://amit.is-a.dev">Amit Dutta</a>',
+      copyright: '2026 &copy;  <a href="https://amit.is-a.dev" target="_blank" rel="noopener noreferrer" class="footer-link">Amit Dutta</a>',
     },
 
     search: {
-      provider: 'local',
+      provider: 'algolia',
       options: {
-        detailedView: true,
-        locales: {
-          root: {
-            translations: {
-              button: {
-                buttonText: 'Search programs...',
-                buttonAriaLabel: 'Search programs'
-              },
-              modal: {
-                searchBox: {
-                  resetButtonTitle: 'Clear search query',
-                  cancelButtonText: 'Cancel',
-                },
-                noResultsScreen: {
-                  noResultsText: 'No programs found for',
-                  suggestedQueryText: 'Try searching for a different problem statement',
-                }
-              }
-            }
-          }
-        },
-        miniSearch: {
-          searchOptions: {
-            boostDocument(documentId, term, storedFields) {
-              // Boost pages where term appears in description (problem statement)
-              const desc = (storedFields?.titles?.[0] ?? '').toLowerCase()
-              return desc.includes(term.toLowerCase()) ? 2 : 1
-            },
-          },
-        },
-        _render(src: string, env: any, md: any) {
-          const match = src.match(/(### Problem Statement[\s\S]*?:::\s*tip [\s\S]*?:::)/);
-          
-          if (match) {
-            // Render and index ONLY the extracted problem statement block
-            return md.render(match[1], env);
-          }
-          
-          // If no problem statement is found, return nothing so the code isn't indexed
-          return '';
-        }
+        appId: '5PYB0FB4RG',       // paste your Application ID here
+        apiKey: '51d9424f9480f1a3efd0d07f023c4a12',      // paste your Search API Key here
+        indexName: 'bsc code index',       // find this in your Crawler config / DocSearch dashboard
       }
     },
 
@@ -172,13 +134,13 @@ const vitePressConfig = {
 
   markdown: {
     lineNumbers: true,
-    math: true, // Enables LaTeX math equations! e.g., $\frac{1}{2}$
+    math: true, 
     image: {
-      lazyLoading: true // Significantly speeds up page loads if you add screenshots
+      lazyLoading: true 
     },
     theme: {
       light: 'github-light',
-      dark: 'github-dark' // Code blocks now seamlessly match the site's theme!
+      dark: 'github-dark' 
     } as any
   },
 

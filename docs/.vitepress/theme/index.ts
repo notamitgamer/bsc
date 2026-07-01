@@ -7,6 +7,8 @@ import Footer from './components/Footer.vue'
 import SponsorButton from './components/SponsorButton.vue' 
 import ExternalLinkWarning from './components/ExternalLinkWarning.vue'
 import ReloadPrompt from './components/ReloadPrompt.vue' 
+import CopyLinkButton from './components/CopyLinkButton.vue'
+import RefreshCacheButton from './components/RefreshCacheButton.vue'
 import './style.css'
 
 export default {
@@ -19,8 +21,12 @@ export default {
         h(ExternalLinkWarning),
         h(ReloadPrompt) 
       ]),
+      'doc-before': () => h(CopyLinkButton),
       'doc-after': () => h(Footer),
-      'nav-bar-content-after': () => h(SponsorButton)
+      'nav-bar-content-after': () => h(Fragment, [
+        h(RefreshCacheButton),
+        h(SponsorButton)
+      ])
     })
   }
 } satisfies Theme

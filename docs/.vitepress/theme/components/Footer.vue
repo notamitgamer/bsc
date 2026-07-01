@@ -4,7 +4,7 @@
       Released under the 
       <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>.
     </p>
-    <p>Copyright (c) 2025-present <a href="https://amit.is-a.dev" target="_blank" rel="noopener noreferrer" class="footer-link">Amit Dutta</a></p>
+    <p>2026 &copy;  <a href="https://amit.is-a.dev" target="_blank" rel="noopener noreferrer" class="footer-link">Amit Dutta</a></p>
   </footer>
 </template>
 
