@@ -102,7 +102,11 @@ const vitePressConfig = {
           modal: {
             searchBox: {
               clearButtonTitle: 'Clear search query',
-              closeButtonText: 'Cancel',
+              closeButtonText: 'clear',
+
+              cancelButtonTitle: 'Close search',
+              cancelButtonText: '×',
+              closeButtonAriaLabel: 'Close search',
             },
             noResultsScreen: {
               noResultsText: 'No programs found for',

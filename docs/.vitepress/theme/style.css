@@ -84,10 +84,6 @@
   color: var(--vp-c-text-1);
 }
 
-/* =========================================
-   BSC PAGE — PROBLEM STATEMENT
-========================================= */
-
 .bsc-problem {
   border-left: 3px solid var(--vp-c-brand-1);
   border-radius: 0 8px 8px 0;
@@ -114,10 +110,6 @@
   line-height: 1.65;
   color: var(--vp-c-text-1);
 }
-
-/* =========================================
-   BSC PAGE — ACTION BUTTONS
-========================================= */
 
 .bsc-actions {
   display: flex;
@@ -199,7 +191,6 @@
   --vp-font-family-base: 'Lexend', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* 👇 CUSTOM SCROLLBAR: Sleek, modern scrollbar replacing default browser chunkiness 👇 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -231,4 +222,85 @@
 
 .DocSearch-NoResults-Prefill-List {
   display: none !important;
+}
+
+.DocSearch-Form {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.DocSearch-Reset svg {
+  display: none !important; 
+}
+
+.DocSearch-Reset::before {
+  content: "clear";
+  font-size: 14px;
+  font-weight: 500;
+  color: #5468ff; 
+}
+
+.DocSearch-Reset::after {
+  content: "|";
+  font-size: 14px;
+  color: var(--docsearch-muted-color);
+  margin: 0 8px;
+}
+
+.DocSearch-Cancel {
+  font-size: 20px !important; 
+  display: block !important; 
+  color: #5468ff !important; 
+  background: none !important;
+  padding-left: 0 !important;
+  line-height: 1 !important; 
+}
+
+.DocSearch-Hit[aria-selected="true"] a {
+  background-color: var(--docsearch-hit-background) !important;
+  box-shadow: var(--docsearch-hit-shadow) !important;
+  color: var(--docsearch-hit-color) !important;
+}
+
+.DocSearch-Hit a:hover {
+  background-color: var(--vp-c-brand-soft) !important; 
+}
+
+.DocSearch-Input {
+  font-size: 16px !important; 
+}
+.DocSearch-Hit-title {
+  font-size: 14px !important;
+}
+.DocSearch-Hit-source {
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.DocSearch-Hit-path {
+  font-size: 12px !important;
+}
+
+.DocSearch-MagnifierLabel svg {
+  width: 16px !important;  
+  height: 16px !important; 
+}
+
+.DocSearch-SearchBar {
+  padding-top: 1px !important; 
+  padding-bottom: 1px !important; 
+  border-bottom: 1px solid var(--vp-c-divider) !important; 
+}
+
+.DocSearch-Dropdown {
+  padding-top: 2px !important; 
+}
+
+@media (min-width: 768px) {
+  .DocSearch-Modal {
+    max-width: 800px !important; 
+    width: 100% !important;
+  }
 }
