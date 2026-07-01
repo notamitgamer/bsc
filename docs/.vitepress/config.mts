@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
-import { withPwa } from '@vite-pwa/vitepress'
 
 const vitePressConfig = {
   title: 'BSc Code Index',
@@ -26,7 +25,6 @@ const vitePressConfig = {
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'BSc Code Index' }],
     ['meta', { name: 'twitter:description', content: 'C programming assignments, indexed and documented.' }],
-    ['script', {}, `if (typeof window !== 'undefined') localStorage.setItem('vitepress:local-search-detailed-list', 'true');`]
   ] as [string, any][],
 
   sitemap: {
@@ -83,9 +81,35 @@ const vitePressConfig = {
     search: {
       provider: 'algolia',
       options: {
-        appId: '5PYB0FB4RG',       // paste your Application ID here
-        apiKey: '51d9424f9480f1a3efd0d07f023c4a12',      // paste your Search API Key here
-        indexName: 'bsc code index',       // find this in your Crawler config / DocSearch dashboard
+        appId: '5PYB0FB4RG',
+        apiKey: '51d9424f9480f1a3efd0d07f023c4a12',
+        indexName: 'bsc code index',
+        placeholder: 'Search programs...',
+        insights: true,
+        searchParameters: {
+          restrictSearchableAttributes: [
+            'hierarchy.lvl0',
+            'hierarchy.lvl1',
+            'hierarchy.lvl2',
+            'content' 
+          ],
+        },
+        translations: {
+          button: {
+            buttonText: 'Search programs...',
+            buttonAriaLabel: 'Search programs',
+          },
+          modal: {
+            searchBox: {
+              clearButtonTitle: 'Clear search query',
+              closeButtonText: 'Cancel',
+            },
+            noResultsScreen: {
+              noResultsText: 'No programs found for',
+              suggestedQueryText: 'Try searching for a different problem statement',
+            }
+          }
+        }
       }
     },
 
@@ -143,33 +167,6 @@ const vitePressConfig = {
       dark: 'github-dark' 
     } as any
   },
-
-  pwa: {
-    outDir: '.vitepress/dist',
-    registerType: 'autoUpdate' as 'autoUpdate',
-    includeAssets: ['logo.svg', 'logo_192.png', 'logo_512.png'],
-    manifest: {
-      name: 'BSc Code Index',
-      short_name: 'BSc Code',
-      description: 'C programming assignments, indexed and documented.',
-      theme_color: '#ffffff',
-      icons: [
-        {
-          src: '/logo_192.png',
-          sizes: '192x192',
-          type: 'image/png'
-        },
-        {
-          src: '/logo_512.png',
-          sizes: '512x512',
-          type: 'image/png'
-        }
-      ]
-    },
-    workbox: {
-      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
-    }
-  }
 }
 
 const sidebarConfig = {
@@ -188,4 +185,4 @@ const sidebarConfig = {
   capitalizeFirst: true,
 }
 
-export default withPwa(defineConfig(withSidebar(vitePressConfig, sidebarConfig)))
+export default defineConfig(withSidebar(vitePressConfig, sidebarConfig))
