@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 01, 2026 at 15:23 UTC
+> Last build: July 01, 2026 at 16:08 UTC
 
 ## Latest Build
 
-- **Build ID** — `b2756a80c70b1de5f8412e307c4e847fbd86f19c`
+- **Build ID** — `1eed97eb406ef0a38b73b05c92d9b27de417d512`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 01, 2026 at 15:23 UTC
+- **Build time** — July 01, 2026 at 16:08 UTC
 
 ## Recent Commits
 
+- [`1eed97e`](https://github.com/notamitgamer/bsc/commit/1eed97eb406ef0a38b73b05c92d9b27de417d512) updated algolia search modal style — Amit Dutta, Jul 01, 2026 16:08 UTC
+- [`904f703`](https://github.com/notamitgamer/bsc/commit/904f703227689e87d3f1e60a5293e44cdad2d953) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 15:24 UTC
 - [`b2756a8`](https://github.com/notamitgamer/bsc/commit/b2756a80c70b1de5f8412e307c4e847fbd86f19c) updated algolia — Amit Dutta, Jul 01, 2026 15:23 UTC
 - [`2a18b44`](https://github.com/notamitgamer/bsc/commit/2a18b44ed7862e77193d1feb41a6e2bf24de8c99) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 14:36 UTC
 - [`6012d78`](https://github.com/notamitgamer/bsc/commit/6012d783d401d84438f8abc4c5cfd71db1b59327) added algolia — Amit Dutta, Jul 01, 2026 14:35 UTC
@@ -29,8 +31,6 @@
 - [`2ef38f5`](https://github.com/notamitgamer/bsc/commit/2ef38f5c1728341bdc675b4b7a5d6910bcd5dafe) removed ci [skip ci] — Amit Dutta, Jun 24, 2026 01:04 UTC
 - [`1899d88`](https://github.com/notamitgamer/bsc/commit/1899d88f36af58473e930a3e6562d3ab034c3cc1) chore: update changelog [skip ci] — github-actions[bot], Jun 24, 2026 00:55 UTC
 - [`bd0c8e9`](https://github.com/notamitgamer/bsc/commit/bd0c8e9468bcd83e0ab6dab4fc29fe90e9b752f4) Merge pull request #10 from notamitgamer/edit — Amit Dutta, Jun 24, 2026 00:53 UTC
-- [`d0a3b73`](https://github.com/notamitgamer/bsc/commit/d0a3b7354b6b4027feb78a1946ac25774e623a6e) added more algo — Amit Dutta, Jun 24, 2026 00:40 UTC
-- [`02c08bf`](https://github.com/notamitgamer/bsc/commit/02c08bf9443ae9e45836971a64255c52cd2e7032) chore: update changelog [skip ci] — github-actions[bot], Jun 24, 2026 00:04 UTC
 
 ---
 
