@@ -398,3 +398,17 @@
     margin-left: auto !important;
   }
 }
+
+.bsc-doc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bsc-doc-toolbar .bsc-breadcrumbs {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
+}

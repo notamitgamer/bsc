@@ -34,13 +34,38 @@ const copied = ref(false)
 let resetTimer = null
 
 function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    clearTimeout(resetTimer)
-    copied.value = true
-    resetTimer = setTimeout(() => {
-      copied.value = false
-    }, 1400)
+  const url = window.location.href
+
+  navigator.clipboard.writeText(url).then(showCopied).catch(() => {
+    fallbackCopy(url)
   })
+}
+
+function fallbackCopy(text) {
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  textarea.style.position = 'fixed'
+  textarea.style.opacity = '0'
+  document.body.appendChild(textarea)
+  textarea.focus()
+  textarea.select()
+
+  try {
+    document.execCommand('copy')
+    showCopied()
+  } catch (err) {
+    console.error('Copy failed:', err)
+  }
+
+  document.body.removeChild(textarea)
+}
+
+function showCopied() {
+  clearTimeout(resetTimer)
+  copied.value = true
+  resetTimer = setTimeout(() => {
+    copied.value = false
+  }, 1400)
 }
 </script>
 
