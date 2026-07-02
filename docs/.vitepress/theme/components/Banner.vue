@@ -84,9 +84,8 @@ const acceptTerms = () => {
 .terms-banner {
   pointer-events: auto; 
   width: 100%;
-  background-color: #5c6bc8f6;
+  background-color: color-mix(in srgb, var(--banner-bg) 96%, transparent);
   color: #ffffff;  
-  /* Adjusted padding to wrap content naturally instead of forcing 33vh */
   padding: 32px 24px calc(24px + env(safe-area-inset-bottom)) 24px; 
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
   font-family: var(--vp-font-family-base);
@@ -146,7 +145,7 @@ const acceptTerms = () => {
 
 .banner-btn {
   background-color: #ffffff;
-  color: #5c6bc8;
+  color: #5b21b6;
   padding: 12px 28px;
   border-radius: 6px;
   font-size: 14px;
