@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 02, 2026 at 05:01 UTC
+> Last build: July 02, 2026 at 07:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `19cd252ccfdb063b3cd814f2d93ae1f1c3e5fd81`
+- **Build ID** — `1b07037e877b47beb9aedfd6960ca7bf1ae2b5f2`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 02, 2026 at 05:01 UTC
+- **Build time** — July 02, 2026 at 07:32 UTC
 
 ## Recent Commits
 
+- [`1b07037`](https://github.com/notamitgamer/bsc/commit/1b07037e877b47beb9aedfd6960ca7bf1ae2b5f2) added breadcrubms — Amit Dutta, Jul 02, 2026 07:32 UTC
+- [`5f4c4dc`](https://github.com/notamitgamer/bsc/commit/5f4c4dc76e84bdca49e4f793a6b1172642e0c8ce) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 05:02 UTC
 - [`19cd252`](https://github.com/notamitgamer/bsc/commit/19cd252ccfdb063b3cd814f2d93ae1f1c3e5fd81) fix(banner): replace hardcoded blue with brand color variable — Amit Dutta, Jul 02, 2026 05:01 UTC
 - [`a0badf3`](https://github.com/notamitgamer/bsc/commit/a0badf30fb25fad9d2738a52416e0017b19de57f) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 04:31 UTC
 - [`275a7ca`](https://github.com/notamitgamer/bsc/commit/275a7ca9279330d8ea1e1723501e41d0894f3d9a) style: refine DocSearch UI, add true-black dark mode, switch to Mauve theme — Amit Dutta, Jul 02, 2026 04:30 UTC
@@ -29,8 +31,6 @@
 - [`59ba504`](https://github.com/notamitgamer/bsc/commit/59ba504c1e4973795e382493524a74ec4947157e) fixed: bug - search index — Amit Dutta, Jun 30, 2026 07:35 UTC
 - [`e61ce9d`](https://github.com/notamitgamer/bsc/commit/e61ce9d468012ecf7b6540d6b2d157fdbbd6361d) chore: update changelog [skip ci] — github-actions[bot], Jun 30, 2026 07:21 UTC
 - [`f44ed1c`](https://github.com/notamitgamer/bsc/commit/f44ed1cb105a82562d8074eedb3d1592c36ccb38) more practical code viewer — Amit Dutta, Jun 30, 2026 07:20 UTC
-- [`c86e130`](https://github.com/notamitgamer/bsc/commit/c86e130df758330f45e3a4fb37dfa4672a1d3803) chore: update changelog [skip ci] — github-actions[bot], Jun 29, 2026 16:02 UTC
-- [`ec32ec2`](https://github.com/notamitgamer/bsc/commit/ec32ec24c12a140aeb1e0b2c22d643487a0b0085) added eduincs codes — Amit Dutta, Jun 29, 2026 16:01 UTC
 
 ---
 
