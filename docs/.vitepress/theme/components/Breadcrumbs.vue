@@ -101,6 +101,6 @@ function humanize(slug) {
 
 .crumb-sep {
   margin: 0 8px;
-  color: var(--vp-c-divider);
+  color: var(--vp-c-b-divider);
 }
 </style>
