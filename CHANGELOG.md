@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 02, 2026 at 04:30 UTC
+> Last build: July 02, 2026 at 05:01 UTC
 
 ## Latest Build
 
-- **Build ID** — `275a7ca9279330d8ea1e1723501e41d0894f3d9a`
+- **Build ID** — `19cd252ccfdb063b3cd814f2d93ae1f1c3e5fd81`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 02, 2026 at 04:30 UTC
+- **Build time** — July 02, 2026 at 05:01 UTC
 
 ## Recent Commits
 
+- [`19cd252`](https://github.com/notamitgamer/bsc/commit/19cd252ccfdb063b3cd814f2d93ae1f1c3e5fd81) fix(banner): replace hardcoded blue with brand color variable — Amit Dutta, Jul 02, 2026 05:01 UTC
+- [`a0badf3`](https://github.com/notamitgamer/bsc/commit/a0badf30fb25fad9d2738a52416e0017b19de57f) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 04:31 UTC
 - [`275a7ca`](https://github.com/notamitgamer/bsc/commit/275a7ca9279330d8ea1e1723501e41d0894f3d9a) style: refine DocSearch UI, add true-black dark mode, switch to Mauve theme — Amit Dutta, Jul 02, 2026 04:30 UTC
 - [`1195c6a`](https://github.com/notamitgamer/bsc/commit/1195c6a047be15dd368534771caa950605b56dbd) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 16:16 UTC
 - [`c6db20f`](https://github.com/notamitgamer/bsc/commit/c6db20f8c9f791105d506c9c2dc01d6c2e3ec32d) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 16:09 UTC
@@ -29,8 +31,6 @@
 - [`f44ed1c`](https://github.com/notamitgamer/bsc/commit/f44ed1cb105a82562d8074eedb3d1592c36ccb38) more practical code viewer — Amit Dutta, Jun 30, 2026 07:20 UTC
 - [`c86e130`](https://github.com/notamitgamer/bsc/commit/c86e130df758330f45e3a4fb37dfa4672a1d3803) chore: update changelog [skip ci] — github-actions[bot], Jun 29, 2026 16:02 UTC
 - [`ec32ec2`](https://github.com/notamitgamer/bsc/commit/ec32ec24c12a140aeb1e0b2c22d643487a0b0085) added eduincs codes — Amit Dutta, Jun 29, 2026 16:01 UTC
-- [`a0e5e3e`](https://github.com/notamitgamer/bsc/commit/a0e5e3e6d9fa98e3d302eaf274fe871a7cb51cf3) chore: update changelog [skip ci] — github-actions[bot], Jun 25, 2026 11:12 UTC
-- [`6b48fe9`](https://github.com/notamitgamer/bsc/commit/6b48fe99b177fc2b49cd1b98113b8f2d7970aa6e) updated banner [skip ci] — Amit Dutta, Jun 25, 2026 11:10 UTC
 
 ---
 
