@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 02, 2026 at 12:50 UTC
+> Last build: July 02, 2026 at 13:25 UTC
 
 ## Latest Build
 
-- **Build ID** — `5b34e2fa699bccad4f621112fc85ce749075b00b`
+- **Build ID** — `920ead8201aa9fce82d03ed632d9054f4a09a260`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 02, 2026 at 12:50 UTC
+- **Build time** — July 02, 2026 at 13:25 UTC
 
 ## Recent Commits
 
+- [`920ead8`](https://github.com/notamitgamer/bsc/commit/920ead8201aa9fce82d03ed632d9054f4a09a260) upgraded to vitepress 2.0.0-alpha.17 — Amit Dutta, Jul 02, 2026 13:25 UTC
+- [`18e08eb`](https://github.com/notamitgamer/bsc/commit/18e08eb7d180cc7393c6d026596fcbb52a2cca8a) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 12:54 UTC
 - [`5b34e2f`](https://github.com/notamitgamer/bsc/commit/5b34e2fa699bccad4f621112fc85ce749075b00b) added algo — Amit Dutta, Jul 02, 2026 12:50 UTC
 - [`5913a33`](https://github.com/notamitgamer/bsc/commit/5913a338ebaa7a072b27997bfec8c9819bfa8448) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 07:41 UTC
 - [`5a05818`](https://github.com/notamitgamer/bsc/commit/5a058183450123a9b3310ddabbc1035aa6b178fe) fixed: (bug) Breadcrumbs .crumb-sep was not showing color properly. — Amit Dutta, Jul 02, 2026 07:40 UTC
@@ -29,8 +31,6 @@
 - [`6012d78`](https://github.com/notamitgamer/bsc/commit/6012d783d401d84438f8abc4c5cfd71db1b59327) added algolia — Amit Dutta, Jul 01, 2026 14:35 UTC
 - [`4ea0bf3`](https://github.com/notamitgamer/bsc/commit/4ea0bf3698208a240204c00b49ea2d3d7244d5af) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 08:49 UTC
 - [`deafb94`](https://github.com/notamitgamer/bsc/commit/deafb94e5f4447cc77697daf5a81bec3aa7fefe9) updated format — Amit Dutta, Jul 01, 2026 08:48 UTC
-- [`1b751a4`](https://github.com/notamitgamer/bsc/commit/1b751a474801b16c9d1882cc7f8905fabf475b57) chore: update changelog [skip ci] — github-actions[bot], Jun 30, 2026 11:13 UTC
-- [`94885fb`](https://github.com/notamitgamer/bsc/commit/94885fb485684d8d31bfee7d77327a65f201d98d) fixed: bug - auto update was not possible in some mobile browsers. — Amit Dutta, Jun 30, 2026 11:11 UTC
 
 ---
 
