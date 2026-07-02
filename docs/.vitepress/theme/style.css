@@ -288,47 +288,16 @@
   }
 }
 
-
-/* ==========================================================================
-   ALGOLIA DOCSEARCH — MODAL / SEARCH BAR / FORM
-   ========================================================================== */
-
-.DocSearch-Form {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-.DocSearch-Input {
-  font-size: 16px !important;
-}
-
-.DocSearch-MagnifierLabel svg {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-.DocSearch-SearchBar {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
-  border-bottom: 1px solid var(--vp-c-divider) !important;
-}
-
-@media (min-width: 768px) {
-  .DocSearch-Modal {
-    max-width: 800px !important;
-    width: 100% !important;
-  }
-}
-
-
 /* ==========================================================================
    ALGOLIA DOCSEARCH — RESULTS / HITS
    ========================================================================== */
 
 .DocSearch-Dropdown {
-  padding-top: 2px !important;
+  padding-top: 0px !important;
+}
+
+.DocSearch-Input::placeholder {
+  font-size: 15px; 
 }
 
 .DocSearch-Hit[aria-selected="true"] a {

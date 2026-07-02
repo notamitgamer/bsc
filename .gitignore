@@ -19,3 +19,5 @@ Thumbs.db
 docs/semester_*/
 !docs/semester_*/index.md
 !docs/semester_1/model_questions.md
+.vitepress/cache
+.vitepress/dist
