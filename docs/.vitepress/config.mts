@@ -88,16 +88,26 @@ const vitePressConfig = {
         appId: '5PYB0FB4RG',
         apiKey: '51d9424f9480f1a3efd0d07f023c4a12',
         indexName: 'bsc code index',
+        askAi: {
+          assistantId: '52566362-9715-4ba2-bfa6-9b2b1fae4e10',
+          mode: 'hybrid',
+          sidePanel: true,
+          searchParameters: {},
+          appId: '5PYB0FB4RG',
+          apiKey: '51d9424f9480f1a3efd0d07f023c4a12',
+          indexName: 'bsc code index',
+          agentStudio: true,
+        },
         placeholder: 'Search programs...',
         insights: true,
-        searchParameters: {
+        /* searchParameters: {
           restrictSearchableAttributes: [
             'hierarchy.lvl0',
             'hierarchy.lvl1',
             'hierarchy.lvl2',
             'content' 
           ],
-        },
+        }, */
         translations: {
           button: {
             buttonText: 'Search programs...',
