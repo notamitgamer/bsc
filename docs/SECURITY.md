@@ -6,8 +6,8 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 
 ## Reporting a Vulnerability or Code Error
 
-While this is a personal learning project, if you discover a security vulnerability in any of the code, I would appreciate it if you could bring it to my attention.
+While this is a personal learning project, if you find a security issue in any of the code, please let me know.
 
-Please report vulnerabilities or Errors by opening a new issue on the repository. Please provide as much detail as possible in your report, including the steps to reproduce the vulnerability and to solve the error.
+You can report vulnerabilities or errors by opening a new issue on the repository. Please include as much detail as you can — steps to reproduce, and what a fix might look like if you have one in mind.
 
-Thank you for helping to improve the quality of my work.
+Thanks for helping improve the quality of my work.

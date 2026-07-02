@@ -4,12 +4,13 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 
 # Acknowledgments
 
-Building and maintaining a fast, open-source code index requires reliable and accessible infrastructure. I would like to extend my sincere gratitude to the following platforms, communities, and open-source projects that make `code.amit.is-a.dev` possible:
+`code.amit.is-a.dev` only exists because of some genuinely great free and open-source tools. Thanks to:
 
-* **[is-a.dev](https://is-a.dev)**: For providing the sleek, developer-centric domain name completely free of charge, giving this project a professional home.
-* **[Hugging Face](https://huggingface.co)**: For securely and reliably storing the extensive collection of raw programming files.
-* **[Cloudflare](https://www.cloudflare.com/)**: For handling the backend routing, DNS, and caching, seamlessly bridging the domain to ensure Hugging Face serves the code files swiftly and securely.
-* **[GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/)**: For securely storing the entire open-source repository (including all code and markdown files) and providing lightning-fast, dependable web hosting for the compiled site.
-* **[VitePress](https://vitepress.dev/)**: The phenomenal foundational frameworks that effortlessly transform raw Markdown files and code snippets into the beautiful, searchable, and highly responsive user interface you see today.
+* **[is-a.dev](https://is-a.dev)** — for the free subdomain that gave this project a home.
+* **[Hugging Face](https://huggingface.co)** — for hosting all the raw program files.
+* **[Cloudflare](https://www.cloudflare.com/)** — for DNS, routing, and caching, connecting the domain to Hugging Face so files load fast and reliably.
+* **[GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/)** — for hosting the repo (code + markdown) and serving the site itself.
+* **[VitePress](https://vitepress.dev/)** — for turning a pile of markdown and code into an actual searchable, readable site.
+* **[Algolia DocSearch](https://docsearch.algolia.com/)** — for the instant search that makes finding a program actually painless.
 
-This project thrives thanks to the generosity of these free-tier services and the incredible work of the open-source community.
+All free-tier services, all doing a lot of heavy lifting. If you're building something similar, every one of these is worth checking out.

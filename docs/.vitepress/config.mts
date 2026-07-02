@@ -42,12 +42,16 @@ const vitePressConfig = {
 
   vite: {
   server: {
-    allowedHosts: true as true
+    allowedHosts: true as true,
+    host: true,
   }
 } as any,
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: {
+      light: '/logo_light.svg',
+      dark: '/logo_dark.svg',
+  },
 
     nav: [
       { text: 'Terms', link: '/terms'},
@@ -100,17 +104,8 @@ const vitePressConfig = {
             buttonAriaLabel: 'Search programs',
           },
           modal: {
-            searchBox: {
-              clearButtonTitle: 'Clear search query',
-              closeButtonText: 'clear',
-
-              cancelButtonTitle: 'Close search',
-              cancelButtonText: '×',
-              closeButtonAriaLabel: 'Close search',
-            },
             noResultsScreen: {
               noResultsText: 'No programs found for',
-              suggestedQueryText: 'Try searching for a different problem statement',
             }
           }
         }

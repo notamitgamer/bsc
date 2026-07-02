@@ -16,7 +16,8 @@ hero:
       text: Browse all Sem
       link: .#roadmap-progress
   image: 
-    src: /logo_large.svg
+    light: /logo_light.svg
+    dark: /logo_dark.svg
     alt: logo
 
 features:
@@ -63,9 +64,12 @@ Currently navigating **Semester 2**. Folders for future semesters are placeholde
 
 ### Python Development
 
-1. Download Python `>= v3.x.x`: [Python v3.14.5 original (45 MB)](https://www.python.org/ftp/python/pymanager/python-manager-26.2.msix)
-2. Run the installer, ensure you check "Add python.exe to PATH", and complete the setup
-3. Verify with python `--version` in your terminal
+1. Download the Python Install Manager: [python-manager-26.2.msix (2 MB)](https://www.python.org/ftp/python/pymanager/python-manager-26.2.msix)
+2. Run the installer, then open a terminal and run:
+```bash
+   py install 3.14
+```
+3. Verify with `python --version` or `py --version` in your terminal
 
 ### R Programming
 

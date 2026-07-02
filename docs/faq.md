@@ -16,53 +16,53 @@ A live archive of BSc Computer Science practical codes following the WBSU curric
 On GitHub: https://github.com/notamitgamer/bsc
 
 ### 4. Can I use this code?
-Yes, under the MIT License.
+Yes, it's under the MIT License — use it freely.
 
 ### 5. Can I copy this for assignments?
-No. You should understand and rewrite the logic.
+No. Read it, understand it, then write your own version.
 
 ## Metadata
 
 ### 6. What is "Author"?
-The person who wrote the code.
+The person credited with writing that particular file — usually the original student contributor.
 
 ### 7. What is "Repo"?
-The original source repository of the file.
+The GitHub repository the file originally came from.
 
 ### 8. What is "License"?
-It defines how the code can be used.
+The terms under which you're allowed to use, copy, or modify the code.
 
 ## Usage
 
 ### 9. Can I print the code?
-Yes. Use the **Raw** button and print from your browser.
+Yes — use the **Raw** button, then print from your browser.
 
 ### 10. Can I reuse this in projects?
-Yes, but follow the license terms.
+Yes, as long as you follow the license terms.
 
 ### 11. Can I modify the code?
-Yes. You are encouraged to experiment and improve.
+Yes, go for it — experimenting and improving is encouraged.
 
 ## Academic Integrity
 
 ### 12. What is academic integrity?
-It means doing your own work honestly.
+Doing your own work, honestly — no shortcuts.
 
 ### 13. Is copying allowed?
-No. Copying without understanding is discouraged.
+No. Copying without understanding defeats the point.
 
 ### 14. What should I do instead?
 - Read the code
 - Understand the logic
-- Rewrite it yourself
+- Rewrite it yourself, from scratch
 
 ## Technical
 
 ### 15. Why is something missing?
-The project is continuously updated.
+The project is still growing — not everything is uploaded yet.
 
 ### 16. How often is it updated?
-As the academic journey progresses.
+Roughly in step with the academic term as it progresses.
 
 ### 17. Where can I report issues?
 On GitHub Issues: https://github.com/notamitgamer/bsc/issues
