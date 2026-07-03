@@ -8,7 +8,7 @@ Thank you for your interest in improving this repository! Now that this project 
 
 ## Licensing
 
-By submitting a Pull Request (PR) or code snippet to this repository, you agree that your contribution will be governed by the **[MIT License](LICENSE.md)**. 
+By submitting a Pull Request (PR) or code snippet to this repository, you agree that your contribution will be governed by the **[MIT License](license.md)**. 
 
 ## How to Contribute
 
