@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 02, 2026 at 13:25 UTC
+> Last build: July 03, 2026 at 01:55 UTC
 
 ## Latest Build
 
-- **Build ID** — `920ead8201aa9fce82d03ed632d9054f4a09a260`
+- **Build ID** — `fb90749cfd871e915fcc18889ce7eb5dad318c97`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 02, 2026 at 13:25 UTC
+- **Build time** — July 03, 2026 at 01:55 UTC
 
 ## Recent Commits
 
+- [`fb90749`](https://github.com/notamitgamer/bsc/commit/fb90749cfd871e915fcc18889ce7eb5dad318c97) removeing the patches for 2.0.0-alpha.17 — Amit Dutta, Jul 03, 2026 01:55 UTC
+- [`4744a8e`](https://github.com/notamitgamer/bsc/commit/4744a8ee2108a8c7e38f8ef0f039daca49080d95) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 13:27 UTC
 - [`920ead8`](https://github.com/notamitgamer/bsc/commit/920ead8201aa9fce82d03ed632d9054f4a09a260) upgraded to vitepress 2.0.0-alpha.17 — Amit Dutta, Jul 02, 2026 13:25 UTC
 - [`18e08eb`](https://github.com/notamitgamer/bsc/commit/18e08eb7d180cc7393c6d026596fcbb52a2cca8a) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 12:54 UTC
 - [`5b34e2f`](https://github.com/notamitgamer/bsc/commit/5b34e2fa699bccad4f621112fc85ce749075b00b) added algo — Amit Dutta, Jul 02, 2026 12:50 UTC
@@ -29,8 +31,6 @@
 - [`b2756a8`](https://github.com/notamitgamer/bsc/commit/b2756a80c70b1de5f8412e307c4e847fbd86f19c) updated algolia — Amit Dutta, Jul 01, 2026 15:23 UTC
 - [`2a18b44`](https://github.com/notamitgamer/bsc/commit/2a18b44ed7862e77193d1feb41a6e2bf24de8c99) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 14:36 UTC
 - [`6012d78`](https://github.com/notamitgamer/bsc/commit/6012d783d401d84438f8abc4c5cfd71db1b59327) added algolia — Amit Dutta, Jul 01, 2026 14:35 UTC
-- [`4ea0bf3`](https://github.com/notamitgamer/bsc/commit/4ea0bf3698208a240204c00b49ea2d3d7244d5af) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 08:49 UTC
-- [`deafb94`](https://github.com/notamitgamer/bsc/commit/deafb94e5f4447cc77697daf5a81bec3aa7fefe9) updated format — Amit Dutta, Jul 01, 2026 08:48 UTC
 
 ---
 
