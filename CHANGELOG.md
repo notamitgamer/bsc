@@ -1,16 +1,20 @@
 # Changelog
 
-> Last build: July 03, 2026 at 01:59 UTC
+> Last build: 
 
 ## Latest Build
 
-- **Build ID** — `82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6`
+- **Build ID** — `825ff480cd32551b47eed07b64e2778136869ef5`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 03, 2026 at 01:59 UTC
+- **Build time** — 
 
 ## Recent Commits
 
+- [`825ff48`](https://github.com/notamitgamer/bsc/commit/825ff480cd32551b47eed07b64e2778136869ef5) Rename SECURITY.md to security.md [skip ci] — Amit Dutta, Jul 03, 2026 02:01 UTC
+- [`b4ef1a0`](https://github.com/notamitgamer/bsc/commit/b4ef1a0ba17e9ef18cc2bc6097e4cc111fd9cfab) Rename CONTRIBUTING.md to contributing.md [skip ci] — Amit Dutta, Jul 03, 2026 02:00 UTC
+- [`de6a167`](https://github.com/notamitgamer/bsc/commit/de6a1674e66a5e53936db48fef1580c1fa59952a) Rename CODE_OF_CONDUCT.md to code_of_conduct.md [skip ci] — Amit Dutta, Jul 03, 2026 02:00 UTC
+- [`32406ea`](https://github.com/notamitgamer/bsc/commit/32406eaf20e146e0b71872e9b63f76e45c7705c5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:59 UTC
 - [`82ec4b1`](https://github.com/notamitgamer/bsc/commit/82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6) Rename LICENSE.md to license.md — Amit Dutta, Jul 03, 2026 01:59 UTC
 - [`be460cf`](https://github.com/notamitgamer/bsc/commit/be460cffa9dbcda1f010d97df92cc1492a9924f5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:56 UTC
 - [`fb90749`](https://github.com/notamitgamer/bsc/commit/fb90749cfd871e915fcc18889ce7eb5dad318c97) removeing the patches for 2.0.0-alpha.17 — Amit Dutta, Jul 03, 2026 01:55 UTC
@@ -27,10 +31,6 @@
 - [`a0badf3`](https://github.com/notamitgamer/bsc/commit/a0badf30fb25fad9d2738a52416e0017b19de57f) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 04:31 UTC
 - [`275a7ca`](https://github.com/notamitgamer/bsc/commit/275a7ca9279330d8ea1e1723501e41d0894f3d9a) style: refine DocSearch UI, add true-black dark mode, switch to Mauve theme — Amit Dutta, Jul 02, 2026 04:30 UTC
 - [`1195c6a`](https://github.com/notamitgamer/bsc/commit/1195c6a047be15dd368534771caa950605b56dbd) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 16:16 UTC
-- [`c6db20f`](https://github.com/notamitgamer/bsc/commit/c6db20f8c9f791105d506c9c2dc01d6c2e3ec32d) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 16:09 UTC
-- [`1eed97e`](https://github.com/notamitgamer/bsc/commit/1eed97eb406ef0a38b73b05c92d9b27de417d512) updated algolia search modal style — Amit Dutta, Jul 01, 2026 16:08 UTC
-- [`904f703`](https://github.com/notamitgamer/bsc/commit/904f703227689e87d3f1e60a5293e44cdad2d953) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 15:24 UTC
-- [`b2756a8`](https://github.com/notamitgamer/bsc/commit/b2756a80c70b1de5f8412e307c4e847fbd86f19c) updated algolia — Amit Dutta, Jul 01, 2026 15:23 UTC
 
 ---
 
