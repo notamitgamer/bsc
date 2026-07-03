@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 03, 2026 at 01:55 UTC
+> Last build: July 03, 2026 at 01:59 UTC
 
 ## Latest Build
 
-- **Build ID** — `fb90749cfd871e915fcc18889ce7eb5dad318c97`
+- **Build ID** — `82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 03, 2026 at 01:55 UTC
+- **Build time** — July 03, 2026 at 01:59 UTC
 
 ## Recent Commits
 
+- [`82ec4b1`](https://github.com/notamitgamer/bsc/commit/82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6) Rename LICENSE.md to license.md — Amit Dutta, Jul 03, 2026 01:59 UTC
+- [`be460cf`](https://github.com/notamitgamer/bsc/commit/be460cffa9dbcda1f010d97df92cc1492a9924f5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:56 UTC
 - [`fb90749`](https://github.com/notamitgamer/bsc/commit/fb90749cfd871e915fcc18889ce7eb5dad318c97) removeing the patches for 2.0.0-alpha.17 — Amit Dutta, Jul 03, 2026 01:55 UTC
 - [`4744a8e`](https://github.com/notamitgamer/bsc/commit/4744a8ee2108a8c7e38f8ef0f039daca49080d95) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 13:27 UTC
 - [`920ead8`](https://github.com/notamitgamer/bsc/commit/920ead8201aa9fce82d03ed632d9054f4a09a260) upgraded to vitepress 2.0.0-alpha.17 — Amit Dutta, Jul 02, 2026 13:25 UTC
@@ -29,8 +31,6 @@
 - [`1eed97e`](https://github.com/notamitgamer/bsc/commit/1eed97eb406ef0a38b73b05c92d9b27de417d512) updated algolia search modal style — Amit Dutta, Jul 01, 2026 16:08 UTC
 - [`904f703`](https://github.com/notamitgamer/bsc/commit/904f703227689e87d3f1e60a5293e44cdad2d953) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 15:24 UTC
 - [`b2756a8`](https://github.com/notamitgamer/bsc/commit/b2756a80c70b1de5f8412e307c4e847fbd86f19c) updated algolia — Amit Dutta, Jul 01, 2026 15:23 UTC
-- [`2a18b44`](https://github.com/notamitgamer/bsc/commit/2a18b44ed7862e77193d1feb41a6e2bf24de8c99) chore: update changelog [skip ci] — github-actions[bot], Jul 01, 2026 14:36 UTC
-- [`6012d78`](https://github.com/notamitgamer/bsc/commit/6012d783d401d84438f8abc4c5cfd71db1b59327) added algolia — Amit Dutta, Jul 01, 2026 14:35 UTC
 
 ---
 
