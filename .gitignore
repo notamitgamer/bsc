@@ -21,3 +21,4 @@ docs/semester_*/
 !docs/semester_1/model_questions.md
 .vitepress/cache
 .vitepress/dist
+buildLog

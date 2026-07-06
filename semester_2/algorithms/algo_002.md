@@ -1,4 +1,4 @@
-# algo_02
+# algo_002
 
 ### Problem Statement
 
