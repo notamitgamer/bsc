@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 06, 2026 at 16:04 UTC
+> Last build: July 06, 2026 at 16:11 UTC
 
 ## Latest Build
 
-- **Build ID** — `9dbdb86c9034720da419b084c02043aee70cec30`
+- **Build ID** — `b60fa47fd89592816565704b9606c1077cc020d1`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 06, 2026 at 16:04 UTC
+- **Build time** — July 06, 2026 at 16:11 UTC
 
 ## Recent Commits
 
+- [`b60fa47`](https://github.com/notamitgamer/bsc/commit/b60fa47fd89592816565704b9606c1077cc020d1) Update favicon to logo_light.svg in config — Amit Dutta, Jul 06, 2026 16:11 UTC
+- [`d53611e`](https://github.com/notamitgamer/bsc/commit/d53611e2faaca808658ea86501b7d334fe20d7b2) chore: update changelog [skip ci] — github-actions[bot], Jul 06, 2026 16:05 UTC
 - [`9dbdb86`](https://github.com/notamitgamer/bsc/commit/9dbdb86c9034720da419b084c02043aee70cec30) refactor: update algorithm docs, workflows, and add code — Amit Dutta, Jul 06, 2026 16:04 UTC
 - [`f3e8aa3`](https://github.com/notamitgamer/bsc/commit/f3e8aa30ad4620f44fcf672cdb549e4e03a8d6b7) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 08:38 UTC
 - [`a93a2d6`](https://github.com/notamitgamer/bsc/commit/a93a2d69761d35796e8350e8e63def377127a887) added download files — Amit Dutta, Jul 03, 2026 08:37 UTC
@@ -29,8 +31,6 @@
 - [`5913a33`](https://github.com/notamitgamer/bsc/commit/5913a338ebaa7a072b27997bfec8c9819bfa8448) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 07:41 UTC
 - [`5a05818`](https://github.com/notamitgamer/bsc/commit/5a058183450123a9b3310ddabbc1035aa6b178fe) fixed: (bug) Breadcrumbs .crumb-sep was not showing color properly. — Amit Dutta, Jul 02, 2026 07:40 UTC
 - [`37a8aeb`](https://github.com/notamitgamer/bsc/commit/37a8aeb235630687daaf45c2dfc70de4a3336efb) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 07:33 UTC
-- [`1b07037`](https://github.com/notamitgamer/bsc/commit/1b07037e877b47beb9aedfd6960ca7bf1ae2b5f2) added breadcrubms — Amit Dutta, Jul 02, 2026 07:32 UTC
-- [`5f4c4dc`](https://github.com/notamitgamer/bsc/commit/5f4c4dc76e84bdca49e4f793a6b1172642e0c8ce) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 05:02 UTC
 
 ---
 
