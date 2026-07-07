@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: 
+> Last build: July 07, 2026 at 02:40 UTC
 
 ## Latest Build
 
-- **Build ID** — `02285c04ef33d7e923a18ca9545dca162a24837c`
+- **Build ID** — `d9a0a3ae490d79d85906ff9f1a113961b61bcfe1`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — 
+- **Build time** — July 07, 2026 at 02:40 UTC
 
 ## Recent Commits
 
+- [`d9a0a3a`](https://github.com/notamitgamer/bsc/commit/d9a0a3ae490d79d85906ff9f1a113961b61bcfe1) fixed: fixed the license link in footer; refrctor: banner is redesigned, now with more room; — Amit Dutta, Jul 07, 2026 02:40 UTC
+- [`f29c84f`](https://github.com/notamitgamer/bsc/commit/f29c84f91f36bb399c29e1ed8e9d32ee56be6c1d) chore: update changelog [skip ci] — github-actions[bot], Jul 06, 2026 16:21 UTC
 - [`02285c0`](https://github.com/notamitgamer/bsc/commit/02285c04ef33d7e923a18ca9545dca162a24837c) chore: update changelog [skip ci] — github-actions[bot], Jul 06, 2026 16:13 UTC
 - [`224afe9`](https://github.com/notamitgamer/bsc/commit/224afe950a9c3a8c8cfe0d49a33458a848265de8) chore: update changelog [skip ci] — github-actions[bot], Jul 06, 2026 16:11 UTC
 - [`b60fa47`](https://github.com/notamitgamer/bsc/commit/b60fa47fd89592816565704b9606c1077cc020d1) Update favicon to logo_light.svg in config — Amit Dutta, Jul 06, 2026 16:11 UTC
@@ -29,8 +31,6 @@
 - [`4744a8e`](https://github.com/notamitgamer/bsc/commit/4744a8ee2108a8c7e38f8ef0f039daca49080d95) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 13:27 UTC
 - [`920ead8`](https://github.com/notamitgamer/bsc/commit/920ead8201aa9fce82d03ed632d9054f4a09a260) upgraded to vitepress 2.0.0-alpha.17 — Amit Dutta, Jul 02, 2026 13:25 UTC
 - [`18e08eb`](https://github.com/notamitgamer/bsc/commit/18e08eb7d180cc7393c6d026596fcbb52a2cca8a) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 12:54 UTC
-- [`5b34e2f`](https://github.com/notamitgamer/bsc/commit/5b34e2fa699bccad4f621112fc85ce749075b00b) added algo — Amit Dutta, Jul 02, 2026 12:50 UTC
-- [`5913a33`](https://github.com/notamitgamer/bsc/commit/5913a338ebaa7a072b27997bfec8c9819bfa8448) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 07:41 UTC
 
 ---
 
