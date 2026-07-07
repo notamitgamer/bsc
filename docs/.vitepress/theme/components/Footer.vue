@@ -2,7 +2,7 @@
   <footer class="simple-footer">
     <p>
       Released under the 
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>.
+      <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a>.
     </p>
     <p>2026 &copy;  <a href="https://amit.is-a.dev" target="_blank" rel="noopener noreferrer" class="footer-link">Amit Dutta</a></p>
   </footer>

@@ -67,6 +67,7 @@ const triggerBurst = () => {
       href="https://github.com/sponsors/notamitgamer"
       class="sponsor-button"
       target="_blank"
+      rel="noopener noreferrer"
       title="Sponsor Amit Dutta on GitHub"
       @mouseenter="triggerBurst"
       @click="triggerBurst"
