@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Silent Auto-Pull",
+            "type": "shell",
+            "command": "git pull",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "C/C++: build active file",
+            "type": "shell",
+            "command": "if [ \"${fileExtname}\" = \".cpp\" ]; then c=\"g++\"; else c=\"gcc\"; fi; exe=\"${fileDirname}/${fileBasenameNoExtension}\"; B=\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\"; fnH() { if [ \"${2:-true}\" = \"true\" ]; then echo \"\"; fi; echo -e \"\\e[90m$B\\e[0m\"; echo -e \" \\e[36m$1\\e[0m\"; echo -e \"\\e[90m$B\\e[0m\"; echo \"\"; }; fnR() { printf \"%-15s\" \"$1\"; echo -e \"\\e[${3:-0}m$2\\e[0m\"; }; fnT() { if [ $1 -ge 1000 ]; then echo \"$((1 / 1000)) sec ($1 ms)\"; else echo \"$1 ms\"; fi; }; fnH \"BUILD\" false; echo \"Compiling ${fileBasename}...\"; echo \"\"; start_t=$(date +%s%3N); out=$($c -fdiagnostics-color=always -g \"${file}\" -o \"$exe\" 2>&1); bexit=$?; end_t=$(date +%s%3N); bms=$((end_t - start_t)); if [ -n \"$out\" ]; then echo -e \"$out\"; fi; w=$(echo \"$out\" | grep -ic \"warning:\"); e=$(echo \"$out\" | grep -ic \"error:\"); if [ $bexit -eq 0 ]; then bs=\"✓ Success\"; bc=\"32\"; else bs=\"✗ Failed\"; bc=\"31\"; fi; echo -e \"\\e[${bc}m${bs} in $(fnT $bms)\\e[0m\"; fnH \"BUILD REPORT\"; fnR \"File\" \"${fileBasename}\"; fnR \"Compiler\" \"$c\"; fnR \"Target\" \"x64\"; fnR \"Build\" \"$bs\" \"$bc\"; if [ $w -gt 0 ]; then wc=\"33\"; else wc=\"0\"; fi; fnR \"Warnings\" \"$w\" \"$wc\"; if [ $e -gt 0 ]; then ec=\"31\"; else ec=\"0\"; fi; fnR \"Errors\" \"$e\" \"$ec\"; if [ -f \"$exe\" ]; then sz=$(du -h \"$exe\" | cut -f1); fnR \"Size\" \"$sz\"; fi; fnR \"Build Time\" \"$(fnT $bms)\"; if [ $bexit -ne 0 ]; then exit 1; fi; exit 0",
+            "args": [],
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "/bin/bash",
+                    "args": ["-c"]
+                }
+            },
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "detail": "Auto-selects gcc for .c and g++ for .cpp"
+        },
+        {
+            "label": "C/C++: build and run active file",
+            "type": "shell",
+            "command": "if [ \"${fileExtname}\" = \".cpp\" ]; then c=\"g++\"; else c=\"gcc\"; fi; exe=\"${fileDirname}/${fileBasenameNoExtension}\"; logDir=\"/home/notamitgamer/Documents/bsc/buildLog\"; mkdir -p \"$logDir\"; ts=$(date +\"%Y-%m-%d_%H-%m-%M_%S\"); logFile=\"$logDir/buildLog_$ts.txt\"; B=\"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\"; fnH() { title=\"$1\"; show_c=\"${2:-true}\"; show_l=\"${3:-true}\"; nl=\"${4:-true}\"; if [ \"$show_c\" = \"true\" ]; then if [ \"$nl\" = \"true\" ]; then echo \"\"; fi; echo -e \"\\e[90m$B\\e[0m\"; echo -e \" \\e[36m$title\\e[0m\"; echo -e \"\\e[90m$B\\e[0m\"; echo \"\"; fi; if [ \"$show_l\" = \"true\" ]; then if [ \"$nl\" = \"true\" ]; then echo \"\" >> \"$logFile\"; fi; echo \"$B\" >> \"$logFile\"; echo \" $title\" >> \"$logFile\"; echo \"$B\" >> \"$logFile\"; echo \"\" >> \"$logFile\"; fi; }; fnR() { pad=$(printf \"%-16s\" \"$1\"); echo -e \"${pad}\\e[${3:-0}m$2\\e[0m\"; echo \"${pad}$2\" >> \"$logFile\"; }; fnL() { echo -e \"\\e[${2:-0}m$1\\e[0m\"; clean=$(echo \"$1\" | sed -r \"s/\\x1B\\[([0-9]{1,3}(;[0-9]{1,3})*)?[mGK]//g\"); echo \"$clean\" >> \"$logFile\"; }; fnT() { if [ $1 -ge 1000 ]; then echo \"$(($1 / 1000)) sec ($1 ms)\"; else echo \"$1 ms\"; fi; }; ver=$($c --version | head -n 1); fnH \"BUILD\" true true false; fnL \"Compiling ${fileBasename}...\" \"0\"; fnL \"$ver\" \"90\"; fnL \"\" \"0\"; start_t=$(date +%s%3N); out=$($c -fdiagnostics-color=always -g \"${file}\" -o \"$exe\" 2>&1); bexit=$?; end_t=$(date +%s%3N); bms=$((end_t - start_t)); if [ -n \"$out\" ]; then echo -e \"$out\"; cleanOut=$(echo \"$out\" | sed -r \"s/\\x1B\\[([0-9]{1,3}(;[0-9]{1,3})*)?[mGK]//g\"); echo \"$cleanOut\" >> \"$logFile\"; fi; w=$(echo \"$out\" | grep -ic \"warning:\"); e=$(echo \"$out\" | grep -ic \"error:\"); if [ $bexit -eq 0 ]; then bs=\"✓ Success\"; bc=\"32\"; else bs=\"✗ Failed\"; bc=\"31\"; fi; fnL \"$bs in $(fnT $bms)\" \"$bc\"; fnH \"BUILD REPORT\"; fnR \"Source\" \"${file}\"; loc=$(wc -l < \"${file}\"); fnR \"Lines of Code\" \"$loc\"; fnR \"Timestamp\" \"$(date +'%Y-%m-%d %H:%M:%S')\"; fnR \"Compiler\" \"$c\"; fnR \"Target\" \"x64\"; fnR \"Build\" \"$bs\" \"$bc\"; if [ $w -gt 0 ]; then wc=\"33\"; else wc=\"0\"; fi; fnR \"Warnings\" \"$w\" \"$wc\"; if [ $e -gt 0 ]; then ec=\"31\"; else ec=\"0\"; fi; fnR \"Errors\" \"$e\" \"$ec\"; if [ -f \"$exe\" ]; then sz=$(du -h \"$exe\" | cut -f1); fnR \"Size\" \"$sz\"; fi; fnR \"Build Time\" \"$(fnT $bms)\"; fnR \"Log File\" \"$logFile\" \"90\"; if [ $bexit -ne 0 ]; then exit 1; fi; fnH \"RUN\" true false; rstart_t=$(date +%s%3N); \"$exe\"; rexit=$?; rend_t=$(date +%s%3N); rms=$((rend_t - rstart_t)); fnH \"EXECUTION REPORT\"; if [ $rexit -eq 0 ]; then rc=\"32\"; else rc=\"31\"; fi; fnR \"Exit Code\" \"$rexit\" \"$rc\"; fnR \"Runtime\" \"$(fnT $rms)\"; rm -f \"$exe\"; fnR \"Executable\" \"Removed\"; fnH \"SOURCE CODE\" false true; cat \"${file}\" >> \"$logFile\"; exit 0",
+            "args": [],
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "/bin/bash",
+                    "args": ["-c"]
+                }
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "detail": "Builds, runs, dynamic time, full logging, one-click close, flush top"
+        }
+    ]
+}
