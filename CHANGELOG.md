@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: July 10, 2026 at 09:49 UTC
+> Last build: July 10, 2026 at 16:34 UTC
 
 ## Latest Build
 
-- **Build ID** — `2a5433c9d665146cd264dc54276f714bfb4e7ace`
+- **Build ID** — `c1111e50193d871b67571c867aa300959d0faa96`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 10, 2026 at 09:49 UTC
+- **Build time** — July 10, 2026 at 16:34 UTC
 
 ## Recent Commits
 
+- [`c1111e5`](https://github.com/notamitgamer/bsc/commit/c1111e50193d871b67571c867aa300959d0faa96) Refactor: remade the tasks.json for Linux, added for pgrm files. — Amit Dutta, Jul 10, 2026 16:34 UTC
+- [`2a2aa50`](https://github.com/notamitgamer/bsc/commit/2a2aa50bf879fd5cdd41b143f92fd5b6a8594d76) Testing gpg key on new OS setup [skip ci] — Amit Dutta, Jul 10, 2026 16:19 UTC
+- [`3794ff4`](https://github.com/notamitgamer/bsc/commit/3794ff4a245866ec7143a5ec6235d5836fc88e5d) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 09:49 UTC
 - [`2a5433c`](https://github.com/notamitgamer/bsc/commit/2a5433c9d665146cd264dc54276f714bfb4e7ace) moved to Fedora Linux 44 from Windows 11 — Amit Dutta, Jul 10, 2026 09:49 UTC
 - [`7197a62`](https://github.com/notamitgamer/bsc/commit/7197a620dfa5f921e1bd23dcd84ab227227a55bc) chore: update changelog [skip ci] — github-actions[bot], Jul 07, 2026 02:42 UTC
 - [`d9a0a3a`](https://github.com/notamitgamer/bsc/commit/d9a0a3ae490d79d85906ff9f1a113961b61bcfe1) fixed: fixed the license link in footer; refrctor: banner is redesigned, now with more room; — Amit Dutta, Jul 07, 2026 02:40 UTC
@@ -28,9 +31,6 @@
 - [`de6a167`](https://github.com/notamitgamer/bsc/commit/de6a1674e66a5e53936db48fef1580c1fa59952a) Rename CODE_OF_CONDUCT.md to code_of_conduct.md [skip ci] — Amit Dutta, Jul 03, 2026 02:00 UTC
 - [`32406ea`](https://github.com/notamitgamer/bsc/commit/32406eaf20e146e0b71872e9b63f76e45c7705c5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:59 UTC
 - [`82ec4b1`](https://github.com/notamitgamer/bsc/commit/82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6) Rename LICENSE.md to license.md — Amit Dutta, Jul 03, 2026 01:59 UTC
-- [`be460cf`](https://github.com/notamitgamer/bsc/commit/be460cffa9dbcda1f010d97df92cc1492a9924f5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:56 UTC
-- [`fb90749`](https://github.com/notamitgamer/bsc/commit/fb90749cfd871e915fcc18889ce7eb5dad318c97) removeing the patches for 2.0.0-alpha.17 — Amit Dutta, Jul 03, 2026 01:55 UTC
-- [`4744a8e`](https://github.com/notamitgamer/bsc/commit/4744a8ee2108a8c7e38f8ef0f039daca49080d95) chore: update changelog [skip ci] — github-actions[bot], Jul 02, 2026 13:27 UTC
 
 ---
 
