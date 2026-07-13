@@ -383,3 +383,9 @@
   flex: 1;
   min-width: 0;
 }
+
+.DocSearch-Button:focus,
+.DocSearch-Button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
