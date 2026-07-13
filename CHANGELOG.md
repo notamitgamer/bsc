@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: July 10, 2026 at 16:34 UTC
+> Last build: July 13, 2026 at 08:29 UTC
 
 ## Latest Build
 
-- **Build ID** — `c1111e50193d871b67571c867aa300959d0faa96`
+- **Build ID** — `6c65d37ca9d3e0c00fee93a5e8d0b819620436be`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 10, 2026 at 16:34 UTC
+- **Build time** — July 13, 2026 at 08:29 UTC
 
 ## Recent Commits
 
+- [`6c65d37`](https://github.com/notamitgamer/bsc/commit/6c65d37ca9d3e0c00fee93a5e8d0b819620436be) fixed some ui things — Amit Dutta, Jul 13, 2026 08:29 UTC
+- [`aa8ee55`](https://github.com/notamitgamer/bsc/commit/aa8ee552e17e38904450c586ac53b486462d05e4) [skip ci] — Amit Dutta, Jul 12, 2026 08:59 UTC
+- [`7e028b5`](https://github.com/notamitgamer/bsc/commit/7e028b5b1a96aca9253c8a1c3acaad9b1a415ef7) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 16:35 UTC
 - [`c1111e5`](https://github.com/notamitgamer/bsc/commit/c1111e50193d871b67571c867aa300959d0faa96) Refactor: remade the tasks.json for Linux, added for pgrm files. — Amit Dutta, Jul 10, 2026 16:34 UTC
 - [`2a2aa50`](https://github.com/notamitgamer/bsc/commit/2a2aa50bf879fd5cdd41b143f92fd5b6a8594d76) Testing gpg key on new OS setup [skip ci] — Amit Dutta, Jul 10, 2026 16:19 UTC
 - [`3794ff4`](https://github.com/notamitgamer/bsc/commit/3794ff4a245866ec7143a5ec6235d5836fc88e5d) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 09:49 UTC
@@ -28,9 +31,6 @@
 - [`0273366`](https://github.com/notamitgamer/bsc/commit/02733660c76f7dd930674cbae8033ee9230fb6b8) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 02:01 UTC
 - [`825ff48`](https://github.com/notamitgamer/bsc/commit/825ff480cd32551b47eed07b64e2778136869ef5) Rename SECURITY.md to security.md [skip ci] — Amit Dutta, Jul 03, 2026 02:01 UTC
 - [`b4ef1a0`](https://github.com/notamitgamer/bsc/commit/b4ef1a0ba17e9ef18cc2bc6097e4cc111fd9cfab) Rename CONTRIBUTING.md to contributing.md [skip ci] — Amit Dutta, Jul 03, 2026 02:00 UTC
-- [`de6a167`](https://github.com/notamitgamer/bsc/commit/de6a1674e66a5e53936db48fef1580c1fa59952a) Rename CODE_OF_CONDUCT.md to code_of_conduct.md [skip ci] — Amit Dutta, Jul 03, 2026 02:00 UTC
-- [`32406ea`](https://github.com/notamitgamer/bsc/commit/32406eaf20e146e0b71872e9b63f76e45c7705c5) chore: update changelog [skip ci] — github-actions[bot], Jul 03, 2026 01:59 UTC
-- [`82ec4b1`](https://github.com/notamitgamer/bsc/commit/82ec4b15ea47f1ae03fdc0a85c15bb8358904cc6) Rename LICENSE.md to license.md — Amit Dutta, Jul 03, 2026 01:59 UTC
 
 ---
 
