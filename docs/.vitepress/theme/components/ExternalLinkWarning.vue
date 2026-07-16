@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isVisible = ref(false)
 const pendingUrl = ref('')
-const countdown = ref(3)
-const isOpening = ref(false)
-let timer: ReturnType<typeof setInterval> | null = null
-let openingTimer: ReturnType<typeof setTimeout> | null = null
+const copied = ref(false)
 
 const safeDomains = [
   'amit.is-a.dev',
@@ -15,51 +12,10 @@ const safeDomains = [
   'raw.usercontent.amit.is-a.dev'
 ]
 
-const displayDomain = computed(() => {
-  try { return new URL(pendingUrl.value).hostname } catch { return pendingUrl.value }
-})
-
-const truncatedUrl = computed(() => {
-  return pendingUrl.value.length > 52 ? pendingUrl.value.slice(0, 52) + '…' : pendingUrl.value
-})
-
-const countdownLabel = computed(() => {
-  if (isOpening.value) return 'Opening…'
-  return `in ${countdown.value}s`
-})
-
-const stopAll = () => {
-  if (timer) { clearInterval(timer); timer = null }
-  if (openingTimer) { clearTimeout(openingTimer); openingTimer = null }
-}
-
-const startCountdown = () => {
-  stopAll()
-  countdown.value = 3
-  isOpening.value = false
-  timer = setInterval(() => {
-    countdown.value--
-    if (countdown.value <= 0) {
-      clearInterval(timer!)
-      timer = null
-      triggerOpen()
-    }
-  }, 1000)
-}
-
-const triggerOpen = () => {
-  isOpening.value = true
-  openingTimer = setTimeout(() => {
-    window.open(pendingUrl.value, '_blank', 'noopener,noreferrer')
-    reset()
-  }, 400)
-}
-
 const reset = () => {
-  stopAll()
   isVisible.value = false
-  isOpening.value = false
   pendingUrl.value = ''
+  copied.value = false
 }
 
 const handleGlobalClick = (e: MouseEvent) => {
@@ -79,229 +35,204 @@ const handleGlobalClick = (e: MouseEvent) => {
   } catch {}
 }
 
-watch(isVisible, (val) => {
-  if (val) startCountdown()
-  else stopAll()
-})
-
 onMounted(() => document.addEventListener('click', handleGlobalClick))
-onUnmounted(() => { document.removeEventListener('click', handleGlobalClick); stopAll() })
+onUnmounted(() => document.removeEventListener('click', handleGlobalClick))
 
-const proceed = () => triggerOpen()
-const cancel = () => reset()
+const openLink = () => {
+  window.open(pendingUrl.value, '_blank', 'noopener,noreferrer')
+  reset()
+}
 
-const copied = ref(false)
-const copyUrl = () => {
-  navigator.clipboard.writeText(pendingUrl.value)
+const copyUrl = async () => {
+  await navigator.clipboard.writeText(pendingUrl.value)
   copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
+  setTimeout(() => { copied.value = false }, 1500)
 }
 </script>
 
 <template>
-  <Transition name="toast">
-    <div v-if="isVisible" class="toast" role="status" aria-live="polite">
+  <Teleport to="body">
+    <Transition name="fade">
+      <div v-if="isVisible" class="overlay" @click="reset"></div>
+    </Transition>
 
-      <!-- Progress bar -->
-      <div class="progress">
-        <div class="progress-bar" :style="{ animationDuration: '3s' }"></div>
-      </div>
+    <Transition name="sheet">
+      <div v-if="isVisible" class="sheet" role="dialog" aria-modal="true">
+        <div class="handle"></div>
 
-      <div class="toast-inner">
+        <p class="warning">
+          This link will take you outside the website. I am not responsible for the content of external sites.
+        </p>
 
-        <div class="toast-top">
-          <span class="toast-heading">
-            Redirecting to <strong>{{ displayDomain }}</strong> {{ countdownLabel }}
-          </span>
-          <button class="btn-cancel" @click="cancel" aria-label="Cancel redirect">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </button>
-        </div>
+        <div class="url-box">{{ pendingUrl }}</div>
 
-        <div class="toast-url-row">
-          <a class="toast-url" :href="pendingUrl" target="_blank" rel="noopener noreferrer" @click.prevent="proceed">
-            {{ truncatedUrl }}
-          </a>
-          <button class="btn-copy" @click="copyUrl" :aria-label="copied ? 'Copied' : 'Copy URL'">
-            <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="actions">
+          <button class="btn btn-copy" @click="copyUrl">
+            <svg v-if="!copied" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
               <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
             </svg>
-            <svg v-else xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
+            {{ copied ? 'Copied' : 'Copy Link' }}
+          </button>
+
+          <button class="btn btn-open" @click="openLink">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Open Link
           </button>
         </div>
-
-        <p class="toast-disclaimer">code.amit.is-a.dev is not responsible for the content of external sites.</p>
-
       </div>
-
-    </div>
-  </Transition>
+    </Transition>
+  </Teleport>
 </template>
 
 <style scoped>
-.toast {
+.overlay {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 100000;
-  width: 360px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99998;
+}
+
+.sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
   background: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px 16px 0 0;
+  padding: 10px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Progress bar at top */
-.progress {
-  height: 3px;
+.handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
   background: var(--vp-c-divider);
-  width: 100%;
+  margin: 0 auto 16px;
 }
 
-.progress-bar {
-  height: 100%;
-  background: var(--vp-c-brand-1);
-  width: 100%;
-  transform-origin: left;
-  animation: shrink linear forwards;
+.warning {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  margin: 0 0 14px;
+  text-align: center;
 }
 
-@keyframes shrink {
-  from { transform: scaleX(1); }
-  to   { transform: scaleX(0); }
-}
-
-.toast-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 12px 14px 14px 16px;
-}
-
-.toast-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.toast-heading {
-  font-size: 0.8125rem;
-  color: var(--vp-c-text-1);
-  line-height: 1.4;
-}
-
-.toast-url-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.toast-url {
-  font-size: 0.725rem;
+.url-box {
+  font-size: 0.8rem;
   font-family: var(--vp-font-family-mono);
-  color: var(--vp-c-brand-1);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-  flex: 1;
-  cursor: pointer;
-}
-
-.toast-url:hover {
-  color: var(--vp-c-brand-2);
-}
-
-.toast-disclaimer {
-  font-size: 0.675rem;
-  color: var(--vp-c-text-3);
-  margin: 6px 0 0;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-alt);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  word-break: break-all;
   line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:active {
+  opacity: 0.75;
 }
 
 .btn-copy {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--vp-c-text-3);
-  transition: color 0.15s;
-}
-
-.btn-copy:hover {
-  color: var(--vp-c-text-1);
-}
-
-.btn-cancel {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--vp-c-text-3);
-  border-radius: 4px;
-  transition: background 0.15s, color 0.15s;
-  padding: 0;
-}
-
-.btn-cancel:hover {
   background: var(--vp-c-bg-alt);
   color: var(--vp-c-text-1);
 }
 
-/* Transition */
-.toast-enter-active {
-  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.toast-leave-active {
-  transition: opacity 0.15s ease, transform 0.2s ease;
-}
-.toast-enter-from {
-  opacity: 0;
-  transform: translateY(12px) scale(0.97);
-}
-.toast-leave-to {
-  opacity: 0;
-  transform: translateY(6px) scale(0.97);
+.btn-open {
+  background: var(--vp-c-brand-1);
+  color: #fff;
 }
 
-/* Mobile: full width at bottom */
-@media (max-width: 480px) {
-  .toast {
-    bottom: 0;
-    right: 0;
-    left: 0;
+/* Larger screens: centered rounded card instead of a bottom sheet */
+@media (min-width: 640px) {
+  .sheet {
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    border-radius: 12px 12px 0 0;
-    border-bottom: none;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    max-width: 400px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   }
 
-  .toast-enter-from {
-    transform: translateY(100%);
-    opacity: 1;
+  .handle {
+    display: none;
   }
-  .toast-leave-to {
-    transform: translateY(100%);
-    opacity: 1;
+
+  .warning {
+    text-align: left;
   }
+
+  .sheet-enter-active,
+  .sheet-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .sheet-enter-from,
+  .sheet-leave-to {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+}
+
+/* Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.sheet-enter-active {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sheet-leave-active {
+  transition: transform 0.2s ease;
+}
+.sheet-enter-from,
+.sheet-leave-to {
+  transform: translateY(100%);
 }
 </style>
