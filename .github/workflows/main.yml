@@ -45,6 +45,7 @@ jobs:
           git lfs install
           git lfs track "*.pdf"
           git lfs track "*.docx"
+          git lfs track "*.odt"
           git add .gitattributes
           
           git config user.name "github-actions[bot]"
