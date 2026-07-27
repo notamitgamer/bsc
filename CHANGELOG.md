@@ -1,17 +1,21 @@
 # Changelog
 
-> Last build: July 26, 2026 at 07:18 UTC
+> Last build: July 27, 2026 at 01:21 UTC
 
 ## Latest Build
 
-- **Build ID** — `9b2ac5d1a28a71b3b86be5033382fc9810a9c50a`
+- **Build ID** — `cb226e59895525ff75a0799ac75a6909e43e6b80`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 26, 2026 at 07:18 UTC
+- **Build time** — July 27, 2026 at 01:21 UTC
 
 ## Recent Commits
 
+- [`cb226e5`](https://github.com/notamitgamer/bsc/commit/cb226e59895525ff75a0799ac75a6909e43e6b80) updated docs, and moved to [Micro](https://micro-editor.github.io/) from VSCode — Amit Dutta, Jul 27, 2026 01:21 UTC
+- [`ffc86e0`](https://github.com/notamitgamer/bsc/commit/ffc86e0498769847474d6304d07d079954da0707) Merge pull request #12 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-6b7f7a8c69 [skip ci] — Amit Dutta, Jul 26, 2026 07:21 UTC
+- [`9fb136a`](https://github.com/notamitgamer/bsc/commit/9fb136a8bfae2c7a8781e086ff1f6a7e09be63ad) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:18 UTC
 - [`9b2ac5d`](https://github.com/notamitgamer/bsc/commit/9b2ac5d1a28a71b3b86be5033382fc9810a9c50a) Add LFS tracking for .odt files — Amit Dutta, Jul 26, 2026 07:18 UTC
+- [`ad7e0c7`](https://github.com/notamitgamer/bsc/commit/ad7e0c7ebd20ebea8929d00a6e602458a522d8a3) Bump postcss in the npm_and_yarn group across 1 directory — dependabot[bot], Jul 26, 2026 07:15 UTC
 - [`fc3346b`](https://github.com/notamitgamer/bsc/commit/fc3346b7e3b84ac2f758591c93947090cd32de9d) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:13 UTC
 - [`0c161fe`](https://github.com/notamitgamer/bsc/commit/0c161fef35923a8ba2185d361afe2fb40769cd75) added assignments — Amit Dutta, Jul 26, 2026 07:13 UTC
 - [`2231308`](https://github.com/notamitgamer/bsc/commit/223130840c990274e45f97b57c2a6cfc427437b0) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:02 UTC
@@ -27,10 +31,6 @@
 - [`7e028b5`](https://github.com/notamitgamer/bsc/commit/7e028b5b1a96aca9253c8a1c3acaad9b1a415ef7) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 16:35 UTC
 - [`c1111e5`](https://github.com/notamitgamer/bsc/commit/c1111e50193d871b67571c867aa300959d0faa96) Refactor: remade the tasks.json for Linux, added for pgrm files. — Amit Dutta, Jul 10, 2026 16:34 UTC
 - [`2a2aa50`](https://github.com/notamitgamer/bsc/commit/2a2aa50bf879fd5cdd41b143f92fd5b6a8594d76) Testing gpg key on new OS setup [skip ci] — Amit Dutta, Jul 10, 2026 16:19 UTC
-- [`3794ff4`](https://github.com/notamitgamer/bsc/commit/3794ff4a245866ec7143a5ec6235d5836fc88e5d) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 09:49 UTC
-- [`2a5433c`](https://github.com/notamitgamer/bsc/commit/2a5433c9d665146cd264dc54276f714bfb4e7ace) moved to Fedora Linux 44 from Windows 11 — Amit Dutta, Jul 10, 2026 09:49 UTC
-- [`7197a62`](https://github.com/notamitgamer/bsc/commit/7197a620dfa5f921e1bd23dcd84ab227227a55bc) chore: update changelog [skip ci] — github-actions[bot], Jul 07, 2026 02:42 UTC
-- [`d9a0a3a`](https://github.com/notamitgamer/bsc/commit/d9a0a3ae490d79d85906ff9f1a113961b61bcfe1) fixed: fixed the license link in footer; refrctor: banner is redesigned, now with more room; — Amit Dutta, Jul 07, 2026 02:40 UTC
 
 ---
 
