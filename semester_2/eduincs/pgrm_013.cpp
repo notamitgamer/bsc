@@ -1,5 +1,5 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com)
+ * Author: Amit Dutta <amitdutta4255@gmail.com>
  * Repo: https://github.com/notamitgamer/bsc
  * License: MIT
  */
