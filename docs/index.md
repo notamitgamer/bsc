@@ -56,6 +56,10 @@ Currently navigating **Semester 2**. Folders for future semesters are placeholde
 
 ## Environment Setup
 
+::: warning Environment Notice
+This setup guide is primarily for Microsoft Windows. Since my machine runs Arch Linux (btw) with rolling updates, I don't actively track these Windows toolchain versions every day, though I will try to update them periodically.
+:::
+
 ### C / C++ Development
 
 1. Download compiler: [MinGW64.zip (85 MB)](https://amit.is-a.dev/download/MinGW64.zip) or the [original MinGW-w64 release](https://github.com/notamitgamer/bsc/releases/tag/MinGW-2021-09-05)
