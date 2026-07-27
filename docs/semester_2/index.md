@@ -20,12 +20,14 @@ This folder contains all my current academic work, including practicals, assignm
 | 3 | Tuition | [Open Folder](tuition/index.md) |
 | 4 | Python | [Open Folder](python/index.md) |
 | 5 | Algorithm | [Open Folder](algorithms/index.md) |
+| 6 | Assignments | [Open Folder](assignments/index.md) |
 
 ## Directory Structure
  
 To keep the repository organized, the C++ and Python programs are divided into specific categories based on their origin and purpose.
  
 ### C++ Programming (Data Structures)
+* **`/assignments`**: Assignmets cpp, odt and pdf files.
 * **`/practice/`**: General, day-to-day CPP programming practice files.
 * **`/tuition/`**: Programs and problem-solving exercises completed during tuition classes.
 * **`/algorithms/`**: Some algorithms.

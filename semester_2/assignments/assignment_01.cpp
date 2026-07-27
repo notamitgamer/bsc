@@ -1,3 +1,11 @@
+/*
+ * Author: Amit Dutta (amitdutta4255@gmail.com)
+ * Repo: https://github.com/notamitgamer/bsc
+ * License: MIT
+ */
+/* Write a program to implement a Diagonal Matrix a Lower Triangular Matrix, an Upper Triangular Matrix, and a
+Symmetric Matrix using a one-dimensional array. */
+
 #include <iostream>
 
 using namespace std;
