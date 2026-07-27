@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 27, 2026 at 01:21 UTC
+> Last build: July 27, 2026 at 03:38 UTC
 
 ## Latest Build
 
-- **Build ID** — `cb226e59895525ff75a0799ac75a6909e43e6b80`
+- **Build ID** — `14777566c094bbd2f709829b0ea3636801a540ac`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 27, 2026 at 01:21 UTC
+- **Build time** — July 27, 2026 at 03:38 UTC
 
 ## Recent Commits
 
+- [`1477756`](https://github.com/notamitgamer/bsc/commit/14777566c094bbd2f709829b0ea3636801a540ac) trying with micro — Amit Dutta, Jul 27, 2026 03:38 UTC
+- [`5889a8f`](https://github.com/notamitgamer/bsc/commit/5889a8fd8c29614f16451d3f4734f17840f86b9f) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 01:28 UTC
 - [`cb226e5`](https://github.com/notamitgamer/bsc/commit/cb226e59895525ff75a0799ac75a6909e43e6b80) updated docs, and moved to [Micro](https://micro-editor.github.io/) from VSCode — Amit Dutta, Jul 27, 2026 01:21 UTC
 - [`ffc86e0`](https://github.com/notamitgamer/bsc/commit/ffc86e0498769847474d6304d07d079954da0707) Merge pull request #12 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-6b7f7a8c69 [skip ci] — Amit Dutta, Jul 26, 2026 07:21 UTC
 - [`9fb136a`](https://github.com/notamitgamer/bsc/commit/9fb136a8bfae2c7a8781e086ff1f6a7e09be63ad) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:18 UTC
@@ -29,8 +31,6 @@
 - [`6c65d37`](https://github.com/notamitgamer/bsc/commit/6c65d37ca9d3e0c00fee93a5e8d0b819620436be) fixed some ui things — Amit Dutta, Jul 13, 2026 08:29 UTC
 - [`aa8ee55`](https://github.com/notamitgamer/bsc/commit/aa8ee552e17e38904450c586ac53b486462d05e4) [skip ci] — Amit Dutta, Jul 12, 2026 08:59 UTC
 - [`7e028b5`](https://github.com/notamitgamer/bsc/commit/7e028b5b1a96aca9253c8a1c3acaad9b1a415ef7) chore: update changelog [skip ci] — github-actions[bot], Jul 10, 2026 16:35 UTC
-- [`c1111e5`](https://github.com/notamitgamer/bsc/commit/c1111e50193d871b67571c867aa300959d0faa96) Refactor: remade the tasks.json for Linux, added for pgrm files. — Amit Dutta, Jul 10, 2026 16:34 UTC
-- [`2a2aa50`](https://github.com/notamitgamer/bsc/commit/2a2aa50bf879fd5cdd41b143f92fd5b6a8594d76) Testing gpg key on new OS setup [skip ci] — Amit Dutta, Jul 10, 2026 16:19 UTC
 
 ---
 
