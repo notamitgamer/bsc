@@ -72,8 +72,9 @@ def esc_html(s: str) -> str:
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 def format_author(author: str) -> str:
-    """Return a mailto markdown link if the author string contains an email."""
-    m = re.search(r'(.*?)\s*<(.*?)>', author)
+    """Return a mailto markdown link if the author string contains an email.
+    Handles both 'Name <email>' and 'Name (email)' formats."""
+    m = re.search(r'(.*?)\s*[<(]([^<>()]+@[^<>()]+)[>)]', author)
     if m:
         name  = esc_html(m.group(1).strip())
         email = esc_html(m.group(2).strip())
@@ -82,13 +83,12 @@ def format_author(author: str) -> str:
 
 def format_author_html(author: str) -> str:
     """Return an HTML <a> mailto link if the author string contains an email.
-    Use this instead of format_author() inside single-line raw HTML blocks
-    like <div>...</div>, since markdown syntax isn't parsed inside inline HTML."""
-    m = re.search(r'(.*?)\s*<(.*?)>', author)
+    Handles both 'Name <email>' and 'Name (email)' formats."""
+    m = re.search(r'(.*?)\s*[<(]([^<>()]+@[^<>()]+)[>)]', author)
     if m:
         name  = esc_html(m.group(1).strip())
         email = esc_html(m.group(2).strip())
-        return f'<a href="mailto:{email}">{name}</a>'
+        return f'<a href="mailto:{email}" style="color:var(--vp-c-text-3);">{name}</a>'
     return esc_html(author)
 
 def parse_c_style(content):
@@ -374,9 +374,9 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
     
     meta_parts = []
     if author:
-        meta_parts.append(format_author_html(author))
+        meta_parts.append(f"Author — {format_author_html(author)}")
     if date:
-        meta_parts.append(esc_html(date))
+        meta_parts.append(f"Updated {esc_html(date)}")
 
     if meta_parts:
         body += [
