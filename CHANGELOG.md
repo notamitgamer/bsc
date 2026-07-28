@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: July 28, 2026 at 12:01 UTC
+> Last build: July 28, 2026 at 12:15 UTC
 
 ## Latest Build
 
-- **Build ID** — `9fbbd3dceccf59cba9b5f99d2de12cb8e26d31e8`
+- **Build ID** — `bb85631fbe438b7dafe015a8e0ce0782ac36d1c4`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 28, 2026 at 12:01 UTC
+- **Build time** — July 28, 2026 at 12:15 UTC
 
 ## Recent Commits
 
+- [`bb85631`](https://github.com/notamitgamer/bsc/commit/bb85631fbe438b7dafe015a8e0ce0782ac36d1c4) Merge pull request #16 from notamitgamer/edit-20260728-174406 — Amit Dutta, Jul 28, 2026 12:15 UTC
+- [`b9fade2`](https://github.com/notamitgamer/bsc/commit/b9fade2a6a9399b00202d1b22758683a9615b8b5) fixed hyperlink issue — Amit Dutta, Jul 28, 2026 12:14 UTC
+- [`97200fa`](https://github.com/notamitgamer/bsc/commit/97200fa8021707ce60bb243d5f5e8aaf39a55296) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:01 UTC
 - [`9fbbd3d`](https://github.com/notamitgamer/bsc/commit/9fbbd3dceccf59cba9b5f99d2de12cb8e26d31e8) Merge pull request #15 from notamitgamer/edit-20260728-173004 — Amit Dutta, Jul 28, 2026 12:01 UTC
 - [`e36f700`](https://github.com/notamitgamer/bsc/commit/e36f700b25ff94d4dd9f63203809397c503376e6) updated the structure a bit — Amit Dutta, Jul 28, 2026 12:00 UTC
 - [`b192e47`](https://github.com/notamitgamer/bsc/commit/b192e47de40b3a61fbc3c849447bdf9b48d98230) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 15:12 UTC
@@ -28,9 +31,6 @@
 - [`ffc86e0`](https://github.com/notamitgamer/bsc/commit/ffc86e0498769847474d6304d07d079954da0707) Merge pull request #12 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-6b7f7a8c69 [skip ci] — Amit Dutta, Jul 26, 2026 07:21 UTC
 - [`9fb136a`](https://github.com/notamitgamer/bsc/commit/9fb136a8bfae2c7a8781e086ff1f6a7e09be63ad) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:18 UTC
 - [`9b2ac5d`](https://github.com/notamitgamer/bsc/commit/9b2ac5d1a28a71b3b86be5033382fc9810a9c50a) Add LFS tracking for .odt files — Amit Dutta, Jul 26, 2026 07:18 UTC
-- [`ad7e0c7`](https://github.com/notamitgamer/bsc/commit/ad7e0c7ebd20ebea8929d00a6e602458a522d8a3) Bump postcss in the npm_and_yarn group across 1 directory — dependabot[bot], Jul 26, 2026 07:15 UTC
-- [`fc3346b`](https://github.com/notamitgamer/bsc/commit/fc3346b7e3b84ac2f758591c93947090cd32de9d) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:13 UTC
-- [`0c161fe`](https://github.com/notamitgamer/bsc/commit/0c161fef35923a8ba2185d361afe2fb40769cd75) added assignments — Amit Dutta, Jul 26, 2026 07:13 UTC
 
 ---
 
