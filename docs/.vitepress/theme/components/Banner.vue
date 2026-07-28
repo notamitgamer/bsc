@@ -33,7 +33,7 @@ const acceptTerms = () => {
           <template v-if="isFirstVisit">
             This is an open-source, <a href="https://github.com/notamitgamer/bsc/blob/main/LICENSE" class="banner-link"><strong>MIT-licensed</strong></a>
             code index — please use it as a study reference, not a copy-paste source.
-            By browsing, you agree to our <a href="/terms" class="banner-link">Terms</a>.
+            By browsing, you agree to <a href="/terms" class="banner-link">Terms</a>.
           </template>
           <template v-else>
             Updated with new materials — see the <a href="/changelog" class="banner-link">Changelog</a>.
