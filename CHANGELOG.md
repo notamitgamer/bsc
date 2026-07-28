@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: July 28, 2026 at 12:15 UTC
+> Last build: July 28, 2026 at 12:25 UTC
 
 ## Latest Build
 
-- **Build ID** — `bb85631fbe438b7dafe015a8e0ce0782ac36d1c4`
+- **Build ID** — `faa64435af97d1d1ef84ffecfb8de04537de802c`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 28, 2026 at 12:15 UTC
+- **Build time** — July 28, 2026 at 12:25 UTC
 
 ## Recent Commits
 
+- [`faa6443`](https://github.com/notamitgamer/bsc/commit/faa64435af97d1d1ef84ffecfb8de04537de802c) Merge pull request #17 from notamitgamer/edit-20260728-175428 — Amit Dutta, Jul 28, 2026 12:25 UTC
+- [`71a815d`](https://github.com/notamitgamer/bsc/commit/71a815d3b1e1468d1ba32e00cf0534609e854627) fix#2: metadata structure — Amit Dutta, Jul 28, 2026 12:24 UTC
+- [`a27cb10`](https://github.com/notamitgamer/bsc/commit/a27cb10ea82d4b42b361036e83276cbcc2f0bf98) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:15 UTC
 - [`bb85631`](https://github.com/notamitgamer/bsc/commit/bb85631fbe438b7dafe015a8e0ce0782ac36d1c4) Merge pull request #16 from notamitgamer/edit-20260728-174406 — Amit Dutta, Jul 28, 2026 12:15 UTC
 - [`b9fade2`](https://github.com/notamitgamer/bsc/commit/b9fade2a6a9399b00202d1b22758683a9615b8b5) fixed hyperlink issue — Amit Dutta, Jul 28, 2026 12:14 UTC
 - [`97200fa`](https://github.com/notamitgamer/bsc/commit/97200fa8021707ce60bb243d5f5e8aaf39a55296) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:01 UTC
@@ -28,9 +31,6 @@
 - [`1477756`](https://github.com/notamitgamer/bsc/commit/14777566c094bbd2f709829b0ea3636801a540ac) trying with micro — Amit Dutta, Jul 27, 2026 03:38 UTC
 - [`5889a8f`](https://github.com/notamitgamer/bsc/commit/5889a8fd8c29614f16451d3f4734f17840f86b9f) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 01:28 UTC
 - [`cb226e5`](https://github.com/notamitgamer/bsc/commit/cb226e59895525ff75a0799ac75a6909e43e6b80) updated docs, and moved to [Micro](https://micro-editor.github.io/) from VSCode — Amit Dutta, Jul 27, 2026 01:21 UTC
-- [`ffc86e0`](https://github.com/notamitgamer/bsc/commit/ffc86e0498769847474d6304d07d079954da0707) Merge pull request #12 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-6b7f7a8c69 [skip ci] — Amit Dutta, Jul 26, 2026 07:21 UTC
-- [`9fb136a`](https://github.com/notamitgamer/bsc/commit/9fb136a8bfae2c7a8781e086ff1f6a7e09be63ad) chore: update changelog [skip ci] — github-actions[bot], Jul 26, 2026 07:18 UTC
-- [`9b2ac5d`](https://github.com/notamitgamer/bsc/commit/9b2ac5d1a28a71b3b86be5033382fc9810a9c50a) Add LFS tracking for .odt files — Amit Dutta, Jul 26, 2026 07:18 UTC
 
 ---
 
