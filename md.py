@@ -303,25 +303,6 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         ""
     ]
 
-    has_meta = any([author, date, license_str])
-    if has_meta:
-        body.extend([
-            "### Metadata",
-            ""
-        ])
-        
-    if author:
-        body.append(f"- **Author** — {format_author(author)}")
-    if date:
-        body.append(f"- **Last updated** — {esc_html(date)}")
-    if license_str:
-        body.append(
-            f"- **License** — [{esc_html(license_str)}]"
-            f"(https://github.com/notamitgamer/bsc/blob/main/LICENSE)"
-        )
-        
-        body.append("")
-
     if problem_statement:
         body += [ 
             "",
@@ -379,7 +360,20 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         ":::",
         "",
     ]
-
+    
+    meta_parts = []
+    if author:
+        meta_parts.append(format_author(author))
+    if date:
+        meta_parts.append(esc_html(date))
+    
+    if meta_parts:
+        body += [
+            f'<div style="font-size:0.8rem;color:var(--vp-c-text-3);margin-bottom:16px;">'
+            f'{" • ".join(meta_parts)}</div>',
+            "",
+        ]
+    
     return '\n'.join(fm_lines + body)
 
 def _get_md_title(md_path: str) -> str:
