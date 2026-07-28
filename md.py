@@ -80,6 +80,17 @@ def format_author(author: str) -> str:
         return f"[{name}](mailto:{email})"
     return esc_html(author)
 
+def format_author_html(author: str) -> str:
+    """Return an HTML <a> mailto link if the author string contains an email.
+    Use this instead of format_author() inside single-line raw HTML blocks
+    like <div>...</div>, since markdown syntax isn't parsed inside inline HTML."""
+    m = re.search(r'(.*?)\s*<(.*?)>', author)
+    if m:
+        name  = esc_html(m.group(1).strip())
+        email = esc_html(m.group(2).strip())
+        return f'<a href="mailto:{email}">{name}</a>'
+    return esc_html(author)
+
 def parse_c_style(content):
     lines = content.splitlines()
     n = len(lines)
@@ -363,14 +374,14 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
     
     meta_parts = []
     if author:
-        meta_parts.append(format_author(author))
+        meta_parts.append(format_author_html(author))
     if date:
         meta_parts.append(esc_html(date))
-    
+
     if meta_parts:
         body += [
             f'<div style="font-size:0.8rem;color:var(--vp-c-text-3);margin-bottom:16px;">'
-            f'{" • ".join(meta_parts)}</div>',
+            f'{" · ".join(meta_parts)}</div>',
             "",
         ]
     
