@@ -13,6 +13,7 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 * **Web View:** [code.amit.is-a.dev](https://code.amit.is-a.dev)
 * **Live Portfolio:** [amit.is-a.dev](https://amit.is-a.dev)
 * **GitHub Profile:** [@notamitgamer](https://github.com/notamitgamer)
+* **Static but fast:** [https://git.amit.is-a.dev/bsc/](https://git.amit.is-a.dev/bsc/files.html)
 
 ---
 
