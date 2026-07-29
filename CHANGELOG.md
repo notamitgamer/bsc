@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: July 28, 2026 at 12:25 UTC
+> Last build: July 29, 2026 at 15:19 UTC
 
 ## Latest Build
 
-- **Build ID** — `faa64435af97d1d1ef84ffecfb8de04537de802c`
+- **Build ID** — `a1d9491005444919401c7269a3e7f70170bcf179`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 28, 2026 at 12:25 UTC
+- **Build time** — July 29, 2026 at 15:19 UTC
 
 ## Recent Commits
 
+- [`a1d9491`](https://github.com/notamitgamer/bsc/commit/a1d9491005444919401c7269a3e7f70170bcf179) Add static link to README — Amit Dutta, Jul 29, 2026 15:19 UTC
+- [`42b4435`](https://github.com/notamitgamer/bsc/commit/42b4435e8040582a935d6975c2d42f1db86da0c3) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:25 UTC
 - [`faa6443`](https://github.com/notamitgamer/bsc/commit/faa64435af97d1d1ef84ffecfb8de04537de802c) Merge pull request #17 from notamitgamer/edit-20260728-175428 — Amit Dutta, Jul 28, 2026 12:25 UTC
 - [`71a815d`](https://github.com/notamitgamer/bsc/commit/71a815d3b1e1468d1ba32e00cf0534609e854627) fix#2: metadata structure — Amit Dutta, Jul 28, 2026 12:24 UTC
 - [`a27cb10`](https://github.com/notamitgamer/bsc/commit/a27cb10ea82d4b42b361036e83276cbcc2f0bf98) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:15 UTC
@@ -29,8 +31,6 @@
 - [`c09678c`](https://github.com/notamitgamer/bsc/commit/c09678c6d58be8339de7ce21ef91719ba397548c) Fix author email formatting in pgrm_013.cpp — Amit Dutta, Jul 27, 2026 03:42 UTC
 - [`b14ff59`](https://github.com/notamitgamer/bsc/commit/b14ff59261c033e02dff062f69223a3d891b136e) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 03:39 UTC
 - [`1477756`](https://github.com/notamitgamer/bsc/commit/14777566c094bbd2f709829b0ea3636801a540ac) trying with micro — Amit Dutta, Jul 27, 2026 03:38 UTC
-- [`5889a8f`](https://github.com/notamitgamer/bsc/commit/5889a8fd8c29614f16451d3f4734f17840f86b9f) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 01:28 UTC
-- [`cb226e5`](https://github.com/notamitgamer/bsc/commit/cb226e59895525ff75a0799ac75a6909e43e6b80) updated docs, and moved to [Micro](https://micro-editor.github.io/) from VSCode — Amit Dutta, Jul 27, 2026 01:21 UTC
 
 ---
 
