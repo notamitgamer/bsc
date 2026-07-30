@@ -14,7 +14,7 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 * **Live Portfolio:** [amit.is-a.dev](https://amit.is-a.dev)
 * **GitHub Profile:** [@notamitgamer](https://github.com/notamitgamer)
 * **Static but fast:** [git.amit.is-a.dev/bsc](https://git.amit.is-a.dev/bsc/files.html)
-* **Self hosted:** [forgejo.amit.is-a.dev/notamitgamer/bsc](https://forgejo.amit.is-a.dev/notamitgamer/bsc)
+* **Self hosted:** [git.amitdutta.me/notamitgamer/bsc](https://git.amitdutta.me/notamitgamer/bsc)
 ---
 
 ## Roadmap and Progress
