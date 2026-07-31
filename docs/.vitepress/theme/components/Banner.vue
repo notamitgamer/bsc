@@ -99,7 +99,7 @@ const acceptTerms = () => {
 
 .banner-btn {
   background-color: #ffffff;
-  color: #5b21b6;
+  color: var(--vp-c-brand-1);
   padding: 6px 16px;
   border-radius: 6px;
   font-size: 13px;
