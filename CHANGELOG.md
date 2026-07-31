@@ -1,16 +1,21 @@
 # Changelog
 
-> Last build: July 29, 2026 at 15:19 UTC
+> Last build: July 31, 2026 at 12:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `a1d9491005444919401c7269a3e7f70170bcf179`
+- **Build ID** — `62aef7e886d897fc2446725a55e58d99b51db938`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — July 29, 2026 at 15:19 UTC
+- **Build time** — July 31, 2026 at 12:48 UTC
 
 ## Recent Commits
 
+- [`62aef7e`](https://github.com/notamitgamer/bsc/commit/62aef7e886d897fc2446725a55e58d99b51db938) Merge pull request #18 from notamitgamer/edit-20260731-181711 — Amit Dutta, Jul 31, 2026 12:48 UTC
+- [`7b6cfb9`](https://github.com/notamitgamer/bsc/commit/7b6cfb9749c97864738b7f042878cc945745d609) changed palette to catppuccin, as i was having problem with my mobile. — Amit Dutta, Jul 31, 2026 12:47 UTC
+- [`41ed499`](https://github.com/notamitgamer/bsc/commit/41ed4996c7af9d363e101f91309dfb83b0e9d470) Update self-hosted link in README [skip ci] — Amit Dutta, Jul 30, 2026 13:15 UTC
+- [`3bbca4e`](https://github.com/notamitgamer/bsc/commit/3bbca4e07a1f3d6f4b6b4f7ba4eeaf7966e86f11) Update links in README.md for clarity [skip ci] — Amit Dutta, Jul 30, 2026 09:22 UTC
+- [`1c56ced`](https://github.com/notamitgamer/bsc/commit/1c56ced2df4176810cefa87ac48f3dbe43679feb) chore: update changelog [skip ci] — github-actions[bot], Jul 29, 2026 15:19 UTC
 - [`a1d9491`](https://github.com/notamitgamer/bsc/commit/a1d9491005444919401c7269a3e7f70170bcf179) Add static link to README — Amit Dutta, Jul 29, 2026 15:19 UTC
 - [`42b4435`](https://github.com/notamitgamer/bsc/commit/42b4435e8040582a935d6975c2d42f1db86da0c3) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:25 UTC
 - [`faa6443`](https://github.com/notamitgamer/bsc/commit/faa64435af97d1d1ef84ffecfb8de04537de802c) Merge pull request #17 from notamitgamer/edit-20260728-175428 — Amit Dutta, Jul 28, 2026 12:25 UTC
@@ -26,11 +31,6 @@
 - [`0d27236`](https://github.com/notamitgamer/bsc/commit/0d272360b563942753df8939dec671d08d3ed964) added a warning — Amit Dutta, Jul 27, 2026 15:09 UTC
 - [`053970b`](https://github.com/notamitgamer/bsc/commit/053970b5016802ae7dd9d90197944211e85404ea) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 14:48 UTC
 - [`a4faf86`](https://github.com/notamitgamer/bsc/commit/a4faf866266ad129da574bef74093021f2eb3f98) Merge pull request #13 from notamitgamer/feature-20260727-201544 — Amit Dutta, Jul 27, 2026 14:47 UTC
-- [`64d68af`](https://github.com/notamitgamer/bsc/commit/64d68af8282ae03e95e4691e509ec9dfdbc01fdf) added some definitions — Amit Dutta, Jul 27, 2026 14:45 UTC
-- [`ca1fc39`](https://github.com/notamitgamer/bsc/commit/ca1fc394db06550f032bfe848a8e7eb8eac188a9) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 03:43 UTC
-- [`c09678c`](https://github.com/notamitgamer/bsc/commit/c09678c6d58be8339de7ce21ef91719ba397548c) Fix author email formatting in pgrm_013.cpp — Amit Dutta, Jul 27, 2026 03:42 UTC
-- [`b14ff59`](https://github.com/notamitgamer/bsc/commit/b14ff59261c033e02dff062f69223a3d891b136e) chore: update changelog [skip ci] — github-actions[bot], Jul 27, 2026 03:39 UTC
-- [`1477756`](https://github.com/notamitgamer/bsc/commit/14777566c094bbd2f709829b0ea3636801a540ac) trying with micro — Amit Dutta, Jul 27, 2026 03:38 UTC
 
 ---
 
