@@ -414,3 +414,51 @@
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
+
+/* ==========================================================================
+   FORCE FONT ON DOCSEARCH & AI MODALS
+   ========================================================================== */
+.DocSearch-Container, 
+.DocSearch-Container *,
+.DocSearch-Modal,
+.DocSearch-Modal * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* ==========================================================================
+   SEARCH BUTTON LOADING STATE
+   ========================================================================== */
+
+/* Hide the default icon when loading */
+.DocSearch-Button.is-loading .DocSearch-Search-Icon {
+  display: none !important;
+}
+
+/* Create the spinning animation */
+.DocSearch-Button.is-loading::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--vp-c-text-3);
+  border-top-color: var(--vp-c-brand-1); /* Uses the Peach color */
+  border-radius: 50%;
+  animation: docsearch-spin 0.8s linear infinite;
+  margin-right: 8px; /* Spaces it exactly like the original icon */
+}
+
+@keyframes docsearch-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   FORCE FONT ON DOCSEARCH & ASK AI MODALS
+   ========================================================================== */
+.DocSearch-Portal * {
+  font-family: var(--vp-font-family-base) !important;
+}
+
+/* Fallback just in case standard container is used */
+.DocSearch-Container * {
+  font-family: var(--vp-font-family-base) !important;
+}
