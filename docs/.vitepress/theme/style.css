@@ -22,42 +22,55 @@
 }
 
 ::selection {
-  background: #a8b1ff33;
+  background: #fab38733; /* Mocha Peach with opacity */
   color: var(--vp-c-text-1);
 }
 
 
 /* ==========================================================================
-   THEME COLORS — LIGHT MODE (:root = default/light)
+   THEME COLORS — LIGHT MODE (Catppuccin Latte Peach)
    ========================================================================== */
 
 :root {
+  /* Backgrounds */
+  --vp-c-bg: #eff1f5;          /* base */
+  --vp-c-bg-alt: #e6e9ef;      /* mantle */
+  --vp-c-bg-elv: #ffffff;      /* crust (inverted for elevated surfaces on light) */
+  --vp-c-bg-soft: #ccd0da;     /* surface0 */
+  --vp-c-divider: #bcc0cc;     /* surface1 */
+  --vp-c-b-divider: #4c4f69;   /* text */
+
   /* Brand */
-  --vp-c-brand-1: #8839ef;
-  --vp-c-brand-2: #7c3aed;
-  --vp-c-brand-3: #6d28d9;
-  --vp-c-brand: #8839ef;
-  --banner-bg: #8839ef;
-  --vp-c-b-divider: #000000;
+  --vp-c-brand-1: #fe640b;     /* peach */
+  --vp-c-brand-2: #dd7878;     /* flamingo */
+  --vp-c-brand-3: #e64553;     /* maroon for hover/active states */
+  --vp-c-brand: #fe640b;
+  --banner-bg: #fe640b;
 
   /* Home hero gradient (light) */
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #8839ef 50%,
-    #a855f7 50%
+    #fe640b 50%,
+    #dd7878 50%
   );
   --vp-home-hero-image-filter: blur(100px);
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #8839ef 30%,
-    #a855f7
+    #fe640b 30%,
+    #dd7878
   );
 
   /* DocSearch hit colors (light) */
-  --docsearch-hit-color: #1a1a1a;
-  --docsearch-hit-active-color: #1a1a1a;
-  --docsearch-hit-background: #f3f0fb;
+  --docsearch-hit-color: #4c4f69;
+  --docsearch-hit-active-color: #4c4f69;
+  --docsearch-hit-background: #e6e9ef;
+
+  /* Semantic (Catppuccin Latte accents) */
+  --vp-c-success: #40a02b;
+  --vp-c-warning: #df8e1d;
+  --vp-c-danger: #d20f39;
+  --vp-c-info: #1e66f5;
 
   /* Font */
   --vp-font-family-base: 'Lexend', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -65,41 +78,47 @@
 
 
 /* ==========================================================================
-   THEME COLORS — DARK MODE (.dark overrides)
+   THEME COLORS — DARK MODE (Catppuccin Mocha Peach)
    ========================================================================== */
 
 .dark {
-  /* Backgrounds → true black */
-  --vp-c-bg: #000000;
-  --vp-c-bg-alt: #000000;
-  --vp-c-bg-elv: #000000;
-  --vp-c-bg-soft: #0a0a0a;
-  --vp-c-divider: #1a1a1a;
-  --vp-c-b-divider: #ffffff;
+  /* Backgrounds */
+  --vp-c-bg: #1e1e2e;          /* base */
+  --vp-c-bg-alt: #181825;      /* mantle */
+  --vp-c-bg-elv: #11111b;      /* crust */
+  --vp-c-bg-soft: #313244;     /* surface0 */
+  --vp-c-divider: #45475a;     /* surface1 */
+  --vp-c-b-divider: #cdd6f4;   /* text */
 
   /* Brand */
-  --vp-c-brand-1: #cba6f7;
-  --vp-c-brand-2: #b48ead;
-  --vp-c-brand-3: #a374c4;
-  --vp-c-brand: #cba6f7;
+  --vp-c-brand-1: #fab387;     /* peach */
+  --vp-c-brand-2: #f2cdcd;     /* flamingo */
+  --vp-c-brand-3: #a6adc8;     /* subtext0, for hover/active states */
+  --vp-c-brand: #fab387;
 
   /* Home hero gradient (dark) */
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #cba6f7 50%,
-    #dcc6fb 50%
+    #fab387 50%,
+    #f2cdcd 50%
   );
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #cba6f7 30%,
-    #dcc6fb
+    #fab387 30%,
+    #f2cdcd
   );
 
   /* DocSearch hit colors (dark) */
-  --docsearch-hit-color: #ffffff;
-  --docsearch-hit-active-color: #ffffff;
-  --docsearch-hit-background: #1a1625;
-  --docsearch-modal-background: #000000 !important;
+  --docsearch-hit-color: #cdd6f4;
+  --docsearch-hit-active-color: #cdd6f4;
+  --docsearch-hit-background: #313244;
+  --docsearch-modal-background: #1e1e2e !important;
+
+  /* Semantic (Catppuccin Mocha accents) */
+  --vp-c-success: #a6e3a1;
+  --vp-c-warning: #f9e2af;
+  --vp-c-danger: #f38ba8;
+  --vp-c-info: #89b4fa;
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -388,4 +407,10 @@
 .DocSearch-Button:focus-visible {
   outline: none !important;
   box-shadow: none !important;
+}
+
+:root {
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
