@@ -369,6 +369,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         "::: info Printing the code",
         "To print this file, open it on GitHub and click **Raw** before printing, or use the **Download Raw** button above and print directly from that page.",
         ":::",
+        "---",
         "",
     ]
     
