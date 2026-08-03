@@ -1,16 +1,20 @@
 # Changelog
 
-> Last build: August 03, 2026 at 18:10 UTC
+> Last build: August 03, 2026 at 18:28 UTC
 
 ## Latest Build
 
-- **Build ID** — `07b1ee8588d71f9156a1ca75664dfa36f4b91cdd`
+- **Build ID** — `2a305db74433a6b922f1028c4d2f69d974aef56f`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 03, 2026 at 18:10 UTC
+- **Build time** — August 03, 2026 at 18:28 UTC
 
 ## Recent Commits
 
+- [`2a305db`](https://github.com/notamitgamer/bsc/commit/2a305db74433a6b922f1028c4d2f69d974aef56f) Merge pull request #22 from notamitgamer/Patch-2 — Amit Dutta, Aug 03, 2026 18:28 UTC
+- [`0cef4de`](https://github.com/notamitgamer/bsc/commit/0cef4def288fcd45de61a3045bcdee0733258ceb) Refactor styles for VPNavBar buttons — Amit Dutta, Aug 03, 2026 18:28 UTC
+- [`139ab63`](https://github.com/notamitgamer/bsc/commit/139ab63f63cb04c5e4ac684b82677e95e19b4746) Refactor search and ask AI button event listeners — Amit Dutta, Aug 03, 2026 18:26 UTC
+- [`52e88af`](https://github.com/notamitgamer/bsc/commit/52e88af5225153c2c786a5500820829dcbbc430d) chore: update changelog [skip ci] — github-actions[bot], Aug 03, 2026 18:11 UTC
 - [`07b1ee8`](https://github.com/notamitgamer/bsc/commit/07b1ee8588d71f9156a1ca75664dfa36f4b91cdd) Merge pull request #21 from notamitgamer/Patch — Amit Dutta, Aug 03, 2026 18:10 UTC
 - [`25aba72`](https://github.com/notamitgamer/bsc/commit/25aba72abb77f559e1e6d7bb9a064514cfa4581a) Enhance search button with prefetching functionality — Amit Dutta, Aug 03, 2026 18:09 UTC
 - [`5cffa33`](https://github.com/notamitgamer/bsc/commit/5cffa33d4b75182872a5e939fabfd85424d79aa8) Add preconnect links for Algolia Search — Amit Dutta, Aug 03, 2026 18:05 UTC
@@ -27,10 +31,6 @@
 - [`3bbca4e`](https://github.com/notamitgamer/bsc/commit/3bbca4e07a1f3d6f4b6b4f7ba4eeaf7966e86f11) Update links in README.md for clarity [skip ci] — Amit Dutta, Jul 30, 2026 09:22 UTC
 - [`1c56ced`](https://github.com/notamitgamer/bsc/commit/1c56ced2df4176810cefa87ac48f3dbe43679feb) chore: update changelog [skip ci] — github-actions[bot], Jul 29, 2026 15:19 UTC
 - [`a1d9491`](https://github.com/notamitgamer/bsc/commit/a1d9491005444919401c7269a3e7f70170bcf179) Add static link to README — Amit Dutta, Jul 29, 2026 15:19 UTC
-- [`42b4435`](https://github.com/notamitgamer/bsc/commit/42b4435e8040582a935d6975c2d42f1db86da0c3) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:25 UTC
-- [`faa6443`](https://github.com/notamitgamer/bsc/commit/faa64435af97d1d1ef84ffecfb8de04537de802c) Merge pull request #17 from notamitgamer/edit-20260728-175428 — Amit Dutta, Jul 28, 2026 12:25 UTC
-- [`71a815d`](https://github.com/notamitgamer/bsc/commit/71a815d3b1e1468d1ba32e00cf0534609e854627) fix#2: metadata structure — Amit Dutta, Jul 28, 2026 12:24 UTC
-- [`a27cb10`](https://github.com/notamitgamer/bsc/commit/a27cb10ea82d4b42b361036e83276cbcc2f0bf98) chore: update changelog [skip ci] — github-actions[bot], Jul 28, 2026 12:15 UTC
 
 ---
 
