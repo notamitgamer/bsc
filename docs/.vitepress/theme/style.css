@@ -403,8 +403,10 @@
   min-width: 0;
 }
 
-.DocSearch-Button:focus,
-.DocSearch-Button:focus-visible {
+.VPNavBarSearchButton:focus,
+.VPNavBarSearchButton:focus-visible,
+.VPNavBarAskAiButton:focus,
+.VPNavBarAskAiButton:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -429,13 +431,17 @@
    SEARCH BUTTON LOADING STATE
    ========================================================================== */
 
-/* Hide the default icon when loading */
-.DocSearch-Button.is-loading .DocSearch-Search-Icon {
+/* Hide the default icon when loading (search button uses .vpi-search,
+   Ask AI button uses .vpi-sparkles - VitePress's own icon classes, not
+   DocSearch's) */
+.VPNavBarSearchButton.is-loading .vpi-search,
+.VPNavBarAskAiButton.is-loading .vpi-sparkles {
   display: none !important;
 }
 
 /* Create the spinning animation */
-.DocSearch-Button.is-loading::before {
+.VPNavBarSearchButton.is-loading::before,
+.VPNavBarAskAiButton.is-loading::before {
   content: "";
   display: inline-block;
   width: 16px;

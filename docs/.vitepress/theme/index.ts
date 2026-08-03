@@ -30,45 +30,57 @@ export default {
   setup() {
     onMounted(() => {
       setTimeout(() => {
-        // Target the search/ask AI button
-        const searchBtn = document.querySelector('.DocSearch-Button');
-        if (!searchBtn) return;
+        const searchBtn = document.querySelector('.VPNavBarSearchButton');
+        const askAiBtn = document.querySelector('.VPNavBarAskAiButton');
+        const triggerBtns = [searchBtn, askAiBtn].filter(Boolean) as Element[];
+        if (!triggerBtns.length) return;
 
         let prefetched = false;
         const prefetchDocSearch = () => {
           if (prefetched) return;
           prefetched = true;
-          import('@docsearch/js').catch(() => {
+          Promise.all([
+            import('@docsearch/js'),
+            import('@docsearch/sidepanel-js')
+          ]).catch(() => {
             prefetched = false;
           });
         };
-        searchBtn.addEventListener('mouseenter', prefetchDocSearch, { once: true });
-        searchBtn.addEventListener('focus', prefetchDocSearch, { once: true });
-        searchBtn.addEventListener('touchstart', prefetchDocSearch, { once: true, passive: true });
-        searchBtn.addEventListener('click', () => {
-          prefetchDocSearch();
-          if (!document.querySelector('.DocSearch-Container')) {
-            searchBtn.classList.add('is-loading');
-          }
+
+        for (const btn of triggerBtns) {
+          btn.addEventListener('mouseenter', prefetchDocSearch, { once: true });
+          btn.addEventListener('focus', prefetchDocSearch, { once: true });
+          btn.addEventListener('touchstart', prefetchDocSearch, { once: true, passive: true });
+          btn.addEventListener('click', prefetchDocSearch, { once: true });
+        }
+
+        window.addEventListener('keydown', (e) => {
+          const key = e.key.toLowerCase();
+          const isShortcut =
+            ((e.ctrlKey || e.metaKey) && (key === 'k' || key === 'i')) ||
+            key === '/';
+          if (isShortcut) prefetchDocSearch();
         });
 
-        const observer = new MutationObserver((mutations) => {
-          for (const mutation of mutations) {
-            if (mutation.addedNodes.length) {
-              // Check if the added node is the Algolia modal container
-              const isModalAdded = Array.from(mutation.addedNodes).some(
-                (node: any) => node.classList && node.classList.contains('DocSearch-Container')
-              );
-              
-              // If the modal is added, remove the loading state
-              if (isModalAdded) {
-                searchBtn.classList.remove('is-loading');
-              }
+        for (const btn of triggerBtns) {
+          btn.addEventListener('click', () => {
+            if (
+              !document.querySelector('.DocSearch-Modal') &&
+              !document.querySelector('#docsearch-sidepanel')
+            ) {
+              btn.classList.add('is-loading');
             }
+          });
+        }
+
+        const observer = new MutationObserver(() => {
+          const isOpen =
+            document.querySelector('.DocSearch-Modal') ||
+            document.querySelector('#docsearch-sidepanel');
+          if (isOpen) {
+            for (const btn of triggerBtns) btn.classList.remove('is-loading');
           }
         });
-
-        // Start observing the body for injected elements
         observer.observe(document.body, { childList: true, subtree: true });
       }, 500);
     })
