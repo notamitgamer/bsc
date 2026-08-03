@@ -14,6 +14,10 @@ const vitePressConfig = {
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap' }],
+
+    // Algolia Search warm-up
+    ['link', { rel: 'preconnect', href: 'https://5PYB0FB4RG-dsn.algolia.net', crossorigin: '' }],
+    ['link', { rel: 'preconnect', href: 'https://5PYB0FB4RG.algolia.net', crossorigin: '' }],
     
     // SEO & Social Meta Tags
     ['meta', { name: 'algolia-site-verification', content: 'D732FF69A9237B42' }],
