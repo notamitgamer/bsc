@@ -29,21 +29,29 @@ export default {
 
   setup() {
     onMounted(() => {
-      // Small delay to ensure VitePress has rendered the navbar button
       setTimeout(() => {
         // Target the search/ask AI button
         const searchBtn = document.querySelector('.DocSearch-Button');
         if (!searchBtn) return;
 
-        // When clicked, add the loading spinner
+        let prefetched = false;
+        const prefetchDocSearch = () => {
+          if (prefetched) return;
+          prefetched = true;
+          import('@docsearch/js').catch(() => {
+            prefetched = false;
+          });
+        };
+        searchBtn.addEventListener('mouseenter', prefetchDocSearch, { once: true });
+        searchBtn.addEventListener('focus', prefetchDocSearch, { once: true });
+        searchBtn.addEventListener('touchstart', prefetchDocSearch, { once: true, passive: true });
         searchBtn.addEventListener('click', () => {
-          // If the modal is already in the DOM, no need for the spinner
+          prefetchDocSearch();
           if (!document.querySelector('.DocSearch-Container')) {
             searchBtn.classList.add('is-loading');
           }
         });
 
-        // Watch the page to see when the modal finishes downloading and appears
         const observer = new MutationObserver((mutations) => {
           for (const mutation of mutations) {
             if (mutation.addedNodes.length) {
