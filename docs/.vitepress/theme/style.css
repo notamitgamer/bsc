@@ -291,6 +291,13 @@
   background-color: var(--vp-c-brand-3);
 }
 
+/* Dark mode: peach (#fab387) is too light for white text (~1.8:1 contrast).
+   Use near-black text instead for proper AA contrast (~13:1). */
+.dark .bsc-btn-primary,
+.dark .bsc-btn-primary:hover {
+  color: var(--vp-c-bg-elv) !important; /* #11111b */
+}
+
 
 /* ==========================================================================
    VITEPRESS UI TWEAKS
@@ -415,6 +422,14 @@
   --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/* Dark mode: peach (#fab387) is too light for white button text (~1.8:1
+   contrast). Override VitePress's default brand-button text var. */
+.dark {
+  --vp-button-brand-text: var(--vp-c-bg-elv); /* #11111b */
+  --vp-button-brand-hover-text: var(--vp-c-bg-elv);
+  --vp-button-brand-active-text: var(--vp-c-bg-elv);
 }
 
 /* ==========================================================================
