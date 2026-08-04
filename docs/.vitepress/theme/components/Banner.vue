@@ -114,6 +114,10 @@ const acceptTerms = () => {
   transform: scale(1.02);
 }
 
+.banner-btn {
+  color: #fe640b;
+}
+
 @media (max-width: 640px) {
   .terms-banner {
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom)) 16px;
