@@ -375,9 +375,9 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
     
     meta_parts = []
     if author:
-        meta_parts.append(f"Author — {format_author_html(author)}")
+        meta_parts.append(f"● Author - {format_author_html(author)}")
     if date:
-        meta_parts.append(f"Updated {esc_html(date)}")
+        meta_parts.append(f"Updated - {esc_html(date)}")
 
     if meta_parts:
         body += [
