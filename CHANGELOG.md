@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 07, 2026 at 10:44 UTC
+> Last build: August 07, 2026 at 10:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `69dd12f94bf19135f32833ef1bdbbacf32f402a4`
+- **Build ID** — `17b35784653ae8c114562952eb2f03807e68fa12`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 07, 2026 at 10:44 UTC
+- **Build time** — August 07, 2026 at 10:48 UTC
 
 ## Recent Commits
 
+- [`17b3578`](https://github.com/notamitgamer/bsc/commit/17b35784653ae8c114562952eb2f03807e68fa12) Merge pull request #27 from notamitgamer/edit-20260807-161750 — Amit Dutta, Aug 07, 2026 10:48 UTC
+- [`890e572`](https://github.com/notamitgamer/bsc/commit/890e572888e9aed98d54b6097c88472ce6b50174) fixed the type, it broked the side nav — Amit Dutta, Aug 07, 2026 10:47 UTC
+- [`c000c35`](https://github.com/notamitgamer/bsc/commit/c000c35a276ef991615c1bceb023023b7c31b58e) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:44 UTC
 - [`69dd12f`](https://github.com/notamitgamer/bsc/commit/69dd12f94bf19135f32833ef1bdbbacf32f402a4) Merge pull request #25 from notamitgamer/edit-20260807-161336 — Amit Dutta, Aug 07, 2026 10:44 UTC
 - [`b715f1d`](https://github.com/notamitgamer/bsc/commit/b715f1dd75e5ed251e9e71c5f71ab8d63fedf23f) more algo — Amit Dutta, Aug 07, 2026 10:43 UTC
 - [`9c06d74`](https://github.com/notamitgamer/bsc/commit/9c06d74d0c2f3ab9e025f2b12a90a5af5e012a49) chore: update changelog [skip ci] — github-actions[bot], Aug 04, 2026 02:59 UTC
@@ -28,9 +31,6 @@
 - [`25aba72`](https://github.com/notamitgamer/bsc/commit/25aba72abb77f559e1e6d7bb9a064514cfa4581a) Enhance search button with prefetching functionality — Amit Dutta, Aug 03, 2026 18:09 UTC
 - [`5cffa33`](https://github.com/notamitgamer/bsc/commit/5cffa33d4b75182872a5e939fabfd85424d79aa8) Add preconnect links for Algolia Search — Amit Dutta, Aug 03, 2026 18:05 UTC
 - [`c36369c`](https://github.com/notamitgamer/bsc/commit/c36369cf8195a68b874a6631de1afc3490f33593) chore: update changelog [skip ci] — github-actions[bot], Aug 01, 2026 16:11 UTC
-- [`5369608`](https://github.com/notamitgamer/bsc/commit/5369608e118f8df35e2df1ebddd64edde4933d7b) Merge pull request #20 from notamitgamer/edit-20260801-214105 — Amit Dutta, Aug 01, 2026 16:11 UTC
-- [`c36bab9`](https://github.com/notamitgamer/bsc/commit/c36bab9094e53878f098168221b7cd103e4c6c42) practice — Amit Dutta, Aug 01, 2026 16:11 UTC
-- [`be3e8b4`](https://github.com/notamitgamer/bsc/commit/be3e8b40603de0093837f155876d1ee61b9790d1) chore: update changelog [skip ci] — github-actions[bot], Jul 31, 2026 13:06 UTC
 
 ---
 
