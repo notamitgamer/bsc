@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 07, 2026 at 13:48 UTC
+> Last build: August 07, 2026 at 14:35 UTC
 
 ## Latest Build
 
-- **Build ID** — `426099e93f2405534c66614cb874520ae1ef0025`
+- **Build ID** — `c28e24d9439afd64180b49891827e69bf3d18f7d`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 07, 2026 at 13:48 UTC
+- **Build time** — August 07, 2026 at 14:35 UTC
 
 ## Recent Commits
 
+- [`c28e24d`](https://github.com/notamitgamer/bsc/commit/c28e24d9439afd64180b49891827e69bf3d18f7d) Merge pull request #28 from notamitgamer/edit-20260807-200434 — Amit Dutta, Aug 07, 2026 14:35 UTC
+- [`98bd662`](https://github.com/notamitgamer/bsc/commit/98bd6628f1ccbab06fe39b1d81c3577d21543729) changed the font — Amit Dutta, Aug 07, 2026 14:34 UTC
+- [`814f68f`](https://github.com/notamitgamer/bsc/commit/814f68f846eedbf852d456aedd35277eecef84b2) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 13:48 UTC
 - [`426099e`](https://github.com/notamitgamer/bsc/commit/426099e93f2405534c66614cb874520ae1ef0025) Merge pull request #26 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-5f7cea1f02 — Amit Dutta, Aug 07, 2026 13:48 UTC
 - [`189e20f`](https://github.com/notamitgamer/bsc/commit/189e20fce131077fde7c478999dc0b5d9e3adfbb) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:48 UTC
 - [`17b3578`](https://github.com/notamitgamer/bsc/commit/17b35784653ae8c114562952eb2f03807e68fa12) Merge pull request #27 from notamitgamer/edit-20260807-161750 — Amit Dutta, Aug 07, 2026 10:48 UTC
@@ -28,9 +31,6 @@
 - [`5e57907`](https://github.com/notamitgamer/bsc/commit/5e579070274c0d5e8414923cdddae7e38b0dec49) chore: update changelog [skip ci] — github-actions[bot], Aug 03, 2026 18:28 UTC
 - [`2a305db`](https://github.com/notamitgamer/bsc/commit/2a305db74433a6b922f1028c4d2f69d974aef56f) Merge pull request #22 from notamitgamer/Patch-2 — Amit Dutta, Aug 03, 2026 18:28 UTC
 - [`0cef4de`](https://github.com/notamitgamer/bsc/commit/0cef4def288fcd45de61a3045bcdee0733258ceb) Refactor styles for VPNavBar buttons — Amit Dutta, Aug 03, 2026 18:28 UTC
-- [`139ab63`](https://github.com/notamitgamer/bsc/commit/139ab63f63cb04c5e4ac684b82677e95e19b4746) Refactor search and ask AI button event listeners — Amit Dutta, Aug 03, 2026 18:26 UTC
-- [`52e88af`](https://github.com/notamitgamer/bsc/commit/52e88af5225153c2c786a5500820829dcbbc430d) chore: update changelog [skip ci] — github-actions[bot], Aug 03, 2026 18:11 UTC
-- [`07b1ee8`](https://github.com/notamitgamer/bsc/commit/07b1ee8588d71f9156a1ca75664dfa36f4b91cdd) Merge pull request #21 from notamitgamer/Patch — Amit Dutta, Aug 03, 2026 18:10 UTC
 
 ---
 
