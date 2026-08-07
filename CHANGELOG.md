@@ -1,18 +1,21 @@
 # Changelog
 
-> Last build: August 07, 2026 at 10:48 UTC
+> Last build: August 07, 2026 at 13:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `17b35784653ae8c114562952eb2f03807e68fa12`
+- **Build ID** — `426099e93f2405534c66614cb874520ae1ef0025`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 07, 2026 at 10:48 UTC
+- **Build time** — August 07, 2026 at 13:48 UTC
 
 ## Recent Commits
 
+- [`426099e`](https://github.com/notamitgamer/bsc/commit/426099e93f2405534c66614cb874520ae1ef0025) Merge pull request #26 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-5f7cea1f02 — Amit Dutta, Aug 07, 2026 13:48 UTC
+- [`189e20f`](https://github.com/notamitgamer/bsc/commit/189e20fce131077fde7c478999dc0b5d9e3adfbb) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:48 UTC
 - [`17b3578`](https://github.com/notamitgamer/bsc/commit/17b35784653ae8c114562952eb2f03807e68fa12) Merge pull request #27 from notamitgamer/edit-20260807-161750 — Amit Dutta, Aug 07, 2026 10:48 UTC
 - [`890e572`](https://github.com/notamitgamer/bsc/commit/890e572888e9aed98d54b6097c88472ce6b50174) fixed the type, it broked the side nav — Amit Dutta, Aug 07, 2026 10:47 UTC
+- [`8b1927f`](https://github.com/notamitgamer/bsc/commit/8b1927fc62a77e340e5c5fba7b413d656cefbef7) Bump fast-uri in the npm_and_yarn group across 1 directory — dependabot[bot], Aug 07, 2026 10:45 UTC
 - [`c000c35`](https://github.com/notamitgamer/bsc/commit/c000c35a276ef991615c1bceb023023b7c31b58e) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:44 UTC
 - [`69dd12f`](https://github.com/notamitgamer/bsc/commit/69dd12f94bf19135f32833ef1bdbbacf32f402a4) Merge pull request #25 from notamitgamer/edit-20260807-161336 — Amit Dutta, Aug 07, 2026 10:44 UTC
 - [`b715f1d`](https://github.com/notamitgamer/bsc/commit/b715f1dd75e5ed251e9e71c5f71ab8d63fedf23f) more algo — Amit Dutta, Aug 07, 2026 10:43 UTC
@@ -28,9 +31,6 @@
 - [`139ab63`](https://github.com/notamitgamer/bsc/commit/139ab63f63cb04c5e4ac684b82677e95e19b4746) Refactor search and ask AI button event listeners — Amit Dutta, Aug 03, 2026 18:26 UTC
 - [`52e88af`](https://github.com/notamitgamer/bsc/commit/52e88af5225153c2c786a5500820829dcbbc430d) chore: update changelog [skip ci] — github-actions[bot], Aug 03, 2026 18:11 UTC
 - [`07b1ee8`](https://github.com/notamitgamer/bsc/commit/07b1ee8588d71f9156a1ca75664dfa36f4b91cdd) Merge pull request #21 from notamitgamer/Patch — Amit Dutta, Aug 03, 2026 18:10 UTC
-- [`25aba72`](https://github.com/notamitgamer/bsc/commit/25aba72abb77f559e1e6d7bb9a064514cfa4581a) Enhance search button with prefetching functionality — Amit Dutta, Aug 03, 2026 18:09 UTC
-- [`5cffa33`](https://github.com/notamitgamer/bsc/commit/5cffa33d4b75182872a5e939fabfd85424d79aa8) Add preconnect links for Algolia Search — Amit Dutta, Aug 03, 2026 18:05 UTC
-- [`c36369c`](https://github.com/notamitgamer/bsc/commit/c36369cf8195a68b874a6631de1afc3490f33593) chore: update changelog [skip ci] — github-actions[bot], Aug 01, 2026 16:11 UTC
 
 ---
 
