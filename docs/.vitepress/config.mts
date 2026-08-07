@@ -13,7 +13,7 @@ const vitePressConfig = {
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo_light.svg' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap' }],
 
     // Algolia Search warm-up
     ['link', { rel: 'preconnect', href: 'https://5PYB0FB4RG-dsn.algolia.net', crossorigin: '' }],
@@ -175,8 +175,8 @@ const vitePressConfig = {
       lazyLoading: true 
     },
     theme: {
-      light: 'github-light',
-      dark: 'github-dark' 
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha' 
     } as any
   },
 }
