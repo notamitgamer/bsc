@@ -21,10 +21,6 @@ hero:
     alt: logo
 
 features:
-  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-code-icon lucide-square-code"><path d="m10 9-3 3 3 3"/><path d="m14 15 3-3-3-3"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>'
-    title: 400+ Programs in Sem 1
-    details: Just getting started! Featuring over 400 C and R source files from the first semester alone. Expect this archive to scale massively over the full 4-year degree.
-
   - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>'
     title: Searchable by Problem
     details: Every page is indexed by its problem statement. Search what you need to solve, find the reference instantly.
@@ -103,3 +99,13 @@ This project is maintained by **Amit Dutta**, a BSc Computer Science student at 
 | **Personal Email** | [amitdutta4255@gmail.com](mailto:amitdutta4255@gmail.com) |
 | **Work Email** | [mail@amit.is-a.dev](mailto:mail@amit.is-a.dev) |
 | **License** | [MIT](https://github.com/notamitgamer/bsc/blob/main/LICENSE) |
+
+
+<div class="bsc-cta-section">
+  <h2 class="bsc-cta-title">Read the Guide</h2>
+  <p class="bsc-cta-subtitle">Full setup, configuration and theming reference — including how to extend the archive without forking it.</p>
+  <div class="bsc-cta-actions">
+    <a class="bsc-cta-btn bsc-cta-btn-brand" href="/semester_2/">Browse Semester 2</a>
+    <a class="bsc-cta-btn" href="/#environment-setup">Environment Setup</a>
+  </div>
+</div>
