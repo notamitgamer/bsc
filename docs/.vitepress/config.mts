@@ -10,7 +10,7 @@ const vitePressConfig = {
 
   head: [
     // Logo & Fonts
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo_light.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap' }],
@@ -175,8 +175,8 @@ const vitePressConfig = {
       lazyLoading: true 
     },
     theme: {
-      light: 'catppuccin-latte',
-      dark: 'catppuccin-mocha' 
+      light: 'github-light',
+      dark: 'github-dark' 
     } as any
   },
 }

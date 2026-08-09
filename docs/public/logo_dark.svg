@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="#fab387" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text-icon lucide-book-open-text"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="logoDarkTag" x1="15" y1="8" x2="85" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+  </defs>
+  <path d="M27 18C27 12.477 31.477 8 37 8H63C68.523 8 73 12.477 73 18V85.5C73 88.94 68.94 90.94 66.2 88.8L52.46 78.06C50.99 76.91 48.94 76.91 47.48 78.06L33.8 88.8C31.06 90.94 27 88.94 27 85.5V18Z" fill="url(#logoDarkTag)"/>
+  <circle cx="50" cy="24" r="5" fill="#0d1117"/>
+  <rect x="39" y="38" width="22" height="6" rx="3" fill="#0d1117"/>
+  <rect x="39" y="50" width="16" height="6" rx="3" fill="#0d1117" opacity="0.85"/>
+</svg>

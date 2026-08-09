@@ -115,7 +115,7 @@ const acceptTerms = () => {
 }
 
 .banner-btn {
-  color: #fe640b;
+  color: #2f81f7;
 }
 
 @media (max-width: 640px) {

@@ -28,49 +28,59 @@
 
 
 /* ==========================================================================
-   THEME COLORS — LIGHT MODE (Catppuccin Latte Peach)
+   THEME COLORS — LIGHT MODE (ported from vitepress-carbon)
    ========================================================================== */
 
 :root {
   /* Backgrounds */
-  --vp-c-bg: #eff1f5;          /* base */
-  --vp-c-bg-alt: #e6e9ef;      /* mantle */
-  --vp-c-bg-elv: #ffffff;      /* crust (inverted for elevated surfaces on light) */
-  --vp-c-bg-soft: #ccd0da;     /* surface0 */
-  --vp-c-divider: #bcc0cc;     /* surface1 */
-  --vp-c-b-divider: #4c4f69;   /* text */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+  --vp-c-divider: #d1d9e0;
+  --vp-c-b-divider: #1f2328;
 
-  /* Brand */
-  --vp-c-brand-1: #fe640b;     /* peach */
-  --vp-c-brand-2: #dd7878;     /* flamingo */
-  --vp-c-brand-3: #e64553;     /* maroon for hover/active states */
-  --vp-c-brand: #fe640b;
-  --banner-bg: #fe640b;
+  /* GitHub's real sidebar matches the main canvas color — the divider line
+     does the separating, not a darker shade. Override so it doesn't
+     inherit the darker --vp-c-bg-alt (which GitHub reserves for insets). */
+  --vp-sidebar-bg-color: var(--vp-c-bg);
 
-  /* Home hero gradient (light) */
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #fe640b 50%,
-    #dd7878 50%
-  );
-  --vp-home-hero-image-filter: blur(100px);
+  /* Brand (GitHub-blue accent used by Carbon) */
+  --vp-c-brand-1: #2f81f7;
+  --vp-c-brand-2: #1f6feb;
+  --vp-c-brand-3: #30a46c;     /* Carbon's green-3, used for hero name + brand-3 refs */
+  --vp-c-brand: #2f81f7;
+  --banner-bg: #2f81f7;
+
+  /* Primary buttons are GitHub-green in Carbon, not blue — links/sidebar stay blue */
+  --vp-button-brand-border: rgba(31, 35, 40, 0.1);
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: #1f883d;
+  --vp-button-brand-hover-border: rgba(31, 35, 40, 0.1);
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: #1a7f37;
+  --vp-button-brand-active-border: rgba(31, 35, 40, 0.1);
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: #197935;
+
+  /* Homepage feature-card icons pick up the same green touch */
+  --vp-home-card-icon-bg: rgba(16, 185, 129, 0.14);
+  --vp-home-card-icon-color: #3fb950;
+  --vp-home-card-border-hover-color: #2ea043;
+
+  --vp-home-hero-name-background: #30A46C;
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #fe640b 30%,
-    #dd7878
-  );
 
   /* DocSearch hit colors (light) */
-  --docsearch-hit-color: #4c4f69;
-  --docsearch-hit-active-color: #4c4f69;
-  --docsearch-hit-background: #e6e9ef;
+  --docsearch-hit-color: #1f2328;
+  --docsearch-hit-active-color: #1f2328;
+  --docsearch-hit-background: #f6f6f7;
 
-  /* Semantic (Catppuccin Latte accents) */
-  --vp-c-success: #40a02b;
-  --vp-c-warning: #df8e1d;
-  --vp-c-danger: #d20f39;
-  --vp-c-info: #1e66f5;
+  /* Semantic (Carbon/GitHub accents) */
+  --vp-c-success: #3fb950;
+  --vp-c-warning: #9a6700;
+  --vp-c-danger: #d1242f;
+  --vp-c-info: #2f81f7;
 
   /* Font */
   --vp-font-family-base: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -79,47 +89,57 @@
 
 
 /* ==========================================================================
-   THEME COLORS — DARK MODE (Catppuccin Mocha Peach)
+   THEME COLORS — DARK MODE (ported from vitepress-carbon)
    ========================================================================== */
 
 .dark {
   /* Backgrounds */
-  --vp-c-bg: #1e1e2e;          /* base */
-  --vp-c-bg-alt: #181825;      /* mantle */
-  --vp-c-bg-elv: #11111b;      /* crust */
-  --vp-c-bg-soft: #313244;     /* surface0 */
-  --vp-c-divider: #45475a;     /* surface1 */
-  --vp-c-b-divider: #cdd6f4;   /* text */
+  --vp-c-bg: #0d1117;
+  --vp-c-bg-alt: #010409;
+  --vp-c-bg-elv: #161b22;
+
+  /* Same GitHub-sidebar fix as light mode — match canvas, not the inset tone. */
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+
+  --vp-c-bg-soft: #161b22;
+  --vp-c-divider: #30363d;
+  --vp-c-b-divider: #c9d1d9;
 
   /* Brand */
-  --vp-c-brand-1: #fab387;     /* peach */
-  --vp-c-brand-2: #f2cdcd;     /* flamingo */
-  --vp-c-brand-3: #a6adc8;     /* subtext0, for hover/active states */
-  --vp-c-brand: #fab387;
+  --vp-c-brand-1: #58a6ff;
+  --vp-c-brand-2: #79c0ff;
+  --vp-c-brand-3: #3fb950;
+  --vp-c-brand: #58a6ff;
 
-  /* Home hero gradient (dark) */
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #fab387 50%,
-    #f2cdcd 50%
-  );
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #fab387 30%,
-    #f2cdcd
-  );
+  /* Primary buttons: Carbon uses the identical green in both modes, no dark variant */
+  --vp-button-brand-border: rgba(240, 246, 252, 0.1);
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: #1f883d;
+  --vp-button-brand-hover-border: rgba(240, 246, 252, 0.1);
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: #1a7f37;
+  --vp-button-brand-active-border: rgba(240, 246, 252, 0.1);
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: #197935;
+
+  --vp-home-card-icon-bg: rgba(63, 185, 80, 0.12);
+  --vp-home-card-icon-color: #3fb950;
+  --vp-home-card-border-hover-color: #3fb950;
+
+  --vp-home-hero-name-background: #30A46C;
+  --vp-home-hero-name-color: transparent;
 
   /* DocSearch hit colors (dark) */
-  --docsearch-hit-color: #cdd6f4;
-  --docsearch-hit-active-color: #cdd6f4;
-  --docsearch-hit-background: #313244;
-  --docsearch-modal-background: #1e1e2e !important;
+  --docsearch-hit-color: #c9d1d9;
+  --docsearch-hit-active-color: #c9d1d9;
+  --docsearch-hit-background: #161b22;
+  --docsearch-modal-background: #0d1117 !important;
 
-  /* Semantic (Catppuccin Mocha accents) */
-  --vp-c-success: #a6e3a1;
-  --vp-c-warning: #f9e2af;
-  --vp-c-danger: #f38ba8;
-  --vp-c-info: #89b4fa;
+  /* Semantic (Carbon/GitHub dark accents) */
+  --vp-c-success: #3fb950;
+  --vp-c-warning: #f9b44e;
+  --vp-c-danger: #f66f81;
+  --vp-c-info: #58a6ff;
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -305,9 +325,116 @@
    ========================================================================== */
 
 .VPFeature:hover {
-  border-color: var(--vp-c-brand-1) !important;
+  border-color: #2ea043 !important;
   transition: border-color 0.2s;
 }
+
+.VPFeature .icon {
+  background-color: rgba(16, 185, 129, 0.14) !important;
+  color: #3fb950 !important;
+}
+
+.dark .VPFeature .icon {
+  background-color: rgba(63, 185, 80, 0.12) !important;
+  color: #3fb950 !important;
+}
+
+/* Hero action buttons: stock VitePress uses flex-wrap with content-width
+   buttons, which staggers into a jagged staircase on narrow screens when
+   labels are different lengths. Stack to one full-width button per row,
+   matching the default VitePress mobile behavior. */
+@media (max-width: 639px) {
+  .VPHero .actions {
+    flex-direction: column;
+  }
+
+  .VPHero .actions .action {
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .VPHero .actions .action .VPButton {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   HOMEPAGE "WHY" SECTION (Carbon-style benefit grid)
+   ========================================================================== */
+
+.why-section {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 64px 24px 16px;
+}
+
+@media (min-width: 640px) {
+  .why-section { padding: 64px 48px 16px; }
+}
+
+@media (min-width: 960px) {
+  .why-section { padding: 64px 64px 16px; }
+}
+
+.why-eyebrow {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.why-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 40px;
+  max-width: 640px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .why-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.why-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 24px;
+  background-color: var(--vp-c-bg-soft);
+  transition: border-color 0.2s;
+}
+
+.why-card:hover {
+  border-color: #2ea043;
+}
+
+.why-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  border: none;
+  padding: 0;
+}
+
+.why-card p {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--vp-c-text-2);
+  margin: 0;
+}
+
 
 @media (hover: none) and (pointer: coarse) {
   .vp-doc [class*="language-"] > button.copy {
@@ -419,19 +546,9 @@
   box-shadow: none !important;
 }
 
-:root {
-  --vp-button-brand-bg: var(--vp-c-brand-1);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
-
-/* Dark mode: peach (#fab387) is too light for white button text (~1.8:1
-   contrast). Override VitePress's default brand-button text var. */
-.dark {
-  --vp-button-brand-text: var(--vp-c-bg-elv); /* #11111b */
-  --vp-button-brand-hover-text: var(--vp-c-bg-elv);
-  --vp-button-brand-active-text: var(--vp-c-bg-elv);
-}
+/* Button-brand colors (green) and white button text are set directly in the
+   theme-color blocks above — no override needed, unlike the old peach brand
+   which couldn't carry white text at proper contrast. */
 
 /* ==========================================================================
    FORCE FONT ON DOCSEARCH & AI MODALS
@@ -483,4 +600,68 @@
 /* Fallback just in case standard container is used */
 .DocSearch-Container * {
   font-family: var(--vp-font-family-base) !important;
+}
+
+/* ==========================================================================
+   CLOSING CTA SECTION (centered "Read the guide" style band)
+   ========================================================================== */
+
+.bsc-cta-section {
+  text-align: center;
+  max-width: 640px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.bsc-cta-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  border: none;
+  padding: 0;
+}
+
+.bsc-cta-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+  margin: 0 0 28px;
+}
+
+.bsc-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bsc-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1) !important;
+  background-color: transparent;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bsc-cta-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+}
+
+.bsc-cta-btn-brand {
+  background-color: var(--vp-button-brand-bg);
+  border-color: var(--vp-button-brand-bg);
+  color: #ffffff !important;
+}
+
+.bsc-cta-btn-brand:hover {
+  background-color: var(--vp-button-brand-hover-bg);
+  border-color: var(--vp-button-brand-hover-bg);
 }
