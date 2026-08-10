@@ -93,17 +93,24 @@
    ========================================================================== */
 
 .dark {
-  /* Backgrounds */
+  /* Backgrounds — softened from pure GitHub-dark: #010409 was near-black and
+     created a harsh jump against #0d1117. #0a0e14 keeps the same hierarchy
+     with less contrast shock, easier on the eyes over long reading. */
   --vp-c-bg: #0d1117;
-  --vp-c-bg-alt: #010409;
+  --vp-c-bg-alt: #0a0e14;
   --vp-c-bg-elv: #161b22;
 
   /* Same GitHub-sidebar fix as light mode — match canvas, not the inset tone. */
   --vp-sidebar-bg-color: var(--vp-c-bg);
 
   --vp-c-bg-soft: #161b22;
-  --vp-c-divider: #30363d;
+  --vp-c-divider: #2a313a;
   --vp-c-b-divider: #c9d1d9;
+
+  /* Body text: pure-white-on-black is high-fatigue; ease it slightly warm/soft. */
+  --vp-c-text-1: #d8dee8;
+  --vp-c-text-2: #9aa4b2;
+  --vp-c-text-3: #6b7684;
 
   /* Brand */
   --vp-c-brand-1: #58a6ff;

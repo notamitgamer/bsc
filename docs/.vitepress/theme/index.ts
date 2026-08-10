@@ -6,6 +6,7 @@ import Footer from './components/Footer.vue'
 import SponsorButton from './components/SponsorButton.vue' 
 import ExternalLinkWarning from './components/ExternalLinkWarning.vue'
 import CopyLinkButton from './components/CopyLinkButton.vue'
+import MarkdownMenu from './components/MarkdownMenu.vue'
 import Breadcrumbs from './components/Breadcrumbs.vue'
 import './style.css'
 
@@ -22,6 +23,7 @@ export default {
         h(Breadcrumbs),
         h(CopyLinkButton)
       ]),
+      'doc-footer-before': () => h(MarkdownMenu),
       'doc-after': () => h(Footer),
       'nav-bar-content-after': () => h(SponsorButton)
     })
