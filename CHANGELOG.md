@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 10, 2026 at 09:07 UTC
+> Last build: August 10, 2026 at 10:27 UTC
 
 ## Latest Build
 
-- **Build ID** — `5b802d7dded3cb1c1860da3cf8091b794b689822`
+- **Build ID** — `6686d3036be33f9bf40cd8f8d6400b007d091f6a`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 10, 2026 at 09:07 UTC
+- **Build time** — August 10, 2026 at 10:27 UTC
 
 ## Recent Commits
 
+- [`6686d30`](https://github.com/notamitgamer/bsc/commit/6686d3036be33f9bf40cd8f8d6400b007d091f6a) Merge pull request #33 from notamitgamer/edit-20260810-155635 — Amit Dutta, Aug 10, 2026 10:27 UTC
+- [`3dde7d9`](https://github.com/notamitgamer/bsc/commit/3dde7d98b23f006ac98b28c2a794ffa3a6d070f5) updated the logo — Amit Dutta, Aug 10, 2026 10:26 UTC
+- [`e2f3c23`](https://github.com/notamitgamer/bsc/commit/e2f3c23862fe3513bf87037160e84ae887c33797) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 09:07 UTC
 - [`5b802d7`](https://github.com/notamitgamer/bsc/commit/5b802d7dded3cb1c1860da3cf8091b794b689822) Refactor rawUrl computation in MarkdownMenu.vue — Amit Dutta, Aug 10, 2026 09:07 UTC
 - [`f944a21`](https://github.com/notamitgamer/bsc/commit/f944a21fc1ebf7a8102be26b4ed5eea6ea68488a) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 08:57 UTC
 - [`04798b7`](https://github.com/notamitgamer/bsc/commit/04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac) Merge pull request #32 from notamitgamer/edit-20260810-142659 — Amit Dutta, Aug 10, 2026 08:57 UTC
@@ -28,9 +31,6 @@
 - [`c28e24d`](https://github.com/notamitgamer/bsc/commit/c28e24d9439afd64180b49891827e69bf3d18f7d) Merge pull request #28 from notamitgamer/edit-20260807-200434 — Amit Dutta, Aug 07, 2026 14:35 UTC
 - [`98bd662`](https://github.com/notamitgamer/bsc/commit/98bd6628f1ccbab06fe39b1d81c3577d21543729) changed the font — Amit Dutta, Aug 07, 2026 14:34 UTC
 - [`814f68f`](https://github.com/notamitgamer/bsc/commit/814f68f846eedbf852d456aedd35277eecef84b2) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 13:48 UTC
-- [`426099e`](https://github.com/notamitgamer/bsc/commit/426099e93f2405534c66614cb874520ae1ef0025) Merge pull request #26 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-5f7cea1f02 — Amit Dutta, Aug 07, 2026 13:48 UTC
-- [`189e20f`](https://github.com/notamitgamer/bsc/commit/189e20fce131077fde7c478999dc0b5d9e3adfbb) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:48 UTC
-- [`17b3578`](https://github.com/notamitgamer/bsc/commit/17b35784653ae8c114562952eb2f03807e68fa12) Merge pull request #27 from notamitgamer/edit-20260807-161750 — Amit Dutta, Aug 07, 2026 10:48 UTC
 
 ---
 
