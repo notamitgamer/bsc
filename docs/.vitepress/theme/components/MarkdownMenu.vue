@@ -36,11 +36,10 @@ import { useData, useRoute } from 'vitepress'
 const { frontmatter } = useData()
 const route = useRoute()
 
-// Mirrors the editLink path logic in config.mts: docs/<filePath>.md on main
 const rawUrl = computed(() => {
   const source = frontmatter.value.source
-  const filePath = source || route.path.replace(/^\//, '').replace(/\/$/, '/index') + '.md'
-  return `https://raw.githubusercontent.com/notamitgamer/bsc/main/docs/${filePath}`
+  const path = source || `docs${route.path.replace(/\/$/, '/index')}.md`
+  return `https://raw.githubusercontent.com/notamitgamer/bsc/refs/heads/main/${path}`
 })
 
 const chatGptUrl = computed(() =>
