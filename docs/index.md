@@ -35,6 +35,25 @@ features:
     link: https://github.com/notamitgamer/bsc/blob/main/LICENSE
 ---
 
+<div class="why-section">
+  <p class="why-eyebrow">Why this archive</p>
+  <h2 class="why-title">Not a copy-paste dump — a structured reference for how to actually solve the problem.</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>Every semester, indexed</h3>
+      <p>All 8 semesters of the WBSU NEP-CCF track in one place, updated in real time as coursework progresses — no digging through scattered folders.</p>
+    </div>
+    <div class="why-card">
+      <h3>Problem-first search</h3>
+      <p>Pages are indexed by the actual problem statement, so you search what you're stuck on and land on the relevant reference instantly.</p>
+    </div>
+    <div class="why-card">
+      <h3>Logic, not just code</h3>
+      <p>From Semester 2 onward, source may paired with written algorithms — pseudocode and complexity analysis — so you can follow the reasoning, not just the syntax.</p>
+    </div>
+  </div>
+</div>
+
 ## Roadmap & Progress
 
 Currently navigating **Semester 2**. Folders for future semesters are placeholders that will automatically unlock and update in real-time as my 4-year academic session progresses.
