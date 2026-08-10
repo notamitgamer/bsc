@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 09, 2026 at 10:32 UTC
+> Last build: August 10, 2026 at 08:57 UTC
 
 ## Latest Build
 
-- **Build ID** — `87286296175a7014cf0f766f99365c2f15115894`
+- **Build ID** — `04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 09, 2026 at 10:32 UTC
+- **Build time** — August 10, 2026 at 08:57 UTC
 
 ## Recent Commits
 
+- [`04798b7`](https://github.com/notamitgamer/bsc/commit/04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac) Merge pull request #32 from notamitgamer/edit-20260810-142659 — Amit Dutta, Aug 10, 2026 08:57 UTC
+- [`5fa532b`](https://github.com/notamitgamer/bsc/commit/5fa532ba91d0b4841a0e84e8a13b9f681d42166f) adding ai support — Amit Dutta, Aug 10, 2026 08:56 UTC
+- [`5d3ffd1`](https://github.com/notamitgamer/bsc/commit/5d3ffd18bdccc348f16b3457eb10122586e26d69) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 10:32 UTC
 - [`8728629`](https://github.com/notamitgamer/bsc/commit/87286296175a7014cf0f766f99365c2f15115894) Merge pull request #31 from notamitgamer/edit-20260809-160106 — Amit Dutta, Aug 09, 2026 10:32 UTC
 - [`d7fd370`](https://github.com/notamitgamer/bsc/commit/d7fd370961b4f70f420ae9b104cfb074ba7fa805) changed the ui to github inspired — Amit Dutta, Aug 09, 2026 10:31 UTC
 - [`5283d7a`](https://github.com/notamitgamer/bsc/commit/5283d7aa05c3a6c6b6a721b4947178727eac264b) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 09:43 UTC
@@ -28,9 +31,6 @@
 - [`17b3578`](https://github.com/notamitgamer/bsc/commit/17b35784653ae8c114562952eb2f03807e68fa12) Merge pull request #27 from notamitgamer/edit-20260807-161750 — Amit Dutta, Aug 07, 2026 10:48 UTC
 - [`890e572`](https://github.com/notamitgamer/bsc/commit/890e572888e9aed98d54b6097c88472ce6b50174) fixed the type, it broked the side nav — Amit Dutta, Aug 07, 2026 10:47 UTC
 - [`8b1927f`](https://github.com/notamitgamer/bsc/commit/8b1927fc62a77e340e5c5fba7b413d656cefbef7) Bump fast-uri in the npm_and_yarn group across 1 directory — dependabot[bot], Aug 07, 2026 10:45 UTC
-- [`c000c35`](https://github.com/notamitgamer/bsc/commit/c000c35a276ef991615c1bceb023023b7c31b58e) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 10:44 UTC
-- [`69dd12f`](https://github.com/notamitgamer/bsc/commit/69dd12f94bf19135f32833ef1bdbbacf32f402a4) Merge pull request #25 from notamitgamer/edit-20260807-161336 — Amit Dutta, Aug 07, 2026 10:44 UTC
-- [`b715f1d`](https://github.com/notamitgamer/bsc/commit/b715f1dd75e5ed251e9e71c5f71ab8d63fedf23f) more algo — Amit Dutta, Aug 07, 2026 10:43 UTC
 
 ---
 
