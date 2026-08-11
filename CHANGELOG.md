@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 11, 2026 at 14:24 UTC
+> Last build: August 11, 2026 at 14:35 UTC
 
 ## Latest Build
 
-- **Build ID** — `54613dd510052a18ec9225537334ca788ea8541a`
+- **Build ID** — `8d937c84fbfbc0cba07262704f7f4c511b82b2cc`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 11, 2026 at 14:24 UTC
+- **Build time** — August 11, 2026 at 14:35 UTC
 
 ## Recent Commits
 
+- [`8d937c8`](https://github.com/notamitgamer/bsc/commit/8d937c84fbfbc0cba07262704f7f4c511b82b2cc) Merge pull request #35 from notamitgamer/edit-20260811-200457 — Amit Dutta, Aug 11, 2026 14:35 UTC
+- [`52df150`](https://github.com/notamitgamer/bsc/commit/52df150732fdea7fd03c59b20af68ab0ec66b75f) updated the faq — Amit Dutta, Aug 11, 2026 14:34 UTC
+- [`cde9f80`](https://github.com/notamitgamer/bsc/commit/cde9f80ca47fe6d30bb4973d844f283630d262fc) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:24 UTC
 - [`54613dd`](https://github.com/notamitgamer/bsc/commit/54613dd510052a18ec9225537334ca788ea8541a) Merge pull request #34 from notamitgamer/edit-20260811-195405 — Amit Dutta, Aug 11, 2026 14:24 UTC
 - [`f87b1c4`](https://github.com/notamitgamer/bsc/commit/f87b1c40d4b14e15044133548a05c1995a4c6f53) removed redundency — Amit Dutta, Aug 11, 2026 14:24 UTC
 - [`35a37c3`](https://github.com/notamitgamer/bsc/commit/35a37c32473064c0a4fbf46478b885623173fcf6) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 17:49 UTC
@@ -28,9 +31,6 @@
 - [`8728629`](https://github.com/notamitgamer/bsc/commit/87286296175a7014cf0f766f99365c2f15115894) Merge pull request #31 from notamitgamer/edit-20260809-160106 — Amit Dutta, Aug 09, 2026 10:32 UTC
 - [`d7fd370`](https://github.com/notamitgamer/bsc/commit/d7fd370961b4f70f420ae9b104cfb074ba7fa805) changed the ui to github inspired — Amit Dutta, Aug 09, 2026 10:31 UTC
 - [`5283d7a`](https://github.com/notamitgamer/bsc/commit/5283d7aa05c3a6c6b6a721b4947178727eac264b) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 09:43 UTC
-- [`0255916`](https://github.com/notamitgamer/bsc/commit/02559160199bd559deed92db0f22a05ccf798fbe) Merge pull request #30 from notamitgamer/edit-20260809-151242 — Amit Dutta, Aug 09, 2026 09:43 UTC
-- [`5576538`](https://github.com/notamitgamer/bsc/commit/55765385dcaec9ed38b8c94122cada66c4cc67d8) audit — Amit Dutta, Aug 09, 2026 09:42 UTC
-- [`53a4e27`](https://github.com/notamitgamer/bsc/commit/53a4e27fc97a3f4187542fa0f8d9df97cd302bc3) chore: update changelog [skip ci] — github-actions[bot], Aug 07, 2026 15:28 UTC
 
 ---
 
