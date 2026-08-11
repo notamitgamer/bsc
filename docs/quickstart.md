@@ -35,7 +35,7 @@ Rscript file.r
 
 ## 4. Print or Save
 
-- Click **Raw**
+- Click `View as Raw`
 - Use browser → Print → Save as PDF
 
 ## 5. Learn Properly
