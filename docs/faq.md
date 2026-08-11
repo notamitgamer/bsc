@@ -35,7 +35,7 @@ The terms under which you're allowed to use, copy, or modify the code.
 ## Usage
 
 ### 9. Can I print the code?
-Yes — use the **Raw** button, then print from your browser.
+Yes — use the `View as Raw` button, then print from your browser.
 
 ### 10. Can I reuse this in projects?
 Yes, as long as you follow the license terms.
