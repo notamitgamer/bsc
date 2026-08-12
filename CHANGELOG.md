@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: August 12, 2026 at 02:47 UTC
+> Last build: August 12, 2026 at 10:29 UTC
 
 ## Latest Build
 
-- **Build ID** — `1277c4dc7b8dd7023ab7570f537a9cab671e898e`
+- **Build ID** — `393bd3e2bb81bdce8596b8592c3fcc1dd9337804`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 12, 2026 at 02:47 UTC
+- **Build time** — August 12, 2026 at 10:29 UTC
 
 ## Recent Commits
 
+- [`393bd3e`](https://github.com/notamitgamer/bsc/commit/393bd3e2bb81bdce8596b8592c3fcc1dd9337804) Update credits to remove external service mentions — Amit Dutta, Aug 12, 2026 10:29 UTC
+- [`dac2a1b`](https://github.com/notamitgamer/bsc/commit/dac2a1b0cc7a491fb08cfa8b907001677984a588) chore: update changelog [skip ci] — github-actions[bot], Aug 12, 2026 02:47 UTC
 - [`1277c4d`](https://github.com/notamitgamer/bsc/commit/1277c4dc7b8dd7023ab7570f537a9cab671e898e) Merge pull request #36 from notamitgamer2/fix/raw-button-visibility — Amit Dutta, Aug 12, 2026 02:47 UTC
 - [`8ee8a69`](https://github.com/notamitgamer/bsc/commit/8ee8a6954e1978c568e62724fd9a0952d6318b8b) fix: hide raw/AI buttons on pages with no committed source — notamitgamer2, Aug 12, 2026 02:44 UTC
 - [`46c77ef`](https://github.com/notamitgamer/bsc/commit/46c77ef6b5d8cc1758ae908495d8f852d4e188e6) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:35 UTC
@@ -29,8 +31,6 @@
 - [`5b802d7`](https://github.com/notamitgamer/bsc/commit/5b802d7dded3cb1c1860da3cf8091b794b689822) Refactor rawUrl computation in MarkdownMenu.vue — Amit Dutta, Aug 10, 2026 09:07 UTC
 - [`f944a21`](https://github.com/notamitgamer/bsc/commit/f944a21fc1ebf7a8102be26b4ed5eea6ea68488a) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 08:57 UTC
 - [`04798b7`](https://github.com/notamitgamer/bsc/commit/04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac) Merge pull request #32 from notamitgamer/edit-20260810-142659 — Amit Dutta, Aug 10, 2026 08:57 UTC
-- [`5fa532b`](https://github.com/notamitgamer/bsc/commit/5fa532ba91d0b4841a0e84e8a13b9f681d42166f) adding ai support — Amit Dutta, Aug 10, 2026 08:56 UTC
-- [`5d3ffd1`](https://github.com/notamitgamer/bsc/commit/5d3ffd18bdccc348f16b3457eb10122586e26d69) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 10:32 UTC
 
 ---
 
