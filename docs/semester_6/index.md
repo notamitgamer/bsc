@@ -1,3 +1,7 @@
+---
+source: 'docs/semester_6/index.md'
+---
+
 # Semester 6
 
 ::: warning Semester Pending

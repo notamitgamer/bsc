@@ -1,3 +1,7 @@
+---
+source: 'docs/semester_3/index.md'
+---
+
 # Semester 3
 
 ::: warning Semester Pending

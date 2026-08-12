@@ -1,3 +1,7 @@
+---
+source: 'docs/semester_2/index.md'
+---
+
 # Semester 2
 
 ::: tip SEMESTER 2: ACTIVE CONTENT

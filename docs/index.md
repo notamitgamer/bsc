@@ -1,4 +1,5 @@
 ---
+source: 'docs/index.md'
 layout: home
 
 hero:
