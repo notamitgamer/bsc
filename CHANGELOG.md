@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 11, 2026 at 14:35 UTC
+> Last build: August 12, 2026 at 02:47 UTC
 
 ## Latest Build
 
-- **Build ID** — `8d937c84fbfbc0cba07262704f7f4c511b82b2cc`
+- **Build ID** — `1277c4dc7b8dd7023ab7570f537a9cab671e898e`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 11, 2026 at 14:35 UTC
+- **Build time** — August 12, 2026 at 02:47 UTC
 
 ## Recent Commits
 
+- [`1277c4d`](https://github.com/notamitgamer/bsc/commit/1277c4dc7b8dd7023ab7570f537a9cab671e898e) Merge pull request #36 from notamitgamer2/fix/raw-button-visibility — Amit Dutta, Aug 12, 2026 02:47 UTC
+- [`8ee8a69`](https://github.com/notamitgamer/bsc/commit/8ee8a6954e1978c568e62724fd9a0952d6318b8b) fix: hide raw/AI buttons on pages with no committed source — notamitgamer2, Aug 12, 2026 02:44 UTC
+- [`46c77ef`](https://github.com/notamitgamer/bsc/commit/46c77ef6b5d8cc1758ae908495d8f852d4e188e6) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:35 UTC
 - [`8d937c8`](https://github.com/notamitgamer/bsc/commit/8d937c84fbfbc0cba07262704f7f4c511b82b2cc) Merge pull request #35 from notamitgamer/edit-20260811-200457 — Amit Dutta, Aug 11, 2026 14:35 UTC
 - [`52df150`](https://github.com/notamitgamer/bsc/commit/52df150732fdea7fd03c59b20af68ab0ec66b75f) updated the faq — Amit Dutta, Aug 11, 2026 14:34 UTC
 - [`cde9f80`](https://github.com/notamitgamer/bsc/commit/cde9f80ca47fe6d30bb4973d844f283630d262fc) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:24 UTC
@@ -28,9 +31,6 @@
 - [`04798b7`](https://github.com/notamitgamer/bsc/commit/04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac) Merge pull request #32 from notamitgamer/edit-20260810-142659 — Amit Dutta, Aug 10, 2026 08:57 UTC
 - [`5fa532b`](https://github.com/notamitgamer/bsc/commit/5fa532ba91d0b4841a0e84e8a13b9f681d42166f) adding ai support — Amit Dutta, Aug 10, 2026 08:56 UTC
 - [`5d3ffd1`](https://github.com/notamitgamer/bsc/commit/5d3ffd18bdccc348f16b3457eb10122586e26d69) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 10:32 UTC
-- [`8728629`](https://github.com/notamitgamer/bsc/commit/87286296175a7014cf0f766f99365c2f15115894) Merge pull request #31 from notamitgamer/edit-20260809-160106 — Amit Dutta, Aug 09, 2026 10:32 UTC
-- [`d7fd370`](https://github.com/notamitgamer/bsc/commit/d7fd370961b4f70f420ae9b104cfb074ba7fa805) changed the ui to github inspired — Amit Dutta, Aug 09, 2026 10:31 UTC
-- [`5283d7a`](https://github.com/notamitgamer/bsc/commit/5283d7aa05c3a6c6b6a721b4947178727eac264b) chore: update changelog [skip ci] — github-actions[bot], Aug 09, 2026 09:43 UTC
 
 ---
 
