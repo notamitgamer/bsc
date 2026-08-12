@@ -8,8 +8,6 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 `code.amit.is-a.dev` only exists because of some genuinely great free and open-source tools. Thanks to:
 
 * **[is-a.dev](https://is-a.dev)** — for the free subdomain that gave this project a home.
-* **[Hugging Face](https://huggingface.co)** — for hosting all the raw program files.
-* **[Cloudflare](https://www.cloudflare.com/)** — for DNS, routing, and caching, connecting the domain to Hugging Face so files load fast and reliably.
 * **[GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/)** — for hosting the repo (code + markdown) and serving the site itself.
 * **[VitePress](https://vitepress.dev/)** — for turning a pile of markdown and code into an actual searchable, readable site.
 * **[Algolia DocSearch](https://docsearch.algolia.com/)** — for the instant search that makes finding a program actually painless.
