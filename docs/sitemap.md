@@ -1,4 +1,5 @@
 ---
+source: 'docs/sitemap.md'
 title: 'Sitemap'
 description: 'All pages available on BSc Code Index.'
 ---

@@ -1,5 +1,5 @@
 <template>
-  <ul class="md-links">
+  <ul v-if="frontmatter.source" class="md-links">
     <li>
       <a :href="rawUrl" target="_blank" rel="noopener">
         <svg class="md-links-icon" viewBox="0 0 500 520" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,15 +34,17 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useData, useRoute } from 'vitepress'
+import { useData } from 'vitepress'
 
 const { frontmatter } = useData()
-const route = useRoute()
 
+// Only pages with an explicit `source:` frontmatter point at a file that is
+// actually committed to the repo — generated-but-uncommitted pages (e.g.
+// auto-built folder indexes) have no `source`, so the template hides this
+// menu entirely for them rather than falling back to a raw link that 404s.
 const rawUrl = computed(() => {
   const source = frontmatter.value.source
-  const path = source || `docs${route.path.replace(/\/$/, '/index')}.md`
-  return `https://raw.githubusercontent.com/notamitgamer/bsc/refs/heads/main/${path}`
+  return `https://raw.githubusercontent.com/notamitgamer/bsc/refs/heads/main/${source}`
 })
 
 const chatGptUrl = computed(() =>

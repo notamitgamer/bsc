@@ -1,3 +1,7 @@
+---
+source: 'docs/semester_1/index.md'
+---
+
 # Semester 1
 
 ::: info SEMESTER 1: ARCHIVED CONTENT

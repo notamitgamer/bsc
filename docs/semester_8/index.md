@@ -1,3 +1,7 @@
+---
+source: 'docs/semester_8/index.md'
+---
+
 # Semester 8
 
 ::: warning Semester Pending
