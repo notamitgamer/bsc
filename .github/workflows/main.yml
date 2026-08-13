@@ -23,7 +23,7 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout GitHub Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1 
 
@@ -62,7 +62,7 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0  
 
