@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 12, 2026 at 10:29 UTC
+> Last build: August 13, 2026 at 14:46 UTC
 
 ## Latest Build
 
-- **Build ID** — `393bd3e2bb81bdce8596b8592c3fcc1dd9337804`
+- **Build ID** — `3e3a06dd99d4050370aceea2f0e784cdbc9b46c2`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 12, 2026 at 10:29 UTC
+- **Build time** — August 13, 2026 at 14:46 UTC
 
 ## Recent Commits
 
+- [`3e3a06d`](https://github.com/notamitgamer/bsc/commit/3e3a06dd99d4050370aceea2f0e784cdbc9b46c2) Merge pull request #37 from notamitgamer/edit-20260813-201532 — Amit Dutta, Aug 13, 2026 14:46 UTC
+- [`f56edf1`](https://github.com/notamitgamer/bsc/commit/f56edf13215a6f5f0c06241245022800a6e78f27) added 2nd assignment — Amit Dutta, Aug 13, 2026 14:45 UTC
+- [`457f135`](https://github.com/notamitgamer/bsc/commit/457f135123cba39aba1f1e25785cf0272c5185dd) chore: update changelog [skip ci] — github-actions[bot], Aug 12, 2026 10:29 UTC
 - [`393bd3e`](https://github.com/notamitgamer/bsc/commit/393bd3e2bb81bdce8596b8592c3fcc1dd9337804) Update credits to remove external service mentions — Amit Dutta, Aug 12, 2026 10:29 UTC
 - [`dac2a1b`](https://github.com/notamitgamer/bsc/commit/dac2a1b0cc7a491fb08cfa8b907001677984a588) chore: update changelog [skip ci] — github-actions[bot], Aug 12, 2026 02:47 UTC
 - [`1277c4d`](https://github.com/notamitgamer/bsc/commit/1277c4dc7b8dd7023ab7570f537a9cab671e898e) Merge pull request #36 from notamitgamer2/fix/raw-button-visibility — Amit Dutta, Aug 12, 2026 02:47 UTC
@@ -28,9 +31,6 @@
 - [`6686d30`](https://github.com/notamitgamer/bsc/commit/6686d3036be33f9bf40cd8f8d6400b007d091f6a) Merge pull request #33 from notamitgamer/edit-20260810-155635 — Amit Dutta, Aug 10, 2026 10:27 UTC
 - [`3dde7d9`](https://github.com/notamitgamer/bsc/commit/3dde7d98b23f006ac98b28c2a794ffa3a6d070f5) updated the logo — Amit Dutta, Aug 10, 2026 10:26 UTC
 - [`e2f3c23`](https://github.com/notamitgamer/bsc/commit/e2f3c23862fe3513bf87037160e84ae887c33797) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 09:07 UTC
-- [`5b802d7`](https://github.com/notamitgamer/bsc/commit/5b802d7dded3cb1c1860da3cf8091b794b689822) Refactor rawUrl computation in MarkdownMenu.vue — Amit Dutta, Aug 10, 2026 09:07 UTC
-- [`f944a21`](https://github.com/notamitgamer/bsc/commit/f944a21fc1ebf7a8102be26b4ed5eea6ea68488a) chore: update changelog [skip ci] — github-actions[bot], Aug 10, 2026 08:57 UTC
-- [`04798b7`](https://github.com/notamitgamer/bsc/commit/04798b7c511d8d6a0f4cc1e45456ddeb84a6b2ac) Merge pull request #32 from notamitgamer/edit-20260810-142659 — Amit Dutta, Aug 10, 2026 08:57 UTC
 
 ---
 
