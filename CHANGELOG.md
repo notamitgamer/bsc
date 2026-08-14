@@ -1,17 +1,24 @@
 # Changelog
 
-> Last build: August 14, 2026 at 01:40 UTC
+> Last build: August 14, 2026 at 01:41 UTC
 
 ## Latest Build
 
-- **Build ID** — `d5b92f018bc69895aa60c24a1d1489e1032b5d59`
+- **Build ID** — `af1302bdfa0bdfd71a9c229824a89d6593d23307`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 14, 2026 at 01:40 UTC
+- **Build time** — August 14, 2026 at 01:41 UTC
 
 ## Recent Commits
 
+- [`af1302b`](https://github.com/notamitgamer/bsc/commit/af1302bdfa0bdfd71a9c229824a89d6593d23307) Merge pull request #43 from notamitgamer/dependabot/github_actions/actions/setup-node-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
+- [`6761467`](https://github.com/notamitgamer/bsc/commit/6761467a6fe9accf398b3e83f45a5a2e4e49afd4) Merge pull request #41 from notamitgamer/dependabot/github_actions/actions/setup-python-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
+- [`724c4f7`](https://github.com/notamitgamer/bsc/commit/724c4f7f80f960d6230607033b5640311beab310) Merge pull request #40 from notamitgamer/dependabot/github_actions/actions/upload-pages-artifact-5 — Amit Dutta, Aug 14, 2026 01:41 UTC
+- [`659e98b`](https://github.com/notamitgamer/bsc/commit/659e98bf7a347d544e44181376a75edc2889ca51) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:40 UTC
 - [`d5b92f0`](https://github.com/notamitgamer/bsc/commit/d5b92f018bc69895aa60c24a1d1489e1032b5d59) Merge pull request #39 from notamitgamer/dependabot/github_actions/actions/deploy-pages-5 — Amit Dutta, Aug 14, 2026 01:40 UTC
+- [`558cea7`](https://github.com/notamitgamer/bsc/commit/558cea78867801520ce6d521ca0dccd945d629a0) Bump actions/setup-node from 4 to 7 — dependabot[bot], Aug 13, 2026 18:04 UTC
+- [`7b417dd`](https://github.com/notamitgamer/bsc/commit/7b417ddc0ba3ef023a102857418569a81f34baa7) Bump actions/setup-python from 5 to 7 — dependabot[bot], Aug 13, 2026 18:03 UTC
+- [`78d7a55`](https://github.com/notamitgamer/bsc/commit/78d7a55a30ed6cc5a9106bd96c27ab41f4670577) Bump actions/upload-pages-artifact from 3 to 5 — dependabot[bot], Aug 13, 2026 18:03 UTC
 - [`b28cad2`](https://github.com/notamitgamer/bsc/commit/b28cad2bdd7b1813b5ee4a980d1a4bdb5abe485e) Bump actions/deploy-pages from 4 to 5 — dependabot[bot], Aug 13, 2026 18:03 UTC
 - [`ef7838b`](https://github.com/notamitgamer/bsc/commit/ef7838bc0077f2ba95cb3cee1594a1ca7724ce2a) chore: update changelog [skip ci] — github-actions[bot], Aug 13, 2026 18:03 UTC
 - [`10d3a0c`](https://github.com/notamitgamer/bsc/commit/10d3a0c437bec5d993a6216e4f54f907a7841917) Merge pull request #38 from notamitgamer2/add-dependabot-config — Amit Dutta, Aug 13, 2026 18:02 UTC
@@ -24,13 +31,6 @@
 - [`457f135`](https://github.com/notamitgamer/bsc/commit/457f135123cba39aba1f1e25785cf0272c5185dd) chore: update changelog [skip ci] — github-actions[bot], Aug 12, 2026 10:29 UTC
 - [`393bd3e`](https://github.com/notamitgamer/bsc/commit/393bd3e2bb81bdce8596b8592c3fcc1dd9337804) Update credits to remove external service mentions — Amit Dutta, Aug 12, 2026 10:29 UTC
 - [`dac2a1b`](https://github.com/notamitgamer/bsc/commit/dac2a1b0cc7a491fb08cfa8b907001677984a588) chore: update changelog [skip ci] — github-actions[bot], Aug 12, 2026 02:47 UTC
-- [`1277c4d`](https://github.com/notamitgamer/bsc/commit/1277c4dc7b8dd7023ab7570f537a9cab671e898e) Merge pull request #36 from notamitgamer2/fix/raw-button-visibility — Amit Dutta, Aug 12, 2026 02:47 UTC
-- [`8ee8a69`](https://github.com/notamitgamer/bsc/commit/8ee8a6954e1978c568e62724fd9a0952d6318b8b) fix: hide raw/AI buttons on pages with no committed source — notamitgamer2, Aug 12, 2026 02:44 UTC
-- [`46c77ef`](https://github.com/notamitgamer/bsc/commit/46c77ef6b5d8cc1758ae908495d8f852d4e188e6) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:35 UTC
-- [`8d937c8`](https://github.com/notamitgamer/bsc/commit/8d937c84fbfbc0cba07262704f7f4c511b82b2cc) Merge pull request #35 from notamitgamer/edit-20260811-200457 — Amit Dutta, Aug 11, 2026 14:35 UTC
-- [`52df150`](https://github.com/notamitgamer/bsc/commit/52df150732fdea7fd03c59b20af68ab0ec66b75f) updated the faq — Amit Dutta, Aug 11, 2026 14:34 UTC
-- [`cde9f80`](https://github.com/notamitgamer/bsc/commit/cde9f80ca47fe6d30bb4973d844f283630d262fc) chore: update changelog [skip ci] — github-actions[bot], Aug 11, 2026 14:24 UTC
-- [`54613dd`](https://github.com/notamitgamer/bsc/commit/54613dd510052a18ec9225537334ca788ea8541a) Merge pull request #34 from notamitgamer/edit-20260811-195405 — Amit Dutta, Aug 11, 2026 14:24 UTC
 
 ---
 
