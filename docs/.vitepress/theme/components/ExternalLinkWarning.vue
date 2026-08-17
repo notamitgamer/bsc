@@ -12,10 +12,19 @@ const safeDomains = [
   'raw.usercontent.amit.is-a.dev'
 ]
 
+const lockScroll = () => {
+  document.body.style.overflow = 'hidden'
+}
+
+const unlockScroll = () => {
+  document.body.style.overflow = ''
+}
+
 const reset = () => {
   isVisible.value = false
   pendingUrl.value = ''
   copied.value = false
+  unlockScroll()
 }
 
 const handleGlobalClick = (e: MouseEvent) => {
@@ -31,12 +40,16 @@ const handleGlobalClick = (e: MouseEvent) => {
       e.preventDefault()
       pendingUrl.value = target.href
       isVisible.value = true
+      lockScroll()
     }
   } catch {}
 }
 
 onMounted(() => document.addEventListener('click', handleGlobalClick))
-onUnmounted(() => document.removeEventListener('click', handleGlobalClick))
+onUnmounted(() => {
+  document.removeEventListener('click', handleGlobalClick)
+  unlockScroll()
+})
 
 const openLink = () => {
   window.open(pendingUrl.value, '_blank', 'noopener,noreferrer')
@@ -61,7 +74,8 @@ const copyUrl = async () => {
         <div class="handle"></div>
 
         <p class="warning">
-          This link will take you outside the website. I am not responsible for the content of external sites.
+          <strong>You're about to leave this site.</strong><br />
+          This link leads to an external site I don't control, and can't vouch for its content. Continue anyway?
         </p>
 
         <div class="url-box">{{ pendingUrl }}</div>
@@ -84,7 +98,7 @@ const copyUrl = async () => {
               <polyline points="15 3 21 3 21 9"/>
               <line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
-            Open Link
+            Continue
           </button>
         </div>
       </div>
@@ -132,6 +146,11 @@ const copyUrl = async () => {
   color: var(--vp-c-text-2);
   margin: 0 0 14px;
   text-align: center;
+}
+
+.warning strong {
+  color: var(--vp-c-text-1);
+  font-size: 0.95rem;
 }
 
 .url-box {
