@@ -1,16 +1,19 @@
 # Changelog
 
-> Last build: August 18, 2026 at 13:50 UTC
+> Last build: August 18, 2026 at 14:15 UTC
 
 ## Latest Build
 
-- **Build ID** — `bf38d0cf3d198d7d6768b5ce53563d12d356b700`
+- **Build ID** — `562df53e7b32dabbb584fa8b9f4c9dd29e28df0b`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 18, 2026 at 13:50 UTC
+- **Build time** — August 18, 2026 at 14:15 UTC
 
 ## Recent Commits
 
+- [`562df53`](https://github.com/notamitgamer/bsc/commit/562df53e7b32dabbb584fa8b9f4c9dd29e28df0b) Merge pull request #51 from notamitgamer/edit-20260818-194418 — Amit Dutta, Aug 18, 2026 14:15 UTC
+- [`79ac76c`](https://github.com/notamitgamer/bsc/commit/79ac76c01e226f0842002688e164f95fd985ba9d) added tip about ofline offline bundle — Amit Dutta, Aug 18, 2026 14:14 UTC
+- [`d1f30f2`](https://github.com/notamitgamer/bsc/commit/d1f30f22869861840eb895e05658b10bb15991b8) chore: update changelog [skip ci] — bot-for-notamitgamer[bot], Aug 18, 2026 13:50 UTC
 - [`bf38d0c`](https://github.com/notamitgamer/bsc/commit/bf38d0cf3d198d7d6768b5ce53563d12d356b700) Change backup method to Git bundle and update release — Amit Dutta, Aug 18, 2026 13:50 UTC
 - [`df75e19`](https://github.com/notamitgamer/bsc/commit/df75e198b972d010a986deabe6bef43c1da6e8b9) chore: update changelog [skip ci] — bot-for-notamitgamer[bot], Aug 18, 2026 13:41 UTC
 - [`667c9a3`](https://github.com/notamitgamer/bsc/commit/667c9a3a1bb82b1aaa017c5665db0996cee8bda0) Add backup job to GitHub Actions workflow — Amit Dutta, Aug 18, 2026 13:41 UTC
@@ -28,9 +31,6 @@
 - [`e45b609`](https://github.com/notamitgamer/bsc/commit/e45b6093271133f208807ac9cc1546c2f455d04a) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:43 UTC
 - [`e54d91d`](https://github.com/notamitgamer/bsc/commit/e54d91d9410e0caaa243b2478e313cccabf170e1) Merge pull request #45 from notamitgamer/dependabot/npm_and_yarn/vitepress-2.0.0-alpha.19 — Amit Dutta, Aug 14, 2026 01:42 UTC
 - [`040aff8`](https://github.com/notamitgamer/bsc/commit/040aff88a1c577097ab5c529387a0fc308992e8c) Merge pull request #44 from notamitgamer/dependabot/github_actions/actions/checkout-7 — Amit Dutta, Aug 14, 2026 01:42 UTC
-- [`97ce994`](https://github.com/notamitgamer/bsc/commit/97ce9944a72eda728642ede959355038e3357515) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:42 UTC
-- [`af1302b`](https://github.com/notamitgamer/bsc/commit/af1302bdfa0bdfd71a9c229824a89d6593d23307) Merge pull request #43 from notamitgamer/dependabot/github_actions/actions/setup-node-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
-- [`6761467`](https://github.com/notamitgamer/bsc/commit/6761467a6fe9accf398b3e83f45a5a2e4e49afd4) Merge pull request #41 from notamitgamer/dependabot/github_actions/actions/setup-python-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
 
 ---
 
