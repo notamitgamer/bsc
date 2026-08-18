@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: August 17, 2026 at 06:55 UTC
+> Last build: August 18, 2026 at 13:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `ca8257e6821106c65d9611fef9e7afa2338b6979`
+- **Build ID** — `082756dd81bdfd59a2ef95e76bc6e436de74254a`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 17, 2026 at 06:55 UTC
+- **Build time** — August 18, 2026 at 13:32 UTC
 
 ## Recent Commits
 
+- [`082756d`](https://github.com/notamitgamer/bsc/commit/082756dd81bdfd59a2ef95e76bc6e436de74254a) Update GitHub Actions bot configuration — Amit Dutta, Aug 18, 2026 13:32 UTC
+- [`14410e2`](https://github.com/notamitgamer/bsc/commit/14410e2618195eeb3fa70b743078e9463730b91e) chore: update changelog [skip ci] — github-actions[bot], Aug 17, 2026 06:56 UTC
 - [`ca8257e`](https://github.com/notamitgamer/bsc/commit/ca8257e6821106c65d9611fef9e7afa2338b6979) Merge pull request #50 from notamitgamer2/fix/external-link-modal-actions — Amit Dutta, Aug 17, 2026 06:55 UTC
 - [`ddddcd5`](https://github.com/notamitgamer/bsc/commit/ddddcd54587ee70c0e7b339f01eb78bbc4a8d0a4) Redesign modal actions: Yes/No pair + inline copy icon — notamitgamer2, Aug 17, 2026 06:53 UTC
 - [`3357c7c`](https://github.com/notamitgamer/bsc/commit/3357c7cc88156dbd8eeaebbd1a7438f6d34c8d0a) chore: update changelog [skip ci] — github-actions[bot], Aug 17, 2026 06:30 UTC
@@ -29,8 +31,6 @@
 - [`659e98b`](https://github.com/notamitgamer/bsc/commit/659e98bf7a347d544e44181376a75edc2889ca51) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:40 UTC
 - [`d5b92f0`](https://github.com/notamitgamer/bsc/commit/d5b92f018bc69895aa60c24a1d1489e1032b5d59) Merge pull request #39 from notamitgamer/dependabot/github_actions/actions/deploy-pages-5 — Amit Dutta, Aug 14, 2026 01:40 UTC
 - [`de5503f`](https://github.com/notamitgamer/bsc/commit/de5503ff2c98a5ff003d31d55cfaa327770e975b) Bump vitepress from 2.0.0-alpha.18 to 2.0.0-alpha.19 — dependabot[bot], Aug 13, 2026 18:04 UTC
-- [`961ccaf`](https://github.com/notamitgamer/bsc/commit/961ccafdac4717611ae71dd73aac67295679352b) Bump actions/checkout from 4 to 7 — dependabot[bot], Aug 13, 2026 18:04 UTC
-- [`558cea7`](https://github.com/notamitgamer/bsc/commit/558cea78867801520ce6d521ca0dccd945d629a0) Bump actions/setup-node from 4 to 7 — dependabot[bot], Aug 13, 2026 18:04 UTC
 
 ---
 
