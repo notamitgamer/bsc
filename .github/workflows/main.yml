@@ -152,8 +152,8 @@ jobs:
           echo "TIMESTAMP=$(TZ='Asia/Kolkata' date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
           echo "PRETTY_DATE=$(TZ='Asia/Kolkata' date +'%d %B %Y, %I:%M %p IST')" >> $GITHUB_ENV
 
-      - name: Create ZIP Backup
-        run: zip -r "full-repo-backup-${{ env.TIMESTAMP }}.zip" . -x "*.git*"
+      - name: Create Git Bundle Backup
+        run: git bundle create "full-repo-backup-${{ env.TIMESTAMP }}.bundle" --all
 
       - name: Update Rolling Release
         env:
@@ -161,9 +161,9 @@ jobs:
         run: |
           gh release delete latest-backup -y --cleanup-tag || true
           
-          gh release create "latest-backup" "full-repo-backup-${{ env.TIMESTAMP }}.zip" \
-            --title "Latest Backup - ${{ env.PRETTY_DATE }}" \
-            --notes "Automated repository backup generated on ${{ env.PRETTY_DATE }}."
+          gh release create "latest-backup" "full-repo-backup-${{ env.TIMESTAMP }}.bundle" \
+            --title "Latest Bundle Backup - ${{ env.PRETTY_DATE }}" \
+            --notes "Automated full repository bundle generated on ${{ env.PRETTY_DATE }}. Restore offline using \`git clone full-repo-backup-${{ env.TIMESTAMP }}.bundle\`."
 
   deploy:
     environment:
