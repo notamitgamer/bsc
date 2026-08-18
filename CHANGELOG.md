@@ -1,16 +1,18 @@
 # Changelog
 
-> Last build: August 18, 2026 at 13:41 UTC
+> Last build: August 18, 2026 at 13:50 UTC
 
 ## Latest Build
 
-- **Build ID** — `667c9a3a1bb82b1aaa017c5665db0996cee8bda0`
+- **Build ID** — `bf38d0cf3d198d7d6768b5ce53563d12d356b700`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 18, 2026 at 13:41 UTC
+- **Build time** — August 18, 2026 at 13:50 UTC
 
 ## Recent Commits
 
+- [`bf38d0c`](https://github.com/notamitgamer/bsc/commit/bf38d0cf3d198d7d6768b5ce53563d12d356b700) Change backup method to Git bundle and update release — Amit Dutta, Aug 18, 2026 13:50 UTC
+- [`df75e19`](https://github.com/notamitgamer/bsc/commit/df75e198b972d010a986deabe6bef43c1da6e8b9) chore: update changelog [skip ci] — bot-for-notamitgamer[bot], Aug 18, 2026 13:41 UTC
 - [`667c9a3`](https://github.com/notamitgamer/bsc/commit/667c9a3a1bb82b1aaa017c5665db0996cee8bda0) Add backup job to GitHub Actions workflow — Amit Dutta, Aug 18, 2026 13:41 UTC
 - [`1171296`](https://github.com/notamitgamer/bsc/commit/1171296e52312d94feb685cc84240a95cf78f971) chore: update changelog [skip ci] — bot-for-notamitgamer[bot], Aug 18, 2026 13:33 UTC
 - [`082756d`](https://github.com/notamitgamer/bsc/commit/082756dd81bdfd59a2ef95e76bc6e436de74254a) Update GitHub Actions bot configuration — Amit Dutta, Aug 18, 2026 13:32 UTC
@@ -29,8 +31,6 @@
 - [`97ce994`](https://github.com/notamitgamer/bsc/commit/97ce9944a72eda728642ede959355038e3357515) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:42 UTC
 - [`af1302b`](https://github.com/notamitgamer/bsc/commit/af1302bdfa0bdfd71a9c229824a89d6593d23307) Merge pull request #43 from notamitgamer/dependabot/github_actions/actions/setup-node-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
 - [`6761467`](https://github.com/notamitgamer/bsc/commit/6761467a6fe9accf398b3e83f45a5a2e4e49afd4) Merge pull request #41 from notamitgamer/dependabot/github_actions/actions/setup-python-7 — Amit Dutta, Aug 14, 2026 01:41 UTC
-- [`724c4f7`](https://github.com/notamitgamer/bsc/commit/724c4f7f80f960d6230607033b5640311beab310) Merge pull request #40 from notamitgamer/dependabot/github_actions/actions/upload-pages-artifact-5 — Amit Dutta, Aug 14, 2026 01:41 UTC
-- [`659e98b`](https://github.com/notamitgamer/bsc/commit/659e98bf7a347d544e44181376a75edc2889ca51) chore: update changelog [skip ci] — github-actions[bot], Aug 14, 2026 01:40 UTC
 
 ---
 
