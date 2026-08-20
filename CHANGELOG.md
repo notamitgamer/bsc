@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 20, 2026 at 07:49 UTC
+> Last build: August 20, 2026 at 07:58 UTC
 
 ## Latest Build
 
-- **Build ID** — `e31382fabbeb9b957963f4e89f07f9ec41693607`
+- **Build ID** — `946ed545091faf15a0fc3048e407a33ba8c22c79`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 20, 2026 at 07:49 UTC
+- **Build time** — August 20, 2026 at 07:58 UTC
 
 ## Recent Commits
+
+### [`946ed54`](https://github.com/notamitgamer/bsc/commit/946ed545091faf15a0fc3048e407a33ba8c22c79) Merge pull request #55 from notamitgamer/feat/update-banner-text
+
+**Amit Dutta** committed on Aug 20, 2026 07:58 UTC
+
+
+---
+
+### [`f2516b3`](https://github.com/notamitgamer/bsc/commit/f2516b3f2fc72fb738321cb7a4da5150b162c9b2) chore: update banner changelog message text
+
+**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 07:57 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Banner.vue` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`48178ac`](https://github.com/notamitgamer/bsc/commit/48178ace03e246ca4b03c11101901d915b65fd6e) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 07:49 UTC · +127 / -23 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +127 -23 |
+</details>
+
+
+---
 
 ### [`e31382f`](https://github.com/notamitgamer/bsc/commit/e31382fabbeb9b957963f4e89f07f9ec41693607) Merge pull request #54 from notamitgamer/feat/detailed-changelog
 
@@ -96,43 +133,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +6 -6 |
-</details>
-
-
----
-
-### [`562df53`](https://github.com/notamitgamer/bsc/commit/562df53e7b32dabbb584fa8b9f4c9dd29e28df0b) Merge pull request #51 from notamitgamer/edit-20260818-194418
-
-**Amit Dutta** committed on Aug 18, 2026 14:15 UTC
-
-
----
-
-### [`79ac76c`](https://github.com/notamitgamer/bsc/commit/79ac76c01e226f0842002688e164f95fd985ba9d) added tip about ofline offline bundle
-
-**Amit Dutta** committed on Aug 18, 2026 14:14 UTC · +5 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/index.md` | Modified | +5 |
-</details>
-
-
----
-
-### [`d1f30f2`](https://github.com/notamitgamer/bsc/commit/d1f30f22869861840eb895e05658b10bb15991b8) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 18, 2026 13:50 UTC · +5 / -5 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +5 -5 |
 </details>
 
 
