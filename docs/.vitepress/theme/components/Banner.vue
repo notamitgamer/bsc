@@ -36,7 +36,7 @@ const acceptTerms = () => {
             By browsing, you agree to <a href="/terms" class="banner-link">Terms</a>.
           </template>
           <template v-else>
-            Updated with new materials — see the <a href="/changelog" class="banner-link">Changelog</a>.
+            Site has been updated — checkout the <a href="/changelog" class="banner-link">Changelog</a>.
           </template>
         </p>
         <div class="banner-actions">
