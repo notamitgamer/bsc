@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 20, 2026 at 07:58 UTC
+> Last build: August 20, 2026 at 08:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `946ed545091faf15a0fc3048e407a33ba8c22c79`
+- **Build ID** — `63553512449284bb5515351399359bd62cf5f5b5`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 20, 2026 at 07:58 UTC
+- **Build time** — August 20, 2026 at 08:12 UTC
 
 ## Recent Commits
+
+### [`6355351`](https://github.com/notamitgamer/bsc/commit/63553512449284bb5515351399359bd62cf5f5b5) Merge pull request #56 from notamitgamer/ci/pr-generator-check
+
+**Amit Dutta** committed on Aug 20, 2026 08:12 UTC
+
+
+---
+
+### [`65b4302`](https://github.com/notamitgamer/bsc/commit/65b4302e5d7024486663a59fe001eb4cca7a66dc) ci: add PR check to validate generator scripts
+
+**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:11 UTC · +40 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/pr-check.yml` | Added | +40 |
+</details>
+
+
+---
+
+### [`593fc25`](https://github.com/notamitgamer/bsc/commit/593fc25071eec460b378049ca37ee56b20d6906e) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 07:59 UTC · +37 / -37 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +37 -37 |
+</details>
+
+
+---
 
 ### [`946ed54`](https://github.com/notamitgamer/bsc/commit/946ed545091faf15a0fc3048e407a33ba8c22c79) Merge pull request #55 from notamitgamer/feat/update-banner-text
 
@@ -89,43 +126,6 @@
 ### [`7cf6870`](https://github.com/notamitgamer/bsc/commit/7cf6870c609b8721e8a85bc00081f7bc14d1f72e) chore: update changelog [skip ci]
 
 **bot-for-notamitgamer[bot]** committed on Aug 19, 2026 00:47 UTC · +6 / -6 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +6 -6 |
-</details>
-
-
----
-
-### [`57aaa55`](https://github.com/notamitgamer/bsc/commit/57aaa5542a36a1d7f60bd73e7c3a915a7075c57a) Merge pull request #53 from notamitgamer/test/github-app-bot
-
-**Amit Dutta** committed on Aug 19, 2026 00:47 UTC
-
-
----
-
-### [`2dbe3a9`](https://github.com/notamitgamer/bsc/commit/2dbe3a957c9a4f8a9b8109c702b580c5e4414fe0) test: verify GitHub App bot can push and open PRs
-
-**bot-for-notamitgamer[bot]** committed on Aug 19, 2026 00:46 UTC · +1 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `README.md` | Modified | +1 |
-</details>
-
-
----
-
-### [`5e84705`](https://github.com/notamitgamer/bsc/commit/5e84705cea9d82da0406cf6512188f3a29bbe112) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 18, 2026 14:15 UTC · +6 / -6 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
