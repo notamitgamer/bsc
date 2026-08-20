@@ -1,0 +1,40 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  generators:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Run list.py
+        run: python list.py
+
+      - name: Run md.py
+        run: python md.py
+
+      - name: Fail if generators reported errors
+        run: |
+          if [ -f list.txt ]; then
+            echo "list.py produced list.txt ($(wc -l < list.txt) entries)"
+          else
+            echo "::error::list.py did not produce list.txt"
+            exit 1
+          fi
