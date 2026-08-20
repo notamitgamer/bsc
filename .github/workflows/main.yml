@@ -91,7 +91,8 @@ jobs:
           BUILD_REF: ${{ github.ref_name }}
           BUILD_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
         run: |
-          git log --pretty=format:"%H|%s|%an|%aI" -20 > git_log.txt
+          git log -10 --pretty=format:"COMMIT|%H|%s|%an|%aI" --numstat > git_log_numstat.txt
+          git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
           python changelog.py
 
       - name: Commit generated changelog to repo
