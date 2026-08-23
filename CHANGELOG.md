@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 23, 2026 at 15:12 UTC
+> Last build: August 23, 2026 at 15:35 UTC
 
 ## Latest Build
 
-- **Build ID** — `76a398425efaed7c32e646e00bb7e0583a2de1ea`
+- **Build ID** — `e3a687cacd83eac69f41c0fe62951a4a8029df9a`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 23, 2026 at 15:12 UTC
+- **Build time** — August 23, 2026 at 15:35 UTC
 
 ## Recent Commits
+
+### [`e3a687c`](https://github.com/notamitgamer/bsc/commit/e3a687cacd83eac69f41c0fe62951a4a8029df9a) Merge pull request #61 from notamitgamer/chore/use-client-id-for-app-token
+
+**Amit Dutta** committed on Aug 23, 2026 15:35 UTC
+
+
+---
+
+### [`a9afa4a`](https://github.com/notamitgamer/bsc/commit/a9afa4ab73dba30c7ce0e834851d12df7d215f66) ci: use client-id instead of deprecated app-id input
+
+**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:31 UTC · +2 / -2 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +2 -2 |
+</details>
+
+
+---
+
+### [`8f92a33`](https://github.com/notamitgamer/bsc/commit/8f92a330bc6aa0b94bdc67f8078df4a83b001004) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:29 UTC · +36 / -52 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +36 -52 |
+</details>
+
+
+---
 
 ### [`76a3984`](https://github.com/notamitgamer/bsc/commit/76a398425efaed7c32e646e00bb7e0583a2de1ea) Merge pull request #59 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.39.0
 
@@ -80,43 +117,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/pr-check.yml` | Added | +40 |
-</details>
-
-
----
-
-### [`593fc25`](https://github.com/notamitgamer/bsc/commit/593fc25071eec460b378049ca37ee56b20d6906e) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 07:59 UTC · +37 / -37 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +37 -37 |
-</details>
-
-
----
-
-### [`946ed54`](https://github.com/notamitgamer/bsc/commit/946ed545091faf15a0fc3048e407a33ba8c22c79) Merge pull request #55 from notamitgamer/feat/update-banner-text
-
-**Amit Dutta** committed on Aug 20, 2026 07:58 UTC
-
-
----
-
-### [`f2516b3`](https://github.com/notamitgamer/bsc/commit/f2516b3f2fc72fb738321cb7a4da5150b162c9b2) chore: update banner changelog message text
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 07:57 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/Banner.vue` | Modified | +1 -1 |
 </details>
 
 
