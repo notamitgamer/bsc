@@ -104,7 +104,11 @@ jobs:
           
           if ! git diff --cached --quiet; then
             git commit -m "chore: update changelog [skip ci]"
-            git push
+            if git push; then
+              echo "Changelog update pushed."
+            else
+              echo "::warning::Unable to push changelog update (likely due to branch protection). Continuing build."
+            fi
           else
             echo "No changes"
           fi
