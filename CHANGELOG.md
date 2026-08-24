@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 10:26 UTC
+> Last build: August 24, 2026 at 10:38 UTC
 
 ## Latest Build
 
-- **Build ID** — `12c54a0a527a50280c2007a9d54354b7a60c521c`
+- **Build ID** — `1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 10:26 UTC
+- **Build time** — August 24, 2026 at 10:38 UTC
 
 ## Recent Commits
+
+### [`1f1ac93`](https://github.com/notamitgamer/bsc/commit/1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6) Merge pull request #71 from notamitgamer/fix/tags-page-color-and-filter
+
+**Amit Dutta** committed on Aug 24, 2026 10:38 UTC
+
+
+---
+
+### [`c808741`](https://github.com/notamitgamer/bsc/commit/c80874199b470f26fef056f280aae538243f8840) fix: tags page link color + click-to-filter chip bar
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:36 UTC · +71 / -4 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +71 -4 |
+</details>
+
+
+---
+
+### [`61c70e6`](https://github.com/notamitgamer/bsc/commit/61c70e60f2d9e65dc7b1787f859b3aff12c0bd2b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:27 UTC · +41 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -32 |
+</details>
+
+
+---
 
 ### [`12c54a0`](https://github.com/notamitgamer/bsc/commit/12c54a0a527a50280c2007a9d54354b7a60c521c) Merge pull request #70 from notamitgamer/chore/remove-related-pages
 
@@ -99,44 +136,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +41 -40 |
-</details>
-
-
----
-
-### [`ef3fa82`](https://github.com/notamitgamer/bsc/commit/ef3fa82757199347d5c40467f6b380e0658d07d9) Merge pull request #68 from notamitgamer/fix/tags-footer-placement
-
-**Amit Dutta** committed on Aug 24, 2026 10:11 UTC
-
-
----
-
-### [`4adfab3`](https://github.com/notamitgamer/bsc/commit/4adfab3092ef9c3cc97e5c60aa5f1b2ead1a6790) fix: move tag chips to page footer
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:09 UTC · +8 / -8 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/Labels.vue` | Modified | +1 -1 |
-| `docs/.vitepress/theme/index.ts` | Modified | +7 -7 |
-</details>
-
-
----
-
-### [`e1e4181`](https://github.com/notamitgamer/bsc/commit/e1e4181aedf659291b8923d04f163c0525ddf64b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:38 UTC · +32 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +32 -40 |
 </details>
 
 
