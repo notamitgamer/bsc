@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 13:32 UTC
+> Last build: August 24, 2026 at 13:35 UTC
 
 ## Latest Build
 
-- **Build ID** — `8d7e0e89137bd829ef7835275491cb7d64d97a87`
+- **Build ID** — `5227459c5c1cca6e5cb2aceadd2653a99c62b7da`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 13:32 UTC
+- **Build time** — August 24, 2026 at 13:35 UTC
 
 ## Recent Commits
+
+### [`5227459`](https://github.com/notamitgamer/bsc/commit/5227459c5c1cca6e5cb2aceadd2653a99c62b7da) Merge pull request #78 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 13:35 UTC
+
+
+---
+
+### [`427f0e3`](https://github.com/notamitgamer/bsc/commit/427f0e3f3f9e64fe7805e2ee731bd6ea078c9820) Rename backup job to release in workflow
+
+**Amit Dutta** committed on Aug 24, 2026 13:35 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`1eb1cf1`](https://github.com/notamitgamer/bsc/commit/1eb1cf1635a9e2811d12449a359b195d404bc8a5) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:32 UTC · +28 / -28 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +28 -28 |
+</details>
+
+
+---
 
 ### [`8d7e0e8`](https://github.com/notamitgamer/bsc/commit/8d7e0e89137bd829ef7835275491cb7d64d97a87) Merge pull request #77 from notamitgamer/notamitgamer-patch-1
 
@@ -88,43 +125,6 @@
 ### [`3c7fab7`](https://github.com/notamitgamer/bsc/commit/3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e) Merge pull request #75 from notamitgamer/patch
 
 **Amit Dutta** committed on Aug 24, 2026 13:12 UTC
-
-
----
-
-### [`609ffee`](https://github.com/notamitgamer/bsc/commit/609ffeee97c280faf22c2702cb8403b06ffe8f2c) Refine CSS styles for filter chips and tags
-
-**Amit Dutta** committed on Aug 24, 2026 13:12 UTC · +5 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +5 -3 |
-</details>
-
-
----
-
-### [`72fc774`](https://github.com/notamitgamer/bsc/commit/72fc774ee3c946af80767f76b80f5f40c774dd7c) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 11:01 UTC · +30 / -31 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +30 -31 |
-</details>
-
-
----
-
-### [`3fa1fe8`](https://github.com/notamitgamer/bsc/commit/3fa1fe8c7de2785236fb51cbd5b62bb5f89fb34a) Merge pull request #74 from notamitgamer/Patch
-
-**Amit Dutta** committed on Aug 24, 2026 11:00 UTC
 
 
 ---
