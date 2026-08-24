@@ -9,14 +9,36 @@ import { data as tagsData } from './.vitepress/tags.data.ts'
 
 const tagNames = Object.keys(tagsData).sort()
 
-const activeFilter = ref(null)
+// Store an array of active tags instead of a single string
+const activeFilters = ref([])
 
-const visibleTags = computed(() => {
-  return activeFilter.value ? [activeFilter.value] : tagNames
+// Compute pages that contain ALL selected tags (AND logic)
+const filteredPages = computed(() => {
+  if (activeFilters.value.length === 0) return []
+
+  // Start with the pages of the first selected tag
+  let commonPages = tagsData[activeFilters.value[0]]
+
+  // Intersect with pages of the other selected tags
+  for (let i = 1; i < activeFilters.value.length; i++) {
+    const nextTagPages = tagsData[activeFilters.value[i]]
+    commonPages = commonPages.filter(page =>
+      nextTagPages.some(p => p.url === page.url)
+    )
+  }
+  
+  return commonPages
 })
 
 function toggleFilter(tag) {
-  activeFilter.value = activeFilter.value === tag ? null : tag
+  const index = activeFilters.value.indexOf(tag)
+  if (index > -1) {
+    // Tag is currently active, remove it
+    activeFilters.value.splice(index, 1)
+  } else {
+    // Tag is not active, add it
+    activeFilters.value.push(tag)
+  }
 }
 
 function humanize(tag) {
@@ -26,7 +48,7 @@ function humanize(tag) {
 
 # Tags
 
-Browse pages grouped by tag. Click a tag below to filter to just that one, or click a tag chip anywhere on the site to jump straight here.
+Browse pages grouped by tag. Click tags below to filter results, or click a tag chip anywhere on the site to jump straight here.
 
 <div v-if="!tagNames.length" class="bsc-tags-empty">
   No tags found yet.
@@ -37,27 +59,48 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
     v-for="tag in tagNames"
     :key="tag"
     class="bsc-filter-chip"
-    :class="{ 'bsc-filter-chip-active': activeFilter === tag }"
+    :class="{ 'bsc-filter-chip-active': activeFilters.includes(tag) }"
     @click="toggleFilter(tag)"
   >{{ humanize(tag) }}</button>
 </div>
 
-<p v-if="activeFilter" class="bsc-filter-status">
-  Showing only <strong>{{ humanize(activeFilter) }}</strong> —
-  <a href="#" class="bsc-filter-clear" @click.prevent="activeFilter = null">clear filter</a>
+<p v-if="activeFilters.length" class="bsc-filter-status">
+  Showing pages with <strong>all</strong> selected tags: 
+  <strong style="color: var(--vp-c-brand-1);">{{ activeFilters.map(humanize).join(' + ') }}</strong> —
+  <a href="#" class="bsc-filter-clear" @click.prevent="activeFilters = []">clear filters</a>
 </p>
 
-<div v-for="tag in visibleTags" :key="tag" :id="tag" class="bsc-tag-section">
+<!-- If filters are active, show the combined intersection of pages -->
+<div v-if="activeFilters.length" class="bsc-tag-section">
   <h2 class="bsc-tag-heading">
-    <a class="bsc-tag" :href="`#${tag}`">{{ humanize(tag) }}</a>
-    <span class="bsc-tag-count">{{ tagsData[tag].length }}</span>
+    Filtered Results
+    <span class="bsc-tag-count">{{ filteredPages.length }}</span>
   </h2>
-  <ul class="bsc-tag-pages">
-    <li v-for="page in tagsData[tag]" :key="page.url">
+  
+  <ul v-if="filteredPages.length" class="bsc-tag-pages">
+    <li v-for="page in filteredPages" :key="page.url">
       <a :href="page.url">{{ page.title }}</a>
     </li>
   </ul>
+  <div v-else class="bsc-tags-empty" style="margin-top: 16px;">
+    No pages match all selected tags.
+  </div>
 </div>
+
+<!-- If no filters are active, show all standard tag sections -->
+<template v-else>
+  <div v-for="tag in tagNames" :key="tag" :id="tag" class="bsc-tag-section">
+    <h2 class="bsc-tag-heading">
+      <a class="bsc-tag" :href="`#${tag}`">{{ humanize(tag) }}</a>
+      <span class="bsc-tag-count">{{ tagsData[tag].length }}</span>
+    </h2>
+    <ul class="bsc-tag-pages">
+      <li v-for="page in tagsData[tag]" :key="page.url">
+        <a :href="page.url">{{ page.title }}</a>
+      </li>
+    </ul>
+  </div>
+</template>
 
 <style scoped>
 .bsc-tags-empty {
@@ -82,6 +125,7 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Only change to blue text on hover if the chip is NOT active */
@@ -104,8 +148,14 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
 }
 
 .bsc-filter-clear {
-  color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-3);
+  text-decoration: underline;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.bsc-filter-clear:hover {
+  color: var(--vp-c-brand-1);
 }
 
 .bsc-tag-section {
