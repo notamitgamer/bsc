@@ -69,6 +69,7 @@ jobs:
           fetch-depth: 20  
           token: ${{ steps.app-token.outputs.token }}
 
+      # 1. GENERATE ALL CONTENT FIRST (Markdown + Changelog)
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -90,20 +91,7 @@ jobs:
           git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
           python changelog.py
 
-      - name: Commit generated changelog to repo
-        run: |
-          git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
-          git add CHANGELOG.md
-          if ! git diff --cached --quiet; then
-            # Pushing with [skip ci] handles generic actions, but our job-level filter 
-            # github.actor != 'bot-for-notamitgamer[bot]' is the true shield stopping the infinite loop.
-            git commit -m "chore: update changelog [skip ci]"
-            git push
-          else
-            echo "No changes"
-          fi
-
+      # 2. SET UP NODE AND ACTIVE CACHE
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -117,19 +105,38 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .vitepress/cache
-          key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
+          key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', '.vitepress/config.*') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
 
+      # 3. BUILD VITEPRESS (Includes the new changelog page)
       - name: Build VitePress
         run: npm run docs:build
         env:
           VITE_DEPLOY_ID: ${{ github.sha }}
 
+      # 4. UPLOAD THE PRODUCTION SITE ARTIFACT
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
+
+      # 5. COMMIT & PUSH TO GIT AS THE ABSOLUTE LAST STEP
+      # Moving this here allows the caching lifecycle to complete cleanly before the next workflow is spawned.
+      - name: Commit generated changelog to repo
+        run: |
+          git config user.name "bot-for-notamitgamer[bot]"
+          git config user.email "bot-for-notamitgamer[bot]@://github.com"
+          
+          git add CHANGELOG.md
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update changelog [skip ci]"
+            git push
+          else
+            echo "No changes"
+          fi
+
 
   # Job 3: Standard automated fallback backup
   release:
