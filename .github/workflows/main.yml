@@ -136,7 +136,7 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-  backup:
+  release:
     runs-on: ubuntu-latest
     needs: build
     if: github.actor != 'bot-for-notamitgamer[bot]'
