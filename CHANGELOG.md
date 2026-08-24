@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 11:00 UTC
+> Last build: August 24, 2026 at 13:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `3fa1fe8c7de2785236fb51cbd5b62bb5f89fb34a`
+- **Build ID** — `3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 11:00 UTC
+- **Build time** — August 24, 2026 at 13:12 UTC
 
 ## Recent Commits
+
+### [`3c7fab7`](https://github.com/notamitgamer/bsc/commit/3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e) Merge pull request #75 from notamitgamer/patch
+
+**Amit Dutta** committed on Aug 24, 2026 13:12 UTC
+
+
+---
+
+### [`609ffee`](https://github.com/notamitgamer/bsc/commit/609ffeee97c280faf22c2702cb8403b06ffe8f2c) Refine CSS styles for filter chips and tags
+
+**Amit Dutta** committed on Aug 24, 2026 13:12 UTC · +5 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +5 -3 |
+</details>
+
+
+---
+
+### [`72fc774`](https://github.com/notamitgamer/bsc/commit/72fc774ee3c946af80767f76b80f5f40c774dd7c) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 11:01 UTC · +30 / -31 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +30 -31 |
+</details>
+
+
+---
 
 ### [`3fa1fe8`](https://github.com/notamitgamer/bsc/commit/3fa1fe8c7de2785236fb51cbd5b62bb5f89fb34a) Merge pull request #74 from notamitgamer/Patch
 
@@ -88,43 +125,6 @@
 ### [`1f1ac93`](https://github.com/notamitgamer/bsc/commit/1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6) Merge pull request #71 from notamitgamer/fix/tags-page-color-and-filter
 
 **Amit Dutta** committed on Aug 24, 2026 10:38 UTC
-
-
----
-
-### [`c808741`](https://github.com/notamitgamer/bsc/commit/c80874199b470f26fef056f280aae538243f8840) fix: tags page link color + click-to-filter chip bar
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:36 UTC · +71 / -4 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +71 -4 |
-</details>
-
-
----
-
-### [`61c70e6`](https://github.com/notamitgamer/bsc/commit/61c70e60f2d9e65dc7b1787f859b3aff12c0bd2b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:27 UTC · +41 / -32 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -32 |
-</details>
-
-
----
-
-### [`12c54a0`](https://github.com/notamitgamer/bsc/commit/12c54a0a527a50280c2007a9d54354b7a60c521c) Merge pull request #70 from notamitgamer/chore/remove-related-pages
-
-**Amit Dutta** committed on Aug 24, 2026 10:26 UTC
 
 
 ---
