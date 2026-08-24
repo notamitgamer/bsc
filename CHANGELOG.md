@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: August 24, 2026 at 10:19 UTC
+> Last build: August 24, 2026 at 10:26 UTC
 
 ## Latest Build
 
-- **Build ID** — `214e353c0db735f0100a1e4682848555162ec61b`
+- **Build ID** — `12c54a0a527a50280c2007a9d54354b7a60c521c`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 10:19 UTC
+- **Build time** — August 24, 2026 at 10:26 UTC
 
 ## Recent Commits
+
+### [`12c54a0`](https://github.com/notamitgamer/bsc/commit/12c54a0a527a50280c2007a9d54354b7a60c521c) Merge pull request #70 from notamitgamer/chore/remove-related-pages
+
+**Amit Dutta** committed on Aug 24, 2026 10:26 UTC
+
+
+---
+
+### [`1a224f5`](https://github.com/notamitgamer/bsc/commit/1a224f5bca9ad8fde12c079f906b50b567a2682c) chore: remove related pages feature
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:24 UTC · +1 / -88 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/RelatedPages.vue` | Removed | -85 |
+| `docs/.vitepress/theme/index.ts` | Modified | +1 -3 |
+</details>
+
+
+---
+
+### [`25d7e39`](https://github.com/notamitgamer/bsc/commit/25d7e3952be826ccba29559a42fac3e65245a3de) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:19 UTC · +44 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +44 -41 |
+</details>
+
+
+---
 
 ### [`214e353`](https://github.com/notamitgamer/bsc/commit/214e353c0db735f0100a1e4682848555162ec61b) Merge pull request #69 from notamitgamer/feat/related-pages-and-sidebar-tags
 
@@ -99,35 +137,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +32 -40 |
-</details>
-
-
----
-
-### [`a60862a`](https://github.com/notamitgamer/bsc/commit/a60862afc5d03328354c19afb196d8676f2ea6c2) Merge pull request #63 from notamitgamer/refactor/modularize-md-generator
-
-**Amit Dutta** committed on Aug 24, 2026 05:38 UTC
-
-
----
-
-### [`00b35ae`](https://github.com/notamitgamer/bsc/commit/00b35aebfc982c4ad617ce845cd2e5c7d403b2c7) Merge origin/main: resolve md.py conflict
-
-**copilot-swe-agent[bot]** committed on Aug 24, 2026 05:35 UTC
-
-
----
-
-### [`e0a3c98`](https://github.com/notamitgamer/bsc/commit/e0a3c98309692c32174a344bee52ee85d6ec222a) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:31 UTC · +42 / -34 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +42 -34 |
 </details>
 
 
