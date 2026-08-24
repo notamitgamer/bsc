@@ -72,5 +72,6 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 **Amit Dutta**
 * **Personal Email:** [amitdutta4255@gmail.com](mailto:amitdutta4255@gmail.com)
 * **Work Email:** [mail@amit.is-a.dev](mailto:mail@amit.is-a.dev)
+* **Website:** [amit.is-a.dev](https://amit.is-a.dev)
 * **License:** [MIT](./LICENSE)
 
