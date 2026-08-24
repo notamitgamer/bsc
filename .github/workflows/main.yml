@@ -18,6 +18,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Job 1: Independent cloud synchronization
   sync-hf:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
@@ -32,31 +33,25 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git clone https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent /tmp/hf_repo
-          
           rsync -av --delete \
             --exclude='.git' \
             --exclude='MinGW64' \
             --exclude='*.exe' \
             --exclude='site_files' \
             $GITHUB_WORKSPACE/ /tmp/hf_repo/
-
           cd /tmp/hf_repo
-          
           git lfs install
           git lfs track "*.pdf"
           git lfs track "*.docx"
           git lfs track "*.odt"
           git add .gitattributes
-          
           git config user.name "bot-for-notamitgamer[bot]"
           git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
-          
           git add .
-          
           git commit -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" || echo "No changes to commit"
-          
           git push origin main
 
+  # Job 2: Main processing engine (Generates data -> Commits -> Builds)
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
@@ -99,10 +94,10 @@ jobs:
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
           git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
-          
           git add CHANGELOG.md
-          
           if ! git diff --cached --quiet; then
+            # Pushing with [skip ci] handles generic actions, but our job-level filter 
+            # github.actor != 'bot-for-notamitgamer[bot]' is the true shield stopping the infinite loop.
             git commit -m "chore: update changelog [skip ci]"
             git push
           else
@@ -122,7 +117,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: docs/.vitepress/cache
-          key: ${{ runner.os }}-vitepress-${{ hashFiles('**/*.md', 'package-lock.json') }}
+          key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
 
@@ -136,6 +131,7 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
+  # Job 3: Standard automated fallback backup
   release:
     runs-on: ubuntu-latest
     needs: build
@@ -169,11 +165,11 @@ jobs:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh release delete latest-backup -y --cleanup-tag || true
-          
           gh release create "latest-backup" "full-repo-backup-${{ env.TIMESTAMP }}.bundle" \
             --title "Latest Bundle Backup - ${{ env.PRETTY_DATE }}" \
             --notes "Automated full repository bundle generated on ${{ env.PRETTY_DATE }}. Restore offline using \`git clone full-repo-backup-${{ env.TIMESTAMP }}.bundle\`."
 
+  # Job 4: Clean deployment production pipeline
   deploy:
     environment:
       name: github-pages
