@@ -20,14 +20,14 @@ export default {
         h(Banner),
         h(ExternalLinkWarning)
       ]),
-      'doc-before': () => h(Fragment, [
-        h(Labels),
-        h('div', { class: 'bsc-doc-toolbar' }, [
-          h(Breadcrumbs),
-          h(CopyLinkButton)
-        ])
+      'doc-before': () => h('div', { class: 'bsc-doc-toolbar' }, [
+        h(Breadcrumbs),
+        h(CopyLinkButton)
       ]),
-      'doc-footer-before': () => h(MarkdownMenu),
+      'doc-footer-before': () => h(Fragment, [
+        h(MarkdownMenu),
+        h(Labels)
+      ]),
       'doc-after': () => h(Footer),
       'nav-bar-content-after': () => h(SponsorButton)
     })
