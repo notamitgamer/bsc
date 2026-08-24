@@ -8,6 +8,7 @@ import ExternalLinkWarning from './components/ExternalLinkWarning.vue'
 import CopyLinkButton from './components/CopyLinkButton.vue'
 import MarkdownMenu from './components/MarkdownMenu.vue'
 import Breadcrumbs from './components/Breadcrumbs.vue'
+import Labels from './components/Labels.vue'
 import './style.css'
 
 export default {
@@ -19,9 +20,12 @@ export default {
         h(Banner),
         h(ExternalLinkWarning)
       ]),
-      'doc-before': () => h('div', { class: 'bsc-doc-toolbar' }, [
-        h(Breadcrumbs),
-        h(CopyLinkButton)
+      'doc-before': () => h(Fragment, [
+        h(Labels),
+        h('div', { class: 'bsc-doc-toolbar' }, [
+          h(Breadcrumbs),
+          h(CopyLinkButton)
+        ])
       ]),
       'doc-footer-before': () => h(MarkdownMenu),
       'doc-after': () => h(Footer),

@@ -64,6 +64,41 @@ def read_block_comment(lines, start):
 
 def esc_yaml(s: str) -> str:
     return s.replace("'", "''")
+
+def slugify_tag(s: str) -> str:
+    """Turn a folder/lang name into a clean tag slug."""
+    s = s.strip().lower()
+    s = re.sub(r'[_\s]+', '-', s)
+    s = re.sub(r'[^a-z0-9\-]', '', s)
+    return re.sub(r'-+', '-', s).strip('-')
+
+def derive_tags(rel_path: str, lang_label: str = "") -> list:
+    """Derive tag slugs from a file's path relative to BSC_ROOT.
+    e.g. semester_2/algorithms/foo.c -> ['sem2', 'algorithms', 'c']"""
+    parts = [p for p in os.path.normpath(rel_path).split(os.sep) if p]
+    tags = []
+
+    for part in parts[:-1]:  # exclude the filename itself
+        m = re.match(r'^semester[_-]?(\d+)$', part, re.IGNORECASE)
+        if m:
+            tag = f"sem{m.group(1)}"
+        else:
+            tag = slugify_tag(part)
+        if tag and tag not in tags:
+            tags.append(tag)
+
+    if lang_label:
+        lang_tag = slugify_tag(lang_label)
+        if lang_tag and lang_tag not in tags:
+            tags.append(lang_tag)
+
+    return tags
+
+def format_tags_yaml(tags: list) -> str:
+    if not tags:
+        return "tags: []"
+    items = ", ".join(f"'{esc_yaml(t)}'" for t in tags)
+    return f"tags: [{items}]"
  
  
 def esc_html(s: str) -> str:
@@ -241,7 +276,7 @@ def parse_algo_md(content):
 
     return title, problem_statement, body_lines
 
-def build_algo_md(filename_base, title, problem_statement, body_lines, source_path=""):
+def build_algo_md(filename_base, title, problem_statement, body_lines, source_path="", tags=None):
     """Build VitePress .md from parsed algo content."""
     desc = problem_statement if problem_statement else f"Algorithm — {title}"
 
@@ -250,6 +285,7 @@ def build_algo_md(filename_base, title, problem_statement, body_lines, source_pa
         f"title: '{ALGO_ICON_SVG} {esc_yaml(title)}'",
         f"description: '{esc_yaml(desc)}'",
         f"source: '{source_path}'",
+        format_tags_yaml(tags or []),
         "---",
         "",
     ]
@@ -294,7 +330,7 @@ def build_algo_md(filename_base, title, problem_statement, body_lines, source_pa
 
 
 def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
-             problem_statement, code, rel_url):
+             problem_statement, code, rel_url, tags=None):
 
     desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
     icon_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>'
@@ -304,6 +340,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         f"title: '{icon_svg} {esc_yaml(filename)}'",
         f"description: '{esc_yaml(desc)}'",
         f"source: '{rel_url}'",
+        format_tags_yaml(tags or []),
         "---",
     ]
 
@@ -441,7 +478,8 @@ def main():
             if not title:
                 title = filename_base
             rel_url_algo = rel_path.replace('\\', '/')
-            md_content = build_algo_md(filename_base, title, problem_statement, body_lines, rel_url_algo)
+            algo_tags = derive_tags(rel_path)
+            md_content = build_algo_md(filename_base, title, problem_statement, body_lines, rel_url_algo, algo_tags)
 
             rel_path = os.path.relpath(full_path, BSC_ROOT)
             md_rel = os.path.splitext(rel_path)[0] + '.md'
@@ -491,9 +529,10 @@ def main():
         else:
             author, date, repo, license_str, problem_statement, code = parse_hash_style(content)
 
+        file_tags = derive_tags(rel_path, lang_info['label'])
         md_content = build_md(
             filename, lang_info['label'], lang_info['fence'], author, date, repo, license_str,
-            problem_statement, code, rel_url,
+            problem_statement, code, rel_url, file_tags,
         )
 
         md_rel = os.path.splitext(rel_path)[0] + '.md'
