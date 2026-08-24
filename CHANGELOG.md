@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 04:49 UTC
+> Last build: August 24, 2026 at 05:11 UTC
 
 ## Latest Build
 
-- **Build ID** — `06f3484d846895709a713493bcc563bb92d09578`
+- **Build ID** — `d1648fde06bd3a62dd10ca7d0f2ffba489e0ba0f`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 04:49 UTC
+- **Build time** — August 24, 2026 at 05:11 UTC
 
 ## Recent Commits
+
+### [`d1648fd`](https://github.com/notamitgamer/bsc/commit/d1648fde06bd3a62dd10ca7d0f2ffba489e0ba0f) Merge pull request #64 from notamitgamer/edit-20260824-104112
+
+**Amit Dutta** committed on Aug 24, 2026 05:11 UTC
+
+
+---
+
+### [`58c0156`](https://github.com/notamitgamer/bsc/commit/58c0156e714544cda5193bc63828c6fbe00d3b51) updated the label
+
+**Amit Dutta** committed on Aug 24, 2026 05:11 UTC · +64 / -12 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +64 -12 |
+</details>
+
+
+---
+
+### [`39beb0c`](https://github.com/notamitgamer/bsc/commit/39beb0c36928c448cb18621e6ade86986b65cbae) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 04:49 UTC · +44 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +44 -39 |
+</details>
+
+
+---
 
 ### [`06f3484`](https://github.com/notamitgamer/bsc/commit/06f3484d846895709a713493bcc563bb92d09578) Merge pull request #62 from notamitgamer/feat/tag-labels
 
@@ -93,36 +130,6 @@
 ### [`76a3984`](https://github.com/notamitgamer/bsc/commit/76a398425efaed7c32e646e00bb7e0583a2de1ea) Merge pull request #59 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.39.0
 
 **Amit Dutta** committed on Aug 23, 2026 15:12 UTC
-
-
----
-
-### [`217a98e`](https://github.com/notamitgamer/bsc/commit/217a98e0e59c1fb206d9de2aade2f0d2e009c758) Bump vitepress-sidebar from 1.38.0 to 1.39.0
-
-**dependabot[bot]** committed on Aug 21, 2026 21:25 UTC · +6 / -6 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +5 -5 |
-| `package.json` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`ff31a44`](https://github.com/notamitgamer/bsc/commit/ff31a44d35470c5836debe9e91cc823d6dde2ed2) Merge pull request #58 from notamitgamer/test/ruleset-verification-2
-
-**Amit Dutta** committed on Aug 20, 2026 08:21 UTC
-
-
----
-
-### [`02dcb95`](https://github.com/notamitgamer/bsc/commit/02dcb95e162809d1884d8aef3f440bc9859ca920) test: verify branch ruleset (re-run)
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:21 UTC
 
 
 ---
