@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: August 24, 2026 at 05:38 UTC
+> Last build: August 24, 2026 at 10:11 UTC
 
 ## Latest Build
 
-- **Build ID** — `a60862afc5d03328354c19afb196d8676f2ea6c2`
+- **Build ID** — `ef3fa82757199347d5c40467f6b380e0658d07d9`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 05:38 UTC
+- **Build time** — August 24, 2026 at 10:11 UTC
 
 ## Recent Commits
+
+### [`ef3fa82`](https://github.com/notamitgamer/bsc/commit/ef3fa82757199347d5c40467f6b380e0658d07d9) Merge pull request #68 from notamitgamer/fix/tags-footer-placement
+
+**Amit Dutta** committed on Aug 24, 2026 10:11 UTC
+
+
+---
+
+### [`4adfab3`](https://github.com/notamitgamer/bsc/commit/4adfab3092ef9c3cc97e5c60aa5f1b2ead1a6790) fix: move tag chips to page footer
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:09 UTC · +8 / -8 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +1 -1 |
+| `docs/.vitepress/theme/index.ts` | Modified | +7 -7 |
+</details>
+
+
+---
+
+### [`e1e4181`](https://github.com/notamitgamer/bsc/commit/e1e4181aedf659291b8923d04f163c0525ddf64b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:38 UTC · +32 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +32 -40 |
+</details>
+
+
+---
 
 ### [`a60862a`](https://github.com/notamitgamer/bsc/commit/a60862afc5d03328354c19afb196d8676f2ea6c2) Merge pull request #63 from notamitgamer/refactor/modularize-md-generator
 
@@ -87,43 +125,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/tags.md` | Modified | +1 -10 |
-</details>
-
-
----
-
-### [`1562a30`](https://github.com/notamitgamer/bsc/commit/1562a30af69623509d021d91351f0993bc75bc02) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:24 UTC · +30 / -35 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +30 -35 |
-</details>
-
-
----
-
-### [`c8ca6a5`](https://github.com/notamitgamer/bsc/commit/c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743) Merge pull request #66 from notamitgamer/edit-20260824-105359
-
-**Amit Dutta** committed on Aug 24, 2026 05:24 UTC
-
-
----
-
-### [`024b20d`](https://github.com/notamitgamer/bsc/commit/024b20d2e31ecb7e750a27a7cf44ae81dc4f3532) updated the label
-
-**Amit Dutta** committed on Aug 24, 2026 05:23 UTC · +59 / -9 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +59 -9 |
 </details>
 
 
