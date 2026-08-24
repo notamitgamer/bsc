@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:21 UTC
+> Last build: August 24, 2026 at 14:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `90e3d2fc46981570c5e3ffc9f8efe712b68b8697`
+- **Build ID** — `d85484cee326abde6ef320e5e9c2f5b99e392128`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:21 UTC
+- **Build time** — August 24, 2026 at 14:32 UTC
 
 ## Recent Commits
+
+### [`d85484c`](https://github.com/notamitgamer/bsc/commit/d85484cee326abde6ef320e5e9c2f5b99e392128) Merge pull request #82 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:32 UTC
+
+
+---
+
+### [`2a58d8b`](https://github.com/notamitgamer/bsc/commit/2a58d8bae4e9b70486ce97fe75a909a879185dc8) Update main.yml
+
+**Amit Dutta** committed on Aug 24, 2026 14:31 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`f439de7`](https://github.com/notamitgamer/bsc/commit/f439de71e60de511affe28e83a0a0a83e061fdd2) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:21 UTC · +40 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -40 |
+</details>
+
+
+---
 
 ### [`90e3d2f`](https://github.com/notamitgamer/bsc/commit/90e3d2fc46981570c5e3ffc9f8efe712b68b8697) Merge pull request #81 from notamitgamer/notamitgamer-patch-1
 
@@ -95,43 +132,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +27 -27 |
-</details>
-
-
----
-
-### [`ce8bcbe`](https://github.com/notamitgamer/bsc/commit/ce8bcbe0c5ff2e7b6d4336196de1b18486265d54) Merge pull request #80 from notamitgamer/notamitgamer-patch-2
-
-**Amit Dutta** committed on Aug 24, 2026 13:55 UTC
-
-
----
-
-### [`113dda9`](https://github.com/notamitgamer/bsc/commit/113dda93ccdcab426bd00e65d5bbe4427d329463) Refactor tag filtering to support multiple active tags
-
-**Amit Dutta** committed on Aug 24, 2026 13:54 UTC · +66 / -16 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +66 -16 |
-</details>
-
-
----
-
-### [`bc3db36`](https://github.com/notamitgamer/bsc/commit/bc3db36eeeee32f95442d6462ce701a8cb864506) Remove VitePress cache step from workflow
-
-**Amit Dutta** committed on Aug 24, 2026 13:49 UTC · +0 / -8 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | -8 |
 </details>
 
 
