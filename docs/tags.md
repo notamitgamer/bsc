@@ -82,7 +82,7 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
   cursor: pointer;
-  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  /* Animation removed for instant hover snapping */
 }
 
 .bsc-filter-chip:hover {
@@ -205,12 +205,14 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  row-gap: 4px;
+  align-items: center; /* Aligns all text directly on the same baseline */
+  row-gap: 10px;
   column-gap: 20px;
 }
 
 .bsc-tag-pages li {
+  margin: 0 !important; /* Forces VitePress list margins to zero */
+  padding: 0;
   line-height: 1.6;
 }
 
