@@ -46,12 +46,12 @@ jobs:
           git lfs track "*.odt"
           git add .gitattributes
           git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+          git config user.email "bot-for-notamitgamer[bot]@://github.com"
           git add .
           git commit -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" || echo "No changes to commit"
           git push origin main
 
-  # Job 2: Main processing engine (Generates data -> Commits -> Builds)
+  # Job 2: Main processing engine (Generates data -> Builds -> Saves -> Commits)
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
@@ -69,7 +69,7 @@ jobs:
           fetch-depth: 20  
           token: ${{ steps.app-token.outputs.token }}
 
-      # 1. GENERATE ALL CONTENT FIRST (Markdown + Changelog)
+      # Step 1: Generate your custom markdown and log indexes
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -91,7 +91,7 @@ jobs:
           git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
           python changelog.py
 
-      # 2. SET UP NODE AND ACTIVE CACHE
+      # Step 2: Set up environment and declare stable hashing rules
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -105,24 +105,24 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .vitepress/cache
-          key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', '.vitepress/config.*') }}
+          # Forced key layout updates ensure hashes stay matched across separate runs
+          key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
 
-      # 3. BUILD VITEPRESS (Includes the new changelog page)
+      # Step 3: Run your localized site build task 
       - name: Build VitePress
         run: npm run docs:build
         env:
           VITE_DEPLOY_ID: ${{ github.sha }}
 
-      # 4. UPLOAD THE PRODUCTION SITE ARTIFACT
+      # Step 4: Package files directly from the true build directory location
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
 
-      # 5. COMMIT & PUSH TO GIT AS THE ABSOLUTE LAST STEP
-      # Moving this here allows the caching lifecycle to complete cleanly before the next workflow is spawned.
+      # Step 5: Save your files back to the branch only when deployment wraps up completely
       - name: Commit generated changelog to repo
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
@@ -136,7 +136,6 @@ jobs:
           else
             echo "No changes"
           fi
-
 
   # Job 3: Standard automated fallback backup
   release:
