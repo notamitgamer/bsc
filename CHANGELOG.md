@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:47 UTC
+> Last build: August 24, 2026 at 14:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `fb443f003c12ab8245eab4a4eb42047c55c6fbdb`
+- **Build ID** — `d7c68eac031a80625f800b062b4f23e4a1c8a520`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:47 UTC
+- **Build time** — August 24, 2026 at 14:48 UTC
 
 ## Recent Commits
+
+### [`d7c68ea`](https://github.com/notamitgamer/bsc/commit/d7c68eac031a80625f800b062b4f23e4a1c8a520) Merge pull request #85 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:48 UTC
+
+
+---
+
+### [`567f5cb`](https://github.com/notamitgamer/bsc/commit/567f5cb17a5dd1e642c405e964a4bb5a27c82e4b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:47 UTC · +42 / -34 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +42 -34 |
+</details>
+
+
+---
+
+### [`9cb061e`](https://github.com/notamitgamer/bsc/commit/9cb061e6ffe859c4f2a4e9ca3e28d2b23cbf9f12) Revise offline bundle download instructions
+
+**Amit Dutta** committed on Aug 24, 2026 14:47 UTC · +0 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `README.md` | Modified | -1 |
+</details>
+
+
+---
 
 ### [`fb443f0`](https://github.com/notamitgamer/bsc/commit/fb443f003c12ab8245eab4a4eb42047c55c6fbdb) Merge pull request #84 from notamitgamer/notamitgamer-patch-1
 
@@ -95,43 +132,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +35 -35 |
-</details>
-
-
----
-
-### [`d85484c`](https://github.com/notamitgamer/bsc/commit/d85484cee326abde6ef320e5e9c2f5b99e392128) Merge pull request #82 from notamitgamer/notamitgamer-patch-1
-
-**Amit Dutta** committed on Aug 24, 2026 14:32 UTC
-
-
----
-
-### [`2a58d8b`](https://github.com/notamitgamer/bsc/commit/2a58d8bae4e9b70486ce97fe75a909a879185dc8) Update main.yml
-
-**Amit Dutta** committed on Aug 24, 2026 14:31 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`f439de7`](https://github.com/notamitgamer/bsc/commit/f439de71e60de511affe28e83a0a0a83e061fdd2) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:21 UTC · +40 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -40 |
 </details>
 
 
