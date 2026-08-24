@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 13:17 UTC
+> Last build: August 24, 2026 at 13:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `c03316a198c750b075870c9187b4247ee8997c10`
+- **Build ID** — `8d7e0e89137bd829ef7835275491cb7d64d97a87`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 13:17 UTC
+- **Build time** — August 24, 2026 at 13:32 UTC
 
 ## Recent Commits
+
+### [`8d7e0e8`](https://github.com/notamitgamer/bsc/commit/8d7e0e89137bd829ef7835275491cb7d64d97a87) Merge pull request #77 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 13:32 UTC
+
+
+---
+
+### [`a3d990a`](https://github.com/notamitgamer/bsc/commit/a3d990a9aab9cf933b1d5eea3d38263c2158005e) Update GitHub Actions workflow with caching and fetch depth
+
+**Amit Dutta** committed on Aug 24, 2026 13:32 UTC · +9 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +9 -1 |
+</details>
+
+
+---
+
+### [`f868044`](https://github.com/notamitgamer/bsc/commit/f868044f1de74065a23d400e1abd432c14247f63) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:18 UTC · +29 / -29 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +29 -29 |
+</details>
+
+
+---
 
 ### [`c03316a`](https://github.com/notamitgamer/bsc/commit/c03316a198c750b075870c9187b4247ee8997c10) Merge pull request #76 from notamitgamer/notamitgamer-patch-1
 
@@ -88,43 +125,6 @@
 ### [`3fa1fe8`](https://github.com/notamitgamer/bsc/commit/3fa1fe8c7de2785236fb51cbd5b62bb5f89fb34a) Merge pull request #74 from notamitgamer/Patch
 
 **Amit Dutta** committed on Aug 24, 2026 11:00 UTC
-
-
----
-
-### [`7f72fd2`](https://github.com/notamitgamer/bsc/commit/7f72fd234d969b5d1f50ffba0e290a07ac521ebb) Enhance styling for tag pages in tags.md
-
-**Amit Dutta** committed on Aug 24, 2026 10:59 UTC · +6 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +6 -2 |
-</details>
-
-
----
-
-### [`faab040`](https://github.com/notamitgamer/bsc/commit/faab040b701baf6a1711b3e888278453987fc73e) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:48 UTC · +32 / -43 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +32 -43 |
-</details>
-
-
----
-
-### [`0db8bcb`](https://github.com/notamitgamer/bsc/commit/0db8bcbc0c3ad7c50db2a336afd4e6f38993d759) Merge pull request #73 from notamitgamer/fix/tags-page-flex-wrap-layout
-
-**Amit Dutta** committed on Aug 24, 2026 10:48 UTC
 
 
 ---
