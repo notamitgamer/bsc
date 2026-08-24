@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 13:35 UTC
+> Last build: August 24, 2026 at 13:55 UTC
 
 ## Latest Build
 
-- **Build ID** — `5227459c5c1cca6e5cb2aceadd2653a99c62b7da`
+- **Build ID** — `ce8bcbe0c5ff2e7b6d4336196de1b18486265d54`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 13:35 UTC
+- **Build time** — August 24, 2026 at 13:55 UTC
 
 ## Recent Commits
+
+### [`ce8bcbe`](https://github.com/notamitgamer/bsc/commit/ce8bcbe0c5ff2e7b6d4336196de1b18486265d54) Merge pull request #80 from notamitgamer/notamitgamer-patch-2
+
+**Amit Dutta** committed on Aug 24, 2026 13:55 UTC
+
+
+---
+
+### [`113dda9`](https://github.com/notamitgamer/bsc/commit/113dda93ccdcab426bd00e65d5bbe4427d329463) Refactor tag filtering to support multiple active tags
+
+**Amit Dutta** committed on Aug 24, 2026 13:54 UTC · +66 / -16 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +66 -16 |
+</details>
+
+
+---
+
+### [`10b12c6`](https://github.com/notamitgamer/bsc/commit/10b12c6ce2de159c6161f0c4266427cbc8d5d53c) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:36 UTC · +28 / -28 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +28 -28 |
+</details>
+
+
+---
 
 ### [`5227459`](https://github.com/notamitgamer/bsc/commit/5227459c5c1cca6e5cb2aceadd2653a99c62b7da) Merge pull request #78 from notamitgamer/notamitgamer-patch-1
 
@@ -88,43 +125,6 @@
 ### [`c03316a`](https://github.com/notamitgamer/bsc/commit/c03316a198c750b075870c9187b4247ee8997c10) Merge pull request #76 from notamitgamer/notamitgamer-patch-1
 
 **Amit Dutta** committed on Aug 24, 2026 13:17 UTC
-
-
----
-
-### [`a5b9bf0`](https://github.com/notamitgamer/bsc/commit/a5b9bf0884354364e9a0e8a35608552cf33658ec) Enhance styles for filter chips and tag pages
-
-**Amit Dutta** committed on Aug 24, 2026 13:17 UTC · +8 / -7 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +8 -7 |
-</details>
-
-
----
-
-### [`5fdc99c`](https://github.com/notamitgamer/bsc/commit/5fdc99cabeb8d8cd6059c44457d46c6786537522) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:12 UTC · +29 / -29 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +29 -29 |
-</details>
-
-
----
-
-### [`3c7fab7`](https://github.com/notamitgamer/bsc/commit/3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e) Merge pull request #75 from notamitgamer/patch
-
-**Amit Dutta** committed on Aug 24, 2026 13:12 UTC
 
 
 ---
