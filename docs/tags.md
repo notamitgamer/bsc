@@ -80,12 +80,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   border-radius: 0 5px 5px 0;
 
   margin-left: 14px;
-
-  transition:
-    color 0.15s ease,
-    background 0.15s ease,
-    border-color 0.15s ease,
-    transform 0.15s ease;
 }
 
 /* The Pointed Left Angle */
@@ -105,7 +99,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   border-radius: 0 0 0 3px;
 
   transform: rotate(45deg);
-  transition: border-color 0.15s ease;
   z-index: -1;
 }
 
@@ -120,7 +113,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   height: 4px;
   border-radius: 50%;
   background: var(--vp-c-brand-1);
-  transition: background 0.15s ease;
   z-index: 1;
 }
 
@@ -129,7 +121,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   color: #fff;
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-1px);
 }
 
 .bsc-tag:hover::after {
