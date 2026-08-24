@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 05:16 UTC
+> Last build: August 24, 2026 at 05:24 UTC
 
 ## Latest Build
 
-- **Build ID** — `a0213cada980647fb4c5008433090763ecb8a9cb`
+- **Build ID** — `c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 05:16 UTC
+- **Build time** — August 24, 2026 at 05:24 UTC
 
 ## Recent Commits
+
+### [`c8ca6a5`](https://github.com/notamitgamer/bsc/commit/c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743) Merge pull request #66 from notamitgamer/edit-20260824-105359
+
+**Amit Dutta** committed on Aug 24, 2026 05:24 UTC
+
+
+---
+
+### [`024b20d`](https://github.com/notamitgamer/bsc/commit/024b20d2e31ecb7e750a27a7cf44ae81dc4f3532) updated the label
+
+**Amit Dutta** committed on Aug 24, 2026 05:23 UTC · +59 / -9 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +59 -9 |
+</details>
+
+
+---
+
+### [`426ef97`](https://github.com/notamitgamer/bsc/commit/426ef97505846b3ad1822973640c2cfef371ea10) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:16 UTC · +36 / -36 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +36 -36 |
+</details>
+
+
+---
 
 ### [`a0213ca`](https://github.com/notamitgamer/bsc/commit/a0213cada980647fb4c5008433090763ecb8a9cb) Merge pull request #65 from notamitgamer/edit-20260824-104539
 
@@ -88,48 +125,6 @@
 ### [`06f3484`](https://github.com/notamitgamer/bsc/commit/06f3484d846895709a713493bcc563bb92d09578) Merge pull request #62 from notamitgamer/feat/tag-labels
 
 **Amit Dutta** committed on Aug 24, 2026 04:49 UTC
-
-
----
-
-### [`eec0123`](https://github.com/notamitgamer/bsc/commit/eec0123bb97efd1e26c531b4ad7891cea52a26db) feat: add tag/label system for pages
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 04:47 UTC · +287 / -7 lines · 6 files changed
-
-<details>
-<summary>Show 6 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +1 |
-| `docs/.vitepress/tags.data.ts` | Added | +46 |
-| `docs/.vitepress/theme/components/Labels.vue` | Added | +77 |
-| `docs/.vitepress/theme/index.ts` | Modified | +7 -3 |
-| `docs/tags.md` | Added | +113 |
-| `md.py` | Modified | +43 -4 |
-</details>
-
-
----
-
-### [`67c149d`](https://github.com/notamitgamer/bsc/commit/67c149dd0f88197390f5cf6116c9239dcc17baea) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:35 UTC · +37 / -37 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +37 -37 |
-</details>
-
-
----
-
-### [`e3a687c`](https://github.com/notamitgamer/bsc/commit/e3a687cacd83eac69f41c0fe62951a4a8029df9a) Merge pull request #61 from notamitgamer/chore/use-client-id-for-app-token
-
-**Amit Dutta** committed on Aug 23, 2026 15:35 UTC
 
 
 ---
