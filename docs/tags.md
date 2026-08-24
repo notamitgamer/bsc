@@ -82,18 +82,19 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   border: 1px solid var(--vp-c-divider);
   border-radius: 16px;
   cursor: pointer;
-  /* Animation removed for instant hover snapping */
 }
 
-.bsc-filter-chip:hover {
+/* Only change to blue text on hover if the chip is NOT active */
+.bsc-filter-chip:not(.bsc-filter-chip-active):hover {
   color: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
 }
 
+/* Lock the active state to white text so it never disappears on hover */
 .bsc-filter-chip-active {
-  color: #ffffff;
-  background: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
+  color: #ffffff !important;
+  background: var(--vp-c-brand-1) !important;
+  border-color: var(--vp-c-brand-1) !important;
 }
 
 .bsc-filter-status {
@@ -205,13 +206,13 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* Aligns all text directly on the same baseline */
+  align-items: center;
   row-gap: 10px;
   column-gap: 20px;
 }
 
 .bsc-tag-pages li {
-  margin: 0 !important; /* Forces VitePress list margins to zero */
+  margin: 0 !important;
   padding: 0;
   line-height: 1.6;
 }
