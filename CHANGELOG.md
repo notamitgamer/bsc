@@ -1,15 +1,82 @@
 # Changelog
 
-> Last build: August 24, 2026 at 05:24 UTC
+> Last build: August 24, 2026 at 05:30 UTC
 
 ## Latest Build
 
-- **Build ID** — `c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743`
+- **Build ID** — `a941f11f3a95805b5c39011d1a3c62d955a0d3db`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 05:24 UTC
+- **Build time** — August 24, 2026 at 05:30 UTC
 
 ## Recent Commits
+
+### [`a941f11`](https://github.com/notamitgamer/bsc/commit/a941f11f3a95805b5c39011d1a3c62d955a0d3db) Merge pull request #67 from notamitgamer/patch
+
+**Amit Dutta** committed on Aug 24, 2026 05:30 UTC
+
+
+---
+
+### [`9f051e9`](https://github.com/notamitgamer/bsc/commit/9f051e977596173f1b7bc225c91d5c3a8016da04) Refactor Labels.vue by cleaning up comments and styles
+
+**Amit Dutta** committed on Aug 24, 2026 05:30 UTC · +2 / -23 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +2 -23 |
+</details>
+
+
+---
+
+### [`7760f99`](https://github.com/notamitgamer/bsc/commit/7760f9919e1c6cdcb41c0060ce0819f814ad98aa) Modify SVG title for tags with inline styles
+
+**Amit Dutta** committed on Aug 24, 2026 05:29 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`222862c`](https://github.com/notamitgamer/bsc/commit/222862c082a8e8c183db3e0232900f6d9cf00d3b) Remove transition effects from tag styles
+
+**Amit Dutta** committed on Aug 24, 2026 05:27 UTC · +1 / -10 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +1 -10 |
+</details>
+
+
+---
+
+### [`1562a30`](https://github.com/notamitgamer/bsc/commit/1562a30af69623509d021d91351f0993bc75bc02) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:24 UTC · +30 / -35 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +30 -35 |
+</details>
+
+
+---
 
 ### [`c8ca6a5`](https://github.com/notamitgamer/bsc/commit/c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743) Merge pull request #66 from notamitgamer/edit-20260824-105359
 
@@ -66,65 +133,6 @@
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/Labels.vue` | Modified | +33 -34 |
 </details>
-
-
----
-
-### [`1a7a56a`](https://github.com/notamitgamer/bsc/commit/1a7a56aaa0b4abba92cf35497549c8c220e51f00) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:12 UTC · +40 / -33 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -33 |
-</details>
-
-
----
-
-### [`d1648fd`](https://github.com/notamitgamer/bsc/commit/d1648fde06bd3a62dd10ca7d0f2ffba489e0ba0f) Merge pull request #64 from notamitgamer/edit-20260824-104112
-
-**Amit Dutta** committed on Aug 24, 2026 05:11 UTC
-
-
----
-
-### [`58c0156`](https://github.com/notamitgamer/bsc/commit/58c0156e714544cda5193bc63828c6fbe00d3b51) updated the label
-
-**Amit Dutta** committed on Aug 24, 2026 05:11 UTC · +64 / -12 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/Labels.vue` | Modified | +64 -12 |
-</details>
-
-
----
-
-### [`39beb0c`](https://github.com/notamitgamer/bsc/commit/39beb0c36928c448cb18621e6ade86986b65cbae) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 04:49 UTC · +44 / -39 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +44 -39 |
-</details>
-
-
----
-
-### [`06f3484`](https://github.com/notamitgamer/bsc/commit/06f3484d846895709a713493bcc563bb92d09578) Merge pull request #62 from notamitgamer/feat/tag-labels
-
-**Amit Dutta** committed on Aug 24, 2026 04:49 UTC
 
 
 ---
