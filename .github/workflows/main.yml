@@ -102,7 +102,7 @@ jobs:
         run: npm ci
 
       - name: Cache VitePress
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .vitepress/cache
           # Forced key layout updates ensure hashes stay matched across separate runs
