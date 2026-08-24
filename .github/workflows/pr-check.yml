@@ -28,7 +28,7 @@ jobs:
         run: python list.py
 
       - name: Run md.py
-        run: python md.py
+        run: python main.py
 
       - name: Fail if generators reported errors
         run: |

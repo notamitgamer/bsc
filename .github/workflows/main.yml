@@ -82,7 +82,7 @@ jobs:
       - name: Generate markdown files
         run: |
            python list.py
-           python md.py
+           python main.py
       
       - name: Generate changelog
         env:
