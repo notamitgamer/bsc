@@ -32,7 +32,7 @@ function humanize(tag) {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin: 20px 0 24px;
 }
 
 .bsc-tag {

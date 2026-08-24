@@ -49,6 +49,7 @@ const related = computed(() => {
 <style scoped>
 .bsc-related {
   margin-top: 24px;
+  margin-bottom: 24px;
   padding-top: 16px;
   border-top: 1px solid var(--vp-c-divider);
 }
