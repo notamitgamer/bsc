@@ -1,6 +1,6 @@
 ---
 source: 'docs/tags.md'
-title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg> Tags'
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline; margin-bottom:-2px; margin-right:6px;"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg> Tags'
 ---
 
 <script setup>
@@ -80,12 +80,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   border-radius: 0 5px 5px 0;
 
   margin-left: 14px;
-
-  transition:
-    color 0.15s ease,
-    background 0.15s ease,
-    border-color 0.15s ease,
-    transform 0.15s ease;
 }
 
 /* The Pointed Left Angle */
@@ -105,7 +99,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   border-radius: 0 0 0 3px;
 
   transform: rotate(45deg);
-  transition: border-color 0.15s ease;
   z-index: -1;
 }
 
@@ -120,7 +113,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   height: 4px;
   border-radius: 50%;
   background: var(--vp-c-brand-1);
-  transition: background 0.15s ease;
   z-index: 1;
 }
 
@@ -129,7 +121,6 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   color: #fff;
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-1px);
 }
 
 .bsc-tag:hover::after {
