@@ -1,15 +1,59 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:53 UTC
+> Last build: August 24, 2026 at 14:56 UTC
 
 ## Latest Build
 
-- **Build ID** — `d803bda825b2156af0de028b00f7828b3e4e2c3a`
+- **Build ID** — `f8481131c3c010414012154aa68a99e3f7dc3537`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:53 UTC
+- **Build time** — August 24, 2026 at 14:56 UTC
 
 ## Recent Commits
+
+### [`f848113`](https://github.com/notamitgamer/bsc/commit/f8481131c3c010414012154aa68a99e3f7dc3537) Merge pull request #87 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:56 UTC
+
+
+---
+
+### [`0790d9c`](https://github.com/notamitgamer/bsc/commit/0790d9cc18ef4a7fe4111fc9d3370bf190b20fb8) Merge branch 'main' into notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:56 UTC
+
+
+---
+
+### [`f0f9561`](https://github.com/notamitgamer/bsc/commit/f0f95618fe97a08151292c832b975a2e8ea30c41) Update SECURITY.md with contact information
+
+**Amit Dutta** committed on Aug 24, 2026 14:56 UTC · +2 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `SECURITY.md` | Modified | +2 -1 |
+</details>
+
+
+---
+
+### [`4714503`](https://github.com/notamitgamer/bsc/commit/471450355063b0b766513d905677aa3a829b1540) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:54 UTC · +35 / -35 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +35 -35 |
+</details>
+
+
+---
 
 ### [`d803bda`](https://github.com/notamitgamer/bsc/commit/d803bda825b2156af0de028b00f7828b3e4e2c3a) Merge pull request #86 from notamitgamer/notamitgamer-patch-1
 
@@ -80,58 +124,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `README.md` | Modified | -1 |
-</details>
-
-
----
-
-### [`fb443f0`](https://github.com/notamitgamer/bsc/commit/fb443f003c12ab8245eab4a4eb42047c55c6fbdb) Merge pull request #84 from notamitgamer/notamitgamer-patch-1
-
-**Amit Dutta** committed on Aug 24, 2026 14:47 UTC
-
-
----
-
-### [`34b5b71`](https://github.com/notamitgamer/bsc/commit/34b5b713c68a6620d52ea6847a2c4ba7cc03659b) Change artifact upload path in main.yml
-
-**Amit Dutta** committed on Aug 24, 2026 14:46 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`9b065dd`](https://github.com/notamitgamer/bsc/commit/9b065ddc9b3a409a0c174abb7556a89f0e7c8d7c) Refactor GitHub Actions workflow for changelog and build
-
-**Amit Dutta** committed on Aug 24, 2026 14:44 UTC · +23 / -16 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +23 -16 |
-</details>
-
-
----
-
-### [`a66edd5`](https://github.com/notamitgamer/bsc/commit/a66edd5e7e7e468f9f1d81b56d7dec77139844c0) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:35 UTC · +29 / -37 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +29 -37 |
 </details>
 
 
