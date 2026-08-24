@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 13:12 UTC
+> Last build: August 24, 2026 at 13:17 UTC
 
 ## Latest Build
 
-- **Build ID** — `3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e`
+- **Build ID** — `c03316a198c750b075870c9187b4247ee8997c10`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 13:12 UTC
+- **Build time** — August 24, 2026 at 13:17 UTC
 
 ## Recent Commits
+
+### [`c03316a`](https://github.com/notamitgamer/bsc/commit/c03316a198c750b075870c9187b4247ee8997c10) Merge pull request #76 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 13:17 UTC
+
+
+---
+
+### [`a5b9bf0`](https://github.com/notamitgamer/bsc/commit/a5b9bf0884354364e9a0e8a35608552cf33658ec) Enhance styles for filter chips and tag pages
+
+**Amit Dutta** committed on Aug 24, 2026 13:17 UTC · +8 / -7 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +8 -7 |
+</details>
+
+
+---
+
+### [`5fdc99c`](https://github.com/notamitgamer/bsc/commit/5fdc99cabeb8d8cd6059c44457d46c6786537522) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:12 UTC · +29 / -29 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +29 -29 |
+</details>
+
+
+---
 
 ### [`3c7fab7`](https://github.com/notamitgamer/bsc/commit/3c7fab72443f73d7fcce0c8b2a1bd5ba0ef48e5e) Merge pull request #75 from notamitgamer/patch
 
@@ -88,43 +125,6 @@
 ### [`0db8bcb`](https://github.com/notamitgamer/bsc/commit/0db8bcbc0c3ad7c50db2a336afd4e6f38993d759) Merge pull request #73 from notamitgamer/fix/tags-page-flex-wrap-layout
 
 **Amit Dutta** committed on Aug 24, 2026 10:48 UTC
-
-
----
-
-### [`0a8f511`](https://github.com/notamitgamer/bsc/commit/0a8f511c334dbbc47757c9e5b03e2bd210418035) fix: flex-wrap layout for tag page lists
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:45 UTC · +3 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +3 |
-</details>
-
-
----
-
-### [`d692bd1`](https://github.com/notamitgamer/bsc/commit/d692bd1e424b86f2fbcc165a328f8238c7cb419a) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:38 UTC · +40 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -41 |
-</details>
-
-
----
-
-### [`1f1ac93`](https://github.com/notamitgamer/bsc/commit/1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6) Merge pull request #71 from notamitgamer/fix/tags-page-color-and-filter
-
-**Amit Dutta** committed on Aug 24, 2026 10:38 UTC
 
 
 ---
