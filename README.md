@@ -34,10 +34,6 @@ This repository serves as a comprehensive, live archive of my 4-year academic jo
 | [**Semester 8**](./Semester_8/) | Pending | Upcoming |
 
 ---
-> [!TIP]
-> ## Offline Bundle
-> Download the `.bundle` file from [bundle release](https://github.com/notamitgamer/bsc/releases/tag/latest-backup) and run `git clone full-repo-backup-{timestamp}.bundle`, and it should be ready to go.
----
 ## Environment Setup
 
 ### C and C++ Development
