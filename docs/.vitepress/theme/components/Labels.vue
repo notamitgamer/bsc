@@ -23,9 +23,7 @@ function humanize(tag) {
       class="bsc-tag"
       :href="`/tags#${tag}`"
       :title="`Browse pages tagged ${humanize(tag)}`"
-    >
-      {{ humanize(tag) }}
-    </a>
+    >{{ humanize(tag) }}</a>
   </div>
 </template>
 
@@ -39,14 +37,11 @@ function humanize(tag) {
 
 .bsc-tag {
   position: relative;
-  z-index: 1;
-
   display: inline-flex;
   align-items: center;
-
   height: 28px;
-  padding: 0 12px 0 20px;
-
+  /* Reduced left padding since the point adds visual space */
+  padding: 0 12px 0 10px;
   font-size: 12.5px;
   font-weight: 500;
   text-decoration: none;
@@ -56,9 +51,12 @@ function humanize(tag) {
   background: var(--vp-c-bg-soft);
 
   border: 1px solid var(--vp-c-divider);
+  /* Removes the flat left border so the point can connect seamlessly */
+  border-left: none;
   border-radius: 0 5px 5px 0;
 
-  margin-left: 9px;
+  /* Adds outer margin to make room for the point so it doesn't overlap tags */
+  margin-left: 14px;
 
   transition:
     color 0.15s ease,
@@ -67,59 +65,60 @@ function humanize(tag) {
     transform 0.15s ease;
 }
 
-/* Pointed left side */
+/* 1. The Pointed Left Angle */
 .bsc-tag::after {
   content: '';
-
   position: absolute;
-  z-index: -1;
+  /* Pulls the square exactly halfway out to form the left point */
+  left: -10px;
+  top: 50%;
+  /* Vertically centers a 20px square */
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
 
-  left: -9px;
-  top: 0;
+  /* 'inherit' magically copies the parent's hover background perfectly */
+  background: inherit;
 
-  width: 18px;
-  height: 26px;
-
-  background: var(--vp-c-bg-soft);
-
+  /* Apply borders only to the left and bottom edges */
   border-left: 1px solid var(--vp-c-divider);
   border-bottom: 1px solid var(--vp-c-divider);
+  /* Slightly rounds the sharp tip */
+  border-radius: 0 0 0 3px;
 
-  transform: skewX(-25deg);
-  transform-origin: right center;
+  /* Rotating 45deg turns the left/bottom borders into a perfect '<' shape */
+  transform: rotate(45deg);
+  
+  transition: border-color 0.15s ease;
+  z-index: -1;
 }
 
-/* Tag hole */
+/* 2. The Hole Punch Dot */
 .bsc-tag::before {
   content: '';
-
   position: absolute;
-  z-index: 2;
-
-  left: 7px;
+  /* Centered perfectly inside the neck of the triangle */
+  left: -3px;
   top: 50%;
-
+  margin-top: -2px;
   width: 4px;
   height: 4px;
-
-  transform: translateY(-50%);
-
   border-radius: 50%;
-
   background: var(--vp-c-brand-1);
+  transition: background 0.15s ease;
+  z-index: 1;
 }
 
-/* Hover */
+/* Hover States */
 .bsc-tag:hover {
   color: #fff;
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-
   transform: translateY(-1px);
 }
 
 .bsc-tag:hover::after {
-  background: var(--vp-c-brand-1);
+  /* Background auto-updates due to 'inherit', just need to color the borders */
   border-color: var(--vp-c-brand-1);
 }
 
