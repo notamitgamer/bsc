@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 05:11 UTC
+> Last build: August 24, 2026 at 05:16 UTC
 
 ## Latest Build
 
-- **Build ID** — `d1648fde06bd3a62dd10ca7d0f2ffba489e0ba0f`
+- **Build ID** — `a0213cada980647fb4c5008433090763ecb8a9cb`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 05:11 UTC
+- **Build time** — August 24, 2026 at 05:16 UTC
 
 ## Recent Commits
+
+### [`a0213ca`](https://github.com/notamitgamer/bsc/commit/a0213cada980647fb4c5008433090763ecb8a9cb) Merge pull request #65 from notamitgamer/edit-20260824-104539
+
+**Amit Dutta** committed on Aug 24, 2026 05:16 UTC
+
+
+---
+
+### [`99af911`](https://github.com/notamitgamer/bsc/commit/99af911ef54e6f268c266dc29e74f97232c640c1) updated the label
+
+**Amit Dutta** committed on Aug 24, 2026 05:15 UTC · +33 / -34 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +33 -34 |
+</details>
+
+
+---
+
+### [`1a7a56a`](https://github.com/notamitgamer/bsc/commit/1a7a56aaa0b4abba92cf35497549c8c220e51f00) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:12 UTC · +40 / -33 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -33 |
+</details>
+
+
+---
 
 ### [`d1648fd`](https://github.com/notamitgamer/bsc/commit/d1648fde06bd3a62dd10ca7d0f2ffba489e0ba0f) Merge pull request #64 from notamitgamer/edit-20260824-104112
 
@@ -93,43 +130,6 @@
 ### [`e3a687c`](https://github.com/notamitgamer/bsc/commit/e3a687cacd83eac69f41c0fe62951a4a8029df9a) Merge pull request #61 from notamitgamer/chore/use-client-id-for-app-token
 
 **Amit Dutta** committed on Aug 23, 2026 15:35 UTC
-
-
----
-
-### [`a9afa4a`](https://github.com/notamitgamer/bsc/commit/a9afa4ab73dba30c7ce0e834851d12df7d215f66) ci: use client-id instead of deprecated app-id input
-
-**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:31 UTC · +2 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`8f92a33`](https://github.com/notamitgamer/bsc/commit/8f92a330bc6aa0b94bdc67f8078df4a83b001004) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:29 UTC · +36 / -52 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +36 -52 |
-</details>
-
-
----
-
-### [`76a3984`](https://github.com/notamitgamer/bsc/commit/76a398425efaed7c32e646e00bb7e0583a2de1ea) Merge pull request #59 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.39.0
-
-**Amit Dutta** committed on Aug 23, 2026 15:12 UTC
 
 
 ---
