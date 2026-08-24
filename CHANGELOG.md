@@ -1,122 +1,137 @@
 # Changelog
 
-> Last build: August 23, 2026 at 15:35 UTC
+> Last build: August 24, 2026 at 05:30 UTC
 
 ## Latest Build
 
-- **Build ID** — `e3a687cacd83eac69f41c0fe62951a4a8029df9a`
+- **Build ID** — `a941f11f3a95805b5c39011d1a3c62d955a0d3db`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 23, 2026 at 15:35 UTC
+- **Build time** — August 24, 2026 at 05:30 UTC
 
 ## Recent Commits
 
-### [`e3a687c`](https://github.com/notamitgamer/bsc/commit/e3a687cacd83eac69f41c0fe62951a4a8029df9a) Merge pull request #61 from notamitgamer/chore/use-client-id-for-app-token
+### [`a941f11`](https://github.com/notamitgamer/bsc/commit/a941f11f3a95805b5c39011d1a3c62d955a0d3db) Merge pull request #67 from notamitgamer/patch
 
-**Amit Dutta** committed on Aug 23, 2026 15:35 UTC
+**Amit Dutta** committed on Aug 24, 2026 05:30 UTC
 
 
 ---
 
-### [`a9afa4a`](https://github.com/notamitgamer/bsc/commit/a9afa4ab73dba30c7ce0e834851d12df7d215f66) ci: use client-id instead of deprecated app-id input
+### [`9f051e9`](https://github.com/notamitgamer/bsc/commit/9f051e977596173f1b7bc225c91d5c3a8016da04) Refactor Labels.vue by cleaning up comments and styles
 
-**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:31 UTC · +2 / -2 lines · 1 file changed
+**Amit Dutta** committed on Aug 24, 2026 05:30 UTC · +2 / -23 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +2 -2 |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +2 -23 |
 </details>
 
 
 ---
 
-### [`8f92a33`](https://github.com/notamitgamer/bsc/commit/8f92a330bc6aa0b94bdc67f8078df4a83b001004) chore: update changelog [skip ci]
+### [`7760f99`](https://github.com/notamitgamer/bsc/commit/7760f9919e1c6cdcb41c0060ce0819f814ad98aa) Modify SVG title for tags with inline styles
 
-**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:29 UTC · +36 / -52 lines · 1 file changed
+**Amit Dutta** committed on Aug 24, 2026 05:29 UTC · +1 / -1 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `CHANGELOG.md` | Modified | +36 -52 |
+| `docs/tags.md` | Modified | +1 -1 |
 </details>
 
 
 ---
 
-### [`76a3984`](https://github.com/notamitgamer/bsc/commit/76a398425efaed7c32e646e00bb7e0583a2de1ea) Merge pull request #59 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.39.0
+### [`222862c`](https://github.com/notamitgamer/bsc/commit/222862c082a8e8c183db3e0232900f6d9cf00d3b) Remove transition effects from tag styles
 
-**Amit Dutta** committed on Aug 23, 2026 15:12 UTC
-
-
----
-
-### [`217a98e`](https://github.com/notamitgamer/bsc/commit/217a98e0e59c1fb206d9de2aade2f0d2e009c758) Bump vitepress-sidebar from 1.38.0 to 1.39.0
-
-**dependabot[bot]** committed on Aug 21, 2026 21:25 UTC · +6 / -6 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +5 -5 |
-| `package.json` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`ff31a44`](https://github.com/notamitgamer/bsc/commit/ff31a44d35470c5836debe9e91cc823d6dde2ed2) Merge pull request #58 from notamitgamer/test/ruleset-verification-2
-
-**Amit Dutta** committed on Aug 20, 2026 08:21 UTC
-
-
----
-
-### [`02dcb95`](https://github.com/notamitgamer/bsc/commit/02dcb95e162809d1884d8aef3f440bc9859ca920) test: verify branch ruleset (re-run)
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:21 UTC
-
-
----
-
-### [`f67ccc5`](https://github.com/notamitgamer/bsc/commit/f67ccc5339d2d39cd2132a5ae19c0945234e65e9) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:12 UTC · +37 / -37 lines · 1 file changed
+**Amit Dutta** committed on Aug 24, 2026 05:27 UTC · +1 / -10 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `CHANGELOG.md` | Modified | +37 -37 |
+| `docs/tags.md` | Modified | +1 -10 |
 </details>
 
 
 ---
 
-### [`6355351`](https://github.com/notamitgamer/bsc/commit/63553512449284bb5515351399359bd62cf5f5b5) Merge pull request #56 from notamitgamer/ci/pr-generator-check
+### [`1562a30`](https://github.com/notamitgamer/bsc/commit/1562a30af69623509d021d91351f0993bc75bc02) chore: update changelog [skip ci]
 
-**Amit Dutta** committed on Aug 20, 2026 08:12 UTC
-
-
----
-
-### [`65b4302`](https://github.com/notamitgamer/bsc/commit/65b4302e5d7024486663a59fe001eb4cca7a66dc) ci: add PR check to validate generator scripts
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:11 UTC · +40 / -0 lines · 1 file changed
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:24 UTC · +30 / -35 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `.github/workflows/pr-check.yml` | Added | +40 |
+| `CHANGELOG.md` | Modified | +30 -35 |
+</details>
+
+
+---
+
+### [`c8ca6a5`](https://github.com/notamitgamer/bsc/commit/c8ca6a5ac46dd4d0fe72a04c3b97a006062a2743) Merge pull request #66 from notamitgamer/edit-20260824-105359
+
+**Amit Dutta** committed on Aug 24, 2026 05:24 UTC
+
+
+---
+
+### [`024b20d`](https://github.com/notamitgamer/bsc/commit/024b20d2e31ecb7e750a27a7cf44ae81dc4f3532) updated the label
+
+**Amit Dutta** committed on Aug 24, 2026 05:23 UTC · +59 / -9 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +59 -9 |
+</details>
+
+
+---
+
+### [`426ef97`](https://github.com/notamitgamer/bsc/commit/426ef97505846b3ad1822973640c2cfef371ea10) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 05:16 UTC · +36 / -36 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +36 -36 |
+</details>
+
+
+---
+
+### [`a0213ca`](https://github.com/notamitgamer/bsc/commit/a0213cada980647fb4c5008433090763ecb8a9cb) Merge pull request #65 from notamitgamer/edit-20260824-104539
+
+**Amit Dutta** committed on Aug 24, 2026 05:16 UTC
+
+
+---
+
+### [`99af911`](https://github.com/notamitgamer/bsc/commit/99af911ef54e6f268c266dc29e74f97232c640c1) updated the label
+
+**Amit Dutta** committed on Aug 24, 2026 05:15 UTC · +33 / -34 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +33 -34 |
 </details>
 
 

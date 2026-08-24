@@ -4,6 +4,7 @@ from .config import (
     FILES_LIST, BSC_ROOT, DOCS_OUTPUT,
     ALGO_FOLDER_NAME, SUPPORTED_LANGS, PROTECTED_INDEX_FILES,
 )
+from .formatting import derive_tags
 from .parsers import parse_c_style, parse_hash_style, parse_algo_md
 from .builders import build_md, build_algo_md
 from .indexing import create_folder_indexes
@@ -41,7 +42,10 @@ def run():
             if not title:
                 title = filename_base
             rel_url_algo = rel_path.replace('\\', '/')
-            md_content = build_algo_md(filename_base, title, problem_statement, body_lines, rel_url_algo)
+            algo_tags = derive_tags(rel_path)
+            md_content = build_algo_md(
+                filename_base, title, problem_statement, body_lines, rel_url_algo, algo_tags
+            )
 
             rel_path = os.path.relpath(full_path, BSC_ROOT)
             md_rel = os.path.splitext(rel_path)[0] + '.md'
@@ -91,9 +95,10 @@ def run():
         else:
             author, date, repo, license_str, problem_statement, code = parse_hash_style(content)
 
+        file_tags = derive_tags(rel_path, lang_info['label'])
         md_content = build_md(
             filename, lang_info['label'], lang_info['fence'], author, date, repo, license_str,
-            problem_statement, code, rel_url,
+            problem_statement, code, rel_url, file_tags,
         )
 
         md_rel = os.path.splitext(rel_path)[0] + '.md'

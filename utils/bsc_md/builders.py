@@ -1,8 +1,8 @@
 from .config import ALGO_ICON_SVG, FILE_ICON_SVG
-from .formatting import esc_yaml, esc_html, format_author_html
+from .formatting import esc_yaml, esc_html, format_author_html, format_tags_yaml
 
 
-def build_algo_md(filename_base, title, problem_statement, body_lines, source_path=""):
+def build_algo_md(filename_base, title, problem_statement, body_lines, source_path="", tags=None):
     """Build VitePress .md from parsed algo content."""
     desc = problem_statement if problem_statement else f"Algorithm — {title}"
 
@@ -11,6 +11,7 @@ def build_algo_md(filename_base, title, problem_statement, body_lines, source_pa
         f"title: '{ALGO_ICON_SVG} {esc_yaml(title)}'",
         f"description: '{esc_yaml(desc)}'",
         f"source: '{source_path}'",
+        format_tags_yaml(tags or []),
         "---",
         "",
     ]
@@ -54,7 +55,7 @@ def build_algo_md(filename_base, title, problem_statement, body_lines, source_pa
 
 
 def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
-             problem_statement, code, rel_url):
+             problem_statement, code, rel_url, tags=None):
 
     desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
 
@@ -63,6 +64,7 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         f"title: '{FILE_ICON_SVG} {esc_yaml(filename)}'",
         f"description: '{esc_yaml(desc)}'",
         f"source: '{rel_url}'",
+        format_tags_yaml(tags or []),
         "---",
     ]
 

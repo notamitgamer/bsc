@@ -73,6 +73,7 @@ const vitePressConfig = {
           { text: 'Semester 8', link: '/semester_8/' },
         ]
       },
+      { text: 'Tags', link: '/tags' },
       { text: 'License', link: 'https://github.com/notamitgamer/bsc/blob/main/LICENSE'},
       { text: 'Changelog', link: '/changelog' },
     ],
