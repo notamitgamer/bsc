@@ -1,15 +1,70 @@
 # Changelog
 
-> Last build: August 24, 2026 at 10:11 UTC
+> Last build: August 24, 2026 at 10:19 UTC
 
 ## Latest Build
 
-- **Build ID** — `ef3fa82757199347d5c40467f6b380e0658d07d9`
+- **Build ID** — `214e353c0db735f0100a1e4682848555162ec61b`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 10:11 UTC
+- **Build time** — August 24, 2026 at 10:19 UTC
 
 ## Recent Commits
+
+### [`214e353`](https://github.com/notamitgamer/bsc/commit/214e353c0db735f0100a1e4682848555162ec61b) Merge pull request #69 from notamitgamer/feat/related-pages-and-sidebar-tags
+
+**Amit Dutta** committed on Aug 24, 2026 10:19 UTC
+
+
+---
+
+### [`b441411`](https://github.com/notamitgamer/bsc/commit/b441411d146ebed41a10534ee678054e8deb0cf2) fix: add breathing room below tags before the edit-page link
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:17 UTC · +2 / -1 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +1 -1 |
+| `docs/.vitepress/theme/components/RelatedPages.vue` | Modified | +1 |
+</details>
+
+
+---
+
+### [`1cee0b9`](https://github.com/notamitgamer/bsc/commit/1cee0b915418fe1dc8a8f1d40d2cfe2c5a234be9) feat: related pages by tag + auto-populated sidebar tag list
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:16 UTC · +177 / -1 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/RelatedPages.vue` | Added | +84 |
+| `docs/.vitepress/theme/components/SidebarTags.vue` | Added | +88 |
+| `docs/.vitepress/theme/index.ts` | Modified | +5 -1 |
+</details>
+
+
+---
+
+### [`346bd87`](https://github.com/notamitgamer/bsc/commit/346bd8713f6ddafc6a5144e7f8bf70f56f310329) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:11 UTC · +41 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -40 |
+</details>
+
+
+---
 
 ### [`ef3fa82`](https://github.com/notamitgamer/bsc/commit/ef3fa82757199347d5c40467f6b380e0658d07d9) Merge pull request #68 from notamitgamer/fix/tags-footer-placement
 
@@ -73,58 +128,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +42 -34 |
-</details>
-
-
----
-
-### [`a941f11`](https://github.com/notamitgamer/bsc/commit/a941f11f3a95805b5c39011d1a3c62d955a0d3db) Merge pull request #67 from notamitgamer/patch
-
-**Amit Dutta** committed on Aug 24, 2026 05:30 UTC
-
-
----
-
-### [`9f051e9`](https://github.com/notamitgamer/bsc/commit/9f051e977596173f1b7bc225c91d5c3a8016da04) Refactor Labels.vue by cleaning up comments and styles
-
-**Amit Dutta** committed on Aug 24, 2026 05:30 UTC · +2 / -23 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/Labels.vue` | Modified | +2 -23 |
-</details>
-
-
----
-
-### [`7760f99`](https://github.com/notamitgamer/bsc/commit/7760f9919e1c6cdcb41c0060ce0819f814ad98aa) Modify SVG title for tags with inline styles
-
-**Amit Dutta** committed on Aug 24, 2026 05:29 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`222862c`](https://github.com/notamitgamer/bsc/commit/222862c082a8e8c183db3e0232900f6d9cf00d3b) Remove transition effects from tag styles
-
-**Amit Dutta** committed on Aug 24, 2026 05:27 UTC · +1 / -10 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/tags.md` | Modified | +1 -10 |
 </details>
 
 
