@@ -203,10 +203,16 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   margin: 0;
   padding-left: 4px;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2px 20px;
 }
 
 .bsc-tag-pages li {
   padding: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bsc-tag-pages a {
