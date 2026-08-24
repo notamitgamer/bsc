@@ -4,9 +4,20 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 ---
 
 <script setup>
+import { ref, computed } from 'vue'
 import { data as tagsData } from './.vitepress/tags.data.ts'
 
 const tagNames = Object.keys(tagsData).sort()
+
+const activeFilter = ref(null)
+
+const visibleTags = computed(() => {
+  return activeFilter.value ? [activeFilter.value] : tagNames
+})
+
+function toggleFilter(tag) {
+  activeFilter.value = activeFilter.value === tag ? null : tag
+}
 
 function humanize(tag) {
   return tag.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
@@ -15,13 +26,28 @@ function humanize(tag) {
 
 # Tags
 
-Browse pages grouped by tag. Click any tag chip across the site to jump here.
+Browse pages grouped by tag. Click a tag below to filter to just that one, or click a tag chip anywhere on the site to jump straight here.
 
 <div v-if="!tagNames.length" class="bsc-tags-empty">
   No tags found yet.
 </div>
 
-<div v-for="tag in tagNames" :key="tag" :id="tag" class="bsc-tag-section">
+<div v-else class="bsc-filter-bar">
+  <button
+    v-for="tag in tagNames"
+    :key="tag"
+    class="bsc-filter-chip"
+    :class="{ 'bsc-filter-chip-active': activeFilter === tag }"
+    @click="toggleFilter(tag)"
+  >{{ humanize(tag) }}</button>
+</div>
+
+<p v-if="activeFilter" class="bsc-filter-status">
+  Showing only <strong>{{ humanize(activeFilter) }}</strong> —
+  <a href="#" class="bsc-filter-clear" @click.prevent="activeFilter = null">clear filter</a>
+</p>
+
+<div v-for="tag in visibleTags" :key="tag" :id="tag" class="bsc-tag-section">
   <h2 class="bsc-tag-heading">
     <a class="bsc-tag" :href="`#${tag}`">{{ humanize(tag) }}</a>
     <span class="bsc-tag-count">{{ tagsData[tag].length }}</span>
@@ -37,6 +63,48 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
 .bsc-tags-empty {
   color: var(--vp-c-text-2);
   font-size: 14px;
+}
+
+.bsc-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 8px;
+}
+
+.bsc-filter-chip {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.bsc-filter-chip:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.bsc-filter-chip-active {
+  color: #ffffff;
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.bsc-filter-status {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: 0 0 12px;
+}
+
+.bsc-filter-clear {
+  color: var(--vp-c-brand-1);
+  cursor: pointer;
 }
 
 .bsc-tag-section {
@@ -142,13 +210,12 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
 }
 
 .bsc-tag-pages a {
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-brand-1);
   text-decoration: none;
   font-size: 14px;
 }
 
 .bsc-tag-pages a:hover {
-  color: var(--vp-c-brand-1);
   text-decoration: underline;
 }
 </style>
