@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:15 UTC
+> Last build: August 24, 2026 at 14:21 UTC
 
 ## Latest Build
 
-- **Build ID** — `a20f0ba86a8e3a6864d6a76c3fde217c5891e6a5`
+- **Build ID** — `90e3d2fc46981570c5e3ffc9f8efe712b68b8697`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:15 UTC
+- **Build time** — August 24, 2026 at 14:21 UTC
 
 ## Recent Commits
+
+### [`90e3d2f`](https://github.com/notamitgamer/bsc/commit/90e3d2fc46981570c5e3ffc9f8efe712b68b8697) Merge pull request #81 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:21 UTC
+
+
+---
+
+### [`e88501e`](https://github.com/notamitgamer/bsc/commit/e88501e28690e70aa193718fadfaf34a1641bfec) Update README with offline bundle and environment setup
+
+**Amit Dutta** committed on Aug 24, 2026 14:20 UTC · +4 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `README.md` | Modified | +4 |
+</details>
+
+
+---
+
+### [`fc35002`](https://github.com/notamitgamer/bsc/commit/fc3500205c3f6aad82f778601452ba1c977ceae5) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:15 UTC · +47 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +47 -39 |
+</details>
+
+
+---
 
 ### [`a20f0ba`](https://github.com/notamitgamer/bsc/commit/a20f0ba86a8e3a6864d6a76c3fde217c5891e6a5) Merge pull request #79 from notamitgamer/notamitgamer-patch-1
 
@@ -95,43 +132,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/main.yml` | Modified | -8 |
-</details>
-
-
----
-
-### [`10b12c6`](https://github.com/notamitgamer/bsc/commit/10b12c6ce2de159c6161f0c4266427cbc8d5d53c) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:36 UTC · +28 / -28 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +28 -28 |
-</details>
-
-
----
-
-### [`5227459`](https://github.com/notamitgamer/bsc/commit/5227459c5c1cca6e5cb2aceadd2653a99c62b7da) Merge pull request #78 from notamitgamer/notamitgamer-patch-1
-
-**Amit Dutta** committed on Aug 24, 2026 13:35 UTC
-
-
----
-
-### [`427f0e3`](https://github.com/notamitgamer/bsc/commit/427f0e3f3f9e64fe7805e2ee731bd6ea078c9820) Rename backup job to release in workflow
-
-**Amit Dutta** committed on Aug 24, 2026 13:35 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
 </details>
 
 
