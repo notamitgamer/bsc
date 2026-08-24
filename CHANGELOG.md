@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:32 UTC
+> Last build: August 24, 2026 at 14:35 UTC
 
 ## Latest Build
 
-- **Build ID** — `d85484cee326abde6ef320e5e9c2f5b99e392128`
+- **Build ID** — `2e0ca33a14e6e82c6ee57fb644161d1b0db0001f`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:32 UTC
+- **Build time** — August 24, 2026 at 14:35 UTC
 
 ## Recent Commits
+
+### [`2e0ca33`](https://github.com/notamitgamer/bsc/commit/2e0ca33a14e6e82c6ee57fb644161d1b0db0001f) Merge pull request #83 from notamitgamer/notamitgamer-patch-1
+
+**Amit Dutta** committed on Aug 24, 2026 14:35 UTC
+
+
+---
+
+### [`65741ef`](https://github.com/notamitgamer/bsc/commit/65741ef72b73d643cbfbc958bcc8a3700b383e7d) Add website link to author section in README
+
+**Amit Dutta** committed on Aug 24, 2026 14:35 UTC · +1 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `README.md` | Modified | +1 |
+</details>
+
+
+---
+
+### [`6e97611`](https://github.com/notamitgamer/bsc/commit/6e97611c2c2f7139de51b8c382689490bc82d18b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:32 UTC · +35 / -35 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +35 -35 |
+</details>
+
+
+---
 
 ### [`d85484c`](https://github.com/notamitgamer/bsc/commit/d85484cee326abde6ef320e5e9c2f5b99e392128) Merge pull request #82 from notamitgamer/notamitgamer-patch-1
 
@@ -88,51 +125,6 @@
 ### [`a20f0ba`](https://github.com/notamitgamer/bsc/commit/a20f0ba86a8e3a6864d6a76c3fde217c5891e6a5) Merge pull request #79 from notamitgamer/notamitgamer-patch-1
 
 **Amit Dutta** committed on Aug 24, 2026 14:15 UTC
-
-
----
-
-### [`dfa38b7`](https://github.com/notamitgamer/bsc/commit/dfa38b766336b5b21a8f58d9f3fe74e1e762464d) Update derive_tags to use file extension for language tag
-
-**Amit Dutta** committed on Aug 24, 2026 14:14 UTC · +9 / -12 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `utils/bsc_md/formatting.py` | Modified | +9 -12 |
-</details>
-
-
----
-
-### [`035d41e`](https://github.com/notamitgamer/bsc/commit/035d41e50c27f7aaddef8e5562a54550716e11ce) Refactor GitHub Actions workflow for better clarity
-
-**Amit Dutta** committed on Aug 24, 2026 14:10 UTC · +14 / -10 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +14 -10 |
-</details>
-
-
----
-
-### [`01946db`](https://github.com/notamitgamer/bsc/commit/01946db49ed600c5659cdad969ce15df84aa53c4) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 13:55 UTC · +27 / -27 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +27 -27 |
-</details>
 
 
 ---
