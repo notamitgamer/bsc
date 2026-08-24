@@ -9,7 +9,6 @@ import CopyLinkButton from './components/CopyLinkButton.vue'
 import MarkdownMenu from './components/MarkdownMenu.vue'
 import Breadcrumbs from './components/Breadcrumbs.vue'
 import Labels from './components/Labels.vue'
-import RelatedPages from './components/RelatedPages.vue'
 import SidebarTags from './components/SidebarTags.vue'
 import './style.css'
 
@@ -28,8 +27,7 @@ export default {
       ]),
       'doc-footer-before': () => h(Fragment, [
         h(MarkdownMenu),
-        h(Labels),
-        h(RelatedPages)
+        h(Labels)
       ]),
       'doc-after': () => h(Footer),
       'sidebar-nav-after': () => h(SidebarTags),
