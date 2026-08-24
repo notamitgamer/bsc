@@ -23,7 +23,9 @@ function humanize(tag) {
       class="bsc-tag"
       :href="`/tags#${tag}`"
       :title="`Browse pages tagged ${humanize(tag)}`"
-    >{{ humanize(tag) }}</a>
+    >
+      {{ humanize(tag) }}
+    </a>
   </div>
 </template>
 
@@ -37,41 +39,91 @@ function humanize(tag) {
 
 .bsc-tag {
   position: relative;
+  z-index: 1;
+
   display: inline-flex;
   align-items: center;
-  height: 26px;
+
+  height: 28px;
   padding: 0 12px 0 20px;
+
   font-size: 12.5px;
   font-weight: 500;
-  line-height: 1;
   text-decoration: none;
   white-space: nowrap;
+
   color: var(--vp-c-brand-1);
   background: var(--vp-c-bg-soft);
+
   border: 1px solid var(--vp-c-divider);
-  border-left: none;
-  clip-path: polygon(11px 0, 100% 0, 100% 100%, 11px 100%, 0 50%);
-  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  border-radius: 0 5px 5px 0;
+
+  margin-left: 9px;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
+/* Pointed left side */
+.bsc-tag::after {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+
+  left: -9px;
+  top: 0;
+
+  width: 18px;
+  height: 26px;
+
+  background: var(--vp-c-bg-soft);
+
+  border-left: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+
+  transform: skewX(-25deg);
+  transform-origin: right center;
+}
+
+/* Tag hole */
 .bsc-tag::before {
   content: '';
+
   position: absolute;
-  left: 6px;
+  z-index: 2;
+
+  left: 7px;
   top: 50%;
-  transform: translateY(-50%);
+
   width: 4px;
   height: 4px;
-  border-radius: 50%;
-  background: var(--vp-c-text-3);
-}
 
-.bsc-tag:hover {
-  color: #ffffff;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
   background: var(--vp-c-brand-1);
 }
 
+/* Hover */
+.bsc-tag:hover {
+  color: #fff;
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+
+  transform: translateY(-1px);
+}
+
+.bsc-tag:hover::after {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
 .bsc-tag:hover::before {
-  background: #ffffff;
+  background: #fff;
 }
 </style>
