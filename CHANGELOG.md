@@ -1,15 +1,54 @@
 # Changelog
 
-> Last build: August 24, 2026 at 14:56 UTC
+> Last build: August 24, 2026 at 15:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `f8481131c3c010414012154aa68a99e3f7dc3537`
+- **Build ID** — `28cea3a368686b9c0fd536aebd96f3ca3b5f6abf`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 14:56 UTC
+- **Build time** — August 24, 2026 at 15:12 UTC
 
 ## Recent Commits
+
+### [`28cea3a`](https://github.com/notamitgamer/bsc/commit/28cea3a368686b9c0fd536aebd96f3ca3b5f6abf) Merge pull request #88 from notamitgamer2/remove-bundle-backup
+
+**Amit Dutta** committed on Aug 24, 2026 15:12 UTC
+
+
+---
+
+### [`c5e1c04`](https://github.com/notamitgamer/bsc/commit/c5e1c0439d93f02cf4ec8d1201b4d9d618db8570) Remove offline bundle backup job and docs
+
+**notamitgamer2** committed on Aug 24, 2026 15:07 UTC · +1 / -48 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -39 |
+| `README.md` | Modified | -4 |
+| `docs/index.md` | Modified | -5 |
+</details>
+
+
+---
+
+### [`3320884`](https://github.com/notamitgamer/bsc/commit/3320884972faf47e6cd69f64d19f269bc2d552ef) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:57 UTC · +33 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -41 |
+</details>
+
+
+---
 
 ### [`f848113`](https://github.com/notamitgamer/bsc/commit/f8481131c3c010414012154aa68a99e3f7dc3537) Merge pull request #87 from notamitgamer/notamitgamer-patch-1
 
@@ -87,43 +126,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +35 -35 |
-</details>
-
-
----
-
-### [`d7c68ea`](https://github.com/notamitgamer/bsc/commit/d7c68eac031a80625f800b062b4f23e4a1c8a520) Merge pull request #85 from notamitgamer/notamitgamer-patch-1
-
-**Amit Dutta** committed on Aug 24, 2026 14:48 UTC
-
-
----
-
-### [`567f5cb`](https://github.com/notamitgamer/bsc/commit/567f5cb17a5dd1e642c405e964a4bb5a27c82e4b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:47 UTC · +42 / -34 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +42 -34 |
-</details>
-
-
----
-
-### [`9cb061e`](https://github.com/notamitgamer/bsc/commit/9cb061e6ffe859c4f2a4e9ca3e28d2b23cbf9f12) Revise offline bundle download instructions
-
-**Amit Dutta** committed on Aug 24, 2026 14:47 UTC · +0 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `README.md` | Modified | -1 |
 </details>
 
 
