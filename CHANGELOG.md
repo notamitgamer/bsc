@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 24, 2026 at 10:38 UTC
+> Last build: August 24, 2026 at 10:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6`
+- **Build ID** — `0db8bcbc0c3ad7c50db2a336afd4e6f38993d759`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 24, 2026 at 10:38 UTC
+- **Build time** — August 24, 2026 at 10:48 UTC
 
 ## Recent Commits
+
+### [`0db8bcb`](https://github.com/notamitgamer/bsc/commit/0db8bcbc0c3ad7c50db2a336afd4e6f38993d759) Merge pull request #73 from notamitgamer/fix/tags-page-flex-wrap-layout
+
+**Amit Dutta** committed on Aug 24, 2026 10:48 UTC
+
+
+---
+
+### [`0a8f511`](https://github.com/notamitgamer/bsc/commit/0a8f511c334dbbc47757c9e5b03e2bd210418035) fix: flex-wrap layout for tag page lists
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:45 UTC · +3 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/tags.md` | Modified | +3 |
+</details>
+
+
+---
+
+### [`d692bd1`](https://github.com/notamitgamer/bsc/commit/d692bd1e424b86f2fbcc165a328f8238c7cb419a) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:38 UTC · +40 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -41 |
+</details>
+
+
+---
 
 ### [`1f1ac93`](https://github.com/notamitgamer/bsc/commit/1f1ac931ee50dd65ed6fb39c06a52efb95dc7da6) Merge pull request #71 from notamitgamer/fix/tags-page-color-and-filter
 
@@ -89,54 +126,6 @@
 ### [`214e353`](https://github.com/notamitgamer/bsc/commit/214e353c0db735f0100a1e4682848555162ec61b) Merge pull request #69 from notamitgamer/feat/related-pages-and-sidebar-tags
 
 **Amit Dutta** committed on Aug 24, 2026 10:19 UTC
-
-
----
-
-### [`b441411`](https://github.com/notamitgamer/bsc/commit/b441411d146ebed41a10534ee678054e8deb0cf2) fix: add breathing room below tags before the edit-page link
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:17 UTC · +2 / -1 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/Labels.vue` | Modified | +1 -1 |
-| `docs/.vitepress/theme/components/RelatedPages.vue` | Modified | +1 |
-</details>
-
-
----
-
-### [`1cee0b9`](https://github.com/notamitgamer/bsc/commit/1cee0b915418fe1dc8a8f1d40d2cfe2c5a234be9) feat: related pages by tag + auto-populated sidebar tag list
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:16 UTC · +177 / -1 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/RelatedPages.vue` | Added | +84 |
-| `docs/.vitepress/theme/components/SidebarTags.vue` | Added | +88 |
-| `docs/.vitepress/theme/index.ts` | Modified | +5 -1 |
-</details>
-
-
----
-
-### [`346bd87`](https://github.com/notamitgamer/bsc/commit/346bd8713f6ddafc6a5144e7f8bf70f56f310329) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 10:11 UTC · +41 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -40 |
-</details>
 
 
 ---
