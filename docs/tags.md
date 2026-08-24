@@ -205,17 +205,21 @@ Browse pages grouped by tag. Click a tag below to filter to just that one, or cl
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 4px;
+  column-gap: 20px;
 }
 
 .bsc-tag-pages li {
-  padding: 4px 0;
-  margin-right: 20px;
+  line-height: 1.6;
 }
 
 .bsc-tag-pages a {
+  display: inline-block;
   color: var(--vp-c-brand-1);
   text-decoration: none;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .bsc-tag-pages a:hover {
