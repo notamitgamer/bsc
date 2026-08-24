@@ -1,15 +1,57 @@
 # Changelog
 
-> Last build: August 23, 2026 at 15:35 UTC
+> Last build: August 24, 2026 at 04:49 UTC
 
 ## Latest Build
 
-- **Build ID** — `e3a687cacd83eac69f41c0fe62951a4a8029df9a`
+- **Build ID** — `06f3484d846895709a713493bcc563bb92d09578`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 23, 2026 at 15:35 UTC
+- **Build time** — August 24, 2026 at 04:49 UTC
 
 ## Recent Commits
+
+### [`06f3484`](https://github.com/notamitgamer/bsc/commit/06f3484d846895709a713493bcc563bb92d09578) Merge pull request #62 from notamitgamer/feat/tag-labels
+
+**Amit Dutta** committed on Aug 24, 2026 04:49 UTC
+
+
+---
+
+### [`eec0123`](https://github.com/notamitgamer/bsc/commit/eec0123bb97efd1e26c531b4ad7891cea52a26db) feat: add tag/label system for pages
+
+**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 04:47 UTC · +287 / -7 lines · 6 files changed
+
+<details>
+<summary>Show 6 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +1 |
+| `docs/.vitepress/tags.data.ts` | Added | +46 |
+| `docs/.vitepress/theme/components/Labels.vue` | Added | +77 |
+| `docs/.vitepress/theme/index.ts` | Modified | +7 -3 |
+| `docs/tags.md` | Added | +113 |
+| `md.py` | Modified | +43 -4 |
+</details>
+
+
+---
+
+### [`67c149d`](https://github.com/notamitgamer/bsc/commit/67c149dd0f88197390f5cf6116c9239dcc17baea) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 23, 2026 15:35 UTC · +37 / -37 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +37 -37 |
+</details>
+
+
+---
 
 ### [`e3a687c`](https://github.com/notamitgamer/bsc/commit/e3a687cacd83eac69f41c0fe62951a4a8029df9a) Merge pull request #61 from notamitgamer/chore/use-client-id-for-app-token
 
@@ -81,43 +123,6 @@
 ### [`02dcb95`](https://github.com/notamitgamer/bsc/commit/02dcb95e162809d1884d8aef3f440bc9859ca920) test: verify branch ruleset (re-run)
 
 **bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:21 UTC
-
-
----
-
-### [`f67ccc5`](https://github.com/notamitgamer/bsc/commit/f67ccc5339d2d39cd2132a5ae19c0945234e65e9) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:12 UTC · +37 / -37 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +37 -37 |
-</details>
-
-
----
-
-### [`6355351`](https://github.com/notamitgamer/bsc/commit/63553512449284bb5515351399359bd62cf5f5b5) Merge pull request #56 from notamitgamer/ci/pr-generator-check
-
-**Amit Dutta** committed on Aug 20, 2026 08:12 UTC
-
-
----
-
-### [`65b4302`](https://github.com/notamitgamer/bsc/commit/65b4302e5d7024486663a59fe001eb4cca7a66dc) ci: add PR check to validate generator scripts
-
-**bot-for-notamitgamer[bot]** committed on Aug 20, 2026 08:11 UTC · +40 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/pr-check.yml` | Added | +40 |
-</details>
 
 
 ---
