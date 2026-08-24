@@ -1,6 +1,6 @@
 ---
-title: Tags
-description: Browse every page by tag.
+source: 'docs/tags.md'
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg> Tags'
 ---
 
 <script setup>
@@ -64,30 +64,80 @@ Browse pages grouped by tag. Click any tag chip across the site to jump here.
   position: relative;
   display: inline-flex;
   align-items: center;
-  height: 30px;
-  padding: 0 14px 0 22px;
+  height: 28px;
+  padding: 0 14px 0 10px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
+
   color: var(--vp-c-brand-1);
   background: var(--vp-c-bg-soft);
+
   border: 1px solid var(--vp-c-divider);
   border-left: none;
-  clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
+  border-radius: 0 5px 5px 0;
+
+  margin-left: 14px;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
+/* The Pointed Left Angle */
+.bsc-tag::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+
+  background: inherit;
+
+  border-left: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+  border-radius: 0 0 0 3px;
+
+  transform: rotate(45deg);
+  transition: border-color 0.15s ease;
+  z-index: -1;
+}
+
+/* The Hole Punch Dot */
 .bsc-tag::before {
   content: '';
   position: absolute;
-  left: 7px;
+  left: -3px;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -2px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--vp-c-text-3);
+  background: var(--vp-c-brand-1);
+  transition: background 0.15s ease;
+  z-index: 1;
+}
+
+/* Hover States */
+.bsc-tag:hover {
+  color: #fff;
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-1px);
+}
+
+.bsc-tag:hover::after {
+  border-color: var(--vp-c-brand-1);
+}
+
+.bsc-tag:hover::before {
+  background: #fff;
 }
 
 .bsc-tag-pages {
