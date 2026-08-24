@@ -71,7 +71,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 0  
+          fetch-depth: 20  
           token: ${{ steps.app-token.outputs.token }}
 
       - name: Setup Python
@@ -117,6 +117,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Cache VitePress
+        uses: actions/cache@v4
+        with:
+          path: docs/.vitepress/cache
+          key: ${{ runner.os }}-vitepress-${{ hashFiles('**/*.md', 'package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-vitepress-
 
       - name: Build VitePress
         run: npm run docs:build
