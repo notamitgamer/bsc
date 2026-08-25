@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: August 25, 2026 at 08:51 UTC
+> Last build: August 25, 2026 at 15:50 UTC
 
 ## Latest Build
 
-- **Build ID** — `ba4e20d3ebb199b59742d0cd5cbaba122c33e65c`
+- **Build ID** — `5c034f065870ddb524f5f808805623afa8fe15e1`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 25, 2026 at 08:51 UTC
+- **Build time** — August 25, 2026 at 15:50 UTC
 
 ## Recent Commits
+
+### [`5c034f0`](https://github.com/notamitgamer/bsc/commit/5c034f065870ddb524f5f808805623afa8fe15e1) copy
+
+**Amit Dutta** committed on Aug 25, 2026 15:50 UTC · +37 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/eduincs/pgrm_017.cpp` | Added | +37 |
+</details>
+
+
+---
+
+### [`ed11d71`](https://github.com/notamitgamer/bsc/commit/ed11d71ed3e077a53a17e3ad9a514e86fd37e322) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 25, 2026 08:52 UTC · +37 / -37 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +37 -37 |
+</details>
+
+
+---
 
 ### [`ba4e20d`](https://github.com/notamitgamer/bsc/commit/ba4e20d3ebb199b59742d0cd5cbaba122c33e65c) Merge pull request #89 from notamitgamer/dependabot/github_actions/actions/cache-6
 
@@ -97,36 +127,6 @@
 ### [`0790d9c`](https://github.com/notamitgamer/bsc/commit/0790d9cc18ef4a7fe4111fc9d3370bf190b20fb8) Merge branch 'main' into notamitgamer-patch-1
 
 **Amit Dutta** committed on Aug 24, 2026 14:56 UTC
-
-
----
-
-### [`f0f9561`](https://github.com/notamitgamer/bsc/commit/f0f95618fe97a08151292c832b975a2e8ea30c41) Update SECURITY.md with contact information
-
-**Amit Dutta** committed on Aug 24, 2026 14:56 UTC · +2 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `SECURITY.md` | Modified | +2 -1 |
-</details>
-
-
----
-
-### [`4714503`](https://github.com/notamitgamer/bsc/commit/471450355063b0b766513d905677aa3a829b1540) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 14:54 UTC · +35 / -35 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +35 -35 |
-</details>
 
 
 ---
