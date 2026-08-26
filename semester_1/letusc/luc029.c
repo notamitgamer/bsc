@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to print out all Armstrong numbers between 100
 and 500. If sum of cubes of each digit of the number is equal to the
 number itself, then the number is called an Armstrong number. For

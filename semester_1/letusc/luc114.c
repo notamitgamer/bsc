@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Store insurance policy holder info (gender, minor/major, policy name, duration) using bit-fields.
 */
 /* Let Us C, Chap- 22 (Miscellaneous Features), Qn No.: C(b) */

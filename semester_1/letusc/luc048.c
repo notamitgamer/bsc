@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Define a function to compute the distance between two points and
 use it to develop another function that will compute the area of the
 triangle whose vertices are A(x1, y1), B(x2, y2), and C(x3, y3). Use

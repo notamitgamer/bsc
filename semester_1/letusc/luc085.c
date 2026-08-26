@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Suppose a file contains student records (Name, Age). Write a program to read these records and display them in sorted order by name.
 */
 /* Let Us C, Chap- 19 (File Input/Output), Qn No.: B(a) */

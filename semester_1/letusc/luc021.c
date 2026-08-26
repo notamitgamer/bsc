@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* A certain grade of steel is graded according to the following conditions:
     (i) Hardness must be greater than 50
     (ii) Carbon content must be less than 0.7

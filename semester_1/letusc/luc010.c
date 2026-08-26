@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* A five-digit number is entered through the keyboard. Write a program
 to obtain the reversed number and to etermine whether the original and reversed
 numbers are equal or not. */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to enter numbers till the user wants. At the end it 
 should display the count of positive, negative and zeros entered. */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(d) */

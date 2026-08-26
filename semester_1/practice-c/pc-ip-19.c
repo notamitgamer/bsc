@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 05 Jan 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
  * Question 19:
  * Write a C program that includes a user-defined function named binarySearch with the signature int binarySearch(int arr[], int size, int target);.
  */

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* If value of an angle is input through the keyboard,
 write a program to print all its trigonometric ratios. */
 /* Let Us C, Chap - 2, Page - 37, Qn No.: G(e) */

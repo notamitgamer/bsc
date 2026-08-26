@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that takes two positive integers, L (Lower Bound)
 and U (Upper Bound), as input from the user. The program must find and print
 the count of all numbers between L and U (inclusive) that

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 06 Mar 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program to find the transpose of a given square matrix using 2D array.
 The transpose of a matrix is obtained by swapping the rows and columns of the matrix */
 

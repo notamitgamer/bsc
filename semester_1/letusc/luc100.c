@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Determine if an animal is Carnivore/Herbivore and its type (Canine, Feline, Cetacean, Marsupial) based on bits in an integer.
 */
 /* Let Us C, Chap- 21 (Operations on Bits), Qn No.: A(b) */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to scan an 8-bit number and check whether its 3rd, 6th and 7th bit is on.
 */
 /* Let Us C, Chap- 21 (Operations on Bits), Qn No.: B(d) */

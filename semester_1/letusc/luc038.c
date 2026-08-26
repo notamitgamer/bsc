@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to generate all Pythagorean Triplets with slide
 length less than or equal to 30. */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(e) */

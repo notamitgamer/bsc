@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to input the cost price and selling price and
 calculate profit, profit percentage, loss percentage or
 display the manage nither profit nor loss. */

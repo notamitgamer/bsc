@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 05 Jan 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
  * Question 20:
  * Write a C program that defines an array of integers, and includes a user-defined function named reverseArray with the signature void reverseArray(int arr[], int size);.
  */

@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
 Write a C program to count how many numbers between 100 and 999 have all distinct digits (e.g., 123, 709, 981).
 */
 /* Author: Amit Dutta, Date: 21-11-2025 */

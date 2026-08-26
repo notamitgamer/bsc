@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* The length and breadth of a rectangle and radius of a circle
 are input through the keyboard. Write a program to calculate the
 area and perimeter of the rectangle, and the area and circumference

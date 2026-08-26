@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a Function power(a, b), to calculate the value of a raised to b */
 /* Let Us C, Chap - 8, Page - 141, Problem 8.2 */
 

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to recieve an integer and find its octal equivalent.
 (Hint : To obtain octal equivalent of an integer, Divide it continuously
 by 8 till dividend does not become zero, then write the remainders

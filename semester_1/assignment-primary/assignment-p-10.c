@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program that defines a structure Rectangle with attributes length and width.
 Include a user-defined function named calculateArea with the signature float
 calculateArea(struct Rectangle r);. The function should calculate and return the area of

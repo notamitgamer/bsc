@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 22 Jun 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Addition of two inputs */
 
 #include <iostream>

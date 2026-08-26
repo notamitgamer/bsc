@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Structure 'employee' (Code, Name, Date of Joining). Display names of employees with tenure >= 3 years.
 */
 /* Let Us C, Chap- 17 (Structures), Qn No.: B(e) */

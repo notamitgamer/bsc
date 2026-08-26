@@ -91,13 +91,13 @@ def run():
         filename = os.path.basename(full_path)
 
         if lang_info['style'] == 'c':
-            author, date, repo, license_str, problem_statement, code = parse_c_style(content)
+            problem_statement, code = parse_c_style(content)
         else:
-            author, date, repo, license_str, problem_statement, code = parse_hash_style(content)
+            problem_statement, code = parse_hash_style(content)
 
         file_tags = derive_tags(rel_path, lang_info['label'])
         md_content = build_md(
-            filename, lang_info['label'], lang_info['fence'], author, date, repo, license_str,
+            filename, lang_info['label'], lang_info['fence'],
             problem_statement, code, rel_url, file_tags,
         )
 

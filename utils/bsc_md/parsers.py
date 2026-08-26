@@ -34,26 +34,7 @@ def parse_c_style(content):
     lines = content.splitlines()
     n = len(lines)
     i = 0
-    author = date = repo = license_str = problem_statement = ""
-
-    while i < n and not lines[i].strip():
-        i += 1
-
-    # Extract metadata block
-    if i < n and lines[i].strip().startswith('/*'):
-        block, i = read_block_comment(lines, i)
-        for line in block:
-            # Handles both newline-per-field and pipe-separated formats
-            parts = [p.strip() for p in line.split('|')]
-            for part in parts:
-                if ':' in part:
-                    key, _, val = part.partition(':')
-                    key = key.strip().lower()
-                    val = val.strip()
-                    if 'author'    in key: author       = val
-                    elif 'date'    in key: date         = val
-                    elif 'repo'    in key: repo         = val
-                    elif 'license' in key: license_str  = val
+    problem_statement = ""
 
     while i < n and not lines[i].strip():
         i += 1
@@ -75,34 +56,14 @@ def parse_c_style(content):
             break
 
     code = '\n'.join(lines[code_start:]).strip() if code_start is not None else content.strip()
-    return author, date, repo, license_str, problem_statement, code
+    return problem_statement, code
 
 
 def parse_hash_style(content):
     lines = content.splitlines()
     n = len(lines)
     i = 0
-    author = date = repo = license_str = problem_statement = ""
-
-    while i < n and not lines[i].strip():
-        i += 1
-
-    # Extract metadata block
-    meta_lines = []
-    while i < n and lines[i].strip().startswith('#'):
-        meta_lines.append(lines[i].strip()[1:].strip())
-        i += 1
-
-    for raw_line in meta_lines:
-        for part in raw_line.split('|'):
-            if ':' in part:
-                key, _, val = part.partition(':')
-                key = key.strip().lower()
-                val = val.strip()
-                if 'author'    in key: author       = val
-                elif 'date'    in key: date         = val
-                elif 'repo'    in key: repo         = val
-                elif 'license' in key: license_str  = val
+    problem_statement = ""
 
     while i < n and not lines[i].strip():
         i += 1
@@ -119,7 +80,7 @@ def parse_hash_style(content):
         problem_statement = ' '.join(ps_lines).strip()
 
     code = content.strip()
-    return author, date, repo, license_str, problem_statement, code
+    return problem_statement, code
 
 
 def parse_algo_md(content):

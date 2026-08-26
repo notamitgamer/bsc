@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to input a new element at a specific position of an array.
     a[] = {4, 5, 2, 10, 6, 9, 8}, newItem = 7, position = 3
 */

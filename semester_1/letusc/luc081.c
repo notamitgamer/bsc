@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Create structure for Cricketers (Name, Age, Tests, Avg Runs). Sort 20 records by average runs using qsort().
 */
 /* Let Us C, Chap- 17 (Structures), Qn No.: B(d) */

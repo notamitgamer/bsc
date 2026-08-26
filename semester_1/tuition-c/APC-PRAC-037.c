@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Show all the armstrong number between a range. */
 /* Author: Amit Dutta, Date: 21-11-2025 */
 

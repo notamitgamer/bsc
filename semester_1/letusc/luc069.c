@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* If the string "Alice in wonder land" is fed to the following scanf() statement, what will be the contents of arrays str1, str2, str3 and str4?
 */
 

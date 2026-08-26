@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to input a number and check whether it is a Niven number
 or not. (When a number is divisible by its sum of digit) e.g. : n = 126*/
 

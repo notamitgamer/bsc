@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program that includes a user-defined function named setBit with the signature
 int setBit(int num, int position);. The function should set the bit at the specified position
 (0-indexed) to 1 and return the modified number. */

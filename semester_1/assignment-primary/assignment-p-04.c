@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that takes an integer input representing a month (1 to 12) and a year. 
 Use a switch statement to display the number of days in that month, considering leap years. */
 

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 14 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to find the length of a string using
     i) Library Method
     ii) User defined method

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a problem to print all the prime numbers from 1 to 300. */
 /* Let Us C, Chap - 6, Page - 101, Problem 6.1 */
 

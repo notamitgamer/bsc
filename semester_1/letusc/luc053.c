@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write macro definitions for: Mean, Absolute value, Uppercase to Lowercase, Biggest of three.
 */
 /* Let Us C, Chap- 12 (The C Preprocessor), Qn No.: C(b) */

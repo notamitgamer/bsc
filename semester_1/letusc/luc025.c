@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to find the greates of the three numbers entered
 through the keyboard. Use conditional operators. */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: E(c) */

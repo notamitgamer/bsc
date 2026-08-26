@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to find and display the value of given expression :
 ((x+3)/4) - ((2x+4)/3) taking the value of x = 5 */
 

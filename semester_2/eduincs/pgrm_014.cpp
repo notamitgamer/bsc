@@ -1,8 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com>
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
 /* `this` pointer */
 
 #include<iostream>

@@ -1,5 +1,5 @@
 from .config import ALGO_ICON_SVG, FILE_ICON_SVG
-from .formatting import esc_yaml, esc_html, format_author_html, format_tags_yaml
+from .formatting import esc_yaml, esc_html, format_tags_yaml
 
 
 def build_algo_md(filename_base, title, problem_statement, body_lines, source_path="", tags=None):
@@ -54,7 +54,7 @@ def build_algo_md(filename_base, title, problem_statement, body_lines, source_pa
     return "\n".join(fm + body)
 
 
-def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
+def build_md(filename, lang_label, fence_lang,
              problem_statement, code, rel_url, tags=None):
 
     desc = problem_statement if problem_statement else f"{lang_label} program — {filename}"
@@ -94,18 +94,5 @@ def build_md(filename, lang_label, fence_lang, author, date, repo, license_str,
         "---",
         "",
     ]
-
-    meta_parts = []
-    if author:
-        meta_parts.append(f"● Author - {format_author_html(author)}")
-    if date:
-        meta_parts.append(f"Updated - {esc_html(date)}")
-
-    if meta_parts:
-        body += [
-            f'<div style="font-size:0.8rem;color:var(--vp-c-text-3);margin-bottom:16px;">'
-            f'{" · ".join(meta_parts)}</div>',
-            "",
-        ]
 
     return '\n'.join(fm_lines + body)

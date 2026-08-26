@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to recive Cartesian
 co-ordinates (x, y) of a point and convert
 them into Polar co-ordinates (r, phi)

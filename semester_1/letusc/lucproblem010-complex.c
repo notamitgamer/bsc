@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to generate all combinations (permutations) of 1, 2 and 3
    from 1-digit numbers up to 4-digit numbers using a main loop to control
    the number of digits (1 to 3333).

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to calculate overtime pay of 10 employees. Overtime is
 paid at the rate of Rs. 120.00 per hour for every hour worked above 40
 hours. Assume that employees do not work for fractional part of an hour. */

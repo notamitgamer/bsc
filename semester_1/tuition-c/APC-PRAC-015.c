@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to display all numbers between lb (lower bound) and up (upper bound)
 which ends with digit 7 or divisible by 7. */
 // File Name - amit0611202501.c (LAB), APC-PRAC-015.c (Local)

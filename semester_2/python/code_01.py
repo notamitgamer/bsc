@@ -1,7 +1,3 @@
-# Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 18 Jun 2026
-# Repo: https://github.com/notamitgamer/bsc
-# License: MIT
-
 # Coming back to basics after months.
 
 n = int(input("How many numbers? "))

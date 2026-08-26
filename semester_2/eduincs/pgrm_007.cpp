@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 06 Jul 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Right a program to calculate sum and product of array elements. */
 
 #include <iostream>

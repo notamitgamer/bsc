@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* If a macro is not getting expanded as per your expectation, how will you find out how is it being expanded by the preprocessor?
 */
 /* Let Us C, Chap- 12 (The C Preprocessor), Qn No.: C(a) */

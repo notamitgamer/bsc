@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 30 Mar 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program to reverse a string using a recursive function. */
 
 #include<stdio.h>

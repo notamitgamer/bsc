@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* A positive integer is entered through the keyboard, write a function to find the binary equivalent of this number:
 (1) Without using recursion
 (2) Using recursion

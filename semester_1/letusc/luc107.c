@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Receive an unsigned 16-bit integer and exchange the contents of its 2 bytes using bitwise operators.
 */
 /* Let Us C, Chap- 21 (Operations on Bits), Qn No.: B(e) */

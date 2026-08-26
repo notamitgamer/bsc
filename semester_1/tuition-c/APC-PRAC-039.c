@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
 Write a C program to print all unique combinations of three numbers (a, b, c) such that:
 1 ≤ a, b, c ≤ 30 and a² + b² = c² (Pythagorean triplets)
 */

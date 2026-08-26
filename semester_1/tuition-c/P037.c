@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* sum = 1 + 1+2/1*2 + 1+2+3/1*2*3 + ... + 1+2+3+...+n/1*2*3*...*n */
 
 #include <stdio.h>

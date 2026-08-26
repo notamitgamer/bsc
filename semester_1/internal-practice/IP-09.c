@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 03 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to find the sum of n elements entered by the user. Use dynamic
 memory allocation (malloc() or calloc()). */
 

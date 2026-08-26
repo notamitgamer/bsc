@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to check whether a triangle is valid or not,
 if three angles of the triangle are entered through the keyboard.
 A triangle is valid if the sum of all the three angles is equal to 180 degrees. */

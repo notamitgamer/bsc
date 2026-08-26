@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* If the lengths of three sides of a triangle are entered through the
 keyboard, write a program to check whether the triangle is valid or not.
 The triangle is valid if the sum of two sides is greater that the largest

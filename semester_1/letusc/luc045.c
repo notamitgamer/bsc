@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* A position integer is entered through the keyboard. Write a Function
 to obtain the prime factors of this number. 
 For example, prime factors of 24 are 2, 2, 2 and 3, whereas prime 

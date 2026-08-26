@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Any year is entered through the keyboard. Write a function to
 determine whether the year is aleap year or not. */
 /* Let Us C, Chap- 8, Page - 144, Qn No.: C(1) */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* A smart home security controller monitors the state of several sensors to decide what action to take.
  * Each second, the system reads data from sensors that can either be active or inactive. Based on the current
  * state of all sensors, the controller must perform exactly one action, such as activating a warning, checking

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a recursive function to obtain the sum of first 25 natural numbers.
 */
 /* Let Us C, Chap- 10 (Recursive), Qn No.: B(b) */

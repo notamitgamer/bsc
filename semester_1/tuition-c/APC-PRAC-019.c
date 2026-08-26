@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to find hcf of two numbers */
 // File Name - amit0711202501.c (LAB), APC-PRAC-019.c (Local)
 

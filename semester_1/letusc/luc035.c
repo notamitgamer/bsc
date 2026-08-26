@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* According to a study, the approximate level of intelligence of a
 person can be calculated using the following formula.
     i = 2 + (y + 0.5x)

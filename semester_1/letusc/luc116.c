@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Compile any C program into a .EXE or a .out file. Obtain SHA256 checksum of the file.
 */
 /* Let Us C, Chap- 23 (Security Programming), Qn No.: D(b) */

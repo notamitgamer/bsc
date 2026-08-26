@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 05 Jan 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
  * Question 16:
  * Write a C program that includes a user-defined function named isArmstrong with the signature int isArmstrong(int num);.
  */

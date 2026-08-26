@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 10 Jul 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP in cpp to overload the following functions
     int max(int a, int b);
     int max(int a, int b, int c);

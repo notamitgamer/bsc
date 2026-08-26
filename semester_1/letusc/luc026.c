@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to recieve value of an angle in degreesand check
 whether sum of squares of sine and cosine of this angle is equal to 1. */
 /* Let Us C, Chap- 4, Page - 73, Qn No.: E(d) */

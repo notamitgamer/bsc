@@ -1,7 +1,3 @@
-# Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 20 Mar 2026
-# Repo: https://github.com/notamitgamer/bsc
-# License: MIT
-
 # Write an if...else if...else block that evaluates a newly created temperature variable.
 # * If the temperature is strictly greater than 30, print: "30+ is too hot!"
 # * If the temperature is between 20 and 30 (inclusive), print: "Perfect weather."

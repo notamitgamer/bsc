@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to check palindrome number. */
 // File Name - amit0611202502.c (LAB), APC-PRAC-016.c (Local)
 

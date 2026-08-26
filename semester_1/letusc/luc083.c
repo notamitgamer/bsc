@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Library menu-driven program (Add, Display, List by Author, List by Title, Count, List sorted).
 */
 /* Let Us C, Chap- 17 (Structures), Qn No.: B(f) */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a calculator utility using command line arguments.\nUsage: calc <switch> <n> <m>\nwhere switch is arithmetic operator or comparison operator.
 */
 /* Let Us C, Chap- 20 (More Issues In Input/Output), Qn No.: A(d) */

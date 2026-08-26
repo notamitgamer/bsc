@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to print all the ASCII values and their equivalent
 characters using a while loop. The ASCII may vary from 0 to 255. */
 /* Let Us C, Chap- 5, Page - 87, Qn No.: B(a) */

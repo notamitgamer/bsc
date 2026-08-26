@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to check special number (sum of digit + product of digit = original number) */
 // File Name - amit0711202503.c (LAB), APC-PRAC-021.c (Local)
 

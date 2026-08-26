@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* If the length of three sides of a triangle are entered through the
 keyboard, write a program to check whether the triangle is an isosceles,
 an equilateral, a scalene or a right-angled triangle. */

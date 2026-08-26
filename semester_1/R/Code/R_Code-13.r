@@ -1,7 +1,3 @@
-# Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 20 Mar 2026
-# Repo: https://github.com/notamitgamer/bsc
-# License: MIT
-
 # Create a list named student_record containing a string, 
 # an integer, and a numeric vector of two grades. Then, add the 
 # logical value TRUE to the end of the list, ensuring the original 

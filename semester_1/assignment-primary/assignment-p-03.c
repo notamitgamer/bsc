@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program that includes a user-defined function named isPerfect with the signature 
 int isPerfect(int num);. A perfect number is a positive integer that is equal to the sum of 
 its proper divisors, excluding itself. For example, 28 is a perfect number because the sum 

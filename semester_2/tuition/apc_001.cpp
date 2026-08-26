@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 18 Jun 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Tring to remember after a year. */
 
 #include <iostream>

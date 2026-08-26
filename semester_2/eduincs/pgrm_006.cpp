@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 06 Jul 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program in cpp to implement linear search using private instance variable and public member methods. */
 
 #include <iostream>

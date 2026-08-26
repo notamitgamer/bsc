@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 20 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
     Write a menu-driven program to perform the following string operations:
         a. Show address of each character
         b. Concatenate two strings without using strcat()

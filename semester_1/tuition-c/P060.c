@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 13 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* write a C program to count the occurrences of a given element in an array using a user-defined
 function. Create a function int count_occurrences(int arr[], int n, int target) that countts how
 many times target appears in the array. */

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* According to Gregorian calender, it was Monday on the date 01/01/01.
 if any year is input through the keyboard write a program to find out
 what is the day on 1st January of this year. */

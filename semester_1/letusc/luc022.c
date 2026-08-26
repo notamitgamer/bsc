@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* The Body Mass Index (BMI) is defined as ratio of  weight of the
 person (in Kilograms) to square of the height (in meters).
 Write a program that receives weight and height, calculate the BMI, and reports

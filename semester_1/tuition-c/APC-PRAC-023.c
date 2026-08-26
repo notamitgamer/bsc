@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Pattern :
     (a) 1, -3, 5, -7, 9, -11, ... upto n times
     (b) 0, 3, 8, 15, ... upto n times

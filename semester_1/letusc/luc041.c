@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to print 24 hours of day with suitable suffixes like
 AM, PM, Noon and Midnight. */
 /* Let Us C, Chap- 6, Page - 106, Qn No.: B(h) */

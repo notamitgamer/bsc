@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to analyse a given sentence to detect the mood of the sentence using OpenAI Chat Completion API.
 */
 /* Let Us C, Chap- 24 (Interaction with ChatGPT through C), Qn No.: B(c) */

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to find the factorial value of any number entered
 through the keyboard. */
 /* Let Us C, Chap - 5, Page - 84, Problem 5.2 */

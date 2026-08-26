@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to store names in a file. Display the n-th name in the list, where n is read from the keyboard.
 */
 /* Let Us C, Chap- 19 (File Input/Output), Qn No.: B(h) */

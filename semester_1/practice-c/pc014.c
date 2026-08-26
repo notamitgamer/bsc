@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 30 Mar 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a c program that defines a structure Student with the following members: roll (int), name (string), and marks (float).
  Do the below: 
   * Create an array to store details for 3 students.

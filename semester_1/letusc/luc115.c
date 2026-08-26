@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Obtain MD5 checksum of the following strings and check whether they are same:
 "Six slippery snails slid slowly seaward."
 "Six silppery snails slid slowly seaward."

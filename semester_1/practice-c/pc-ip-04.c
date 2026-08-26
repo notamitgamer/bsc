@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 05 Jan 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
  * Question 4:
  * Write a function to check whether a number is prime or not. Use the same function to generate all prime numbers less than 100.
  */

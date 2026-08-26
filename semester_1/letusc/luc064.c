@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Simulate a Dequeue (Double Ended Queue) using an array. Support: retrieve left, retrieve right, insert left, insert right. Use pointers left and right.
 */
 

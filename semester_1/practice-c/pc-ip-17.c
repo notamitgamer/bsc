@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 05 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
  * Question 17:
  * Write a C program that includes a user-defined function named isPerfect with the signature int isPerfect(int num);.
  */

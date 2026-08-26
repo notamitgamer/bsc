@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to input a number and check whether it is Disarium Number or not.
     Note : A number is said to Disarium if sum of its digit powered by with their
     respective position is equal to the original number. */

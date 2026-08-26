@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that includes a user-defined function named binarySearch with the
 signature int binarySearch(int arr[], int size, int target);. The function should perform a
 binary search on a sorted array of integers and return the index of the target element if
