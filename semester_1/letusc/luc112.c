@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Rewrite the showbits() function using the _BV macro.
 */
 /* Let Us C, Chap- 21 (Operations on Bits), Qn No.: B(j) */

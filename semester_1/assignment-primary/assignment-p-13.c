@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that accepts a string as a command line argument and includes a user-
 defined function named isPalindrome with the signature int isPalindrome(char str[]);.
 The function should check if the given string is a palindrome and return 1 if it is, and 0

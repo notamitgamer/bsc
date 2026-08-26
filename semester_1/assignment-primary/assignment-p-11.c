@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that defines a structure Student containing the attributes rollNumber,
 name, and marks. Include a user-defined function named displayStudent with the
 signature void displayStudent(struct Student s);. The function should display the details

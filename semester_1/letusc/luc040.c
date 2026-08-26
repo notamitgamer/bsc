@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Ramanujan number (1729) is the smallest number that can be
 expressed as sum of cubes in two different ways - 1729 can be
 expressed as 1^3 + 12^3 and 9^3 + 10^3. Write a program to print all such

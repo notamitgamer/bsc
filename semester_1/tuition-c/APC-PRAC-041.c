@@ -1,11 +1,4 @@
 /*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
-/*
 Write a C program to find and print all twin prime pairs between 1 and n using nested loops.
 (Twin primes are prime numbers having a difference of 2, like 11 and 13)
 */

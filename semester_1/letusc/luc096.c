@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program that can copy the contents of one file to another. The source and target filenames should be supplied as command-line arguments.
 */
 /* Let Us C, Chap- 20 (More Issues In Input/Output), Qn No.: A(b) */

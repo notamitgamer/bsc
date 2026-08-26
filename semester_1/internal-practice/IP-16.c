@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 03 Jan 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that includes a user-defined function named isArmstrong with the 
 signature int isArmstrong(int num);. An Armstrong number is a number that is equal to 
 the sum of its own digits each raised to the power of the number of digits. For example, 

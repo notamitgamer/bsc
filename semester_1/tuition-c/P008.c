@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* A shopkeeper offers 30% discount on purchasing an
 item whereas the other shopkeeper offers 2 successive
 discount of 20% and 10% for purchasing the same item.

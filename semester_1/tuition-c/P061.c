@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 14 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program to find the sum of even elements in an array using a user defined function.
 Define a functions int sumEven(int arr[], int n) that returns the sum of all even elements in the array. */
 

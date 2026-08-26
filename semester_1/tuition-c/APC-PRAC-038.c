@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
 Print all combinations of two two-digit numbers such that the sum of digits of both numbers is equal.
 Example: 23 and 41 → (2+3) = 5, (4+1) = 5.
 */

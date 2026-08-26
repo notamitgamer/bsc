@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Paper of size AO has dimensions 1189 mm x 841 mm.
 Each subsequent size A(n) is defined as A(n-1) cut in
 half, parallel to its shorter sides. Thus, paper of

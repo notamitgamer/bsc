@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to copy contents of one file to another. While doing so replace all lowercase characters to their equivalent uppercase characters.
 */
 /* Let Us C, Chap- 19 (File Input/Output), Qn No.: B(b) */

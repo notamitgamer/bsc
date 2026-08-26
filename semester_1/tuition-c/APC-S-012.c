@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to check if a matrix is a sparx matrix. */
 /* Author: Amit Dutta, Date: 19-11-2025 */
 

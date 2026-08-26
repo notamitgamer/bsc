@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 07 Aug 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program in c++ to implement stack using a class stack with number variables, functions, constructor, destructor. */
 
 #include<iostream>

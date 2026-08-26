@@ -1,7 +1,3 @@
-# Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 25 Mar 2026
-# Repo: https://github.com/notamitgamer/bsc
-# License: MIT
-
 # Program to count the number of even numbers stored inside a vector of numbers.
 
 print("Enter your numbers: ")

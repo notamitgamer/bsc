@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 05 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
  * Question 3:
  * Write a program to compute the sum of the first n terms of the series using a function: S=1-2+3-4+5-6+...
  */

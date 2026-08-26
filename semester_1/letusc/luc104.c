@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Rewrite expressions using bitwise compound assignment operators.
 */
 /* Let Us C, Chap- 21 (Operations on Bits), Qn No.: B(b) */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Tower of Hanoi: Write a program to print out the sequence in which 4 disks should be moved from peg A to peg C using peg B.
 */
 /* Let Us C, Chap- 10 (Recursive), Qn No.: B(c) */

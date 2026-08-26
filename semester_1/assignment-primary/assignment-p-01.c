@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that includes a user-defined function named isPrime with the signature 
 int isPrime(int num); The function should take an integer as a parameter and return 1 if 
 the number is prime and 0 otherwise. */

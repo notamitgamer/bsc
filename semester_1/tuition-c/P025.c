@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to input the electricity unit consumed and calculate the total
 bill amount according to the given condition :
     for 1st 50 unit            Rs. 0.50 per unit

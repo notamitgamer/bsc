@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Figure 9.4 shows three memory locations and values stored in them.
 Write a program to declare  variables that implement the relationship
 shown. How will you print the values and addresses shown in the figure?

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to find out smallest of three numbers without using if_else block. */
 // This code has not been compiled. 
 // If you find any issues, please create a new issue on GitHub regarding them.

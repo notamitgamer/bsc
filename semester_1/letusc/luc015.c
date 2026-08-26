@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Given three points (x1, y1), (x2, y2), and (x3, y3),
 write a program to check if the three poins fall on one straight line. */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(f) */

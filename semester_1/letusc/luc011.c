@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* If ages of Ram, Shyam and Ajay are input through the keyboard,
 write a program to determine the youngest of the three. */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(b) */

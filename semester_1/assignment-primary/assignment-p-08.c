@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program that includes a user-defined function named countSetBits with the
 signature int countSetBits(int num);. The function should count and return the number of
 set bits (1s) in the binary representation of the given number. */

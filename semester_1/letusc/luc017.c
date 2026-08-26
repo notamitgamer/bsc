@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Given a point (x, y), write a program to find out if it lies on X-axis, Y-axis or origin. */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(h) */
 

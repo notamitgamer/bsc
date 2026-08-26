@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Take a Range as input from user and print the prime number between it. */
 /* Auhtor: Amit Dutta, Date: 20-11-2025 */
 

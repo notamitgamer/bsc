@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Create a structure for bank customers (Acc no, Name, Balance). Write functions to print low balance customers and handle deposits/withdrawals.
 */
 /* Let Us C, Chap- 17 (Structures), Qn No.: B(b) */

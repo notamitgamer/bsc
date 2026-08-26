@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 05 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
  * Question 14:
  * Write a program to calculate the factorial of a number using recursive and iterative function.
  */

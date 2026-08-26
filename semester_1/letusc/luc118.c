@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to generate 4 images of birds flying in the sky with a computer's mouse in their beak using OpenAI Image API.
 */
 /* Let Us C, Chap- 24 (Interaction with ChatGPT through C), Qn No.: B(b) */

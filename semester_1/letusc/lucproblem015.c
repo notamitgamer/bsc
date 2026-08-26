@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program that defines a function that calculates power of one
 number reaised to another and factorial value of a number in one cell. */
 /* Let Us C, Chap - 9, Page 159, Problem 9.2 */

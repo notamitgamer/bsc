@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to check Automorphic Number. */
 // File Name - amit0611202504.c (LAB), APC-PRAC-018.c (Local)
 

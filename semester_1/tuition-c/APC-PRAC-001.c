@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to calculate area and perimeter of a rectangle 
 by accepting length and breadth as input. */
 
@@ -19,4 +13,3 @@ int main() {
     return 0;
 
 }
-

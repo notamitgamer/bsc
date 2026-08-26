@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program that defines an array of integers, and includes a user-defined function
 named reverseArray with the signature void reverseArray(int arr[], int size);. The function
 should reverse the elements of the array. */

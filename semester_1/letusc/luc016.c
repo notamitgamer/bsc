@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Given the coordiantes (x, y) of center of a circle and its radius,
 write a program that will determine whether a point lies inside the circle,
 on the circle or outside the circle. (Hint : Use sqrt() and pow() functions.) */

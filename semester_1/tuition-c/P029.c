@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to perform addition of first n natural numbers. sum = 1 + 2 + 3 + ... */
 
 #include <stdio.h>

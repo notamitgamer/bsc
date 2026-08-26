@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program that receives a 10-digit ISBN number, computes the checksum (d1 + 2d2 + 3d3 + ... + 10d10), and reports whether the ISBN number is correct (sum divisible by 11).
 */
 

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 25 Aug 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Copy Constructor */
 
 #include<iostream>

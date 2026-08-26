@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* When interest compounds q times per year at an annual rate of
 r % for n years, the principle p compounds to an amount a as per
 the following formula

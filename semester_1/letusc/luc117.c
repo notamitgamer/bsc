@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a program to convert a given text into an audio file using OpenAI Audio API (TTS).
 */
 /* Let Us C, Chap- 24 (Interaction with ChatGPT through C), Qn No.: B(a) */

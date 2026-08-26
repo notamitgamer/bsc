@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 05 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
  * Question 6:
  * Write a program using a function to compute and display all factors of a given number.
  */

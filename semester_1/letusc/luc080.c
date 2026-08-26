@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 08 Feb 2026
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Automobile engine parts (Serial AA0-FF9, Year, Material, Qty). Retrieve parts between serial numbers BB1 and CC6.
 */
 /* Let Us C, Chap- 17 (Structures), Qn No.: B(c) */

@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to add first seven terms of the following series using a
 for loop.
     1 / 1! + 2 / 2! + 3 / 3! + ...

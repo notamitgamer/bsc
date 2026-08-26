@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Define a function to convert any given year into its Roman equivalent.
 Use these roman equivalent for decimal numbers : 1 - I, 5 - V, 10 - X,
 50 - L, 100 - C, 500 - D, 1000 - M */

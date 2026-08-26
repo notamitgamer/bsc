@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta <amitdutta4255@gmail.com> | Date: 10 Jul 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Default argument */
 
 #include<iostream>

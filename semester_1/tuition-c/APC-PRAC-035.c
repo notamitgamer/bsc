@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Print all the 3 and 4 digit palindrome number. */
 /* Auhtor: Amit Dutta, Date: 20-11-2025 */
 

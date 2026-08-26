@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Get sum of even position digit and odd position digit */
 /* Counting starts from the rightmost digit as position 1 (Odd). */
 

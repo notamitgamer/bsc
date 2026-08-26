@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Given the length and breadth of a rectangle, write a program to find
 whether the area of the rectangle is greater than it's perimeter.
 For example, the area of the rectangle with length = 5 and breadth = 4

@@ -1,8 +1,3 @@
-/*
- * Author: Amit Dutta <mail@amit.is-a.dev>
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
 /* `friend` function */
 
 #include<iostream> 

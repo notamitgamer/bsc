@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program using conditional operators to determine whether
 a year entered through the keyboard is a leap year or not. */
 /* Let Us C, Chap- 4, Page - 72, Qn No.: E(b) */

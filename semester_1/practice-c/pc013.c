@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 29 Mar 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a C program that defines a structure named Book with attributes bookID (int),
 title (string), and price (float). Include a user-defined function named updatePrice
 with the signature: void updatePrice(struct Book *b, float newPrice);

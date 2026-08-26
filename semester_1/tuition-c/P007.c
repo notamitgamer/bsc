@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* A shopkeeper offers 10% discount on printed
 price of a digital camera. However a customer has
 to pay 6% GST on the remaining amount. WAP to

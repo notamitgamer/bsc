@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 12 Dec 2025
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* WAP to input sum (p), rate of interest (r), time (t) and type of interest
 ('s' for simple interest amd 'c' for compound interest). Calculate and display
 the interest earned

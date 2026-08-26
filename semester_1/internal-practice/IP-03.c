@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 03 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program to compute the sum of the first n terms of the series using a function:
 S=1−2+3−4+5−6+…  */
 

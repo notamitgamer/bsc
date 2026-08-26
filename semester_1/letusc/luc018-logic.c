@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 12 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* According to Gregorian calender, it was Monday on the date 01/01/01.
 Write a program to find out what is the day on 1st January of any input year. */
 /* Let Us C, Chap- 3, Page - 53, Qn No.: f(i) */

@@ -1,10 +1,3 @@
-/*
- * Author  : Amit Dutta <amitdutta4255@gmail.com>
- * Date    : 16 Dec 2025
- * Repo    : https://github.com/notamitgamer/bsc
- * License : MIT License (See the LICENSE file for details)
- */
-
 /* Write a C program to find all Niven in an array. Define a user-defined function int isNiven(int num)
 that returns 1 if the numbers is a Niven number, otherwise returns 0. A Niven number (also known as a
 Harshad Number) is an integer that is divisible by the sum of its digits. */

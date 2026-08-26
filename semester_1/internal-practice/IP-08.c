@@ -1,9 +1,3 @@
-/*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 03 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
 /* Write a program that takes the radius of a circle as input, passes it to a function that
 computes area and circumference, and displays results in main(). */
 

@@ -1,10 +1,4 @@
 /*
- * Author: Amit Dutta (amitdutta4255@gmail.com) | Date: 05 Jan 2026
- * Repo: https://github.com/notamitgamer/bsc
- * License: MIT
- */
-
-/*
  * Question 7:
  * Write a program to swap two numbers using pointers using user-defined function.
  */
