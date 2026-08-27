@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 27, 2026 at 18:21 UTC
+> Last build: August 27, 2026 at 18:27 UTC
 
 ## Latest Build
 
-- **Build ID** — `16e5a37d9399cd98c082a9f7187158b942f2ae93`
+- **Build ID** — `fc9540253ff0c65ec5a6baf81c16acc40c0e395b`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 27, 2026 at 18:21 UTC
+- **Build time** — August 27, 2026 at 18:27 UTC
 
 ## Recent Commits
+
+### [`fc95402`](https://github.com/notamitgamer/bsc/commit/fc9540253ff0c65ec5a6baf81c16acc40c0e395b) Merge pull request #95 from notamitgamer/fix/vitepress-cache-path
+
+**Amit Dutta** committed on Aug 27, 2026 18:27 UTC
+
+
+---
+
+### [`954c81d`](https://github.com/notamitgamer/bsc/commit/954c81d7bbf18b5a1a400a0941adc36833ab7c02) Fix VitePress cache path in workflow
+
+**notamitgamer2** committed on Aug 27, 2026 18:26 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`19cb7e3`](https://github.com/notamitgamer/bsc/commit/19cb7e392480f2dbd258a903dfe58ac72b44f30f) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 27, 2026 18:21 UTC · +57 / -526 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +57 -526 |
+</details>
+
+
+---
 
 ### [`16e5a37`](https://github.com/notamitgamer/bsc/commit/16e5a37d9399cd98c082a9f7187158b942f2ae93) Merge pull request #94 from notamitgamer/fix/eduincs-sem2-missing-statements
 
@@ -72,66 +109,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +63 -40 |
-</details>
-
-
----
-
-### [`1fcb7a0`](https://github.com/notamitgamer/bsc/commit/1fcb7a0c80f356a2e4c1f63a15057053e6ac48dd) Merge pull request #91 from notamitgamer/edit-20260827-193516
-
-**Amit Dutta** committed on Aug 27, 2026 14:12 UTC
-
-
----
-
-### [`c230a66`](https://github.com/notamitgamer/bsc/commit/c230a66b3673420000cf6c2d516f008aa56d6fea) completed the backlogs
-
-**Amit Dutta** committed on Aug 27, 2026 14:04 UTC · +878 / -0 lines · 24 files changed
-
-<details>
-<summary>Show 24 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/algorithms/algo_040.md` | Added | +23 |
-| `semester_2/algorithms/algo_041.md` | Added | +23 |
-| `semester_2/algorithms/algo_042.md` | Added | +23 |
-| `semester_2/algorithms/algo_043.md` | Added | +24 |
-| `semester_2/algorithms/algo_044.md` | Added | +27 |
-| `semester_2/algorithms/algo_045.md` | Added | +17 |
-| `semester_2/algorithms/algo_046.md` | Added | +27 |
-| `semester_2/algorithms/algo_047.md` | Added | +17 |
-| `semester_2/algorithms/algo_048.md` | Added | +17 |
-| `semester_2/algorithms/algo_049.md` | Added | +17 |
-| `semester_2/algorithms/algo_050.md` | Added | +19 |
-| `semester_2/algorithms/algo_051.md` | Added | +19 |
-| `semester_2/algorithms/algo_052.md` | Added | +40 |
-| `semester_2/eduincs/pgrm_018.cpp` | Added | +47 |
-| `semester_2/eduincs/pgrm_019.cpp` | Added | +33 |
-| `semester_2/eduincs/pgrm_020.cpp` | Added | +33 |
-| `semester_2/eduincs/pgrm_021.cpp` | Added | +39 |
-| `semester_2/eduincs/pgrm_022.cpp` | Added | +34 |
-| `semester_2/eduincs/pgrm_023.cpp` | Added | +55 |
-| `semester_2/eduincs/pgrm_024.cpp` | Added | +57 |
-| `semester_2/eduincs/pgrm_025.cpp` | Added | +25 |
-| `semester_2/eduincs/pgrm_026.cpp` | Added | +63 |
-| `semester_2/eduincs/pgrm_027.cpp` | Added | +103 |
-| `semester_2/eduincs/pgrm_028.cpp` | Added | +96 |
-</details>
-
-
----
-
-### [`97ac4c1`](https://github.com/notamitgamer/bsc/commit/97ac4c101458467535856d65e4e5e9e1ecd5cb81) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 26, 2026 14:24 UTC · +490 / -38 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +490 -38 |
 </details>
 
 
