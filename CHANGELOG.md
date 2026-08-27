@@ -1,19 +1,63 @@
 # Changelog
 
-> Last build: August 27, 2026 at 18:27 UTC
+> Last build: August 27, 2026 at 18:30 UTC
 
 ## Latest Build
 
-- **Build ID** — `fc9540253ff0c65ec5a6baf81c16acc40c0e395b`
+- **Build ID** — `7763d2f5e20a743b0158d01cb347b5c8bf6c8505`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 27, 2026 at 18:27 UTC
+- **Build time** — August 27, 2026 at 18:30 UTC
 
 ## Recent Commits
+
+### [`7763d2f`](https://github.com/notamitgamer/bsc/commit/7763d2f5e20a743b0158d01cb347b5c8bf6c8505) Merge pull request #96 from notamitgamer/chore/trigger-deploy-cache-test
+
+**Amit Dutta** committed on Aug 27, 2026 18:30 UTC
+
+
+---
+
+### [`8beecbd`](https://github.com/notamitgamer/bsc/commit/8beecbdb8a77ee677f020ddb5ceb0b58b08cdee2) Merge branch 'main' into chore/trigger-deploy-cache-test
+
+**Amit Dutta** committed on Aug 27, 2026 18:30 UTC
+
+
+---
+
+### [`c21f880`](https://github.com/notamitgamer/bsc/commit/c21f88078753d42f201a48c72396610cff9bd404) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 27, 2026 18:28 UTC · +40 / -63 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -63 |
+</details>
+
+
+---
 
 ### [`fc95402`](https://github.com/notamitgamer/bsc/commit/fc9540253ff0c65ec5a6baf81c16acc40c0e395b) Merge pull request #95 from notamitgamer/fix/vitepress-cache-path
 
 **Amit Dutta** committed on Aug 27, 2026 18:27 UTC
+
+
+---
+
+### [`e6ca6bd`](https://github.com/notamitgamer/bsc/commit/e6ca6bd1ca6362d15784f8b0c458d58266a6d9a7) chore: trigger deploy to verify VitePress cache fix
+
+**notamitgamer2** committed on Aug 27, 2026 18:26 UTC · +1 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `README.md` | Modified | +1 |
+</details>
 
 
 ---
@@ -74,42 +118,6 @@
 ### [`e49d4d7`](https://github.com/notamitgamer/bsc/commit/e49d4d743239a42f969b0b18322f69002a02c628) Merge pull request #93 from notamitgamer/edit-20260827-195203
 
 **Amit Dutta** committed on Aug 27, 2026 14:22 UTC
-
-
----
-
-### [`12d7ab3`](https://github.com/notamitgamer/bsc/commit/12d7ab38c5fb2479495fb16da376266f0e766b28) testing new alias 2nd time
-
-**Amit Dutta** committed on Aug 27, 2026 14:21 UTC
-
-
----
-
-### [`f2a1f4f`](https://github.com/notamitgamer/bsc/commit/f2a1f4fb456a23e90e3685e9bfa893ab8b17ebec) Merge pull request #92 from notamitgamer/edit-20260827-194353
-
-**Amit Dutta** committed on Aug 27, 2026 14:14 UTC
-
-
----
-
-### [`1a3ecc6`](https://github.com/notamitgamer/bsc/commit/1a3ecc60c7a88e2119297e65a5725d26600f7cda) testing new alias
-
-**Amit Dutta** committed on Aug 27, 2026 14:13 UTC
-
-
----
-
-### [`ac25359`](https://github.com/notamitgamer/bsc/commit/ac253591ffdef629b5e5d1eba975a65a482134f7) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 27, 2026 14:13 UTC · +63 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +63 -40 |
-</details>
 
 
 ---
