@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: August 27, 2026 at 18:30 UTC
+> Last build: August 27, 2026 at 18:36 UTC
 
 ## Latest Build
 
-- **Build ID** — `7763d2f5e20a743b0158d01cb347b5c8bf6c8505`
+- **Build ID** — `821bdb4eb495dc88048d0de52fde8f838f789c94`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 27, 2026 at 18:30 UTC
+- **Build time** — August 27, 2026 at 18:36 UTC
 
 ## Recent Commits
+
+### [`821bdb4`](https://github.com/notamitgamer/bsc/commit/821bdb4eb495dc88048d0de52fde8f838f789c94) Merge pull request #97 from notamitgamer/fix/revert-vitepress-cache-path
+
+**Amit Dutta** committed on Aug 27, 2026 18:36 UTC
+
+
+---
+
+### [`8b92ee8`](https://github.com/notamitgamer/bsc/commit/8b92ee8435af3facb7776ee9f3f54ebde5583a32) Revert VitePress cache path back to .vitepress/cache (root)
+
+**notamitgamer2** committed on Aug 27, 2026 18:34 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`9924af0`](https://github.com/notamitgamer/bsc/commit/9924af09ace51ee4ad768a009cdb6164c676ed7d) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 27, 2026 18:31 UTC · +47 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +47 -39 |
+</details>
+
+
+---
 
 ### [`7763d2f`](https://github.com/notamitgamer/bsc/commit/7763d2f5e20a743b0158d01cb347b5c8bf6c8505) Merge pull request #96 from notamitgamer/chore/trigger-deploy-cache-test
 
@@ -88,36 +125,6 @@
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +57 -526 |
 </details>
-
-
----
-
-### [`16e5a37`](https://github.com/notamitgamer/bsc/commit/16e5a37d9399cd98c082a9f7187158b942f2ae93) Merge pull request #94 from notamitgamer/fix/eduincs-sem2-missing-statements
-
-**Amit Dutta** committed on Aug 27, 2026 18:21 UTC
-
-
----
-
-### [`29b3795`](https://github.com/notamitgamer/bsc/commit/29b379507085846c5ef2000fdd95cc620b556900) Add missing problem statements to pgrm_025.cpp and pgrm_026.cpp (Eduincs sem2)
-
-**notamitgamer2** committed on Aug 27, 2026 18:20 UTC · +4 / -0 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/eduincs/pgrm_025.cpp` | Modified | +2 |
-| `semester_2/eduincs/pgrm_026.cpp` | Modified | +2 |
-</details>
-
-
----
-
-### [`e49d4d7`](https://github.com/notamitgamer/bsc/commit/e49d4d743239a42f969b0b18322f69002a02c628) Merge pull request #93 from notamitgamer/edit-20260827-195203
-
-**Amit Dutta** committed on Aug 27, 2026 14:22 UTC
 
 
 ---
