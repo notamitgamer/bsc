@@ -104,7 +104,7 @@ jobs:
       - name: Cache VitePress
         uses: actions/cache@v6
         with:
-          path: docs/.vitepress/cache
+          path: .vitepress/cache
           # Forced key layout updates ensure hashes stay matched across separate runs
           key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
           restore-keys: |
