@@ -1,3 +1,5 @@
+/* WAP to demonstrate a class template with multiple parameters */
+
 #include <iostream>
 #include <string>
 using namespace std;
