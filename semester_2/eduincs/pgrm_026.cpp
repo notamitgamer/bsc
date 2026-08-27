@@ -1,3 +1,5 @@
+/* WAP to implement a singly linked list with insertion at the beginning and end */
+
 #include <iostream>
 using namespace std;
 
