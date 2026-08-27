@@ -1,15 +1,75 @@
 # Changelog
 
-> Last build: August 26, 2026 at 14:23 UTC
+> Last build: August 27, 2026 at 14:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `2a083009703b6cfa42bee6719787f814b3d73b23`
+- **Build ID** — `1fcb7a0c80f356a2e4c1f63a15057053e6ac48dd`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 26, 2026 at 14:23 UTC
+- **Build time** — August 27, 2026 at 14:12 UTC
 
 ## Recent Commits
+
+### [`1fcb7a0`](https://github.com/notamitgamer/bsc/commit/1fcb7a0c80f356a2e4c1f63a15057053e6ac48dd) Merge pull request #91 from notamitgamer/edit-20260827-193516
+
+**Amit Dutta** committed on Aug 27, 2026 14:12 UTC
+
+
+---
+
+### [`c230a66`](https://github.com/notamitgamer/bsc/commit/c230a66b3673420000cf6c2d516f008aa56d6fea) completed the backlogs
+
+**Amit Dutta** committed on Aug 27, 2026 14:04 UTC · +878 / -0 lines · 24 files changed
+
+<details>
+<summary>Show 24 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_040.md` | Added | +23 |
+| `semester_2/algorithms/algo_041.md` | Added | +23 |
+| `semester_2/algorithms/algo_042.md` | Added | +23 |
+| `semester_2/algorithms/algo_043.md` | Added | +24 |
+| `semester_2/algorithms/algo_044.md` | Added | +27 |
+| `semester_2/algorithms/algo_045.md` | Added | +17 |
+| `semester_2/algorithms/algo_046.md` | Added | +27 |
+| `semester_2/algorithms/algo_047.md` | Added | +17 |
+| `semester_2/algorithms/algo_048.md` | Added | +17 |
+| `semester_2/algorithms/algo_049.md` | Added | +17 |
+| `semester_2/algorithms/algo_050.md` | Added | +19 |
+| `semester_2/algorithms/algo_051.md` | Added | +19 |
+| `semester_2/algorithms/algo_052.md` | Added | +40 |
+| `semester_2/eduincs/pgrm_018.cpp` | Added | +47 |
+| `semester_2/eduincs/pgrm_019.cpp` | Added | +33 |
+| `semester_2/eduincs/pgrm_020.cpp` | Added | +33 |
+| `semester_2/eduincs/pgrm_021.cpp` | Added | +39 |
+| `semester_2/eduincs/pgrm_022.cpp` | Added | +34 |
+| `semester_2/eduincs/pgrm_023.cpp` | Added | +55 |
+| `semester_2/eduincs/pgrm_024.cpp` | Added | +57 |
+| `semester_2/eduincs/pgrm_025.cpp` | Added | +25 |
+| `semester_2/eduincs/pgrm_026.cpp` | Added | +63 |
+| `semester_2/eduincs/pgrm_027.cpp` | Added | +103 |
+| `semester_2/eduincs/pgrm_028.cpp` | Added | +96 |
+</details>
+
+
+---
+
+### [`97ac4c1`](https://github.com/notamitgamer/bsc/commit/97ac4c101458467535856d65e4e5e9e1ecd5cb81) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 26, 2026 14:24 UTC · +490 / -38 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +490 -38 |
+</details>
+
+
+---
 
 ### [`2a08300`](https://github.com/notamitgamer/bsc/commit/2a083009703b6cfa42bee6719787f814b3d73b23) Merge pull request #90 from notamitgamer/remove-author-headers
 
@@ -542,43 +602,6 @@
 ### [`ba4e20d`](https://github.com/notamitgamer/bsc/commit/ba4e20d3ebb199b59742d0cd5cbaba122c33e65c) Merge pull request #89 from notamitgamer/dependabot/github_actions/actions/cache-6
 
 **Amit Dutta** committed on Aug 25, 2026 08:51 UTC
-
-
----
-
-### [`36f22bf`](https://github.com/notamitgamer/bsc/commit/36f22bf5cb75fbe63369f438448a4d3fd65101c5) chore(deps): bump actions/cache from 4 to 6
-
-**dependabot[bot]** committed on Aug 24, 2026 21:25 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`0cdda6e`](https://github.com/notamitgamer/bsc/commit/0cdda6ed86cdc60897ab51f898dfcae1bacb3cf4) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 24, 2026 15:13 UTC · +36 / -34 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +36 -34 |
-</details>
-
-
----
-
-### [`28cea3a`](https://github.com/notamitgamer/bsc/commit/28cea3a368686b9c0fd536aebd96f3ca3b5f6abf) Merge pull request #88 from notamitgamer2/remove-bundle-backup
-
-**Amit Dutta** committed on Aug 24, 2026 15:12 UTC
 
 
 ---
