@@ -3,9 +3,17 @@ name: Build Offline APK
 # Fully separate from main.yml on purpose: if anything here misbehaves,
 # delete this file and the site build/deploy is completely unaffected.
 #
-# Manual trigger only for now — run it from the Actions tab when you
-# want a new signed APK release.
+# Mirrors main.yml's trigger so a new APK builds automatically on every
+# push to main — but paths-ignore excludes the files this workflow
+# itself writes back (the manifest commit at the end), otherwise each
+# run would immediately trigger another run in an infinite loop.
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'apk-manifest/manifest.json'
   workflow_dispatch:
     inputs:
       release_tag:
@@ -20,6 +28,11 @@ jobs:
   build-apk:
     runs-on: ubuntu-latest
     steps:
+      - name: Resolve release tag
+        id: tag
+        run: |
+          echo "value=${{ inputs.release_tag || 'apk-latest' }}" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -174,7 +187,7 @@ jobs:
         id: release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ inputs.release_tag }}
+          tag_name: ${{ steps.tag.outputs.value }}
           name: Offline APK build (${{ github.run_number }})
           body: |
             Signed offline Android APK of the BSc code index site.
@@ -196,7 +209,7 @@ jobs:
           cat > apk-manifest/manifest.json <<EOF
           {
             "version": "${{ steps.bundle.outputs.version }}",
-            "url": "https://github.com/${{ github.repository }}/releases/download/${{ inputs.release_tag }}/bundle.zip",
+            "url": "https://github.com/${{ github.repository }}/releases/download/${{ steps.tag.outputs.value }}/bundle.zip",
             "checksum": "${{ steps.bundle.outputs.checksum }}",
             "built_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           }
