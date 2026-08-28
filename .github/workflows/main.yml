@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'CHANGELOG.md'
+      - 'apk-manifest/manifest.json'
   workflow_dispatch:
 
 permissions:
@@ -18,44 +19,55 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Job 1: Independent cloud synchronization
   sync-hf:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     steps:
       - name: Checkout GitHub Repo
         uses: actions/checkout@v7
         with:
-          fetch-depth: 1 
+          fetch-depth: 1
 
       - name: Safe Sync to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git clone https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent /tmp/hf_repo
+
           rsync -av --delete \
             --exclude='.git' \
             --exclude='MinGW64' \
             --exclude='*.exe' \
             --exclude='site_files' \
-            $GITHUB_WORKSPACE/ /tmp/hf_repo/
+            "$GITHUB_WORKSPACE/" /tmp/hf_repo/
+
           cd /tmp/hf_repo
+
           git lfs install
           git lfs track "*.pdf"
           git lfs track "*.docx"
           git lfs track "*.odt"
-          git add .gitattributes
-          git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          git add .
-          git commit -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" || echo "No changes to commit"
-          git push origin main
 
-  # Job 2: Main processing engine (Generates data -> Builds -> Saves -> Commits)
+          git add .gitattributes
+
+          git config user.name "bot-for-notamitgamer[bot]"
+          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+
+          git add .
+
+          git commit \
+            -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" \
+            || echo "No changes to commit"
+
+          git push origin main
+          
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     steps:
+
       - name: Generate GitHub App Token
         id: app-token
         uses: actions/create-github-app-token@v3
@@ -66,10 +78,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 20  
+          fetch-depth: 20
           token: ${{ steps.app-token.outputs.token }}
 
-      # Step 1: Generate your custom markdown and log indexes
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -77,9 +88,9 @@ jobs:
 
       - name: Generate markdown files
         run: |
-           python list.py
-           python main.py
-      
+          python list.py
+          python main.py
+
       - name: Generate changelog
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -91,7 +102,6 @@ jobs:
           git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
           python changelog.py
 
-      # Step 2: Set up environment and declare stable hashing rules
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -105,26 +115,20 @@ jobs:
         uses: actions/cache@v6
         with:
           path: .vitepress/cache
-          # Forced key layout updates ensure hashes stay matched across separate runs
           key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
 
-      # Step 3: Run your localized site build task 
       - name: Build VitePress
         run: npm run docs:build
         env:
           VITE_DEPLOY_ID: ${{ github.sha }}
 
-      # Step 4: Package files directly from the true build directory location
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
 
-      # Also stash the same build output as a plain artifact so the
-      # apk-content job below can reuse it — avoids running
-      # docs:build (and list.py/main.py) a second time for the same commit.
       - name: Upload dist for APK content job
         uses: actions/upload-artifact@v4
         with:
@@ -132,38 +136,34 @@ jobs:
           path: docs/.vitepress/dist
           retention-days: 1
 
-      # Step 5: Save your files back to the branch only when deployment wraps up completely
-      - name: Commit generated changelog to repo
+      - name: Commit generated changelog
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          
+          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+
           git add CHANGELOG.md
-          
+
           if ! git diff --cached --quiet; then
             git commit -m "chore: update changelog [skip ci]"
             git push
           else
-            echo "No changes"
+            echo "No changelog changes"
           fi
 
-  # Job 3: Publish the site content bundle the offline APK's
-  # in-app updater checks for — reuses build's output, no rebuild.
-  # This used to be its own workflow (update-apk-content.yml) that
-  # ran docs:build a second time; folded in here so the site only
-  # gets built once per push, and so this always runs after build's
-  # changelog commit rather than racing it.
   apk-content:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
     needs: build
+
     permissions:
       contents: write
+
     steps:
-      - name: Checkout
+
+      - name: Checkout latest main
         uses: actions/checkout@v7
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Download built site
         uses: actions/download-artifact@v4
@@ -175,27 +175,39 @@ jobs:
         id: bundle
         run: |
           cd dist
+
           zip -qr ../bundle.zip .
+
           cd ..
-          echo "checksum=$(sha256sum bundle.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+          CHECKSUM=$(sha256sum bundle.zip | cut -d' ' -f1)
+
+          echo "checksum=$CHECKSUM" >> "$GITHUB_OUTPUT"
           echo "version=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
-      # Reuses the same 'apk-content' release across runs — each push
-      # just replaces the bundle.zip asset in place.
+          echo "Bundle checksum: $CHECKSUM"
+          echo "Bundle version: ${{ github.run_number }}"
+
       - name: Publish content bundle to release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: apk-content
           name: APK content bundle (latest)
           body: |
-            Latest site content bundle for the offline app's auto-updater.
-            Not a standalone release — this backs apk-manifest/manifest.json.
+            Latest site content bundle for the offline APK's auto-updater.
+
+            This is not a standalone release.
+            It provides the bundle used by:
+
+            apk-manifest/manifest.json
           files: bundle.zip
           prerelease: true
+          overwrite_files: true
 
-      - name: Commit updated manifest to repo
+      - name: Create APK manifest
         run: |
           mkdir -p apk-manifest
+
           cat > apk-manifest/manifest.json <<EOF
           {
             "version": "${{ steps.bundle.outputs.version }}",
@@ -205,20 +217,69 @@ jobs:
           }
           EOF
 
-          git config user.name "bot-for-notamitgame[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          git add apk-manifest/manifest.json
-          git diff --cached --quiet && echo "No manifest changes" || (git commit -m "chore: update APK content manifest [skip ci]" && git push origin HEAD:main)
+          echo "Generated manifest:"
+          cat apk-manifest/manifest.json
 
-  # Job 4: Clean deployment production pipeline
+      - name: Commit and push APK manifest
+        run: |
+          git config user.name "bot-for-notamitgamer[bot]"
+          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+
+          git add apk-manifest/manifest.json
+
+          if git diff --cached --quiet; then
+            echo "No manifest changes"
+            exit 0
+          fi
+
+          git commit -m "chore: update APK content manifest [skip ci]"
+
+          for attempt in 1 2 3 4 5; do
+            echo ""
+            echo "=========================================="
+            echo "Manifest push attempt $attempt/5"
+            echo "=========================================="
+
+            # Get the newest remote main.
+            git fetch origin main
+
+            # Rebase our manifest commit on the newest main.
+            if ! git rebase origin/main; then
+              echo "Rebase failed."
+              git rebase --abort
+              exit 1
+            fi
+
+            # Try pushing the rebased commit.
+            if git push origin HEAD:main; then
+              echo ""
+              echo "Manifest pushed successfully."
+              exit 0
+            fi
+
+            echo "Push rejected because main changed again."
+            echo "Waiting before retry..."
+
+            sleep 3
+          done
+
+          echo ""
+          echo "ERROR: Failed to push manifest after 5 attempts."
+          exit 1
+
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     needs: build
+
     steps:
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
