@@ -1,15 +1,60 @@
 # Changelog
 
-> Last build: August 28, 2026 at 14:58 UTC
+> Last build: August 28, 2026 at 15:04 UTC
 
 ## Latest Build
 
-- **Build ID** — `341e155b709845e775ef715b937555d671bc7f9c`
+- **Build ID** — `17d45ea836ac724ed2dac9263dd633bc29076929`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 28, 2026 at 14:58 UTC
+- **Build time** — August 28, 2026 at 15:04 UTC
 
 ## Recent Commits
+
+### [`17d45ea`](https://github.com/notamitgamer/bsc/commit/17d45ea836ac724ed2dac9263dd633bc29076929) Update index.md
+
+**Amit Dutta** committed on Aug 28, 2026 15:04 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/index.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`bbb4924`](https://github.com/notamitgamer/bsc/commit/bbb492489b33e378e3cb2b333268a9adb2eeda32) chore: update APK content manifest [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 15:00 UTC · +3 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `apk-manifest/manifest.json` | Modified | +3 -3 |
+</details>
+
+
+---
+
+### [`8b72c47`](https://github.com/notamitgamer/bsc/commit/8b72c4798f00f751272d6ea2eb3419bbb15c77c6) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 14:59 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`341e155`](https://github.com/notamitgamer/bsc/commit/341e155b709845e775ef715b937555d671bc7f9c) Update main.yml
 
@@ -106,35 +151,6 @@
 | --- | --- | --- |
 | `apk-manifest/manifest.json` | Modified | +3 -3 |
 </details>
-
-
----
-
-### [`ad11925`](https://github.com/notamitgamer/bsc/commit/ad11925cc545c875b01629b3eb250369381449d7) Merge pull request #101 from notamitgamer/copilot/fix-build-apk-job
-
-**Amit Dutta** committed on Aug 28, 2026 08:05 UTC
-
-
----
-
-### [`90ffdc0`](https://github.com/notamitgamer/bsc/commit/90ffdc020413bcfbe542948744e59ee8bf8a96b2) Fix build-apk job by using JDK 21
-
-**copilot-swe-agent[bot]** committed on Aug 28, 2026 08:04 UTC · +2 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`f821366`](https://github.com/notamitgamer/bsc/commit/f82136665dc04b4678607bb6b94e2e76d7550311) Initial plan
-
-**copilot-swe-agent[bot]** committed on Aug 28, 2026 08:03 UTC
 
 
 ---
