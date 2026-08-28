@@ -1,15 +1,89 @@
 # Changelog
 
-> Last build: August 28, 2026 at 15:04 UTC
+> Last build: August 28, 2026 at 15:10 UTC
 
 ## Latest Build
 
-- **Build ID** — `17d45ea836ac724ed2dac9263dd633bc29076929`
+- **Build ID** — `7acb692d76f562d49491c1820374f24948ec4fdf`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 28, 2026 at 15:04 UTC
+- **Build time** — August 28, 2026 at 15:10 UTC
 
 ## Recent Commits
+
+### [`7acb692`](https://github.com/notamitgamer/bsc/commit/7acb692d76f562d49491c1820374f24948ec4fdf) Merge pull request #104 from notamitgamer/copilot/fix-apk-content-job
+
+**Amit Dutta** committed on Aug 28, 2026 15:10 UTC
+
+
+---
+
+### [`927449e`](https://github.com/notamitgamer/bsc/commit/927449ed2da05c39172fcf7bac97848f6ed1c9f9) Merge branch 'main' into copilot/fix-apk-content-job
+
+**Amit Dutta** committed on Aug 28, 2026 15:10 UTC
+
+
+---
+
+### [`bab2b44`](https://github.com/notamitgamer/bsc/commit/bab2b447238da9a26ea7309d75a813442e110839) Delete .github/workflows/build-apk.yml
+
+**Amit Dutta** committed on Aug 28, 2026 15:09 UTC · +0 / -196 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/build-apk.yml` | Removed | -196 |
+</details>
+
+
+---
+
+### [`adccb09`](https://github.com/notamitgamer/bsc/commit/adccb091cd2648838c054085f3c974e010ee82e5) Remove APK content job and upload steps
+
+**Amit Dutta** committed on Aug 28, 2026 15:09 UTC · +1 / -74 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -74 |
+</details>
+
+
+---
+
+### [`3ea11ae`](https://github.com/notamitgamer/bsc/commit/3ea11ae93e48c8a4c3b171dd4e04246d3cce581d) chore: update APK content manifest [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 15:05 UTC · +3 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `apk-manifest/manifest.json` | Modified | +3 -3 |
+</details>
+
+
+---
+
+### [`72bb862`](https://github.com/notamitgamer/bsc/commit/72bb86282ab52d3b5e1238fc4a4961cd27bb4196) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 15:05 UTC · +48 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +48 -32 |
+</details>
+
+
+---
 
 ### [`17d45ea`](https://github.com/notamitgamer/bsc/commit/17d45ea836ac724ed2dac9263dd633bc29076929) Update index.md
 
@@ -66,90 +140,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/main.yml` | Modified | +105 -44 |
-</details>
-
-
----
-
-### [`95fc55c`](https://github.com/notamitgamer/bsc/commit/95fc55c3d0f7a8caca49c9f6e6b26da683684f37) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 14:47 UTC · +39 / -55 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +39 -55 |
-</details>
-
-
----
-
-### [`66fe28c`](https://github.com/notamitgamer/bsc/commit/66fe28c2bcb5bf166f1f110df7c29d1a9ee791a2) Merge pull request #102 from notamitgamer/refactor/merge-apk-content-into-main
-
-**Amit Dutta** committed on Aug 28, 2026 14:46 UTC
-
-
----
-
-### [`f97098c`](https://github.com/notamitgamer/bsc/commit/f97098cbd7671b330fc072d3c89886d6e19d70d1) Update main.yml
-
-**Amit Dutta** committed on Aug 28, 2026 14:45 UTC · +2 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`3cf64c4`](https://github.com/notamitgamer/bsc/commit/3cf64c40d54d5ab855494605fb0d57d17530fd3b) Refactor APK build workflow and add asset generation
-
-**Amit Dutta** committed on Aug 28, 2026 14:42 UTC · +10 / -29 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +10 -29 |
-</details>
-
-
----
-
-### [`b23be11`](https://github.com/notamitgamer/bsc/commit/b23be1177f3eb8c0a17154e813e214f90ef78849) Merge apk-content publishing into main.yml, stop building site twice
-
-**notamitgamer2** committed on Aug 28, 2026 14:32 UTC · +76 / -101 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +2 -2 |
-| `.github/workflows/main.yml` | Modified | +74 -1 |
-| `.github/workflows/update-apk-content.yml` | Removed | -98 |
-</details>
-
-
----
-
-### [`1d1e850`](https://github.com/notamitgamer/bsc/commit/1d1e850d483545fb8c982589681f01aeefd5035a) chore: update APK content manifest (run 7)
-
-**github-actions[bot]** committed on Aug 28, 2026 08:06 UTC · +3 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `apk-manifest/manifest.json` | Modified | +3 -3 |
 </details>
 
 
