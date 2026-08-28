@@ -4,8 +4,7 @@ name: Build Offline APK
 # delete this file and the site build/deploy is completely unaffected.
 #
 # Manual trigger only for now — run it from the Actions tab when you
-# want a new APK. Not wired to push/PR events so it can't accidentally
-# fire on every commit while it's still experimental.
+# want a new signed APK release.
 on:
   workflow_dispatch:
     inputs:
@@ -62,7 +61,8 @@ jobs:
             "bundledWebRuntime": false,
             "plugins": {
               "CapacitorUpdater": {
-                "autoUpdate": true
+                "autoUpdate": true,
+                "updateUrl": "https://raw.githubusercontent.com/notamitgamer/bsc/main/apk-manifest/manifest.json"
               }
             }
           }
@@ -71,29 +71,98 @@ jobs:
           npx cap add android
           npx cap sync android
 
-      # capacitor-updater checks this file at launch (when online) to see
-      # if a newer bundle is available. Point it at wherever the update
-      # manifest ends up being hosted (e.g. alongside the deployed docs
-      # site) once that side is set up. Left as a placeholder for now —
-      # without it the app still works fully offline, it just won't
-      # self-update yet.
-      - name: Note update manifest placeholder
-        run: |
-          echo "TODO: host an update manifest (see @capgo/capacitor-updater docs)" \
-            "and set its URL in apk-build/android/app/src/main/assets/capacitor.config.json" \
-            "before auto-update will actually pull anything."
+      # Repo secrets required, added once by hand under
+      # Settings > Secrets and variables > Actions:
+      #   ANDROID_KEYSTORE_BASE64   base64 of the .keystore file
+      #   ANDROID_KEYSTORE_PASSWORD
+      #   ANDROID_KEY_ALIAS
+      #   ANDROID_KEY_PASSWORD
+      # Same keystore must be reused for every future build — Android
+      # rejects updates signed with a different key than the installed app.
+      - name: Decode signing keystore
+        working-directory: apk-build/android/app
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > release.keystore
 
-      - name: Build debug APK
+      - name: Add signing config to Gradle
+        working-directory: apk-build/android/app
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          cat > keystore.properties <<EOF
+          storeFile=release.keystore
+          storePassword=${ANDROID_KEYSTORE_PASSWORD}
+          keyAlias=${ANDROID_KEY_ALIAS}
+          keyPassword=${ANDROID_KEY_PASSWORD}
+          EOF
+
+          python3 - <<'PYEOF'
+          import re
+          path = "build.gradle"
+          with open(path) as f:
+              content = f.read()
+
+          props_load = (
+              "def keystoreProperties = new Properties()\n"
+              "def keystorePropertiesFile = rootProject.file('app/keystore.properties')\n"
+              "if (keystorePropertiesFile.exists()) {\n"
+              "    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))\n"
+              "}\n\n"
+          )
+          if "keystoreProperties" not in content:
+              content = props_load + content
+
+          signing_block = (
+              "    signingConfigs {\n"
+              "        release {\n"
+              "            storeFile file(keystoreProperties['storeFile'])\n"
+              "            storePassword keystoreProperties['storePassword']\n"
+              "            keyAlias keystoreProperties['keyAlias']\n"
+              "            keyPassword keystoreProperties['keyPassword']\n"
+              "        }\n"
+              "    }\n"
+          )
+          content = re.sub(
+              r"(android\s*\{)",
+              r"\1\n" + signing_block,
+              content,
+              count=1,
+          )
+
+          content = re.sub(
+              r"(buildTypes\s*\{\s*release\s*\{)",
+              r"\1\n            signingConfig signingConfigs.release",
+              content,
+              count=1,
+          )
+
+          with open(path, "w") as f:
+              f.write(content)
+          PYEOF
+
+      - name: Build signed release APK
         working-directory: apk-build/android
         run: |
           chmod +x ./gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleRelease --no-daemon
 
       - name: Locate APK
         id: apk
         run: |
-          APK_PATH=$(find apk-build/android -name "*.apk" | head -n 1)
+          APK_PATH=$(find apk-build/android -path "*release*" -name "*.apk" | head -n 1)
           echo "path=$APK_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Package content bundle for updater
+        id: bundle
+        run: |
+          cd docs/.vitepress/dist
+          zip -qr ../../../bundle.zip .
+          cd ../../..
+          echo "checksum=$(sha256sum bundle.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "version=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
       - name: Upload APK as workflow artifact
         uses: actions/upload-artifact@v4
@@ -102,17 +171,39 @@ jobs:
           path: ${{ steps.apk.outputs.path }}
 
       - name: Publish to GitHub Release
+        id: release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.release_tag }}
           name: Offline APK build (${{ github.run_number }})
           body: |
-            Auto-built offline Android APK of the BSc code index site.
+            Signed offline Android APK of the BSc code index site.
 
-            - Debug-signed build, install with "unknown sources" allowed.
+            - Release-signed with the repo's dedicated keystore.
             - Works fully offline after install.
-            - Auto-update is scaffolded via @capgo/capacitor-updater but
-              needs an update manifest hosted before it will actually
-              pull new content — see the workflow file for details.
-          files: ${{ steps.apk.outputs.path }}
+            - Auto-pulls newer content when online, via the manifest at
+              apk-manifest/manifest.json (raw.githubusercontent.com).
+          files: |
+            ${{ steps.apk.outputs.path }}
+            bundle.zip
           prerelease: true
+
+      - name: Commit updated manifest to repo
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p apk-manifest
+          cat > apk-manifest/manifest.json <<EOF
+          {
+            "version": "${{ steps.bundle.outputs.version }}",
+            "url": "https://github.com/${{ github.repository }}/releases/download/${{ inputs.release_tag }}/bundle.zip",
+            "checksum": "${{ steps.bundle.outputs.checksum }}",
+            "built_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apk-manifest/manifest.json
+          git diff --cached --quiet && echo "No manifest changes" || git commit -m "chore: update APK content manifest (run ${{ github.run_number }})"
+          git push origin HEAD:main
