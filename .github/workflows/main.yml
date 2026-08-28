@@ -122,16 +122,6 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-      # Also stash the same build output as a plain artifact so the
-      # apk-content job below can reuse it — avoids running
-      # docs:build (and list.py/main.py) a second time for the same commit.
-      - name: Upload dist for APK content job
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-dist
-          path: docs/.vitepress/dist
-          retention-days: 1
-
       # Step 5: Save your files back to the branch only when deployment wraps up completely
       - name: Commit generated changelog to repo
         run: |
@@ -147,70 +137,7 @@ jobs:
             echo "No changes"
           fi
 
-  # Job 3: Publish the site content bundle the offline APK's
-  # in-app updater checks for — reuses build's output, no rebuild.
-  # This used to be its own workflow (update-apk-content.yml) that
-  # ran docs:build a second time; folded in here so the site only
-  # gets built once per push, and so this always runs after build's
-  # changelog commit rather than racing it.
-  apk-content:
-    runs-on: ubuntu-latest
-    if: github.actor != 'bot-for-notamitgamer[bot]'
-    needs: build
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 1
-
-      - name: Download built site
-        uses: actions/download-artifact@v4
-        with:
-          name: site-dist
-          path: dist
-
-      - name: Package content bundle
-        id: bundle
-        run: |
-          cd dist
-          zip -qr ../bundle.zip .
-          cd ..
-          echo "checksum=$(sha256sum bundle.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
-          echo "version=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
-
-      # Reuses the same 'apk-content' release across runs — each push
-      # just replaces the bundle.zip asset in place.
-      - name: Publish content bundle to release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: apk-content
-          name: APK content bundle (latest)
-          body: |
-            Latest site content bundle for the offline app's auto-updater.
-            Not a standalone release — this backs apk-manifest/manifest.json.
-          files: bundle.zip
-          prerelease: true
-
-      - name: Commit updated manifest to repo
-        run: |
-          mkdir -p apk-manifest
-          cat > apk-manifest/manifest.json <<EOF
-          {
-            "version": "${{ steps.bundle.outputs.version }}",
-            "url": "https://github.com/${{ github.repository }}/releases/download/apk-content/bundle.zip",
-            "checksum": "${{ steps.bundle.outputs.checksum }}",
-            "built_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          }
-          EOF
-
-          git config user.name "bot-for-notamitgame[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          git add apk-manifest/manifest.json
-          git diff --cached --quiet && echo "No manifest changes" || (git commit -m "chore: update APK content manifest [skip ci]" && git push origin HEAD:main)
-
-  # Job 4: Clean deployment production pipeline
+  # Job 3: Clean deployment production pipeline
   deploy:
     environment:
       name: github-pages
