@@ -1,0 +1,118 @@
+name: Build Offline APK
+
+# Fully separate from main.yml on purpose: if anything here misbehaves,
+# delete this file and the site build/deploy is completely unaffected.
+#
+# Manual trigger only for now — run it from the Actions tab when you
+# want a new APK. Not wired to push/PR events so it can't accidentally
+# fire on every commit while it's still experimental.
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag to attach the APK to (created if it does not exist)'
+        required: false
+        default: 'apk-latest'
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install site deps
+        run: npm ci
+
+      - name: Build VitePress site
+        run: npm run docs:build
+
+      # ubuntu-latest ships with Android SDK + a JDK preinstalled, so no
+      # extra SDK download step is needed here.
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Scaffold Capacitor Android project
+        run: |
+          mkdir -p apk-build
+          cd apk-build
+          npm init -y
+          npm install @capacitor/core @capacitor/cli @capacitor/android @capgo/capacitor-updater
+
+          mkdir -p www
+          cp -r ../docs/.vitepress/dist/. www/
+
+          cat > capacitor.config.json <<'EOF'
+          {
+            "appId": "dev.amit.bsc",
+            "appName": "BSc Code Index",
+            "webDir": "www",
+            "bundledWebRuntime": false,
+            "plugins": {
+              "CapacitorUpdater": {
+                "autoUpdate": true
+              }
+            }
+          }
+          EOF
+
+          npx cap add android
+          npx cap sync android
+
+      # capacitor-updater checks this file at launch (when online) to see
+      # if a newer bundle is available. Point it at wherever the update
+      # manifest ends up being hosted (e.g. alongside the deployed docs
+      # site) once that side is set up. Left as a placeholder for now —
+      # without it the app still works fully offline, it just won't
+      # self-update yet.
+      - name: Note update manifest placeholder
+        run: |
+          echo "TODO: host an update manifest (see @capgo/capacitor-updater docs)" \
+            "and set its URL in apk-build/android/app/src/main/assets/capacitor.config.json" \
+            "before auto-update will actually pull anything."
+
+      - name: Build debug APK
+        working-directory: apk-build/android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Locate APK
+        id: apk
+        run: |
+          APK_PATH=$(find apk-build/android -name "*.apk" | head -n 1)
+          echo "path=$APK_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Upload APK as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bsc-offline-apk
+          path: ${{ steps.apk.outputs.path }}
+
+      - name: Publish to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          name: Offline APK build (${{ github.run_number }})
+          body: |
+            Auto-built offline Android APK of the BSc code index site.
+
+            - Debug-signed build, install with "unknown sources" allowed.
+            - Works fully offline after install.
+            - Auto-update is scaffolded via @capgo/capacitor-updater but
+              needs an update manifest hosted before it will actually
+              pull new content — see the workflow file for details.
+          files: ${{ steps.apk.outputs.path }}
+          prerelease: true
