@@ -37,6 +37,20 @@ jobs:
       - name: Install site deps
         run: npm ci
 
+      # main.yml runs these before the VitePress build — they generate
+      # the per-folder index.md files (practice/index.md, etc.) that
+      # the rest of the docs link to. Skipping them is what caused the
+      # "16 dead link(s) found" build failure.
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Generate markdown files
+        run: |
+          python list.py
+          python main.py
+
       - name: Build VitePress site
         run: npm run docs:build
 
