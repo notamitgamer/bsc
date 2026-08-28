@@ -7,16 +7,14 @@ name: Build Offline APK
 # delete this file and the site build/deploy is completely unaffected.
 #
 # This builds the APK SHELL only (the installable app itself) — the
-# expensive part (Android SDK + Gradle), so it deliberately does NOT
-# run on every push. Content updates (what users actually see) are
-# handled separately and cheaply by update-apk-content.yml on every
-# push, without ever touching Gradle. This file only needs to run
-# when something about the native shell changes, so it's on a light
-# daily cron plus manual trigger — pushing docs changes doesn't
-# consume Android build minutes at all.
+# expensive part (Android SDK + Gradle). Manual trigger only: the
+# shell rarely if ever needs to change once the app is installed —
+# @capgo/capacitor-updater (baked into the shell) handles all content
+# updates on its own via update-apk-content.yml, which runs cheaply
+# on every push without touching Gradle at all. Run this only when
+# something about the native shell itself actually changes (app icon,
+# plugin versions, native config, etc.).
 on:
-  schedule:
-    - cron: '0 3 * * *'  # once daily, 3am UTC
   workflow_dispatch:
     inputs:
       release_tag:
