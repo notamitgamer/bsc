@@ -99,6 +99,12 @@ jobs:
           npx cap add android
           npx cap sync android
 
+      - name: Bump Android compile SDK for okhttp-android
+        working-directory: apk-build/android
+        run: |
+          sed -Ei 's/(compileSdkVersion\s*=\s*)[0-9]+/\136/' variables.gradle
+          echo "android.suppressUnsupportedCompileSdk=36" >> gradle.properties
+
       # Repo secrets required, added once by hand under
       # Settings > Secrets and variables > Actions:
       #   ANDROID_KEYSTORE_BASE64   base64 of the .keystore file
