@@ -1,19 +1,5 @@
 name: Build Offline APK
 
-# Fully separate from main.yml on purpose: if anything here misbehaves,
-# delete this file and the site build/deploy is completely unaffected.
-#
-# Fully separate from main.yml on purpose: if anything here misbehaves,
-# delete this file and the site build/deploy is completely unaffected.
-#
-# This builds the APK SHELL only (the installable app itself) — the
-# expensive part (Android SDK + Gradle). Manual trigger only: the
-# shell rarely if ever needs to change once the app is installed —
-# @capgo/capacitor-updater (baked into the shell) handles all content
-# updates on its own via update-apk-content.yml, which runs cheaply
-# on every push without touching Gradle at all. Run this only when
-# something about the native shell itself actually changes (app icon,
-# plugin versions, native config, etc.).
 on:
   workflow_dispatch:
     inputs:
@@ -46,10 +32,6 @@ jobs:
       - name: Install site deps
         run: npm ci
 
-      # main.yml runs these before the VitePress build — they generate
-      # the per-folder index.md files (practice/index.md, etc.) that
-      # the rest of the docs link to. Skipping them causes a
-      # "dead link(s) found" build failure.
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -63,8 +45,6 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
-      # ubuntu-latest ships with Android SDK + a JDK preinstalled, so no
-      # extra SDK download step is needed here.
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
@@ -76,7 +56,7 @@ jobs:
           mkdir -p apk-build
           cd apk-build
           npm init -y
-          npm install @capacitor/core @capacitor/cli @capacitor/android @capgo/capacitor-updater
+          npm install @capacitor/core @capacitor/cli @capacitor/android @capgo/capacitor-updater @capacitor/assets
 
           mkdir -p www
           cp -r ../docs/.vitepress/dist/. www/
@@ -99,20 +79,21 @@ jobs:
           npx cap add android
           npx cap sync android
 
+      - name: Generate Capacitor Assets (App Icon & Splash)
+        run: |
+          mkdir -p apk-build/assets
+          # Copy the 512x512 logo to the assets folder as icon and splash targets
+          cp docs/public/logo_512.png apk-build/assets/icon.png
+          cp docs/public/logo_512.png apk-build/assets/splash.png
+          cd apk-build
+          npx @capacitor/assets generate --android
+
       - name: Bump Android compile SDK for okhttp-android
         working-directory: apk-build/android
         run: |
           sed -Ei 's/(compileSdkVersion\s*=\s*)[0-9]+/\136/' variables.gradle
           echo "android.suppressUnsupportedCompileSdk=36" >> gradle.properties
 
-      # Repo secrets required, added once by hand under
-      # Settings > Secrets and variables > Actions:
-      #   ANDROID_KEYSTORE_BASE64   base64 of the .keystore file
-      #   ANDROID_KEYSTORE_PASSWORD
-      #   ANDROID_KEY_ALIAS
-      #   ANDROID_KEY_PASSWORD
-      # Same keystore must be reused for every future build — Android
-      # rejects updates signed with a different key than the installed app.
       - name: Decode signing keystore
         working-directory: apk-build/android/app
         env:
@@ -208,7 +189,7 @@ jobs:
             - Works fully offline after install.
             - Auto-pulls newer content when online, via the manifest at
               apk-manifest/manifest.json (raw.githubusercontent.com) —
-              kept up to date on every push by update-apk-content.yml,
+              kept up to date on every push by main.yml's apk-content job,
               independently of this shell build.
           files: |
             ${{ steps.apk.outputs.path }}
