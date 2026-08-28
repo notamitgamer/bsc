@@ -3,17 +3,20 @@ name: Build Offline APK
 # Fully separate from main.yml on purpose: if anything here misbehaves,
 # delete this file and the site build/deploy is completely unaffected.
 #
-# Mirrors main.yml's trigger so a new APK builds automatically on every
-# push to main — but paths-ignore excludes the files this workflow
-# itself writes back (the manifest commit at the end), otherwise each
-# run would immediately trigger another run in an infinite loop.
+# Fully separate from main.yml on purpose: if anything here misbehaves,
+# delete this file and the site build/deploy is completely unaffected.
+#
+# This builds the APK SHELL only (the installable app itself) — the
+# expensive part (Android SDK + Gradle), so it deliberately does NOT
+# run on every push. Content updates (what users actually see) are
+# handled separately and cheaply by update-apk-content.yml on every
+# push, without ever touching Gradle. This file only needs to run
+# when something about the native shell changes, so it's on a light
+# daily cron plus manual trigger — pushing docs changes doesn't
+# consume Android build minutes at all.
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'CHANGELOG.md'
-      - 'apk-manifest/manifest.json'
+  schedule:
+    - cron: '0 3 * * *'  # once daily, 3am UTC
   workflow_dispatch:
     inputs:
       release_tag:
@@ -168,15 +171,6 @@ jobs:
           APK_PATH=$(find apk-build/android -path "*release*" -name "*.apk" | head -n 1)
           echo "path=$APK_PATH" >> "$GITHUB_OUTPUT"
 
-      - name: Package content bundle for updater
-        id: bundle
-        run: |
-          cd docs/.vitepress/dist
-          zip -qr ../../../bundle.zip .
-          cd ../../..
-          echo "checksum=$(sha256sum bundle.zip | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
-          echo "version=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
-
       - name: Upload APK as workflow artifact
         uses: actions/upload-artifact@v4
         with:
@@ -195,28 +189,9 @@ jobs:
             - Release-signed with the repo's dedicated keystore.
             - Works fully offline after install.
             - Auto-pulls newer content when online, via the manifest at
-              apk-manifest/manifest.json (raw.githubusercontent.com).
+              apk-manifest/manifest.json (raw.githubusercontent.com) —
+              kept up to date on every push by update-apk-content.yml,
+              independently of this shell build.
           files: |
             ${{ steps.apk.outputs.path }}
-            bundle.zip
           prerelease: true
-
-      - name: Commit updated manifest to repo
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p apk-manifest
-          cat > apk-manifest/manifest.json <<EOF
-          {
-            "version": "${{ steps.bundle.outputs.version }}",
-            "url": "https://github.com/${{ github.repository }}/releases/download/${{ steps.tag.outputs.value }}/bundle.zip",
-            "checksum": "${{ steps.bundle.outputs.checksum }}",
-            "built_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          }
-          EOF
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add apk-manifest/manifest.json
-          git diff --cached --quiet && echo "No manifest changes" || git commit -m "chore: update APK content manifest (run ${{ github.run_number }})"
-          git push origin HEAD:main
