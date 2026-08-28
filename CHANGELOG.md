@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: August 28, 2026 at 07:37 UTC
+> Last build: August 28, 2026 at 07:45 UTC
 
 ## Latest Build
 
-- **Build ID** — `3c26f05b279530e13cad8a590f088571bfc9fd90`
+- **Build ID** — `27c450e65a8766837eeeee85b6f93ae1cae64fc7`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 28, 2026 at 07:37 UTC
+- **Build time** — August 28, 2026 at 07:45 UTC
 
 ## Recent Commits
+
+### [`27c450e`](https://github.com/notamitgamer/bsc/commit/27c450e65a8766837eeeee85b6f93ae1cae64fc7) Merge pull request #99 from notamitgamer/fix/apk-workflows-run-generators
+
+**Amit Dutta** committed on Aug 28, 2026 07:45 UTC
+
+
+---
+
+### [`c32330a`](https://github.com/notamitgamer/bsc/commit/c32330a12f2433baf4b3409e49a309e0290fbc09) Run list.py + main.py before docs:build in both APK workflows
+
+**notamitgamer2** committed on Aug 28, 2026 07:44 UTC · +28 / -0 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/build-apk.yml` | Modified | +14 |
+| `.github/workflows/update-apk-content.yml` | Modified | +14 |
+</details>
+
+
+---
+
+### [`a5284f3`](https://github.com/notamitgamer/bsc/commit/a5284f31453820c85542a12c741c4cbe61ab3fcc) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 07:38 UTC · +49 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +49 -32 |
+</details>
+
+
+---
 
 ### [`3c26f05`](https://github.com/notamitgamer/bsc/commit/3c26f05b279530e13cad8a590f088571bfc9fd90) Merge pull request #98 from notamitgamer/feat/offline-apk-build
 
@@ -104,43 +142,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +40 -33 |
-</details>
-
-
----
-
-### [`821bdb4`](https://github.com/notamitgamer/bsc/commit/821bdb4eb495dc88048d0de52fde8f838f789c94) Merge pull request #97 from notamitgamer/fix/revert-vitepress-cache-path
-
-**Amit Dutta** committed on Aug 27, 2026 18:36 UTC
-
-
----
-
-### [`8b92ee8`](https://github.com/notamitgamer/bsc/commit/8b92ee8435af3facb7776ee9f3f54ebde5583a32) Revert VitePress cache path back to .vitepress/cache (root)
-
-**notamitgamer2** committed on Aug 27, 2026 18:34 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`9924af0`](https://github.com/notamitgamer/bsc/commit/9924af09ace51ee4ad768a009cdb6164c676ed7d) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 27, 2026 18:31 UTC · +47 / -39 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +47 -39 |
 </details>
 
 
