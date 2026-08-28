@@ -10,7 +10,7 @@ name: Build Offline APK
 # expensive part (Android SDK + Gradle). Manual trigger only: the
 # shell rarely if ever needs to change once the app is installed —
 # @capgo/capacitor-updater (baked into the shell) handles all content
-# updates on its own via update-apk-content.yml, which runs cheaply
+# updates on its own via the apk-content job in main.yml, which runs cheaply
 # on every push without touching Gradle at all. Run this only when
 # something about the native shell itself actually changes (app icon,
 # plugin versions, native config, etc.).
@@ -208,7 +208,7 @@ jobs:
             - Works fully offline after install.
             - Auto-pulls newer content when online, via the manifest at
               apk-manifest/manifest.json (raw.githubusercontent.com) —
-              kept up to date on every push by update-apk-content.yml,
+              kept up to date on every push by main.yml's apk-content job,
               independently of this shell build.
           files: |
             ${{ steps.apk.outputs.path }}
