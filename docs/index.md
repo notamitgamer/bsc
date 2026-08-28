@@ -123,7 +123,7 @@ This project is maintained by **Amit Dutta**, a BSc Computer Science student at 
 
 <div class="bsc-cta-section">
   <h2 class="bsc-cta-title">Read the Guide</h2>
-  <p class="bsc-cta-subtitle">Full setup, configuration and theming reference — including how to extend the archive without forking it.</p>
+  <p class="bsc-cta-subtitle">Full setup, configuration and reference — including how to extend the archive without forking it.</p>
   <div class="bsc-cta-actions">
     <a class="bsc-cta-btn bsc-cta-btn-brand" href="/semester_2/">Browse Semester 2</a>
     <a class="bsc-cta-btn" href="/#environment-setup">Environment Setup</a>

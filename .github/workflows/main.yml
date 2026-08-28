@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'CHANGELOG.md'
+      - 'apk-manifest/manifest.json'
   workflow_dispatch:
 
 permissions:
@@ -18,44 +19,55 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Job 1: Independent cloud synchronization
   sync-hf:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     steps:
       - name: Checkout GitHub Repo
         uses: actions/checkout@v7
         with:
-          fetch-depth: 1 
+          fetch-depth: 1
 
       - name: Safe Sync to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git clone https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/usercontent /tmp/hf_repo
+
           rsync -av --delete \
             --exclude='.git' \
             --exclude='MinGW64' \
             --exclude='*.exe' \
             --exclude='site_files' \
-            $GITHUB_WORKSPACE/ /tmp/hf_repo/
+            "$GITHUB_WORKSPACE/" /tmp/hf_repo/
+
           cd /tmp/hf_repo
+
           git lfs install
           git lfs track "*.pdf"
           git lfs track "*.docx"
           git lfs track "*.odt"
-          git add .gitattributes
-          git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          git add .
-          git commit -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" || echo "No changes to commit"
-          git push origin main
 
-  # Job 2: Main processing engine (Generates data -> Builds -> Saves -> Commits)
+          git add .gitattributes
+
+          git config user.name "bot-for-notamitgamer[bot]"
+          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+
+          git add .
+
+          git commit \
+            -m "Safe auto-sync: updating GitHub files while protecting dynamic folders" \
+            || echo "No changes to commit"
+
+          git push origin main
+          
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     steps:
+
       - name: Generate GitHub App Token
         id: app-token
         uses: actions/create-github-app-token@v3
@@ -66,10 +78,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 20  
+          fetch-depth: 20
           token: ${{ steps.app-token.outputs.token }}
 
-      # Step 1: Generate your custom markdown and log indexes
       - name: Setup Python
         uses: actions/setup-python@v7
         with:
@@ -77,9 +88,9 @@ jobs:
 
       - name: Generate markdown files
         run: |
-           python list.py
-           python main.py
-      
+          python list.py
+          python main.py
+
       - name: Generate changelog
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -91,7 +102,6 @@ jobs:
           git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
           python changelog.py
 
-      # Step 2: Set up environment and declare stable hashing rules
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
@@ -105,19 +115,16 @@ jobs:
         uses: actions/cache@v6
         with:
           path: .vitepress/cache
-          # Forced key layout updates ensure hashes stay matched across separate runs
           key: ${{ runner.os }}-vitepress-${{ hashFiles('package-lock.json', 'docs/.vitepress/config.*') }}
           restore-keys: |
             ${{ runner.os }}-vitepress-
 
-      # Step 3: Run your localized site build task 
       - name: Build VitePress
         run: npm run docs:build
         env:
           VITE_DEPLOY_ID: ${{ github.sha }}
 
-      # Step 4: Package files directly from the true build directory location
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
@@ -126,15 +133,15 @@ jobs:
       - name: Commit generated changelog to repo
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@://github.com"
-          
+          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
+
           git add CHANGELOG.md
-          
+
           if ! git diff --cached --quiet; then
             git commit -m "chore: update changelog [skip ci]"
             git push
           else
-            echo "No changes"
+            echo "No changelog changes"
           fi
 
   # Job 3: Clean deployment production pipeline
@@ -142,10 +149,15 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     if: github.actor != 'bot-for-notamitgamer[bot]'
+
     needs: build
+
     steps:
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
