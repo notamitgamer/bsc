@@ -129,14 +129,8 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-      - name: Upload dist for APK content job
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-dist
-          path: docs/.vitepress/dist
-          retention-days: 1
-
-      - name: Commit generated changelog
+      # Step 5: Save your files back to the branch only when deployment wraps up completely
+      - name: Commit generated changelog to repo
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
           git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
@@ -150,123 +144,7 @@ jobs:
             echo "No changelog changes"
           fi
 
-  apk-content:
-    runs-on: ubuntu-latest
-    if: github.actor != 'bot-for-notamitgamer[bot]'
-    needs: build
-
-    permissions:
-      contents: write
-
-    steps:
-
-      - name: Checkout latest main
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-
-      - name: Download built site
-        uses: actions/download-artifact@v4
-        with:
-          name: site-dist
-          path: dist
-
-      - name: Package content bundle
-        id: bundle
-        run: |
-          cd dist
-
-          zip -qr ../bundle.zip .
-
-          cd ..
-
-          CHECKSUM=$(sha256sum bundle.zip | cut -d' ' -f1)
-
-          echo "checksum=$CHECKSUM" >> "$GITHUB_OUTPUT"
-          echo "version=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
-
-          echo "Bundle checksum: $CHECKSUM"
-          echo "Bundle version: ${{ github.run_number }}"
-
-      - name: Publish content bundle to release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: apk-content
-          name: APK content bundle (latest)
-          body: |
-            Latest site content bundle for the offline APK's auto-updater.
-
-            This is not a standalone release.
-            It provides the bundle used by:
-
-            apk-manifest/manifest.json
-          files: bundle.zip
-          prerelease: true
-          overwrite_files: true
-
-      - name: Create APK manifest
-        run: |
-          mkdir -p apk-manifest
-
-          cat > apk-manifest/manifest.json <<EOF
-          {
-            "version": "${{ steps.bundle.outputs.version }}",
-            "url": "https://github.com/${{ github.repository }}/releases/download/apk-content/bundle.zip",
-            "checksum": "${{ steps.bundle.outputs.checksum }}",
-            "built_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          }
-          EOF
-
-          echo "Generated manifest:"
-          cat apk-manifest/manifest.json
-
-      - name: Commit and push APK manifest
-        run: |
-          git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
-
-          git add apk-manifest/manifest.json
-
-          if git diff --cached --quiet; then
-            echo "No manifest changes"
-            exit 0
-          fi
-
-          git commit -m "chore: update APK content manifest [skip ci]"
-
-          for attempt in 1 2 3 4 5; do
-            echo ""
-            echo "=========================================="
-            echo "Manifest push attempt $attempt/5"
-            echo "=========================================="
-
-            # Get the newest remote main.
-            git fetch origin main
-
-            # Rebase our manifest commit on the newest main.
-            if ! git rebase origin/main; then
-              echo "Rebase failed."
-              git rebase --abort
-              exit 1
-            fi
-
-            # Try pushing the rebased commit.
-            if git push origin HEAD:main; then
-              echo ""
-              echo "Manifest pushed successfully."
-              exit 0
-            fi
-
-            echo "Push rejected because main changed again."
-            echo "Waiting before retry..."
-
-            sleep 3
-          done
-
-          echo ""
-          echo "ERROR: Failed to push manifest after 5 attempts."
-          exit 1
-
+  # Job 3: Clean deployment production pipeline
   deploy:
     environment:
       name: github-pages
