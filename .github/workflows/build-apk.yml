@@ -21,7 +21,7 @@ jobs:
           echo "value=${{ inputs.release_tag || 'apk-latest' }}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
         uses: actions/setup-node@v4
