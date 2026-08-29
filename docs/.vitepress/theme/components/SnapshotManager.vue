@@ -1,15 +1,9 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { listSnapshots, putSnapshot, deleteSnapshotMeta } from '../lib/snapshotDb'
+import { listSnapshots, putSnapshot, putSnapshotData, deleteSnapshotMeta, deleteSnapshotData } from '../lib/snapshotDb'
 
 const snapshots = ref([])
 const isCapturing = ref(false)
-const progress = ref({ done: 0, total: 0, phaseLabel: '', pagesTotal: 0, assetsTotal: 0 })
-
-const progressPct = computed(() => {
-  if (!progress.value.total) return 0
-  return Math.min(100, Math.round((progress.value.done / progress.value.total) * 100))
-})
 const error = ref('')
 
 onMounted(refresh)
@@ -30,129 +24,43 @@ function fmtDate(ts) {
   return new Date(ts).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })
 }
 
-async function getPagePaths() {
-  const res = await fetch('/sitemap.xml')
-  if (!res.ok) throw new Error('Could not read /sitemap.xml')
-  const xml = await res.text()
-  const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
-  return locs.map((loc) => {
-    try {
-      return new URL(loc).pathname
-    } catch {
-      return null
-    }
-  }).filter(Boolean)
-}
-
-function extractAssetUrls(html) {
-  const urls = new Set()
-  const re = /(?:src|href)="([^"]+)"/g
-  let m
-  while ((m = re.exec(html))) {
-    const u = m[1]
-    if (u.startsWith('/') && !u.startsWith('//')) urls.add(u)
-  }
-  return urls
-}
-
-// Runs `worker` over `items` with up to `concurrency` in flight at once,
-// instead of one-at-a-time — this is what makes capture fast, and it's what
-// lets the progress bar move continuously instead of stalling.
-async function runPool(items, concurrency, worker) {
-  let i = 0
-  async function runNext() {
-    while (i < items.length) {
-      const idx = i++
-      await worker(items[idx], idx)
-    }
-  }
-  const workers = Array.from({ length: Math.min(concurrency, items.length) }, runNext)
-  await Promise.all(workers)
-}
-
-const CONCURRENCY = 12
-
 async function takeSnapshot() {
   error.value = ''
   isCapturing.value = true
   const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-  const cacheName = `snapshot-${id}`
-  let sizeBytes = 0
-  const assetUrls = new Set()
 
   try {
-    const pagePaths = await getPagePaths()
-    // "total" spans pages + assets so the bar reflects overall progress, not
-    // just the current phase resetting to 0.
-    progress.value = { done: 0, total: pagePaths.length, phaseLabel: 'Fetching pages…', pagesTotal: pagePaths.length, assetsTotal: 0 }
+    const res = await fetch('/content.json', { cache: 'no-store' })
+    if (!res.ok) throw new Error(`Could not download content.json (${res.status})`)
+    const files = await res.json()
+    if (!Array.isArray(files)) throw new Error('content.json was not the expected format')
 
-    const cache = await caches.open(cacheName)
+    const sizeBytes = files.reduce((sum, f) => sum + (f.size || 0), 0)
 
-    await runPool(pagePaths, CONCURRENCY, async (path) => {
-      try {
-        const res = await fetch(path, { cache: 'no-store' })
-        if (res && res.ok) {
-          const html = await res.clone().text()
-          sizeBytes += html.length
-          extractAssetUrls(html).forEach((u) => assetUrls.add(u))
-          await cache.put(path, res)
-        }
-      } catch (_) {
-        /* skip page that failed, continue capturing the rest */
-      }
-      progress.value.done++
-    })
-
-    const assetList = [...assetUrls]
-    progress.value = {
-      done: pagePaths.length,
-      total: pagePaths.length + assetList.length,
-      phaseLabel: 'Fetching assets…',
-      pagesTotal: pagePaths.length,
-      assetsTotal: assetList.length,
-    }
-
-    await runPool(assetList, CONCURRENCY, async (url) => {
-      try {
-        const res = await fetch(url, { cache: 'no-store' })
-        if (res && res.ok) {
-          const len = res.headers.get('content-length')
-          sizeBytes += len ? Number(len) : 0
-          await cache.put(url, res)
-        }
-      } catch (_) {
-        /* skip */
-      }
-      progress.value.done++
-    })
-
+    await putSnapshotData(id, files)
     await putSnapshot({
       id,
       name: `Snapshot – ${new Date().toLocaleDateString()}`,
       createdAt: Date.now(),
-      pageCount: pagePaths.length,
-      assetCount: assetList.length,
+      fileCount: files.length,
       sizeBytes,
     })
 
     await refresh()
   } catch (e) {
     error.value = e?.message || 'Snapshot failed.'
-    // best-effort cleanup of a partial cache
-    try { await caches.delete(cacheName) } catch (_) {}
   } finally {
     isCapturing.value = false
-    progress.value = { done: 0, total: 0, phaseLabel: '', pagesTotal: 0, assetsTotal: 0 }
   }
 }
 
 function viewSnapshot(id) {
-  window.open(`/snapshots/view/${id}/`, '_blank', 'noopener')
+  window.open(`/snapshots/view/?id=${encodeURIComponent(id)}`, '_blank', 'noopener')
 }
 
 async function removeSnapshot(id) {
   if (!confirm('Delete this snapshot? This cannot be undone.')) return
-  await caches.delete(`snapshot-${id}`)
+  await deleteSnapshotData(id)
   await deleteSnapshotMeta(id)
   await refresh()
 }
@@ -168,7 +76,7 @@ async function renameSnapshot(snap) {
 <template>
   <div class="snapshot-manager">
     <p class="intro">
-      Snapshots save a fully offline, point-in-time copy of the site into your browser
+      Snapshots save a full offline copy of every file's content into your browser
       (separate from normal caching — the live site keeps auto-updating as usual).
       Take one before you go offline, and come back to it any time from this page.
     </p>
@@ -181,17 +89,8 @@ async function renameSnapshot(snap) {
       📸 Take snapshot now
     </button>
 
-    <div v-else class="capture-btn capture-progress" role="progressbar"
-         :aria-valuenow="progressPct" aria-valuemin="0" aria-valuemax="100">
-      <div class="capture-progress-fill" :style="{ width: progressPct + '%' }"></div>
-      <!-- Two copies of the same label, each clipped to one side of the fill,
-           so the text stays readable no matter how far the bar has progressed. -->
-      <div class="capture-progress-label capture-progress-label-track">
-        {{ progress.phaseLabel }} {{ progress.done }}/{{ progress.total }} ({{ progressPct }}%)
-      </div>
-      <div class="capture-progress-label capture-progress-label-fill" :style="{ clipPath: `inset(0 ${100 - progressPct}% 0 0)` }">
-        {{ progress.phaseLabel }} {{ progress.done }}/{{ progress.total }} ({{ progressPct }}%)
-      </div>
+    <div v-else class="capture-btn capture-progress">
+      Downloading content…
     </div>
 
     <p v-if="error" class="error">{{ error }}</p>
@@ -201,7 +100,7 @@ async function renameSnapshot(snap) {
         <div class="snapshot-info">
           <div class="snapshot-name">{{ s.name }}</div>
           <div class="snapshot-meta">
-            {{ fmtDate(s.createdAt) }} · {{ s.pageCount }} pages · {{ s.assetCount }} assets · {{ fmtBytes(s.sizeBytes) }}
+            {{ fmtDate(s.createdAt) }} · {{ s.fileCount }} files · {{ fmtBytes(s.sizeBytes) }}
           </div>
         </div>
         <div class="snapshot-actions">
@@ -240,43 +139,8 @@ async function renameSnapshot(snap) {
   justify-content: center;
 }
 .capture-progress {
-  position: relative;
-  overflow: hidden;
   cursor: default;
-  justify-content: flex-start;
-  padding: 0;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-brand-1);
-}
-.capture-progress-fill {
-  position: absolute;
-  inset: 0 auto 0 0;
-  background: var(--vp-c-brand-1);
-  transition: width 0.25s ease;
-}
-.capture-progress-label {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 12px;
-  font-size: 12.5px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  pointer-events: none;
-}
-/* Text over the unfilled track: use the normal (theme-adaptive) text color. */
-.capture-progress-label-track {
-  color: var(--vp-c-text-1);
-}
-/* Text over the colored fill: always white, revealed only where the fill covers it. */
-.capture-progress-label-fill {
-  color: #fff;
+  opacity: 0.8;
 }
 .error {
   color: var(--vp-c-danger-1, #d33);
