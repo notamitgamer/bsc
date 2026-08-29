@@ -1,15 +1,72 @@
 # Changelog
 
-> Last build: August 28, 2026 at 15:10 UTC
+> Last build: August 29, 2026 at 07:14 UTC
 
 ## Latest Build
 
-- **Build ID** — `7acb692d76f562d49491c1820374f24948ec4fdf`
+- **Build ID** — `2b66fa9cb8628880119caefc82fcc6dc1d1139a0`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 28, 2026 at 15:10 UTC
+- **Build time** — August 29, 2026 at 07:14 UTC
 
 ## Recent Commits
+
+### [`2b66fa9`](https://github.com/notamitgamer/bsc/commit/2b66fa9cb8628880119caefc82fcc6dc1d1139a0) Merge pull request #110 from notamitgamer/feature/offline-snapshots
+
+**Amit Dutta** committed on Aug 29, 2026 07:14 UTC
+
+
+---
+
+### [`3cfa9df`](https://github.com/notamitgamer/bsc/commit/3cfa9df38c934e4e99736563b4b7b5c1992a7b96) Add offline snapshots page
+
+**notamitgamer2** committed on Aug 29, 2026 07:13 UTC · +435 / -1 lines · 6 files changed
+
+<details>
+<summary>Show 6 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +2 -1 |
+| `docs/.vitepress/theme/components/SnapshotManager.vue` | Added | +241 |
+| `docs/.vitepress/theme/index.ts` | Modified | +7 |
+| `docs/.vitepress/theme/lib/snapshotDb.ts` | Added | +60 |
+| `docs/public/sw-snapshot.js` | Added | +114 |
+| `docs/snapshots.md` | Added | +11 |
+</details>
+
+
+---
+
+### [`cf7ecdd`](https://github.com/notamitgamer/bsc/commit/cf7ecdd6d6bca17ddcc7601a3ba9f49b53510d5f) Add workflow to build offline APK for BSc Code Index [skip ci]
+
+**Amit Dutta** committed on Aug 28, 2026 15:12 UTC · +196 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/build-apk.yml` | Added | +196 |
+</details>
+
+
+---
+
+### [`6486de6`](https://github.com/notamitgamer/bsc/commit/6486de644580e657082862b6ce9f627c63141626) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 15:11 UTC · +35 / -45 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +35 -45 |
+</details>
+
+
+---
 
 ### [`7acb692`](https://github.com/notamitgamer/bsc/commit/7acb692d76f562d49491c1820374f24948ec4fdf) Merge pull request #104 from notamitgamer/copilot/fix-apk-content-job
 
@@ -80,66 +137,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +48 -32 |
-</details>
-
-
----
-
-### [`17d45ea`](https://github.com/notamitgamer/bsc/commit/17d45ea836ac724ed2dac9263dd633bc29076929) Update index.md
-
-**Amit Dutta** committed on Aug 28, 2026 15:04 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/index.md` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`bbb4924`](https://github.com/notamitgamer/bsc/commit/bbb492489b33e378e3cb2b333268a9adb2eeda32) chore: update APK content manifest [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 15:00 UTC · +3 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `apk-manifest/manifest.json` | Modified | +3 -3 |
-</details>
-
-
----
-
-### [`8b72c47`](https://github.com/notamitgamer/bsc/commit/8b72c4798f00f751272d6ea2eb3419bbb15c77c6) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 28, 2026 14:59 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`341e155`](https://github.com/notamitgamer/bsc/commit/341e155b709845e775ef715b937555d671bc7f9c) Update main.yml
-
-**Amit Dutta** committed on Aug 28, 2026 14:58 UTC · +105 / -44 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +105 -44 |
 </details>
 
 
