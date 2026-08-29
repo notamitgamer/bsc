@@ -37,13 +37,6 @@ export default {
 
   setup() {
     onMounted(() => {
-      if ('serviceWorker' in navigator) {
-        // Registered on every page, independent of the main site's own
-        // caching. Only handles /snapshots and /snapshots/view/* — see
-        // public/sw-snapshot.js.
-        navigator.serviceWorker.register('/sw-snapshot.js', { scope: '/snapshots' }).catch(() => {})
-      }
-
       setTimeout(() => {
         const searchBtn = document.querySelector('.VPNavBarSearchButton');
         const askAiBtn = document.querySelector('.VPNavBarAskAiButton');
