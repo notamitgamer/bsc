@@ -38,3 +38,10 @@ jobs:
             echo "::error::list.py did not produce list.txt"
             exit 1
           fi
+
+          if [ -f docs/public/content.json ]; then
+            echo "main.py produced docs/public/content.json ($(wc -c < docs/public/content.json) bytes)"
+          else
+            echo "::error::main.py did not produce docs/public/content.json"
+            exit 1
+          fi

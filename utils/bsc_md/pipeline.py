@@ -8,6 +8,7 @@ from .formatting import derive_tags
 from .parsers import parse_c_style, parse_hash_style, parse_algo_md
 from .builders import build_md, build_algo_md
 from .indexing import create_folder_indexes
+from .snapshot_content import build_content_json
 
 
 def run():
@@ -120,3 +121,7 @@ def run():
     print("Generating folder index pages...")
     create_folder_indexes(DOCS_OUTPUT)
     print("Folder indexes created.")
+
+    print("Generating snapshot content.json...")
+    written, content_skipped = build_content_json()
+    print(f"content.json: {written} file(s), {content_skipped} skipped.")
