@@ -74,7 +74,6 @@ const vitePressConfig = {
         ]
       },
       { text: 'Tags', link: '/tags' },
-      { text: 'Snapshots', link: '/snapshots' },
       { text: 'License', link: 'https://github.com/notamitgamer/bsc/blob/main/LICENSE'},
       { text: 'Changelog', link: '/changelog' },
     ],
@@ -191,7 +190,7 @@ const sidebarConfig = {
   useTitleFromFileHeading: true,
   useFolderTitleFromIndexFile: true,
   useFolderLinkFromIndexFile: true,
-  excludeFiles: ['tags.md', 'snapshots.md'],
+  excludeFiles: ['tags.md'],
   excludeFolders: ['stylesheets', 'overrides', 'assets', '.vitepress'],
   sortMenusByName: true,
   sortMenusOrderNumerically: true,
