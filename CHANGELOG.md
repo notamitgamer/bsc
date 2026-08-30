@@ -1,15 +1,83 @@
 # Changelog
 
-> Last build: August 29, 2026 at 07:28 UTC
+> Last build: August 30, 2026 at 02:22 UTC
 
 ## Latest Build
 
-- **Build ID** — `a96e61aaac2402b13a137ae15cb2c7b04695aefe`
+- **Build ID** — `4e9f9c8e8998cd9472bb27f84fcdae37c12883cc`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 29, 2026 at 07:28 UTC
+- **Build time** — August 30, 2026 at 02:22 UTC
 
 ## Recent Commits
+
+### [`4e9f9c8`](https://github.com/notamitgamer/bsc/commit/4e9f9c8e8998cd9472bb27f84fcdae37c12883cc) Merge pull request #114 from notamitgamer/revert/pr-110-through-latest
+
+**Amit Dutta** committed on Aug 30, 2026 02:22 UTC
+
+
+---
+
+### [`c6a1ff1`](https://github.com/notamitgamer/bsc/commit/c6a1ff1339a63cb3be854735c9cdc59e63d2422c) Revert offline-snapshots feature (PR #110, #112) and clean up stray build artifacts
+
+**bot-for-notamitgamer[bot]** committed on Aug 30, 2026 02:20 UTC · +1 / -26492 lines · 17 files changed
+
+<details>
+<summary>Show 17 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.vitepress/cache/deps/_metadata.json` | Removed | -31 |
+| `.vitepress/cache/deps/chunk-LRIOPKVT.js` | Removed | -13080 |
+| `.vitepress/cache/deps/chunk-LRIOPKVT.js.map` | Removed | -7 |
+| `.vitepress/cache/deps/package.json` | Removed | -3 |
+| `.vitepress/cache/deps/vitepress___@vue_devtools-api.js` | Removed | -3813 |
+| `.vitepress/cache/deps/vitepress___@vue_devtools-api.js.map` | Removed | -7 |
+| `.vitepress/cache/deps/vitepress___@vueuse_core.js` | Removed | -8800 |
+| `.vitepress/cache/deps/vitepress___@vueuse_core.js.map` | Removed | -7 |
+| `.vitepress/cache/deps/vue.js` | Removed | -346 |
+| `.vitepress/cache/deps/vue.js.map` | Removed | -7 |
+| `apk-manifest/manifest.json` | Removed | -6 |
+| `docs/.vitepress/config.mts` | Modified | +1 -2 |
+| `docs/.vitepress/theme/components/SnapshotManager.vue` | Removed | -191 |
+| `docs/.vitepress/theme/index.ts` | Modified | -7 |
+| `docs/.vitepress/theme/lib/snapshotDb.ts` | Removed | -60 |
+| `docs/public/sw-snapshot.js` | Removed | -114 |
+| `docs/snapshots.md` | Removed | -11 |
+</details>
+
+
+---
+
+### [`cf6fd5b`](https://github.com/notamitgamer/bsc/commit/cf6fd5bcd3e14772a19346162e2aa62049b9e6b0) Refactor snapshot manager to include file handling
+
+**Amit Dutta** committed on Aug 29, 2026 13:49 UTC · +16 / -152 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/SnapshotManager.vue` | Modified | +16 -152 |
+</details>
+
+
+---
+
+### [`36ac1f5`](https://github.com/notamitgamer/bsc/commit/36ac1f57f697329d357b10345db342d86e2ebfb8) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 29, 2026 07:29 UTC · +48 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +48 -40 |
+</details>
+
+
+---
 
 ### [`a96e61a`](https://github.com/notamitgamer/bsc/commit/a96e61aaac2402b13a137ae15cb2c7b04695aefe) Merge pull request #112 from notamitgamer/feature/snapshot-progress-ui
 
@@ -88,63 +156,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/build-apk.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`3a504f8`](https://github.com/notamitgamer/bsc/commit/3a504f8e97b22a31f9615777a83fd11b17d8226a) chore(deps): bump actions/upload-artifact from 4 to 7 [skip ci]
-
-**dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`8926490`](https://github.com/notamitgamer/bsc/commit/8926490afab30ac0d47695772ecb250639b4ff3f) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 29, 2026 07:15 UTC · +39 / -42 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +39 -42 |
-</details>
-
-
----
-
-### [`2b66fa9`](https://github.com/notamitgamer/bsc/commit/2b66fa9cb8628880119caefc82fcc6dc1d1139a0) Merge pull request #110 from notamitgamer/feature/offline-snapshots
-
-**Amit Dutta** committed on Aug 29, 2026 07:14 UTC
-
-
----
-
-### [`3cfa9df`](https://github.com/notamitgamer/bsc/commit/3cfa9df38c934e4e99736563b4b7b5c1992a7b96) Add offline snapshots page
-
-**notamitgamer2** committed on Aug 29, 2026 07:13 UTC · +435 / -1 lines · 6 files changed
-
-<details>
-<summary>Show 6 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +2 -1 |
-| `docs/.vitepress/theme/components/SnapshotManager.vue` | Added | +241 |
-| `docs/.vitepress/theme/index.ts` | Modified | +7 |
-| `docs/.vitepress/theme/lib/snapshotDb.ts` | Added | +60 |
-| `docs/public/sw-snapshot.js` | Added | +114 |
-| `docs/snapshots.md` | Added | +11 |
 </details>
 
 
