@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: September 01, 2026 at 14:42 UTC
+> Last build: September 01, 2026 at 14:46 UTC
 
 ## Latest Build
 
-- **Build ID** — `b30384b98d7058086ffa0cce893aa81225ec1902`
+- **Build ID** — `248b2f48d39224ef3d63933284e9e14c931415ca`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 01, 2026 at 14:42 UTC
+- **Build time** — September 01, 2026 at 14:46 UTC
 
 ## Recent Commits
+
+### [`248b2f4`](https://github.com/notamitgamer/bsc/commit/248b2f48d39224ef3d63933284e9e14c931415ca) Merge pull request #116 from notamitgamer/edit-20260901-201636
+
+**Amit Dutta** committed on Sep 01, 2026 14:46 UTC
+
+
+---
+
+### [`b56d91d`](https://github.com/notamitgamer/bsc/commit/b56d91d217b22a7203deebefba9fa98b6b33730a) template code
+
+**Amit Dutta** committed on Sep 01, 2026 14:46 UTC · +329 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/tuition/apc_003.cpp` | Added | +329 |
+</details>
+
+
+---
+
+### [`cfe1fdd`](https://github.com/notamitgamer/bsc/commit/cfe1fdd6af704e9ee326db0052afb8282812f4ef) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 01, 2026 14:43 UTC · +49 / -48 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +49 -48 |
+</details>
+
+
+---
 
 ### [`b30384b`](https://github.com/notamitgamer/bsc/commit/b30384b98d7058086ffa0cce893aa81225ec1902) Merge pull request #115 from notamitgamer/edit-20260901-201133
 
@@ -120,43 +157,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +48 -40 |
-</details>
-
-
----
-
-### [`a96e61a`](https://github.com/notamitgamer/bsc/commit/a96e61aaac2402b13a137ae15cb2c7b04695aefe) Merge pull request #112 from notamitgamer/feature/snapshot-progress-ui
-
-**Amit Dutta** committed on Aug 29, 2026 07:28 UTC
-
-
----
-
-### [`1f8dae2`](https://github.com/notamitgamer/bsc/commit/1f8dae28aa3d65d073a9e3a925dbd0f87f5558db) Speed up snapshot capture + turn button into a progress bar
-
-**notamitgamer2** committed on Aug 29, 2026 07:26 UTC · +105 / -19 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/SnapshotManager.vue` | Modified | +105 -19 |
-</details>
-
-
----
-
-### [`2eb188a`](https://github.com/notamitgamer/bsc/commit/2eb188a6a4faaeff12bf183b48ae5c68a170a10f) chore(deps): bump actions/setup-node from 4 to 7 [skip ci]
-
-**dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
 </details>
 
 
