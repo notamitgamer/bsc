@@ -1,15 +1,61 @@
 # Changelog
 
-> Last build: August 30, 2026 at 02:22 UTC
+> Last build: September 01, 2026 at 14:42 UTC
 
 ## Latest Build
 
-- **Build ID** — `4e9f9c8e8998cd9472bb27f84fcdae37c12883cc`
+- **Build ID** — `b30384b98d7058086ffa0cce893aa81225ec1902`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — August 30, 2026 at 02:22 UTC
+- **Build time** — September 01, 2026 at 14:42 UTC
 
 ## Recent Commits
+
+### [`b30384b`](https://github.com/notamitgamer/bsc/commit/b30384b98d7058086ffa0cce893aa81225ec1902) Merge pull request #115 from notamitgamer/edit-20260901-201133
+
+**Amit Dutta** committed on Sep 01, 2026 14:42 UTC
+
+
+---
+
+### [`1f08ce8`](https://github.com/notamitgamer/bsc/commit/1f08ce8518c1d122e97b504282ce770aa2ee1b66) added new algorithms
+
+**Amit Dutta** committed on Sep 01, 2026 14:41 UTC · +206 / -0 lines · 10 files changed
+
+<details>
+<summary>Show 10 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_053.md` | Added | +17 |
+| `semester_2/algorithms/algo_054.md` | Added | +21 |
+| `semester_2/algorithms/algo_055.md` | Added | +17 |
+| `semester_2/algorithms/algo_056.md` | Added | +21 |
+| `semester_2/algorithms/algo_057.md` | Added | +19 |
+| `semester_2/algorithms/algo_058.md` | Added | +22 |
+| `semester_2/algorithms/algo_059.md` | Added | +18 |
+| `semester_2/algorithms/algo_060.md` | Added | +21 |
+| `semester_2/algorithms/algo_061.md` | Added | +17 |
+| `semester_2/algorithms/algo_062.md` | Added | +33 |
+</details>
+
+
+---
+
+### [`b63a3e7`](https://github.com/notamitgamer/bsc/commit/b63a3e78f8ed01846d83e55ac6c3f21ec1fe8b15) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Aug 30, 2026 02:23 UTC · +50 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +50 -39 |
+</details>
+
+
+---
 
 ### [`4e9f9c8`](https://github.com/notamitgamer/bsc/commit/4e9f9c8e8998cd9472bb27f84fcdae37c12883cc) Merge pull request #114 from notamitgamer/revert/pr-110-through-latest
 
@@ -102,51 +148,6 @@
 ---
 
 ### [`2eb188a`](https://github.com/notamitgamer/bsc/commit/2eb188a6a4faaeff12bf183b48ae5c68a170a10f) chore(deps): bump actions/setup-node from 4 to 7 [skip ci]
-
-**dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`7f4f47e`](https://github.com/notamitgamer/bsc/commit/7f4f47ec286eebadee60bf269c589b7b873b23ed) chore(deps): bump actions/setup-python from 5 to 7 [skip ci]
-
-**dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`fa77b8d`](https://github.com/notamitgamer/bsc/commit/fa77b8d79cec368666ad02da9047c72976cb8dc5) chore(deps): bump actions/setup-java from 4 to 6 [skip ci]
-
-**dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`8fe1152`](https://github.com/notamitgamer/bsc/commit/8fe1152b926a8fdf5c0b68c2bcbbb004b3f0812b) chore(deps): bump actions/checkout from 4 to 7 [skip ci]
 
 **dependabot[bot]** committed on Aug 29, 2026 07:18 UTC · +1 / -1 lines · 1 file changed
 
