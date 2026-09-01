@@ -178,7 +178,7 @@ jobs:
 
       - name: Publish to GitHub Release
         id: release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.tag.outputs.value }}
           name: Offline APK build (${{ github.run_number }})
