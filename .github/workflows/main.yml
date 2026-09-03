@@ -41,9 +41,8 @@ jobs:
           
           git checkout main
           
-          # 4. Ensure bsc directory exists (in case it is the first time creating it on the remote)
           mkdir -p bsc
-          
+
           rsync -av --delete \
             --exclude='.git' \
             --exclude='MinGW64' \
@@ -52,9 +51,9 @@ jobs:
             "$GITHUB_WORKSPACE/" bsc/
 
           git lfs install
-          git lfs track "*.pdf"
-          git lfs track "*.docx"
-          git lfs track "*.odt"
+          git lfs track "bsc/**/*.pdf"
+          git lfs track "bsc/**/*.docx"
+          git lfs track "bsc/**/*.odt"
 
           git add .gitattributes
           
@@ -74,7 +73,6 @@ jobs:
     if: github.actor != 'bot-for-notamitgamer[bot]'
 
     steps:
-
       - name: Generate GitHub App Token
         id: app-token
         uses: actions/create-github-app-token@v3
@@ -136,7 +134,6 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-      # Step 5: Save your files back to the branch only when deployment wraps up completely
       - name: Commit generated changelog to repo
         run: |
           git config user.name "bot-for-notamitgamer[bot]"
@@ -151,20 +148,16 @@ jobs:
             echo "No changelog changes"
           fi
 
-  # Job 3: Clean deployment production pipeline
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
-
     if: github.actor != 'bot-for-notamitgamer[bot]'
-
     needs: build
 
     steps:
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
