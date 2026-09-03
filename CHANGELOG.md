@@ -1,15 +1,111 @@
 # Changelog
 
-> Last build: September 02, 2026 at 09:45 UTC
+> Last build: September 03, 2026 at 11:34 UTC
 
 ## Latest Build
 
-- **Build ID** — `e6cd01126fbbd2ae9bdf9bf8c2939718ba229501`
+- **Build ID** — `f3f7b371dac3f5a0c8a4a8430ebdf0a4f7bd8fce`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 02, 2026 at 09:45 UTC
+- **Build time** — September 03, 2026 at 11:34 UTC
 
 ## Recent Commits
+
+### [`f3f7b37`](https://github.com/notamitgamer/bsc/commit/f3f7b371dac3f5a0c8a4a8430ebdf0a4f7bd8fce) Merge pull request #120 from notamitgamer/patch
+
+**Amit Dutta** committed on Sep 03, 2026 11:34 UTC
+
+
+---
+
+### [`eab625f`](https://github.com/notamitgamer/bsc/commit/eab625fee00c5b3b02be71ba16f2ed10a7eff506) Refactor GitHub Actions workflow for LFS tracking
+
+**Amit Dutta** committed on Sep 03, 2026 11:33 UTC · +4 / -11 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +4 -11 |
+</details>
+
+
+---
+
+### [`26f47e2`](https://github.com/notamitgamer/bsc/commit/26f47e23733227f4221d10dcfc90374b4cb534c2) Merge pull request #119 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-8839a8980a [skip ci]
+
+**Amit Dutta** committed on Sep 03, 2026 11:31 UTC
+
+
+---
+
+### [`47f6c51`](https://github.com/notamitgamer/bsc/commit/47f6c51e1c83a144c695e546147d18fa434466e0) chore(deps-dev): bump fast-uri
+
+**dependabot[bot]** committed on Sep 03, 2026 11:30 UTC · +3 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +3 -3 |
+</details>
+
+
+---
+
+### [`7678311`](https://github.com/notamitgamer/bsc/commit/7678311911b933483b3e61b42fbdb357956e7844) Merge pull request #118 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-78481560ff [skip ci]
+
+**Amit Dutta** committed on Sep 03, 2026 11:29 UTC
+
+
+---
+
+### [`90257d3`](https://github.com/notamitgamer/bsc/commit/90257d3f3b7cf125dd4e9daf9da946ee5053cd37) Refactor GitHub Actions workflow for Hugging Face sync
+
+**Amit Dutta** committed on Sep 03, 2026 11:28 UTC · +15 / -8 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +15 -8 |
+</details>
+
+
+---
+
+### [`e4eae2c`](https://github.com/notamitgamer/bsc/commit/e4eae2cc8507cf604594ab650716901b32a590f5) chore(deps-dev): bump browserslist
+
+**dependabot[bot]** committed on Sep 02, 2026 17:59 UTC · +23 / -23 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +23 -23 |
+</details>
+
+
+---
+
+### [`ac5bf4a`](https://github.com/notamitgamer/bsc/commit/ac5bf4a2c70ba4a90585e928f5b6eeefdcea285c) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 02, 2026 09:45 UTC · +40 / -64 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -64 |
+</details>
+
+
+---
 
 ### [`e6cd011`](https://github.com/notamitgamer/bsc/commit/e6cd01126fbbd2ae9bdf9bf8c2939718ba229501) Merge pull request #117 from notamitgamer/dependabot/github_actions/softprops/action-gh-release-3
 
@@ -29,111 +125,6 @@
 | --- | --- | --- |
 | `.github/workflows/build-apk.yml` | Modified | +1 -1 |
 </details>
-
-
----
-
-### [`ec61a44`](https://github.com/notamitgamer/bsc/commit/ec61a448fee133cbfdb138370359a4d9b0f24460) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 01, 2026 14:48 UTC · +40 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -40 |
-</details>
-
-
----
-
-### [`248b2f4`](https://github.com/notamitgamer/bsc/commit/248b2f48d39224ef3d63933284e9e14c931415ca) Merge pull request #116 from notamitgamer/edit-20260901-201636
-
-**Amit Dutta** committed on Sep 01, 2026 14:46 UTC
-
-
----
-
-### [`b56d91d`](https://github.com/notamitgamer/bsc/commit/b56d91d217b22a7203deebefba9fa98b6b33730a) template code
-
-**Amit Dutta** committed on Sep 01, 2026 14:46 UTC · +329 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/tuition/apc_003.cpp` | Added | +329 |
-</details>
-
-
----
-
-### [`cfe1fdd`](https://github.com/notamitgamer/bsc/commit/cfe1fdd6af704e9ee326db0052afb8282812f4ef) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 01, 2026 14:43 UTC · +49 / -48 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +49 -48 |
-</details>
-
-
----
-
-### [`b30384b`](https://github.com/notamitgamer/bsc/commit/b30384b98d7058086ffa0cce893aa81225ec1902) Merge pull request #115 from notamitgamer/edit-20260901-201133
-
-**Amit Dutta** committed on Sep 01, 2026 14:42 UTC
-
-
----
-
-### [`1f08ce8`](https://github.com/notamitgamer/bsc/commit/1f08ce8518c1d122e97b504282ce770aa2ee1b66) added new algorithms
-
-**Amit Dutta** committed on Sep 01, 2026 14:41 UTC · +206 / -0 lines · 10 files changed
-
-<details>
-<summary>Show 10 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/algorithms/algo_053.md` | Added | +17 |
-| `semester_2/algorithms/algo_054.md` | Added | +21 |
-| `semester_2/algorithms/algo_055.md` | Added | +17 |
-| `semester_2/algorithms/algo_056.md` | Added | +21 |
-| `semester_2/algorithms/algo_057.md` | Added | +19 |
-| `semester_2/algorithms/algo_058.md` | Added | +22 |
-| `semester_2/algorithms/algo_059.md` | Added | +18 |
-| `semester_2/algorithms/algo_060.md` | Added | +21 |
-| `semester_2/algorithms/algo_061.md` | Added | +17 |
-| `semester_2/algorithms/algo_062.md` | Added | +33 |
-</details>
-
-
----
-
-### [`b63a3e7`](https://github.com/notamitgamer/bsc/commit/b63a3e78f8ed01846d83e55ac6c3f21ec1fe8b15) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Aug 30, 2026 02:23 UTC · +50 / -39 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +50 -39 |
-</details>
-
-
----
-
-### [`4e9f9c8`](https://github.com/notamitgamer/bsc/commit/4e9f9c8e8998cd9472bb27f84fcdae37c12883cc) Merge pull request #114 from notamitgamer/revert/pr-110-through-latest
-
-**Amit Dutta** committed on Aug 30, 2026 02:22 UTC
 
 
 ---
