@@ -1,15 +1,67 @@
 # Changelog
 
-> Last build: September 04, 2026 at 08:17 UTC
+> Last build: September 04, 2026 at 08:30 UTC
 
 ## Latest Build
 
-- **Build ID** — `d4c492688be10cb819b8b87c122aef475a622286`
+- **Build ID** — `b0172586c4c3e216adeea12d09ae468ae55ca904`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 04, 2026 at 08:17 UTC
+- **Build time** — September 04, 2026 at 08:30 UTC
 
 ## Recent Commits
+
+### [`b017258`](https://github.com/notamitgamer/bsc/commit/b0172586c4c3e216adeea12d09ae468ae55ca904) Merge pull request #122 from notamitgamer/fix/resilient-hf-sync
+
+**Amit Dutta** committed on Sep 04, 2026 08:30 UTC
+
+
+---
+
+### [`912b9f8`](https://github.com/notamitgamer/bsc/commit/912b9f8e0c83aaa89c9717ab487b07f7f2ac3026) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 04, 2026 08:29 UTC · +36 / -36 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +36 -36 |
+</details>
+
+
+---
+
+### [`afe43bf`](https://github.com/notamitgamer/bsc/commit/afe43bf48cd5dfe5dca72db7e7bd99b2707d2d79) Switch sync-hf to direct Hugging Face API upload
+
+**copilot-swe-agent[bot]** committed on Sep 04, 2026 08:28 UTC · +19 / -55 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +19 -55 |
+</details>
+
+
+---
+
+### [`5321fb2`](https://github.com/notamitgamer/bsc/commit/5321fb2d917fec6ee2331fda8966618cfeb48ad1) Make the HF sync clone resilient: retry, then fall back to a full clone
+
+**notamitgamer[bot]** committed on Sep 04, 2026 08:22 UTC · +28 / -2 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +28 -2 |
+</details>
+
+
+---
 
 ### [`d4c4926`](https://github.com/notamitgamer/bsc/commit/d4c492688be10cb819b8b87c122aef475a622286) Merge pull request #121 from notamitgamer/feat/raw-link-to-cdn
 
@@ -80,50 +132,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/main.yml` | Modified | +4 -11 |
-</details>
-
-
----
-
-### [`26f47e2`](https://github.com/notamitgamer/bsc/commit/26f47e23733227f4221d10dcfc90374b4cb534c2) Merge pull request #119 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-8839a8980a [skip ci]
-
-**Amit Dutta** committed on Sep 03, 2026 11:31 UTC
-
-
----
-
-### [`47f6c51`](https://github.com/notamitgamer/bsc/commit/47f6c51e1c83a144c695e546147d18fa434466e0) chore(deps-dev): bump fast-uri
-
-**dependabot[bot]** committed on Sep 03, 2026 11:30 UTC · +3 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +3 -3 |
-</details>
-
-
----
-
-### [`7678311`](https://github.com/notamitgamer/bsc/commit/7678311911b933483b3e61b42fbdb357956e7844) Merge pull request #118 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-78481560ff [skip ci]
-
-**Amit Dutta** committed on Sep 03, 2026 11:29 UTC
-
-
----
-
-### [`90257d3`](https://github.com/notamitgamer/bsc/commit/90257d3f3b7cf125dd4e9daf9da946ee5053cd37) Refactor GitHub Actions workflow for Hugging Face sync
-
-**Amit Dutta** committed on Sep 03, 2026 11:28 UTC · +15 / -8 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +15 -8 |
 </details>
 
 
