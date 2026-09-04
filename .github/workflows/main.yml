@@ -33,40 +33,30 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git clone --filter=blob:none --no-checkout --depth 1 https://notamitgamer:${HF_TOKEN}@huggingface.co/datasets/notamitgamer/cdn /tmp/hf_repo
-          
-          cd /tmp/hf_repo
-          
-          git sparse-checkout set bsc
-          
-          git checkout main
-          
-          mkdir -p bsc
-
+          rm -rf /tmp/hf_sync_payload
+          mkdir -p /tmp/hf_sync_payload/bsc
           rsync -av --delete \
             --exclude='.git' \
             --exclude='MinGW64' \
             --exclude='*.exe' \
             --exclude='site_files' \
-            "$GITHUB_WORKSPACE/" bsc/
+            "$GITHUB_WORKSPACE/" /tmp/hf_sync_payload/bsc/
 
-          git lfs install
-          git lfs track "bsc/**/*.pdf"
-          git lfs track "bsc/**/*.docx"
-          git lfs track "bsc/**/*.odt"
+          python -m pip install --quiet huggingface_hub
+          python - <<'PY'
+          import os
+          from huggingface_hub import upload_folder
 
-          git add .gitattributes
-          
-          git add bsc/
-
-          git config user.name "bot-for-notamitgamer[bot]"
-          git config user.email "bot-for-notamitgamer[bot]@users.noreply.github.com"
-
-          git commit \
-            -m "Safe auto-sync: updating bsc code index files" \
-            || echo "No changes to commit"
-
-          git push origin main
+          upload_folder(
+              repo_id="notamitgamer/cdn",
+              repo_type="dataset",
+              folder_path="/tmp/hf_sync_payload/bsc",
+              path_in_repo="bsc",
+              delete_patterns="*",
+              commit_message="Safe auto-sync: updating bsc code index files",
+              token=os.environ["HF_TOKEN"],
+          )
+          PY
           
   build:
     runs-on: ubuntu-latest
