@@ -9,7 +9,11 @@ const safeDomains = [
   'amit.is-a.dev',
   'github.com',
   'raw.githubusercontent.com',
-  'raw.usercontent.amit.is-a.dev'
+  'raw.usercontent.amit.is-a.dev',
+  // Technically already covered by the 'amit.is-a.dev' entry above (this
+  // is a subdomain of it), but listed explicitly so it stays safe even if
+  // that broader entry is ever narrowed or removed later.
+  'raw.cdn.amit.is-a.dev'
 ]
 
 const lockScroll = () => {
