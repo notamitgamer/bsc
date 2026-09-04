@@ -42,9 +42,16 @@ const { frontmatter } = useData()
 // actually committed to the repo — generated-but-uncommitted pages (e.g.
 // auto-built folder indexes) have no `source`, so the template hides this
 // menu entirely for them rather than falling back to a raw link that 404s.
+//
+// Points at the CDN's raw subdomain (not the app UI domain) because that's
+// what actually serves plain-text file content, matching what
+// raw.githubusercontent.com used to give us. The CI (main.yml's `sync-hf`
+// job) rsyncs this whole repo into the `bsc/` folder of the same Hugging
+// Face dataset the cdn app serves, preserving this exact relative path —
+// so `bsc/${source}` always matches.
 const rawUrl = computed(() => {
   const source = frontmatter.value.source
-  return `https://raw.githubusercontent.com/notamitgamer/bsc/refs/heads/main/${source}`
+  return `https://raw.cdn.amit.is-a.dev/bsc/${source}`
 })
 
 const chatGptUrl = computed(() =>
