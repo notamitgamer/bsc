@@ -1,15 +1,67 @@
 # Changelog
 
-> Last build: September 03, 2026 at 11:34 UTC
+> Last build: September 04, 2026 at 08:17 UTC
 
 ## Latest Build
 
-- **Build ID** — `f3f7b371dac3f5a0c8a4a8430ebdf0a4f7bd8fce`
+- **Build ID** — `d4c492688be10cb819b8b87c122aef475a622286`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 03, 2026 at 11:34 UTC
+- **Build time** — September 04, 2026 at 08:17 UTC
 
 ## Recent Commits
+
+### [`d4c4926`](https://github.com/notamitgamer/bsc/commit/d4c492688be10cb819b8b87c122aef475a622286) Merge pull request #121 from notamitgamer/feat/raw-link-to-cdn
+
+**Amit Dutta** committed on Sep 04, 2026 08:17 UTC
+
+
+---
+
+### [`87a711e`](https://github.com/notamitgamer/bsc/commit/87a711e118523fbac2ead9441ab802f89c7839f4) Also allowlist raw.cdn.amit.is-a.dev in the external-link warning
+
+**notamitgamer[bot]** committed on Sep 04, 2026 08:15 UTC · +5 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/ExternalLinkWarning.vue` | Modified | +5 -1 |
+</details>
+
+
+---
+
+### [`f1d8862`](https://github.com/notamitgamer/bsc/commit/f1d8862d8b2c795efaef4f8c7fb7c4138df06884) Point 'View as Raw' link to the CDN instead of GitHub raw
+
+**notamitgamer[bot]** committed on Sep 04, 2026 08:13 UTC · +8 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/MarkdownMenu.vue` | Modified | +8 -1 |
+</details>
+
+
+---
+
+### [`327d1ba`](https://github.com/notamitgamer/bsc/commit/327d1baf0566d128f792e4ede6cc45b1dc5ab112) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 03, 2026 11:34 UTC · +40 / -49 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -49 |
+</details>
+
+
+---
 
 ### [`f3f7b37`](https://github.com/notamitgamer/bsc/commit/f3f7b371dac3f5a0c8a4a8430ebdf0a4f7bd8fce) Merge pull request #120 from notamitgamer/patch
 
@@ -72,58 +124,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/main.yml` | Modified | +15 -8 |
-</details>
-
-
----
-
-### [`e4eae2c`](https://github.com/notamitgamer/bsc/commit/e4eae2cc8507cf604594ab650716901b32a590f5) chore(deps-dev): bump browserslist
-
-**dependabot[bot]** committed on Sep 02, 2026 17:59 UTC · +23 / -23 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +23 -23 |
-</details>
-
-
----
-
-### [`ac5bf4a`](https://github.com/notamitgamer/bsc/commit/ac5bf4a2c70ba4a90585e928f5b6eeefdcea285c) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 02, 2026 09:45 UTC · +40 / -64 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -64 |
-</details>
-
-
----
-
-### [`e6cd011`](https://github.com/notamitgamer/bsc/commit/e6cd01126fbbd2ae9bdf9bf8c2939718ba229501) Merge pull request #117 from notamitgamer/dependabot/github_actions/softprops/action-gh-release-3
-
-**Amit Dutta** committed on Sep 02, 2026 09:45 UTC
-
-
----
-
-### [`fca03bd`](https://github.com/notamitgamer/bsc/commit/fca03bdb85a67e1459b0b27861d9b56aaa36c1f9) chore(deps): bump softprops/action-gh-release from 2 to 3
-
-**dependabot[bot]** committed on Sep 01, 2026 21:29 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +1 -1 |
 </details>
 
 
