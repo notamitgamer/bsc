@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
-    "patch-package": "^8.0.1",
     "vite-plugin-pwa": "^1.3.0",
     "vitepress": "^2.0.0-alpha.20",
     "vitepress-sidebar": "^1.40.0"
@@ -9,8 +8,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "postinstall": "patch-package"
+    "docs:preview": "vitepress preview docs"
   },
   "overrides": {
     "@docsearch/react": "latest",
