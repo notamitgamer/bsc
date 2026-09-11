@@ -1,15 +1,94 @@
 # Changelog
 
-> Last build: September 11, 2026 at 13:48 UTC
+> Last build: September 11, 2026 at 13:56 UTC
 
 ## Latest Build
 
-- **Build ID** — `54014288c99cdc759571ba99f1150d7f74b397d5`
+- **Build ID** — `52d9282da27b7d4b20163921818f92d739d02c3c`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 11, 2026 at 13:48 UTC
+- **Build time** — September 11, 2026 at 13:56 UTC
 
 ## Recent Commits
+
+### [`52d9282`](https://github.com/notamitgamer/bsc/commit/52d9282da27b7d4b20163921818f92d739d02c3c) Merge pull request #126 from notamitgamer/chore/cleanup-legacy-cruft
+
+**Amit Dutta** committed on Sep 11, 2026 13:56 UTC
+
+
+---
+
+### [`761bedd`](https://github.com/notamitgamer/bsc/commit/761bedddfd0d935da1b9ade90e5162fc23f767ad) Delete utils/index.md
+
+**Amit Dutta** committed on Sep 11, 2026 13:55 UTC · +0 / -67 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `utils/index.md` | Removed | -67 |
+</details>
+
+
+---
+
+### [`9eac7cf`](https://github.com/notamitgamer/bsc/commit/9eac7cf29e465e42b3eb719d30040c1729dbba70) Delete utils/deploy_pipeline.py
+
+**Amit Dutta** committed on Sep 11, 2026 13:54 UTC · +0 / -303 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `utils/deploy_pipeline.py` | Removed | -303 |
+</details>
+
+
+---
+
+### [`3051651`](https://github.com/notamitgamer/bsc/commit/3051651b9d57d6c73b0c05618d0082ee05b73d6f) chore: remove legacy cruft, merge build scripts, drop exposed key
+
+**notamitgamer2** committed on Sep 11, 2026 13:53 UTC · +317 / -1212 lines · 13 files changed
+
+<details>
+<summary>Show 13 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/build-apk.yml` | Modified | +2 -2 |
+| `.github/workflows/main.yml` | Modified | +3 -3 |
+| `.github/workflows/pr-check.yml` | Modified | +5 -5 |
+| `build_tools.py` | Added | +304 |
+| `changelog.py` | Removed | -217 |
+| `list.py` | Removed | -47 |
+| `main.py` | Removed | -11 |
+| `package-lock.json` | Modified | +2 -391 |
+| `package.json` | Modified | +1 -3 |
+| `utils/generate_structure.py` | Removed | -19 |
+| `utils/key` | Removed | -1 |
+| `utils/list.txt` | Removed | -410 |
+| `utils/mkdocs.yml` | Removed | -103 |
+</details>
+
+
+---
+
+### [`16ebabf`](https://github.com/notamitgamer/bsc/commit/16ebabfef8c584bcb8c87352ad5ff84c9642a00e) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:49 UTC · +32 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +32 -40 |
+</details>
+
+
+---
 
 ### [`5401428`](https://github.com/notamitgamer/bsc/commit/54014288c99cdc759571ba99f1150d7f74b397d5) Merge pull request #125 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-452e010a87
 
@@ -67,66 +146,6 @@
 | `package-lock.json` | Modified | +8 -8 |
 | `package.json` | Modified | +1 -1 |
 </details>
-
-
----
-
-### [`5dda7f3`](https://github.com/notamitgamer/bsc/commit/5dda7f3be4292726156e404ef24a33b3079cb8eb) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:42 UTC · +41 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -40 |
-</details>
-
-
----
-
-### [`c0fcd89`](https://github.com/notamitgamer/bsc/commit/c0fcd8995b58df2d932e601552ba3f92c49e13cc) Merge pull request #123 from notamitgamer/dependabot/npm_and_yarn/vitepress-2.0.0-alpha.20
-
-**Amit Dutta** committed on Sep 11, 2026 13:41 UTC
-
-
----
-
-### [`ea071fd`](https://github.com/notamitgamer/bsc/commit/ea071fdc8b633175a3a18ccb9650a4bfa406f0ab) chore(deps-dev): bump vitepress from 2.0.0-alpha.19 to 2.0.0-alpha.20
-
-**dependabot[bot]** committed on Sep 07, 2026 21:25 UTC · +56 / -58 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +55 -57 |
-| `package.json` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`9a74fbc`](https://github.com/notamitgamer/bsc/commit/9a74fbc6f3420b9cbd3891480041af3599065828) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 04, 2026 08:35 UTC · +37 / -29 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +37 -29 |
-</details>
-
-
----
-
-### [`b017258`](https://github.com/notamitgamer/bsc/commit/b0172586c4c3e216adeea12d09ae468ae55ca904) Merge pull request #122 from notamitgamer/fix/resilient-hf-sync
-
-**Amit Dutta** committed on Sep 04, 2026 08:30 UTC
 
 
 ---
