@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: September 11, 2026 at 13:44 UTC
+> Last build: September 11, 2026 at 13:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `0b25c9f06554c5f64affebe3312f9f8d65f80a85`
+- **Build ID** — `54014288c99cdc759571ba99f1150d7f74b397d5`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 11, 2026 at 13:44 UTC
+- **Build time** — September 11, 2026 at 13:48 UTC
 
 ## Recent Commits
+
+### [`5401428`](https://github.com/notamitgamer/bsc/commit/54014288c99cdc759571ba99f1150d7f74b397d5) Merge pull request #125 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-452e010a87
+
+**Amit Dutta** committed on Sep 11, 2026 13:48 UTC
+
+
+---
+
+### [`a45bcc9`](https://github.com/notamitgamer/bsc/commit/a45bcc93f5e4f50e12881a3c48e54e288509a8c6) chore(deps-dev): bump js-yaml
+
+**dependabot[bot]** committed on Sep 11, 2026 13:45 UTC · +3 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +3 -3 |
+</details>
+
+
+---
+
+### [`dfe6a69`](https://github.com/notamitgamer/bsc/commit/dfe6a698d8254efc337af29f4e07b7be50b8be0a) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:45 UTC · +37 / -36 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +37 -36 |
+</details>
+
+
+---
 
 ### [`0b25c9f`](https://github.com/notamitgamer/bsc/commit/0b25c9f06554c5f64affebe3312f9f8d65f80a85) Merge pull request #124 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.40.0
 
@@ -90,51 +127,6 @@
 ### [`b017258`](https://github.com/notamitgamer/bsc/commit/b0172586c4c3e216adeea12d09ae468ae55ca904) Merge pull request #122 from notamitgamer/fix/resilient-hf-sync
 
 **Amit Dutta** committed on Sep 04, 2026 08:30 UTC
-
-
----
-
-### [`912b9f8`](https://github.com/notamitgamer/bsc/commit/912b9f8e0c83aaa89c9717ab487b07f7f2ac3026) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 04, 2026 08:29 UTC · +36 / -36 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +36 -36 |
-</details>
-
-
----
-
-### [`afe43bf`](https://github.com/notamitgamer/bsc/commit/afe43bf48cd5dfe5dca72db7e7bd99b2707d2d79) Switch sync-hf to direct Hugging Face API upload
-
-**copilot-swe-agent[bot]** committed on Sep 04, 2026 08:28 UTC · +19 / -55 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +19 -55 |
-</details>
-
-
----
-
-### [`5321fb2`](https://github.com/notamitgamer/bsc/commit/5321fb2d917fec6ee2331fda8966618cfeb48ad1) Make the HF sync clone resilient: retry, then fall back to a full clone
-
-**notamitgamer[bot]** committed on Sep 04, 2026 08:22 UTC · +28 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +28 -2 |
-</details>
 
 
 ---
