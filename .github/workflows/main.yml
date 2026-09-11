@@ -83,8 +83,8 @@ jobs:
 
       - name: Generate markdown files
         run: |
-          python list.py
-          python main.py
+          python build_tools.py list
+          python build_tools.py generate
 
       - name: Generate changelog
         env:
@@ -95,7 +95,7 @@ jobs:
         run: |
           git log -10 --pretty=format:"COMMIT|%H|%s|%an|%aI" --numstat > git_log_numstat.txt
           git log -10 --pretty=format:"COMMIT|%H" --name-status > git_log_namestatus.txt
-          python changelog.py
+          python build_tools.py changelog
 
       - name: Setup Node.js
         uses: actions/setup-node@v7

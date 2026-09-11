@@ -39,8 +39,8 @@ jobs:
 
       - name: Generate markdown files
         run: |
-          python list.py
-          python main.py
+          python build_tools.py list
+          python build_tools.py generate
 
       - name: Build VitePress site
         run: npm run docs:build

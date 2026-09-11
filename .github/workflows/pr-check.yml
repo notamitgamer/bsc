@@ -24,17 +24,17 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Run list.py
-        run: python list.py
+      - name: Run build_tools.py list
+        run: python build_tools.py list
 
       - name: Run md.py
-        run: python main.py
+        run: python build_tools.py generate
 
       - name: Fail if generators reported errors
         run: |
           if [ -f list.txt ]; then
-            echo "list.py produced list.txt ($(wc -l < list.txt) entries)"
+            echo "build_tools.py list produced list.txt ($(wc -l < list.txt) entries)"
           else
-            echo "::error::list.py did not produce list.txt"
+            echo "::error::build_tools.py list did not produce list.txt"
             exit 1
           fi
