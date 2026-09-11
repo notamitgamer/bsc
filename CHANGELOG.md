@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: September 04, 2026 at 08:30 UTC
+> Last build: September 11, 2026 at 13:41 UTC
 
 ## Latest Build
 
-- **Build ID** — `b0172586c4c3e216adeea12d09ae468ae55ca904`
+- **Build ID** — `c0fcd8995b58df2d932e601552ba3f92c49e13cc`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 04, 2026 at 08:30 UTC
+- **Build time** — September 11, 2026 at 13:41 UTC
 
 ## Recent Commits
+
+### [`c0fcd89`](https://github.com/notamitgamer/bsc/commit/c0fcd8995b58df2d932e601552ba3f92c49e13cc) Merge pull request #123 from notamitgamer/dependabot/npm_and_yarn/vitepress-2.0.0-alpha.20
+
+**Amit Dutta** committed on Sep 11, 2026 13:41 UTC
+
+
+---
+
+### [`ea071fd`](https://github.com/notamitgamer/bsc/commit/ea071fdc8b633175a3a18ccb9650a4bfa406f0ab) chore(deps-dev): bump vitepress from 2.0.0-alpha.19 to 2.0.0-alpha.20
+
+**dependabot[bot]** committed on Sep 07, 2026 21:25 UTC · +56 / -58 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +55 -57 |
+| `package.json` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`9a74fbc`](https://github.com/notamitgamer/bsc/commit/9a74fbc6f3420b9cbd3891480041af3599065828) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 04, 2026 08:35 UTC · +37 / -29 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +37 -29 |
+</details>
+
+
+---
 
 ### [`b017258`](https://github.com/notamitgamer/bsc/commit/b0172586c4c3e216adeea12d09ae468ae55ca904) Merge pull request #122 from notamitgamer/fix/resilient-hf-sync
 
@@ -95,43 +133,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/MarkdownMenu.vue` | Modified | +8 -1 |
-</details>
-
-
----
-
-### [`327d1ba`](https://github.com/notamitgamer/bsc/commit/327d1baf0566d128f792e4ede6cc45b1dc5ab112) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 03, 2026 11:34 UTC · +40 / -49 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -49 |
-</details>
-
-
----
-
-### [`f3f7b37`](https://github.com/notamitgamer/bsc/commit/f3f7b371dac3f5a0c8a4a8430ebdf0a4f7bd8fce) Merge pull request #120 from notamitgamer/patch
-
-**Amit Dutta** committed on Sep 03, 2026 11:34 UTC
-
-
----
-
-### [`eab625f`](https://github.com/notamitgamer/bsc/commit/eab625fee00c5b3b02be71ba16f2ed10a7eff506) Refactor GitHub Actions workflow for LFS tracking
-
-**Amit Dutta** committed on Sep 03, 2026 11:33 UTC · +4 / -11 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +4 -11 |
 </details>
 
 
