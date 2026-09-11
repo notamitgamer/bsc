@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: September 11, 2026 at 13:41 UTC
+> Last build: September 11, 2026 at 13:44 UTC
 
 ## Latest Build
 
-- **Build ID** — `c0fcd8995b58df2d932e601552ba3f92c49e13cc`
+- **Build ID** — `0b25c9f06554c5f64affebe3312f9f8d65f80a85`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 11, 2026 at 13:41 UTC
+- **Build time** — September 11, 2026 at 13:44 UTC
 
 ## Recent Commits
+
+### [`0b25c9f`](https://github.com/notamitgamer/bsc/commit/0b25c9f06554c5f64affebe3312f9f8d65f80a85) Merge pull request #124 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.40.0
+
+**Amit Dutta** committed on Sep 11, 2026 13:44 UTC
+
+
+---
+
+### [`470afcf`](https://github.com/notamitgamer/bsc/commit/470afcff7aa4072d9afa135c0c89987254c3c6fc) chore(deps-dev): bump vitepress-sidebar from 1.39.0 to 1.40.0
+
+**dependabot[bot]** committed on Sep 11, 2026 13:43 UTC · +9 / -9 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +8 -8 |
+| `package.json` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`5dda7f3`](https://github.com/notamitgamer/bsc/commit/5dda7f3be4292726156e404ef24a33b3079cb8eb) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:42 UTC · +41 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -40 |
+</details>
+
+
+---
 
 ### [`c0fcd89`](https://github.com/notamitgamer/bsc/commit/c0fcd8995b58df2d932e601552ba3f92c49e13cc) Merge pull request #123 from notamitgamer/dependabot/npm_and_yarn/vitepress-2.0.0-alpha.20
 
@@ -96,43 +134,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.github/workflows/main.yml` | Modified | +28 -2 |
-</details>
-
-
----
-
-### [`d4c4926`](https://github.com/notamitgamer/bsc/commit/d4c492688be10cb819b8b87c122aef475a622286) Merge pull request #121 from notamitgamer/feat/raw-link-to-cdn
-
-**Amit Dutta** committed on Sep 04, 2026 08:17 UTC
-
-
----
-
-### [`87a711e`](https://github.com/notamitgamer/bsc/commit/87a711e118523fbac2ead9441ab802f89c7839f4) Also allowlist raw.cdn.amit.is-a.dev in the external-link warning
-
-**notamitgamer[bot]** committed on Sep 04, 2026 08:15 UTC · +5 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/ExternalLinkWarning.vue` | Modified | +5 -1 |
-</details>
-
-
----
-
-### [`f1d8862`](https://github.com/notamitgamer/bsc/commit/f1d8862d8b2c795efaef4f8c7fb7c4138df06884) Point 'View as Raw' link to the CDN instead of GitHub raw
-
-**notamitgamer[bot]** committed on Sep 04, 2026 08:13 UTC · +8 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/MarkdownMenu.vue` | Modified | +8 -1 |
 </details>
 
 
