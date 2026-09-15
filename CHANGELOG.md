@@ -1,15 +1,54 @@
 # Changelog
 
-> Last build: September 15, 2026 at 18:23 UTC
+> Last build: September 15, 2026 at 18:30 UTC
 
 ## Latest Build
 
-- **Build ID** — `36dd7a532e05e16da623e53100b2cecbdb30ed95`
+- **Build ID** — `775247d1965a2311dcd1260780be524544faa4ce`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 15, 2026 at 18:23 UTC
+- **Build time** — September 15, 2026 at 18:30 UTC
 
 ## Recent Commits
+
+### [`775247d`](https://github.com/notamitgamer/bsc/commit/775247d1965a2311dcd1260780be524544faa4ce) Merge pull request #129 from notamitgamer/feature/themed-icon-monochrome
+
+**Amit Dutta** committed on Sep 15, 2026 18:30 UTC
+
+
+---
+
+### [`49f376f`](https://github.com/notamitgamer/bsc/commit/49f376fe592ad3a6ead6eda5e11ae17d05251b5d) Add monochrome icon for Android themed icons
+
+**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:29 UTC · +12 / -0 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/public/logo_monochrome_192.png` | Added | binary/no diff |
+| `docs/public/logo_monochrome_512.png` | Added | binary/no diff |
+| `docs/public/manifest.webmanifest` | Modified | +12 |
+</details>
+
+
+---
+
+### [`852a56a`](https://github.com/notamitgamer/bsc/commit/852a56a53dee6b5689af4c51fd91b4ecef8197b9) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:24 UTC · +43 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +43 -40 |
+</details>
+
+
+---
 
 ### [`36dd7a5`](https://github.com/notamitgamer/bsc/commit/36dd7a532e05e16da623e53100b2cecbdb30ed95) Merge pull request #128 from notamitgamer/fix/pwa-splash-screen
 
@@ -95,63 +134,6 @@
 ### [`52d9282`](https://github.com/notamitgamer/bsc/commit/52d9282da27b7d4b20163921818f92d739d02c3c) Merge pull request #126 from notamitgamer/chore/cleanup-legacy-cruft
 
 **Amit Dutta** committed on Sep 11, 2026 13:56 UTC
-
-
----
-
-### [`761bedd`](https://github.com/notamitgamer/bsc/commit/761bedddfd0d935da1b9ade90e5162fc23f767ad) Delete utils/index.md
-
-**Amit Dutta** committed on Sep 11, 2026 13:55 UTC · +0 / -67 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `utils/index.md` | Removed | -67 |
-</details>
-
-
----
-
-### [`9eac7cf`](https://github.com/notamitgamer/bsc/commit/9eac7cf29e465e42b3eb719d30040c1729dbba70) Delete utils/deploy_pipeline.py
-
-**Amit Dutta** committed on Sep 11, 2026 13:54 UTC · +0 / -303 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `utils/deploy_pipeline.py` | Removed | -303 |
-</details>
-
-
----
-
-### [`3051651`](https://github.com/notamitgamer/bsc/commit/3051651b9d57d6c73b0c05618d0082ee05b73d6f) chore: remove legacy cruft, merge build scripts, drop exposed key
-
-**notamitgamer2** committed on Sep 11, 2026 13:53 UTC · +317 / -1212 lines · 13 files changed
-
-<details>
-<summary>Show 13 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/build-apk.yml` | Modified | +2 -2 |
-| `.github/workflows/main.yml` | Modified | +3 -3 |
-| `.github/workflows/pr-check.yml` | Modified | +5 -5 |
-| `build_tools.py` | Added | +304 |
-| `changelog.py` | Removed | -217 |
-| `list.py` | Removed | -47 |
-| `main.py` | Removed | -11 |
-| `package-lock.json` | Modified | +2 -391 |
-| `package.json` | Modified | +1 -3 |
-| `utils/generate_structure.py` | Removed | -19 |
-| `utils/key` | Removed | -1 |
-| `utils/list.txt` | Removed | -410 |
-| `utils/mkdocs.yml` | Removed | -103 |
-</details>
 
 
 ---
