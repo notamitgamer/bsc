@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="logoDarkTag" x1="15" y1="8" x2="85" y2="88" gradientUnits="userSpaceOnUse">
+    <linearGradient id="logoDarkCard" x1="8" y1="8" x2="92" y2="92" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#58a6ff"/>
       <stop offset="1" stop-color="#3fb950"/>
     </linearGradient>
   </defs>
-  <path d="M27 18C27 12.477 31.477 8 37 8H63C68.523 8 73 12.477 73 18V85.5C73 88.94 68.94 90.94 66.2 88.8L52.46 78.06C50.99 76.91 48.94 76.91 47.48 78.06L33.8 88.8C31.06 90.94 27 88.94 27 85.5V18Z" fill="url(#logoDarkTag)"/>
-  <circle cx="50" cy="24" r="5" fill="#0d1117"/>
-  <rect x="39" y="38" width="22" height="6" rx="3" fill="#0d1117"/>
-  <rect x="39" y="50" width="16" height="6" rx="3" fill="#0d1117" opacity="0.85"/>
+  <rect x="8" y="8" width="84" height="84" rx="22" fill="url(#logoDarkCard)"/>
+  <path d="M33 31L58 50L33 69" fill="none" stroke="#0d1117" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="60" y="60.5" width="21" height="9" rx="4.5" fill="#0d1117"/>
+  <rect x="75" y="75" width="19" height="19" rx="5" fill="#ff6a42"/>
 </svg>
