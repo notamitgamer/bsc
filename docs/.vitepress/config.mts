@@ -11,6 +11,13 @@ const vitePressConfig = {
   head: [
     // Logo & Fonts
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+
+    // PWA manifest + theme color (fixes the white splash flash on install/launch)
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#0d1117' }],
+    ['link', { rel: 'apple-touch-icon', href: '/logo_192.png' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap' }],
