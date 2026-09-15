@@ -1,15 +1,55 @@
 # Changelog
 
-> Last build: September 15, 2026 at 18:17 UTC
+> Last build: September 15, 2026 at 18:23 UTC
 
 ## Latest Build
 
-- **Build ID** — `c06d45017badb2f757412b285076f0e9c9eefffd`
+- **Build ID** — `36dd7a532e05e16da623e53100b2cecbdb30ed95`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 15, 2026 at 18:17 UTC
+- **Build time** — September 15, 2026 at 18:23 UTC
 
 ## Recent Commits
+
+### [`36dd7a5`](https://github.com/notamitgamer/bsc/commit/36dd7a532e05e16da623e53100b2cecbdb30ed95) Merge pull request #128 from notamitgamer/fix/pwa-splash-screen
+
+**Amit Dutta** committed on Sep 15, 2026 18:23 UTC
+
+
+---
+
+### [`c538c59`](https://github.com/notamitgamer/bsc/commit/c538c590ee1b8cf9f922081d54dfff53a96a8ddf) Add PWA manifest to fix white splash flash on install/launch
+
+**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:22 UTC · +44 / -0 lines · 4 files changed
+
+<details>
+<summary>Show 4 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +7 |
+| `docs/public/logo_maskable_192.png` | Added | binary/no diff |
+| `docs/public/logo_maskable_512.png` | Added | binary/no diff |
+| `docs/public/manifest.webmanifest` | Added | +37 |
+</details>
+
+
+---
+
+### [`88b31af`](https://github.com/notamitgamer/bsc/commit/88b31afeda66d280701cbf262284717a988d2748) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:18 UTC · +44 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +44 -41 |
+</details>
+
+
+---
 
 ### [`c06d450`](https://github.com/notamitgamer/bsc/commit/c06d45017badb2f757412b285076f0e9c9eefffd) Merge pull request #127 from notamitgamer/feature/refresh-logo
 
@@ -111,43 +151,6 @@
 | `utils/key` | Removed | -1 |
 | `utils/list.txt` | Removed | -410 |
 | `utils/mkdocs.yml` | Removed | -103 |
-</details>
-
-
----
-
-### [`16ebabf`](https://github.com/notamitgamer/bsc/commit/16ebabfef8c584bcb8c87352ad5ff84c9642a00e) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:49 UTC · +32 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +32 -40 |
-</details>
-
-
----
-
-### [`5401428`](https://github.com/notamitgamer/bsc/commit/54014288c99cdc759571ba99f1150d7f74b397d5) Merge pull request #125 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-452e010a87
-
-**Amit Dutta** committed on Sep 11, 2026 13:48 UTC
-
-
----
-
-### [`a45bcc9`](https://github.com/notamitgamer/bsc/commit/a45bcc93f5e4f50e12881a3c48e54e288509a8c6) chore(deps-dev): bump js-yaml
-
-**dependabot[bot]** committed on Sep 11, 2026 13:45 UTC · +3 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +3 -3 |
 </details>
 
 
