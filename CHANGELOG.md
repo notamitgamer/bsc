@@ -1,15 +1,47 @@
 # Changelog
 
-> Last build: September 20, 2026 at 09:12 UTC
+> Last build: September 20, 2026 at 09:15 UTC
 
 ## Latest Build
 
-- **Build ID** — `63caee7a43a4f22775de2c37fa3d76996cd7fabd`
+- **Build ID** — `5bcc9df583ef34ab53d9868737bf98e1937a182e`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 20, 2026 at 09:12 UTC
+- **Build time** — September 20, 2026 at 09:15 UTC
 
 ## Recent Commits
+
+### [`5bcc9df`](https://github.com/notamitgamer/bsc/commit/5bcc9df583ef34ab53d9868737bf98e1937a182e) removed class
+
+**Amit Dutta** committed on Sep 20, 2026 09:15 UTC · +3 / -3 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_1/model_questions.md` | Modified | +1 -1 |
+| `docs/semester_2/model_questions.md` | Modified | +1 -1 |
+| `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`57a2867`](https://github.com/notamitgamer/bsc/commit/57a2867e04a9eae692a70479afc2f37eae69dc75) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 20, 2026 09:13 UTC · +35 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +35 -25 |
+</details>
+
+
+---
 
 ### [`63caee7`](https://github.com/notamitgamer/bsc/commit/63caee7a43a4f22775de2c37fa3d76996cd7fabd) fix
 
@@ -124,30 +156,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +41 -59 |
-</details>
-
-
----
-
-### [`775247d`](https://github.com/notamitgamer/bsc/commit/775247d1965a2311dcd1260780be524544faa4ce) Merge pull request #129 from notamitgamer/feature/themed-icon-monochrome
-
-**Amit Dutta** committed on Sep 15, 2026 18:30 UTC
-
-
----
-
-### [`49f376f`](https://github.com/notamitgamer/bsc/commit/49f376fe592ad3a6ead6eda5e11ae17d05251b5d) Add monochrome icon for Android themed icons
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:29 UTC · +12 / -0 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/public/logo_monochrome_192.png` | Added | binary/no diff |
-| `docs/public/logo_monochrome_512.png` | Added | binary/no diff |
-| `docs/public/manifest.webmanifest` | Modified | +12 |
 </details>
 
 
