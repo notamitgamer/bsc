@@ -1,6 +1,6 @@
 ---
 source: 'docs/semester_1/model_questions.md'
-title: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Computer Fundamentals and Programming with C'
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Computer Fundamentals and Programming with C'
 ---
 
 # Model Questions: Computer Fundamentals and Programming with C
@@ -13,7 +13,6 @@ Questions are grouped **unit-wise** matching the WBSU NEP syllabus.
 If you can answer each descriptive question fully, all short/MCQ variants on that topic are automatically covered.
 Attempt at least **2 questions from each unit** before your exam.
 :::
----
 
 ## Unit 1 — Overview of C
 
@@ -41,7 +40,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q12.** What is meant by *scope* and *lifetime* of a variable? Differentiate between local scope, global scope, and block scope with examples. What problem can arise when a local variable has the same name as a global variable, and how does C resolve this?
 
----
 
 ## Unit 2 — Operators, Expressions and Preprocessor
 
@@ -69,7 +67,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q24.** Describe all standard input/output functions available in C: `printf()`, `scanf()`, `getchar()`, `putchar()`, `gets()`, `puts()`. Explain all format specifiers (`%d`, `%f`, `%c`, `%s`, `%e`, `%o`, `%x`, `%p`, `%ld`, `%lf`). Write a program that reads and prints data of multiple types.
 
----
 
 ## Unit 3 — Decision and Loop Control Structures
 
@@ -100,7 +97,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q34.** Write a C program to check whether a number is Armstrong (narcissistic), and use it to print all Armstrong numbers between 1 and 9999. Explain the algorithm. Also write programs to check Palindrome and Perfect numbers.
 
----
 
 ## Unit 4 — Functions and Arrays
 
@@ -126,7 +122,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q45.** Write a C program that reads a sentence and: (a) counts the number of words, vowels, consonants, and digits, (b) converts to uppercase, (c) reverses the sentence word by word (not character by character). Explain the string manipulation logic used.
 
----
 
 ## Unit 5 — Pointers
 
@@ -148,7 +143,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q54.** Explain `const` pointers vs. pointers to `const` in C. What is the difference between: (a) `const int *p`, (b) `int * const p`, (c) `const int * const p`? Give a practical use case for each.
 
----
 
 ## Unit 6 — User-defined Datatypes and Memory Allocation
 
@@ -172,7 +166,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q64.** Describe *bit fields* in C structures. Write a program that uses bit fields to compactly represent a date (day: 5 bits, month: 4 bits, year: 12 bits) inside a structure. What is the advantage of bit fields in embedded/systems programming?
 
----
 
 ## Unit 7 — File Access
 
@@ -192,7 +185,6 @@ Attempt at least **2 questions from each unit** before your exam.
 
 **Q72.** Explain error handling in file operations using `ferror()`, `feof()`, `clearerr()`, and `perror()`. Write a robust file-copy program that handles all possible errors: file not found, insufficient permissions, disk full, etc.
 
----
 
 ## Unit 8 — Mixed / Application Questions
 
@@ -220,7 +212,6 @@ Explain each section of your program.
 
 **Q80.** Explain dynamic memory allocation for a 2D matrix in C using pointer-to-pointer. Write a program that: (a) dynamically allocates an m×n matrix, (b) fills it with random numbers, (c) finds the row with the maximum sum, (d) frees all allocated memory correctly.
 
----
 
 ## Unit 9 — Previous Year Pattern Questions (CBCS-style adapted for NEP)
 
@@ -244,7 +235,6 @@ Explain each section of your program.
 
 **Q90.** Explain *type conversion in assignments*. What happens when you assign a `double` to an `int`? When you assign an `int` to a `char`? Write a program that demonstrates both implicit narrowing and widening conversions, and show how to use explicit casting to control the result.
 
----
 
 ## Unit 10 — Long Answer / Essay Type (10–15 marks equivalent)
 
@@ -268,7 +258,6 @@ Explain each section of your program.
 
 **Q100.** Explain the **compilation process** in C in detail. Describe the four stages: (a) Preprocessing — what changes, (b) Compilation — converting to assembly, (c) Assembly — producing object code, (d) Linking — resolving symbols and producing executable. Explain what happens at each stage to the source code. What are `.o` files, `.a` (static library) files, and `.so` (shared library) files? How does the linker resolve external references?
 
----
 
 ## Unit 11 — Bonus Questions (Practice Set)
 
@@ -292,7 +281,6 @@ Explain each section of your program.
 
 **Q110.** Write a complete C program for a **text-based tic-tac-toe game** for two players. Use a 2D array for the board, functions for: displaying the board, checking win/draw conditions, and taking turns. Explain each function. How would you extend this to play against the computer?
 
----
 
 ## Quick Reference: Syllabus Unit Map
 

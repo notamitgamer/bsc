@@ -1,6 +1,6 @@
 ---
 source: 'docs/semester_2/model_questions_py.md'
-title: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Programming for Problem Solving using Python'
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Programming for Problem Solving using Python'
 ---
 
 # Model Questions: Programming for Problem Solving using Python
@@ -13,7 +13,6 @@ This is a **sure-shot / high-priority** list built directly on the SEC Python st
 (Modules 1–6). All 8 practical programs from the syllabus are included **in full** below —
 memorise and be able to reproduce each one, since the practical exam draws directly from this set.
 :::
----
 
 ## Unit 1 — Program Planning & Problem Solving Techniques (Module 1 & 2)
 
@@ -27,7 +26,6 @@ memorise and be able to reproduce each one, since the practical exam draws direc
 
 **Q5.** What is **debugging**? Explain the three categories of programming errors — **Syntax Errors**, **Runtime Errors (Exceptions)**, and **Logical Errors** — with one example of each.
 
----
 
 ## Unit 2 — Overview & Introduction to Python (Module 3 & 4)
 
@@ -39,7 +37,6 @@ memorise and be able to reproduce each one, since the practical exam draws direc
 
 **Q9.** Differentiate between `/` (true division), `//` (floor division), and `%` (modulus) in Python with example outputs for `17 / 5`, `17 // 5`, and `17 % 5`.
 
----
 
 ## Unit 3 — Creating Python Programs: Input, Conditions & Loops (Module 5)
 
@@ -59,7 +56,6 @@ memorise and be able to reproduce each one, since the practical exam draws direc
 
 **Q17.** What is a **function** in Python? How is it defined using `def`? What are **default arguments** in a function — explain with an example.
 
----
 
 ## Unit 4 — Practical Programs (Module 6) — Sure-Shot Practical Questions
 
@@ -277,7 +273,6 @@ for i in range(1, n + 1):
 print(f"Sum of the series up to {n} terms = {sum_series:.4f}")
 ```
 
----
 
 ## Quick Reference: Syllabus Unit Map
 

@@ -1,6 +1,6 @@
 ---
 source: 'docs/semester_2/model_questions.md'
-title: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Data Structures (with C/C++)'
+title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-text preview-icon"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg> Model Questions: Data Structures (with C/C++)'
 ---
 
 # Model Questions: Data Structures (with C/C++)
@@ -13,7 +13,6 @@ This is a **sure-shot / high-priority** list only — not exhaustive like the Se
 It is built directly on top of the [Sem 2 DSA notes (N01–N13)](../download) — read those PDFs alongside this.
 Focus on these first; if time remains, expand into the full notes.
 :::
----
 
 ## Unit 1 — Introduction, ADT & Complexity
 
@@ -25,7 +24,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q4.** Differentiate between **best case, average case, and worst case** complexity with an example (e.g., linear search).
 
----
 
 ## Unit 2 — Arrays
 
@@ -45,7 +43,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q11a.** Give Knuth's definition of a data structure (as covered in note N01). Classify the following into Linear / Non-Linear / Multi-linked / Dynamic structures: Array, Tree, Doubly Linked List, Stack, Graph, Memory Management structures.
 
----
 
 ## Unit 3 — Linked List
 
@@ -67,7 +64,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q19a.** Write the C++ **node structure** and the `Chain<T>` class outline for a template-based singly linked list (data field + `link`/`next` pointer field). Using this, write the `Length()`, `Find(k, x)`, `Insert(k, x)`, and `Delete(k, x)` member functions, explaining the special handling needed when `k = 0` (inserting/deleting at the head).
 
----
 
 ## Unit 4 — Stack
 
@@ -87,7 +83,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q25b.** Explain how a **stack can be implemented using two queues**, and conversely how a **queue can be implemented using two stacks**. Write the `Push`/`Pop` (or `Enqueue`/`Dequeue`) logic for one of these conversions.
 
----
 
 ## Unit 5 — Queue
 
@@ -107,7 +102,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q31b.** Write an algorithm/program to check whether a queue is a **palindrome** (using an auxiliary stack), and to **interleave the first and second halves** of a queue.
 
----
 
 ## Unit 6 — Recursion
 
@@ -125,7 +119,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q36b.** List at least four applications of recursion in data structures and algorithms (tree traversal, graph DFS, backtracking, divide-and-conquer such as Merge/Quick Sort). Write a recursive function to compute **xⁿ** (power) and to **reverse a linked list** recursively.
 
----
 
 ## Unit 7 — Trees (Binary Tree & BST)
 
@@ -153,7 +146,6 @@ Focus on these first; if time remains, expand into the full notes.
 
 **Q45c.** Write recursive functions to: (a) **count total nodes**, (b) **count leaf nodes**, (c) compute the **height**, (d) check if **two binary trees are identical**, and (e) **validate whether a binary tree is a valid BST** (using a min/max range check).
 
----
 
 ## Quick Reference: Syllabus Unit Map
 
