@@ -1,15 +1,47 @@
 # Changelog
 
-> Last build: September 20, 2026 at 09:15 UTC
+> Last build: September 20, 2026 at 09:22 UTC
 
 ## Latest Build
 
-- **Build ID** — `5bcc9df583ef34ab53d9868737bf98e1937a182e`
+- **Build ID** — `9730d0b740571bc9ddbb7c579f5a929b60bdb288`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 20, 2026 at 09:15 UTC
+- **Build time** — September 20, 2026 at 09:22 UTC
 
 ## Recent Commits
+
+### [`9730d0b`](https://github.com/notamitgamer/bsc/commit/9730d0b740571bc9ddbb7c579f5a929b60bdb288) fixed
+
+**Amit Dutta** committed on Sep 20, 2026 09:22 UTC · +3 / -3 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_1/model_questions.md` | Modified | +1 -1 |
+| `docs/semester_2/model_questions.md` | Modified | +1 -1 |
+| `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`4877da5`](https://github.com/notamitgamer/bsc/commit/4877da530979eb935a65d28d660db0a156ed8bd3) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 20, 2026 09:16 UTC · +35 / -27 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +35 -27 |
+</details>
+
+
+---
 
 ### [`5bcc9df`](https://github.com/notamitgamer/bsc/commit/5bcc9df583ef34ab53d9868737bf98e1937a182e) removed class
 
@@ -126,36 +158,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `.gitignore` | Modified | +1 -3 |
-</details>
-
-
----
-
-### [`b00a2c9`](https://github.com/notamitgamer/bsc/commit/b00a2c9253456b5869125e742b2a593b790e0770) added questions
-
-**Amit Dutta** committed on Sep 20, 2026 08:58 UTC · +2 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.gitignore` | Modified | +2 |
-</details>
-
-
----
-
-### [`09c7e5e`](https://github.com/notamitgamer/bsc/commit/09c7e5e74f3dfd23dcd72216e337635d2d779e5a) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:31 UTC · +41 / -59 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -59 |
 </details>
 
 
