@@ -18,9 +18,7 @@ __pycache__/
 Thumbs.db
 docs/semester_*/
 !docs/semester_*/index.md
-!docs/semester_1/model_questions.md
-!docs/semester_2/model_questions.md
-!docs/semester_2/model_question_py.md
+!docs/semester_*/model_question*.md
 .vitepress/cache
 .vitepress/dist
 buildLog
