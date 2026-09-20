@@ -1,15 +1,47 @@
 # Changelog
 
-> Last build: September 20, 2026 at 09:06 UTC
+> Last build: September 20, 2026 at 09:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `4e6b7776108582a569256a20e0b3fbc498902d1c`
+- **Build ID** — `63caee7a43a4f22775de2c37fa3d76996cd7fabd`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 20, 2026 at 09:06 UTC
+- **Build time** — September 20, 2026 at 09:12 UTC
 
 ## Recent Commits
+
+### [`63caee7`](https://github.com/notamitgamer/bsc/commit/63caee7a43a4f22775de2c37fa3d76996cd7fabd) fix
+
+**Amit Dutta** committed on Sep 20, 2026 09:12 UTC · +3 / -28 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_1/model_questions.md` | Modified | +1 -13 |
+| `docs/semester_2/model_questions.md` | Modified | +1 -9 |
+| `docs/semester_2/model_questions_py.md` | Modified | +1 -6 |
+</details>
+
+
+---
+
+### [`709ea2c`](https://github.com/notamitgamer/bsc/commit/709ea2c9c9fcb49d40bc74d1efefcd530682d467) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 20, 2026 09:07 UTC · +46 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +46 -41 |
+</details>
+
+
+---
 
 ### [`4e6b777`](https://github.com/notamitgamer/bsc/commit/4e6b7776108582a569256a20e0b3fbc498902d1c) Merge pull request #130 from notamitgamer/edit-20260920-143035
 
@@ -117,28 +149,6 @@
 | `docs/public/logo_monochrome_512.png` | Added | binary/no diff |
 | `docs/public/manifest.webmanifest` | Modified | +12 |
 </details>
-
-
----
-
-### [`852a56a`](https://github.com/notamitgamer/bsc/commit/852a56a53dee6b5689af4c51fd91b4ecef8197b9) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:24 UTC · +43 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +43 -40 |
-</details>
-
-
----
-
-### [`36dd7a5`](https://github.com/notamitgamer/bsc/commit/36dd7a532e05e16da623e53100b2cecbdb30ed95) Merge pull request #128 from notamitgamer/fix/pwa-splash-screen
-
-**Amit Dutta** committed on Sep 15, 2026 18:23 UTC
 
 
 ---
