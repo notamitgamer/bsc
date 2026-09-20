@@ -1,15 +1,101 @@
 # Changelog
 
-> Last build: September 15, 2026 at 18:30 UTC
+> Last build: September 20, 2026 at 09:06 UTC
 
 ## Latest Build
 
-- **Build ID** — `775247d1965a2311dcd1260780be524544faa4ce`
+- **Build ID** — `4e6b7776108582a569256a20e0b3fbc498902d1c`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 15, 2026 at 18:30 UTC
+- **Build time** — September 20, 2026 at 09:06 UTC
 
 ## Recent Commits
+
+### [`4e6b777`](https://github.com/notamitgamer/bsc/commit/4e6b7776108582a569256a20e0b3fbc498902d1c) Merge pull request #130 from notamitgamer/edit-20260920-143035
+
+**Amit Dutta** committed on Sep 20, 2026 09:06 UTC
+
+
+---
+
+### [`4bc971a`](https://github.com/notamitgamer/bsc/commit/4bc971adcf56b66b9af97b857b10334e7e29e4c6) fixed
+
+**Amit Dutta** committed on Sep 20, 2026 09:05 UTC · +4 / -4 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_1/model_questions.md` | Modified | +1 -1 |
+| `docs/semester_2/model_questions.md` | Modified | +2 -2 |
+| `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`ceb4107`](https://github.com/notamitgamer/bsc/commit/ceb4107f80894b98c7bf0977b99db89f0045efc3) fixed
+
+**Amit Dutta** committed on Sep 20, 2026 09:00 UTC · +482 / -1 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.gitignore` | Modified | +1 -1 |
+| `docs/semester_2/model_questions.md` | Added | +180 |
+| `docs/semester_2/model_questions_py.md` | Added | +301 |
+</details>
+
+
+---
+
+### [`84d600a`](https://github.com/notamitgamer/bsc/commit/84d600a6cfce386e22a3ac475fbbc2e17973260b) added questions
+
+**Amit Dutta** committed on Sep 20, 2026 08:59 UTC · +1 / -3 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.gitignore` | Modified | +1 -3 |
+</details>
+
+
+---
+
+### [`b00a2c9`](https://github.com/notamitgamer/bsc/commit/b00a2c9253456b5869125e742b2a593b790e0770) added questions
+
+**Amit Dutta** committed on Sep 20, 2026 08:58 UTC · +2 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.gitignore` | Modified | +2 |
+</details>
+
+
+---
+
+### [`09c7e5e`](https://github.com/notamitgamer/bsc/commit/09c7e5e74f3dfd23dcd72216e337635d2d779e5a) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:31 UTC · +41 / -59 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -59 |
+</details>
+
+
+---
 
 ### [`775247d`](https://github.com/notamitgamer/bsc/commit/775247d1965a2311dcd1260780be524544faa4ce) Merge pull request #129 from notamitgamer/feature/themed-icon-monochrome
 
@@ -53,87 +139,6 @@
 ### [`36dd7a5`](https://github.com/notamitgamer/bsc/commit/36dd7a532e05e16da623e53100b2cecbdb30ed95) Merge pull request #128 from notamitgamer/fix/pwa-splash-screen
 
 **Amit Dutta** committed on Sep 15, 2026 18:23 UTC
-
-
----
-
-### [`c538c59`](https://github.com/notamitgamer/bsc/commit/c538c590ee1b8cf9f922081d54dfff53a96a8ddf) Add PWA manifest to fix white splash flash on install/launch
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:22 UTC · +44 / -0 lines · 4 files changed
-
-<details>
-<summary>Show 4 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +7 |
-| `docs/public/logo_maskable_192.png` | Added | binary/no diff |
-| `docs/public/logo_maskable_512.png` | Added | binary/no diff |
-| `docs/public/manifest.webmanifest` | Added | +37 |
-</details>
-
-
----
-
-### [`88b31af`](https://github.com/notamitgamer/bsc/commit/88b31afeda66d280701cbf262284717a988d2748) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:18 UTC · +44 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +44 -41 |
-</details>
-
-
----
-
-### [`c06d450`](https://github.com/notamitgamer/bsc/commit/c06d45017badb2f757412b285076f0e9c9eefffd) Merge pull request #127 from notamitgamer/feature/refresh-logo
-
-**Amit Dutta** committed on Sep 15, 2026 18:17 UTC
-
-
----
-
-### [`e7b92e1`](https://github.com/notamitgamer/bsc/commit/e7b92e1197e945c2b4f5bf50abaed82d943097bd) Refresh logo with a bolder, code-focused mark
-
-**bot-for-notamitgamer[bot]** committed on Sep 15, 2026 18:16 UTC · +17 / -18 lines · 5 files changed
-
-<details>
-<summary>Show 5 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/public/favicon.svg` | Modified | +5 -6 |
-| `docs/public/logo_192.png` | Modified | binary/no diff |
-| `docs/public/logo_512.png` | Modified | binary/no diff |
-| `docs/public/logo_dark.svg` | Modified | +6 -6 |
-| `docs/public/logo_light.svg` | Modified | +6 -6 |
-</details>
-
-
----
-
-### [`085b763`](https://github.com/notamitgamer/bsc/commit/085b7631ae74f32bd84f2b71ebd84a77c552d51c) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 11, 2026 13:57 UTC · +57 / -38 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +57 -38 |
-</details>
-
-
----
-
-### [`52d9282`](https://github.com/notamitgamer/bsc/commit/52d9282da27b7d4b20163921818f92d739d02c3c) Merge pull request #126 from notamitgamer/chore/cleanup-legacy-cruft
-
-**Amit Dutta** committed on Sep 11, 2026 13:56 UTC
 
 
 ---
