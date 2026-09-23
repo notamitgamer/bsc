@@ -1,3 +1,5 @@
+/* Perform Stack operations using Linked List implementation. */
+
 #include <iostream>
 using namespace std;
 

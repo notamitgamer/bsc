@@ -1,3 +1,5 @@
+/* Perform Stack operations using Array implementation. */
+
 #include <iostream>
 using namespace std;
 

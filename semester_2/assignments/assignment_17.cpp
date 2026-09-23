@@ -1,3 +1,5 @@
+/* WAP to convert the Sparse Matrix into non-zero form and vice-versa. */
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+/* Perform Queues operations using linklist. */
+
 #include <iostream>
 using namespace std;
 

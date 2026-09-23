@@ -1,3 +1,5 @@
+/* WAP to reverse the order of the elements in the stack using additional stack. */
+
 #include <iostream>
 using namespace std;
 
@@ -14,7 +16,6 @@ public:
         top = -1;
     }
 
-    // Disable copy constructor and assignment operator
     Stack(const Stack&) = delete;
     Stack& operator=(const Stack&) = delete;
 

@@ -1,3 +1,5 @@
+/* WAP to create a Binary Search Tree and include following operations in tree: i. Insertion (Recursive and Iterative Implementation) ii. Deletion by copying iii. Deletion by Merging iv. Search a no. in BST v. Display its preorder, postorder and inorder traversals Recursively vi. Display its preorder, postorder and inorder traversals Iteratively vii. Display its level-by-level traversals viii. Count the non-leaf nodes and leaf nodes ix. Display height of tree x. Create a mirror image of tree xi. Check whether two BSTs are equal or not */
+
 #include <iostream>
 #include <stack>
 #include <queue>
