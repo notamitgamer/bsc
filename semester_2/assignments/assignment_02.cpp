@@ -1,434 +1,150 @@
-/* Linked List all operation */
+/* Program to search an element from a list using Linear Search or Binary Search */
 
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
+
 using namespace std;
 
-typedef struct nodeType {
-    int data;
-    nodeType *next = nullptr;
-} node;
-
 typedef struct MenuItem {
-    int id; 
+    int id;
     const char* name;
 } menu;
 
-typedef class singlyLinkedList {
-private: 
-    node *head = nullptr;
-public: 
-    // insertion
-    void insAtBegin();
-    void insAtEnd();
-    void insAtPos();
-    void insBeforePos();
-    void insAfterPos();
+class SearchList {
+private:
+    int *arr;
+    int n;
 
-    // deletion
-    void delAtBegin();
-    void delAtEnd();
-    void delAtPos();
-    void delBeforePos();
-    void delAfterPos();
-
-    void printMenu();
-    void display();
-    ~singlyLinkedList();
-} sl;
-
-void sl :: printMenu() {
-    menu items[] = {
-        {1, "insertAtBegin()"}, {2, "insertAtEnd()"}, {3, "insertAtPos()"}, 
-        {4, "insertBeforePos()"}, {5, "insertAfterPos()"}, {6, "deleteAtBegin()"},
-        {7, "deleteAtEnd()"}, {8, "deleteAtPos()"}, {9, "deleteBeforePos()"}, 
-        {10, "deleteAfterPos()"}, {0, "Display"}, {-1, "Exit"}
-    };
-
-    cout << "\n## Choose from below --\n--------------------------------------------\n";
-    for (int i = 0; i < 12; i++) {
-        cout << items[i].id << ". " << left << setw(20) << items[i].name;
-        if (i % 2 == 1) cout << "\n";
-    }
-}
-
-void sl :: display() {
-    node *tmpNode = head;
-    cout << "\nCurrent Linked-List: ";
-    while(tmpNode != nullptr) {
-        cout << tmpNode -> data << "  ";
-        tmpNode = tmpNode -> next;
-    }
-    cout << "nullptr\n";
-}
-
-sl :: ~singlyLinkedList() {
-    node *tmpNode;
-    while(head != nullptr) {
-        tmpNode = head;
-        head = head -> next;
-        delete tmpNode;
-    }
-    cout << "\nMemory cleared!\nExit 0\n";
-}
-
-void sl :: insAtBegin() {
-        node *newNode = new node;
-        cout << "\nEnter the value: ";
-        cin >> newNode -> data;
-        newNode -> next = head;
-        head = newNode;
-        cout << "\nNode added successfully!\n";
-}
-
-void sl :: insAtEnd() {
-    node *newNode = new node;
-    cout << "\nEnter the value: ";
-    cin >> newNode -> data;
-    
-    if(head == nullptr) {
-        head = newNode;
-    } else {
-        node *tmpNode = head;
-        while(tmpNode -> next != nullptr) {
-            tmpNode = tmpNode -> next;
+    void insertionSort() {
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
         }
-        tmpNode -> next = newNode;
-    }
-    cout << "\nNode added successfully!\n";
-}
-
-void sl :: insAtPos() {
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >>  pos;
-
-    if(pos < 1) {
-        cout << "\nInvalid Position! Try again...\n";
-        return;
     }
 
-    if(pos == 1) {
-        insAtBegin();
-    } else {
-        node *tmpNode = head;
-        for(int i = 1; i < pos - 1 && tmpNode != nullptr; i++) {
-            tmpNode = tmpNode -> next;
+public:
+    SearchList(int size) {
+        n = size;
+        arr = new int[n];
+    }
+
+    void inputElements() {
+        cout << "\nEnter " << n << " elements: ";
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
         }
+    }
 
-        if(tmpNode == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
+    int linearSearch(int key) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == key) {
+                return i;
+            }
         }
-
-        node *newNode = new node;
-        cout << "\nEnter the value: ";
-        cin >> newNode -> data;
-        newNode -> next = tmpNode -> next;
-        tmpNode -> next = newNode;
-        cout << "\nNode added successfully!\n";
+        return -1;
     }
-}
 
-void sl :: insBeforePos() {
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >>  pos;
+    int binarySearch(int key) {
+        // Binary search requires the collection to be sorted
+        insertionSort();
+        cout << "\n(Array automatically sorted for Binary Search)";
+        display();
 
-    if(pos < 1) {
-        cout << "\nInvalid Position! Try again...\n";
-        return;
-    }
-    
-    if(pos == 1) {
-        insAtBegin();
-    } else {
-        node *tmpNode = head;
-        node *tail = nullptr;
-        for(int i = 1; i < pos && tmpNode != nullptr; i++) {
-            tail = tmpNode;
-            tmpNode = tmpNode -> next;
+        int left = 0;
+        int right = n - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == key) {
+                return mid;
+            } else if (arr[mid] < key) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
+        return -1;
+    }
 
-        if(tmpNode == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
+    void display() {
+        cout << "\nCurrent List: ";
+        for (int i = 0; i < n; i++) {
+            cout << arr[i] << " ";
         }
-
-        node *newNode = new node;
-        cout << "\nEnter the value: ";
-        cin >> newNode -> data;
-        newNode -> next = tmpNode;
-        tail -> next = newNode;
-        cout << "\nNode added successfully!\n";
-    }
-}
-
-void sl :: insAfterPos() {
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >> pos;
-
-    if(pos < 0) {
-        cout << "\nInvalid position! Try again...\n";
-        return;
+        cout << endl;
     }
 
-    node *tmpNode = head;
-    if(pos == 0) {
-        insAtBegin();
-    } else {
-        for(int i = 1; i < pos && tmpNode != nullptr; i++) {
-            tmpNode = tmpNode -> next;
+    void printMenu() {
+        menu items[] = {
+            {1, "Linear Search"}, {2, "Binary Search"},
+            {0, "Display List"},  {-1, "Exit"}
+        };
+
+        cout << "\n## Choose Search Method --\n--------------------------------------------\n";
+        for (int i = 0; i < 4; i++) {
+            cout << items[i].id << ". " << left << setw(20) << items[i].name;
+            if (i % 2 == 1) cout << "\n";
         }
-
-        if(tmpNode == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
-        }
-
-        node *newNode = new node;
-        cout << "\nEnter the value: ";
-        cin >> newNode -> data;
-        newNode -> next = tmpNode -> next;
-        tmpNode -> next = newNode;
-        cout << "\nNode added successfully!\n";
-    }
-}
-
-void sl :: delAtBegin() {
-    if(head == nullptr) {
-        cout << "\nUnable to process this request!\nLinked List is empty!\n";
-        return;
-    }
-    node *tmpNode = head;
-    head = head -> next;
-    int tmpNodeData = tmpNode -> data;
-    delete tmpNode;
-    cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-}
-
-void sl :: delAtEnd() {
-    if(head == nullptr) {
-        cout << "\nUnable to process this request!\nLinked List is empty!\n";
-        return;
-    }
-    
-    if(head -> next == nullptr) {
-        int tmpNodeData = head -> data;
-        delete head;
-        head = nullptr;
-
-        cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-        return;
     }
 
-    node *tmpNode = head;
-    while(tmpNode -> next -> next != nullptr) {
-        tmpNode = tmpNode -> next;
+    ~SearchList() {
+        delete[] arr;
     }
-
-    int tmpNodeData = tmpNode -> next -> data;
-    delete tmpNode -> next;
-    tmpNode -> next = nullptr;
-    cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-}
-
-void sl :: delAtPos() {
-    if(head == nullptr) {
-        cout << "\nUnable to process this request!\nLinked List is empty!\n";
-        return;
-    }
-
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >> pos;
-
-    if(pos < 1) {
-        cout << "\nInvalid Position! Try again...\n";
-        return;
-    }
-
-    if(pos == 1) {
-        delAtBegin();
-    } else {
-        node *tmpNode = head;
-        for(int i = 1; i < pos - 1 && tmpNode != nullptr; i++) {
-            tmpNode = tmpNode -> next;
-        }
-
-        if(tmpNode == nullptr || tmpNode -> next == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
-        }
-
-        node *tmpNode2 = tmpNode -> next;
-        int tmpNodeData = tmpNode -> next -> data;
-        tmpNode -> next = tmpNode -> next -> next;
-        delete tmpNode2;
-        cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-    }
-}
-
-void sl :: delBeforePos() {
-    if(head == nullptr) {
-        cout << "\nUnable to process this request!\nLinked List is empty!\n";
-        return;
-    }
-
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >> pos;
-
-    if(pos <= 1) {
-        cout << "\nInvalid position! Try again...\n";
-        return;
-    }
-
-    if(pos == 2) {
-        delAtBegin();
-    } else {
-        node *tmpNode = head;
-        node *tailNode = nullptr;
-        for(int i = 1; i < pos - 1 && tmpNode != nullptr; i++) {
-            tailNode = tmpNode;
-            tmpNode = tmpNode -> next;
-        }
-
-        if(tmpNode == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
-        }
-
-        tailNode -> next = tmpNode -> next;
-        int tmpNodeData = tmpNode -> data;
-        delete tmpNode;
-        cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-    }
-}
-
-void sl :: delAfterPos() {
-    if(head == nullptr) {
-        cout << "\nUnable to process this request!\nLinked List is empty!\n";
-        return;
-    }
-
-    int pos;
-    cout << "\nEnter the position: ";
-    cin >> pos;
-
-    if(pos < 0) {
-        cout << "\nInvalid position! Try again...\n";
-        return;
-    }
-
-    if(pos == 0) {
-        delAtBegin();
-    } else {
-        node *tmpNode = head;
-        for(int i = 1; i < pos && tmpNode != nullptr; i++) {
-            tmpNode = tmpNode -> next;
-        }
-
-        if(tmpNode == nullptr || tmpNode -> next == nullptr) {
-            cout << "\nOut of range! Try again...\n";
-            return;
-        }
-
-        node *tmpNode2 = tmpNode -> next;
-        int tmpNodeData = tmpNode2 -> data;
-        tmpNode -> next = tmpNode2 -> next;
-        delete tmpNode2;
-        cout << "\nNode deleted successfully!\nDeleted node data: " << tmpNodeData << endl;
-    }
-}
+};
 
 int main() {
-    sl obj;
-    int choice;
-    while(1) {
-        obj.printMenu();
+    int n, choice, key;
+    cout << "Enter the size of the list: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Invalid list size!\n";
+        return 0;
+    }
+
+    SearchList list(n);
+    list.inputElements();
+
+    while (true) {
+        list.printMenu();
         cout << "Enter your choice: ";
         cin >> choice;
-        switch(choice) {
-            case 1:
-                obj.insAtBegin();
+
+        switch (choice) {
+            case 1: {
+                cout << "\nEnter element to search: ";
+                cin >> key;
+                int index = list.linearSearch(key);
+                if (index != -1)
+                    cout << "\nElement " << key << " found at index " << index << ".\n";
+                else
+                    cout << "\nElement " << key << " not found in the list.\n";
                 break;
-            case 2: 
-                obj.insAtEnd();
+            }
+            case 2: {
+                cout << "\nEnter element to search: ";
+                cin >> key;
+                int index = list.binarySearch(key);
+                if (index != -1)
+                    cout << "\nElement " << key << " found at index " << index << " in sorted array.\n";
+                else
+                    cout << "\nElement " << key << " not found in the list.\n";
                 break;
-            case 3: 
-                obj.insAtPos();
-                break;
-            case 4: 
-                obj.insBeforePos();
-                break;
-            case 5: 
-                obj.insAfterPos();
-                break;
-            case 6: 
-                obj.delAtBegin();
-                break;
-            case 7: 
-                obj.delAtEnd();
-                break;
-            case 8: 
-                obj.delAtPos();
-                break;
-            case 9: 
-                obj.delBeforePos();
-                break;
-            case 10:
-                obj.delAfterPos();
-                break;
+            }
             case 0:
-                obj.display();
+                list.display();
                 break;
-            case -1: 
-                cout << "\n\n\nExiting program.....\nTrying to clear memory.....";
+            case -1:
+                cout << "\nExiting program.....\nMemory cleared!\nExit 0\n";
                 return 0;
-            default: 
-                cout << "\nEntered wrong choice.\n";
+            default:
+                cout << "\nEntered wrong choice. Try again.\n";
         }
     }
 }
-
-/*
-===== Inputs to check every fns and edge cases =====
-
-0
-6
-7
-8
-9
-10
-3 -1
-3 2
-4 0
-5 -1
-5 1
-1 100
-0
-8 2
-9 1
-10 1
-7
-0
-2 10
-2 20
-2 30
-2 40
-1 5
-3 3 15
-4 6 25
-5 2 8
-5 0 2
-0
-8 4
-9 4
-10 0
-10 5
-0
--1
-
-*/
