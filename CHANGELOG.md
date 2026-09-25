@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 23, 2026 at 16:05 UTC
+> Last build: September 25, 2026 at 06:57 UTC
 
 ## Latest Build
 
-- **Build ID** — `cc41d490781437ffe5e47ea061935a518ac46569`
+- **Build ID** — `44abd6e36dd79824389a365259fdb6d677db90a2`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 23, 2026 at 16:05 UTC
+- **Build time** — September 25, 2026 at 06:57 UTC
 
 ## Recent Commits
+
+### [`44abd6e`](https://github.com/notamitgamer/bsc/commit/44abd6e36dd79824389a365259fdb6d677db90a2) Update Model Questions entry to use 'PYTHON'
+
+**Amit Dutta** committed on Sep 25, 2026 06:57 UTC · +2 / -2 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_2/index.md` | Modified | +2 -2 |
+</details>
+
+
+---
+
+### [`ff4d7a2`](https://github.com/notamitgamer/bsc/commit/ff4d7a26597f54359278a3e109d6b0af7f226707) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 23, 2026 16:06 UTC · +92 / -49 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +92 -49 |
+</details>
+
+
+---
 
 ### [`cc41d49`](https://github.com/notamitgamer/bsc/commit/cc41d490781437ffe5e47ea061935a518ac46569) Merge pull request #131 from notamitgamer/edit-20260923-212723
 
@@ -169,38 +199,6 @@
 | `docs/semester_1/model_questions.md` | Modified | +1 -1 |
 | `docs/semester_2/model_questions.md` | Modified | +1 -1 |
 | `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`57a2867`](https://github.com/notamitgamer/bsc/commit/57a2867e04a9eae692a70479afc2f37eae69dc75) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 20, 2026 09:13 UTC · +35 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +35 -25 |
-</details>
-
-
----
-
-### [`63caee7`](https://github.com/notamitgamer/bsc/commit/63caee7a43a4f22775de2c37fa3d76996cd7fabd) fix
-
-**Amit Dutta** committed on Sep 20, 2026 09:12 UTC · +3 / -28 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/semester_1/model_questions.md` | Modified | +1 -13 |
-| `docs/semester_2/model_questions.md` | Modified | +1 -9 |
-| `docs/semester_2/model_questions_py.md` | Modified | +1 -6 |
 </details>
 
 
