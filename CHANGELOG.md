@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 25, 2026 at 15:12 UTC
+> Last build: September 25, 2026 at 15:22 UTC
 
 ## Latest Build
 
-- **Build ID** — `e97f9ac286edcf238a943b4c1b72013cb7d85d79`
+- **Build ID** — `3549e1399e6886a2548bbd584236ab2d7b862062`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 15:12 UTC
+- **Build time** — September 25, 2026 at 15:22 UTC
 
 ## Recent Commits
+
+### [`3549e13`](https://github.com/notamitgamer/bsc/commit/3549e1399e6886a2548bbd584236ab2d7b862062) Update SVG dimensions and modify cube design
+
+**Amit Dutta** committed on Sep 25, 2026 15:22 UTC · +27 / -28 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +27 -28 |
+</details>
+
+
+---
+
+### [`520a25a`](https://github.com/notamitgamer/bsc/commit/520a25a0f963505befd820b24615480bb66c9577) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 15:13 UTC · +45 / -61 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +45 -61 |
+</details>
+
+
+---
 
 ### [`e97f9ac`](https://github.com/notamitgamer/bsc/commit/e97f9ac286edcf238a943b4c1b72013cb7d85d79) Merge pull request #134 from notamitgamer/footer-cleanup
 
@@ -103,38 +133,6 @@
 ### [`f5bc6a0`](https://github.com/notamitgamer/bsc/commit/f5bc6a0602019f96244580ed5e14408196df2eca) Merge pull request #132 from notamitgamer/feature/github-docs-inspired-footer
 
 **Amit Dutta** committed on Sep 25, 2026 11:31 UTC
-
-
----
-
-### [`6c6d17e`](https://github.com/notamitgamer/bsc/commit/6c6d17eb6e6f26c87b12eec7cadaec676b9d62d4) Add GitHub Docs-inspired footer with isometric illustration
-
-**bot-for-notamitgamer** committed on Sep 25, 2026 10:54 UTC · +274 / -2 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Added | +233 |
-| `docs/.vitepress/theme/index.ts` | Modified | +5 -1 |
-| `docs/.vitepress/theme/style.css` | Modified | +36 -1 |
-</details>
-
-
----
-
-### [`d36cd12`](https://github.com/notamitgamer/bsc/commit/d36cd129d81220e805017b4bef9a0c97f2a77021) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 06:58 UTC · +33 / -35 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -35 |
-</details>
 
 
 ---
