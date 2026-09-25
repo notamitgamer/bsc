@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 25, 2026 at 16:00 UTC
+> Last build: September 25, 2026 at 16:04 UTC
 
 ## Latest Build
 
-- **Build ID** — `b2e39fc8f6b0b39bac19b9120c8d25e174395e1b`
+- **Build ID** — `bbfc766dbe29f779f02d813639805e162fd108e0`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 16:00 UTC
+- **Build time** — September 25, 2026 at 16:04 UTC
 
 ## Recent Commits
+
+### [`bbfc766`](https://github.com/notamitgamer/bsc/commit/bbfc766dbe29f779f02d813639805e162fd108e0) Refactor DocFooterExtra.vue for improved layout
+
+**Amit Dutta** committed on Sep 25, 2026 16:04 UTC · +141 / -627 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +141 -627 |
+</details>
+
+
+---
+
+### [`2c0cb0b`](https://github.com/notamitgamer/bsc/commit/2c0cb0bb33f75f7c492e6f6721f5aab3ac40dd46) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 16:01 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`b2e39fc`](https://github.com/notamitgamer/bsc/commit/b2e39fc8f6b0b39bac19b9120c8d25e174395e1b) Update DocFooterExtra.vue
 
@@ -118,36 +148,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/theme/index.ts` | Modified | +2 -4 |
-</details>
-
-
----
-
-### [`6f565df`](https://github.com/notamitgamer/bsc/commit/6f565df1167a1c0d9d11d179e4749eb2e35c2355) Refactor SVG divider and add new arrow cluster
-
-**Amit Dutta** committed on Sep 25, 2026 15:08 UTC · +30 / -16 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +30 -16 |
-</details>
-
-
----
-
-### [`27bf419`](https://github.com/notamitgamer/bsc/commit/27bf419cf5200456029b7d0825dd95e269304a84) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 12:01 UTC · +40 / -79 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -79 |
 </details>
 
 
