@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 25, 2026 at 15:53 UTC
+> Last build: September 25, 2026 at 16:00 UTC
 
 ## Latest Build
 
-- **Build ID** — `89f4e5bf0c1ec1d405a8ed5660f1f252e00dc3c3`
+- **Build ID** — `b2e39fc8f6b0b39bac19b9120c8d25e174395e1b`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 15:53 UTC
+- **Build time** — September 25, 2026 at 16:00 UTC
 
 ## Recent Commits
+
+### [`b2e39fc`](https://github.com/notamitgamer/bsc/commit/b2e39fc8f6b0b39bac19b9120c8d25e174395e1b) Update DocFooterExtra.vue
+
+**Amit Dutta** committed on Sep 25, 2026 16:00 UTC · +506 / -270 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +506 -270 |
+</details>
+
+
+---
+
+### [`3c2c8f6`](https://github.com/notamitgamer/bsc/commit/3c2c8f6b469e286629c1597858ffb2d213589c55) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 15:54 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`89f4e5b`](https://github.com/notamitgamer/bsc/commit/89f4e5bf0c1ec1d405a8ed5660f1f252e00dc3c3) Update DocFooterExtra.vue
 
@@ -118,28 +148,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +40 -79 |
-</details>
-
-
----
-
-### [`549fe90`](https://github.com/notamitgamer/bsc/commit/549fe90bf98c203917c187378f7231d4a4b2b430) Merge pull request #133 from notamitgamer/fix/footer-mobile-cubes-and-edit-link
-
-**Amit Dutta** committed on Sep 25, 2026 12:00 UTC
-
-
----
-
-### [`bfaf1d4`](https://github.com/notamitgamer/bsc/commit/bfaf1d427287cd70e58ab2165700e0cf54b94a69) Fix footer edit-link staleness, cube cropping, and font inheritance
-
-**bot-for-notamitgamer** committed on Sep 25, 2026 11:50 UTC · +34 / -23 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +34 -23 |
 </details>
 
 
