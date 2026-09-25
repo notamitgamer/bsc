@@ -1,15 +1,54 @@
 # Changelog
 
-> Last build: September 25, 2026 at 06:57 UTC
+> Last build: September 25, 2026 at 11:31 UTC
 
 ## Latest Build
 
-- **Build ID** — `44abd6e36dd79824389a365259fdb6d677db90a2`
+- **Build ID** — `f5bc6a0602019f96244580ed5e14408196df2eca`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 06:57 UTC
+- **Build time** — September 25, 2026 at 11:31 UTC
 
 ## Recent Commits
+
+### [`f5bc6a0`](https://github.com/notamitgamer/bsc/commit/f5bc6a0602019f96244580ed5e14408196df2eca) Merge pull request #132 from notamitgamer/feature/github-docs-inspired-footer
+
+**Amit Dutta** committed on Sep 25, 2026 11:31 UTC
+
+
+---
+
+### [`6c6d17e`](https://github.com/notamitgamer/bsc/commit/6c6d17eb6e6f26c87b12eec7cadaec676b9d62d4) Add GitHub Docs-inspired footer with isometric illustration
+
+**bot-for-notamitgamer** committed on Sep 25, 2026 10:54 UTC · +274 / -2 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Added | +233 |
+| `docs/.vitepress/theme/index.ts` | Modified | +5 -1 |
+| `docs/.vitepress/theme/style.css` | Modified | +36 -1 |
+</details>
+
+
+---
+
+### [`d36cd12`](https://github.com/notamitgamer/bsc/commit/d36cd129d81220e805017b4bef9a0c97f2a77021) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 06:58 UTC · +33 / -35 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -35 |
+</details>
+
+
+---
 
 ### [`44abd6e`](https://github.com/notamitgamer/bsc/commit/44abd6e36dd79824389a365259fdb6d677db90a2) Update Model Questions entry to use 'PYTHON'
 
@@ -150,55 +189,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +35 -33 |
-</details>
-
-
----
-
-### [`9730d0b`](https://github.com/notamitgamer/bsc/commit/9730d0b740571bc9ddbb7c579f5a929b60bdb288) fixed
-
-**Amit Dutta** committed on Sep 20, 2026 09:22 UTC · +3 / -3 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/semester_1/model_questions.md` | Modified | +1 -1 |
-| `docs/semester_2/model_questions.md` | Modified | +1 -1 |
-| `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`4877da5`](https://github.com/notamitgamer/bsc/commit/4877da530979eb935a65d28d660db0a156ed8bd3) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 20, 2026 09:16 UTC · +35 / -27 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +35 -27 |
-</details>
-
-
----
-
-### [`5bcc9df`](https://github.com/notamitgamer/bsc/commit/5bcc9df583ef34ab53d9868737bf98e1937a182e) removed class
-
-**Amit Dutta** committed on Sep 20, 2026 09:15 UTC · +3 / -3 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/semester_1/model_questions.md` | Modified | +1 -1 |
-| `docs/semester_2/model_questions.md` | Modified | +1 -1 |
-| `docs/semester_2/model_questions_py.md` | Modified | +1 -1 |
 </details>
 
 
