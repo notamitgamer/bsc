@@ -1,23 +1,10 @@
 <template>
   <div class="doc-footer-extra">
-    <!-- Decorative divider: original isometric-cube illustration, our own composition/palette -->
+    <!-- Decorative divider: original isometric-cube illustration -->
     <div class="footer-divider" aria-hidden="true">
       <svg viewBox="0 0 700 110" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-        <g class="cube">
-          <polygon points="600,38 634,55 600,72 566,55" class="face-top" />
-          <polygon points="566,55 600,72 600,106 566,89" class="face-left" />
-          <polygon points="600,72 634,55 634,89 600,106" class="face-right" />
-        </g>
-        <g class="cube">
-          <polygon points="655,15 685,30 655,45 625,30" class="face-top" />
-          <polygon points="625,30 655,45 655,75 625,60" class="face-left" />
-          <polygon points="655,45 685,30 685,60 655,75" class="face-right" />
-        </g>
-        <g class="cube">
-          <polygon points="540,27 566,40 540,53 514,40" class="face-top" />
-          <polygon points="514,40 540,53 540,79 514,66" class="face-left" />
-          <polygon points="540,53 566,40 566,66 540,79" class="face-right" />
-        </g>
+        
+        <!-- LEFT CLUSTER: Downward Arrow (3 Cubes - Unchanged) -->
         <g class="cube">
           <polygon points="100,38 134,55 100,72 66,55" class="face-top" />
           <polygon points="66,55 100,72 100,106 66,89" class="face-left" />
@@ -33,6 +20,33 @@
           <polygon points="14,40 40,53 40,79 14,66" class="face-left" />
           <polygon points="40,53 66,40 66,66 40,79" class="face-right" />
         </g>
+
+        <!-- RIGHT CLUSTER: Leftward Arrow (4 Cubes - NEW) -->
+        <!-- Tip of the arrow (Leftmost in this group) -->
+        <g class="cube">
+          <polygon points="530,38 564,55 530,72 496,55" class="face-top" />
+          <polygon points="496,55 530,72 530,106 496,89" class="face-left" />
+          <polygon points="530,72 564,55 564,89 530,106" class="face-right" />
+        </g>
+        <!-- Body Cube 1 -->
+        <g class="cube">
+          <polygon points="575,38 609,55 575,72 541,55" class="face-top" />
+          <polygon points="541,55 575,72 575,106 541,89" class="face-left" />
+          <polygon points="575,72 609,55 609,89 575,106" class="face-right" />
+        </g>
+        <!-- Body Cube 2 -->
+        <g class="cube">
+          <polygon points="620,38 654,55 620,72 586,55" class="face-top" />
+          <polygon points="586,55 620,72 620,106 586,89" class="face-left" />
+          <polygon points="620,72 654,55 654,89 620,106" class="face-right" />
+        </g>
+        <!-- End Cube (Rightmost) -->
+        <g class="cube">
+          <polygon points="665,38 699,55 665,72 631,55" class="face-top" />
+          <polygon points="631,55 665,72 665,106 631,89" class="face-left" />
+          <polygon points="665,72 699,55 699,89 665,106" class="face-right" />
+        </g>
+
       </svg>
     </div>
 

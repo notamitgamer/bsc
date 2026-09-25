@@ -2,7 +2,6 @@ import { h, Fragment, onMounted } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import Banner from './components/Banner.vue' 
-import Footer from './components/Footer.vue' 
 import SponsorButton from './components/SponsorButton.vue' 
 import ExternalLinkWarning from './components/ExternalLinkWarning.vue'
 import CopyLinkButton from './components/CopyLinkButton.vue'
@@ -31,8 +30,7 @@ export default {
         h(Labels)
       ]),
       'doc-after': () => h(Fragment, [
-        h(DocFooterExtra),
-        h(Footer)
+        h(DocFooterExtra)
       ]),
       'sidebar-nav-after': () => h(SidebarTags),
       'nav-bar-content-after': () => h(SponsorButton)
