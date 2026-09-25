@@ -1,15 +1,67 @@
 # Changelog
 
-> Last build: September 25, 2026 at 12:00 UTC
+> Last build: September 25, 2026 at 15:12 UTC
 
 ## Latest Build
 
-- **Build ID** — `549fe90bf98c203917c187378f7231d4a4b2b430`
+- **Build ID** — `e97f9ac286edcf238a943b4c1b72013cb7d85d79`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 12:00 UTC
+- **Build time** — September 25, 2026 at 15:12 UTC
 
 ## Recent Commits
+
+### [`e97f9ac`](https://github.com/notamitgamer/bsc/commit/e97f9ac286edcf238a943b4c1b72013cb7d85d79) Merge pull request #134 from notamitgamer/footer-cleanup
+
+**Amit Dutta** committed on Sep 25, 2026 15:12 UTC
+
+
+---
+
+### [`2d72939`](https://github.com/notamitgamer/bsc/commit/2d729391624ff53f1d3582788eec0db5d771ef25) Remove Footer component from theme index
+
+**Amit Dutta** committed on Sep 25, 2026 15:10 UTC · +2 / -4 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/index.ts` | Modified | +2 -4 |
+</details>
+
+
+---
+
+### [`6f565df`](https://github.com/notamitgamer/bsc/commit/6f565df1167a1c0d9d11d179e4749eb2e35c2355) Refactor SVG divider and add new arrow cluster
+
+**Amit Dutta** committed on Sep 25, 2026 15:08 UTC · +30 / -16 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +30 -16 |
+</details>
+
+
+---
+
+### [`27bf419`](https://github.com/notamitgamer/bsc/commit/27bf419cf5200456029b7d0825dd95e269304a84) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 12:01 UTC · +40 / -79 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -79 |
+</details>
+
+
+---
 
 ### [`549fe90`](https://github.com/notamitgamer/bsc/commit/549fe90bf98c203917c187378f7231d4a4b2b430) Merge pull request #133 from notamitgamer/fix/footer-mobile-cubes-and-edit-link
 
@@ -82,74 +134,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +33 -35 |
-</details>
-
-
----
-
-### [`44abd6e`](https://github.com/notamitgamer/bsc/commit/44abd6e36dd79824389a365259fdb6d677db90a2) Update Model Questions entry to use 'PYTHON'
-
-**Amit Dutta** committed on Sep 25, 2026 06:57 UTC · +2 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/semester_2/index.md` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`ff4d7a2`](https://github.com/notamitgamer/bsc/commit/ff4d7a26597f54359278a3e109d6b0af7f226707) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 23, 2026 16:06 UTC · +92 / -49 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +92 -49 |
-</details>
-
-
----
-
-### [`cc41d49`](https://github.com/notamitgamer/bsc/commit/cc41d490781437ffe5e47ea061935a518ac46569) Merge pull request #131 from notamitgamer/edit-20260923-212723
-
-**Amit Dutta** committed on Sep 23, 2026 16:05 UTC
-
-
----
-
-### [`8d19066`](https://github.com/notamitgamer/bsc/commit/8d1906683e88d8d0d92b3e3893b92edf401d9590) added the problem statements
-
-**Amit Dutta** committed on Sep 23, 2026 16:04 UTC · +34 / -1 lines · 17 files changed
-
-<details>
-<summary>Show 17 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/assignments/assignment_03.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_04.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_05.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_06.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_07.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_08.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_09.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_10.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_11.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_12.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_13.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_14.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_15.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_16.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_17.cpp` | Modified | +2 |
-| `semester_2/assignments/assignment_18.cpp` | Modified | +2 -1 |
-| `semester_2/assignments/assignment_19.cpp` | Modified | +2 |
 </details>
 
 
