@@ -10,6 +10,7 @@ import MarkdownMenu from './components/MarkdownMenu.vue'
 import Breadcrumbs from './components/Breadcrumbs.vue'
 import Labels from './components/Labels.vue'
 import SidebarTags from './components/SidebarTags.vue'
+import DocFooterExtra from './components/DocFooterExtra.vue'
 import './style.css'
 
 export default {
@@ -29,7 +30,10 @@ export default {
         h(MarkdownMenu),
         h(Labels)
       ]),
-      'doc-after': () => h(Footer),
+      'doc-after': () => h(Fragment, [
+        h(DocFooterExtra),
+        h(Footer)
+      ]),
       'sidebar-nav-after': () => h(SidebarTags),
       'nav-bar-content-after': () => h(SponsorButton)
     })

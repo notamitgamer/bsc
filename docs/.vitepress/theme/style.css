@@ -672,3 +672,38 @@
   background-color: var(--vp-button-brand-hover-bg);
   border-color: var(--vp-button-brand-hover-bg);
 }
+/* ==========================================================================
+   "UP NEXT" PAGER — restyle VitePress's built-in prev/next footer
+   to read like a single next-step banner instead of two symmetric cards.
+   ========================================================================== */
+
+.VPDocFooter .pager {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.VPDocFooter .pager-link {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+.VPDocFooter .pager-link.next {
+  border-color: var(--vp-c-brand-3, #30a46c);
+  background: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 6%, transparent);
+}
+
+.VPDocFooter .pager-link .desc {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--vp-c-text-3, var(--vp-c-text-2));
+}
+
+.VPDocFooter .pager-link.next .desc {
+  color: var(--vp-c-brand-3, #30a46c);
+  font-weight: 600;
+}
+
+.VPDocFooter .pager-link.next .title {
+  color: var(--vp-c-text-1);
+}
