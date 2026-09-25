@@ -1,59 +1,126 @@
 <template>
   <div class="doc-footer-extra">
-    <!-- Decorative divider: original isometric-cube illustration -->
-    <div class="footer-divider" aria-hidden="true">
-      <svg viewBox="0 0 700 120" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
-        
-        <!-- LEFT CLUSTER: Downward Arrow (3 Cubes) -->
+    <!-- Decorative divider: GitHub-inspired isometric composition -->
+    <div class="footer-divider" aria-hidden="true" ref="dividerRef">
+      <svg
+        viewBox="0 0 700 130"
+        preserveAspectRatio="xMidYMid meet"
+        xmlns="http://www.w3.org/2000/svg"
+        class="cityscape-svg"
+        :class="{ 'is-visible': isVisible }"
+      >
+        <defs>
+          <!-- Circular / Dome Ambient Backdrop Glow -->
+          <radialGradient id="circleAmbientGlow" cx="50%" cy="100%" r="55%">
+            <stop offset="0%" class="stop-glow-center" />
+            <stop offset="45%" class="stop-glow-mid" />
+            <stop offset="100%" class="stop-glow-edge" />
+          </radialGradient>
+        </defs>
+
+        <!-- Dynamic Circular Ambient Glow -->
+        <rect x="0" y="0" width="700" height="130" fill="url(#circleAmbientGlow)" />
+
+        <!-- Continuous Neon Horizon Baseline -->
+        <line x1="0" y1="110" x2="700" y2="110" class="neon-baseline" />
+
+        <!-- ==================== LEFT ARCHITECTURE ==================== -->
+        <!-- Background Block -->
         <g class="cube">
-          <polygon points="100,38 134,55 100,72 66,55" class="face-top" />
-          <polygon points="66,55 100,72 100,106 66,89" class="face-left" />
-          <polygon points="100,72 134,55 134,89 100,106" class="face-right" />
-        </g>
-        <g class="cube">
-          <polygon points="155,15 185,30 155,45 125,30" class="face-top" />
-          <polygon points="125,30 155,45 155,75 125,60" class="face-left" />
-          <polygon points="155,45 185,30 185,60 155,75" class="face-right" />
-        </g>
-        <g class="cube">
-          <polygon points="40,27 66,40 40,53 14,40" class="face-top" />
-          <polygon points="14,40 40,53 40,79 14,66" class="face-left" />
-          <polygon points="40,53 66,40 66,66 40,79" class="face-right" />
+          <polygon points="120,44 146,57 120,70 94,57" class="face-top" />
+          <polygon points="94,57 120,70 120,110 94,97" class="face-left" />
+          <polygon points="120,70 146,57 146,97 120,110" class="face-right" />
         </g>
 
-        <!-- RIGHT CLUSTER: Playground Podium / Steps (Ordered Back-to-Front) -->
-        
-        <!-- 3. Tallest Step (Rank 1 / Peak: Height 88px) - Rendered 1st (deepest in background) -->
+        <!-- Commit Matrix Block (Heatmap Grid on Left Face) -->
         <g class="cube">
-          <polygon points="600,0 630,15 600,30 570,15" class="face-top" />
-          <polygon points="570,15 600,30 600,106 570,91" class="face-left" />
-          <polygon points="600,30 630,15 630,91 600,106" class="face-right" />
+          <polygon points="158,26 188,41 158,56 128,41" class="face-top-bright" />
+          <!-- Heatmap facet -->
+          <g transform="translate(128, 41) skewY(26.565)">
+            <rect x="0" y="0" width="7.5" height="13.5" class="heat-0" />
+            <rect x="7.5" y="0" width="7.5" height="13.5" class="heat-2" />
+            <rect x="15" y="0" width="7.5" height="13.5" class="heat-3" />
+            <rect x="22.5" y="0" width="7.5" height="13.5" class="heat-1" />
+
+            <rect x="0" y="13.5" width="7.5" height="13.5" class="heat-3" />
+            <rect x="7.5" y="13.5" width="7.5" height="13.5" class="heat-glow" />
+            <rect x="15" y="13.5" width="7.5" height="13.5" class="heat-2" />
+            <rect x="22.5" y="13.5" width="7.5" height="13.5" class="heat-0" />
+
+            <rect x="0" y="27" width="7.5" height="13.5" class="heat-1" />
+            <rect x="7.5" y="27" width="7.5" height="13.5" class="heat-3" />
+            <rect x="15" y="27" width="7.5" height="13.5" class="heat-glow" />
+            <rect x="22.5" y="27" width="7.5" height="13.5" class="heat-2" />
+
+            <rect x="0" y="40.5" width="7.5" height="14.5" class="heat-0" />
+            <rect x="7.5" y="40.5" width="7.5" height="14.5" class="heat-1" />
+            <rect x="15" y="40.5" width="7.5" height="14.5" class="heat-3" />
+            <rect x="22.5" y="40.5" width="7.5" height="14.5" class="heat-glow" />
+          </g>
+          <polygon points="158,56 188,41 188,95 158,110" class="face-right" />
         </g>
 
-        <!-- 4. Medium-Tall Step (Height 66px, between 2nd & 3rd) - Positioned to the right -->
+        <!-- Foreground Anchor Block -->
         <g class="cube">
-          <polygon points="645,22 675,37 645,52 615,37" class="face-top" />
-          <polygon points="615,37 645,52 645,106 615,91" class="face-left" />
-          <polygon points="645,52 675,37 675,91 645,106" class="face-right" />
+          <polygon points="76,46 104,60 76,74 48,60" class="face-top-bright" />
+          <polygon points="48,60 76,74 76,110 48,96" class="face-left" />
+          <polygon points="76,74 104,60 104,96 76,110" class="face-right" />
         </g>
 
-        <!-- 2. Taller Step (Height 52px) - Overlaps Step 3 slightly -->
+        <!-- ==================== CENTER MONOLITH ==================== -->
+        <!-- Low-profile frosted glass block emerging from horizon -->
         <g class="cube">
-          <polygon points="555,36 585,51 555,66 525,51" class="face-top" />
-          <polygon points="525,51 555,66 555,106 525,91" class="face-left" />
-          <polygon points="555,66 585,51 585,91 555,106" class="face-right" />
+          <polygon points="350,56 376,69 350,82 324,69" class="face-top-luminous" />
+          <polygon points="324,69 350,82 350,110 324,97" class="face-left-luminous" />
+          <polygon points="350,82 376,69 376,97 350,110" class="face-right-luminous" />
         </g>
 
-        <!-- 1. Smallest Step (Height 30px) - Rendered last (closest in foreground) -->
+        <!-- ==================== RIGHT ARCHITECTURE ==================== -->
+        <!-- Right Background Prism -->
         <g class="cube">
-          <polygon points="510,58 540,73 510,88 480,73" class="face-top" />
-          <polygon points="480,73 510,88 510,106 480,91" class="face-left" />
-          <polygon points="510,88 540,73 540,91 510,106" class="face-right" />
+          <polygon points="636,36 666,51 636,66 606,51" class="face-top" />
+          <polygon points="606,51 636,66 636,110 606,95" class="face-left" />
+          <polygon points="636,66 666,51 666,95 636,110" class="face-right" />
         </g>
 
+        <!-- Right Commit Matrix Block -->
+        <g class="cube">
+          <polygon points="562,34 590,48 562,62 534,48" class="face-top-bright" />
+          <!-- Heatmap facet -->
+          <g transform="translate(534, 48) skewY(26.565)">
+            <rect x="0" y="0" width="7" height="12" class="heat-3" />
+            <rect x="7" y="0" width="7" height="12" class="heat-glow" />
+            <rect x="14" y="0" width="7" height="12" class="heat-2" />
+            <rect x="21" y="0" width="7" height="12" class="heat-0" />
+
+            <rect x="0" y="12" width="7" height="12" class="heat-1" />
+            <rect x="7" y="12" width="7" height="12" class="heat-2" />
+            <rect x="14" y="12" width="7" height="12" class="heat-glow" />
+            <rect x="21" y="12" width="7" height="12" class="heat-3" />
+
+            <rect x="0" y="24" width="7" height="12" class="heat-2" />
+            <rect x="7" y="24" width="7" height="12" class="heat-0" />
+            <rect x="14" y="24" width="7" height="12" class="heat-1" />
+            <rect x="21" y="24" width="7" height="12" class="heat-glow" />
+
+            <rect x="0" y="36" width="7" height="14" class="heat-glow" />
+            <rect x="7" y="36" width="7" height="14" class="heat-3" />
+            <rect x="14" y="36" width="7" height="14" class="heat-2" />
+            <rect x="21" y="36" width="7" height="14" class="heat-1" />
+          </g>
+          <polygon points="562,62 590,48 590,96 562,110" class="face-right" />
+        </g>
+
+        <!-- Right Primary Anchor Block (Clean Glass Prism) -->
+        <g class="cube">
+          <polygon points="488,18 518,33 488,48 458,33" class="face-top-bright" />
+          <polygon points="458,33 488,48 488,110 458,95" class="face-left-luminous" />
+          <polygon points="488,48 518,33 518,95 488,110" class="face-right" />
+        </g>
       </svg>
     </div>
 
+    <!-- Top Action Row -->
     <div class="footer-top-row">
       <a href="https://github.com/notamitgamer/bsc" target="_blank" rel="noopener noreferrer" class="gh-mark" aria-label="View on GitHub">
         <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor">
@@ -75,14 +142,22 @@
       </button>
     </div>
 
+    <!-- 3-Column Footer Grid -->
     <div class="footer-columns">
       <div class="col helpful-col">
         <p class="col-title">Was this page helpful?</p>
-        <div class="helpful-btns" v-if="!voted">
+        
+        <div class="helpful-btns" v-if="voteStatus === null">
           <button class="vote-btn" @click="vote(true)">Yes</button>
           <button class="vote-btn" @click="vote(false)">No</button>
         </div>
-        <p class="thanks" v-else>Thanks for the feedback!</p>
+        
+        <p class="thanks" v-else-if="voteStatus === 'yes'">Thanks for the feedback!</p>
+        
+        <p class="feedback-msg" v-else-if="voteStatus === 'no'">
+          Email me why at
+          <a :href="feedbackMailto" class="mail-link">mail@amit.is-a.dev</a>
+        </p>
       </div>
 
       <div class="col contribute-col">
@@ -101,6 +176,7 @@
       </div>
     </div>
 
+    <!-- Bottom Copyright & Utility Bar -->
     <div class="footer-bottom-bar">
       <span>BSc Code Index &copy; 2026</span>
       <div class="bottom-links">
@@ -113,14 +189,16 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useData } from 'vitepress'
 
 const { frontmatter, page } = useData()
-const voted = ref(false)
+const voteStatus = ref(null)
+const dividerRef = ref(null)
+const isVisible = ref(false)
 
 function vote(isYes) {
-  voted.value = true
+  voteStatus.value = isYes ? 'yes' : 'no'
 }
 
 function scrollTop() {
@@ -132,6 +210,38 @@ const editUrl = computed(() =>
     ? `https://github.com/notamitgamer/bsc/edit/main/${frontmatter.value.source}`
     : `https://github.com/notamitgamer/bsc/edit/main/docs/${page.value.filePath}`
 )
+
+const feedbackMailto = computed(() => {
+  const pageTitle = page.value.title || 'Docs Page'
+  const pagePath = page.value.relativePath || ''
+  const subject = encodeURIComponent(`Feedback on: ${pageTitle}`)
+  const body = encodeURIComponent(
+    `Hi Amit,\n\nI found this page unhelpful because:\n\n---\nPage: ${pageTitle}\nPath: ${pagePath}`
+  )
+  return `mailto:mail@amit.is-a.dev?subject=${subject}&body=${body}`
+})
+
+let observer = null
+onMounted(() => {
+  if (dividerRef.value && 'IntersectionObserver' in window) {
+    observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          isVisible.value = true
+          observer?.disconnect()
+        }
+      },
+      { threshold: 0.15 }
+    )
+    observer.observe(dividerRef.value)
+  } else {
+    isVisible.value = true
+  }
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
+})
 </script>
 
 <style scoped>
@@ -147,23 +257,104 @@ const editUrl = computed(() =>
   font-family: inherit;
 }
 
-/* Decorative divider */
+/* ==================== SVG CONTAINER & BASELINE ==================== */
 .footer-divider {
   width: 100%;
-  height: 105px;
+  height: 120px;
   overflow: hidden;
-  opacity: 0.9;
+  position: relative;
 }
-.footer-divider svg {
+
+.cityscape-svg {
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transform: translateY(42px);
+  will-change: transform, opacity;
 }
 
-.cube .face-top   { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 70%, white 30%); }
-.cube .face-right { fill: var(--vp-c-brand-3, #30a46c); }
-.cube .face-left  { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 65%, black 35%); }
-.cube { opacity: 0.9; }
+/* Parallel straight vertical rise (^ ^ | |) */
+.cityscape-svg.is-visible {
+  animation: parallelVerticalRise 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
 
+@keyframes parallelVerticalRise {
+  0% {
+    opacity: 0;
+    transform: translateY(42px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== DYNAMIC COLOR THEME (NO HARDCODING) ==================== */
+
+/* Circular ambient background stops */
+.stop-glow-center {
+  stop-color: var(--vp-c-brand-3, #30a46c);
+  stop-opacity: 0.22;
+}
+.stop-glow-mid {
+  stop-color: var(--vp-c-brand-3, #30a46c);
+  stop-opacity: 0.08;
+}
+.stop-glow-edge {
+  stop-color: var(--vp-c-brand-3, #30a46c);
+  stop-opacity: 0;
+}
+
+/* Continuous ground line */
+.neon-baseline {
+  stroke: var(--vp-c-brand-3, #30a46c);
+  stroke-width: 1.5;
+  opacity: 0.85;
+}
+
+/* Cube Facet Shadings */
+.face-top {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 70%, white 30%);
+}
+.face-top-bright {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 50%, white 50%);
+}
+.face-top-luminous {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 30%, white 70%);
+}
+
+.face-right {
+  fill: var(--vp-c-brand-3, #30a46c);
+}
+.face-right-luminous {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 85%, white 15%);
+}
+
+.face-left {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 65%, black 35%);
+}
+.face-left-luminous {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 75%, white 25%);
+}
+
+/* Heatmap commit contribution tiles */
+.heat-0 {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 45%, black 55%);
+}
+.heat-1 {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 70%, black 30%);
+}
+.heat-2 {
+  fill: var(--vp-c-brand-3, #30a46c);
+}
+.heat-3 {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 75%, white 25%);
+}
+.heat-glow {
+  fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 40%, white 60%);
+}
+
+/* ==================== FOOTER NAV & FEEDBACK STYLES ==================== */
 .footer-top-row {
   display: flex;
   align-items: center;
@@ -172,8 +363,13 @@ const editUrl = computed(() =>
   border-bottom: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-2);
 }
-.gh-mark { color: var(--vp-c-text-2); display: flex; }
-.gh-mark:hover { color: var(--vp-c-text-1); }
+.gh-mark {
+  color: var(--vp-c-text-2);
+  display: flex;
+}
+.gh-mark:hover {
+  color: var(--vp-c-text-1);
+}
 
 .back-to-top {
   display: flex;
@@ -186,7 +382,9 @@ const editUrl = computed(() =>
   cursor: pointer;
   font-weight: 500;
 }
-.back-to-top:hover { color: var(--vp-c-brand-1); }
+.back-to-top:hover {
+  color: var(--vp-c-brand-1);
+}
 
 .footer-columns {
   display: grid;
@@ -196,7 +394,10 @@ const editUrl = computed(() =>
   border-bottom: 1px solid var(--vp-c-divider);
 }
 @media (max-width: 719px) {
-  .footer-columns { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .col-title {
@@ -214,7 +415,10 @@ const editUrl = computed(() =>
   line-height: 1.5;
 }
 
-.helpful-btns { display: flex; gap: 0.5rem; }
+.helpful-btns {
+  display: flex;
+  gap: 0.5rem;
+}
 .vote-btn {
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
@@ -224,8 +428,31 @@ const editUrl = computed(() =>
   font-size: 13px;
   cursor: pointer;
 }
-.vote-btn:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
-.thanks { font-size: 13px; color: var(--vp-c-brand-3); }
+.vote-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+.thanks {
+  font-size: 13px;
+  color: var(--vp-c-brand-3);
+  margin: 0;
+}
+
+.feedback-msg {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+  margin: 0;
+}
+.mail-link {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+.mail-link:hover {
+  color: var(--vp-c-brand-2);
+}
 
 .contribute-btn {
   display: inline-block;
@@ -237,11 +464,27 @@ const editUrl = computed(() =>
   font-size: 13px;
   text-decoration: none;
 }
-.contribute-btn:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.contribute-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
 
-.help-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
-.help-links a { font-size: 13px; color: var(--vp-c-text-2); text-decoration: none; }
-.help-links a:hover { color: var(--vp-c-brand-1); }
+.help-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.help-links a {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+}
+.help-links a:hover {
+  color: var(--vp-c-brand-1);
+}
 
 .footer-bottom-bar {
   display: flex;
@@ -251,7 +494,15 @@ const editUrl = computed(() =>
   font-size: 12px;
   color: var(--vp-c-text-3, var(--vp-c-text-2));
 }
-.bottom-links { display: flex; gap: 1.2rem; }
-.bottom-links a { color: inherit; text-decoration: none; }
-.bottom-links a:hover { color: var(--vp-c-brand-1); }
+.bottom-links {
+  display: flex;
+  gap: 1.2rem;
+}
+.bottom-links a {
+  color: inherit;
+  text-decoration: none;
+}
+.bottom-links a:hover {
+  color: var(--vp-c-brand-1);
+}
 </style>
