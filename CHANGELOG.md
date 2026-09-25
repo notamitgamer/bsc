@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 25, 2026 at 16:04 UTC
+> Last build: September 25, 2026 at 16:11 UTC
 
 ## Latest Build
 
-- **Build ID** — `bbfc766dbe29f779f02d813639805e162fd108e0`
+- **Build ID** — `62fad1ecfe0a76103d1722c34faf49874fcc25ac`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 16:04 UTC
+- **Build time** — September 25, 2026 at 16:11 UTC
 
 ## Recent Commits
+
+### [`62fad1e`](https://github.com/notamitgamer/bsc/commit/62fad1ecfe0a76103d1722c34faf49874fcc25ac) Enhance DocFooterExtra with cityscape and feedback updates
+
+**Amit Dutta** committed on Sep 25, 2026 16:11 UTC · +454 / -135 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +454 -135 |
+</details>
+
+
+---
+
+### [`1f55d29`](https://github.com/notamitgamer/bsc/commit/1f55d2962f019dbfbcd08a28566365285d95bd04) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 16:05 UTC · +33 / -33 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -33 |
+</details>
+
+
+---
 
 ### [`bbfc766`](https://github.com/notamitgamer/bsc/commit/bbfc766dbe29f779f02d813639805e162fd108e0) Refactor DocFooterExtra.vue for improved layout
 
@@ -126,28 +156,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +45 -61 |
-</details>
-
-
----
-
-### [`e97f9ac`](https://github.com/notamitgamer/bsc/commit/e97f9ac286edcf238a943b4c1b72013cb7d85d79) Merge pull request #134 from notamitgamer/footer-cleanup
-
-**Amit Dutta** committed on Sep 25, 2026 15:12 UTC
-
-
----
-
-### [`2d72939`](https://github.com/notamitgamer/bsc/commit/2d729391624ff53f1d3582788eec0db5d771ef25) Remove Footer component from theme index
-
-**Amit Dutta** committed on Sep 25, 2026 15:10 UTC · +2 / -4 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/index.ts` | Modified | +2 -4 |
 </details>
 
 
