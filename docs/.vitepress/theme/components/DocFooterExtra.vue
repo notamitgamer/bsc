@@ -2,36 +2,36 @@
   <div class="doc-footer-extra">
     <!-- Decorative divider: original isometric-cube illustration, our own composition/palette -->
     <div class="footer-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 110" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 700 110" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
         <g class="cube">
-          <polygon points="140,38 174,55 140,72 106,55" class="face-top" />
-          <polygon points="106,55 140,72 140,106 106,89" class="face-left" />
-          <polygon points="140,72 174,55 174,89 140,106" class="face-right" />
+          <polygon points="600,38 634,55 600,72 566,55" class="face-top" />
+          <polygon points="566,55 600,72 600,106 566,89" class="face-left" />
+          <polygon points="600,72 634,55 634,89 600,106" class="face-right" />
         </g>
         <g class="cube">
-          <polygon points="195,15 225,30 195,45 165,30" class="face-top" />
-          <polygon points="165,30 195,45 195,75 165,60" class="face-left" />
-          <polygon points="195,45 225,30 225,60 195,75" class="face-right" />
+          <polygon points="655,15 685,30 655,45 625,30" class="face-top" />
+          <polygon points="625,30 655,45 655,75 625,60" class="face-left" />
+          <polygon points="655,45 685,30 685,60 655,75" class="face-right" />
         </g>
         <g class="cube">
-          <polygon points="110,16 138,30 110,44 82,30" class="face-top" />
-          <polygon points="82,30 110,44 110,72 82,58" class="face-left" />
-          <polygon points="110,44 138,30 138,58 110,72" class="face-right" />
+          <polygon points="540,27 566,40 540,53 514,40" class="face-top" />
+          <polygon points="514,40 540,53 540,79 514,66" class="face-left" />
+          <polygon points="540,53 566,40 566,66 540,79" class="face-right" />
         </g>
         <g class="cube">
-          <polygon points="1020,38 1054,55 1020,72 986,55" class="face-top" />
-          <polygon points="986,55 1020,72 1020,106 986,89" class="face-left" />
-          <polygon points="1020,72 1054,55 1054,89 1020,106" class="face-right" />
+          <polygon points="100,38 134,55 100,72 66,55" class="face-top" />
+          <polygon points="66,55 100,72 100,106 66,89" class="face-left" />
+          <polygon points="100,72 134,55 134,89 100,106" class="face-right" />
         </g>
         <g class="cube">
-          <polygon points="1075,15 1105,30 1075,45 1045,30" class="face-top" />
-          <polygon points="1045,30 1075,45 1075,75 1045,60" class="face-left" />
-          <polygon points="1075,45 1105,30 1105,60 1075,75" class="face-right" />
+          <polygon points="155,15 185,30 155,45 125,30" class="face-top" />
+          <polygon points="125,30 155,45 155,75 125,60" class="face-left" />
+          <polygon points="155,45 185,30 185,60 155,75" class="face-right" />
         </g>
         <g class="cube">
-          <polygon points="960,27 986,40 960,53 934,40" class="face-top" />
-          <polygon points="934,40 960,53 960,79 934,66" class="face-left" />
-          <polygon points="960,53 986,40 986,66 960,79" class="face-right" />
+          <polygon points="40,27 66,40 40,53 14,40" class="face-top" />
+          <polygon points="14,40 40,53 40,79 14,66" class="face-left" />
+          <polygon points="40,53 66,40 66,66 40,79" class="face-right" />
         </g>
       </svg>
     </div>
@@ -95,7 +95,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useData } from 'vitepress'
 
 const { frontmatter, page } = useData()
@@ -110,9 +110,14 @@ function scrollTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-const editUrl = frontmatter.value.source
-  ? `https://github.com/notamitgamer/bsc/edit/main/${frontmatter.value.source}`
-  : `https://github.com/notamitgamer/bsc/edit/main/docs/${page.value.filePath}`
+// Must be computed(), not a plain const — VitePress does client-side route
+// navigation without remounting this component, so a plain const would
+// freeze at whatever page was loaded first and never update again.
+const editUrl = computed(() =>
+  frontmatter.value.source
+    ? `https://github.com/notamitgamer/bsc/edit/main/${frontmatter.value.source}`
+    : `https://github.com/notamitgamer/bsc/edit/main/docs/${page.value.filePath}`
+)
 </script>
 
 <style scoped>
@@ -120,6 +125,12 @@ const editUrl = frontmatter.value.source
   margin-top: 3rem;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 0;
+  font-family: var(--vp-font-family-base);
+}
+
+.doc-footer-extra button,
+.doc-footer-extra a {
+  font-family: inherit;
 }
 
 /* Decorative divider */
