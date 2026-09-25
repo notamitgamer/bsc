@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 25, 2026 at 15:22 UTC
+> Last build: September 25, 2026 at 15:53 UTC
 
 ## Latest Build
 
-- **Build ID** — `3549e1399e6886a2548bbd584236ab2d7b862062`
+- **Build ID** — `89f4e5bf0c1ec1d405a8ed5660f1f252e00dc3c3`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 15:22 UTC
+- **Build time** — September 25, 2026 at 15:53 UTC
 
 ## Recent Commits
+
+### [`89f4e5b`](https://github.com/notamitgamer/bsc/commit/89f4e5bf0c1ec1d405a8ed5660f1f252e00dc3c3) Update DocFooterExtra.vue
+
+**Amit Dutta** committed on Sep 25, 2026 15:53 UTC · +311 / -60 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +311 -60 |
+</details>
+
+
+---
+
+### [`5d0f3fc`](https://github.com/notamitgamer/bsc/commit/5d0f3fce790d0858dcd487837bd8feee7a29c918) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 15:23 UTC · +33 / -35 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -35 |
+</details>
+
+
+---
 
 ### [`3549e13`](https://github.com/notamitgamer/bsc/commit/3549e1399e6886a2548bbd584236ab2d7b862062) Update SVG dimensions and modify cube design
 
@@ -111,28 +141,6 @@
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +34 -23 |
 </details>
-
-
----
-
-### [`1504e00`](https://github.com/notamitgamer/bsc/commit/1504e00636046b651ee4b178c7114f4bb75afb9b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 11:32 UTC · +42 / -52 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +42 -52 |
-</details>
-
-
----
-
-### [`f5bc6a0`](https://github.com/notamitgamer/bsc/commit/f5bc6a0602019f96244580ed5e14408196df2eca) Merge pull request #132 from notamitgamer/feature/github-docs-inspired-footer
-
-**Amit Dutta** committed on Sep 25, 2026 11:31 UTC
 
 
 ---
