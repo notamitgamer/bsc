@@ -2,9 +2,9 @@
   <div class="doc-footer-extra">
     <!-- Decorative divider: original isometric-cube illustration -->
     <div class="footer-divider" aria-hidden="true">
-      <svg viewBox="0 0 700 110" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 700 120" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
         
-        <!-- LEFT CLUSTER: Downward Arrow (3 Cubes - Unchanged) -->
+        <!-- LEFT CLUSTER: Downward Arrow (3 Cubes) -->
         <g class="cube">
           <polygon points="100,38 134,55 100,72 66,55" class="face-top" />
           <polygon points="66,55 100,72 100,106 66,89" class="face-left" />
@@ -21,30 +21,34 @@
           <polygon points="40,53 66,40 66,66 40,79" class="face-right" />
         </g>
 
-        <!-- RIGHT CLUSTER: Leftward Arrow (4 Cubes - NEW) -->
-        <!-- Tip of the arrow (Leftmost in this group) -->
+        <!-- RIGHT CLUSTER: Playground Podium / Steps (Ordered Back-to-Front) -->
+        
+        <!-- 3. Tallest Step (Rank 1 / Peak: Height 88px) - Rendered 1st (deepest in background) -->
         <g class="cube">
-          <polygon points="530,38 564,55 530,72 496,55" class="face-top" />
-          <polygon points="496,55 530,72 530,106 496,89" class="face-left" />
-          <polygon points="530,72 564,55 564,89 530,106" class="face-right" />
+          <polygon points="600,0 630,15 600,30 570,15" class="face-top" />
+          <polygon points="570,15 600,30 600,106 570,91" class="face-left" />
+          <polygon points="600,30 630,15 630,91 600,106" class="face-right" />
         </g>
-        <!-- Body Cube 1 -->
+
+        <!-- 4. Medium-Tall Step (Height 66px, between 2nd & 3rd) - Positioned to the right -->
         <g class="cube">
-          <polygon points="575,38 609,55 575,72 541,55" class="face-top" />
-          <polygon points="541,55 575,72 575,106 541,89" class="face-left" />
-          <polygon points="575,72 609,55 609,89 575,106" class="face-right" />
+          <polygon points="645,22 675,37 645,52 615,37" class="face-top" />
+          <polygon points="615,37 645,52 645,106 615,91" class="face-left" />
+          <polygon points="645,52 675,37 675,91 645,106" class="face-right" />
         </g>
-        <!-- Body Cube 2 -->
+
+        <!-- 2. Taller Step (Height 52px) - Overlaps Step 3 slightly -->
         <g class="cube">
-          <polygon points="620,38 654,55 620,72 586,55" class="face-top" />
-          <polygon points="586,55 620,72 620,106 586,89" class="face-left" />
-          <polygon points="620,72 654,55 654,89 620,106" class="face-right" />
+          <polygon points="555,36 585,51 555,66 525,51" class="face-top" />
+          <polygon points="525,51 555,66 555,106 525,91" class="face-left" />
+          <polygon points="555,66 585,51 585,91 555,106" class="face-right" />
         </g>
-        <!-- End Cube (Rightmost) -->
+
+        <!-- 1. Smallest Step (Height 30px) - Rendered last (closest in foreground) -->
         <g class="cube">
-          <polygon points="665,38 699,55 665,72 631,55" class="face-top" />
-          <polygon points="631,55 665,72 665,106 631,89" class="face-left" />
-          <polygon points="665,72 699,55 699,89 665,106" class="face-right" />
+          <polygon points="510,58 540,73 510,88 480,73" class="face-top" />
+          <polygon points="480,73 510,88 510,106 480,91" class="face-left" />
+          <polygon points="510,88 540,73 540,91 510,106" class="face-right" />
         </g>
 
       </svg>
@@ -117,16 +121,12 @@ const voted = ref(false)
 
 function vote(isYes) {
   voted.value = true
-  // Cosmetic only for now — wire to Algolia Insights or a simple API later if you want real analytics.
 }
 
 function scrollTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-// Must be computed(), not a plain const — VitePress does client-side route
-// navigation without remounting this component, so a plain const would
-// freeze at whatever page was loaded first and never update again.
 const editUrl = computed(() =>
   frontmatter.value.source
     ? `https://github.com/notamitgamer/bsc/edit/main/${frontmatter.value.source}`
@@ -150,7 +150,7 @@ const editUrl = computed(() =>
 /* Decorative divider */
 .footer-divider {
   width: 100%;
-  height: 90px;
+  height: 105px;
   overflow: hidden;
   opacity: 0.9;
 }
@@ -158,11 +158,10 @@ const editUrl = computed(() =>
   width: 100%;
   height: 100%;
 }
-/* Isometric shading: top face lightest, right face mid, left face darkest —
-   using your brand green as the base hue. */
+
 .cube .face-top   { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 70%, white 30%); }
-.cube .face-right  { fill: var(--vp-c-brand-3, #30a46c); }
-.cube .face-left   { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 65%, black 35%); }
+.cube .face-right { fill: var(--vp-c-brand-3, #30a46c); }
+.cube .face-left  { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 65%, black 35%); }
 .cube { opacity: 0.9; }
 
 .footer-top-row {
