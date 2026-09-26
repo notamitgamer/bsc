@@ -10,6 +10,7 @@ import Breadcrumbs from './components/Breadcrumbs.vue'
 import Labels from './components/Labels.vue'
 import SidebarTags from './components/SidebarTags.vue'
 import DocFooterExtra from './components/DocFooterExtra.vue'
+import HomeFooterGate from './components/HomeFooterGate.vue'
 import './style.css'
 
 export default {
@@ -19,7 +20,8 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'layout-bottom': () => h(Fragment, [
         h(Banner),
-        h(ExternalLinkWarning)
+        h(ExternalLinkWarning),
+        h(HomeFooterGate)
       ]),
       'doc-before': () => h('div', { class: 'bsc-doc-toolbar' }, [
         h(Breadcrumbs),
@@ -32,10 +34,6 @@ export default {
       'doc-after': () => h(Fragment, [
         h(DocFooterExtra)
       ]),
-      // The homepage uses `layout: home`, which does not render 'doc-after'
-      // at all — that slot only exists in VitePress's 'doc' layout. Hook the
-      // home layout's own slot so the footer shows there too.
-      'home-features-after': () => h(DocFooterExtra),
       'sidebar-nav-after': () => h(SidebarTags),
       'nav-bar-content-after': () => h(SponsorButton)
     })
