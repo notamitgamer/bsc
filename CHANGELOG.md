@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: September 26, 2026 at 12:34 UTC
+> Last build: September 26, 2026 at 12:40 UTC
 
 ## Latest Build
 
-- **Build ID** — `91499ebc2177b9d2a14b697bfdde146878530270`
+- **Build ID** — `83f2d8f153e4b5ac096619738d1844522acfe5b0`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 12:34 UTC
+- **Build time** — September 26, 2026 at 12:40 UTC
 
 ## Recent Commits
+
+### [`83f2d8f`](https://github.com/notamitgamer/bsc/commit/83f2d8f153e4b5ac096619738d1844522acfe5b0) Merge pull request #138 from notamitgamer/fix/footer-real-bottom-of-homepage
+
+**Amit Dutta** committed on Sep 26, 2026 12:40 UTC
+
+
+---
+
+### [`9ef386f`](https://github.com/notamitgamer/bsc/commit/9ef386f1d713e9ac5c65513f26652319fd9dfff6) Fix footer landing mid-page on homepage instead of at the bottom
+
+**bot-for-notamitgamer** committed on Sep 26, 2026 12:39 UTC · +19 / -5 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/HomeFooterGate.vue` | Added | +16 |
+| `docs/.vitepress/theme/index.ts` | Modified | +3 -5 |
+</details>
+
+
+---
+
+### [`0aba8dd`](https://github.com/notamitgamer/bsc/commit/0aba8dd0b1adf5b0efb3be3af7843d66fac77367) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 12:35 UTC · +34 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +34 -41 |
+</details>
+
+
+---
 
 ### [`91499eb`](https://github.com/notamitgamer/bsc/commit/91499ebc2177b9d2a14b697bfdde146878530270) Merge pull request #137 from notamitgamer/fix/homepage-footer-and-smart-edit-link
 
@@ -104,51 +142,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +41 -41 |
-</details>
-
-
----
-
-### [`4b5b23b`](https://github.com/notamitgamer/bsc/commit/4b5b23b2d74500f1dd0763f3a75451b052bf250b) Update fmt.Println to print 'Goodbye World'
-
-**Amit Dutta** committed on Sep 26, 2026 07:36 UTC · +341 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/public/skyline3.svg` | Added | +341 |
-</details>
-
-
----
-
-### [`36c88c9`](https://github.com/notamitgamer/bsc/commit/36c88c91b609106d0963f3cf2770c459fd74f530) Refactor DocFooterExtra.vue for improved structure [skip ci]
-
-**Amit Dutta** committed on Sep 26, 2026 07:36 UTC · +133 / -37 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +133 -37 |
-</details>
-
-
----
-
-### [`0670f80`](https://github.com/notamitgamer/bsc/commit/0670f805f8970a64413c7c46e94bc130fce0ecd5) Replace SVG skyline with static image in footer
-
-**Amit Dutta** committed on Sep 26, 2026 07:34 UTC · +14 / -151 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +14 -151 |
 </details>
 
 
