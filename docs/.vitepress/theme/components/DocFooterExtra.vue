@@ -22,13 +22,25 @@
         </g>
 
         <!-- RIGHT CLUSTER: Playground Podium / Steps (Ordered Back-to-Front) -->
-        
+        <!-- Each pillar's windows are drawn immediately after its own body, not batched
+             at the end — otherwise windows paint over pillars that should occlude them. -->
+
         <!-- 3. Tallest Step (Rank 1 / Peak: Height 88px) - Rendered 1st (deepest in background) -->
         <g class="cube">
           <polygon points="600,0 630,15 600,30 570,15" class="face-top" />
           <polygon points="570,15 600,30 600,106 570,91" class="face-left" />
           <polygon points="600,30 630,15 630,91 600,106" class="face-right" />
         </g>
+        <polygon points="603.6,34.2 612.6,29.7 612.6,38.7 603.6,43.2" class="window heat-1" />
+        <polygon points="617.4,27.3 626.4,22.8 626.4,31.8 617.4,36.3" class="window heat-1" />
+        <polygon points="603.6,47.2 612.6,42.7 612.6,51.7 603.6,56.2" class="window heat-3" />
+        <polygon points="617.4,40.3 626.4,35.8 626.4,44.8 617.4,49.3" class="window heat-2" />
+        <polygon points="603.6,60.2 612.6,55.7 612.6,64.7 603.6,69.2" class="window heat-2" />
+        <polygon points="617.4,53.3 626.4,48.8 626.4,57.8 617.4,62.3" class="window heat-2" />
+        <polygon points="603.6,73.2 612.6,68.7 612.6,77.7 603.6,82.2" class="window heat-1" />
+        <polygon points="617.4,66.3 626.4,61.8 626.4,70.8 617.4,75.3" class="window heat-1" />
+        <polygon points="603.6,86.2 612.6,81.7 612.6,90.7 603.6,95.2" class="window heat-4" />
+        <polygon points="617.4,79.3 626.4,74.8 626.4,83.8 617.4,88.3" class="window heat-1" />
 
         <!-- 4. Medium-Tall Step (Height 66px, between 2nd & 3rd) - Positioned to the right -->
         <g class="cube">
@@ -36,6 +48,12 @@
           <polygon points="615,37 645,52 645,106 615,91" class="face-left" />
           <polygon points="645,52 675,37 675,91 645,106" class="face-right" />
         </g>
+        <polygon points="648.6,56.2 657.6,51.7 657.6,60.7 648.6,65.2" class="window heat-1" />
+        <polygon points="662.4,49.3 671.4,44.8 671.4,53.8 662.4,58.3" class="window heat-1" />
+        <polygon points="648.6,69.2 657.6,64.7 657.6,73.7 648.6,78.2" class="window heat-2" />
+        <polygon points="662.4,62.3 671.4,57.8 671.4,66.8 662.4,71.3" class="window heat-2" />
+        <polygon points="648.6,82.2 657.6,77.7 657.6,86.7 648.6,91.2" class="window heat-1" />
+        <polygon points="662.4,75.3 671.4,70.8 671.4,79.8 662.4,84.3" class="window heat-2" />
 
         <!-- 2. Taller Step (Height 52px) - Overlaps Step 3 slightly -->
         <g class="cube">
@@ -43,65 +61,18 @@
           <polygon points="525,51 555,66 555,106 525,91" class="face-left" />
           <polygon points="555,66 585,51 585,91 555,106" class="face-right" />
         </g>
+        <polygon points="558.6,70.2 567.6,65.7 567.6,74.7 558.6,79.2" class="window heat-4" />
+        <polygon points="572.4,63.3 581.4,58.8 581.4,67.8 572.4,72.3" class="window heat-2" />
+        <polygon points="558.6,83.2 567.6,78.7 567.6,87.7 558.6,92.2" class="window heat-4" />
+        <polygon points="572.4,76.3 581.4,71.8 581.4,80.8 572.4,85.3" class="window heat-3" />
 
-        <!-- 1. Smallest Step (Height 30px) - Rendered last (closest in foreground) -->
+        <!-- 1. Smallest Step (Height 30px) - Rendered last (closest in foreground).
+             Too short to fit a window row at this scale — stays plain, which reads fine
+             for the smallest building in the row. -->
         <g class="cube">
           <polygon points="510,58 540,73 510,88 480,73" class="face-top" />
           <polygon points="480,73 510,88 510,106 480,91" class="face-left" />
           <polygon points="510,88 540,73 540,91 510,106" class="face-right" />
-        </g>
-
-        <!-- Windows: heat-mapped like a contribution graph, clipped to each pillar's front face -->
-        <clipPath id="clip-a"><polygon points="600,30 630,15 630,91 600,106" /></clipPath>
-        <g clip-path="url(#clip-a)">
-          <rect x="604" y="23" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="617" y="23" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="604" y="34" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="617" y="34" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="604" y="45" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="617" y="45" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="604" y="56" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="617" y="56" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="604" y="67" width="8" height="7" rx="1" class="window heat-4" />
-          <rect x="617" y="67" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="604" y="78" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="617" y="78" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="604" y="89" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="617" y="89" width="8" height="7" rx="1" class="window heat-2" />
-        </g>
-
-        <clipPath id="clip-b"><polygon points="645,52 675,37 675,91 645,106" /></clipPath>
-        <g clip-path="url(#clip-b)">
-          <rect x="649" y="45" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="662" y="45" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="649" y="56" width="8" height="7" rx="1" class="window heat-4" />
-          <rect x="662" y="56" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="649" y="67" width="8" height="7" rx="1" class="window heat-4" />
-          <rect x="662" y="67" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="649" y="78" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="662" y="78" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="649" y="89" width="8" height="7" rx="1" class="window heat-4" />
-          <rect x="662" y="89" width="8" height="7" rx="1" class="window heat-3" />
-        </g>
-
-        <clipPath id="clip-c"><polygon points="555,66 585,51 585,91 555,106" /></clipPath>
-        <g clip-path="url(#clip-c)">
-          <rect x="559" y="59" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="572" y="59" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="559" y="70" width="8" height="7" rx="1" class="window heat-2" />
-          <rect x="572" y="70" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="559" y="81" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="572" y="81" width="8" height="7" rx="1" class="window heat-1" />
-          <rect x="559" y="92" width="8" height="7" rx="1" class="window heat-4" />
-          <rect x="572" y="92" width="8" height="7" rx="1" class="window heat-1" />
-        </g>
-
-        <clipPath id="clip-d"><polygon points="510,88 540,73 540,91 510,106" /></clipPath>
-        <g clip-path="url(#clip-d)">
-          <rect x="514" y="81" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="527" y="81" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="514" y="92" width="8" height="7" rx="1" class="window heat-3" />
-          <rect x="527" y="92" width="8" height="7" rx="1" class="window heat-1" />
         </g>
 
       </svg>
