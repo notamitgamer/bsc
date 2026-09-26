@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 13:53 UTC
+> Last build: September 26, 2026 at 14:25 UTC
 
 ## Latest Build
 
-- **Build ID** — `375d69d8043801e21cf0372e7da4b4b3a1ded121`
+- **Build ID** — `82bb92c3975fb6eee58f81ec9180b5412d9d7add`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 13:53 UTC
+- **Build time** — September 26, 2026 at 14:25 UTC
 
 ## Recent Commits
+
+### [`82bb92c`](https://github.com/notamitgamer/bsc/commit/82bb92c3975fb6eee58f81ec9180b5412d9d7add) Refactor DocFooterExtra.vue for structure and style
+
+**Amit Dutta** committed on Sep 26, 2026 14:25 UTC · +53 / -178 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +53 -178 |
+</details>
+
+
+---
+
+### [`da187b8`](https://github.com/notamitgamer/bsc/commit/da187b8c426831c8b9f1c8ef1d8c693d939d90e6) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:54 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`375d69d`](https://github.com/notamitgamer/bsc/commit/375d69d8043801e21cf0372e7da4b4b3a1ded121) updated svg
 
@@ -126,28 +156,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +33 -41 |
-</details>
-
-
----
-
-### [`7246e1d`](https://github.com/notamitgamer/bsc/commit/7246e1d6878f0efb03128b8c966a89ce5a85f28f) Merge pull request #139 from notamitgamer/edit
-
-**Amit Dutta** committed on Sep 26, 2026 13:14 UTC
-
-
----
-
-### [`2917772`](https://github.com/notamitgamer/bsc/commit/2917772edd838f9832f17ebd93a7bc15d8853f0c) Enhance DocFooterExtra with animations and layout updates
-
-**Amit Dutta** committed on Sep 26, 2026 13:14 UTC · +82 / -39 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +82 -39 |
 </details>
 
 
