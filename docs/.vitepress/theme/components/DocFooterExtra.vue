@@ -2,7 +2,13 @@
   <div class="doc-footer-extra">
     <!-- Decorative divider: static skyline illustration (fixed colors, not theme-linked) -->
     <div class="footer-divider" aria-hidden="true">
-      <img src="/skyline3.svg" alt="" class="footer-divider-img" />
+      <img
+        src="/skyline3.svg"
+        alt=""
+        class="footer-divider-img"
+        width="1000"
+        height="460"
+      />
     </div>
 
     <div class="footer-top-row">
@@ -126,6 +132,7 @@ const editUrl = computed(() =>
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 0;
   font-family: var(--vp-font-family-base);
+  clear: both;
 }
 
 .doc-footer-extra button,
@@ -133,24 +140,22 @@ const editUrl = computed(() =>
   font-family: inherit;
 }
 
-/* Decorative divider: full view, 100% uncropped on all screens */
+/* Decorative divider container */
 .footer-divider {
   width: 100%;
+  position: relative;
   display: block;
   line-height: 0;
   opacity: 0.95;
+  margin-bottom: 0.5rem;
 }
 
+/* Forces the browser to calculate the vertical height before and after loading */
 .footer-divider-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1000 / 460;
   display: block;
-}
-
-@media (max-width: 639px) {
-  .footer-divider {
-    height: 75px; /* Keeps the skyline compact and legible on small screens */
-  }
 }
 
 .footer-top-row {
