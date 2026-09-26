@@ -89,11 +89,6 @@ const vitePressConfig = {
       { icon: 'github', link: 'https://github.com/notamitgamer/bsc' },
     ],
 
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: '2026 &copy;  <a href="https://amit.is-a.dev" target="_blank" rel="noopener noreferrer" class="footer-link">Amit Dutta</a>',
-    },
-
     search: {
       provider: 'algolia',
       options: {
