@@ -133,20 +133,17 @@ const editUrl = computed(() =>
   font-family: inherit;
 }
 
-/* Decorative divider — SVG skyline that anchors neatly across mobile and desktop */
+/* Decorative divider: full view, 100% uncropped on all screens */
 .footer-divider {
   width: 100%;
-  height: 120px;
-  overflow: hidden;
+  display: block;
+  line-height: 0;
   opacity: 0.95;
-  line-height: 0; /* Removes inline image bottom gap */
 }
 
 .footer-divider-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom center; /* Keeps ground base aligned to the line below */
+  height: auto;
   display: block;
 }
 
