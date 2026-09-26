@@ -1,13 +1,20 @@
 <template>
-  <div class="doc-footer-extra">
-    <!-- Decorative divider: static skyline illustration (fixed colors, not theme-linked) -->
-    <div class="footer-divider" aria-hidden="true">
+  <footer class="doc-footer-extra">
+    <!-- Decorative divider: rising entrance animation on scroll -->
+    <div
+      ref="dividerRef"
+      class="footer-divider"
+      :class="{ 'is-visible': isDividerVisible }"
+      aria-hidden="true"
+    >
       <img
         src="/skyline3.svg"
         alt=""
         class="footer-divider-img"
         width="1000"
         height="460"
+        loading="lazy"
+        decoding="async"
       />
     </div>
 
@@ -25,7 +32,7 @@
           />
         </svg>
       </a>
-      <button class="back-to-top" @click="scrollTop">
+      <button class="back-to-top" type="button" @click="scrollTop">
         Back to top
         <svg
           viewBox="0 0 16 16"
@@ -48,20 +55,30 @@
       <div class="col contribute-col">
         <p class="col-title">Help improve this page</p>
         <p class="col-text">
-          <template v-if="isGenerated">
-            This page is generated from source by a build script — editing it directly wouldn't stick. Spotted a bug in how it's built?
-          </template>
-          <template v-else>
-            Spotted a mistake or something unclear? All content is open source.
-          </template>
+          Spotted a mistake or something unclear? All content is open source.
         </p>
         <a
-          :href="editUrl"
+          href="https://github.com/notamitgamer/bsc/issues/new/choose"
           target="_blank"
           rel="noopener noreferrer"
           class="contribute-btn"
         >
-          {{ isGenerated ? 'View the generator scripts' : 'Suggest an edit' }}
+          Suggest an edit
+        </a>
+      </div>
+
+      <div class="col automation-col">
+        <p class="col-title">Automation & Scripts</p>
+        <p class="col-text">
+          Want to inspect or modify the underlying scrapers and generators?
+        </p>
+        <a
+          href="https://github.com/notamitgamer/bsc/tree/main/utils/bsc_md"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contribute-btn"
+        >
+          View scripts
         </a>
       </div>
 
@@ -111,31 +128,45 @@
         </a>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { ref, onMounted, onUnmounted } from 'vue'
 
-const { frontmatter, page } = useData()
+const dividerRef = ref(null)
+const isDividerVisible = ref(false)
+let observer = null
 
 function scrollTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-const isGenerated = computed(() => Boolean(frontmatter.value.source))
+onMounted(() => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    isDividerVisible.value = true
+    return
+  }
 
-// Generated pages (algorithm write-ups and per-program pages) are built by
-// utils/bsc_md/pipeline.py from source files — the rendered .md is an
-// artifact, not something to hand-edit, so send people to the generator
-// instead of the throwaway output. Pages actually authored in /docs (no
-// 'source' frontmatter) go straight to their own .md on GitHub's edit UI.
-const editUrl = computed(() =>
-  isGenerated.value
-    ? 'https://github.com/notamitgamer/bsc/tree/main/utils/bsc_md'
-    : `https://github.com/notamitgamer/bsc/edit/main/docs/${page.value.filePath}`
-)
+  observer = new IntersectionObserver(
+    (entries) => {
+      const [entry] = entries
+      if (entry.isIntersecting) {
+        isDividerVisible.value = true
+        if (dividerRef.value) observer.unobserve(dividerRef.value)
+      }
+    },
+    { threshold: 0.15 }
+  )
+
+  if (dividerRef.value) {
+    observer.observe(dividerRef.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) observer.disconnect()
+})
 </script>
 
 <style scoped>
@@ -145,13 +176,6 @@ const editUrl = computed(() =>
   padding-top: 0;
   font-family: var(--vp-font-family-base);
   clear: both;
-  /* Keeps the same visual width whether this renders inside the narrow
-     doc content column or the wider home-layout container. */
-  max-width: 688px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 .doc-footer-extra button,
@@ -165,11 +189,27 @@ const editUrl = computed(() =>
   position: relative;
   display: block;
   line-height: 0;
-  opacity: 0.95;
   margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
-/* Forces the browser to calculate the vertical height before and after loading */
+.footer-divider.is-visible {
+  opacity: 0.95;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-divider {
+    transition: none !important;
+    transform: none !important;
+    opacity: 0.95 !important;
+  }
+}
+
 .footer-divider-img {
   width: 100%;
   height: auto;
@@ -213,8 +253,8 @@ const editUrl = computed(() =>
 
 .footer-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   padding: 1.75rem 0;
   border-bottom: 1px solid var(--vp-c-divider);
 }
@@ -251,6 +291,7 @@ const editUrl = computed(() =>
   padding: 0.3rem 0.9rem;
   font-size: 13px;
   text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .contribute-btn:hover {
@@ -271,6 +312,7 @@ const editUrl = computed(() =>
   font-size: 13px;
   color: var(--vp-c-text-2);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .help-links a:hover {
@@ -294,6 +336,7 @@ const editUrl = computed(() =>
 .bottom-links a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .bottom-links a:hover {
