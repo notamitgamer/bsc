@@ -18,20 +18,28 @@
       />
     </div>
 
+    <!-- Top Action & Meta Row -->
     <div class="footer-top-row">
-      <a
-        href="https://github.com/notamitgamer/bsc"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="gh-mark"
-        aria-label="View on GitHub"
-      >
-        <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor">
-          <path
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27 c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
-          />
-        </svg>
-      </a>
+      <div class="top-row-left">
+        <a
+          href="https://github.com/notamitgamer/bsc"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gh-mark"
+          aria-label="View BSc Repository on GitHub"
+        >
+          <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27 c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+            />
+          </svg>
+        </a>
+        <span class="repo-badge">
+          <span class="badge-dot"></span>
+          <code>main</code> • bsc-v2026
+        </span>
+      </div>
+
       <button class="back-to-top" type="button" @click="scrollTop">
         Back to top
         <svg
@@ -51,39 +59,59 @@
       </button>
     </div>
 
+    <!-- M3 Bento Grid Columns -->
     <div class="footer-columns">
-      <div class="col contribute-col">
-        <p class="col-title">Help improve this page</p>
+      <div class="footer-card">
+        <div class="card-header">
+          <svg class="card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="col-title">Help Improve</span>
+        </div>
         <p class="col-text">
-          Spotted a mistake or something unclear? All content is open source.
+          Spotted a typo, broken snippet, or missing lab note? Contributions are welcome.
         </p>
         <a
           href="https://github.com/notamitgamer/bsc/issues/new/choose"
           target="_blank"
           rel="noopener noreferrer"
-          class="contribute-btn"
+          class="m3-tonal-btn"
         >
           Suggest an edit
         </a>
       </div>
 
-      <div class="col automation-col">
-        <p class="col-title">Automation & Scripts</p>
+      <div class="footer-card">
+        <div class="card-header">
+          <svg class="card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="8 6 2 12 8 18" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="col-title">Automation & Scripts</span>
+        </div>
         <p class="col-text">
-          Want to inspect or modify the underlying scrapers and generators?
+          Want to inspect or modify the underlying scrapers, parsers, and generators?
         </p>
         <a
           href="https://github.com/notamitgamer/bsc/tree/main/utils/bsc_md"
           target="_blank"
           rel="noopener noreferrer"
-          class="contribute-btn"
+          class="m3-tonal-btn"
         >
           View scripts
         </a>
       </div>
 
-      <div class="col help-col">
-        <p class="col-title">Still need help?</p>
+      <div class="footer-card">
+        <div class="card-header">
+          <svg class="card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="12" y1="17" x2="12.01" y2="17" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="col-title">Community & Support</span>
+        </div>
         <ul class="help-links">
           <li>
             <a
@@ -91,7 +119,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ask a question
+              Ask a question &rarr;
             </a>
           </li>
           <li>
@@ -100,16 +128,40 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Report an issue
+              Report an issue &rarr;
             </a>
           </li>
-          <li><a href="/changelog">Changelog</a></li>
+          <li>
+            <a href="/changelog">Changelog & revision history &rarr;</a>
+          </li>
         </ul>
       </div>
     </div>
 
+    <!-- Copyright & Legal Bottom Bar -->
     <div class="footer-bottom-bar">
-      <span>BSc Code Index &copy; 2026</span>
+      <div class="copyright-line">
+        <span>&copy; 2025–2026 </span>
+        <a
+          href="https://github.com/notamitgamer"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="author-link"
+        >
+          notamitgamer
+        </a>
+        <span class="license-sep">•</span>
+        <span>All content is licensed under the </span>
+        <a
+          href="https://github.com/notamitgamer/bsc/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="license-link"
+        >
+          MIT License
+        </a>
+      </div>
+
       <div class="bottom-links">
         <a href="/terms">Terms</a>
         <a
@@ -175,7 +227,7 @@ onUnmounted(() => {
 
 <style scoped>
 .doc-footer-extra {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 0;
   font-family: var(--vp-font-family-base);
@@ -189,6 +241,7 @@ onUnmounted(() => {
   box-sizing: border-box;
 }
 
+/* Dynamically matches VitePress home layout width */
 .doc-footer-extra.is-home {
   max-width: 1152px;
   padding-left: 64px;
@@ -215,7 +268,7 @@ onUnmounted(() => {
   font-family: inherit;
 }
 
-/* Decorative divider container */
+/* Decorative Divider with Smooth Scroll Elevation */
 .footer-divider {
   width: 100%;
   position: relative;
@@ -253,6 +306,7 @@ onUnmounted(() => {
   display: block;
 }
 
+/* Top Meta Row */
 .footer-top-row {
   display: flex;
   align-items: center;
@@ -262,13 +316,45 @@ onUnmounted(() => {
   color: var(--vp-c-text-2);
 }
 
+.top-row-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .gh-mark {
   color: var(--vp-c-text-2);
   display: flex;
+  transition: color 0.2s ease;
 }
 
 .gh-mark:hover {
   color: var(--vp-c-text-1);
+}
+
+.repo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 11.5px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: var(--vp-c-text-2);
+}
+
+.repo-badge code {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1, #10b981);
 }
 
 .back-to-top {
@@ -281,58 +367,91 @@ onUnmounted(() => {
   font-size: 13px;
   cursor: pointer;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .back-to-top:hover {
   color: var(--vp-c-brand-1);
 }
 
+/* Bento Surface Columns */
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
   padding: 1.75rem 0;
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
-@media (max-width: 719px) {
+@media (max-width: 768px) {
   .footer-columns {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
 
+.footer-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card-icon {
+  color: var(--vp-c-brand-1);
+}
+
 .col-title {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--vp-c-text-1);
+  font-size: 13.5px;
   font-weight: 600;
-  margin: 0 0 0.6rem;
+  color: var(--vp-c-text-1);
+  margin: 0;
 }
 
 .col-text {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--vp-c-text-2);
-  margin: 0 0 0.75rem;
   line-height: 1.5;
+  margin: 0 0 1rem;
 }
 
-.contribute-btn {
-  display: inline-block;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
+/* Material Design 3 Tonal Button */
+.m3-tonal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 0.35rem 0.95rem;
+  font-size: 12.5px;
+  font-weight: 500;
+  background: var(--vp-c-default-soft);
   color: var(--vp-c-text-1);
-  border-radius: 6px;
-  padding: 0.3rem 0.9rem;
-  font-size: 13px;
+  border: 1px solid transparent;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition: all 0.2s ease;
 }
 
-.contribute-btn:hover {
-  border-color: var(--vp-c-brand-1);
+.m3-tonal-btn:hover {
+  background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
 }
 
 .help-links {
@@ -341,27 +460,65 @@ onUnmounted(() => {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .help-links a {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .help-links a:hover {
   color: var(--vp-c-brand-1);
 }
 
+/* Footer Bottom Bar */
 .footer-bottom-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
-  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.2rem 0;
+  font-size: 12.5px;
   color: var(--vp-c-text-3, var(--vp-c-text-2));
+}
+
+.copyright-line {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.author-link {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.author-link:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+}
+
+.license-sep {
+  margin: 0 4px;
+  opacity: 0.6;
+}
+
+.license-link {
+  color: var(--vp-c-text-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.license-link:hover {
+  color: var(--vp-c-brand-1);
 }
 
 .bottom-links {
@@ -372,7 +529,7 @@ onUnmounted(() => {
 .bottom-links a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .bottom-links a:hover {
