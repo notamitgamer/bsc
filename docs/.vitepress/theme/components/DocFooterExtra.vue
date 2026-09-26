@@ -48,7 +48,12 @@
       <div class="col contribute-col">
         <p class="col-title">Help improve this page</p>
         <p class="col-text">
-          Spotted a mistake or something unclear? All content is open source.
+          <template v-if="isGenerated">
+            This page is generated from source by a build script — editing it directly wouldn't stick. Spotted a bug in how it's built?
+          </template>
+          <template v-else>
+            Spotted a mistake or something unclear? All content is open source.
+          </template>
         </p>
         <a
           :href="editUrl"
@@ -56,7 +61,7 @@
           rel="noopener noreferrer"
           class="contribute-btn"
         >
-          Suggest an edit
+          {{ isGenerated ? 'View the generator scripts' : 'Suggest an edit' }}
         </a>
       </div>
 
@@ -119,9 +124,16 @@ function scrollTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
+const isGenerated = computed(() => Boolean(frontmatter.value.source))
+
+// Generated pages (algorithm write-ups and per-program pages) are built by
+// utils/bsc_md/pipeline.py from source files — the rendered .md is an
+// artifact, not something to hand-edit, so send people to the generator
+// instead of the throwaway output. Pages actually authored in /docs (no
+// 'source' frontmatter) go straight to their own .md on GitHub's edit UI.
 const editUrl = computed(() =>
-  frontmatter.value.source
-    ? `https://github.com/notamitgamer/bsc/edit/main/${frontmatter.value.source}`
+  isGenerated.value
+    ? 'https://github.com/notamitgamer/bsc/tree/main/utils/bsc_md'
     : `https://github.com/notamitgamer/bsc/edit/main/docs/${page.value.filePath}`
 )
 </script>
@@ -133,6 +145,13 @@ const editUrl = computed(() =>
   padding-top: 0;
   font-family: var(--vp-font-family-base);
   clear: both;
+  /* Keeps the same visual width whether this renders inside the narrow
+     doc content column or the wider home-layout container. */
+  max-width: 688px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .doc-footer-extra button,
