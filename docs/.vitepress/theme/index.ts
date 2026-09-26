@@ -32,6 +32,10 @@ export default {
       'doc-after': () => h(Fragment, [
         h(DocFooterExtra)
       ]),
+      // The homepage uses `layout: home`, which does not render 'doc-after'
+      // at all — that slot only exists in VitePress's 'doc' layout. Hook the
+      // home layout's own slot so the footer shows there too.
+      'home-features-after': () => h(DocFooterExtra),
       'sidebar-nav-after': () => h(SidebarTags),
       'nav-bar-content-after': () => h(SponsorButton)
     })
