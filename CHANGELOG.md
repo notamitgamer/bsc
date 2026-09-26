@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 13:41 UTC
+> Last build: September 26, 2026 at 13:44 UTC
 
 ## Latest Build
 
-- **Build ID** — `c9eca74544375fe8f88907c52c518c9a6cf2674f`
+- **Build ID** — `c899ce69d1e493bce72bde63ac0c9d409acfd048`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 13:41 UTC
+- **Build time** — September 26, 2026 at 13:44 UTC
 
 ## Recent Commits
+
+### [`c899ce6`](https://github.com/notamitgamer/bsc/commit/c899ce69d1e493bce72bde63ac0c9d409acfd048) Refactor DocFooterExtra.vue for layout and style improvements
+
+**Amit Dutta** committed on Sep 26, 2026 13:44 UTC · +212 / -55 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +212 -55 |
+</details>
+
+
+---
+
+### [`e165c17`](https://github.com/notamitgamer/bsc/commit/e165c1740e34a71e6a8686aa690bc07936a0f3b6) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:42 UTC · +33 / -26 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -26 |
+</details>
+
+
+---
 
 ### [`c9eca74`](https://github.com/notamitgamer/bsc/commit/c9eca74544375fe8f88907c52c518c9a6cf2674f) Remove footer from VitePress configuration
 
@@ -111,37 +141,6 @@
 ### [`83f2d8f`](https://github.com/notamitgamer/bsc/commit/83f2d8f153e4b5ac096619738d1844522acfe5b0) Merge pull request #138 from notamitgamer/fix/footer-real-bottom-of-homepage
 
 **Amit Dutta** committed on Sep 26, 2026 12:40 UTC
-
-
----
-
-### [`9ef386f`](https://github.com/notamitgamer/bsc/commit/9ef386f1d713e9ac5c65513f26652319fd9dfff6) Fix footer landing mid-page on homepage instead of at the bottom
-
-**bot-for-notamitgamer** committed on Sep 26, 2026 12:39 UTC · +19 / -5 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/HomeFooterGate.vue` | Added | +16 |
-| `docs/.vitepress/theme/index.ts` | Modified | +3 -5 |
-</details>
-
-
----
-
-### [`0aba8dd`](https://github.com/notamitgamer/bsc/commit/0aba8dd0b1adf5b0efb3be3af7843d66fac77367) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 12:35 UTC · +34 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +34 -41 |
-</details>
 
 
 ---
