@@ -51,6 +51,59 @@
           <polygon points="510,88 540,73 540,91 510,106" class="face-right" />
         </g>
 
+        <!-- Windows: heat-mapped like a contribution graph, clipped to each pillar's front face -->
+        <clipPath id="clip-a"><polygon points="600,30 630,15 630,91 600,106" /></clipPath>
+        <g clip-path="url(#clip-a)">
+          <rect x="604" y="23" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="617" y="23" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="604" y="34" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="617" y="34" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="604" y="45" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="617" y="45" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="604" y="56" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="617" y="56" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="604" y="67" width="8" height="7" rx="1" class="window heat-4" />
+          <rect x="617" y="67" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="604" y="78" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="617" y="78" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="604" y="89" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="617" y="89" width="8" height="7" rx="1" class="window heat-2" />
+        </g>
+
+        <clipPath id="clip-b"><polygon points="645,52 675,37 675,91 645,106" /></clipPath>
+        <g clip-path="url(#clip-b)">
+          <rect x="649" y="45" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="662" y="45" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="649" y="56" width="8" height="7" rx="1" class="window heat-4" />
+          <rect x="662" y="56" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="649" y="67" width="8" height="7" rx="1" class="window heat-4" />
+          <rect x="662" y="67" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="649" y="78" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="662" y="78" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="649" y="89" width="8" height="7" rx="1" class="window heat-4" />
+          <rect x="662" y="89" width="8" height="7" rx="1" class="window heat-3" />
+        </g>
+
+        <clipPath id="clip-c"><polygon points="555,66 585,51 585,91 555,106" /></clipPath>
+        <g clip-path="url(#clip-c)">
+          <rect x="559" y="59" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="572" y="59" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="559" y="70" width="8" height="7" rx="1" class="window heat-2" />
+          <rect x="572" y="70" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="559" y="81" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="572" y="81" width="8" height="7" rx="1" class="window heat-1" />
+          <rect x="559" y="92" width="8" height="7" rx="1" class="window heat-4" />
+          <rect x="572" y="92" width="8" height="7" rx="1" class="window heat-1" />
+        </g>
+
+        <clipPath id="clip-d"><polygon points="510,88 540,73 540,91 510,106" /></clipPath>
+        <g clip-path="url(#clip-d)">
+          <rect x="514" y="81" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="527" y="81" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="514" y="92" width="8" height="7" rx="1" class="window heat-3" />
+          <rect x="527" y="92" width="8" height="7" rx="1" class="window heat-1" />
+        </g>
+
       </svg>
     </div>
 
@@ -163,6 +216,13 @@ const editUrl = computed(() =>
 .cube .face-right { fill: var(--vp-c-brand-3, #30a46c); }
 .cube .face-left  { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 65%, black 35%); }
 .cube { opacity: 0.9; }
+
+/* Windows — same 4-level intensity scale as a GitHub contribution graph */
+.window { stroke: none; }
+.heat-1 { fill: color-mix(in srgb, var(--vp-c-brand-3, #30a46c) 20%, black 20%); opacity: 0.5; }
+.heat-2 { fill: #9be9a8; opacity: 0.85; }
+.heat-3 { fill: #40c463; opacity: 0.9; }
+.heat-4 { fill: #ffd166; opacity: 0.95; } /* brightest windows read as "lit" against the green */
 
 .footer-top-row {
   display: flex;
