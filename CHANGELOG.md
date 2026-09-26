@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: September 26, 2026 at 12:40 UTC
+> Last build: September 26, 2026 at 13:14 UTC
 
 ## Latest Build
 
-- **Build ID** — `83f2d8f153e4b5ac096619738d1844522acfe5b0`
+- **Build ID** — `7246e1d6878f0efb03128b8c966a89ce5a85f28f`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 12:40 UTC
+- **Build time** — September 26, 2026 at 13:14 UTC
 
 ## Recent Commits
+
+### [`7246e1d`](https://github.com/notamitgamer/bsc/commit/7246e1d6878f0efb03128b8c966a89ce5a85f28f) Merge pull request #139 from notamitgamer/edit
+
+**Amit Dutta** committed on Sep 26, 2026 13:14 UTC
+
+
+---
+
+### [`2917772`](https://github.com/notamitgamer/bsc/commit/2917772edd838f9832f17ebd93a7bc15d8853f0c) Enhance DocFooterExtra with animations and layout updates
+
+**Amit Dutta** committed on Sep 26, 2026 13:14 UTC · +82 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +82 -39 |
+</details>
+
+
+---
+
+### [`d7fb4e4`](https://github.com/notamitgamer/bsc/commit/d7fb4e47e82e1d73039eb4ede7574e1e95d369c8) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 12:41 UTC · +34 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +34 -41 |
+</details>
+
+
+---
 
 ### [`83f2d8f`](https://github.com/notamitgamer/bsc/commit/83f2d8f153e4b5ac096619738d1844522acfe5b0) Merge pull request #138 from notamitgamer/fix/footer-real-bottom-of-homepage
 
@@ -97,51 +134,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +13 -8 |
-</details>
-
-
----
-
-### [`9dabea9`](https://github.com/notamitgamer/bsc/commit/9dabea91cbb3684695f89ab3af0cad55fb7f37d4) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:43 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`2cd45c5`](https://github.com/notamitgamer/bsc/commit/2cd45c51765d3d8d9294ca75b2604b1a276057e2) Refactor footer divider styles and comments
-
-**Amit Dutta** committed on Sep 26, 2026 07:42 UTC · +4 / -7 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +4 -7 |
-</details>
-
-
----
-
-### [`6f7bc27`](https://github.com/notamitgamer/bsc/commit/6f7bc27511b08ae3f2c8b394dee53a4214caf87a) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:37 UTC · +41 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -41 |
 </details>
 
 
