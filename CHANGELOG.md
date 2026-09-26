@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 05:36 UTC
+> Last build: September 26, 2026 at 07:04 UTC
 
 ## Latest Build
 
-- **Build ID** — `f8d4603969f1151d7523d2be282c66b9ad351388`
+- **Build ID** — `1cced127b322ecc660602f94953a53b504f590df`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 05:36 UTC
+- **Build time** — September 26, 2026 at 07:04 UTC
 
 ## Recent Commits
+
+### [`1cced12`](https://github.com/notamitgamer/bsc/commit/1cced127b322ecc660602f94953a53b504f590df) Revise footer SVG and remove voting feature
+
+**Amit Dutta** committed on Sep 26, 2026 07:04 UTC · +128 / -94 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +128 -94 |
+</details>
+
+
+---
+
+### [`8f7173e`](https://github.com/notamitgamer/bsc/commit/8f7173e4f7ac9909af915dc54fe6f0b6b3c0543b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 05:37 UTC · +31 / -39 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +31 -39 |
+</details>
+
+
+---
 
 ### [`f8d4603`](https://github.com/notamitgamer/bsc/commit/f8d4603969f1151d7523d2be282c66b9ad351388) Merge pull request #136 from notamitgamer/fix/window-alignment-and-zorder-v2
 
@@ -110,36 +140,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`62fad1e`](https://github.com/notamitgamer/bsc/commit/62fad1ecfe0a76103d1722c34faf49874fcc25ac) Enhance DocFooterExtra with cityscape and feedback updates
-
-**Amit Dutta** committed on Sep 25, 2026 16:11 UTC · +454 / -135 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +454 -135 |
-</details>
-
-
----
-
-### [`1f55d29`](https://github.com/notamitgamer/bsc/commit/1f55d2962f019dbfbcd08a28566365285d95bd04) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 16:05 UTC · +33 / -33 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -33 |
 </details>
 
 
