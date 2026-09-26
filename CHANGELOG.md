@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: September 26, 2026 at 07:46 UTC
+> Last build: September 26, 2026 at 12:34 UTC
 
 ## Latest Build
 
-- **Build ID** — `75b0dc6ec90edd4f945334ffa6329aad3959ad21`
+- **Build ID** — `91499ebc2177b9d2a14b697bfdde146878530270`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 07:46 UTC
+- **Build time** — September 26, 2026 at 12:34 UTC
 
 ## Recent Commits
+
+### [`91499eb`](https://github.com/notamitgamer/bsc/commit/91499ebc2177b9d2a14b697bfdde146878530270) Merge pull request #137 from notamitgamer/fix/homepage-footer-and-smart-edit-link
+
+**Amit Dutta** committed on Sep 26, 2026 12:34 UTC
+
+
+---
+
+### [`5e9d019`](https://github.com/notamitgamer/bsc/commit/5e9d0193543750c00f602b69db05eff0e8ad57fe) Show footer on homepage, branch edit-link for generated vs authored pages
+
+**bot-for-notamitgamer** committed on Sep 26, 2026 12:31 UTC · +27 / -4 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +23 -4 |
+| `docs/.vitepress/theme/index.ts` | Modified | +4 |
+</details>
+
+
+---
+
+### [`204c94b`](https://github.com/notamitgamer/bsc/commit/204c94be8a3f25726b422e874aa97d1d132795e2) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:48 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`75b0dc6`](https://github.com/notamitgamer/bsc/commit/75b0dc6ec90edd4f945334ffa6329aad3959ad21) Enhance DocFooterExtra with responsive image attributes
 
@@ -111,51 +149,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +14 -151 |
-</details>
-
-
----
-
-### [`8d49bed`](https://github.com/notamitgamer/bsc/commit/8d49bed27a07ef3628f9f36626b25e826e4d426b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:05 UTC · +33 / -33 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -33 |
-</details>
-
-
----
-
-### [`1cced12`](https://github.com/notamitgamer/bsc/commit/1cced127b322ecc660602f94953a53b504f590df) Revise footer SVG and remove voting feature
-
-**Amit Dutta** committed on Sep 26, 2026 07:04 UTC · +128 / -94 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +128 -94 |
-</details>
-
-
----
-
-### [`8f7173e`](https://github.com/notamitgamer/bsc/commit/8f7173e4f7ac9909af915dc54fe6f0b6b3c0543b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 05:37 UTC · +31 / -39 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +31 -39 |
 </details>
 
 
