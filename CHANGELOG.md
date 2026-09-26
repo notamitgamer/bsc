@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 07:42 UTC
+> Last build: September 26, 2026 at 07:46 UTC
 
 ## Latest Build
 
-- **Build ID** — `2cd45c51765d3d8d9294ca75b2604b1a276057e2`
+- **Build ID** — `75b0dc6ec90edd4f945334ffa6329aad3959ad21`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 07:42 UTC
+- **Build time** — September 26, 2026 at 07:46 UTC
 
 ## Recent Commits
+
+### [`75b0dc6`](https://github.com/notamitgamer/bsc/commit/75b0dc6ec90edd4f945334ffa6329aad3959ad21) Enhance DocFooterExtra with responsive image attributes
+
+**Amit Dutta** committed on Sep 26, 2026 07:46 UTC · +13 / -8 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +13 -8 |
+</details>
+
+
+---
+
+### [`9dabea9`](https://github.com/notamitgamer/bsc/commit/9dabea91cbb3684695f89ab3af0cad55fb7f37d4) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:43 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`2cd45c5`](https://github.com/notamitgamer/bsc/commit/2cd45c51765d3d8d9294ca75b2604b1a276057e2) Refactor footer divider styles and comments
 
@@ -126,28 +156,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +31 -39 |
-</details>
-
-
----
-
-### [`f8d4603`](https://github.com/notamitgamer/bsc/commit/f8d4603969f1151d7523d2be282c66b9ad351388) Merge pull request #136 from notamitgamer/fix/window-alignment-and-zorder-v2
-
-**Amit Dutta** committed on Sep 26, 2026 05:36 UTC
-
-
----
-
-### [`b2429f7`](https://github.com/notamitgamer/bsc/commit/b2429f7442a04f240d977524a305d5da9568b5ae) Fix window occlusion and slant alignment on the podium cluster
-
-**bot-for-notamitgamer** committed on Sep 26, 2026 04:53 UTC · +27 / -56 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +27 -56 |
 </details>
 
 
