@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 13:44 UTC
+> Last build: September 26, 2026 at 13:53 UTC
 
 ## Latest Build
 
-- **Build ID** — `c899ce69d1e493bce72bde63ac0c9d409acfd048`
+- **Build ID** — `375d69d8043801e21cf0372e7da4b4b3a1ded121`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 13:44 UTC
+- **Build time** — September 26, 2026 at 13:53 UTC
 
 ## Recent Commits
+
+### [`375d69d`](https://github.com/notamitgamer/bsc/commit/375d69d8043801e21cf0372e7da4b4b3a1ded121) updated svg
+
+**Amit Dutta** committed on Sep 26, 2026 13:53 UTC · +214 / -203 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/public/skyline3.svg` | Modified | +214 -203 |
+</details>
+
+
+---
+
+### [`7f3740f`](https://github.com/notamitgamer/bsc/commit/7f3740f76c72138c24c70ebede0d999a1858be52) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:45 UTC · +33 / -34 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -34 |
+</details>
+
+
+---
 
 ### [`c899ce6`](https://github.com/notamitgamer/bsc/commit/c899ce69d1e493bce72bde63ac0c9d409acfd048) Refactor DocFooterExtra.vue for layout and style improvements
 
@@ -119,28 +149,6 @@
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +82 -39 |
 </details>
-
-
----
-
-### [`d7fb4e4`](https://github.com/notamitgamer/bsc/commit/d7fb4e47e82e1d73039eb4ede7574e1e95d369c8) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 12:41 UTC · +34 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +34 -41 |
-</details>
-
-
----
-
-### [`83f2d8f`](https://github.com/notamitgamer/bsc/commit/83f2d8f153e4b5ac096619738d1844522acfe5b0) Merge pull request #138 from notamitgamer/fix/footer-real-bottom-of-homepage
-
-**Amit Dutta** committed on Sep 26, 2026 12:40 UTC
 
 
 ---
