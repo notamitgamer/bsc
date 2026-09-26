@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 13:33 UTC
+> Last build: September 26, 2026 at 13:41 UTC
 
 ## Latest Build
 
-- **Build ID** — `9762b1ae889bd9d0892351626aa5d2f779f6ed2a`
+- **Build ID** — `c9eca74544375fe8f88907c52c518c9a6cf2674f`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 13:33 UTC
+- **Build time** — September 26, 2026 at 13:41 UTC
 
 ## Recent Commits
+
+### [`c9eca74`](https://github.com/notamitgamer/bsc/commit/c9eca74544375fe8f88907c52c518c9a6cf2674f) Remove footer from VitePress configuration
+
+**Amit Dutta** committed on Sep 26, 2026 13:41 UTC · +1 / -6 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +1 -6 |
+</details>
+
+
+---
+
+### [`f4c5b59`](https://github.com/notamitgamer/bsc/commit/f4c5b5972292cc9e57cf27b52601ecd323358b5b) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:34 UTC · +33 / -33 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -33 |
+</details>
+
+
+---
 
 ### [`9762b1a`](https://github.com/notamitgamer/bsc/commit/9762b1ae889bd9d0892351626aa5d2f779f6ed2a) Enhance DocFooterExtra with responsive styles and is-home class
 
@@ -111,29 +141,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +34 -41 |
-</details>
-
-
----
-
-### [`91499eb`](https://github.com/notamitgamer/bsc/commit/91499ebc2177b9d2a14b697bfdde146878530270) Merge pull request #137 from notamitgamer/fix/homepage-footer-and-smart-edit-link
-
-**Amit Dutta** committed on Sep 26, 2026 12:34 UTC
-
-
----
-
-### [`5e9d019`](https://github.com/notamitgamer/bsc/commit/5e9d0193543750c00f602b69db05eff0e8ad57fe) Show footer on homepage, branch edit-link for generated vs authored pages
-
-**bot-for-notamitgamer** committed on Sep 26, 2026 12:31 UTC · +27 / -4 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +23 -4 |
-| `docs/.vitepress/theme/index.ts` | Modified | +4 |
 </details>
 
 
