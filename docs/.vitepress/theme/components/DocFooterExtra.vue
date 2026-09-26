@@ -1,5 +1,5 @@
 <template>
-  <footer class="doc-footer-extra">
+  <footer class="doc-footer-extra" :class="{ 'is-home': isHome }">
     <!-- Decorative divider: rising entrance animation on scroll -->
     <div
       ref="dividerRef"
@@ -132,7 +132,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useData } from 'vitepress'
+
+const { page } = useData()
+const isHome = computed(() => page.value?.frontmatter?.layout === 'home')
 
 const dividerRef = ref(null)
 const isDividerVisible = ref(false)
@@ -176,6 +180,34 @@ onUnmounted(() => {
   padding-top: 0;
   font-family: var(--vp-font-family-base);
   clear: both;
+  width: 100%;
+  max-width: 688px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.doc-footer-extra.is-home {
+  max-width: 1152px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+@media (max-width: 960px) {
+  .doc-footer-extra.is-home {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .doc-footer-extra,
+  .doc-footer-extra.is-home {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .doc-footer-extra button,
@@ -187,7 +219,9 @@ onUnmounted(() => {
 .footer-divider {
   width: 100%;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   line-height: 0;
   margin-bottom: 0.5rem;
   opacity: 0;
@@ -195,6 +229,7 @@ onUnmounted(() => {
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
+  overflow: hidden;
 }
 
 .footer-divider.is-visible {
@@ -212,8 +247,9 @@ onUnmounted(() => {
 
 .footer-divider-img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1000 / 460;
+  height: clamp(140px, 18vw, 240px);
+  object-fit: contain;
+  object-position: bottom center;
   display: block;
 }
 
