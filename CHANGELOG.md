@@ -1,15 +1,52 @@
 # Changelog
 
-> Last build: September 25, 2026 at 16:14 UTC
+> Last build: September 26, 2026 at 04:38 UTC
 
 ## Latest Build
 
-- **Build ID** — `5eb704215068256c94c91e34f222a2fa2ce52686`
+- **Build ID** — `175aa96f4d20a43143ead3cbb04e9cc2ca993949`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 25, 2026 at 16:14 UTC
+- **Build time** — September 26, 2026 at 04:38 UTC
 
 ## Recent Commits
+
+### [`175aa96`](https://github.com/notamitgamer/bsc/commit/175aa96f4d20a43143ead3cbb04e9cc2ca993949) Merge pull request #135 from notamitgamer/footer-skyline-windows
+
+**Amit Dutta** committed on Sep 26, 2026 04:38 UTC
+
+
+---
+
+### [`4274a02`](https://github.com/notamitgamer/bsc/commit/4274a024a8ae01076bf130ef26eded99e3f8bbec) Add heat-mapped windows to the podium cluster (skyline effect)
+
+**bot-for-notamitgamer** committed on Sep 26, 2026 02:11 UTC · +60 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +60 |
+</details>
+
+
+---
+
+### [`2601289`](https://github.com/notamitgamer/bsc/commit/26012896eb5b1bea210f8581c7b26494f619ccc3) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 16:15 UTC · +32 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +32 -32 |
+</details>
+
+
+---
 
 ### [`5eb7042`](https://github.com/notamitgamer/bsc/commit/5eb704215068256c94c91e34f222a2fa2ce52686) Refactor DocFooterExtra.vue for improved UI and feedback
 
@@ -111,51 +148,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +506 -270 |
-</details>
-
-
----
-
-### [`3c2c8f6`](https://github.com/notamitgamer/bsc/commit/3c2c8f6b469e286629c1597858ffb2d213589c55) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 15:54 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`89f4e5b`](https://github.com/notamitgamer/bsc/commit/89f4e5bf0c1ec1d405a8ed5660f1f252e00dc3c3) Update DocFooterExtra.vue
-
-**Amit Dutta** committed on Sep 25, 2026 15:53 UTC · +311 / -60 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +311 -60 |
-</details>
-
-
----
-
-### [`5d0f3fc`](https://github.com/notamitgamer/bsc/commit/5d0f3fce790d0858dcd487837bd8feee7a29c918) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 25, 2026 15:23 UTC · +33 / -35 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -35 |
 </details>
 
 
