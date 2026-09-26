@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: September 26, 2026 at 13:14 UTC
+> Last build: September 26, 2026 at 13:33 UTC
 
 ## Latest Build
 
-- **Build ID** — `7246e1d6878f0efb03128b8c966a89ce5a85f28f`
+- **Build ID** — `9762b1ae889bd9d0892351626aa5d2f779f6ed2a`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 13:14 UTC
+- **Build time** — September 26, 2026 at 13:33 UTC
 
 ## Recent Commits
+
+### [`9762b1a`](https://github.com/notamitgamer/bsc/commit/9762b1ae889bd9d0892351626aa5d2f779f6ed2a) Enhance DocFooterExtra with responsive styles and is-home class
+
+**Amit Dutta** committed on Sep 26, 2026 13:33 UTC · +41 / -5 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +41 -5 |
+</details>
+
+
+---
+
+### [`c57f0ac`](https://github.com/notamitgamer/bsc/commit/c57f0acde9a057d67cf09b829d6df79ed5dd4422) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:15 UTC · +33 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -41 |
+</details>
+
+
+---
 
 ### [`7246e1d`](https://github.com/notamitgamer/bsc/commit/7246e1d6878f0efb03128b8c966a89ce5a85f28f) Merge pull request #139 from notamitgamer/edit
 
@@ -104,36 +134,6 @@
 | --- | --- | --- |
 | `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +23 -4 |
 | `docs/.vitepress/theme/index.ts` | Modified | +4 |
-</details>
-
-
----
-
-### [`204c94b`](https://github.com/notamitgamer/bsc/commit/204c94be8a3f25726b422e874aa97d1d132795e2) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 07:48 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`75b0dc6`](https://github.com/notamitgamer/bsc/commit/75b0dc6ec90edd4f945334ffa6329aad3959ad21) Enhance DocFooterExtra with responsive image attributes
-
-**Amit Dutta** committed on Sep 26, 2026 07:46 UTC · +13 / -8 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +13 -8 |
 </details>
 
 
