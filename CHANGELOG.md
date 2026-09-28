@@ -1,15 +1,55 @@
 # Changelog
 
-> Last build: September 26, 2026 at 14:25 UTC
+> Last build: September 28, 2026 at 14:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `82bb92c3975fb6eee58f81ec9180b5412d9d7add`
+- **Build ID** — `a892535d1c5de22f927d5320ac53056205fee235`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 26, 2026 at 14:25 UTC
+- **Build time** — September 28, 2026 at 14:32 UTC
 
 ## Recent Commits
+
+### [`a892535`](https://github.com/notamitgamer/bsc/commit/a892535d1c5de22f927d5320ac53056205fee235) Merge pull request #140 from notamitgamer/edit-20260928-200201
+
+**Amit Dutta** committed on Sep 28, 2026 14:32 UTC
+
+
+---
+
+### [`e2d86da`](https://github.com/notamitgamer/bsc/commit/e2d86da213d7d151db21d82146485e3a1f57acdf) completed the asignment
+
+**Amit Dutta** committed on Sep 28, 2026 14:31 UTC · 4 files changed
+
+<details>
+<summary>Show 4 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/assignments/{assignment.pdf => assignment_updated.pdf}` | Modified | binary/no diff |
+| `semester_2/assignments/front_page.odt` | Added | binary/no diff |
+| `semester_2/assignments/front_page.pdf` | Added | binary/no diff |
+| `semester_2/assignments/assignment_updated.pdf` | Renamed (079%) | binary/no diff |
+</details>
+
+
+---
+
+### [`5ab60c8`](https://github.com/notamitgamer/bsc/commit/5ab60c8bdfa5790a18ef399eecd4e59d270a281d) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 14:26 UTC · +33 / -25 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -25 |
+</details>
+
+
+---
 
 ### [`82bb92c`](https://github.com/notamitgamer/bsc/commit/82bb92c3975fb6eee58f81ec9180b5412d9d7add) Refactor DocFooterExtra.vue for structure and style
 
@@ -111,51 +151,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/config.mts` | Modified | +1 -6 |
-</details>
-
-
----
-
-### [`f4c5b59`](https://github.com/notamitgamer/bsc/commit/f4c5b5972292cc9e57cf27b52601ecd323358b5b) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:34 UTC · +33 / -33 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -33 |
-</details>
-
-
----
-
-### [`9762b1a`](https://github.com/notamitgamer/bsc/commit/9762b1ae889bd9d0892351626aa5d2f779f6ed2a) Enhance DocFooterExtra with responsive styles and is-home class
-
-**Amit Dutta** committed on Sep 26, 2026 13:33 UTC · +41 / -5 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +41 -5 |
-</details>
-
-
----
-
-### [`c57f0ac`](https://github.com/notamitgamer/bsc/commit/c57f0acde9a057d67cf09b829d6df79ed5dd4422) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:15 UTC · +33 / -41 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -41 |
 </details>
 
 
