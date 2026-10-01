@@ -1,15 +1,60 @@
 # Changelog
 
-> Last build: September 28, 2026 at 14:32 UTC
+> Last build: October 01, 2026 at 01:32 UTC
 
 ## Latest Build
 
-- **Build ID** — `a892535d1c5de22f927d5320ac53056205fee235`
+- **Build ID** — `1872533f1e9dc122d6eff76fd685e69ed1961f04`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — September 28, 2026 at 14:32 UTC
+- **Build time** — October 01, 2026 at 01:32 UTC
 
 ## Recent Commits
+
+### [`1872533`](https://github.com/notamitgamer/bsc/commit/1872533f1e9dc122d6eff76fd685e69ed1961f04) Merge pull request #141 from notamitgamer/design/new-logo
+
+**Amit Dutta** committed on Oct 01, 2026 01:32 UTC
+
+
+---
+
+### [`c38c8ec`](https://github.com/notamitgamer/bsc/commit/c38c8ec4b76feea60afc7b93c01717ac88fa4c40) Redesign logo: C with a cursor
+
+**claude-bot[bot]** committed on Oct 01, 2026 01:29 UTC · +3 / -35 lines · 9 files changed
+
+<details>
+<summary>Show 9 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/public/favicon.svg` | Modified | +1 -11 |
+| `docs/public/logo_192.png` | Modified | binary/no diff |
+| `docs/public/logo_512.png` | Modified | binary/no diff |
+| `docs/public/logo_dark.svg` | Modified | +1 -12 |
+| `docs/public/logo_light.svg` | Modified | +1 -12 |
+| `docs/public/logo_maskable_192.png` | Modified | binary/no diff |
+| `docs/public/logo_maskable_512.png` | Modified | binary/no diff |
+| `docs/public/logo_monochrome_192.png` | Modified | binary/no diff |
+| `docs/public/logo_monochrome_512.png` | Modified | binary/no diff |
+</details>
+
+
+---
+
+### [`5ea1180`](https://github.com/notamitgamer/bsc/commit/5ea1180bb6101a6cdfbba4c10da04ffd349fe92a) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Sep 28, 2026 14:33 UTC · +36 / -41 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +36 -41 |
+</details>
+
+
+---
 
 ### [`a892535`](https://github.com/notamitgamer/bsc/commit/a892535d1c5de22f927d5320ac53056205fee235) Merge pull request #140 from notamitgamer/edit-20260928-200201
 
@@ -106,51 +151,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +33 -34 |
-</details>
-
-
----
-
-### [`c899ce6`](https://github.com/notamitgamer/bsc/commit/c899ce69d1e493bce72bde63ac0c9d409acfd048) Refactor DocFooterExtra.vue for layout and style improvements
-
-**Amit Dutta** committed on Sep 26, 2026 13:44 UTC · +212 / -55 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +212 -55 |
-</details>
-
-
----
-
-### [`e165c17`](https://github.com/notamitgamer/bsc/commit/e165c1740e34a71e6a8686aa690bc07936a0f3b6) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:42 UTC · +33 / -26 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -26 |
-</details>
-
-
----
-
-### [`c9eca74`](https://github.com/notamitgamer/bsc/commit/c9eca74544375fe8f88907c52c518c9a6cf2674f) Remove footer from VitePress configuration
-
-**Amit Dutta** committed on Sep 26, 2026 13:41 UTC · +1 / -6 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +1 -6 |
 </details>
 
 
