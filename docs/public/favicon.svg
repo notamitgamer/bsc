@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="favCard" x1="8" y1="8" x2="92" y2="92" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2f81f7"/>
-      <stop offset="1" stop-color="#2ea043"/>
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="84" height="84" rx="22" fill="url(#favCard)"/>
-  <path d="M31 30L58 50L31 70" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="60" y="60" width="22" height="10" rx="5" fill="#ffffff"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img"><title>BSc Code Index</title><rect width="256" height="256" rx="58" fill="#0d1117"/><g transform="translate(128 128) scale(.86) translate(-128 -128) translate(10 0)"><path d="M192.35 74.01A84 84 0 1 0 192.35 181.99L164.77 158.85A48 48 0 1 1 164.77 97.15Z" fill="#f2f2f0"/><rect x="160" y="104" width="32" height="48" fill="#ff6a42"/></g></svg>
