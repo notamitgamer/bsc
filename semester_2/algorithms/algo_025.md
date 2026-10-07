@@ -6,21 +6,20 @@
 
 ## Algorithm
 ```
-procedure delete_lastNode(dl)
+Procedure delete_lastNode(dl)
 begin
-    if(dl = NULL)
-        write("List is empty. deletion not possible");
+    if (dl = NULL) then
+        write("List is empty, deletion not possible.");
     else
         ptr ← dl;
-        if(next(ptr) = NULL)
-            dl ← next(ptr);
+        if (next(ptr) = NULL) then
+            dl ← NULL;
             delete(ptr);
         else
-            while(next(ptr) ≠ NULL)
+            while (next(ptr) ≠ NULL) do
                 ptr ← next(ptr);
-            end while
-            ptr ← prev(ptr);
-            next(ptr) ← NULL;
+            endwhile
+            next(prev(ptr)) ← NULL;
             delete(ptr);
         endif
     endif
