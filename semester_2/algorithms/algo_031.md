@@ -6,13 +6,15 @@
 
 ## Algorithm
 ```
-procedure  pop(stack, val)
+Procedure pop(stack, val)
 begin
-	if(stack = NULL) 
-		write("Empty");
-	else
-		ptr ← stack;
-		stack ← next(ptr);
+    if (stack = NULL) then
+        write("Stack Underflow");
+        return(stack);
+    else
+        ptr ← stack;
+        val ← INFO(ptr);
+        stack ← next(ptr);
         delete(ptr);
         return(stack);
     endif
