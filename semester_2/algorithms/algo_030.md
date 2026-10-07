@@ -6,10 +6,15 @@
 
 ## Algorithm
 ```
-procedure push(Stack, val)
-begin 
+Procedure push(stack, val)
+begin
     ptr ← getNode();
-    info(ptr) ← val;
+    if (ptr = NULL) then
+        write("Stack Overflow / Memory Allocation Failed");
+        return(stack);
+    endif
+
+    INFO(ptr) ← val;
     next(ptr) ← stack;
     stack ← ptr;
     return(stack);

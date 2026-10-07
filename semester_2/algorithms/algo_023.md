@@ -6,23 +6,26 @@
 
 ## Algorithm
 ```
-procedure insert(dl, val, key)
+Procedure insert(dl, val, key)
 begin
     ptr ← dl;
     found ← 0;
-    while(ptr)
-        if(info(ptr) = key)
+
+    while (ptr ≠ NULL) do
+        if (INFO(ptr) = key) then
             found ← 1;
             break;
         endif
         ptr ← next(ptr);
-    end while
-    if(found)
+    endwhile
+
+    if (found = 1) then
         nptr ← getNode();
-        info(nptr) ← val;
+        INFO(nptr) ← val;
         next(nptr) ← NULL;
         prev(nptr) ← NULL;
-        if(next(ptr) = NULL)
+
+        if (next(ptr) = NULL) then
             prev(nptr) ← ptr;
             next(ptr) ← nptr;
         else
@@ -30,9 +33,11 @@ begin
             prev(next(ptr)) ← nptr;
             next(ptr) ← nptr;
             prev(nptr) ← ptr;
-        end if
+        endif
     else
-        write("key not found");
+        write("Key not found");
     endif
+
+    return(dl);
 end procedure
 ```

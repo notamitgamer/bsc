@@ -6,20 +6,22 @@
 
 ## Algorithm
 ```
-procedure dequeue(Q[], front, rear)
+Procedure dequeue(Q[], front, rear, Qsize)
 begin
-    if(front = -1)
-        write("Queue empty.");
+    if (front = -1) then
+        write("Queue empty.")
     else
-        rear ← Q[front];
-        write("Deleted element: ", val);
-      --------------------------------
-      | front ← (front + 1) % Qsize; |
-      | if(front > rear)             |   Vice Versa
-      |     front ← -1;              |
-      |     rear ← -1;               |
-      --------------------------------    
+        val ← Q[front]                   
+        write("Deleted element: ", val)
+
+        // CORRECTED SECTION:
+        if (front = rear) then           
+            front ← -1
+            rear ← -1
+        else                             
+            front ← (front + 1) % Qsize
         endif
     endif
 end procedure
+
 ```

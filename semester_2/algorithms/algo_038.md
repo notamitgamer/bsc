@@ -6,17 +6,20 @@
 
 ## Algorithm
 ```
-procedure enqueue(rear, Qsize, front, Q[], val)
+Procedure enqueue(Q[], front, rear, Qsize, val)
 begin
-    if((rear + 1) % Qsize = font)
+    if ((rear + 1) % Qsize = front) then
         write("Queue full, insertion can't be done.");
     else
-        if(front = -1)
+        if (front = -1) then
             front ← 0;
+            rear ← 0;
+        else
+            rear ← (rear + 1) % Qsize;
         endif
-        rear ← (rear + 1) % Qsize;
+
         Q[rear] ← val;
-        write("Inserted element", val);
+        write("Inserted element: ", val);
     endif
 end procedure
 ```
