@@ -1,15 +1,75 @@
 # Changelog
 
-> Last build: October 01, 2026 at 01:32 UTC
+> Last build: October 07, 2026 at 17:04 UTC
 
 ## Latest Build
 
-- **Build ID** — `1872533f1e9dc122d6eff76fd685e69ed1961f04`
+- **Build ID** — `e7d47258d3c23f43310763eef86fb456cea08ddf`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — October 01, 2026 at 01:32 UTC
+- **Build time** — October 07, 2026 at 17:04 UTC
 
 ## Recent Commits
+
+### [`e7d4725`](https://github.com/notamitgamer/bsc/commit/e7d47258d3c23f43310763eef86fb456cea08ddf) Merge pull request #143 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-2ca10dcb51
+
+**Amit Dutta** committed on Oct 07, 2026 17:04 UTC
+
+
+---
+
+### [`d496afe`](https://github.com/notamitgamer/bsc/commit/d496afe7d09bf2481bdffcb86022c4d314fd4237) chore(deps): bump the npm_and_yarn group across 1 directory with 3 updates
+
+**dependabot[bot]** committed on Oct 07, 2026 17:03 UTC · +71 / -71 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +71 -71 |
+</details>
+
+
+---
+
+### [`89208c1`](https://github.com/notamitgamer/bsc/commit/89208c15609086415206e7344ad313b63b4a5210) Merge pull request #142 from notamitgamer/dependabot/npm_and_yarn/vite-plugin-pwa-2.0.0
+
+**Amit Dutta** committed on Oct 07, 2026 17:01 UTC
+
+
+---
+
+### [`8ca18c2`](https://github.com/notamitgamer/bsc/commit/8ca18c2377b307313b3711ecce2c4920bf417f43) chore(deps-dev): bump vite-plugin-pwa from 1.3.0 to 2.0.0
+
+**dependabot[bot]** committed on Oct 06, 2026 21:25 UTC · +7 / -25 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +6 -24 |
+| `package.json` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`5d9b26b`](https://github.com/notamitgamer/bsc/commit/5d9b26bf4acf4f7d569321b351ed6c9b497c9e41) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Oct 01, 2026 01:34 UTC · +44 / -44 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +44 -44 |
+</details>
+
+
+---
 
 ### [`1872533`](https://github.com/notamitgamer/bsc/commit/1872533f1e9dc122d6eff76fd685e69ed1961f04) Merge pull request #141 from notamitgamer/design/new-logo
 
@@ -76,81 +136,6 @@
 | `semester_2/assignments/front_page.odt` | Added | binary/no diff |
 | `semester_2/assignments/front_page.pdf` | Added | binary/no diff |
 | `semester_2/assignments/assignment_updated.pdf` | Renamed (079%) | binary/no diff |
-</details>
-
-
----
-
-### [`5ab60c8`](https://github.com/notamitgamer/bsc/commit/5ab60c8bdfa5790a18ef399eecd4e59d270a281d) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 14:26 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`82bb92c`](https://github.com/notamitgamer/bsc/commit/82bb92c3975fb6eee58f81ec9180b5412d9d7add) Refactor DocFooterExtra.vue for structure and style
-
-**Amit Dutta** committed on Sep 26, 2026 14:25 UTC · +53 / -178 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +53 -178 |
-</details>
-
-
----
-
-### [`da187b8`](https://github.com/notamitgamer/bsc/commit/da187b8c426831c8b9f1c8ef1d8c693d939d90e6) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:54 UTC · +33 / -25 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -25 |
-</details>
-
-
----
-
-### [`375d69d`](https://github.com/notamitgamer/bsc/commit/375d69d8043801e21cf0372e7da4b4b3a1ded121) updated svg
-
-**Amit Dutta** committed on Sep 26, 2026 13:53 UTC · +214 / -203 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/public/skyline3.svg` | Modified | +214 -203 |
-</details>
-
-
----
-
-### [`7f3740f`](https://github.com/notamitgamer/bsc/commit/7f3740f76c72138c24c70ebede0d999a1858be52) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Sep 26, 2026 13:45 UTC · +33 / -34 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -34 |
 </details>
 
 
