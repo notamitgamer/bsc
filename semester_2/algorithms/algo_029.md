@@ -6,15 +6,15 @@
 
 ## Algorithm
 ```
-procedure pop(stack[], top, n)
+Procedure pop(stack[], top)
 begin
-    if(top = -1) 
+    if (top = -1) then
         write("Stack is empty, deletion not possible.");
-        return;
+        return NULL;
     else
         x ← stack[top];
         top ← top - 1;
         return x;
-    endif;
+    endif
 end procedure
 ```
