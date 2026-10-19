@@ -19,45 +19,45 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync-hf:
+  sync-cdn:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
 
     steps:
-      - name: Checkout GitHub Repo
+      - name: Checkout
         uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
-      - name: Safe Sync to Hugging Face
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      # Short-lived GitHub OIDC token, no stored secret. See https://cdn.amit.is-a.dev/gh-sync
+      - name: Request GitHub OIDC token
+        id: oidc
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const token = await core.getIDToken('cdn.amit.is-a.dev')
+            core.setSecret(token)
+            core.setOutput('token', token)
+
+      - name: Package repo contents
         run: |
-          rm -rf /tmp/hf_sync_payload
-          mkdir -p /tmp/hf_sync_payload/bsc
-          rsync -av --delete \
-            --exclude='.git' \
-            --exclude='MinGW64' \
-            --exclude='*.exe' \
-            --exclude='site_files' \
-            "$GITHUB_WORKSPACE/" /tmp/hf_sync_payload/bsc/
+          tar --exclude='.git' \
+              --exclude='node_modules' \
+              --exclude='MinGW64' \
+              --exclude='site_files' \
+              --exclude='*.exe' \
+              -czf /tmp/payload.tar.gz .
 
-          python -m pip install --quiet huggingface_hub
-          python - <<'PY'
-          import os
-          from huggingface_hub import upload_folder
+      # Lands at https://cdn.amit.is-a.dev/notamitgamer/bsc/
+      # Raw files: https://raw.cdn.amit.is-a.dev/notamitgamer/bsc/<path>
+      - name: Push to CDN
+        env:
+          OIDC_TOKEN: ${{ steps.oidc.outputs.token }}
+        run: |
+          curl -sS --fail-with-body -X POST https://cdn.amit.is-a.dev/api/gh-sync \
+            -F "token=$OIDC_TOKEN" \
+            -F "archive=@/tmp/payload.tar.gz"
 
-          upload_folder(
-              repo_id="notamitgamer/cdn",
-              repo_type="dataset",
-              folder_path="/tmp/hf_sync_payload/bsc",
-              path_in_repo="bsc",
-              delete_patterns="*",
-              commit_message="Safe auto-sync: updating bsc code index files",
-              token=os.environ["HF_TOKEN"],
-          )
-          PY
-          
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'bot-for-notamitgamer[bot]'
