@@ -1,145 +1,153 @@
 # Changelog
 
-> Last build: October 07, 2026 at 17:54 UTC
+> Last build: October 19, 2026 at 05:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `50bb017a9fb5e5846ad3d49da68d79d74706e0e0`
+- **Build ID** — `681009bce6ba524f6afc89eb95973beadd492d40`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — October 07, 2026 at 17:54 UTC
+- **Build time** — October 19, 2026 at 05:48 UTC
 
 ## Recent Commits
 
-### [`50bb017`](https://github.com/notamitgamer/bsc/commit/50bb017a9fb5e5846ad3d49da68d79d74706e0e0) Merge pull request #144 from notamitgamer/Fix
+### [`681009b`](https://github.com/notamitgamer/bsc/commit/681009bce6ba524f6afc89eb95973beadd492d40) Merge pull request #145 from notamitgamer/add-algo-063
 
-**Amit Dutta** committed on Oct 07, 2026 17:54 UTC
+**Amit Dutta** committed on Oct 19, 2026 05:48 UTC
 
 
 ---
 
-### [`ca3920b`](https://github.com/notamitgamer/bsc/commit/ca3920b5e9d530808a187558bdebdd19f69967d2) Refactor insert procedure for double linked list
+### [`b4defd9`](https://github.com/notamitgamer/bsc/commit/b4defd9f0bf94c47afcae0dac402db4a3f81997d) Add algo_089: hash insert separate chaining
 
-**Amit Dutta** committed on Oct 07, 2026 17:40 UTC · +15 / -10 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +42 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_023.md` | Modified | +15 -10 |
+| `semester_2/algorithms/algo_089.md` | Added | +42 |
 </details>
 
 
 ---
 
-### [`e6070cc`](https://github.com/notamitgamer/bsc/commit/e6070ccf580804362ec7447955d3b1a23ad1a76b) Fix algorithm syntax and improve clarity
+### [`6172964`](https://github.com/notamitgamer/bsc/commit/61729641d97538210db46b04264eea7d725efb18) Add algo_088: hash insert linear probing
 
-**Amit Dutta** committed on Oct 07, 2026 17:36 UTC · +9 / -10 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +30 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_025.md` | Modified | +9 -10 |
+| `semester_2/algorithms/algo_088.md` | Added | +30 |
 </details>
 
 
 ---
 
-### [`b88ffd5`](https://github.com/notamitgamer/bsc/commit/b88ffd59d45616d17a48a575e8ea7da039e523fb) Fix pop procedure syntax and return value
+### [`111f1da`](https://github.com/notamitgamer/bsc/commit/111f1dabc3b118ec442e89d09366763d5c9ed7bd) Add algo_087: mirror image of tree
 
-**Amit Dutta** committed on Oct 07, 2026 17:34 UTC · +5 / -5 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +22 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_029.md` | Modified | +5 -5 |
+| `semester_2/algorithms/algo_087.md` | Added | +22 |
 </details>
 
 
 ---
 
-### [`2270711`](https://github.com/notamitgamer/bsc/commit/227071161485e3985d181a134e1300ed64f25b2e) Refactor push procedure for stack with error handling
+### [`616a151`](https://github.com/notamitgamer/bsc/commit/616a15116ca381e9b39a258096c8604858d61daa) Add algo_086: tree height
 
-**Amit Dutta** committed on Oct 07, 2026 17:32 UTC · +9 / -4 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +24 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_030.md` | Modified | +9 -4 |
+| `semester_2/algorithms/algo_086.md` | Added | +24 |
 </details>
 
 
 ---
 
-### [`bef5809`](https://github.com/notamitgamer/bsc/commit/bef5809afe62374201be40dacd664ef5255807bf) Improve pop algorithm with stack underflow check
+### [`9ecd7d2`](https://github.com/notamitgamer/bsc/commit/9ecd7d2ad5d8aa8527722bd022964d0c12ddf071) Add algo_085: non-recursive postorder
 
-**Amit Dutta** committed on Oct 07, 2026 17:30 UTC · +9 / -7 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +35 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_031.md` | Modified | +9 -7 |
+| `semester_2/algorithms/algo_085.md` | Added | +35 |
 </details>
 
 
 ---
 
-### [`60070d1`](https://github.com/notamitgamer/bsc/commit/60070d1e4eec774a44bbf14125de2fd2b92226af) Fix enqueue procedure syntax and formatting
+### [`f07a6e6`](https://github.com/notamitgamer/bsc/commit/f07a6e64237826b15a7b505bd6ea037bc265ab1c) Add algo_084: level-order traversal
 
-**Amit Dutta** committed on Oct 07, 2026 17:10 UTC · +9 / -6 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +31 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_038.md` | Modified | +9 -6 |
+| `semester_2/algorithms/algo_084.md` | Added | +31 |
 </details>
 
 
 ---
 
-### [`4ba63e4`](https://github.com/notamitgamer/bsc/commit/4ba63e4e06a6b302fdad4197dc553cb5cd19a26a) chore: update changelog [skip ci]
+### [`fd2058b`](https://github.com/notamitgamer/bsc/commit/fd2058ba5da7718f0adff385949c94763c04ae79) Add algo_083: tower of hanoi
 
-**bot-for-notamitgamer[bot]** committed on Oct 07, 2026 17:06 UTC · +49 / -64 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +20 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `CHANGELOG.md` | Modified | +49 -64 |
+| `semester_2/algorithms/algo_083.md` | Added | +20 |
 </details>
 
 
 ---
 
-### [`e7d4725`](https://github.com/notamitgamer/bsc/commit/e7d47258d3c23f43310763eef86fb456cea08ddf) Merge pull request #143 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-2ca10dcb51
+### [`133e5c4`](https://github.com/notamitgamer/bsc/commit/133e5c4000e74fa09692cad7364d4982e0fa87c2) Add algo_082: gcd
 
-**Amit Dutta** committed on Oct 07, 2026 17:04 UTC
-
-
----
-
-### [`3b73a00`](https://github.com/notamitgamer/bsc/commit/3b73a0062e2f33859bc9b2ae16504f45f0e0d11b) Refactor dequeue algorithm for circular queue
-
-**Amit Dutta** committed on Oct 07, 2026 17:03 UTC · +14 / -12 lines · 1 file changed
+**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +17 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_039.md` | Modified | +14 -12 |
+| `semester_2/algorithms/algo_082.md` | Added | +17 |
+</details>
+
+
+---
+
+### [`d6060a5`](https://github.com/notamitgamer/bsc/commit/d6060a55b19e1d32a8025cfcf5400c459a365f25) Add algo_081: fibonacci
+
+**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +26 / -0 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_081.md` | Added | +26 |
 </details>
 
 
