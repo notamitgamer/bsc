@@ -1,153 +1,156 @@
 # Changelog
 
-> Last build: October 19, 2026 at 05:48 UTC
+> Last build: October 20, 2026 at 07:29 UTC
 
 ## Latest Build
 
-- **Build ID** — `681009bce6ba524f6afc89eb95973beadd492d40`
+- **Build ID** — `8a9d7e349e66c307873f441e375d26d2c73bf693`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — October 19, 2026 at 05:48 UTC
+- **Build time** — October 20, 2026 at 07:29 UTC
 
 ## Recent Commits
 
-### [`681009b`](https://github.com/notamitgamer/bsc/commit/681009bce6ba524f6afc89eb95973beadd492d40) Merge pull request #145 from notamitgamer/add-algo-063
+### [`8a9d7e3`](https://github.com/notamitgamer/bsc/commit/8a9d7e349e66c307873f441e375d26d2c73bf693) Merge pull request #146 from notamitgamer/fix/cdn-gh-sync
 
-**Amit Dutta** committed on Oct 19, 2026 05:48 UTC
+**Amit Dutta** committed on Oct 20, 2026 07:29 UTC
 
 
 ---
 
-### [`b4defd9`](https://github.com/notamitgamer/bsc/commit/b4defd9f0bf94c47afcae0dac402db4a3f81997d) Add algo_089: hash insert separate chaining
+### [`6acb3d1`](https://github.com/notamitgamer/bsc/commit/6acb3d1b63ab77ed3f6415c3c3059f9c9bfe1159) Merge pull request #147 from notamitgamer/feat/catppuccin-theme
 
-**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +42 / -0 lines · 1 file changed
+**Amit Dutta** committed on Oct 20, 2026 07:28 UTC
+
+
+---
+
+### [`a4dde59`](https://github.com/notamitgamer/bsc/commit/a4dde595d5bda9c7115158f463aa0d087932aca2) feat(docs): semester progress strip and cleaner generated file/folder lists
+
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:26 UTC · +195 / -13 lines · 5 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 5 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_089.md` | Added | +42 |
+| `docs/.vitepress/semesters.data.ts` | Added | +45 |
+| `docs/.vitepress/theme/components/SemesterProgress.vue` | Added | +61 |
+| `docs/.vitepress/theme/index.ts` | Modified | +7 -3 |
+| `docs/.vitepress/theme/style.css` | Modified | +72 |
+| `utils/bsc_md/indexing.py` | Modified | +10 -10 |
 </details>
 
 
 ---
 
-### [`6172964`](https://github.com/notamitgamer/bsc/commit/61729641d97538210db46b04264eea7d725efb18) Add algo_088: hash insert linear probing
+### [`1324019`](https://github.com/notamitgamer/bsc/commit/1324019b3b3675139e0aaba600f24200f542faa5) feat(docs): restyle callouts and code blocks — accent bars, visible language label, softer line numbers
 
-**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +30 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:24 UTC · +58 / -0 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_088.md` | Added | +30 |
+| `docs/.vitepress/theme/style.css` | Modified | +58 |
 </details>
 
 
 ---
 
-### [`111f1da`](https://github.com/notamitgamer/bsc/commit/111f1dabc3b118ec442e89d09366763d5c9ed7bd) Add algo_087: mirror image of tree
+### [`26f4339`](https://github.com/notamitgamer/bsc/commit/26f4339d41a1af2305817c221f4534411b913e79) fix(home): add missing why-card icon and hover styles
 
-**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +22 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +20 / -2 lines · 1 file changed
 
 <details>
 <summary>Show 1 changed file</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_087.md` | Added | +22 |
+| `docs/.vitepress/theme/style.css` | Modified | +20 -2 |
 </details>
 
 
 ---
 
-### [`616a151`](https://github.com/notamitgamer/bsc/commit/616a15116ca381e9b39a258096c8604858d61daa) Add algo_086: tree height
+### [`ecfcae1`](https://github.com/notamitgamer/bsc/commit/ecfcae173750f3f12136a172ceb8281abe7bda29) feat(home): why-cards — accent icons, hover lift, gradient eyebrow; fix typo
 
-**notamitgamer** committed on Oct 19, 2026 05:45 UTC · +24 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +10 / -2 lines · 2 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 2 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_086.md` | Added | +24 |
+| `docs/.vitepress/theme/style.css` | Modified | +6 -1 |
+| `docs/index.md` | Modified | +4 -1 |
 </details>
 
 
 ---
 
-### [`9ecd7d2`](https://github.com/notamitgamer/bsc/commit/9ecd7d2ad5d8aa8527722bd022964d0c12ddf071) Add algo_085: non-recursive postorder
+### [`1dc2b83`](https://github.com/notamitgamer/bsc/commit/1dc2b83cd1000f2c2729e81470ba77a477c223e3) feat(home): hero polish — tagline pills, logo glow, text-link tertiary action
 
-**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +35 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +58 / -2 lines · 2 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 2 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_085.md` | Added | +35 |
+| `docs/.vitepress/theme/style.css` | Modified | +56 |
+| `docs/index.md` | Modified | +2 -2 |
 </details>
 
 
 ---
 
-### [`f07a6e6`](https://github.com/notamitgamer/bsc/commit/f07a6e64237826b15a7b505bd6ea037bc265ab1c) Add algo_084: level-order traversal
+### [`b7423ab`](https://github.com/notamitgamer/bsc/commit/b7423ab4d994e2d7f2034d527b8b0d8718c341fb) feat(home): roadmap as year-grouped semester cards
 
-**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +31 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:22 UTC · +155 / -10 lines · 3 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 3 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_084.md` | Added | +31 |
+| `docs/.vitepress/theme/components/RoadmapCards.vue` | Added | +139 |
+| `docs/.vitepress/theme/index.ts` | Modified | +5 |
+| `docs/index.md` | Modified | +11 -10 |
 </details>
 
 
 ---
 
-### [`fd2058b`](https://github.com/notamitgamer/bsc/commit/fd2058ba5da7718f0adff385949c94763c04ae79) Add algo_083: tower of hanoi
+### [`7db2a25`](https://github.com/notamitgamer/bsc/commit/7db2a259288f7891e1c57fd0ff1d2270e1d8fe9b) fix(theme): use theme colours for text on accent backgrounds
 
-**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +20 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:18 UTC · +3 / -3 lines · 2 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 2 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_083.md` | Added | +20 |
+| `docs/.vitepress/theme/components/ExternalLinkWarning.vue` | Modified | +1 -1 |
+| `docs/.vitepress/theme/components/Labels.vue` | Modified | +2 -2 |
 </details>
 
 
 ---
 
-### [`133e5c4`](https://github.com/notamitgamer/bsc/commit/133e5c4000e74fa09692cad7364d4982e0fa87c2) Add algo_082: gcd
+### [`51d9122`](https://github.com/notamitgamer/bsc/commit/51d9122937209ffd73ea885764166d5bb60f96d0) feat(footer): restore Catppuccin footer art with MIT attribution
 
-**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +17 / -0 lines · 1 file changed
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:16 UTC · +28 / -25 lines · 3 files changed
 
 <details>
-<summary>Show 1 changed file</summary>
+<summary>Show 3 changed files</summary>
 
 | File | Change | Lines |
 | --- | --- | --- |
-| `semester_2/algorithms/algo_082.md` | Added | +17 |
-</details>
-
-
----
-
-### [`d6060a5`](https://github.com/notamitgamer/bsc/commit/d6060a55b19e1d32a8025cfcf5400c459a365f25) Add algo_081: fibonacci
-
-**notamitgamer** committed on Oct 19, 2026 05:44 UTC · +26 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/algorithms/algo_081.md` | Added | +26 |
+| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +10 -25 |
+| `docs/credits.md` | Modified | +1 |
+| `docs/public/footer-line.svg` | Added | +17 |
 </details>
 
 
