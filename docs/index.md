@@ -21,6 +21,16 @@ hero:
     dark: /logo_dark.svg
     alt: logo
 
+roadmap:
+  - { sem: 1, status: archived, focus: ["C Programming", "R"] }
+  - { sem: 2, status: active, focus: ["DSA", "C++", "Python"] }
+  - { sem: 3, status: pending }
+  - { sem: 4, status: pending }
+  - { sem: 5, status: pending }
+  - { sem: 6, status: pending }
+  - { sem: 7, status: pending }
+  - { sem: 8, status: pending }
+
 features:
   - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>'
     title: Searchable by Problem
@@ -59,16 +69,7 @@ features:
 
 Currently navigating **Semester 2**. Folders for future semesters are placeholders that will automatically unlock and update in real-time as my 4-year academic session progresses.
 
-| Semester | Status | Primary Focus |
-|:---|:---|:---|
-| [Semester 1](/semester_1/) | Archived | **C Programming**, **R** |
-| [Semester 2](/semester_2/) | Active | **DSA**, **CPP**, **Python** |
-| [Semester 3](/semester_3/) | Pending | Upcoming |
-| [Semester 4](/semester_4/) | Pending | Upcoming |
-| [Semester 5](/semester_5/) | Pending | Upcoming |
-| [Semester 6](/semester_6/) | Pending | Upcoming |
-| [Semester 7](/semester_7/) | Pending | Upcoming |
-| [Semester 8](/semester_8/) | Pending | Upcoming |
+<RoadmapCards />
 
 ## Environment Setup
 
