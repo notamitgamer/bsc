@@ -22,131 +22,44 @@
 }
 
 ::selection {
-  background: #fab38733; /* Mocha Peach with opacity */
+  background: color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent);
   color: var(--vp-c-text-1);
 }
 
 
 /* ==========================================================================
-   THEME COLORS — LIGHT MODE (ported from vitepress-carbon)
+   THEME COLORS — provided by @catppuccin/vitepress (Latte / Mocha, Peach)
+   Imported in theme/index.ts. Only project-specific tokens live here.
    ========================================================================== */
 
 :root {
-  /* Backgrounds */
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f6f6f7;
-  --vp-c-bg-elv: #ffffff;
-  --vp-c-bg-soft: #f6f6f7;
-  --vp-c-divider: #d1d9e0;
-  --vp-c-b-divider: #1f2328;
-
-  /* GitHub's real sidebar matches the main canvas color — the divider line
-     does the separating, not a darker shade. Override so it doesn't
-     inherit the darker --vp-c-bg-alt (which GitHub reserves for insets). */
+  /* Sidebar matches the canvas; the divider line does the separating. */
   --vp-sidebar-bg-color: var(--vp-c-bg);
 
-  /* Brand (GitHub-blue accent used by Carbon) */
-  --vp-c-brand-1: #2f81f7;
-  --vp-c-brand-2: #1f6feb;
-  --vp-c-brand-3: #30a46c;     /* Carbon's green-3, used for hero name + brand-3 refs */
-  --vp-c-brand: #2f81f7;
-  --banner-bg: #2f81f7;
+  /* Breadcrumb separator / strong divider tone */
+  --vp-c-b-divider: var(--vp-c-text-2);
 
-  /* Primary buttons are GitHub-green in Carbon, not blue — links/sidebar stay blue */
-  --vp-button-brand-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-text: #ffffff;
-  --vp-button-brand-bg: #1f883d;
-  --vp-button-brand-hover-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-hover-text: #ffffff;
-  --vp-button-brand-hover-bg: #1a7f37;
-  --vp-button-brand-active-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-active-text: #ffffff;
-  --vp-button-brand-active-bg: #197935;
+  /* Cookie / terms banner follows the accent */
+  --banner-bg: var(--vp-c-brand-1);
 
-  /* Homepage feature-card icons pick up the same green touch */
-  --vp-home-card-icon-bg: rgba(16, 185, 129, 0.14);
-  --vp-home-card-icon-color: #3fb950;
-  --vp-home-card-border-hover-color: #2ea043;
+  /* Homepage cards pick up the green accent from the palette */
+  --vp-home-card-icon-bg: color-mix(in srgb, var(--vp-c-green-1) 14%, transparent);
+  --vp-home-card-icon-color: var(--vp-c-green-1);
+  --vp-home-card-border-hover-color: var(--vp-c-green-1);
 
-  --vp-home-hero-name-background: #30A46C;
-  --vp-home-hero-name-color: transparent;
-
-  /* DocSearch hit colors (light) */
-  --docsearch-hit-color: #1f2328;
-  --docsearch-hit-active-color: #1f2328;
-  --docsearch-hit-background: #f6f6f7;
-
-  /* Semantic (Carbon/GitHub accents) */
-  --vp-c-success: #3fb950;
-  --vp-c-warning: #9a6700;
-  --vp-c-danger: #d1242f;
-  --vp-c-info: #2f81f7;
+  /* DocSearch */
+  --docsearch-hit-color: var(--vp-c-text-1);
+  --docsearch-hit-active-color: var(--vp-c-bg);
+  --docsearch-hit-background: var(--vp-c-bg-soft);
+  --docsearch-modal-background: var(--vp-c-bg);
 
   /* Font */
   --vp-font-family-base: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
 }
 
-
-/* ==========================================================================
-   THEME COLORS — DARK MODE (ported from vitepress-carbon)
-   ========================================================================== */
-
 .dark {
-  /* Backgrounds — softened from pure GitHub-dark: #010409 was near-black and
-     created a harsh jump against #0d1117. #0a0e14 keeps the same hierarchy
-     with less contrast shock, easier on the eyes over long reading. */
-  --vp-c-bg: #0d1117;
-  --vp-c-bg-alt: #0a0e14;
-  --vp-c-bg-elv: #161b22;
-
-  /* Same GitHub-sidebar fix as light mode — match canvas, not the inset tone. */
-  --vp-sidebar-bg-color: var(--vp-c-bg);
-
-  --vp-c-bg-soft: #161b22;
-  --vp-c-divider: #2a313a;
-  --vp-c-b-divider: #c9d1d9;
-
-  /* Body text: pure-white-on-black is high-fatigue; ease it slightly warm/soft. */
-  --vp-c-text-1: #d8dee8;
-  --vp-c-text-2: #9aa4b2;
-  --vp-c-text-3: #6b7684;
-
-  /* Brand */
-  --vp-c-brand-1: #58a6ff;
-  --vp-c-brand-2: #79c0ff;
-  --vp-c-brand-3: #3fb950;
-  --vp-c-brand: #58a6ff;
-
-  /* Primary buttons: Carbon uses the identical green in both modes, no dark variant */
-  --vp-button-brand-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-text: #ffffff;
-  --vp-button-brand-bg: #1f883d;
-  --vp-button-brand-hover-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-hover-text: #ffffff;
-  --vp-button-brand-hover-bg: #1a7f37;
-  --vp-button-brand-active-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-active-text: #ffffff;
-  --vp-button-brand-active-bg: #197935;
-
-  --vp-home-card-icon-bg: rgba(63, 185, 80, 0.12);
-  --vp-home-card-icon-color: #3fb950;
-  --vp-home-card-border-hover-color: #3fb950;
-
-  --vp-home-hero-name-background: #30A46C;
-  --vp-home-hero-name-color: transparent;
-
-  /* DocSearch hit colors (dark) */
-  --docsearch-hit-color: #c9d1d9;
-  --docsearch-hit-active-color: #c9d1d9;
-  --docsearch-hit-background: #161b22;
-  --docsearch-modal-background: #0d1117 !important;
-
-  /* Semantic (Carbon/GitHub dark accents) */
-  --vp-c-success: #3fb950;
-  --vp-c-warning: #f9b44e;
-  --vp-c-danger: #f66f81;
-  --vp-c-info: #58a6ff;
+  --docsearch-hit-active-color: var(--vp-c-bg);
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -323,7 +236,7 @@
    Use near-black text instead for proper AA contrast (~13:1). */
 .dark .bsc-btn-primary,
 .dark .bsc-btn-primary:hover {
-  color: var(--vp-c-bg-elv) !important; /* #11111b */
+  color: var(--vp-c-bg) !important;
 }
 
 
@@ -332,18 +245,18 @@
    ========================================================================== */
 
 .VPFeature:hover {
-  border-color: #2ea043 !important;
+  border-color: var(--vp-c-green-1) !important;
   transition: border-color 0.2s;
 }
 
 .VPFeature .icon {
-  background-color: rgba(16, 185, 129, 0.14) !important;
-  color: #3fb950 !important;
+  background-color: color-mix(in srgb, var(--vp-c-green-1) 14%, transparent) !important;
+  color: var(--vp-c-green-1) !important;
 }
 
 .dark .VPFeature .icon {
-  background-color: rgba(63, 185, 80, 0.12) !important;
-  color: #3fb950 !important;
+  background-color: color-mix(in srgb, var(--vp-c-green-1) 12%, transparent) !important;
+  color: var(--vp-c-green-1) !important;
 }
 
 /* Hero action buttons: stock VitePress uses flex-wrap with content-width
@@ -424,7 +337,7 @@
 }
 
 .why-card:hover {
-  border-color: #2ea043;
+  border-color: var(--vp-c-green-1);
 }
 
 .why-card h3 {
@@ -665,7 +578,7 @@
 .bsc-cta-btn-brand {
   background-color: var(--vp-button-brand-bg);
   border-color: var(--vp-button-brand-bg);
-  color: #ffffff !important;
+  color: var(--vp-c-bg) !important;
 }
 
 .bsc-cta-btn-brand:hover {

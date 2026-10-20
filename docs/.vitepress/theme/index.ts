@@ -11,6 +11,7 @@ import Labels from './components/Labels.vue'
 import SidebarTags from './components/SidebarTags.vue'
 import DocFooterExtra from './components/DocFooterExtra.vue'
 import HomeFooterGate from './components/HomeFooterGate.vue'
+import '@catppuccin/vitepress/theme/mocha/peach.css'
 import './style.css'
 
 export default {

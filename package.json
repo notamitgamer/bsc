@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@catppuccin/vitepress": "^0.1.4",
     "markdown-it-mathjax3": "^4.3.2",
     "vite-plugin-pwa": "^2.0.0",
     "vitepress": "^2.0.0-alpha.20",
