@@ -1,16 +1,7 @@
 <template>
   <footer class="bsc-footer" :class="{ 'is-home': isHome }">
-    <!-- Original mark: hairline rule with a small `{ ; }` glyph (C-flavoured) -->
-    <div class="bsc-footer-mark" aria-hidden="true">
-      <span class="rule rule-l"></span>
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 4C7 4 6 5 6 7v2c0 1.5-1 2.5-2.5 3C5 12.5 6 13.5 6 15v2c0 2 1 3 3 3" />
-        <path d="M15 4c2 0 3 1 3 3v2c0 1.5 1 2.5 2.5 3-1.5.5-2.5 1.5-2.5 3v2c0 2-1 3-3 3" />
-        <circle cx="12" cy="10.5" r="1.1" fill="var(--vp-c-brand-1)" stroke="none" />
-        <path d="M12 13v1.5c0 .8-.3 1.5-1 2" stroke="var(--vp-c-brand-1)" />
-      </svg>
-      <span class="rule rule-r"></span>
-    </div>
+    <!-- Catppuccin line art, tinted with the active theme via CSS mask -->
+    <div class="bsc-footer-art" aria-hidden="true"></div>
 
     <nav class="bsc-footer-links" aria-label="Footer">
       <a href="https://github.com/notamitgamer/bsc/issues/new/choose" target="_blank" rel="noopener noreferrer">Suggest an edit</a>
@@ -74,22 +65,16 @@ function scrollTop() {
   .bsc-footer.is-home { padding-left: 16px; padding-right: 16px; }
 }
 
-/* Hairline rule fading out to both sides, glyph centred */
-.bsc-footer-mark {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* Line art: alpha of the SVG is used as a mask, colour comes from the theme */
+.bsc-footer-art {
+  width: min(100%, 600px);
+  aspect-ratio: 600 / 75;
   margin: 0 auto 1.25rem;
-  color: var(--vp-c-text-3);
+  background-color: var(--vp-c-text-3);
+  opacity: 0.8;
+  -webkit-mask: url('/footer-line.svg') center / contain no-repeat;
+  mask: url('/footer-line.svg') center / contain no-repeat;
 }
-
-.bsc-footer-mark .rule {
-  flex: 1;
-  height: 1px;
-}
-
-.rule-l { background: linear-gradient(to right, transparent, var(--vp-c-divider)); }
-.rule-r { background: linear-gradient(to left, transparent, var(--vp-c-divider)); }
 
 .bsc-footer-links {
   display: flex;
