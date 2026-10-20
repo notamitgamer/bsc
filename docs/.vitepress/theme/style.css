@@ -699,3 +699,61 @@
   text-decoration-color: var(--vp-c-brand-1);
   background: transparent;
 }
+
+
+/* ==========================================================================
+   CALLOUTS & CODE BLOCKS
+   ========================================================================== */
+
+/* Callouts: accent bar + faint tint, title in the callout colour */
+.vp-doc .custom-block {
+  --cb: var(--vp-c-text-3);
+  border: 1px solid color-mix(in srgb, var(--cb) 30%, transparent);
+  border-left: 3px solid var(--cb);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--cb) 7%, var(--vp-c-bg));
+  padding: 14px 18px;
+}
+.vp-doc .custom-block.tip     { --cb: var(--vp-c-green-1); }
+.vp-doc .custom-block.warning { --cb: var(--vp-c-yellow-1); }
+.vp-doc .custom-block.danger  { --cb: var(--vp-c-red-1); }
+.vp-doc .custom-block.info,
+.vp-doc .custom-block.details { --cb: var(--vp-c-purple-1); }
+
+.vp-doc .custom-block .custom-block-title {
+  color: var(--cb);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.vp-doc .custom-block p:last-child { margin-bottom: 0; }
+
+/* Code blocks: rounded + hairline border, language label always visible */
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.vp-doc [class*='language-'] > span.lang {
+  top: 9px;
+  right: 52px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  line-height: 20px;
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-3);
+  opacity: 1;
+}
+
+.vp-doc [class*='language-']:hover > span.lang,
+.vp-doc [class*='language-'] > button.copy:hover ~ span.lang {
+  opacity: 1;
+  color: var(--vp-c-text-2);
+}
+
+/* Softer line numbers */
+:root {
+  --vp-code-line-number-color: color-mix(in srgb, var(--vp-c-text-3) 70%, transparent);
+  --vp-code-block-divider-color: color-mix(in srgb, var(--vp-c-divider) 50%, transparent);
+}
