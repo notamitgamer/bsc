@@ -45,13 +45,14 @@ const { frontmatter } = useData()
 //
 // Points at the CDN's raw subdomain (not the app UI domain) because that's
 // what actually serves plain-text file content, matching what
-// raw.githubusercontent.com used to give us. The CI (main.yml's `sync-hf`
-// job) rsyncs this whole repo into the `bsc/` folder of the same Hugging
-// Face dataset the cdn app serves, preserving this exact relative path —
-// so `bsc/${source}` always matches.
+// raw.githubusercontent.com used to give us. The CI (main.yml's `sync-cdn`
+// job) mirrors this whole repo to the CDN through its GitHub Actions sync
+// (https://cdn.amit.is-a.dev/gh-sync). That always writes to
+// `<owner>/<repo>/`, preserving the relative path — so
+// `notamitgamer/bsc/${source}` always matches.
 const rawUrl = computed(() => {
   const source = frontmatter.value.source
-  return `https://raw.cdn.amit.is-a.dev/bsc/${source}`
+  return `https://raw.cdn.amit.is-a.dev/notamitgamer/bsc/${source}`
 })
 
 const chatGptUrl = computed(() =>
