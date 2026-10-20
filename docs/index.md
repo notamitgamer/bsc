@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "BSc Code Index"
   text: "Coursework from WBSU"
-  tagline: Comprehensive codebase and practical archives following the 4-year NEP-CCF structure under WBSU at Acharya Prafulla Chandra College.<br><br>&bull; MIT licensed
+  tagline: Practical code and algorithms, indexed by the problem they solve.<span class="bsc-pills"><span class="bsc-pill">WBSU</span><span class="bsc-pill">NEP-CCF</span><span class="bsc-pill" title="Acharya Prafulla Chandra College">APC College</span><span class="bsc-pill">MIT licensed</span></span>
   actions:
     - theme: brand
       text: Browse Semester 2 (Ongoing)
@@ -14,7 +14,7 @@ hero:
       text: View on GitHub
       link: https://github.com/notamitgamer/bsc
     - theme: alt
-      text: Browse all Sem
+      text: Browse all semesters
       link: .#roadmap-progress
   image: 
     light: /logo_light.svg

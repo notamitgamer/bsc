@@ -620,3 +620,59 @@
 .VPDocFooter .pager-link.next .title {
   color: var(--vp-c-text-1);
 }
+
+
+/* ==========================================================================
+   HERO — pills, logo glow, quieter tertiary action
+   ========================================================================== */
+
+:root {
+  /* Soft mauve → accent glow behind the hero logo */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-purple-1) 50%, var(--vp-c-brand-1) 50%);
+  --vp-home-hero-image-filter: blur(48px);
+}
+
+.VPHero .tagline {
+  max-width: 34rem;
+}
+
+.bsc-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.bsc-pill {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 1px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+}
+
+@media (max-width: 959px) {
+  .bsc-pills { justify-content: center; }
+  .VPHero .tagline { margin-left: auto; margin-right: auto; }
+}
+
+/* Third hero action reads as a text link so the primary action leads */
+.VPHero .actions .action:nth-child(3) .VPButton.alt {
+  background: transparent;
+  border-color: transparent;
+  color: var(--vp-c-text-2);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--vp-c-divider);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.VPHero .actions .action:nth-child(3) .VPButton.alt:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration-color: var(--vp-c-brand-1);
+  background: transparent;
+}
