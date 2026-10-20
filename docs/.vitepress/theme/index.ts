@@ -12,6 +12,7 @@ import SidebarTags from './components/SidebarTags.vue'
 import DocFooterExtra from './components/DocFooterExtra.vue'
 import HomeFooterGate from './components/HomeFooterGate.vue'
 import RoadmapCards from './components/RoadmapCards.vue'
+import SemesterProgress from './components/SemesterProgress.vue'
 import '@catppuccin/vitepress/theme/mocha/peach.css'
 import './style.css'
 
@@ -25,9 +26,12 @@ export default {
         h(ExternalLinkWarning),
         h(HomeFooterGate)
       ]),
-      'doc-before': () => h('div', { class: 'bsc-doc-toolbar' }, [
-        h(Breadcrumbs),
-        h(CopyLinkButton)
+      'doc-before': () => h(Fragment, [
+        h('div', { class: 'bsc-doc-toolbar' }, [
+          h(Breadcrumbs),
+          h(CopyLinkButton)
+        ]),
+        h(SemesterProgress)
       ]),
       'doc-footer-before': () => h(Fragment, [
         h(MarkdownMenu),
