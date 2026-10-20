@@ -22,131 +22,44 @@
 }
 
 ::selection {
-  background: #fab38733; /* Mocha Peach with opacity */
+  background: color-mix(in srgb, var(--vp-c-brand-1) 25%, transparent);
   color: var(--vp-c-text-1);
 }
 
 
 /* ==========================================================================
-   THEME COLORS — LIGHT MODE (ported from vitepress-carbon)
+   THEME COLORS — provided by @catppuccin/vitepress (Latte / Mocha, Peach)
+   Imported in theme/index.ts. Only project-specific tokens live here.
    ========================================================================== */
 
 :root {
-  /* Backgrounds */
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #f6f6f7;
-  --vp-c-bg-elv: #ffffff;
-  --vp-c-bg-soft: #f6f6f7;
-  --vp-c-divider: #d1d9e0;
-  --vp-c-b-divider: #1f2328;
-
-  /* GitHub's real sidebar matches the main canvas color — the divider line
-     does the separating, not a darker shade. Override so it doesn't
-     inherit the darker --vp-c-bg-alt (which GitHub reserves for insets). */
+  /* Sidebar matches the canvas; the divider line does the separating. */
   --vp-sidebar-bg-color: var(--vp-c-bg);
 
-  /* Brand (GitHub-blue accent used by Carbon) */
-  --vp-c-brand-1: #2f81f7;
-  --vp-c-brand-2: #1f6feb;
-  --vp-c-brand-3: #30a46c;     /* Carbon's green-3, used for hero name + brand-3 refs */
-  --vp-c-brand: #2f81f7;
-  --banner-bg: #2f81f7;
+  /* Breadcrumb separator / strong divider tone */
+  --vp-c-b-divider: var(--vp-c-text-2);
 
-  /* Primary buttons are GitHub-green in Carbon, not blue — links/sidebar stay blue */
-  --vp-button-brand-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-text: #ffffff;
-  --vp-button-brand-bg: #1f883d;
-  --vp-button-brand-hover-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-hover-text: #ffffff;
-  --vp-button-brand-hover-bg: #1a7f37;
-  --vp-button-brand-active-border: rgba(31, 35, 40, 0.1);
-  --vp-button-brand-active-text: #ffffff;
-  --vp-button-brand-active-bg: #197935;
+  /* Cookie / terms banner follows the accent */
+  --banner-bg: var(--vp-c-brand-1);
 
-  /* Homepage feature-card icons pick up the same green touch */
-  --vp-home-card-icon-bg: rgba(16, 185, 129, 0.14);
-  --vp-home-card-icon-color: #3fb950;
-  --vp-home-card-border-hover-color: #2ea043;
+  /* Homepage cards pick up the green accent from the palette */
+  --vp-home-card-icon-bg: color-mix(in srgb, var(--vp-c-green-1) 14%, transparent);
+  --vp-home-card-icon-color: var(--vp-c-green-1);
+  --vp-home-card-border-hover-color: var(--vp-c-green-1);
 
-  --vp-home-hero-name-background: #30A46C;
-  --vp-home-hero-name-color: transparent;
-
-  /* DocSearch hit colors (light) */
-  --docsearch-hit-color: #1f2328;
-  --docsearch-hit-active-color: #1f2328;
-  --docsearch-hit-background: #f6f6f7;
-
-  /* Semantic (Carbon/GitHub accents) */
-  --vp-c-success: #3fb950;
-  --vp-c-warning: #9a6700;
-  --vp-c-danger: #d1242f;
-  --vp-c-info: #2f81f7;
+  /* DocSearch */
+  --docsearch-hit-color: var(--vp-c-text-1);
+  --docsearch-hit-active-color: var(--vp-c-bg);
+  --docsearch-hit-background: var(--vp-c-bg-soft);
+  --docsearch-modal-background: var(--vp-c-bg);
 
   /* Font */
   --vp-font-family-base: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --vp-font-family-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
 }
 
-
-/* ==========================================================================
-   THEME COLORS — DARK MODE (ported from vitepress-carbon)
-   ========================================================================== */
-
 .dark {
-  /* Backgrounds — softened from pure GitHub-dark: #010409 was near-black and
-     created a harsh jump against #0d1117. #0a0e14 keeps the same hierarchy
-     with less contrast shock, easier on the eyes over long reading. */
-  --vp-c-bg: #0d1117;
-  --vp-c-bg-alt: #0a0e14;
-  --vp-c-bg-elv: #161b22;
-
-  /* Same GitHub-sidebar fix as light mode — match canvas, not the inset tone. */
-  --vp-sidebar-bg-color: var(--vp-c-bg);
-
-  --vp-c-bg-soft: #161b22;
-  --vp-c-divider: #2a313a;
-  --vp-c-b-divider: #c9d1d9;
-
-  /* Body text: pure-white-on-black is high-fatigue; ease it slightly warm/soft. */
-  --vp-c-text-1: #d8dee8;
-  --vp-c-text-2: #9aa4b2;
-  --vp-c-text-3: #6b7684;
-
-  /* Brand */
-  --vp-c-brand-1: #58a6ff;
-  --vp-c-brand-2: #79c0ff;
-  --vp-c-brand-3: #3fb950;
-  --vp-c-brand: #58a6ff;
-
-  /* Primary buttons: Carbon uses the identical green in both modes, no dark variant */
-  --vp-button-brand-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-text: #ffffff;
-  --vp-button-brand-bg: #1f883d;
-  --vp-button-brand-hover-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-hover-text: #ffffff;
-  --vp-button-brand-hover-bg: #1a7f37;
-  --vp-button-brand-active-border: rgba(240, 246, 252, 0.1);
-  --vp-button-brand-active-text: #ffffff;
-  --vp-button-brand-active-bg: #197935;
-
-  --vp-home-card-icon-bg: rgba(63, 185, 80, 0.12);
-  --vp-home-card-icon-color: #3fb950;
-  --vp-home-card-border-hover-color: #3fb950;
-
-  --vp-home-hero-name-background: #30A46C;
-  --vp-home-hero-name-color: transparent;
-
-  /* DocSearch hit colors (dark) */
-  --docsearch-hit-color: #c9d1d9;
-  --docsearch-hit-active-color: #c9d1d9;
-  --docsearch-hit-background: #161b22;
-  --docsearch-modal-background: #0d1117 !important;
-
-  /* Semantic (Carbon/GitHub dark accents) */
-  --vp-c-success: #3fb950;
-  --vp-c-warning: #f9b44e;
-  --vp-c-danger: #f66f81;
-  --vp-c-info: #58a6ff;
+  --docsearch-hit-active-color: var(--vp-c-bg);
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -323,7 +236,7 @@
    Use near-black text instead for proper AA contrast (~13:1). */
 .dark .bsc-btn-primary,
 .dark .bsc-btn-primary:hover {
-  color: var(--vp-c-bg-elv) !important; /* #11111b */
+  color: var(--vp-c-bg) !important;
 }
 
 
@@ -332,18 +245,18 @@
    ========================================================================== */
 
 .VPFeature:hover {
-  border-color: #2ea043 !important;
+  border-color: var(--vp-c-green-1) !important;
   transition: border-color 0.2s;
 }
 
 .VPFeature .icon {
-  background-color: rgba(16, 185, 129, 0.14) !important;
-  color: #3fb950 !important;
+  background-color: color-mix(in srgb, var(--vp-c-green-1) 14%, transparent) !important;
+  color: var(--vp-c-green-1) !important;
 }
 
 .dark .VPFeature .icon {
-  background-color: rgba(63, 185, 80, 0.12) !important;
-  color: #3fb950 !important;
+  background-color: color-mix(in srgb, var(--vp-c-green-1) 12%, transparent) !important;
+  color: var(--vp-c-green-1) !important;
 }
 
 /* Hero action buttons: stock VitePress uses flex-wrap with content-width
@@ -385,7 +298,12 @@
 }
 
 .why-eyebrow {
-  color: var(--vp-c-brand-1);
+  background: linear-gradient(90deg, var(--vp-c-purple-1), var(--vp-c-brand-1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  width: fit-content;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -420,11 +338,29 @@
   border-radius: 12px;
   padding: 24px;
   background-color: var(--vp-c-bg-soft);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .why-card:hover {
-  border-color: #2ea043;
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-card { transition: border-color 0.2s; }
+  .why-card:hover { transform: none; }
+}
+
+.why-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--vp-c-brand-1);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent);
 }
 
 .why-card h3 {
@@ -665,7 +601,7 @@
 .bsc-cta-btn-brand {
   background-color: var(--vp-button-brand-bg);
   border-color: var(--vp-button-brand-bg);
-  color: #ffffff !important;
+  color: var(--vp-c-bg) !important;
 }
 
 .bsc-cta-btn-brand:hover {
@@ -707,3 +643,189 @@
 .VPDocFooter .pager-link.next .title {
   color: var(--vp-c-text-1);
 }
+
+
+/* ==========================================================================
+   HERO — pills, logo glow, quieter tertiary action
+   ========================================================================== */
+
+:root {
+  /* Soft mauve → accent glow behind the hero logo */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-purple-1) 50%, var(--vp-c-brand-1) 50%);
+  --vp-home-hero-image-filter: blur(48px);
+}
+
+.VPHero .tagline {
+  max-width: 34rem;
+}
+
+.bsc-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.bsc-pill {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 1px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+}
+
+@media (max-width: 959px) {
+  .bsc-pills { justify-content: center; }
+  .VPHero .tagline { margin-left: auto; margin-right: auto; }
+}
+
+/* Third hero action reads as a text link so the primary action leads */
+.VPHero .actions .action:nth-child(3) .VPButton.alt {
+  background: transparent;
+  border-color: transparent;
+  color: var(--vp-c-text-2);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--vp-c-divider);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.VPHero .actions .action:nth-child(3) .VPButton.alt:hover {
+  color: var(--vp-c-brand-1);
+  text-decoration-color: var(--vp-c-brand-1);
+  background: transparent;
+}
+
+
+/* ==========================================================================
+   CALLOUTS & CODE BLOCKS
+   ========================================================================== */
+
+/* Callouts: accent bar + faint tint, title in the callout colour */
+.vp-doc .custom-block {
+  --cb: var(--vp-c-text-3);
+  border: 1px solid color-mix(in srgb, var(--cb) 30%, transparent);
+  border-left: 3px solid var(--cb);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--cb) 7%, var(--vp-c-bg));
+  padding: 14px 18px;
+}
+.vp-doc .custom-block.tip     { --cb: var(--vp-c-green-1); }
+.vp-doc .custom-block.warning { --cb: var(--vp-c-yellow-1); }
+.vp-doc .custom-block.danger  { --cb: var(--vp-c-red-1); }
+.vp-doc .custom-block.info,
+.vp-doc .custom-block.details { --cb: var(--vp-c-purple-1); }
+
+.vp-doc .custom-block .custom-block-title {
+  color: var(--cb);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.vp-doc .custom-block p:last-child { margin-bottom: 0; }
+
+/* Code blocks: rounded + hairline border, language label always visible */
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.vp-doc [class*='language-'] > span.lang {
+  top: 9px;
+  right: 52px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  line-height: 20px;
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-3);
+  opacity: 1;
+}
+
+.vp-doc [class*='language-']:hover > span.lang,
+.vp-doc [class*='language-'] > button.copy:hover ~ span.lang {
+  opacity: 1;
+  color: var(--vp-c-text-2);
+}
+
+/* Softer line numbers */
+:root {
+  --vp-code-line-number-color: color-mix(in srgb, var(--vp-c-text-3) 70%, transparent);
+  --vp-code-block-divider-color: color-mix(in srgb, var(--vp-c-divider) 50%, transparent);
+}
+
+
+/* ==========================================================================
+   GENERATED FILE / FOLDER LISTS (see utils/bsc_md/indexing.py)
+   ========================================================================== */
+
+.vp-doc .bsc-count {
+  margin: -6px 0 12px;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+}
+
+.vp-doc .bsc-filelist ul {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.vp-doc .bsc-filelist li,
+.vp-doc .bsc-filelist li + li { margin: 0; }
+
+.vp-doc .bsc-filelist a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.vp-doc .bsc-filelist a:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc .bsc-filelist a code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Icon: file by default, folder for .is-folders (CSS mask, follows text colour) */
+.vp-doc .bsc-filelist a::before {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background-color: var(--vp-c-text-3);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.vp-doc .bsc-filelist.is-folders a::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.2A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.2A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.vp-doc .bsc-filelist a:hover::before { background-color: var(--vp-c-brand-1); }

@@ -92,7 +92,7 @@ function humanize(tag) {
 
 /* Hover States (Instant color snap, no movement) */
 .bsc-tag:hover {
-  color: #fff;
+  color: var(--vp-c-bg);
   background: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
 }
@@ -102,6 +102,6 @@ function humanize(tag) {
 }
 
 .bsc-tag:hover::before {
-  background: #fff;
+  background: var(--vp-c-bg);
 }
 </style>

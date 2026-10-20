@@ -61,7 +61,7 @@ const acceptTerms = () => {
   pointer-events: auto;
   width: 100%;
   background-color: color-mix(in srgb, var(--banner-bg) 96%, transparent);
-  color: #ffffff;
+  color: var(--vp-c-bg);
   padding: 10px 20px calc(10px + env(safe-area-inset-bottom)) 20px;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   font-family: var(--vp-font-family-base);
@@ -82,7 +82,7 @@ const acceptTerms = () => {
 }
 
 .banner-link {
-  color: #ffffff;
+  color: var(--vp-c-bg);
   text-decoration: underline;
   font-weight: 700;
   cursor: pointer;
@@ -98,7 +98,7 @@ const acceptTerms = () => {
 }
 
 .banner-btn {
-  background-color: #ffffff;
+  background-color: var(--vp-c-bg);
   color: var(--vp-c-brand-1);
   padding: 6px 16px;
   border-radius: 6px;
@@ -112,10 +112,6 @@ const acceptTerms = () => {
 
 .banner-btn:hover {
   transform: scale(1.02);
-}
-
-.banner-btn {
-  color: #2f81f7;
 }
 
 @media (max-width: 640px) {

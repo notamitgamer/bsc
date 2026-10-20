@@ -14,7 +14,7 @@ const vitePressConfig = {
 
     // PWA manifest + theme color (fixes the white splash flash on install/launch)
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
-    ['meta', { name: 'theme-color', content: '#0d1117' }],
+    ['meta', { name: 'theme-color', content: '#1e1e2e' }],
     ['link', { rel: 'apple-touch-icon', href: '/logo_192.png' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
@@ -178,8 +178,8 @@ const vitePressConfig = {
       lazyLoading: true 
     },
     theme: {
-      light: 'github-light',
-      dark: 'github-dark' 
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha' 
     } as any
   },
 }

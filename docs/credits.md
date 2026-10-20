@@ -10,6 +10,7 @@ title: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="
 * **[is-a.dev](https://is-a.dev)** — for the free subdomain that gave this project a home.
 * **[GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/)** — for hosting the repo (code + markdown) and serving the site itself.
 * **[VitePress](https://vitepress.dev/)** — for turning a pile of markdown and code into an actual searchable, readable site.
+* **[Catppuccin](https://github.com/catppuccin)** — for the soothing pastel theme ([@catppuccin/vitepress](https://github.com/catppuccin/vitepress)) and the footer line art, both MIT licensed. Copyright © 2021 Catppuccin.
 * **[Algolia DocSearch](https://docsearch.algolia.com/)** — for the instant search that makes finding a program actually painless.
 
 All free-tier services, all doing a lot of heavy lifting. If you're building something similar, every one of these is worth checking out.

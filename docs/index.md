@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "BSc Code Index"
   text: "Coursework from WBSU"
-  tagline: Comprehensive codebase and practical archives following the 4-year NEP-CCF structure under WBSU at Acharya Prafulla Chandra College.<br><br>&bull; MIT licensed
+  tagline: Practical code and algorithms, indexed by the problem they solve.<span class="bsc-pills"><span class="bsc-pill">WBSU</span><span class="bsc-pill">NEP-CCF</span><span class="bsc-pill" title="Acharya Prafulla Chandra College">APC College</span><span class="bsc-pill">MIT licensed</span></span>
   actions:
     - theme: brand
       text: Browse Semester 2 (Ongoing)
@@ -14,12 +14,22 @@ hero:
       text: View on GitHub
       link: https://github.com/notamitgamer/bsc
     - theme: alt
-      text: Browse all Sem
+      text: Browse all semesters
       link: .#roadmap-progress
   image: 
     light: /logo_light.svg
     dark: /logo_dark.svg
     alt: logo
+
+roadmap:
+  - { sem: 1, status: archived, focus: ["C Programming", "R"] }
+  - { sem: 2, status: active, focus: ["DSA", "C++", "Python"] }
+  - { sem: 3, status: pending }
+  - { sem: 4, status: pending }
+  - { sem: 5, status: pending }
+  - { sem: 6, status: pending }
+  - { sem: 7, status: pending }
+  - { sem: 8, status: pending }
 
 features:
   - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>'
@@ -41,16 +51,19 @@ features:
   <h2 class="why-title">Not a copy-paste dump - a structured reference for how to actually solve the problem.</h2>
   <div class="why-grid">
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div>
       <h3>Every semester, indexed</h3>
       <p>All 8 semesters of the WBSU NEP-CCF track in one place, updated in real time as coursework progresses - no digging through scattered folders.</p>
     </div>
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
       <h3>Problem-first search</h3>
       <p>Pages are indexed by the actual problem statement, so you search what you're stuck on and land on the relevant reference instantly.</p>
     </div>
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v3a3 3 0 0 0 3 3h6"/></svg></div>
       <h3>Logic, not just code</h3>
-      <p>From Semester 2 onward, source may paired with written algorithms - pseudocode and complexity analysis - so you can follow the reasoning, not just the syntax.</p>
+      <p>From Semester 2 onward, source may be paired with written algorithms - pseudocode and complexity analysis - so you can follow the reasoning, not just the syntax.</p>
     </div>
   </div>
 </div>
@@ -59,16 +72,7 @@ features:
 
 Currently navigating **Semester 2**. Folders for future semesters are placeholders that will automatically unlock and update in real-time as my 4-year academic session progresses.
 
-| Semester | Status | Primary Focus |
-|:---|:---|:---|
-| [Semester 1](/semester_1/) | Archived | **C Programming**, **R** |
-| [Semester 2](/semester_2/) | Active | **DSA**, **CPP**, **Python** |
-| [Semester 3](/semester_3/) | Pending | Upcoming |
-| [Semester 4](/semester_4/) | Pending | Upcoming |
-| [Semester 5](/semester_5/) | Pending | Upcoming |
-| [Semester 6](/semester_6/) | Pending | Upcoming |
-| [Semester 7](/semester_7/) | Pending | Upcoming |
-| [Semester 8](/semester_8/) | Pending | Upcoming |
+<RoadmapCards />
 
 ## Environment Setup
 

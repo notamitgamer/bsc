@@ -231,7 +231,7 @@ const copyUrl = async () => {
 
 .btn-open {
   background: var(--vp-c-brand-1);
-  color: #fff;
+  color: var(--vp-c-bg);
 }
 
 /* Larger screens: centered rounded card instead of a bottom sheet */

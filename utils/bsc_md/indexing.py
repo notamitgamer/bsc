@@ -49,18 +49,18 @@ def create_folder_indexes(docs_root):
 
             if subdirs:
                 f.write("## Folders\n\n")
-                f.write("| # | Folder | Link |\n")
-                f.write("|---|---|---|\n")
-                for idx, d in enumerate(subdirs, 1):
+                f.write(f'<p class="bsc-count">{len(subdirs)} folder{"s" if len(subdirs) != 1 else ""}</p>\n\n')
+                f.write('<div class="bsc-filelist is-folders">\n\n')
+                for d in subdirs:
                     dir_title = d.replace('_', ' ').replace('-', ' ').title()
-                    f.write(f"| {idx} | {dir_title} | [Open]({d}/index.md) |\n")
-                f.write("\n")
+                    f.write(f"- [{dir_title}]({d}/index.md)\n")
+                f.write("\n</div>\n\n")
 
             if md_files:
                 f.write("## Files\n\n")
-                f.write("| # | File | Link |\n")
-                f.write("|---|---|---|\n")
-                for idx, md_file in enumerate(md_files, 1):
+                f.write(f'<p class="bsc-count">{len(md_files)} file{"s" if len(md_files) != 1 else ""}</p>\n\n')
+                f.write('<div class="bsc-filelist">\n\n')
+                for md_file in md_files:
                     src_name = _get_md_title(os.path.join(root, md_file))
-                    f.write(f"| {idx} | `{src_name}` | [View Code]({md_file}) |\n")
-                f.write("\n")
+                    f.write(f"- [`{src_name}`]({md_file})\n")
+                f.write("\n</div>\n\n")
