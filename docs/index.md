@@ -51,16 +51,19 @@ features:
   <h2 class="why-title">Not a copy-paste dump - a structured reference for how to actually solve the problem.</h2>
   <div class="why-grid">
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div>
       <h3>Every semester, indexed</h3>
       <p>All 8 semesters of the WBSU NEP-CCF track in one place, updated in real time as coursework progresses - no digging through scattered folders.</p>
     </div>
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
       <h3>Problem-first search</h3>
       <p>Pages are indexed by the actual problem statement, so you search what you're stuck on and land on the relevant reference instantly.</p>
     </div>
     <div class="why-card">
+      <div class="why-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v3a3 3 0 0 0 3 3h6"/></svg></div>
       <h3>Logic, not just code</h3>
-      <p>From Semester 2 onward, source may paired with written algorithms - pseudocode and complexity analysis - so you can follow the reasoning, not just the syntax.</p>
+      <p>From Semester 2 onward, source may be paired with written algorithms - pseudocode and complexity analysis - so you can follow the reasoning, not just the syntax.</p>
     </div>
   </div>
 </div>

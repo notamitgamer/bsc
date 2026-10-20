@@ -298,7 +298,12 @@
 }
 
 .why-eyebrow {
-  color: var(--vp-c-brand-1);
+  background: linear-gradient(90deg, var(--vp-c-purple-1), var(--vp-c-brand-1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  width: fit-content;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.06em;
