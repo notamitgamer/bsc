@@ -1,15 +1,58 @@
 # Changelog
 
-> Last build: October 20, 2026 at 07:29 UTC
+> Last build: October 20, 2026 at 13:21 UTC
 
 ## Latest Build
 
-- **Build ID** — `8a9d7e349e66c307873f441e375d26d2c73bf693`
+- **Build ID** — `19c09c939ef4eda6b710140f88c4f1a7d25902d2`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — October 20, 2026 at 07:29 UTC
+- **Build time** — October 20, 2026 at 13:21 UTC
 
 ## Recent Commits
+
+### [`19c09c9`](https://github.com/notamitgamer/bsc/commit/19c09c939ef4eda6b710140f88c4f1a7d25902d2) Merge pull request #148 from notamitgamer/feat/catppuccin-logo
+
+**Amit Dutta** committed on Oct 20, 2026 13:21 UTC
+
+
+---
+
+### [`f57f0f5`](https://github.com/notamitgamer/bsc/commit/f57f0f5600c885c1a484827d7fb54fd5ebbf2cb7) feat(brand): recolour logo, favicon and PWA icons to Catppuccin
+
+**notamitgamer-bot[bot]** committed on Oct 20, 2026 13:06 UTC · +3 / -3 lines · 7 files changed
+
+<details>
+<summary>Show 7 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/public/favicon.svg` | Modified | +1 -1 |
+| `docs/public/logo_192.png` | Modified | binary/no diff |
+| `docs/public/logo_512.png` | Modified | binary/no diff |
+| `docs/public/logo_dark.svg` | Modified | +1 -1 |
+| `docs/public/logo_light.svg` | Modified | +1 -1 |
+| `docs/public/logo_maskable_192.png` | Modified | binary/no diff |
+| `docs/public/logo_maskable_512.png` | Modified | binary/no diff |
+</details>
+
+
+---
+
+### [`29cfc59`](https://github.com/notamitgamer/bsc/commit/29cfc59d3ca5330b35ce55d19ba9ce6206f6207c) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Oct 20, 2026 07:30 UTC · +48 / -45 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +48 -45 |
+</details>
+
+
+---
 
 ### [`8a9d7e3`](https://github.com/notamitgamer/bsc/commit/8a9d7e349e66c307873f441e375d26d2c73bf693) Merge pull request #146 from notamitgamer/fix/cdn-gh-sync
 
@@ -101,56 +144,6 @@
 | --- | --- | --- |
 | `docs/.vitepress/theme/style.css` | Modified | +56 |
 | `docs/index.md` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`b7423ab`](https://github.com/notamitgamer/bsc/commit/b7423ab4d994e2d7f2034d527b8b0d8718c341fb) feat(home): roadmap as year-grouped semester cards
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:22 UTC · +155 / -10 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/RoadmapCards.vue` | Added | +139 |
-| `docs/.vitepress/theme/index.ts` | Modified | +5 |
-| `docs/index.md` | Modified | +11 -10 |
-</details>
-
-
----
-
-### [`7db2a25`](https://github.com/notamitgamer/bsc/commit/7db2a259288f7891e1c57fd0ff1d2270e1d8fe9b) fix(theme): use theme colours for text on accent backgrounds
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:18 UTC · +3 / -3 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/ExternalLinkWarning.vue` | Modified | +1 -1 |
-| `docs/.vitepress/theme/components/Labels.vue` | Modified | +2 -2 |
-</details>
-
-
----
-
-### [`51d9122`](https://github.com/notamitgamer/bsc/commit/51d9122937209ffd73ea885764166d5bb60f96d0) feat(footer): restore Catppuccin footer art with MIT attribution
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:16 UTC · +28 / -25 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/components/DocFooterExtra.vue` | Modified | +10 -25 |
-| `docs/credits.md` | Modified | +1 |
-| `docs/public/footer-line.svg` | Added | +17 |
 </details>
 
 
