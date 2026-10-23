@@ -1,15 +1,74 @@
 # Changelog
 
-> Last build: October 20, 2026 at 13:21 UTC
+> Last build: October 23, 2026 at 01:22 UTC
 
 ## Latest Build
 
-- **Build ID** — `19c09c939ef4eda6b710140f88c4f1a7d25902d2`
+- **Build ID** — `f426032450d92b53997cb97e7094bb49385dff09`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — October 20, 2026 at 13:21 UTC
+- **Build time** — October 23, 2026 at 01:22 UTC
 
 ## Recent Commits
+
+### [`f426032`](https://github.com/notamitgamer/bsc/commit/f426032450d92b53997cb97e7094bb49385dff09) Merge pull request #150 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-e6386c2419
+
+**Amit Dutta** committed on Oct 23, 2026 01:22 UTC
+
+
+---
+
+### [`6fde347`](https://github.com/notamitgamer/bsc/commit/6fde347d41736625a811d3270c5628825fb95851) Merge pull request #149 from notamitgamer/dependabot/github_actions/actions/github-script-9 [skip ci]
+
+**Amit Dutta** committed on Oct 23, 2026 01:21 UTC
+
+
+---
+
+### [`93447b6`](https://github.com/notamitgamer/bsc/commit/93447b67c6d51e3ca761c0f1dbf0203b00daf8d5) chore(deps): bump vite
+
+**dependabot[bot]** committed on Oct 21, 2026 08:41 UTC · +124 / -114 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +124 -114 |
+</details>
+
+
+---
+
+### [`2ea3c1a`](https://github.com/notamitgamer/bsc/commit/2ea3c1a99ded0a263582452008de99cc788bd923) chore(deps): bump actions/github-script from 7 to 9
+
+**dependabot[bot]** committed on Oct 20, 2026 21:24 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `.github/workflows/main.yml` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`02b6000`](https://github.com/notamitgamer/bsc/commit/02b600069462d5b6985ac044512cc403dc667479) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Oct 20, 2026 13:22 UTC · +46 / -53 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +46 -53 |
+</details>
+
+
+---
 
 ### [`19c09c9`](https://github.com/notamitgamer/bsc/commit/19c09c939ef4eda6b710140f88c4f1a7d25902d2) Merge pull request #148 from notamitgamer/feat/catppuccin-logo
 
@@ -64,87 +123,6 @@
 ### [`6acb3d1`](https://github.com/notamitgamer/bsc/commit/6acb3d1b63ab77ed3f6415c3c3059f9c9bfe1159) Merge pull request #147 from notamitgamer/feat/catppuccin-theme
 
 **Amit Dutta** committed on Oct 20, 2026 07:28 UTC
-
-
----
-
-### [`a4dde59`](https://github.com/notamitgamer/bsc/commit/a4dde595d5bda9c7115158f463aa0d087932aca2) feat(docs): semester progress strip and cleaner generated file/folder lists
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:26 UTC · +195 / -13 lines · 5 files changed
-
-<details>
-<summary>Show 5 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/semesters.data.ts` | Added | +45 |
-| `docs/.vitepress/theme/components/SemesterProgress.vue` | Added | +61 |
-| `docs/.vitepress/theme/index.ts` | Modified | +7 -3 |
-| `docs/.vitepress/theme/style.css` | Modified | +72 |
-| `utils/bsc_md/indexing.py` | Modified | +10 -10 |
-</details>
-
-
----
-
-### [`1324019`](https://github.com/notamitgamer/bsc/commit/1324019b3b3675139e0aaba600f24200f542faa5) feat(docs): restyle callouts and code blocks — accent bars, visible language label, softer line numbers
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:24 UTC · +58 / -0 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/style.css` | Modified | +58 |
-</details>
-
-
----
-
-### [`26f4339`](https://github.com/notamitgamer/bsc/commit/26f4339d41a1af2305817c221f4534411b913e79) fix(home): add missing why-card icon and hover styles
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +20 / -2 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/style.css` | Modified | +20 -2 |
-</details>
-
-
----
-
-### [`ecfcae1`](https://github.com/notamitgamer/bsc/commit/ecfcae173750f3f12136a172ceb8281abe7bda29) feat(home): why-cards — accent icons, hover lift, gradient eyebrow; fix typo
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +10 / -2 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/style.css` | Modified | +6 -1 |
-| `docs/index.md` | Modified | +4 -1 |
-</details>
-
-
----
-
-### [`1dc2b83`](https://github.com/notamitgamer/bsc/commit/1dc2b83cd1000f2c2729e81470ba77a477c223e3) feat(home): hero polish — tagline pills, logo glow, text-link tertiary action
-
-**notamitgamer-bot[bot]** committed on Oct 20, 2026 07:23 UTC · +58 / -2 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/theme/style.css` | Modified | +56 |
-| `docs/index.md` | Modified | +2 -2 |
-</details>
 
 
 ---
