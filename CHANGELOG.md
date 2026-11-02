@@ -1,15 +1,37 @@
 # Changelog
 
-> Last build: November 02, 2026 at 13:33 UTC
+> Last build: November 02, 2026 at 13:38 UTC
 
 ## Latest Build
 
-- **Build ID** — `d66fcb0c24b1a86cd40dfab51205b42b814b12bf`
+- **Build ID** — `4e7f7fd3aab00723c6327d0635436f555b967bf8`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 02, 2026 at 13:33 UTC
+- **Build time** — November 02, 2026 at 13:38 UTC
 
 ## Recent Commits
+
+### [`4e7f7fd`](https://github.com/notamitgamer/bsc/commit/4e7f7fd3aab00723c6327d0635436f555b967bf8) Merge pull request #156 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-eb8caf78ac
+
+**Amit Dutta** committed on Nov 02, 2026 13:38 UTC
+
+
+---
+
+### [`7b3eae3`](https://github.com/notamitgamer/bsc/commit/7b3eae32b0161e618ef3c56502b201dcb802b374) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 02, 2026 13:35 UTC · +42 / -46 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +42 -46 |
+</details>
+
+
+---
 
 ### [`d66fcb0`](https://github.com/notamitgamer/bsc/commit/d66fcb0c24b1a86cd40dfab51205b42b814b12bf) Merge pull request #155 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.41.0
 
@@ -28,6 +50,21 @@
 ### [`7d15693`](https://github.com/notamitgamer/bsc/commit/7d15693add8e7fbd5d8d08a58f0286b4b324775a) Merge pull request #154 from notamitgamer/dependabot/npm_and_yarn/vitepress-2.0.0-alpha.21
 
 **Amit Dutta** committed on Nov 02, 2026 13:32 UTC
+
+
+---
+
+### [`8242991`](https://github.com/notamitgamer/bsc/commit/824299137e20bb634d26f97e40b63946bce2ab32) chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates
+
+**dependabot[bot]** committed on Oct 31, 2026 21:46 UTC · +10 / -10 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `package-lock.json` | Modified | +10 -10 |
+</details>
 
 
 ---
@@ -82,43 +119,6 @@
 ### [`f426032`](https://github.com/notamitgamer/bsc/commit/f426032450d92b53997cb97e7094bb49385dff09) Merge pull request #150 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-e6386c2419
 
 **Amit Dutta** committed on Oct 23, 2026 01:22 UTC
-
-
----
-
-### [`6fde347`](https://github.com/notamitgamer/bsc/commit/6fde347d41736625a811d3270c5628825fb95851) Merge pull request #149 from notamitgamer/dependabot/github_actions/actions/github-script-9 [skip ci]
-
-**Amit Dutta** committed on Oct 23, 2026 01:21 UTC
-
-
----
-
-### [`93447b6`](https://github.com/notamitgamer/bsc/commit/93447b67c6d51e3ca761c0f1dbf0203b00daf8d5) chore(deps): bump vite
-
-**dependabot[bot]** committed on Oct 21, 2026 08:41 UTC · +124 / -114 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +124 -114 |
-</details>
-
-
----
-
-### [`2ea3c1a`](https://github.com/notamitgamer/bsc/commit/2ea3c1a99ded0a263582452008de99cc788bd923) chore(deps): bump actions/github-script from 7 to 9
-
-**dependabot[bot]** committed on Oct 20, 2026 21:24 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `.github/workflows/main.yml` | Modified | +1 -1 |
-</details>
 
 
 ---
