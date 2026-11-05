@@ -27,6 +27,7 @@ This folder contains all my current academic work, including practicals, assignm
 | 6 | Assignments | [Open Folder](assignments/index.md) |
 | 7 | Model Questions CPP | [Open Folder](model_questions.md) |
 | 8 | Model Questions PYTHON | [Open Folder](model_questions_py.md) |
+| 9 | Lab | [Open Folder](lab/index.md) |
 
 ## Directory Structure
  

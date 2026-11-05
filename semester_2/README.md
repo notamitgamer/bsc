@@ -20,9 +20,7 @@ To keep the repository organized, the C++ and Python programs are divided into s
 * **`/tuition/`**: Programs and problem-solving exercises completed during tuition classes.
 * **`/algorithms/`**: Some algorithms.
 ### Python Programming (SEC)
-* **`/python/`**: Contains all SEC coursework, split into:
-  * `/code/`: Python script files (`.py`) for practicals.
-  * `/material_pdf/`: Study materials and reference documents.
+* **`/python/`**: Contains all SEC coursework.
 ## How to Find a Specific Code
 1. **Identify the Category:** Determine if the code was an assignment, a tuition exercise, or practice problem, and navigate to the corresponding folder above.
 2. **Naming Convention:** Most files are sequentially numbered for easy tracking.
