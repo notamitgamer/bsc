@@ -1,15 +1,69 @@
 # Changelog
 
-> Last build: November 02, 2026 at 13:38 UTC
+> Last build: November 05, 2026 at 14:48 UTC
 
 ## Latest Build
 
-- **Build ID** — `4e7f7fd3aab00723c6327d0635436f555b967bf8`
+- **Build ID** — `f32f524f2762315daa9a400055526104325e425b`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 02, 2026 at 13:38 UTC
+- **Build time** — November 05, 2026 at 14:48 UTC
 
 ## Recent Commits
+
+### [`f32f524`](https://github.com/notamitgamer/bsc/commit/f32f524f2762315daa9a400055526104325e425b) Merge pull request #158 from notamitgamer/edit-20261105-201607
+
+**Amit Dutta** committed on Nov 05, 2026 14:48 UTC
+
+
+---
+
+### [`f7a293f`](https://github.com/notamitgamer/bsc/commit/f7a293fad554baaa8300b0f34b5566b548995670) fixed readme
+
+**Amit Dutta** committed on Nov 05, 2026 14:48 UTC · +2 / -3 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/semester_2/index.md` | Modified | +1 |
+| `semester_2/README.md` | Modified | +1 -3 |
+</details>
+
+
+---
+
+### [`3553226`](https://github.com/notamitgamer/bsc/commit/35532263cd3b60556312395c12869202f64d9f3c) added some lab code
+
+**Amit Dutta** committed on Nov 05, 2026 14:46 UTC · +122 / -0 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/lab/lab01.cpp` | Added | +56 |
+| `semester_2/lab/lab02.cpp` | Added | +66 |
+</details>
+
+
+---
+
+### [`afd4538`](https://github.com/notamitgamer/bsc/commit/afd4538752552ac00f6d83adcea9e5eeb87fd6a4) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 02, 2026 13:39 UTC · +40 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -40 |
+</details>
+
+
+---
 
 ### [`4e7f7fd`](https://github.com/notamitgamer/bsc/commit/4e7f7fd3aab00723c6327d0635436f555b967bf8) Merge pull request #156 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-eb8caf78ac
 
@@ -65,60 +119,6 @@
 | --- | --- | --- |
 | `package-lock.json` | Modified | +10 -10 |
 </details>
-
-
----
-
-### [`9b7104a`](https://github.com/notamitgamer/bsc/commit/9b7104a7f687101e3dd62742597f272e25177df6) chore(deps-dev): bump vitepress-sidebar from 1.40.0 to 1.41.0
-
-**dependabot[bot]** committed on Oct 29, 2026 21:24 UTC · +10 / -10 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +9 -9 |
-| `package.json` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`63427d4`](https://github.com/notamitgamer/bsc/commit/63427d4b7827bc9f5ac9de1c2627d7fd64f05233) chore(deps-dev): bump vitepress from 2.0.0-alpha.20 to 2.0.0-alpha.21
-
-**dependabot[bot]** committed on Oct 28, 2026 21:24 UTC · +191 / -179 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +190 -178 |
-| `package.json` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`9fb916f`](https://github.com/notamitgamer/bsc/commit/9fb916ff01f13fd2d61ca28637b6586f6b0fc243) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Oct 23, 2026 01:23 UTC · +45 / -67 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +45 -67 |
-</details>
-
-
----
-
-### [`f426032`](https://github.com/notamitgamer/bsc/commit/f426032450d92b53997cb97e7094bb49385dff09) Merge pull request #150 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-e6386c2419
-
-**Amit Dutta** committed on Oct 23, 2026 01:22 UTC
 
 
 ---
