@@ -101,7 +101,7 @@ const vitePressConfig = {
           sidePanel: true,
           appId: '5PYB0FB4RG',
           apiKey: '51d9424f9480f1a3efd0d07f023c4a12',
-          indexName: 'bsc',
+          indexName: 'bsc code index',
           agentStudio: true,
         },
         placeholder: 'Search programs...',
