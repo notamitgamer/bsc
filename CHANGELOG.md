@@ -1,15 +1,45 @@
 # Changelog
 
-> Last build: November 06, 2026 at 15:14 UTC
+> Last build: November 06, 2026 at 15:21 UTC
 
 ## Latest Build
 
-- **Build ID** — `c7c4962a5f7c1a1f4f253995799353176f5dbab3`
+- **Build ID** — `5b4f7549d9be7de2f5c34148695f7247ef133c06`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 06, 2026 at 15:14 UTC
+- **Build time** — November 06, 2026 at 15:21 UTC
 
 ## Recent Commits
+
+### [`5b4f754`](https://github.com/notamitgamer/bsc/commit/5b4f7549d9be7de2f5c34148695f7247ef133c06) Update indexName for search configuration
+
+**Amit Dutta** committed on Nov 06, 2026 15:21 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`b9e012a`](https://github.com/notamitgamer/bsc/commit/b9e012a4e4f5fd729ef85ad8b058817afb37519f) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 06, 2026 15:15 UTC · +43 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +43 -32 |
+</details>
+
+
+---
 
 ### [`c7c4962`](https://github.com/notamitgamer/bsc/commit/c7c4962a5f7c1a1f4f253995799353176f5dbab3) Merge pull request #159 from notamitgamer/edit-20261106-204422
 
@@ -107,36 +137,6 @@
 | --- | --- | --- |
 | `semester_2/lab/lab01.cpp` | Added | +56 |
 | `semester_2/lab/lab02.cpp` | Added | +66 |
-</details>
-
-
----
-
-### [`ee4a5e1`](https://github.com/notamitgamer/bsc/commit/ee4a5e1d8d8b3dfd48c98f1bc21d3ea6de35f6a1) chore(deps-dev): bump serialize-javascript
-
-**dependabot[bot]** committed on Nov 02, 2026 16:07 UTC · +3 / -3 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `package-lock.json` | Modified | +3 -3 |
-</details>
-
-
----
-
-### [`afd4538`](https://github.com/notamitgamer/bsc/commit/afd4538752552ac00f6d83adcea9e5eeb87fd6a4) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 02, 2026 13:39 UTC · +40 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -40 |
 </details>
 
 
