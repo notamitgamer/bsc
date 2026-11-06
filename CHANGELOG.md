@@ -1,15 +1,55 @@
 # Changelog
 
-> Last build: November 05, 2026 at 14:52 UTC
+> Last build: November 06, 2026 at 15:14 UTC
 
 ## Latest Build
 
-- **Build ID** — `6af8ac2ad63c097e81859b8a5b026f5c673df84b`
+- **Build ID** — `c7c4962a5f7c1a1f4f253995799353176f5dbab3`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 05, 2026 at 14:52 UTC
+- **Build time** — November 06, 2026 at 15:14 UTC
 
 ## Recent Commits
+
+### [`c7c4962`](https://github.com/notamitgamer/bsc/commit/c7c4962a5f7c1a1f4f253995799353176f5dbab3) Merge pull request #159 from notamitgamer/edit-20261106-204422
+
+**Amit Dutta** committed on Nov 06, 2026 15:14 UTC
+
+
+---
+
+### [`7fc6351`](https://github.com/notamitgamer/bsc/commit/7fc63513fe3700046688bedc8f8354d6c1384492) fixed algolia search
+
+**Amit Dutta** committed on Nov 06, 2026 15:14 UTC · +190 / -1 lines · 4 files changed
+
+<details>
+<summary>Show 4 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `docs/.vitepress/config.mts` | Modified | +1 -1 |
+| `semester_2/lab/lab03.cpp` | Added | +85 |
+| `semester_2/lab/lab04` | Added | binary/no diff |
+| `semester_2/lab/lab04.cpp` | Added | +104 |
+</details>
+
+
+---
+
+### [`20831f5`](https://github.com/notamitgamer/bsc/commit/20831f5f5ca78423dc5536c717a97aa0d33ba5f2) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 05, 2026 14:53 UTC · +40 / -32 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +40 -32 |
+</details>
+
+
+---
 
 ### [`6af8ac2`](https://github.com/notamitgamer/bsc/commit/6af8ac2ad63c097e81859b8a5b026f5c673df84b) Merge pull request #157 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-90aaf8b428
 
@@ -98,35 +138,6 @@
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +40 -40 |
 </details>
-
-
----
-
-### [`4e7f7fd`](https://github.com/notamitgamer/bsc/commit/4e7f7fd3aab00723c6327d0635436f555b967bf8) Merge pull request #156 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-eb8caf78ac
-
-**Amit Dutta** committed on Nov 02, 2026 13:38 UTC
-
-
----
-
-### [`7b3eae3`](https://github.com/notamitgamer/bsc/commit/7b3eae32b0161e618ef3c56502b201dcb802b374) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 02, 2026 13:35 UTC · +42 / -46 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +42 -46 |
-</details>
-
-
----
-
-### [`d66fcb0`](https://github.com/notamitgamer/bsc/commit/d66fcb0c24b1a86cd40dfab51205b42b814b12bf) Merge pull request #155 from notamitgamer/dependabot/npm_and_yarn/vitepress-sidebar-1.41.0
-
-**Amit Dutta** committed on Nov 02, 2026 13:33 UTC
 
 
 ---
