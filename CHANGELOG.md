@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: November 06, 2026 at 15:21 UTC
+> Last build: November 19, 2026 at 13:52 UTC
 
 ## Latest Build
 
-- **Build ID** — `5b4f7549d9be7de2f5c34148695f7247ef133c06`
+- **Build ID** — `00ad030ff0324f8204706c49ce2385a65b08a5e5`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 06, 2026 at 15:21 UTC
+- **Build time** — November 19, 2026 at 13:52 UTC
 
 ## Recent Commits
+
+### [`00ad030`](https://github.com/notamitgamer/bsc/commit/00ad030ff0324f8204706c49ce2385a65b08a5e5) Merge pull request #160 from notamitgamer/edit-20261119-192222
+
+**Amit Dutta** committed on Nov 19, 2026 13:52 UTC
+
+
+---
+
+### [`a6fa1d7`](https://github.com/notamitgamer/bsc/commit/a6fa1d76fcc262a21e82fae8c8345454a5ebcd60) added new one
+
+**Amit Dutta** committed on Nov 19, 2026 13:52 UTC · +89 / -0 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/lab/lab04` | Removed | binary/no diff |
+| `semester_2/lab/lab05.cpp` | Added | +89 |
+</details>
+
+
+---
+
+### [`6448bf9`](https://github.com/notamitgamer/bsc/commit/6448bf961747d0354e322705590d83035da94b12) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 06, 2026 15:24 UTC · +33 / -33 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +33 -33 |
+</details>
+
+
+---
 
 ### [`5b4f754`](https://github.com/notamitgamer/bsc/commit/5b4f7549d9be7de2f5c34148695f7247ef133c06) Update indexName for search configuration
 
@@ -98,45 +136,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +47 -47 |
-</details>
-
-
----
-
-### [`f32f524`](https://github.com/notamitgamer/bsc/commit/f32f524f2762315daa9a400055526104325e425b) Merge pull request #158 from notamitgamer/edit-20261105-201607
-
-**Amit Dutta** committed on Nov 05, 2026 14:48 UTC
-
-
----
-
-### [`f7a293f`](https://github.com/notamitgamer/bsc/commit/f7a293fad554baaa8300b0f34b5566b548995670) fixed readme
-
-**Amit Dutta** committed on Nov 05, 2026 14:48 UTC · +2 / -3 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/semester_2/index.md` | Modified | +1 |
-| `semester_2/README.md` | Modified | +1 -3 |
-</details>
-
-
----
-
-### [`3553226`](https://github.com/notamitgamer/bsc/commit/35532263cd3b60556312395c12869202f64d9f3c) added some lab code
-
-**Amit Dutta** committed on Nov 05, 2026 14:46 UTC · +122 / -0 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/lab/lab01.cpp` | Added | +56 |
-| `semester_2/lab/lab02.cpp` | Added | +66 |
 </details>
 
 
