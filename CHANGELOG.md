@@ -1,15 +1,54 @@
 # Changelog
 
-> Last build: November 19, 2026 at 13:52 UTC
+> Last build: November 21, 2026 at 09:41 UTC
 
 ## Latest Build
 
-- **Build ID** — `00ad030ff0324f8204706c49ce2385a65b08a5e5`
+- **Build ID** — `4fbe1058061681edcc2cd90a711a9d07f2235c98`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 19, 2026 at 13:52 UTC
+- **Build time** — November 21, 2026 at 09:41 UTC
 
 ## Recent Commits
+
+### [`4fbe105`](https://github.com/notamitgamer/bsc/commit/4fbe1058061681edcc2cd90a711a9d07f2235c98) Merge pull request #161 from notamitgamer/edit-20261121-151046
+
+**Amit Dutta** committed on Nov 21, 2026 09:41 UTC
+
+
+---
+
+### [`4edee0e`](https://github.com/notamitgamer/bsc/commit/4edee0eba3d9083c52b8b6cc00d55a18912710b8) practiced more
+
+**Amit Dutta** committed on Nov 21, 2026 09:40 UTC · +269 / -0 lines · 3 files changed
+
+<details>
+<summary>Show 3 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/lab/lab06.cpp` | Added | +61 |
+| `semester_2/lab/lab07.cpp` | Added | +92 |
+| `semester_2/lab/lab08.cpp` | Added | +116 |
+</details>
+
+
+---
+
+### [`844dc9d`](https://github.com/notamitgamer/bsc/commit/844dc9da6ae973b94c1dcdf0bd5a5aac066eb777) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 19, 2026 13:54 UTC · +41 / -42 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -42 |
+</details>
+
+
+---
 
 ### [`00ad030`](https://github.com/notamitgamer/bsc/commit/00ad030ff0324f8204706c49ce2385a65b08a5e5) Merge pull request #160 from notamitgamer/edit-20261119-192222
 
@@ -99,43 +138,6 @@
 | `semester_2/lab/lab03.cpp` | Added | +85 |
 | `semester_2/lab/lab04` | Added | binary/no diff |
 | `semester_2/lab/lab04.cpp` | Added | +104 |
-</details>
-
-
----
-
-### [`20831f5`](https://github.com/notamitgamer/bsc/commit/20831f5f5ca78423dc5536c717a97aa0d33ba5f2) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 05, 2026 14:53 UTC · +40 / -32 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +40 -32 |
-</details>
-
-
----
-
-### [`6af8ac2`](https://github.com/notamitgamer/bsc/commit/6af8ac2ad63c097e81859b8a5b026f5c673df84b) Merge pull request #157 from notamitgamer/dependabot/npm_and_yarn/npm_and_yarn-90aaf8b428
-
-**Amit Dutta** committed on Nov 05, 2026 14:52 UTC
-
-
----
-
-### [`848f5ae`](https://github.com/notamitgamer/bsc/commit/848f5ae7719110e02123e79e2005b957db07083d) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 05, 2026 14:49 UTC · +47 / -47 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +47 -47 |
 </details>
 
 
