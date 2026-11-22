@@ -1,0 +1,1 @@
+/* Q: Write a program to implement Lower Triangular Matrix using a one-dimensional array. Add two Lower Triangular matrices. */
