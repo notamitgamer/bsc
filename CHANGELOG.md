@@ -1,15 +1,53 @@
 # Changelog
 
-> Last build: November 21, 2026 at 09:41 UTC
+> Last build: November 22, 2026 at 15:08 UTC
 
 ## Latest Build
 
-- **Build ID** — `4fbe1058061681edcc2cd90a711a9d07f2235c98`
+- **Build ID** — `333f19dda13fd6bccd2580c8d3fd5431fabb5c6e`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 21, 2026 at 09:41 UTC
+- **Build time** — November 22, 2026 at 15:08 UTC
 
 ## Recent Commits
+
+### [`333f19d`](https://github.com/notamitgamer/bsc/commit/333f19dda13fd6bccd2580c8d3fd5431fabb5c6e) Merge pull request #162 from notamitgamer/edit-20261122-203817
+
+**Amit Dutta** committed on Nov 22, 2026 15:08 UTC
+
+
+---
+
+### [`319d758`](https://github.com/notamitgamer/bsc/commit/319d758d07c765ca82c38fec37b60064626d8b48) did nothing
+
+**Amit Dutta** committed on Nov 22, 2026 15:08 UTC · +186 / -0 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/lab/lab09.cpp` | Added | +185 |
+| `semester_2/lab/lab10.cpp` | Added | +1 |
+</details>
+
+
+---
+
+### [`f2e626b`](https://github.com/notamitgamer/bsc/commit/f2e626b350578e3aaf96aa6a32684f46d2d0064e) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 21, 2026 09:42 UTC · +42 / -40 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +42 -40 |
+</details>
+
+
+---
 
 ### [`4fbe105`](https://github.com/notamitgamer/bsc/commit/4fbe1058061681edcc2cd90a711a9d07f2235c98) Merge pull request #161 from notamitgamer/edit-20261121-151046
 
@@ -98,46 +136,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `docs/.vitepress/config.mts` | Modified | +1 -1 |
-</details>
-
-
----
-
-### [`b9e012a`](https://github.com/notamitgamer/bsc/commit/b9e012a4e4f5fd729ef85ad8b058817afb37519f) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 06, 2026 15:15 UTC · +43 / -32 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +43 -32 |
-</details>
-
-
----
-
-### [`c7c4962`](https://github.com/notamitgamer/bsc/commit/c7c4962a5f7c1a1f4f253995799353176f5dbab3) Merge pull request #159 from notamitgamer/edit-20261106-204422
-
-**Amit Dutta** committed on Nov 06, 2026 15:14 UTC
-
-
----
-
-### [`7fc6351`](https://github.com/notamitgamer/bsc/commit/7fc63513fe3700046688bedc8f8354d6c1384492) fixed algolia search
-
-**Amit Dutta** committed on Nov 06, 2026 15:14 UTC · +190 / -1 lines · 4 files changed
-
-<details>
-<summary>Show 4 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +1 -1 |
-| `semester_2/lab/lab03.cpp` | Added | +85 |
-| `semester_2/lab/lab04` | Added | binary/no diff |
-| `semester_2/lab/lab04.cpp` | Added | +104 |
 </details>
 
 
