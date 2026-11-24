@@ -2,7 +2,7 @@
 
 ### Problem Statement
 
-> Write an algorithm to transform an infix expression into a postfix expression[cite: 2, 3].
+> Write an algorithm to transform an infix expression into a postfix expression.
 
 ## Algorithm
 ```
