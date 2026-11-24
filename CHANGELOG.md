@@ -1,15 +1,98 @@
 # Changelog
 
-> Last build: November 22, 2026 at 15:08 UTC
+> Last build: November 24, 2026 at 06:05 UTC
 
 ## Latest Build
 
-- **Build ID** — `333f19dda13fd6bccd2580c8d3fd5431fabb5c6e`
+- **Build ID** — `1c9a958f208691e2b46179d67db7712a9c559381`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 22, 2026 at 15:08 UTC
+- **Build time** — November 24, 2026 at 06:05 UTC
 
 ## Recent Commits
+
+### [`1c9a958`](https://github.com/notamitgamer/bsc/commit/1c9a958f208691e2b46179d67db7712a9c559381) Merge pull request #163 from notamitgamer/edit-20261124-113139
+
+**Amit Dutta** committed on Nov 24, 2026 06:05 UTC
+
+
+---
+
+### [`b064a56`](https://github.com/notamitgamer/bsc/commit/b064a5678015034278fc6b7260ca2aa1fa231dda) all done 2nd sem
+
+**Amit Dutta** committed on Nov 24, 2026 06:01 UTC
+
+
+---
+
+### [`d098c00`](https://github.com/notamitgamer/bsc/commit/d098c009962d8980f44668b705ec57d23bb36ee5) added all codes
+
+**Amit Dutta** committed on Nov 24, 2026 06:01 UTC · +2446 / -0 lines · 40 files changed
+
+<details>
+<summary>Show 40 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_090.md` | Added | +27 |
+| `semester_2/algorithms/algo_091.md` | Added | +16 |
+| `semester_2/algorithms/algo_092.md` | Added | +23 |
+| `semester_2/algorithms/algo_093.md` | Added | +43 |
+| `semester_2/algorithms/algo_094.md` | Added | +40 |
+| `semester_2/algorithms/algo_095.md` | Added | +55 |
+| `semester_2/algorithms/algo_096.md` | Added | +55 |
+| `semester_2/algorithms/algo_097.md` | Added | +39 |
+| `semester_2/algorithms/algo_098.md` | Added | +71 |
+| `semester_2/algorithms/algo_099.md` | Added | +66 |
+| `semester_2/algorithms/algo_100.md` | Added | +44 |
+| `semester_2/algorithms/algo_101.md` | Added | +28 |
+| `semester_2/algorithms/algo_102.md` | Added | +18 |
+| `semester_2/algorithms/algo_103.md` | Added | +42 |
+| `semester_2/algorithms/algo_104.md` | Added | +30 |
+| `semester_2/algorithms/algo_105.md` | Added | +33 |
+| `semester_2/algorithms/algo_106.md` | Added | +40 |
+| `semester_2/algorithms/algo_107.md` | Added | +47 |
+| `semester_2/algorithms/algo_108.md` | Added | +60 |
+| `semester_2/algorithms/algo_109.md` | Added | +47 |
+| `semester_2/algorithms/algo_110.md` | Added | +29 |
+| `semester_2/algorithms/algo_111.md` | Added | +22 |
+| `semester_2/algorithms/algo_112.md` | Added | +35 |
+| `semester_2/practice/prac_013.cpp` | Added | +48 |
+| `semester_2/practice/prac_014.cpp` | Added | +81 |
+| `semester_2/practice/prac_015.cpp` | Added | +93 |
+| `semester_2/practice/prac_016.cpp` | Added | +126 |
+| `semester_2/practice/prac_017.cpp` | Added | +119 |
+| `semester_2/practice/prac_018.cpp` | Added | +83 |
+| `semester_2/practice/prac_019.cpp` | Added | +64 |
+| `semester_2/practice/prac_020.cpp` | Added | +110 |
+| `semester_2/practice/prac_021.cpp` | Added | +120 |
+| `semester_2/practice/prac_022.cpp` | Added | +123 |
+| `semester_2/practice/prac_023.cpp` | Added | +54 |
+| `semester_2/practice/prac_024.cpp` | Added | +77 |
+| `semester_2/practice/prac_025.cpp` | Added | +136 |
+| `semester_2/practice/prac_026.cpp` | Added | +113 |
+| `semester_2/practice/prac_027.cpp` | Added | +51 |
+| `semester_2/practice/prac_028.cpp` | Added | +65 |
+| `semester_2/practice/prac_029.cpp` | Added | +73 |
+</details>
+
+
+---
+
+### [`773bf3f`](https://github.com/notamitgamer/bsc/commit/773bf3ff43c6017d0ea309239b274fd0c7fb7816) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 22, 2026 15:09 UTC · +41 / -43 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +41 -43 |
+</details>
+
+
+---
 
 ### [`333f19d`](https://github.com/notamitgamer/bsc/commit/333f19dda13fd6bccd2580c8d3fd5431fabb5c6e) Merge pull request #162 from notamitgamer/edit-20261122-203817
 
@@ -83,59 +166,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +41 -42 |
-</details>
-
-
----
-
-### [`00ad030`](https://github.com/notamitgamer/bsc/commit/00ad030ff0324f8204706c49ce2385a65b08a5e5) Merge pull request #160 from notamitgamer/edit-20261119-192222
-
-**Amit Dutta** committed on Nov 19, 2026 13:52 UTC
-
-
----
-
-### [`a6fa1d7`](https://github.com/notamitgamer/bsc/commit/a6fa1d76fcc262a21e82fae8c8345454a5ebcd60) added new one
-
-**Amit Dutta** committed on Nov 19, 2026 13:52 UTC · +89 / -0 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/lab/lab04` | Removed | binary/no diff |
-| `semester_2/lab/lab05.cpp` | Added | +89 |
-</details>
-
-
----
-
-### [`6448bf9`](https://github.com/notamitgamer/bsc/commit/6448bf961747d0354e322705590d83035da94b12) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 06, 2026 15:24 UTC · +33 / -33 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +33 -33 |
-</details>
-
-
----
-
-### [`5b4f754`](https://github.com/notamitgamer/bsc/commit/5b4f7549d9be7de2f5c34148695f7247ef133c06) Update indexName for search configuration
-
-**Amit Dutta** committed on Nov 06, 2026 15:21 UTC · +1 / -1 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `docs/.vitepress/config.mts` | Modified | +1 -1 |
 </details>
 
 
