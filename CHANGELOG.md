@@ -1,15 +1,100 @@
 # Changelog
 
-> Last build: November 24, 2026 at 06:05 UTC
+> Last build: November 24, 2026 at 06:15 UTC
 
 ## Latest Build
 
-- **Build ID** — `1c9a958f208691e2b46179d67db7712a9c559381`
+- **Build ID** — `9c48be5ed9197e61787cc945c9258a81f8679f4e`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 24, 2026 at 06:05 UTC
+- **Build time** — November 24, 2026 at 06:15 UTC
 
 ## Recent Commits
+
+### [`9c48be5`](https://github.com/notamitgamer/bsc/commit/9c48be5ed9197e61787cc945c9258a81f8679f4e) Merge pull request #164 from notamitgamer/edit-20261124-113139
+
+**Amit Dutta** committed on Nov 24, 2026 06:15 UTC
+
+
+---
+
+### [`d68054f`](https://github.com/notamitgamer/bsc/commit/d68054f5a47602ffd1745f48cc3ff0d086e20295) fix
+
+**Amit Dutta** committed on Nov 24, 2026 06:14 UTC · +48 / -49 lines · 34 files changed
+
+<details>
+<summary>Show 34 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/lab/lab10.cpp` | Modified | +48 -1 |
+| `semester_2/{practice/prac_014.cpp => lab/lab11.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_015.cpp => lab/lab12.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_016.cpp => lab/lab13.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_017.cpp => lab/lab14.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_018.cpp => lab/lab15.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_019.cpp => lab/lab16.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_020.cpp => lab/lab17.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_021.cpp => lab/lab18.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_022.cpp => lab/lab19.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_023.cpp => lab/lab20.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_024.cpp => lab/lab21.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_025.cpp => lab/lab22.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_026.cpp => lab/lab23.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_027.cpp => lab/lab24.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_028.cpp => lab/lab25.cpp}` | Modified | binary/no diff |
+| `semester_2/{practice/prac_029.cpp => lab/lab26.cpp}` | Modified | binary/no diff |
+| `semester_2/practice/prac_013.cpp` | Removed | -48 |
+| `semester_2/lab/lab11.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab12.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab13.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab14.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab15.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab16.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab17.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab18.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab19.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab20.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab21.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab22.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab23.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab24.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab25.cpp` | Renamed (100%) | binary/no diff |
+| `semester_2/lab/lab26.cpp` | Renamed (100%) | binary/no diff |
+</details>
+
+
+---
+
+### [`571f937`](https://github.com/notamitgamer/bsc/commit/571f9373ab7a1dbd83eaed318c5b6816692c5671) fix
+
+**Amit Dutta** committed on Nov 24, 2026 06:11 UTC · +1 / -1 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_100.md` | Modified | +1 -1 |
+</details>
+
+
+---
+
+### [`17636d6`](https://github.com/notamitgamer/bsc/commit/17636d664df2ade4ccb41ff3aaaa59f6daab24e5) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 24, 2026 06:06 UTC · +79 / -49 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +79 -49 |
+</details>
+
+
+---
 
 ### [`1c9a958`](https://github.com/notamitgamer/bsc/commit/1c9a958f208691e2b46179d67db7712a9c559381) Merge pull request #163 from notamitgamer/edit-20261124-113139
 
@@ -112,60 +197,6 @@
 | --- | --- | --- |
 | `semester_2/lab/lab09.cpp` | Added | +185 |
 | `semester_2/lab/lab10.cpp` | Added | +1 |
-</details>
-
-
----
-
-### [`f2e626b`](https://github.com/notamitgamer/bsc/commit/f2e626b350578e3aaf96aa6a32684f46d2d0064e) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 21, 2026 09:42 UTC · +42 / -40 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +42 -40 |
-</details>
-
-
----
-
-### [`4fbe105`](https://github.com/notamitgamer/bsc/commit/4fbe1058061681edcc2cd90a711a9d07f2235c98) Merge pull request #161 from notamitgamer/edit-20261121-151046
-
-**Amit Dutta** committed on Nov 21, 2026 09:41 UTC
-
-
----
-
-### [`4edee0e`](https://github.com/notamitgamer/bsc/commit/4edee0eba3d9083c52b8b6cc00d55a18912710b8) practiced more
-
-**Amit Dutta** committed on Nov 21, 2026 09:40 UTC · +269 / -0 lines · 3 files changed
-
-<details>
-<summary>Show 3 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/lab/lab06.cpp` | Added | +61 |
-| `semester_2/lab/lab07.cpp` | Added | +92 |
-| `semester_2/lab/lab08.cpp` | Added | +116 |
-</details>
-
-
----
-
-### [`844dc9d`](https://github.com/notamitgamer/bsc/commit/844dc9da6ae973b94c1dcdf0bd5a5aac066eb777) chore: update changelog [skip ci]
-
-**bot-for-notamitgamer[bot]** committed on Nov 19, 2026 13:54 UTC · +41 / -42 lines · 1 file changed
-
-<details>
-<summary>Show 1 changed file</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `CHANGELOG.md` | Modified | +41 -42 |
 </details>
 
 
