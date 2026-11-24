@@ -1,15 +1,46 @@
 # Changelog
 
-> Last build: November 24, 2026 at 06:15 UTC
+> Last build: November 24, 2026 at 10:01 UTC
 
 ## Latest Build
 
-- **Build ID** — `9c48be5ed9197e61787cc945c9258a81f8679f4e`
+- **Build ID** — `e2c4ebe4c5f057e16465e838e6c9e9741899375d`
 - **Triggered by** — [@notamitgamer](https://github.com/notamitgamer)
 - **Branch** — `main`
-- **Build time** — November 24, 2026 at 06:15 UTC
+- **Build time** — November 24, 2026 at 10:01 UTC
 
 ## Recent Commits
+
+### [`e2c4ebe`](https://github.com/notamitgamer/bsc/commit/e2c4ebe4c5f057e16465e838e6c9e9741899375d) done
+
+**Amit Dutta** committed on Nov 24, 2026 10:01 UTC · +104 / -0 lines · 2 files changed
+
+<details>
+<summary>Show 2 changed files</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `semester_2/algorithms/algo_113.md` | Added | +27 |
+| `semester_2/lab/lab27.cpp` | Added | +77 |
+</details>
+
+
+---
+
+### [`3e80131`](https://github.com/notamitgamer/bsc/commit/3e80131a40071783c64f3e0bee3fcf2f9b843b4f) chore: update changelog [skip ci]
+
+**bot-for-notamitgamer[bot]** committed on Nov 24, 2026 06:16 UTC · +88 / -57 lines · 1 file changed
+
+<details>
+<summary>Show 1 changed file</summary>
+
+| File | Change | Lines |
+| --- | --- | --- |
+| `CHANGELOG.md` | Modified | +88 -57 |
+</details>
+
+
+---
 
 ### [`9c48be5`](https://github.com/notamitgamer/bsc/commit/9c48be5ed9197e61787cc945c9258a81f8679f4e) Merge pull request #164 from notamitgamer/edit-20261124-113139
 
@@ -174,29 +205,6 @@
 | File | Change | Lines |
 | --- | --- | --- |
 | `CHANGELOG.md` | Modified | +41 -43 |
-</details>
-
-
----
-
-### [`333f19d`](https://github.com/notamitgamer/bsc/commit/333f19dda13fd6bccd2580c8d3fd5431fabb5c6e) Merge pull request #162 from notamitgamer/edit-20261122-203817
-
-**Amit Dutta** committed on Nov 22, 2026 15:08 UTC
-
-
----
-
-### [`319d758`](https://github.com/notamitgamer/bsc/commit/319d758d07c765ca82c38fec37b60064626d8b48) did nothing
-
-**Amit Dutta** committed on Nov 22, 2026 15:08 UTC · +186 / -0 lines · 2 files changed
-
-<details>
-<summary>Show 2 changed files</summary>
-
-| File | Change | Lines |
-| --- | --- | --- |
-| `semester_2/lab/lab09.cpp` | Added | +185 |
-| `semester_2/lab/lab10.cpp` | Added | +1 |
 </details>
 
 
